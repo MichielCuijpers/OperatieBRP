@@ -1,0 +1,210 @@
+BS.1.RI - Bijlage Raadplegen in te plannen
+selectietaken
+Versie: Werk
+Gegenereerd op: 17 juli 2017
+Status: Definitief
+
+1 Regels voor usecase BS.1.RI - Raadplegen in te plannen
+selectietaken
+1.1
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2809
+
+1
+
+I
+
+Geen in te plannen selecties gevonden
+
+R2810
+
+1
+
+F
+
+Opgeven van overzichtsperiode bij in te plannen selecties is verplicht
+
+R2811
+
+2
+
+F
+
+Bij het opgeven van een overzichtsperiode mag de einddatum niet voor de
+startdatum liggen
+
+R2812
+
+1
+
+F
+
+Ingevoerde gegevens onjuist
+
+R2825
+
+2
+
+F
+
+De gevraagde overzichtsperiode mag maximaal een jaar zijn
+
+1.2
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2702
+
+2
+
+Berekende selectiedatum
+
+2 Uitwerking regels
+R2702
+Berekende selectiedatum
+Definitie:
+
+De berekende selectiedatum die hoort bij de Selectietaak wordt afgeleid door
+de Dienst.Eerste selectiedatum nul, één of meer keer op te hogen met de
+combinatie van de Dienst.Eenheid selectieinterval en Dienst.Selectieinterval
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2809
+Geen in te plannen selecties gevonden
+Definitie:
+
+Indien er geen selectietaken zijn waarvoor geldt dat:
+de Berekende selectiedatum (R2702) valt binnen de gevraagde overzichtsperiode
+EN
+de Selectietaak status.Naam is gelijk aan 'In te plannen'
+EN
+voldoet aan de aanvullende opgegeven zoekcriteria
+dan wordt dit aan de gebruiker gemeld.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Informatieve melding; ter kennisname
+
+Meldingstekst:
+
+Er zijn geen in te plannen selecties gevonden.
+
+R2810
+Opgeven van overzichtsperiode bij in te plannen selecties is verplicht
+Definitie:
+
+Bij het zoeken naar in te plannen selectietaken moet altijd zowel de startdatum als
+de einddatum gevuld worden bij de zoekcriteria.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het opgeven van een overzichtsperiode is verplicht.
+
+R2811
+Bij het opgeven van een overzichtsperiode mag de einddatum niet voor de startdatum
+liggen
+Definitie:
+
+Bij het opgeven van de overzichtsperiode mag de einddatum niet voor de
+begindatum liggen.
+
+Versie:
+
+2
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven einddatum mag niet voor de begindatum liggen.
+
+R2812
+
+Ingevoerde gegevens onjuist
+Definitie:
+
+Indien één van de zoekcriteria onjuist wordt ingevoerd wordt dit gemeld aan de
+gebruiker.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Ingevoerde gegevens onjuist.
+
+R2825
+De gevraagde overzichtsperiode mag maximaal een jaar zijn
+Definitie:
+
+De overzichtsperiode mag maximaal één jaar bedragen.
+
+Versie:
+
+2
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De overzichtsperiode mag maximaal een jaar bedragen.
+
+

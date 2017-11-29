@@ -1,0 +1,230 @@
+LGM 02 Betrokkenheid Relatie
+Release 59
+Betrokkenheid
+
+Relatie
+
+Dyn
+
+Identiteit
+
+Identiteit
+
+A
+
+-
+
+ID
+
+D
+
+Relatie ID
+
+*i
+
+SD
+
+Soort relatie
+
+*
+
+D
+
+Betrokkenheid ID
+
+*i
+
+Relatie >
+
+DX
+
+Relatie
+
+*
+
+Rol >
+
+D
+
+Soort betrokkenheid
+
+*
+
+Standaard
+
+. s1
+
+Datum aanvang
+
+SDX
+
+Datum evt. (deels) onbekend
+
+.
+
+Gemeente aanvang >
+
+SDX
+
+Gemeente
+
+.
+
+Woonplaatsnaam aanvang
+
+SDX
+
+Naam enumeratiewaarde
+
+Soort >
+
+A
+
+Buitenlandse plaats aanvang SDX Buitenlandse plaats
+Buitenlandse regio aanvang
+
+SDX
+
+Buitenlandse regio
+
+Omschrijving locatie aanvang SDX Locatieomschrijving
+
+Kind
+
+-
+
+F1
+
+ID
+
+Persoon > DX Persoon
+
+Partner
+
+Dyn
+
+Ouder
+A
+
+F+M
+
+Ouder uit wie het kind is geboren? SDX Ja/Nee .
+Ouderlijk gezag
+
+A
+SDX
+
+F+M
+
+Ja/Nee
+
+F
+
+.
+.
+.
+.
+
+Dyn
+
+Land/gebied aanvang >
+
+SDX
+
+Land/gebied
+
+Reden einde >
+
+SDX
+
+Reden einde relatie
+
+.
+
+Datum einde
+
+SDX
+
+Datum evt. (deels) onbekend
+
+.
+
+Gemeente einde >
+
+SDX
+
+Gemeente
+
+.
+
+Woonplaatsnaam einde
+
+SDX
+
+Naam enumeratiewaarde
+
+.
+
+Buitenlandse plaats einde
+
+SDX
+
+Buitenlandse plaats
+
+.
+
+Buitenlandse regio einde
+
+SDX
+
+Buitenlandse regio
+
+.
+
+Omschrijving locatie einde
+
+SDX
+
+Locatieomschrijving
+
+.
+
+Land/gebied einde >
+
+SDX
+
+Land/gebied
+
+.
+
+Dyn
+
+Ouderschap
+
+Ouder heeft gezag?
+
+17-7-2017
+
+Dyn
+
+*
+
+Familierechtelijke betrekking
+
+.
+
+Huwelijk/Geregistreerd partnerschap
+
+Dyn
+
+Huwelijk
+
+Dyn
+
+Dyn
+
+Geregistreerd partnerschap
+
+Dyn
+
+

@@ -1,0 +1,306 @@
+UC815 Beheren taken migratievoorziening
+
+1.4
+
+Datum
+Status
+
+03-03-2016
+Definitief
+
+Definitief | 1.4 | UC815 Beheren taken migratievoorziening | 03-03-2016
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................6
+2.1
+
+3
+
+REGULIER VERLOOP ..............................................................................................................................6
+
+SPECIAL REQUIREMENTS ..............................................................................................................7
+3.1
+3.2
+3.3
+3.4
+
+4
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................5
+PRECONDITIE ........................................................................................................................................5
+POSTCONDITIE......................................................................................................................................5
+
+ROLLEN..................................................................................................................................................7
+TONEN VAN LIJST VAN TAKEN ..............................................................................................................7
+DETAILS VAN DE TAAK .........................................................................................................................7
+TE SELECTEREN HANDELINGEN ............................................................................................................7
+
+OPMERKINGEN ....................................................................................................................................9
+
+Operatie BRP
+
+Pagina 2 van 9
+
+Definitief | 1.4 | UC815 Beheren taken migratievoorziening | 03-03-2016
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+06-02-2014
+14-03-2014
+01-09-2014
+25-06-2015
+
+0.1
+1.0
+1.1
+1.2
+
+Operatie
+Operatie
+Operatie
+Operatie
+
+30-11-2015
+
+1.3
+
+03-03-2016
+
+1.4
+
+Initiële versie
+Aanpassingen n.a.v. review
+Definitief gemaakt voor release 2.2
+Definitief gemaakt ten behoeve van release
+3.1
+Tekst van tonen van taken aangepast en
+versiehistorie bijgewerkt. Inhoudelijk is er
+niets gewijzigd.
+Omschrijving van wat de rol manager kan
+verduidelijkt
+
+BRP
+BRP
+BRP
+BRP
+
+Operatie BRP
+
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+14-03-2014
+
+0.1
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 9
+
+Definitief | 1.4 | UC815 Beheren taken migratievoorziening | 03-03-2016
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+De migratievoorziening is een complex systeem dat een veelheid van activiteiten uitvoert. Het is
+daarom belangrijk dat het systeem goed beheerd kan worden. Om dit mogelijk te maken is er
+voor gekozen om alle activiteiten in processen te vatten waarbij elk proces bestaat uit meerdere
+voorgedefinieerde stappen.
+Het kan voorkomen dat in een proces een onduidelijke situatie is ontstaan waardoor het systeem
+niet zelfstandig kan bepalen wat de volgende stap in het proces zou moeten zijn. Een dergelijk
+geval dient onder de aandacht van de beheerder gebracht te worden zodat die kan bepalen wat
+de volgende stap in het proces zou moeten zijn. Het systeem brengt dit onder de aandacht door
+een taak voor de beheerder aan te maken.
+Taken zijn onderdeel van de standaard oplossing die gebruikt wordt bij de realisatie van
+processen en berichten (jBPM).
+Deze use case beschrijft op welke wijze de beheerder inzicht krijgt in de taken die het systeem
+heeft aangemaakt.
+
+Operatie BRP
+
+Pagina 4 van 9
+
+Definitief | 1.4 | UC815 Beheren taken migratievoorziening | 03-03-2016
+
+1.2
+
+1.3
+
+Referenties
+#
+[UC801]
+
+Document
+MV UC801 Beheren processen
+
+Organisatie
+OperatieBRP
+
+Versie
+-
+
+Datum
+-
+
+[UC814]
+
+MV UC814 Beheren berichten
+
+OperatieBRP
+
+-
+
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 5 van 9
+
+Definitief | 1.4 | UC815 Beheren taken migratievoorziening | 03-03-2016
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+1. De beheerder meldt het systeem welke taken getoond dienen te worden (AS: 3.1, 3.2)
+2. Het systeem toont een lijst van gevonden taken (AS: 3.1, 3.2)
+3. De beheerder selecteert een taak
+4. Het systeem toont de details van de geselecteerde taak (AS: 3.3)
+5. De beheerder selecteert een afhandeling van de taak (AS: 3.4)
+6. Het systeem voert de geselecteerde afhandeling uit
+7. De use case eindigt
+
+Operatie BRP
+
+Pagina 6 van 9
+
+Definitief | 1.4 | UC815 Beheren taken migratievoorziening | 03-03-2016
+
+3
+
+Special requirements
+
+3.1
+
+Rollen
+Wat een gebruiker kan met taken hangt af van de rol die de gebruiker heeft. Er worden twee
+rollen onderscheiden:
+• Beheerder, kan taken oppakken en uitvoeren.
+• Manager, kan wat de beheerder kan maar ook taken bij een beheerder weghalen zodat een
+andere beheerder deze kan oppakken.
+
+3.2
+
+Tonen van lijst van taken
+Standaard worden alle taken in de lijst getoond waarbij ze van nieuw naar oud zijn gesorteerd.
+De volgende details van een taak worden in de lijst getoond:
+•
+•
+•
+•
+•
+•
+
+Het ID van de taak
+De type naam van het proces waar de taak bij hoort
+Welke beheerder de een taak heeft opgepakt
+De status van de taak
+Wanneer de taak door het systeem is aangemaakt
+Wanneer de taak is beëindigd
+
+Een beheerder kan taken zien die nog niet zijn opgepakt en/of die de beheerder zelf heeft
+opgepakt. Hierbij kan de beheerder een filter toepassen op de volgende kenmerken:
+• De naam van het type proces waar een taak bij hoort
+• De foutcode die hoort bij de aangemaakte taak
+De manager kan alle taken zien. Hierbij kan de manager een filter toepassen op de volgende
+kenmerken:
+• Welke beheerder de taak heeft opgepakt
+• De naam van het type proces waar een taak bij hoort
+• De foutcode die hoort bij de aangemaakte taak
+
+3.3
+
+Details van de taak
+De beheerder kan de volgende details van het bericht zien:
+• De details van de taak die ook in de lijst van taken getoond wordt (zie par. 3.2)
+
+3.4
+
+Te selecteren handelingen
+Naar aanleiding van welke stap in het proces het systeem een taak heeft aangemaakt, bepaalt
+welke handelingen de beheerder kan selecteren. Informatie over de mogelijke handelingen
+binnen een proces zijn in de use case van het betreffende proces (cyclus) beschreven.
+
+Operatie BRP
+
+Pagina 7 van 9
+
+Definitief | 1.4 | UC815 Beheren taken migratievoorziening | 03-03-2016
+
+De enige uitzondering hierop is de taak die gemaakt wordt naar aanleiding van een onduidelijke
+situatie met een persoonslijst die verwerkt dient te worden. Deze situatie is beschreven in
+[UC808].
+
+Operatie BRP
+
+Pagina 8 van 9
+
+Definitief | 1.4 | UC815 Beheren taken migratievoorziening | 03-03-2016
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 9 van 9
+
+

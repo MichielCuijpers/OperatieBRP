@@ -1,0 +1,440 @@
+UCS SA.0.VA – Verwijdering afnemerindicatie
+Versie
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Datum
+
+11 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+31-03-2017
+
+0.1
+
+Eerste opzet ‘nieuwe stijl’
+
+oBRP
+
+03-04-2017
+
+0.2
+
+Review verwerkt
+
+oBRP
+
+01-06-2017
+
+0.3
+
+Textueel bijgewerkt
+
+oBRP
+
+11-07-2017
+
+1.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS SA.0.VA – Verwijdering afnemerindicatie
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Invoer ....................................................................................................................... 4
+2.1
+2.2
+2.3
+2.4
+
+3
+
+Beschrijving .........................................................................................................................4
+Verzoekbericht .....................................................................................................................4
+Specifieke toelichting op het verzoekbericht .............................................................................4
+Bijzonderheden.....................................................................................................................4
+
+Verwerking ............................................................................................................... 5
+3.1
+3.2
+3.3
+3.4
+
+4
+
+Doel ....................................................................................................................................3
+Functionele context ...............................................................................................................3
+Referenties ..........................................................................................................................3
+
+Beschrijving .........................................................................................................................5
+Schematische weergave.........................................................................................................5
+Beschrijving activiteitendiagram .............................................................................................7
+Bedrijfsregels .......................................................................................................................8
+
+Uitvoer ...................................................................................................................... 9
+4.1
+Beschrijving .........................................................................................................................9
+4.2
+Resultaatbericht....................................................................................................................9
+4.2.1
+Toelichting op het resultaatbericht ......................................................................................9
+
+5
+
+Ontwerpbeslissingen .............................................................................................. 10
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 2 van 10
+
+UCS SA.0.VA – Verwijdering afnemerindicatie
+
+1 Inleiding
+1.1
+
+Doel
+
+Met deze dienst is het voor de afnemer mogelijk om door het verwijderen van een afnemerindicatie
+een persoon te verwijderen uit de doelgroep van de leveringsautorisatie. De afnemer ontvangt
+direct (synchroon) een bevestiging van het verwijderen van de afnemerindicatie.
+
+1.2
+
+Functionele context
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitdiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving Generieke Berichtstructuur
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 3 van 10
+
+UCS SA.0.VA – Verwijdering afnemerindicatie
+
+2 Invoer
+2.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft het verzoekbericht waarmee de afnemer een afnemersindicatie kan
+verwijderen voor de opgegeven persoon.
+
+2.2
+
+Verzoekbericht
+
+De structuur van het verzoekbericht staat beschreven in Aspectbeschrijving Generieke
+Berichtstructuur [2]. De inhoud van het verzoekbericht is opgenomen in de bijlage SA.0.VA –
+Bijlage Verwijdering afnemerindicatie.doc.
+
+2.3
+
+Specifieke toelichting op het verzoekbericht
+
+Toelichting op het verzoekbericht van deze dienst.
+
+Stuurgegevens
+Van een ingevoerd bericht worden stuurgegevens Zendende partij, het Zendende systeem, een
+Referentienummer en het Tijdstip vastgelegd en meegeleverd als onderdeel van het
+verzoekbericht.
+Parameters
+De Leveringsautorisatieidentificatie waarop het verzoek betrekking heeft. Deze is noodzakelijk voor
+de autorisatiebepaling. Daarnaast wordt dit gegeven gebruikt bij de identificatie van de te
+verwijderen afnemerindicatie.
+Administratieve handeling: verwijdering afnemerindicatie
+Van het verzoek wordt de Partijcode waarvoor de afnemerindicatie moet worden verwijderd
+opgenomen.
+
+Actie: verval afnemerindicatie
+In het bericht wordt de persoon uitsluitend geïdentificeerd door het opgegeven
+Burgerservicenummer.
+
+Afnemerindicatie, Afnemer
+De afnemer wordt geïdentificeerd door het gegeven Afnemer. De voor de afnemer geldende
+leveringsautorisatie, waarop de afnemerindicatie moet worden verwijderd wordt geïdentificeerd
+door de Leveringautorisatieidentificatie uit de parameters van het bericht.
+
+2.4
+
+Bijzonderheden
+
+Met deze dienst kan per bericht bij 1 persoon (BSN) een afnemerindicatie worden verwijderd.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 4 van 10
+
+UCS SA.0.VA – Verwijdering afnemerindicatie
+
+3 Verwerking
+3.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft het verwerken van het verzoekbericht waarmee de afnemer een
+afnemersindicatie wil verwijderen voor de opgegeven persoon.
+
+3.2
+
+Schematische weergave
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitendiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+Activiteitendiagram met de verwerking van de dienst Verwijdering afnemerindicatie. In het diagram
+is alleen de happy flow weergegeven.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 5 van 10
+
+UCS SA.0.VA – Verwijdering afnemerindicatie
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 6 van 10
+
+UCS SA.0.VA – Verwijdering afnemerindicatie
+
+3.3
+
+Beschrijving activiteitendiagram
+
+De verwerking van een ontvangen verzoekbericht bestaat uit een aantal volgordelijke stappen die
+uitgevoerd worden. In de onderstaande toelichtende tekst zijn de stappen onderverdeeld in ‘XSD
+controle’, ‘Controle invoer’, ‘Verwerking’ en ‘Uitvoer’. Elke toegelichte stap is terug te vinden in het
+activiteitendiagram in de vorige paragraaf.
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de aan de Use Case gekoppelde regels in BMR.
+
+XSD controle
+•
+
+AL.1.XV – XSD validatie
+Het inkomende verzoek wordt gevalideerd door deze te controleren tegen het bij het
+verzoek behorende XSD-schema (XML Schema Definition). Als er een XSD fout wordt
+geconstateerd, dan wordt er direct een technische foutmelding teruggegeven aan de
+zendende applicatie.
+
+Controle invoer
+•
+
+LV.1.AB – Archiveer bericht
+Draagt zorg voor de archivering van het technisch verwerkbare inkomende verzoekbericht
+en van het uitgaande resultaatbericht.
+
+•
+
+LV.1.AL – Autorisatie levering
+Het inkomende verzoek wordt gecontroleerd op geldigheid van leveringsautorisatie en
+dienst autorisatie.
+
+•
+
+SA.1.CAA- Controleer autorisatie afnemersindicatie
+Dienst specifieke autorisatie: De afnemer mag alleen voor zichzelf een afnemerindicatie
+plaatsen of verwijderen bij een persoon.
+
+•
+
+LV.1.CA – Controleer afnemerindicatie
+Voor de in het bericht opgenomen Persoon (Burgerservicenummer), Leveringsautorisatie
+(Leveringsautorisatie) en Partij (Afnemer) moet een afnemerindicatie aanwezig zijn.
+
+Verwerking
+•
+
+LV.1.VA – Verwijder afnemersindicatie
+Het verwijderen van een afnemerindicatie is het vullen van het tijdstip vervallen van de
+groep Persoon\Afnemerindicatie met de systeem datum en tijd. Wanneer het verwijderen
+van de afnemerindicatie faalt dan wordt dit in de functionele log weggeschreven.
+
+Uitvoer
+•
+
+LV.1.MR – Maak resultaatbericht
+De “geslaagd” melding of de eventuele foutmelding(en) worden in een (synchroon)
+resultaatbericht opgenomen. Er wordt dus altijd een resultaatbericht vervaardigd.
+
+•
+
+LV.1.VR – Verzend resultaatbericht
+Vervolgens wordt het resultaatbericht afgeleverd aan de indiener van het verzoekbericht en
+gearchiveerd (LV.1.AB).
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 7 van 10
+
+UCS SA.0.VA – Verwijdering afnemerindicatie
+
+3.4
+
+Bedrijfsregels
+
+Voor een toelichting op de verschillende soorten bedrijfsregels, de meldingsniveaus, de toepassing
+en werking ervan in het bijhoudingsproces, wordt verwezen naar de daartoe opgestelde
+Aspectbeschrijving Controles [3].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels en definitieregels zijn opgenomen de bijlage: SA.0.VA – Bijlage Verwijdering
+afnemerindicatie.doc.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 8 van 10
+
+UCS SA.0.VA – Verwijdering afnemerindicatie
+
+4 Uitvoer
+4.1
+
+Beschrijving
+
+In antwoord op het versturen van het verzoekbericht ontvangt de afnemer altijd een synchroon
+resultaatbericht waarin het resultaat van het verzoek tot verwijdering van de afnemerindicatie is
+opgenomen.
+
+4.2
+
+Resultaatbericht
+
+In antwoord op de aanroep van de dienst ontvangt de afnemer een synchroon resultaatbericht.
+Voor de volledige beschrijving van het resultaatbericht wordt verwezen naar Aspectbeschrijving
+Generieke Berichtstructuur [2] en bijlage: SA.0.VA – Bijlage Verwijdering afnemerindicatie.doc.
+
+4.2.1
+
+Toelichting op het resultaatbericht
+
+Stuurgegevens
+Van het bericht worden stuurgegevens Zendende partij, het Zendende systeem, een
+Referentienummer, een Crossreferentienummer (referentienummer uit de stuurgegevens van het
+Verzoekbericht) en het Tijdstip vastgelegd en meegeleverd als onderdeel van het resultaatbericht.
+Resultaat
+Het resultaat van de Verwerking kan de waarde “Geslaagd” of “Foutief” aannemen. Daarachter
+wordt aangegeven wat het Hoogste Meldingsniveau is, dat is aangetroffen tijdens de uitgevoerde
+controles. De ernst wordt uitgedrukt in het meldingsniveau en betreft in aflopende hoogte:
+Fout
+Deblokkeerbaar
+Waarschuwing
+Informatie1
+Meldingen
+In het bericht zijn de Regels opgenomen die gecontroleerd zijn, met daarbij aangegeven welke
+Soort melding (informatief, waarschuwing, deblokkeerbaar, fout) en de Melding zelf, die in tekst
+aangeeft wat er op basis van de gecontroleerde regel is geconstateerd.
+Administratieve handeling
+Voor de uitgevoerde Verwijdering afnemerindicatie wordt aangegeven welke Partijcode de
+afnemerindicatie heeft verwijderd en op welke datum/tijd (tijdstip registratie) de afnemerindicatie
+is verwijderd. Uiteraard wordt daarbij ook aangegeven voor welke persoon (Burgerservicenummer)
+deze afnemerindicatie is verwijderd.
+Voor een niet uitgevoerde Verwijdering afnemerindicatie (het resultaat van de Verwerking heeft de
+waarde “Foutief”) wordt aangegeven met welke Partijcode de afnemerindicatie is geprobeerd te
+verwijderen en op welke datum/tijd (tijdstip registratie) de verwerking heeft plaatsgevonden.
+
+1
+
+Dit meldingsniveau wordt momenteel nog niet gehanteerd, maar is gereserveerd voor toekomstig gebruik.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 9 van 10
+
+UCS SA.0.VA – Verwijdering afnemerindicatie
+
+5 Ontwerpbeslissingen
+-
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 10 van 10
+
+

@@ -1,0 +1,661 @@
+UCS SL.0.SS - Standaard selectiedienst
+Versie
+
+1.0
+
+Datum
+
+11 juli 2017
+
+Status
+
+Definitief
+
+Locatie
+
+Documenthistorie
+Datum
+07-02-2017
+
+Versie Beschrijving
+
+Auteur
+
+0.1
+
+oBRP
+
+Initiële opzet
+
+13-02-2017
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+23-02-2017
+
+0.3
+
+Laatste versie Thema analyse verwerkt
+
+oBRP
+
+07-03-2017
+
+0.4
+
+UCM en AD aangepast
+
+oBRP
+
+09-03-2017
+
+0.5
+
+Tekst aangescherpt 2.3 Selectietaak;
+
+oBRP
+
+31-03-2017
+
+0.6
+
+SL.1.HFS uitgewerkt, schema’s aangepast en toelichtende
+tekst aangepast.
+
+oBRP
+
+04-04-2017
+
+0.7
+
+SL.1.MCB is uitgewerkt in regels, UCM en AD met
+toelichting aangepast.
+
+oBRP
+
+11-04-2017
+
+0.8
+
+SL.1.SP is een apart document geworden en bevat nu ook
+selectiecriteria op basis van een invoerbestand.
+
+oBRP
+
+20-04-2017
+
+0.9
+
+Tekst bij SL.1.HFS aangepast
+
+oBRP
+
+08-05-2017
+
+0.10
+
+Wijzigen selectietaak toegevoegd (SL.1.SS.WS)
+
+oBRP
+
+09-05-2017
+
+0.11
+
+Registreren uitvoerdatum bij de selectietaak (SL.1.SS.WS)
+
+oBRP
+
+31-05-2017
+
+0.12
+
+Peildatum formeel resultaat moet liggen op of na het
+tijdstip laatste wijziging GBA systematiek van een
+geselecteerd persoon.
+
+oBRP
+
+Aangepast bij SL.1.HFS en in AD
+11-07-2017
+
+1.0
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+0.4
+
+Interne review
+
+Definitief gemaakt. Hfd. openstaande punten toegevoegd.
+
+oBRP
+
+UCS SL.0.SS - Standaard selectiedienst
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Invoer ....................................................................................................................... 5
+2.1
+2.2
+2.3
+
+3
+
+Beschrijving .........................................................................................................................5
+Verzoekbericht .....................................................................................................................5
+Bijzonderheden.....................................................................................................................5
+
+Verwerking ............................................................................................................... 7
+3.1
+3.2
+3.3
+3.4
+
+4
+
+Doel ....................................................................................................................................3
+Functionele context ...............................................................................................................3
+Referenties ..........................................................................................................................3
+Openstaande punten .............................................................................................................4
+
+Beschrijving .........................................................................................................................7
+Schematische weergave.........................................................................................................7
+Beschrijving activiteitendiagram .............................................................................................8
+Bedrijfsregels .......................................................................................................................9
+
+Uitvoer .................................................................................................................... 10
+4.1
+Beschrijving ....................................................................................................................... 10
+4.2
+Selectieresultaatset ............................................................................................................. 10
+4.2.1
+Toelichting op de selectieresultaatset ................................................................................ 10
+
+5
+
+Ontwerpbeslissingen .............................................................................................. 12
+
+Status: Definitief, versie: 1.0
+
+Pagina 2 van 12
+
+UCS SL.0.SS - Standaard selectiedienst
+
+1 Inleiding
+1.1
+
+Doel
+
+Een selectiedienst geeft de mogelijkheid om grotere aantallen gegevens, van personen met
+bepaalde kenmerken ineens, aan afnemers te leveren.
+Een selectiedienst verstrekt op vastgestelde momenten gegevens over personen. De personen
+worden geselecteerd op basis van vooraf gedefinieerde selectiecriteria en eventueel aanvullend op
+basis van een invoerbestand met Administratienummers of Burgerservicenummers. De
+verstrekking is eenmalig of periodiek.
+De daadwerkelijke verstrekking wordt gepland en uitgevoerd als een selectietaak. Wanneer een
+selectiedienst periodiek gegevens verstrekt zijn er meerdere selectietaken bij de betreffende
+selectiedienst.
+Een selectietaak wordt uitgevoerd tijdens een selectierun.
+Een selectierun wordt door de beheerder samengesteld. Alle selectietaken die voor uitvoering
+gereed staan op de betreffende datum worden gecontroleerd (op status en autorisatie) en na
+goedkeuring toegevoegd aan de selectierun.
+Er kunnen meerdere selectietaken (behorende bij verschillende selectiediensten) uitgevoerd
+worden tijdens één selectierun.
+Deze Use Case beschrijft het daadwerkelijk uitvoeren van één selectietaak binnen een selectierun.
+Het selectieresultaat van één selectietaak wordt geleverd in één of meerdere selectieresultaatsets
+(bestanden). De laatste selectieresultaatset bevat geen persoonsgegevens maar gegevens met
+betrekking tot de uitgevoerde selectiedienst en selectietaak.
+Tevens worden tijdens de selectierun de gegevens m.b.t de protocollering en de steekproefcontrole
+van de beheerder in aparte bestanden per selectietaak klaargezet.
+
+1.2
+
+Functionele context
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitdiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 1.0
+
+Pagina 3 van 12
+
+UCS SL.0.SS - Standaard selectiedienst
+
+2
+
+Aspectbeschrijving Berichtstructuur
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+4
+
+Aspectbeschrijving Historiefilter
+
+Operatie BRP
+
+-
+
+-
+
+1.4
+
+Openstaande punten
+•
+•
+
+Default waarden parameters historiefilter. Zie UCS BV.0.GD Geef details persoon voor de
+details.
+Geldigheid van groepen met formele historie en materieel aspect. Zie Openstaande punten
+bij UCS BV.0.GD Geef details persoon voor details.
+
+Status: Definitief, versie: 1.0
+
+Pagina 4 van 12
+
+UCS SL.0.SS - Standaard selectiedienst
+
+2 Invoer
+2.1
+
+Beschrijving
+
+Selectiediensten met de daarbij behorende selectietaken worden geïnitieerd door de centrale
+voorzieningen bij de start van een selectierun.
+De selectierun is samengesteld en gepland door de beheerder. Op het door de beheerder
+vastgestelde tijdstip wordt de selectierun gestart.
+Om de dienst Standaard selectiedienst te kunnen uitvoeren zijn er gegevens nodig van de
+betreffende ingerichte selectiedienst (dienst van het soort selectie), autorisatie van de partij en
+gegevens met betrekking tot de uit te voeren selectietaak. Deze gegevens kunnen gezien worden
+als de invoergegevens van deze dienst. De dienst Standaard selectiedienst kent geen
+verzoekbericht.
+
+2.2
+
+Verzoekbericht
+
+Niet van toepassing
+
+2.3
+
+Bijzonderheden
+
+De volgende gegevens zijn van belang voor de juiste verwerking van de Standaard selectiedienst.
+
+Selectiecriteria
+De selectiecriteria worden samengesteld uit de volgende gegevens:
+•
+•
+•
+•
+
+Toegang Leveringsautorisatie.Nadere populatiebeperking
+Leveringsautorisatie.Populatiebeperking
+Dienstbundel.Nadere populatiebeperking
+Dienst.Nadere selectiecriterium
+
+Naast deze selectiecriteria kan er ook een bestand aangeleverd worden door de afnemer met
+daarin een lijst met of Administratienummers of Burgerservicenummers. De geselecteerde
+personen moeten ook voorkomen op de betreffende lijst.
+Het bestand is een platte tekst bestand (CSV file) met in de kop aangegeven of het een lijst
+Administratienummers of Burgerservicenummers betreft.
+
+Selectiedienst instellingen
+De historievorm die van toepassing is op het selectieresultaat wordt vastgelegd bij de instellingen
+van de selectiedienst en moet tijdens de verwerking van de selectietaak meegenomen worden om
+tot het selectieresultaat te komen. De daarbij te gebruiken peilmomenten worden geregistreerd bij
+de selectietaak.
+In de instellingen van de selectiedienst kan tevens aangegeven worden of de beheerder voor de
+betreffende selectiedienst een controle van het selectieresultaat wenst uit te voeren. Aan de hand
+van deze instelling worden al dan niet gegevens ten behoeve van deze controle in een apart
+bestand gezet tijdens de verwerking.
+Ook de leverwijze (voor GBA levering), het maximaal aantal berichten per bestand en de maximale
+bestandsgrootte worden ingesteld bij de selectiedienst. Deze gegevens zijn van belang voor de
+samenstelling van de selectieresultaatsets en de levering.
+
+Inperken persoonsbeeld
+
+Status: Definitief, versie: 1.0
+
+Pagina 5 van 12
+
+UCS SL.0.SS - Standaard selectiedienst
+
+Met behulp van de autorisatie die is vastgelegd bij Dienstbundel\Groep en
+Dienstbundel\Groep\Attribuut (behorende bij de betreffende selectiedienst) worden de te leveren
+persoonsbeelden ingeperkt.
+
+Selectietaak
+Gegevens rondom de selectietaak worden apart geadministreerd. Veelal met behulp van de
+beheerapplicatie. In de BRP wordt de identificatie van een selectietaak meegegeven in het
+selectieresultaatbericht. Ook zal vanuit de BRP de status van de selectietaak tijdens of na de
+verwerking van de selectiedienst bijgewerkt worden.
+
+Status: Definitief, versie: 1.0
+
+Pagina 6 van 12
+
+UCS SL.0.SS - Standaard selectiedienst
+
+3 Verwerking
+3.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft de verwerking van de Standaard selectiedienst.
+
+3.2
+
+Schematische weergave
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitendiagrammen wordt verwezen naar de Leeswijzer BRP[1].
+In het diagram is alleen de happy flow weergegeven. Foutafhandeling is hier niet opgenomen,
+controles staan beschreven in de begeleidende tekst in de volgende paragraaf of in de
+aangeroepen Use Cases.
+
+Status: Definitief, versie: 1.0
+
+Pagina 7 van 12
+
+UCS SL.0.SS - Standaard selectiedienst
+
+3.3
+
+Beschrijving activiteitendiagram
+
+De verwerking van het ontvangen verzoekbericht bestaat uit een aantal volgordelijke stappen die
+uitgevoerd worden. In de onderstaande toelichtende tekst zijn de stappen onderverdeeld in
+‘Verwerking’ en ‘Uitvoer’. Elke toegelichte stap is terug te vinden in het activiteitendiagram in de
+vorige paragraaf.
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de aan de specificatie van de Use Cases en de aan de Use Cases gekoppelde
+regels in BMR.
+
+Verwerking
+•
+
+SL.1.SP – Selecteer personen
+Aan de hand van de selectiecriteria (de populatiebeperking, nadere populatiebeperking en
+nadere selectiecriterium) en/of eventueel een invoerbestand met een lijst met
+Administratienummers of Burgerservicenummers, worden de juiste personen geselecteerd.
+Opgeschort wegens foutief of gewist worden niet geselecteerd.
+
+•
+
+LV.1.SPL – Samenstellen persoonslijst
+Er wordt een volledige persoonslijst samengesteld in de BRP van de geselecteerde persoon.
+In deze stap wordt er ook gefilterd op de grens van deze persoonslijst.
+
+•
+
+LV.1.AFB – Autorisatiefilter bericht
+De in de vorige stap samengestelde persoonslijst wordt in deze stap vervolgens gefilterd op
+autorisatie op historie, verantwoording, onderzoek, inhoudelijke groepen en attributen.
+
+•
+
+SL.1.HFS – Historiefilter selectie
+Het historiefilter geeft de mogelijkheid om het resultaat van de selectie te beperken tot een
+beperkt deel van formele en materiele historie.
+Op basis van historievorm bij de dienst en de peilmomenten bij de selectietaak wordt er
+wel of geen historiefilter toegepast.
+Het toepassen van het historiefilter werkt conform de Aspectbeschrijving Historiefilter [4].
+
+Voorwaarde van het gebruik van peilmoment formeel:
+Peilmoment formeel resultaat moet liggen op of na het tijdstip laatste wijziging GBA
+systematiek van een geselecteerd persoon. Wanneer dit niet het geval is dan stopt de
+verwerking van deze selectietaak. Er worden geen selectieresultaatsets gemaakt. De
+selectietaak wordt afgebroken en dit wordt in de status van de selectietaak meegegeven
+met de reden: ‘Opgegeven peilmoment formeel resultaat ligt voor de overgang naar BRP
+systematiek’.
+
+•
+
+LV.1.BO – Bericht opschonen
+Na het filteren in de voorgaande stappen kunnen er lege groepen of niet relevante
+verwijzingen in het bericht ontstaan. In deze stap wordt ook de sortering van groepen en
+objecten bepaald.
+
+Uitvoer
+
+•
+
+SL.1.MSS – Maak selectieresultaat personen
+
+Status: Definitief, versie: 1.0
+
+Pagina 8 van 12
+
+UCS SL.0.SS - Standaard selectiedienst
+
+De persoonsbeelden van de geselecteerde personen worden aan een selectieresultaatset
+toegevoegd tot het maximum aantal personen of de maximale grootte van het bestand
+wordt bereikt. Het maximaal aantal personen per bestand of de maximale grootte van een
+bestand (selectieresultaatset) wordt geregistreerd bij de betreffende selectiedienst.
+Het bestand wordt vervolgens op een door de beheerder te configureren plaats neergezet.
+
+•
+
+SL.1.MST – Maak selectieresultaat totalen
+Nadat alle personen zijn geplaatst in een selectieresultaatset wordt er nog één afsluitende
+selectieresultaatset gemaakt en geplaatst. In deze selectieresultaatset worden de
+selectiekenmerken gevuld en de samenvattende gegevens van de uitgevoerde selectietaak.
+Zoals het totaal aantal geselecteerde personen en het totaal aantal bestanden
+(selectieresultaatsets).
+Ook deze selectieresultaatset wordt op de door de beheerder te configureren plaats
+neergezet.
+
+•
+
+SL.1.MCB – Maak controle bestand
+Wanneer bij de instelling van de betreffende selectiedienst is aangegeven dat er een
+steekproefcontrole uitgevoerd dient te worden door de beheerder, dan wordt deze stap
+uitgevoerd. Er worden 50 willekeurige selectieresultaatberichten apart gezet in een controle
+bestand. Hiermee kan de beheerder in de beheerapplicatie het controle bestand aanroepen
+en de gegevens in het bestand controleren.
+
+•
+
+SL.1.MPB – Maak protocollering bestand
+Ten behoeve van de protocollering (die pas na de werkelijke levering wordt gestart)
+moeten de te protocolleren gegevens apart gezet worden. In deze stap worden de te
+protocolleren gegevens in een apart bestand geplaatst.
+
+•
+
+SL.1.SS.WS – Wijzig status selectietaak
+Afhankelijk van de uitvoering en de instelling van de betreffende selectiedienst wijzigt de
+status van de selectietaak.
+Wanneer bij de instelling is aangegeven dat er een steekproefcontrole uitgevoerd dient te
+worden en de selectietaak is succesvol uitgevoerd dan wijzigt de status van de selectietaak
+naar “Controleren”.
+Wanneer er geen steekproefcontrole nodig is en de selectietaak is succesvol uitgevoerd dan
+wijzigt de status van de selectietaak naar “Te leveren”.
+Tot slot wordt de daadwerkelijke selectiedatum geregistreerd bij de selectietaak.
+
+3.4
+
+Bedrijfsregels
+
+Voor een toelichting op de verschillende soorten bedrijfsregels, de meldingsniveaus, de toepassing
+en werking ervan in het bijhoudingsproces, wordt verwezen naar de daartoe opgestelde
+Aspectbeschrijving Controles [3].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels, verwerkingslogica en definitieregels zijn opgenomen de bijlage: SL.0.SS – Bijlage
+Standaard selectiedienst.doc.
+
+Status: Definitief, versie: 1.0
+
+Pagina 9 van 12
+
+UCS SL.0.SS - Standaard selectiedienst
+
+4 Uitvoer
+4.1
+
+Beschrijving
+
+Dit proces levert per persoon een persoonsbeeld dat toegevoegd wordt aan een
+selectieresultaatset.
+In de instelling van de betreffende selectiedienst kan aangegeven worden wat het maximaal aantal
+personen in een selectieresultaatset mag zijn en/of wat de maximale grootte van de
+selectieresultaatset mag zijn. Hierdoor kan het resultaat van het uitvoeren van een selectietaak
+bestaan uit meerdere selectieresultaatsets.
+Wanneer alle geselecteerde personen geplaatst zijn in de selectieresultaatsets wordt er een
+afsluitende selectieresultaatset aangemaakt met de samenvattende gegevens van de uitgevoerde
+selectietaak.
+De selectieresultaatsets worden op een door de beheerder te configureren locatie geplaatst. Ook de
+bestanden ten behoeve van de (later uit te voeren) protocollering en de steekproefcontrole door de
+beheerder worden ergens geplaatst.
+De status van de selectietaak en de werkelijke selectiedatum worden geregistreerd bij de
+selectietaak.
+
+4.2
+
+Selectieresultaatset
+
+Per persoon wordt er een persoonsbeeld samengesteld. Het uitgangspunt is een volledig persoon.
+Dit wordt met de autorisatie en de instelling van de selectiedienst ingeperkt. Bij volledige
+autorisatie is het mogelijk dat er volledige personen geleverd worden met alle beschikbare
+persoonsgegevens per persoon.
+Een volledig persoonsbeeld wordt in z’n geheel toegevoegd aan een selectieresultaatset.
+Voor de volledige beschrijving en inhoud van het bestand selectieresuiltaatset wordt verwezen naar
+Aspectbeschrijving Generieke Berichtstructuur [2] en de bijlage: SL.0.SS – Bijlage Standaard
+selectiedienst.doc.
+
+4.2.1
+
+Toelichting op de selectieresultaatset
+
+Selectiekenmerken
+soortSelectieresultaatSet
+Er worden twee soorten selectieresultaatsets onderkend.
+o Resultaatset personen; hier worden de persoonsbeelden van de geselecteerde
+personen in geplaatst. Dit soort kan meerdere keren voorkomen bij een
+uitgevoerde selectietaak.
+o Resultaatset totalen; hier worden de totalen van de uitgevoerde selectie in
+geplaatst. Dit soort bevat geen persoonsgegevens.
+VolgnummerSelectieresultaatSet
+Een selectieresultaat bestaat uit meerdere selectieresultaatsets. Deze parameter geeft het
+volgnummer van de betreffende selectieresultaatset weer.
+soortSelectie
+De soort selectiedienst waartoe de uitgevoerde selectietaak behoord. Mogelijke waarden hierbij
+zijn:
+o Standaard selectie
+o Selectie met plaatsing afnemerindicatie
+o Selectie met verwijdering afnemerindicatie
+o Modelselectie
+
+Status: Definitief, versie: 1.0
+
+Pagina 10 van 12
+
+UCS SL.0.SS - Standaard selectiedienst
+
+leveringsautorisatieIdentificatie
+De leveringsautorisatie waarop de selectie betrekking heeft.
+
+dienstIdentificatie
+De identificatie van de Dienst.
+selectietaakIdentificatie
+De identificatie van de uitgevoerde selectietaak.
+selectieDatum
+De datum waarop de selectierun is uitgevoerd.
+Peilmomenten
+De peilmomenten die gebruikt zijn bij de betreffende selectietaak worden meegegeven in de
+selectieresultaatsets. De volgende peilmomenten kunnen voorkomen:
+•
+peilmomentMaterieelResultaat
+•
+peilmomentFormeelResultaat
+Resultaat
+Onderstaande parameters komen enkel voor bij selectieresultaatsets van het soort ‘Resultaatset
+totalen’.
+•
+aantalSelectieresultaatPersonen; het aantal personen dat is geselecteerd;
+•
+aantalSelectieresultaatSets; het aantal selectieresultaatsets waaruit het resultaat bestaat
+(inclusief de Resultaatset totalen).
+Geselecteerde persoon
+Per geselecteerd persoon worden de persoonsgegevens in de selectieresultaatset geplaatst. De
+groepen en attributen die in de selectieresultaatset geplaatst worden wordt bepaald door de
+autorisatie.
+De ‘geselecteerde persoon’ komt alleen voor bij de selectieresultaatset van het soort ‘Resultaat
+personen’.
+
+Status: Definitief, versie: 1.0
+
+Pagina 11 van 12
+
+UCS SL.0.SS - Standaard selectiedienst
+
+5 Ontwerpbeslissingen
+•
+
+Controle van de autorisatie en de selectietaak gebeurd bij het opstarten van de selectierun.
+Wanneer tijdens het uitvoeren van de selectierun autorisatie of de betreffende selectietaak
+wijzigt heeft dit geen gevolgen voor de lopende selectierun en de daarbij horende
+selectietaken.
+
+Status: Definitief, versie: 1.0
+
+Pagina 12 van 12
+
+

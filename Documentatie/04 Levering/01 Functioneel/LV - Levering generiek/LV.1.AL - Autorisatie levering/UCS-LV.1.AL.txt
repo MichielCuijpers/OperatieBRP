@@ -1,0 +1,186 @@
+UCS LV.1.AL – Autorisatie levering
+Versie
+
+2.0
+
+Datum
+
+12 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+06-12-2016
+
+0.1
+
+Eerste opzet
+
+oBRP
+
+07-12-2016
+
+0.2
+
+Peer-review commentaar verwerkt
+
+oBRP
+
+14-02-2017
+
+1.0
+
+UC’s in BMR aangemaakt, regels omgezet. Versie gereed.
+
+oBRP
+
+12-07-2017
+
+2.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS LV.1.AL – Autorisatie levering
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Activiteitendiagram .................................................................................................. 4
+2.1
+
+3
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Beschrijving van de stappen ...................................................................................................4
+
+Ontwerpbeslissingen ................................................................................................ 4
+
+Status: Definitief, versie: 2.0
+
+Pagina 2 van 5
+
+UCS LV.1.AL – Autorisatie levering
+
+1 Inleiding
+1.1
+
+Doel
+
+Het doel van deze Use Caseis om een inkomend verzoek te controleren op de autorisaties van de
+aanvragende partij in de rol van Afnemer en de eventueel toegepaste bewerkerconstructie
+(ondertekenaar en transporteur). Hiermee wordt geborgd, dat er geen ongeautoriseerde
+leveringsverzoeken worden verwerkt.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de stappen van de bepaling of het leveringsverzoek voldoet aan de
+autorisatiecriteria. In hoofdstuk 3 staan de Use Case specifieke ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 2.0
+
+Pagina 3 van 5
+
+UCS LV.1.AL – Autorisatie levering
+
+2 Activiteitendiagram
+
+2.1
+
+Beschrijving van de stappen
+
+In deze paragraaf worden de stappen in het activiteitendiagram beschreven.
+1. Controleer geldigheid autorisatieobjecten (LV.1.AL.CGA(*))
+Controleer dat de gevraagde dienst binnen de opgegeven leveringsautorisatie (en alle overige
+relevante entiteiten) geldig is op de huidige datum en niet is geblokkeerd.
+
+2. Controleer bewerkerconstructie (LV.1.AL.BEW(*))
+Controleer dat de eventueel toegepaste bewerkerconstructie (combinatie van geautoriseerde
+partij, ondertekenaar en transporteur) geldig is voor de betreffende leveringsautorisatie.
+
+3 Ontwerpbeslissingen
+•
+
+De autorisatieregels geven in het retourbericht slechts een generieke foutmelding
+retour. In de logging wordt wel de exacte foutconditie weggeschreven. Dit maakt het
+lastig voor kwaadwillende partijen om zich stap voor stap naar binnen te werken,
+terwijl er bij geautoriseerde gebruikers toch al een nauwe samenwerking zal bestaan
+met BRP-beheer om de autorisatie en het gebruik ervan operationeel te krijgen. Het is
+dus voldoende als alleen de beheerder kan zien welke autorisatieregel geschonden
+wordt.
+
+Status: Definitief, versie: 2.0
+
+Pagina 4 van 5
+
+UCS LV.1.AL – Autorisatie levering
+
+•
+
+Autorisaties die onvolledig geconverteerde expressies bevatten worden genegeerd.
+
+•
+
+De beheerapplicatie dwingt niet af dat de verschillende autorisatieobjecten onderling
+consistente geldigheidsperiodes hebben. Dit betekent dat het bijvoorbeeld niet
+gegarandeerd is dat wanneer een Toegang Leveringsautorisatie geldig is, de
+geautoriseerde Partij dan ook geldig is. De autorisatieregels controleren daarom de
+geldigheid van alle relevant autorisatieobjecten.
+
+Status: Definitief, versie: 2.0
+
+Pagina 5 van 5
+
+

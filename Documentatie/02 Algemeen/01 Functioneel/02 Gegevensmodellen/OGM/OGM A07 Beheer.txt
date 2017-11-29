@@ -1,0 +1,77 @@
+OGM A07 Beheer
+Release 59 17-7-2017
+
+VrijBer
+
+Dyn
+
+ID
+
+VrijBerID
+
+SrtBer >
+
+SrtBerVrijBer
+
+*
+
+Srt >
+
+SrtVrijBer
+
+*
+
+TsReg
+
+Ts
+
+*
+
+Data
+
+VrijBerData
+
+*
+
+Selrun
+
+. s1
+
+ID
+
+SelrunID
+
+*i
+
+TsStart
+
+Ts
+
+*
+
+TsGereed Ts
+
+.
+
+IndGelezen JaNee
+
+*i
+
+VrijBerPartij
+ID
+
+VrijBerPartijID
+
+VrijBer > VrijBer
+Partij >
+
+Partij
+
+Dyn
+*i
+* u1
+* u1
+
+SG
+
+

@@ -1,0 +1,549 @@
+UC202 Verwerken synchronisatie-cyclus
+
+2.7
+
+Datum
+Status
+
+06-06-2017
+Definitief
+
+Definitief | 2.7 | UC202 Verwerken synchronisatie-cyclus | 06-06-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING ................................................................................................................................................ 4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................... 6
+2.1
+
+3
+
+REGULIER VERLOOP................................................................................................................................. 6
+
+AANVULLENDE SPECIFICATIES .................................................................................................... 8
+3.1
+3.2
+3.3
+3.4
+3.5
+3.6
+3.7
+
+4
+
+BEKNOPTE OMSCHRIJVING...................................................................................................................... 4
+REFERENTIES ........................................................................................................................................... 5
+PRECONDITIE ........................................................................................................................................... 5
+POSTCONDITIE ........................................................................................................................................ 5
+
+SITUATIE IS GEWIJZIGD ......................................................................................................................... 8
+GELDIGE PARTIJ ...................................................................................................................................... 8
+AUTOMATISCH OPNIEUW VERWERKEN ................................................................................................... 8
+BLOKKERING VERWIJDEREN ................................................................................................................... 9
+LOGGING .................................................................................................................................................. 9
+TECHNISCHE FOUTEN .............................................................................................................................. 9
+VASTSTELLEN OF DE PERSOONSLIJST VASTGELEGD MAG WORDEN ..................................................... 9
+
+OPMERKINGEN ..................................................................................................................................... 10
+
+OperatieBRP
+
+Pagina 2 van 10
+
+Definitief | 2.7 | UC202 Verwerken synchronisatie-cyclus | 06-06-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+20-12-2011
+17-08-2012
+27-09-2012
+15-10-2012
+31-10-2012
+18-11-2013
+
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+
+17-12-2013
+16-06-2014
+01-09-2014
+28-07-2015
+15-10-2015
+28-03-2016
+
+1.0
+1.2
+1.3
+2.0
+2.1
+2.2
+
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+
+04-04-2016
+16-11-2016
+
+2.3
+2.4
+
+30-11-2016
+
+2.5
+
+02-02-2016
+06-06-2017
+
+2.6
+2.7
+
+Initieel
+Wijzigingen nav workshop initiele vulling
+Wijzigingen nav groomsessie
+Ready for Review
+Flow 8e toegevoegd
+Document geactualiseerd met onder andere
+hetgeen op de Wiki was beschreven en
+andere documenten.
+Reviewcommentaar verwerkt
+Reviewcommentaar verwerkt
+Definitief gemaakt voor release 2.2
+Versie aangemaakt voor release 3.1
+Afhandeling technische fouten verduidelijkt
+Aanpassingen gedaan om locking and
+verwerking van La01 beter af te handelen
+Reviewcommentaar verwerkt
+Geen versienummer meer maar ID
+administratieve handeling bij bepalen
+gewijzigde situatie
+Er dient nu gewacht te worden met
+vastleggen van de persoonslijst op de juiste
+waarden van Status levering
+Referenties bijgewerkt
+Controle geldige partij uitgebreid
+
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+12-12-2013
+
+0.6
+
+Review
+
+Operatie BRP
+
+29-01-2014
+
+1.1
+
+Use case aangepast zodat deze alleen een
+functionele beschrijving bevat en voldoet
+aan het use case template. Inhoudelijk is er
+niets gewijzigd.
+
+Operatie BRP
+
+16-06-2014
+
+1.2
+
+Review
+
+Operatie BRP
+
+01-04-2016
+
+2.2
+
+Review
+
+Operatie BRP
+
+OperatieBRP
+
+Pagina 3 van 10
+
+Definitief | 2.7 | UC202 Verwerken synchronisatie-cyclus | 06-06-2017
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Tijdens de migratieperiode zullen LO3- en RNI-gemeenten persoonsgegevens synchroniseren met
+de BRP. Dit is de start van de synchronisatie (bericht)cyclus. De synchronisatie-cyclus is uitvoerig
+beschreven in het Logisch Ontwerp [LO].
+De synchronisatie-cyclus is een eenvoudige cyclus die uit slechts één bericht bestaat, het
+synchronisatiebericht (Lg01).
+Dit document beschrijft op welke wijze de synchronisatie-cyclus verwerkt wordt.
+Deze use case is ook van toepassing op een synchronisatieantwoord (La01) dat op identieke wijze
+in deze use case wordt afgehandeld. De synchronisatievraag-cyclus is in [UC811] beschreven.
+
+uc UC202 Verw erken synchronisatie-cyclus
+
+UC811 Verw erken
+synchronisatiev raag-cyclus
+
+UC220 Bepalen
+v erw erking
+persoonslij st
+
+«invokes»
+
+«include»
+UC202 Verw erken
+synchronisatie-cyclus
+Gemeente
+«include»
+UC808 Beoordelen
+onduidelij ke
+synchronisatie
+migratiev oorziening
+
+OperatieBRP
+
+Pagina 4 van 10
+
+Definitief | 2.7 | UC202 Verwerken synchronisatie-cyclus | 06-06-2017
+
+Schematische weergave van de synchronisatie-cyclus zoals die in het Logisch ontwerp is
+beschreven
+1.2
+
+1.3
+
+Referenties
+#
+[SUPPL]
+
+Document
+Aanvullende specificities ISC
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+[UC220]
+
+MV UC220 Bepalen verwerking
+persoonslijst
+
+Operatie BRP
+
+-
+
+-
+
+[UC808]
+
+BH UC808 Beoordelen onduidelijke
+situatie
+
+Operatie BRP
+
+-
+
+-
+
+[UC811]
+
+BH UC811 Verwerken
+synchronisatievraag-cyclus
+
+Operatie BRP
+
+-
+
+-
+
+[LO]
+
+Logisch Ontwerp GBA
+
+RvIG
+
+3.10
+
+08-10-2016
+
+Preconditie
+• Er is een synchronisatiebericht (Lg01), of synchronisatieantwoord (La01) ontvangen
+
+1.4
+
+Postconditie
+N.v.t.
+
+OperatieBRP
+
+Pagina 5 van 10
+
+Definitief | 2.7 | UC202 Verwerken synchronisatie-cyclus | 06-06-2017
+
+2
+
+Verloop
+
+Er is in deze use case gekozen om de alternatieve verlopen in het regulier verloop te beschrijven
+om de leesbaarheid te vergroten. De alternatieven hebben een andere kleur afhankelijk van de
+diepte waar het alternatief optreedt.
+2.1
+
+Regulier verloop
+1. De migratievoorziening stelt vast dat als de beheerder een keuze heeft gemaakt het resultaat
+van [UC808] ongelijk aan Afbreken zonder Pf03 of Afbreken met Pf03 is
+1. De migratievoorziening stelt vast dat het resultaat van [UC808] Afbreken zonder Pf03 is
+2. De use case eindigt.
+1. De migratievoorziening stelt vast dat het resultaat van [UC808] Afbreken met Pf03 is
+2. De migratievoorziening verstuurt een Pf03-bericht naar de afzender van het
+synchronisatiebericht (zie ook [SUPPL])
+3. De use case eindigt.
+2. De migratievoorziening stelt vast dat de verzendende partij een geldige GBA-gemeente is (AS:
+3.2)
+1. De migratievoorziening stelt vast dat de verzendende partij geen geldige GBA-gemeente is
+(AS: 3.2)
+2. De migratievoorziening verstuurt een Pf03-bericht naar de afzender van het
+synchronisatiebericht (zie ook [SUPPL])
+3. De use case eindigt
+3. De migratievoorziening stelt vast dat het A-nummer in de kop van het bericht, als die voorkomt,
+overeenkomt met het actuele a-nummer (01.01.10) in de inhoud van het bericht
+1. De migratievoorziening stelt vast dat het a-nummer in de kop van het bericht, als die
+voorkomt, niet overeenkomt met het actuele a-nummer (01.01.10) in de inhoud van het
+bericht
+2. De migratievoorziening verstuurt een Pf03-bericht naar de afzender van het
+synchronisatiebericht (zie ook [SUPPL])
+3. De use case eindigt
+4. De migratievoorziening voert aanvullende controles uit, use case [UC220] wordt gestart
+5. De migratievoorziening stelt vast dat het resultaat van [UC220] Toevoegen of Vervangen is
+1. De migratievoorziening stelt vast dat het resultaat van [UC220] Onduidelijke situatie is
+2. De migratievoorziening stelt vast dat de beheerder voor dit bericht geen keuze heeft gemaakt
+1. De migratievoorziening stelt vast dat het bericht is voorgelegd aan de beheerder ([UC808])
+en de beheerder een keuze heeft gemaakt
+2. De migratievoorziening stelt vast dat de situatie ongewijzigd is sinds de keuze van de
+beheerder (AS: 3.1)
+1. De migratievoorziening stelt vast dat de situatie is gewijzigd sinds de keuze van de
+beheerder
+2. De migratievoorziening meldt de beheerder het resultaat Onduidelijk, [UC808] wordt
+gestart
+3. De use case gaat verder bij stap 1 van het regulier verloop.
+
+OperatieBRP
+
+Pagina 6 van 10
+
+Definitief | 2.7 | UC202 Verwerken synchronisatie-cyclus | 06-06-2017
+
+3. De migratievoorziening stelt vast dat het resultaat van [UC808] Toevoegen of Vervangen
+is
+1. De migratievoorziening stelt vast dat het resultaat van [UC808] Afkeuren zonder Pf03
+is
+2. De use case eindigt.
+1. De migratievoorziening stelt vast dat het resultaat van [UC808] Afkeuren met Pf03 is
+2. De migratievoorziening verstuurt een Pf03-bericht naar de afzender van het
+synchronisatiebericht (zie ook [SUPPL])
+3. De use case eindigt.
+1. De migratievoorziening stelt vast dat het resultaat van [UC808] Opnieuw verwerken is
+2. De migratievoorziening meldt de beheerder het resultaat Onduidelijk, [UC808] wordt
+gestart
+3. De use case gaat verder bij stap 1 van het regulier verloop.
+1. De migratievoorziening stelt vast dat het resultaat van [UC808] Automatisch opnieuw
+verwerken is
+2. De migratievoorziening meldt de beheerder het resultaat Onduidelijk, [UC808] wordt
+gestart
+3. De use case gaat verder bij stap 1 van het regulier verloop.
+4. De use case gaat verder bij stap 6 van het regulier verloop.
+3. De migratievoorziening meldt de beheerder het resultaat, [UC808] wordt gestart
+4. De use case gaat verder bij stap 1 van het regulier verloop.
+1. De migratievoorziening stelt vast dat het resultaat van [UC220] Negeren is
+2. De use case eindigt.
+6. De migratievoorziening stelt vast dat niet gewacht hoeft te worden om de persoonslijst vast te
+leggen
+7. De migratievoorziening legt de persoonslijst vast in de BRP
+8. De migratievoorziening verwijdert de blokkering als deze aanwezig is
+9. De migratievoorziening stelt vast dat er geen taken bij de beheerder liggen waarvan het bericht
+overeenkomstige a-nummers heeft met het zojuist verwerkte bericht (AS: 3.3)
+1. De migratievoorziening stelt vast dat er taken bij de beheerder zijn gevonden waarvan het
+bericht overeenkomstige a-nummers heeft met het zojuist verwerkte bericht
+2. De migratievoorziening selecteert voor elk van de taken het [UC808] resultaat Automatisch
+opnieuw verwerken
+3. De use case gaat verder bij stap 1 van het regulier verloop.
+10. De use case eindigt
+
+OperatieBRP
+
+Pagina 7 van 10
+
+Definitief | 2.7 | UC202 Verwerken synchronisatie-cyclus | 06-06-2017
+
+3
+
+Aanvullende specificaties
+
+3.1
+
+Situatie is gewijzigd
+De migratievoorziening bepaalt of er sinds de beslissing van de beheerder iets is gewijzigd in de
+lijst van kandidaat persoonslijsten. De migratievoorziening vergelijkt de kandidaat persoonslijsten
+die zojuist zijn bepaald met de persoonslijsten die de vorige keer zijn bepaald en waarop de
+beheerder zijn beslissing heeft gebaseerd. Dit zorgt ervoor dat berichten alleen verwerkt worden
+wanneer die door een beheerder in een actuele situatie zijn beoordeeld.
+De situatie is gewijzigd als:
+• Het aantal kandidaat persoonslijsten is gewijzigd (meer of minder), of
+• Het ID van de meeste recente administratieve handeling van een van de kandidaat
+persoonslijsten is gewijzigd (ofwel er heeft een nieuwe administratieve handeling
+plaatsgevonden)
+
+Meer informatie over het bepalen van kandidaat persoonslijsten is te vinden in [UC220].
+
+3.2
+
+Geldige partij
+Een partij als GBA-gemeente dient aan de volgende voorwaarden te voldoen:
+• De partij is geldig.
+• De partij heeft geen gevulde Partij.Datum overgang naar BRP, of Partij.Datum overgang naar
+BRP ligt na de huidige datum.
+• De partij heeft een geldige Partij rol.Rol met de waarde ‘Bijhoudingsorgaan College’ of
+‘Bijhoudingsorgaan Minister’.
+Een Partij of Partij rol is geldig als:
+• De huidige datum op of na Datum ingang ligt en voor Datum einde indien aanwezig.
+
+3.3
+
+Automatisch opnieuw verwerken
+Nadat de migratievoorziening een bericht succesvol heeft verwerkt, worden taken die nog niet zijn
+opgepakt door de beheerder en een persoonslijst betreffen dat een overeenkomstig a-nummer
+heeft met het actuele a-nummer van de persoonslijst van het zojuist verwerkte bericht, door de
+migratievoorziening automatisch opnieuw ter verwerking aangeboden.
+De overeenkomstige a-nummers kunnen zijn:
+• A-nummer (01/51.01.10)
+• Vorig a-nummer (01/51.20.10)
+• Volgend a-nummer (01/51.20.20)
+
+OperatieBRP
+
+Pagina 8 van 10
+
+Definitief | 2.7 | UC202 Verwerken synchronisatie-cyclus | 06-06-2017
+
+Dit zorgt ervoor dat het verwerken van Lg01- en La01-berichten vlotter verloopt en heeft het een
+positief effect op het aantal onduidelijk situaties. Bovendien wordt de beheerder niet onnodig
+geconfronteerd met verouderde situaties.
+
+3.4
+
+Blokkering verwijderen
+Wanneer een persoon verhuist van een BRP-gemeente naar een GBA-gemeente, wordt er een
+blokkering gezet om te voorkomen dat er de persoonslijst wordt gewijzigd door een andere
+gemeente dan de gemeente waarnaar verhuisd wordt.
+Op dit moment is nog niet helemaal duidelijk hoe blokkeringen in de BRP geregistreerd dienen te
+worden. Wat er voor een blokkering in ieder geregistreerd dient te worden is:
+• Het actuele a-nummer van de persoon die aan het verhuizen is
+• De gemeente waar de persoon naartoe aan het verhuizen is
+• Het tijdstip waarop de blokkering is geplaatst
+
+3.5
+
+Logging
+Alle beslissingen die door de beheerder of de migratievoorziening genomen worden dienen gelogd
+te worden en zijn te raadplegen door de beheerder.
+
+3.6
+
+Technische fouten
+De afhandeling van technische fouten is beschreven in [SUPPL].
+
+3.7
+
+Vaststellen of de persoonslijst vastgelegd mag worden
+Een persoonslijst mag alleen vastgelegd worden als Administratieve handeling.Status levering van
+elke administratieve handeling van de persoonslijst, de waarde ‘Fout’, ‘Niet leveren’ of ‘Geleverd’
+heeft. Hiermee wordt voorkomen dat voor een administratieve handeling de verkeerde berichten
+worden geleverd.
+Zolang Status levering een andere waarde heeft dient gewacht te worden met het vastleggen van
+de persoonslijst. Voor een beheerder is het zichtbaar dat om deze reden gewacht wordt met het
+vastleggen van de persoonslijst.
+
+OperatieBRP
+
+Pagina 9 van 10
+
+Definitief | 2.7 | UC202 Verwerken synchronisatie-cyclus | 06-06-2017
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+OperatieBRP
+
+Pagina 10 van 10
+
+

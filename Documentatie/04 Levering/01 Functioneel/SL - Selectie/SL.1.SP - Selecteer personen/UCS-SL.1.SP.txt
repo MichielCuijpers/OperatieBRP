@@ -1,0 +1,238 @@
+UCS SL.1.SP – Selecteer personen
+Versie
+
+1.0
+
+Datum
+
+12 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+10-04-2017
+
+0.1
+
+Eerste opzet
+
+oBRP
+
+11-04-2017
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+20-04-2017
+
+0.3
+
+Tekstueel toegevoegd dat alleen ingeschreven personen
+worden geselecteerd.
+
+oBRP
+
+08-06-2017
+
+0.4
+
+Selecteren personen binnen/buiten populatiebeperking
+afhankelijk van de soort selectiedienst.
+
+oBRP
+
+12-07-2017
+
+1.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS SL.1.SP – Selecteer personen
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Selecteer personen ................................................................................................... 4
+2.1
+2.2
+
+3
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Activiteitendiagram ...............................................................................................................4
+Beschrijving van de stappen ...................................................................................................4
+
+Ontwerpbeslissingen ................................................................................................ 6
+
+Status: Definitief, versie: 1.0
+
+Pagina 2 van 6
+
+UCS SL.1.SP – Selecteer personen
+
+1 Inleiding
+1.1
+
+Doel
+
+Aan de hand van het selectiecriterium worden de juiste personen geselecteerd. Bij de soorten
+selectiediensten ´Standaard selectiedienst´ en ´Selectiedienst met plaatsing afnemerindicatie´
+dient een geselecteerd persoon tevens onderdeel te zijn van de totale populatiebeperking. In deze
+gevallen zijn de (nadere) populatiebeperkingen in principe dus ook onderdeel van de
+selectiecriteria.
+Personen die zijn opgeschort wegens foutief of gewist worden nooit geselecteerd.
+Naast de hierboven benoemde selectiecriteria is het ook mogelijk om een lijst met BSN’s of
+Administratienummers als selectiecriteria te gebruiken. De lijst wordt aangeleverd in de vorm van
+een bestand.
+Wanneer gebruik wordt gemaakt van een lijst dan geldt deze aanvullend (logische EN) op de
+selectiecriteria.
+De persoonslijsten die uiteindelijk geselecteerd worden moeten dus én aan de selectiecriteria
+voldoen en voorkomen op de lijst.
+Deze Use Case beschrijft hoe de persoonsbeelden worden geselecteerd.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de stappen met betrekking tot het selecteren van de persoonsbeelden. In
+Hoofdstuk 3 staan de Use Case specifieke ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 1.0
+
+Pagina 3 van 6
+
+UCS SL.1.SP – Selecteer personen
+
+2 Selecteer personen
+Het selecteren van personen kent een aantal stappen, deze staan in het activiteitendiagram.
+In de paragraaf daarna worden de stappen stuk voor stuk beschreven. Voor een meer
+gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden wordt verwezen
+naar de aan deze Use Case gekoppelde regels in BMR.
+
+2.1
+
+Activiteitendiagram
+
+2.2
+
+Beschrijving van de stappen
+
+In deze paragraaf worden de stappen in het activiteitendiagram beschreven.
+
+1. Gebruik selectielijst (SL.1.SP.GSL)
+In deze stap wordt gecontroleerd of er een bestand aanwezig is dat gebruikt dient te worden als
+extra selectiecriterium.
+In het bestand kan of een lijst met Administratienummers of een lijst met Burgerservicenummers
+opgenomen zijn. De personen die geselecteerd worden voor deze selectiedienst moeten voorkomen
+op deze lijst.
+Het bestand is een CSV bestand met in de kopregel of de tekst Administratienummer of
+Burgerservicenummer. Daaronder een lijst met de betreffende nummers.
+De aanwezigheid van een selectiebestand is optioneel, wanneer er geen bestand aanwezig is voor
+de betreffende Dienst dan wordt deze stap overgeslagen.
+2. Gebruik selectiecriteria (SL.1.SP.GSC)
+Aan de hand van de selectiecriteria worden de juiste personen geselecteerd.
+
+Status: Definitief, versie: 1.0
+
+Pagina 4 van 6
+
+UCS SL.1.SP – Selecteer personen
+
+Wanneer de personen geselecteerd worden ten behoeve van de soorten selectiediensten
+´Standaard selectiedienst´ of ´Selectiedienst met plaatsing afnemerindicatie´ dan moeten de
+geselecteerde personen binnen de totale populatiebeperking vallen. Dit houdt in dat een
+geselecteerd persoon moet voldoen aan de volgende voorwaarden:
+•
+•
+•
+•
+
+Toegang leveringsautorisatie.Nadere populatiebeperking
+Leveringsautorisatie.Populatiebeperking
+Dienstbundel.Nadere populatiebeperking
+Dienst.Selectiecriterium
+
+Wanneer de personen geselecteerd worden ten behoeve van de soort selectiedienst ´Selectiedienst
+met verwijdering afnemerindicatie´ dan is het niet noodzakelijk dat de geselecteerde personen
+onderdeel zijn van de totale populatiebeperking. De totale populatiebeperking wordt in dit geval
+buiten beschouwing gelaten en een geselecteerd persoon moet voldoen aan de
+Dienst.Selectiecriterium.
+Indien er ook een selectielijst aanwezig is dan moet een geselecteerd persoon én op de lijst
+voorkomen én aan de selectiecriteria voldoen.
+3. Niet te leveren personen (SL.1.SP.NLP)
+Alleen ingeschreven personen worden geselecteerd.
+Personen die zijn opgeschort wegens foutief of gewist worden niet geselecteerd. Ook wanneer
+sprake is van een verstrekkingsbeperking bij de persoon voor de partij dan wordt deze persoon
+niet geselecteerd.
+Echter wanneer de personen worden geselecteerd ten behoeve van een selectiedienst met
+verwijdering afnemerindicatie dan worden personen met een verstrekkingsbeperking wel
+geselecteerd.
+
+Status: Definitief, versie: 1.0
+
+Pagina 5 van 6
+
+UCS SL.1.SP – Selecteer personen
+
+3 Ontwerpbeslissingen
+Er zijn geen Use Case specifieke ontwerpbeslissingen.
+
+Status: Definitief, versie: 1.0
+
+Pagina 6 van 6
+
+

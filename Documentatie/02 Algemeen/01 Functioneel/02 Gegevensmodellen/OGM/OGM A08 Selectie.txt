@@ -1,0 +1,116 @@
+OGM A08 Selectie
+Release 59 17-7-2017
+
+Seltaak
+
+SG
+
+ID
+
+SeltaakID
+
+*il
+
+Dienst >
+
+Dienst
+
+* u1
+
+Selrun
+
+ToegangLevsautorisatie >
+
+ToegangLevsautorisatie
+
+* u1
+
+ID
+
+SelrunID
+
+*i
+
+Volgnr
+
+Volgnr
+
+* u1
+
+TsStart
+
+Ts
+
+*
+
+DatPlanning
+
+Dat
+
+.
+
+TsGereed Ts
+
+.
+
+DatUitvoer
+
+Dat
+
+.
+
+PeilmomMaterieelResultaat Dat
+
+.
+
+PeilmomFormeelResultaat
+
+Ts
+
+.
+
+IndSelLijstGebruiken
+
+JaNee
+
+.
+
+IndAG
+
+JaNee
+
+*
+
+Status >
+
+SeltaakStatus
+
+.
+
+StatusGewijzigdDoor
+
+NaamEnumeratiewaarde
+
+.
+
+StatusToelichting
+
+OnbeperkteOms
+
+.
+
+IndAGStatus
+
+JaNee
+
+*
+
+UitgevoerdIn >
+
+Selrun
+
+.
+
+SG
+
+

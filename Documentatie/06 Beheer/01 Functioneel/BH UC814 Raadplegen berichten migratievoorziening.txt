@@ -1,0 +1,331 @@
+UC814 Raadplegen berichten
+migratievoorziening
+
+1.5
+
+Datum
+Status
+
+18-03-2016
+Definitief
+
+Definitief | 1.5 | UC814 Raadplegen berichten migratievoorziening | 18-03-2016
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................6
+2.1
+
+3
+
+REGULIER VERLOOP ..............................................................................................................................6
+
+SPECIAL REQUIREMENTS ..............................................................................................................7
+3.1
+
+4
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................5
+PRECONDITIE ........................................................................................................................................5
+POSTCONDITIE......................................................................................................................................5
+
+DETAILS VAN HET BERICHT..................................................................................................................7
+
+OPMERKINGEN ....................................................................................................................................8
+
+Operatie BRP
+
+Pagina 2 van 8
+
+Definitief | 1.5 | UC814 Raadplegen berichten migratievoorziening | 18-03-2016
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+06-02-2014
+14-03-2014
+17-06-2014
+01-09-2014
+18-05-2015
+25-06-2015
+
+0.1
+1.0
+1.1
+1.2
+1.3
+1.4
+
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+
+18-03-2016
+
+1.5
+
+Initiële versie
+Aanpassingen n.a.v. review
+Filter op kenmerken aangepast.
+Definitief gemaakt voor release 2.2
+Naam document gewijzigd
+Definitief gemaakt ten behoeve van release
+3.1
+INTEST-1764 bevindingen verwerkt
+
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+14-03-2014
+
+0.1
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 8
+
+Definitief | 1.5 | UC814 Raadplegen berichten migratievoorziening | 18-03-2016
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+De migratievoorziening is een complex systeem dat een veelheid van activiteiten uitvoert. Het is
+daarom belangrijk dat het systeem goed beheerd kan worden. Om dit mogelijk te maken is er
+voor gekozen om alle activiteiten in processen te vatten waarbij elk proces bestaat uit meerdere
+voorgedefinieerde stappen.
+Tijdens het uitvoeren van een proces is het mogelijk dat er berichten verstuurd en ontvangen
+worden. Dit kunnen interne berichten binnen het systeem zijn maar ook berichten van/naar
+buiten het systeem.
+Deze use case beschrijft op welke de beheerder inzicht krijgt in de berichten die
+verstuurd/ontvangen zijn door het systeem.
+
+Operatie BRP
+
+Pagina 4 van 8
+
+Definitief | 1.5 | UC814 Raadplegen berichten migratievoorziening | 18-03-2016
+
+1.2
+
+1.3
+
+Referenties
+#
+[UC801]
+
+Document
+MV UC801 Beheren processen
+
+Organisatie
+OperatieBRP
+
+Versie
+-
+
+Datum
+-
+
+[UC815]
+
+MV UC815 Beheren taken
+
+OperatieBRP
+
+-
+
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 5 van 8
+
+Definitief | 1.5 | UC814 Raadplegen berichten migratievoorziening | 18-03-2016
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+1. De beheerder meldt het systeem welke berichten getoond dienen te worden (AS: 3.1)
+2. Het systeem toont een lijst van gevonden berichten (AS: 3.1)
+3. De beheerder selecteert een bericht
+4. Het systeem toont de details van het geselecteerde bericht (AS: 3.1)
+5. De use case eindigt
+
+Operatie BRP
+
+Pagina 6 van 8
+
+Definitief | 1.5 | UC814 Raadplegen berichten migratievoorziening | 18-03-2016
+
+3
+
+Special requirements
+
+3.1
+
+Details van het bericht
+In de onderstaande tabel is te vinden welke gegevens van een bericht getoond worden.
+Gegeven
+Tijdstip
+
+Zoeken
+Ja
+
+Raadplegen details
+Ja
+
+Kanaal
+
+Ja
+
+Ja
+
+Richting
+Bron
+Doel
+Type
+Process-id
+
+Ja
+Ja
+Ja
+Ja
+Ja
+
+Ja
+Ja
+Ja
+Ja
+Ja
+
+Bericht-id
+Correlation-id
+
+Ja
+Ja
+
+Ja
+Ja
+
+Ms-SequenceNr
+
+Nee
+
+Ja
+
+Oorspronkelijk
+bericht
+LO3 Bericht
+headers
+
+Nee
+
+Ja
+
+Nee
+
+Ja
+
+LO3 Bericht
+inhoud
+
+Nee
+
+Ja
+
+Operatie BRP
+
+Toelichting
+Tijdstip waarop het bericht is verstuurd of
+ontvangen
+Via welk kanaal het bericht is verstuurd of
+ontvangen
+Of het bericht is verstuurd of ontvangen
+Welke partij het bericht heeft verstuurd
+Voor welke partij het bericht is bedoeld
+Type van het bericht
+In het kader van welk proces (ID) het
+bericht is verstuurd of ontvangen
+Het ID van het bericht
+Het ID van een voorgaand gerelateerd
+bericht in de cyclus
+Wanneer het een LO3-bericht betreft
+wordt dit nummer getoond indien
+aanwezig.
+De oorspronkelijke inhoud van het bericht.
+Wanneer het een LO3-bericht betreft
+wordt de informatie uit de header
+getoond.
+Wanneer het LO3-bericht een persoonslijst
+bevat wordt deze in leesbaar formaat
+getoond.
+
+Pagina 7 van 8
+
+Definitief | 1.5 | UC814 Raadplegen berichten migratievoorziening | 18-03-2016
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 8 van 8
+
+

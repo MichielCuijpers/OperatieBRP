@@ -1,0 +1,166 @@
+LGM 15 Selectie
+Release 59 17-7-2017
+Dienst
+
+Selectierun
+
+SG
+
+......
+
+SG
+
+Identiteit
+
+Selectierun ID
+
+DX
+
+Datum/Tijd
+
+*
+
+Tijdstip gereed DX Datum/Tijd
+
+.
+
+Standaard
+Tijdstip start
+
+Selectietaak
+
+SG
+
+Identiteit
+
+-
+
+-
+
+ID
+
+D
+
+Selectietaak ID
+
+*il
+
+Dienst >
+
+D
+
+Dienst
+
+* u1
+
+Toegang leveringsautorisatie >
+
+D
+
+Toegang leveringsautorisatie
+
+* u1
+
+Volgnummer
+
+D
+
+Volgnummer
+
+* u1
+
+Datum planning
+
+DX
+
+Datum
+
+.
+
+Datum uitvoer
+
+DX
+
+Datum
+
+.
+
+Standaard
+
+G
+
+Peilmoment materieel resultaat DX Datum
+
+F
+
+.
+
+Peilmoment formeel resultaat
+
+DX
+
+Datum/Tijd
+
+.
+
+Selectie lijst gebruiken?
+
+DX
+
+Ja/Nee
+
+*
+
+Status >
+
+DX
+
+Selectietaak status
+
+*
+
+Status gewijzigd door
+
+DX
+
+Naam enumeratiewaarde
+
+*
+
+Status toelichting
+
+DX
+
+Onbeperkte omschrijving
+
+.
+
+DX
+
+Selectierun
+
+Status
+
+G
+
+Selectierun
+Uitgevoerd in >
+
+F
+
+-
+
+.
+
+-
+
+D
+
+ID
+
+-
+
+*i
+-
+
+

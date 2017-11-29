@@ -1,0 +1,80 @@
+LGM 14 Beheer
+Release 59 17-7-2017
+
+Vrij bericht
+
+Dyn
+
+Identiteit
+
+D
+
+Vrij bericht ID
+
+Soort bericht >
+
+DX
+
+Soort bericht vrij bericht
+
+Soort >
+
+DX
+
+Soort vrij bericht
+
+ID
+Standaard
+
+*i
+
+-
+
+Tijdstip registratie DX Datum/Tijd
+
+*
+*
+*
+
+Data
+
+DX
+
+Vrij bericht data
+
+*
+
+Gelezen?
+
+DX
+
+Ja/Nee
+
+. s1
+
+Vrij bericht \ Partij
+
+Dyn
+
+Identiteit
+ID
+
+D
+
+Vrij bericht > D
+Partij >
+
+D
+
+-
+
+Vrij bericht \ Partij ID * i
+Vrij bericht
+
+* u1
+
+Partij
+
+* u1
+
+

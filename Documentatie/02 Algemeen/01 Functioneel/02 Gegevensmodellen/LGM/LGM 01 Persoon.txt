@@ -1,0 +1,1489 @@
+Persoon
+
+Dyn
+
+LGM 01 Persoon
+Identiteit
+ID
+Soort >
+
+D
+
+Release 59 17-7-2017
+
+*i
+
+SDX
+
+Soort persoon
+
+* s1 s2 S1 S3 S4
+
+D
+
+Versienummer
+
+*
+
+Versie
+Lock versie
+
+/Tijdstip laatste wijziging
+/Sorteervolgorde
+/Tijdstip laatste wijziging GBA-systematiek
+
+DX
+SDX
+D
+SDX
+
+-
+
+-
+
+A
+
+F
+
+Persoon \ Verstrekkingsbeperking
+
+Afgeleid administratief
+/Administratieve handeling >
+
+-
+
+Persoon ID
+
+A
+
+*
+
+ID
+
+*
+
+Persoon >
+
+Persoon
+
+* u1
+
+Sorteervolgorde
+
+*
+
+Partij >
+
+SDX
+
+Partij
+
+. u1
+
+Datum/Tijd
+
+.
+
+Omschrijving derde
+
+SDX
+
+Omschrijving enumeratiewaarde
+
+A
+SDX
+
+Burgerservicenummer
+
+. s1 s4 u2
+
+Administratienummer
+
+SDX
+
+Administratienummer
+
+. s2 s3 u1
+
+Betrokkenheid
+
+A
+
+F+M
+
+D
+
+Persoon \ Verstrekkingsbeperking ID
+
+A
+
+Persoon cache
+
+Dyn
+
+ID
+
+D
+
+Betrokkenheid ID
+
+*i
+
+SDX
+
+Ja/Nee
+
+*
+
+Relatie >
+
+DX
+
+Relatie
+
+*
+
+Namenreeks?
+
+SDX
+
+Ja/Nee
+
+*
+
+Rol >
+
+D
+
+Soort betrokkenheid
+
+*
+
+Predicaat >
+
+SDX
+
+Predicaat
+
+.
+
+Persoon > DX Persoon
+
+Voornamen
+
+SDX
+
+Voornamen
+
+.
+
+Adellijke titel >
+
+SDX
+
+Adellijke titel
+
+.
+
+Standaard
+
+Voorvoegsel
+
+SDX
+
+Voorvoegsel
+
+.
+
+Versienummer
+
+Scheidingsteken
+
+SDX
+
+Scheidingsteken
+
+.
+
+Persoon historie volledig gegevens
+
+Geslachtsnaamstam
+
+SDX
+
+Geslachtsnaamstam
+
+* S1 S2 S3
+
+Relatie
+
+. s1
+
+Persoon \ Voornaam
+F
+
+Dyn
+-
+
+ID
+
+D
+
+Persoon \ Voornaam ID
+
+Persoon >
+
+D
+
+Persoon
+
+Datum geboorte
+
+SDX
+
+Datum evt. (deels) onbekend
+
+* S3
+
+Gemeente geboorte >
+
+SDX
+
+Gemeente
+
+.
+
+Woonplaatsnaam geboorte
+
+SDX
+
+Naam enumeratiewaarde
+
+.
+
+Buitenlandse plaats geboorte
+
+SDX
+
+Buitenlandse plaats
+
+.
+
+Standaard
+
+Buitenlandse regio geboorte
+
+SDX
+
+Buitenlandse regio
+
+.
+
+Naam
+
+Omschrijving locatie geboorte
+
+SDX
+
+Locatieomschrijving
+
+.
+
+Land/gebied geboorte >
+
+SDX
+
+Land/gebied
+
+*
+
+-
+
+ID
+
+D
+
+Persoon ID
+
+Persoon >
+
+D
+
+Persoon
+
+Afnemerindicatie gegevens
+
+*i
+* u1
+* u1
+
+A
+
+F+M
+
+Voornaam
+
+*
+
+Persoon \ Geslachtsnaamcomponent
+Geslachtsaanduiding
+
+A
+
+F+M
+
+SDX
+
+Geslachtsaanduiding
+
+*
+
+SDX
+
+Datum evt. (deels) onbekend
+
+*
+
+ID
+
+Persoon \ Nationaliteit
+
+Inschrijving
+
+A
+
+F
+
+D
+
+Versienummer
+
+*
+
+Persoon >
+
+Datumtijdstempel
+
+D
+
+Datum/Tijd
+
+*
+
+Nationaliteit >
+A
+
+F+M
+
+Dyn
+
+Identiteit
+
+Versienummer
+
+Nummerverwijzing
+
+Dyn
+
+Identiteit
+
+D
+D
+SDX
+
+Persoon >
+
+-
+
+Persoon \ Nationaliteit ID
+
+Volgnummer
+
+*i
+
+Persoon
+
+* u1
+
+Nationaliteit
+
+* u1
+
+Standaard
+
+ID
+
+A
+
+D
+D
+
+Persoon \ Geslachtsnaam ID
+Persoon
+
+* u1
+
+SDX
+
+Volgnummer
+
+* u1
+
+SDX
+
+Predicaat
+
+Standaard
+Predicaat >
+
+A
+
+Adellijke titel > SDX Adellijke titel
+
+F+M
+
+*i
+
+SDX
+
+Voorvoegsel
+
+F+M
+.
+.
+.
+
+Vorige burgerservicenummer
+
+SDX
+
+Burgerservicenummer
+
+.
+
+Reden verkrijging >
+
+SDX
+
+Reden verkrijging NL nationaliteit
+
+.
+
+Voorvoegsel
+
+Volgende burgerservicenummer
+
+SDX
+
+Burgerservicenummer
+
+.
+
+Reden verlies >
+
+SDX
+
+Reden verlies NL nationaliteit
+
+.
+
+Scheidingsteken SDX Scheidingsteken
+
+.
+
+Vorige administratienummer
+
+SDX
+
+Administratienummer
+
+.
+
+Bijhouding beëindigd?
+
+SDX
+
+Ja
+
+.
+
+Stam
+
+SDX
+
+*
+
+Volgende administratienummer
+
+SDX
+
+Administratienummer
+
+.
+
+Migratie Reden opname nationaliteit
+
+LO3 Reden opname nationaliteit
+
+.
+
+D
+
+Migratie Reden beëindigen nationaliteit D
+Bijhouding
+
+A
+
+LO3 Reden beëindigen nationaliteit .
+
+F+M
+D
+
+Migratie Datum einde bijhouding
+
+Datum evt. (deels) onbekend
+
+.
+
+Bijhoudingspartij >
+
+SDX
+
+Partij
+
+*
+
+Bijhoudingsaard >
+
+SDX
+
+Bijhoudingsaard
+
+*
+
+Nadere bijhoudingsaard >
+
+SDX
+
+Nadere bijhoudingsaard
+
+*
+
+Datum overlijden
+
+SDX
+
+Datum evt. (deels) onbekend
+
+*
+
+Identiteit
+
+Gemeente overlijden >
+
+SDX
+
+Gemeente
+
+.
+
+ID
+
+D
+
+Persoon \ Indicatie ID
+
+Woonplaatsnaam overlijden
+
+SDX
+
+Naam enumeratiewaarde
+
+.
+
+Persoon >
+
+D
+
+Persoon
+
+* u1
+
+Buitenlandse plaats overlijden
+
+SDX
+
+Buitenlandse plaats
+
+.
+
+Soort >
+
+D
+
+Soort indicatie
+
+* u1
+
+Buitenlandse regio overlijden
+
+SDX
+
+Buitenlandse regio
+
+.
+
+Omschrijving locatie overlijden
+
+SDX
+
+Locatieomschrijving
+
+.
+
+Waarde
+
+DX
+
+Ja
+
+*
+
+Land/gebied overlijden >
+
+SDX
+
+Land/gebied
+
+*
+
+Migratie Reden opname nationaliteit
+
+D
+
+LO3 Reden opname nationaliteit
+
+.
+
+Overlijden
+
+A
+
+A
+SDX
+
+Naamgebruik
+
+Naamgebruik afgeleid?
+
+SDX
+
+Ja/Nee
+
+*
+
+Predicaat naamgebruik >
+
+SDX
+
+Predicaat
+
+.
+
+Voornamen naamgebruik
+
+SDX
+
+Voornamen
+
+.
+
+Persoon \ Indicatie
+
+Dyn
+-
+
+Standaard
+
+Naamgebruik
+Naamgebruik >
+
+F
+
+F
+
+A
+
+Migratie Reden beëindigen nationaliteit D
+
+*i
+
+F+M
+
+LO3 Reden beëindigen nationaliteit .
+
+*
+
+Persoon \ Adres
+
+Dyn
+
+Adellijke titel naamgebruik >
+
+SDX
+
+Adellijke titel
+
+.
+
+Identiteit
+
+Voorvoegsel naamgebruik
+
+SDX
+
+Voorvoegsel
+
+.
+
+ID
+
+D
+
+Persoon \ Adres ID
+
+*i
+
+Scheidingsteken naamgebruik
+
+SDX
+
+Scheidingsteken
+
+.
+
+Persoon >
+
+D
+
+Persoon
+
+*
+
+Geslachtsnaamstam naamgebruik
+
+SDX
+
+Geslachtsnaamstam
+
+* S4
+
+Gezag derde
+Derde heeft gezag?
+
+Ja
+
+S
+
+Ja
+
+F+M
+
+*
+
+Curatele
+Onder curatele?
+
+Standaard
+A
+
+S
+
+A
+
+F+M
+
+A
+
+F+M
+
+*
+
+Migratie
+
+-
+
+A
+
+-
+
+F+M
+
+Soort >
+
+SDX
+
+Soort adres
+
+* S1 S2 S4 S5 S11 S12
+
+Reden wijziging >
+
+SDX
+
+Reden wijziging verblijf
+
+*
+
+Aangever adreshouding >
+
+SDX
+
+Aangever
+
+.
+
+Datum aanvang adreshouding
+
+SDX
+
+Datum evt. (deels) onbekend
+
+.
+
+Identificatiecode adresseerbaar object SDX Identificatiecode adresseerbaar object . S9 S10
+Identificatiecode nummeraanduiding SDX Identificatiecode nummeraanduiding
+
+. S3 S8
+
+Soort migratie >
+
+SDX
+
+Soort migratie
+
+*
+
+Gemeente >
+
+SDX
+
+Gemeente
+
+. S1 S4 S6
+
+Reden wijziging migratie >
+
+SDX
+
+Reden wijziging verblijf
+
+.
+
+Naam openbare ruimte
+
+SDX
+
+Naam openbare ruimte
+
+. S1 S12
+
+Aangever migratie >
+
+SDX
+
+Aangever
+
+.
+
+Afgekorte naam openbare ruimte
+
+SDX
+
+Afgekorte naam openbare ruimte
+
+. S4 S11
+
+Land/gebied migratie >
+
+SDX
+
+Land/gebied
+
+*
+
+Gemeentedeel
+
+SDX
+
+Gemeentedeel
+
+.
+
+Buitenlands adres regel 1 migratie
+
+SDX
+
+Adresregel
+
+.
+
+Huisnummer
+
+SDX
+
+Huisnummer
+
+. S1 S2 S4 S5 S11 S12
+
+Buitenlands adres regel 2 migratie
+
+SDX
+
+Adresregel
+
+. S5
+
+Huisletter
+
+SDX
+
+Huisletter
+
+. S1 S2 S4 S5 S11 S12
+
+Buitenlands adres regel 3 migratie
+
+SDX
+
+Adresregel
+
+.
+
+Huisnummertoevoeging
+
+SDX
+
+Huisnummertoevoeging
+
+. S1 S2 S4 S5 S11 S12
+
+Buitenlands adres regel 4 migratie
+
+SDX
+
+Adresregel
+
+.
+
+Postcode
+
+SDX
+
+Postcode
+
+. S2 S5
+
+Buitenlands adres regel 5 migratie
+
+SDX
+
+Adresregel
+
+.
+
+Woonplaatsnaam
+
+SDX
+
+Naam enumeratiewaarde
+
+. S11 S12
+
+Buitenlands adres regel 6 migratie
+
+SDX
+
+Adresregel
+
+.
+
+Locatie ten opzichte van adres
+
+SDX
+
+Locatie ten opzichte van adres
+
+.
+
+Locatieomschrijving
+
+SDX
+
+Locatieomschrijving
+
+. S6
+
+SDX
+
+Adresregel
+
+.
+
+SDX
+
+Aanduiding verblijfsrecht
+
+*
+
+Buitenlands adres regel 1
+
+Aanduiding verblijfsrecht >
+
+SDX
+
+Adresregel
+
+. S7
+
+SDX
+
+Datum evt. (deels) onbekend
+
+*
+
+Buitenlands adres regel 2
+
+Datum aanvang verblijfsrecht
+
+Buitenlands adres regel 3
+
+SDX
+
+Adresregel
+
+.
+
+Buitenlands adres regel 4
+
+SDX
+
+Adresregel
+
+.
+
+Buitenlands adres regel 5
+
+SDX
+
+Adresregel
+
+.
+
+Buitenlands adres regel 6
+
+SDX
+
+Adresregel
+
+.
+
+Land/gebied >
+
+SDX
+
+Land/gebied
+
+*
+
+Persoon aangetroffen op adres?
+
+SDX
+
+Nee
+
+.
+
+Verblijfsrecht
+
+Datum mededeling verblijfsrecht
+Datum voorzien einde verblijfsrecht
+
+A
+
+SDX
+SDX
+
+Datum evt. (deels) onbekend
+Datum evt. (deels) onbekend
+
+*
+.
+
+Bijzondere verblijfsrechtelijke positie
+
+A
+S
+
+Ja
+
+*
+
+Uitsluiting kiesrecht?
+
+SDX
+
+Ja
+
+*
+
+Datum voorzien einde uitsluiting kiesrecht
+
+SDX
+
+Datum evt. (deels) onbekend
+
+.
+
+Deelname EU verkiezingen?
+
+SDX
+
+Ja/Nee
+
+*
+
+Datum aanleiding aanpassing deelname EU verkiezingen
+
+SDX
+
+Datum evt. (deels) onbekend
+
+.
+
+Datum voorzien einde uitsluiting EU verkiezingen
+
+SDX
+
+Datum evt. (deels) onbekend
+
+.
+
+Bijzondere verblijfsrechtelijke positie?
+
+F
+
+Uitsluiting kiesrecht
+
+Deelname EU verkiezingen
+
+F
+
+A
+
+F
+
+A
+
+F
+
+Persoon \ Reisdocument
+D
+
+ID
+Persoonskaart
+
+A
+
+Gemeente persoonskaart >
+
+SDX
+
+Partij
+
+.
+
+Persoonskaart volledig geconverteerd?
+
+SDX
+
+Ja/Nee
+
+*
+
+Dyn
+
+Identiteit
+
+F
+
+D
+
+Persoon \ Reisdocument ID
+Persoon
+
+*
+
+SDX
+
+Soort Nederlands reisdocument
+
+* s1
+
+Nummer
+
+SDX
+
+Reisdocument nummer
+
+* s1
+
+Autoriteit van afgifte
+
+SDX
+
+Autoriteit van afgifte reisdocument code
+
+*
+
+Datum ingang document
+
+SDX
+
+Datum evt. (deels) onbekend
+
+*
+
+Datum einde document
+
+SDX
+
+Datum evt. (deels) onbekend
+
+*
+
+Datum uitgifte
+
+SDX
+
+Datum evt. (deels) onbekend
+
+*
+
+Datum inhouding/vermissing
+
+SDX
+
+Datum evt. (deels) onbekend
+
+.
+
+Persoon >
+Soort >
+Standaard
+
+Staatloos
+Staatloos?
+
+A
+S
+
+Ja
+
+*
+
+Verstrekkingsbeperking
+Volledige verstrekkingsbeperking?
+
+A
+S
+
+Ja
+
+A
+S
+
+Ja
+
+*
+
+S
+
+Ja
+
+*
+
+Signalering met betrekking tot verstrekken reisdocument? S
+
+Ja
+
+*
+
+Behandeld als Nederlander
+Behandeld als Nederlander?
+
+F+M
+
+F+M
+
+A
+
+Onverwerkt document aanwezig
+Ja
+
+*
+
+F
+
+Persoon \ Buitenlands persoonsnummer
+Identiteit
+
+A
+S
+
+A
+
+F
+
+Aanduiding inhouding/vermissing > SDX Aanduiding inhouding/vermissing reisdocument .
+A
+
+Signalering met betrekking tot verstrekken reisdocument
+
+Onverwerkt document aanwezig?
+
+F
+
+*
+
+Vastgesteld niet Nederlander
+Vastgesteld niet Nederlander?
+
+F+M
+
+*i
+
+F
+
+Dyn
+-
+
+ID
+
+D
+
+Persoon \ Buitenlands persoonsnummer ID
+
+*i
+
+Persoon >
+
+D
+
+Persoon
+
+* u1
+
+-
+
+Autoriteit van afgifte > SDX Autoriteit van afgifte buitenlands persoonsnummer * u1
+Nummer
+Standaard
+
+SDX
+
+Buitenlands persoonsnummer
+
+* u1 S1
+A
+
+F
+
+Geslachtsnaamstam
+
+*i
+*
+
+-
+
+-
+
+D
+
+Versienummer klein
+
+*
+
+D
+
+Byteaopslag
+
+.
+
+Lockversie afnemerindicatie gegevens D
+
+-
+
+Volgnummer SDX Volgnummer
+
+SDX
+
+Identiteit
+
+Dyn
+
+......
+
+Identiteit
+A
+
+. u1
+. u1
+
+F1
+
+Afgeleid?
+
+Geboorte
+
+*i
+
+Dyn
+
+Identiteit
+Samengestelde naam
+
+D
+
+Gemeente verordening > SDX Partij
+
+F+M
+
+Burgerservicenummer
+
+Datum inschrijving
+
+F
+
+Administratieve handeling
+Datum/Tijd
+
+Identificatienummers
+
+Geslachtsaanduiding >
+
+Dyn
+
+Identiteit
+
+D
+
+Versienummer
+
+.
+
+Byteaopslag
+
+.
+
+

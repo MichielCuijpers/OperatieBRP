@@ -1,0 +1,246 @@
+UC861 Raadplegen loggegevens
+
+1.1
+
+Datum
+Status
+
+30-11-2015
+Definitief
+
+Definitief | 1.1 | UC861 Raadplegen loggegevens | 30-11-2015
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1 BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ...................................................................................................................................................5
+1.2 PRECONDITIE ........................................................................................................................................5
+1.3 POSTCONDITIE......................................................................................................................................5
+
+2
+
+VERLOOP .................................................................................................................................................6
+2.1
+
+3
+
+REGULIER VERLOOP ..............................................................................................................................6
+
+AANVULLENDE SPECIFICATIES .................................................................................................7
+3.1 ZOEKEN .................................................................................................................................................7
+3.2 ZOEKRESULTATEN ................................................................................................................................7
+3.2.1 Diagrammen ..............................................................................................................................7
+3.3 DETAILS LOGREGEL ..............................................................................................................................7
+3.4 GEGEVENS EXPORTEREN ......................................................................................................................7
+3.5 NOTIFICATIES (RD-BEV-048) .........................................................................................................7
+
+4
+
+OPMERKINGEN ....................................................................................................................................8
+
+Operatie BRP
+
+Pagina 2 van 8
+
+Definitief | 1.1 | UC861 Raadplegen loggegevens | 30-11-2015
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+19-05-2015
+22-05-2015
+25-06-2015
+
+0.1
+0.2
+1.0
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+30-11-2015
+
+1.1
+
+Initiële versie
+Reviewcommentaar verwerkt
+Definitief gemaakt ten behoeve van release
+3.1
+NFR opgenomen over notificaties (en
+codering)
+
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+22-05-2015
+
+0.1
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 8
+
+Definitief | 1.1 | UC861 Raadplegen loggegevens | 30-11-2015
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+De BRP (inclusief de migratievoorziening) logt belangrijke technische en functionele informatie
+van gebeurtenissen in het systeem. Dat is nodig om de beheerder te kunnen informeren over
+wat er in het systeem is gebeurd. Welke informatie gelogd wordt staat in aanvullende
+specificaties en use cases beschreven. Op welke wijze de informatie wordt gelogd staat
+beschreven in het [SAD].
+Hoe een beheerder de technische en functionele loggegevens kan raadplegen is in deze use case
+beschreven.
+
+Operatie BRP
+
+Pagina 4 van 8
+
+Definitief | 1.1 | UC861 Raadplegen loggegevens | 30-11-2015
+
+Referenties
+#
+[SAD]
+
+1.2
+
+Document
+@@Nog te bepalen, zie opmerkingen
+4.
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+Preconditie
+N.v.t.
+
+1.3
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 5 van 8
+
+Definitief | 1.1 | UC861 Raadplegen loggegevens | 30-11-2015
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+1. De beheerder meldt het systeem aan de hand van een aantal zoekcriteria welke loggegevens
+getoond dienen te worden (AS: 3.1).
+2. Het systeem zoekt op basis van de zoekcriteria de bijbehorende logregels
+3. Het systeem toont de gevonden logregels (AS: 3.2)
+4. De beheerder selecteert een logregel
+5. Het systeem toont de details van de geselecteerde logregel (AS: 3.3)
+6. De use case eindigt
+
+Operatie BRP
+
+Pagina 6 van 8
+
+Definitief | 1.1 | UC861 Raadplegen loggegevens | 30-11-2015
+
+3
+
+Aanvullende specificaties
+
+3.1
+
+Zoeken
+Waar de beheerder op kan zoeken hangt af van het soort logregel waar de beheerder in is
+geïnteresseerd. Logregels van de beheerapplicatie bevatten bijvoorbeeld andere informatie dan
+de logregels van het verwerken van berichten.
+Een zoekvraag kan bewaard worden zodat deze op een later moment eenvoudig herhaald kan
+worden.
+
+3.2
+
+Zoekresultaten
+De zoekresultaten worden in een lijst getoond die aflopend gesorteerd is op de datum waarop de
+logregel is toegevoegd.
+Per resultaat wordt de datum waarop de logregel is toegevoegd getoond en (een deel van) de
+inhoud van de logregel als platte tekst. Een resultaat in de lijst mag, ten behoeve van de
+leesbaarheid, niet groter zijn dan vijf regels.
+
+3.2.1
+
+Diagrammen
+De zoekresultaten kunnen grafisch weergegeven worden met behulp van staaf-, lijn- en
+taartdiagrammen. Hierbij dient op de ene as de tijd weergegeven te kunnen worden en op de
+andere as het aantal logregels.
+
+3.3
+
+Details logregel
+Wanneer de beheerder een logregel selecteert worden alle details van de logregel getoond.
+Hierbij dienen de details gestructureerd getoond te worden in de vorm van sleutel: waarde.
+Welke gegevens getoond worden hangt af van het soort logregel.
+
+3.4
+
+Gegevens exporteren
+De beheerder heeft de mogelijkheid om de zoekresultaten en de details van logregels te
+exporteren in het CSV-bestandsformaat.
+
+3.5
+
+Notificaties (RD-BEV-048)
+Beheerders kunnen configureren dat ze een notificatie per e-mail en/of SMS ontvangen wanneer
+een bepaalde logregel geregistreerd wordt.
+
+Operatie BRP
+
+Pagina 7 van 8
+
+Definitief | 1.1 | UC861 Raadplegen loggegevens | 30-11-2015
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 8 van 8
+
+

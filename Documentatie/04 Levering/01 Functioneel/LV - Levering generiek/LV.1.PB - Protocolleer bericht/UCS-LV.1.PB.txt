@@ -1,0 +1,284 @@
+UCS LV.1.PB – Protocolleer bericht
+Versie
+
+2.0
+
+Datum
+
+14 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+07-12-2016
+
+0.1
+
+Eerste opzet
+
+oBRP
+
+07-12-2016
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+12-12-2016
+
+0.3
+
+Nog wat extra achtergrond toegevoegd mbt protocollering
+
+oBRP
+
+14-02-2017
+
+1.0
+
+Versie gereed
+
+oBRP
+
+01-06-2017
+
+1.1
+
+Ontwerpbeslissing impliciete protocollering toegevoegd
+
+oBRP
+
+14-07-2017
+
+2.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS LV.1.PB – Protocolleer bericht
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Protocoleer bericht ................................................................................................... 4
+2.1
+
+3
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Beschrijving .........................................................................................................................4
+
+Ontwerpbeslissingen ................................................................................................ 6
+
+Status: Definitief, versie: 2.0
+
+Pagina 2 van 6
+
+UCS LV.1.PB – Protocolleer bericht
+
+1 Inleiding
+1.1
+
+Doel
+
+Ten behoeve van het inzagerecht van de burger moeten alle leveringen waarin persoonsgegevens
+zijn opgenomen worden geprotocolleerd alvorens de levering aan afnemers mag plaatsvinden.
+Het doel van deze Use Case is te beschrijven hoe een reeds aangemaakte levering vastgelegd
+wordt in de protocolleringsadministratie van de centrale voorzieningen.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de stappen van het protocolleren. In hoofdstuk 3 staan de Use Case
+specifieke ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 2.0
+
+Pagina 3 van 6
+
+UCS LV.1.PB – Protocolleer bericht
+
+2 Protocoleer bericht
+In dit hoofdstuk wordt beschreven hoe de protocolleringsadministratie wordt bijgewerkt per type
+levering.
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de aan deze Use Case gekoppelde regels in BMR.
+
+2.1
+
+Beschrijving
+
+Bij elke levering wordt de protocollering zodanig vastgelegd dat:
+•
+•
+•
+
+Het duidelijk is welke personen geleverd zijn in het bericht;
+Welke gegevens er exact geleverd zijn over die persoon;
+Aan welke afnemer(s) deze gegevens geleverd zijn binnen welke autorisatie.
+
+Protocollering gebeurt door het vastleggen van een Leveringsaantekening. Welke personen
+geleverd zijn, en welke ‘versie’ van die persoon geleverd is, wordt vastgelegd door het aanmaken
+van één of meer voorkomens van Leveringsaantekening \ Persoon.
+In de leveringsaantekening wordt vastgelegd welke Dienst is geleverd binnen welke
+Leveringsautorisatie, aan welke afnemer en op welk datum/tijdstip er geleverd is. Aan de hand
+hiervan is vast te stellen welk autorisatieprofiel er precies is toegepast.
+Als er sprake is ven een verzoekbericht met parameters die effect hebben op het geleverde
+resultaat, dan wordt daar als volgt mee omgegaan:
+-
+
+-
+
+Als de parameter alleen effect heeft op welke personen geleverd worden (bijvoorbeeld: een
+peildatum waarop een zoekcriterium waar moet zijn) dan is het vastleggen van de
+Leverinsgaantekening \ Persoon al voldoende en heft de parameter zelf niet
+geprotocolleerd te worden
+Als de parameter (ook) effect heeft op de filtering van de gegevens die van elke persoon
+geleverd worden (bijvoorbeeld een pieldatum van het historiefilter) dan is het wel
+noodzakelijk om dit in de protocollering vast te leggen.
+
+Als voor elke geleverde persoon een Leveringsaantekening met identieke inhoud kan worden
+aangemaakt, dan volstaat het om daarvoor één Leveringsaantekening aan te maken en daar per
+geleverde persoon een Leveringsaantekening \ Persoon bij op te nemen. Als de inhoud echter per
+persoon zou verschillen (dit komt concreet voor bij een mutatielevering voor meerdere personen
+met verschillende ‘Datum materieel vanaf’ in de Afnemerindicatie) dan moet voor elke persoon
+afzonderlijk een Leveringsaantekening worden vastgelegd (met telkens één Leveringsaantekening \
+Persoon)
+In de Leveringsaantekening \ Persoon wordt ook Tijdstip laatst wijziging persoon vastgelegd.
+Hieruit blijkt welke ‘versie’ van de persoon is geleverd wat noodzakelijk kan zijn om achteraf te
+bepalen welke inhoud er precies geleverd is. Het tijdstip waarop de levering heeft plaatsgevonden
+is daarvoor net niet toereikend (want er kunnen op dat tijdstip transacties zijn doorgevoerd die nog
+niet gecommit zijn: concurrency).
+Indien scoping is toegepast (dit kan alleen in de dienst Geef Details Persoon) dan dient
+gecontroleerd te worden of de betreffende combinatie van gewenste attributen al bekend is als
+Elementpatroon. Indien dat niet het geval is dan dient het betreffende Elementpatroon vastgelegd
+te worden. Tenslotte dient de Leveringsaantekening aan het Elementpatroon te worden gekoppeld.
+Als er geen scoping is toegepast dan wordt deze koppeling niet gelegd.
+
+Dit vertaalt zich in het volgende stappenplan:
+1. Indien de levering een Mutatielevering op Afnemerindicatie is en meerder personen betreft
+die niet allemaal dezelfde waarde voor Afnemerindicatie.DatumMaterieelVanaf hebben ga
+verder met stap 2. Anders ga verder met stap 3.
+
+Status: Definitief, versie: 2.0
+
+Pagina 4 van 6
+
+UCS LV.1.PB – Protocolleer bericht
+
+2. Maak per geleverde Persoon een Leveringsaantekening volgens regel R1614 en een
+Leveringsaantekening \ Persoon volgens regel R2236 aan. Verwerking is gereed.
+3. Indien de Soort dienst gelijk is aan Geef details persoon en er is sprake van scoping
+(‘gewenste attributen’) is meegeven in het verzoekbericht: ga verder met stap 4. Anders
+ga verder met stap 6.
+4. Ga na of er al een Elementpatroon bestaan dat gelijk is aan de inhoud van ‘gewenste
+attributen’. Maak een Nieuw Elementpatroon aan (met de koppeling aan de betreffende
+Elementen) als dat nog niet het geval was.
+Een elementpatroon is in essentie een Id en een lijst van elementen.
+De achterliggende gedachte is dat scoping niet iets is wat de eindgebruiker intypt maar dat
+de afnemersapplicatie een beperkt aantal keuzes aanbiedt. Wanneer een scopingspatroon
+voor het eerst de BRP binnenkomt dan wordt het patroon vastgelegd. Alle latere vragen
+met hetzelfde patroon koppelen we dan aan datzelfde patroon vast. Dat vergt minder
+opslagcapaciteit dan bij elke vraag opnieuw de hele scoping vast te leggen.
+5. Maak een Leveringsaantekening volgens regel R1613 (inclusief het leggen van de relatie
+naar het juiste Elementpatroon) en een Leveringsaantekening \ Persoon volgens regel
+R2236 aan. Verwerking is gereed.
+6. Indien de Soort dienst gelijk is aan Geef details persoon (zonder scoping), Zoek persoon,
+Zoek persoon op adresgegevens of Geef medebewoners van persoon: Maak een
+Leveringsaantekening volgens regel R1613 en per geleverde persoon een
+Leveringsaantekening \ Persoon volgens regel R2236 aan. Verwerking is gereed.
+7. Indien de Soort dienst gelijk is aan Mutatielevering op basis van afnemerindicatie,
+Mutatielevering op basis van doelbinding of Attendering: Maak een Leveringsaantekening
+volgens regel R1614 en per geleverde Persoon een Leveringsaantekening \ Persoon volgens
+regel R2236 aan. Verwerking is gereed.
+8. Indien de Soort dienst gelijk is aan Plaatsen afnemerindicatie, Synchronisatie persoon of
+Selectie: Maak een Leveringsaantekening volgens regel R1615 en per geleverde Persoon
+een Leveringsaantekening \ Persoon volgens regel R2236 aan. Verwerking is gereed.
+
+Status: Definitief, versie: 2.0
+
+Pagina 5 van 6
+
+UCS LV.1.PB – Protocolleer bericht
+
+3 Ontwerpbeslissingen
+•
+
+Protocollering betekent het houden van aantekening welke gegevens van een persoon op
+welke datum en met welke reden aan welke afnemer geleverd zijn. Ook moeten de centrale
+voorzieningen in staat zijn om naderhand aan te geven welke inhoud van die gegevens
+geleverd is.
+Dat kan op twee manieren gerealiseerd worden:
+1.
+‘expliciet’: door alle verstrekte berichten gedurende 20 jaar gearchiveerd te
+houden, of
+2.
+‘impliciet’ door alleen de metagegevens van de levering gedurende die periode te
+bewaren.
+Aan de hand van historische gegevens over de autorisatieprofielen, de formele historie van
+de personen en de historische specificaties van de centrale voorzieningen kan via de
+impliciete methode achteraf worden bepaald hoe een levering er uit heeft gezien. Dit
+bespaart aanzienlijk op de benodigde opslagruimte maar maakt het samenstellen van een
+protocolleringsoverzicht ingewikkelder.
+Voor de centrale voorzieningen is vanuit architectuuroverwegingen gekozen voor impliciete
+protocollering. Daarnaast speelt de op termijn verwachte omvang van de benodigde opslag
+voor expliciet protocolleren technisch en economisch een rol.
+
+Status: Definitief, versie: 2.0
+
+Pagina 6 van 6
+
+

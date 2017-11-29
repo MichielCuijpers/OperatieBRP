@@ -1,0 +1,84 @@
+BS.1.RDS - Bijlage Raadplegen detailgegevens
+selectietaak
+Versie: Werk
+Gegenereerd op: 17 juli 2017
+Status: Definitief
+
+1 Regels voor usecase BS.1.RDS - Raadplegen detailgegevens
+selectietaak
+1.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2813
+
+1
+
+Berekend peilmoment formeel resultaat selectietaak
+
+R2814
+
+1
+
+Berekend peilmoment materieel resultaat selectietaak
+
+2 Uitwerking regels
+R2813
+Berekend peilmoment formeel resultaat selectietaak
+Definitie:
+
+Indien alle volgende attributen een waarde hebben:
+• Dienst.Selectie peilmoment formeel resultaat
+• Dienst.Eenheid selectieinterval heeft een waarde
+• Dienst.Selectieinterval heeft een waarde
+EN
+Selectietaak.Peilmoment formeel resultaat heeft geen waarde
+dan
+wordt Selectietaak.Peilmoment formeel resultaat afgeleid door
+de Dienst.Selectie peilmoment formeel resultaat op te hogen met het
+Selectietaak.Volgnummer x (de combinatie van de Dienst.Eenheid selectieinterval
+en Dienst.Selectieinterval)
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2814
+Berekend peilmoment materieel resultaat selectietaak
+Definitie:
+
+Indien alle volgende attributen een waarde hebben:
+
+•
+•
+•
+
+Dienst.Selectie peilmoment materieel resultaat
+Dienst.Eenheid selectieinterval
+Dienst.Selectieinterval
+
+EN
+Selectietaak.Peilmoment materieel resultaat heeft geen waarde
+dan
+wordt Selectietaak.Peilmoment materieel resultaat afgeleid door
+de Dienst.Selectie peilmoment materieel resultaat op te hogen met het
+Selectietaak.Volgnummer x (de combinatie van de Dienst.Eenheid selectieinterval
+en Dienst.Selectieinterval)
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+

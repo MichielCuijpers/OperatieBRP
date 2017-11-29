@@ -1,0 +1,700 @@
+OGM A05 Partij Authenticatie Autorisatie
+Release 59
+ToegangLevsautorisatie
+
+SG
+
+ID
+
+ToegangLevsautorisatieID
+
+*i
+
+Geautoriseerde >
+
+PartijRol
+
+* u1
+
+Levsautorisatie >
+
+Levsautorisatie
+
+* u1
+
+Ondertekenaar >
+
+Partij
+
+. u1
+
+Transporteur >
+
+Partij
+
+. u1
+
+DatIngang
+
+Dat
+
+.
+
+PersVerstrbeperking
+
+DatEinde
+
+Dat
+
+.
+
+ID
+
+PersVerstrbeperkingID
+
+*i
+
+.
+
+Pers >
+
+Pers
+
+* u1
+. u1
+
+NaderePopulatiebeperking Populatiebeperking
+Afleverpunt
+
+Uri
+
+.
+
+Partij >
+
+Partij
+
+IndBlok
+
+Ja
+
+.
+
+OmsDerde
+
+OmsEnumeratiewaarde
+
+IndAG
+
+JaNee
+
+*
+
+GemVerordening > Partij
+JaNee
+
+IndAG
+
+Levsautorisatie
+
+Dyn
+
+. u1
+. u1
+*
+
+SG
+
+ID
+
+LevsautorisatieID
+
+*il
+
+Stelsel >
+
+Stelsel
+
+*
+
+Dienst
+
+IndModelautorisatie
+
+JaNee
+
+*
+
+ID
+
+DienstID
+
+*il
+
+Naam
+
+NaamEnumeratiewaarde
+
+. u1
+
+Dienstbundel >
+
+Dienstbundel
+
+*
+
+Protocolleringsniveau >
+
+Protocolleringsniveau
+
+.
+
+Srt >
+
+SrtDienst
+
+*
+
+IndAliasSrtAdmHndLeveren JaNee
+
+Dienstbundel
+
+.
+
+DatIngang
+
+Dat
+
+.
+
+DatEinde
+
+Dat
+
+.
+
+Populatiebeperking
+
+Populatiebeperking
+
+.
+
+Toelichting
+
+OnbeperkteOms
+
+.
+
+IndBlok
+
+Ja
+
+.
+
+IndAG
+
+JaNee
+
+*
+
+SG
+
+ID
+
+DienstbundelID
+
+*i
+
+EffectAfnemerindicaties >
+
+EffectAfnemerindicaties
+
+.
+
+Levsautorisatie >
+
+Levsautorisatie
+
+*
+
+DatIngang
+
+Dat
+
+.
+
+Naam
+
+NaamEnumeratiewaarde
+
+.
+
+DatEinde
+
+Dat
+
+.
+
+DatIngang
+
+Dat
+
+.
+
+IndBlok
+
+Ja
+
+.
+
+DatEinde
+
+Dat
+
+.
+
+IndAG
+
+JaNee
+
+*
+
+NaderePopulatiebeperking
+
+Populatiebeperking
+
+.
+
+Attenderingscriterium
+
+Attenderingscriterium
+
+.
+
+.
+
+IndAGAttendering
+
+JaNee
+
+*
+
+Toelichting
+
+OnbeperkteOms
+
+.
+
+MaxAantalZoekresultaten
+
+AantalResultaten
+
+.
+
+IndBlok
+
+Ja
+
+.
+
+IndAGZoeken
+
+JaNee
+
+*
+
+IndAG
+
+JaNee
+
+*
+
+SrtSel >
+
+SrtSel
+
+.
+
+EersteSeldat
+
+Dat
+
+.
+
+Selinterval
+
+Selinterval
+
+.
+
+EenheidSelinterval >
+
+EenheidSelinterval
+
+.
+
+Selcriterium
+
+Populatiebeperking
+
+.
+
+IndNaderePopbeperkingVolConv Nee
+
+PersAfnemerindicatie
+
+SG
+
+DienstbundelGroep
+
+Dyn
+
+SG
+*i
+
+SelPeilmomMaterieelResultaat Dat
+
+.
+.
+
+PersAfnemerindicatieID * i
+
+ID
+
+DienstbundelGroepID
+
+Pers >
+
+Pers
+
+* u1
+
+Dienstbundel >
+
+Dienstbundel
+
+*l
+
+SelPeilmomFormeelResultaat Ts
+
+Partij
+
+* u1
+
+Groep >
+
+Element
+
+*l
+
+HistorievormSel >
+
+Historievorm
+
+Partij >
+
+JaNee
+
+*
+
+IndSelresultaatControleren
+
+JaNee
+
+ID
+
+* u1
+
+IndFormeleHistorie
+
+DatAanvMaterielePeriode Dat
+
+.
+
+IndMaterieleHistorie JaNee
+
+*
+
+MaxAantalPersPerSelbestand AantalResultaten
+
+DatEindeVolgen
+
+Dat
+
+.
+
+IndVerantwoording JaNee
+
+*
+
+MaxGrootteSelbestand
+
+IndAG
+
+JaNee
+
+*
+
+Levsautorisatie >
+
+Levsautorisatie
+
+DienstbundelLO3Rubriek
+
+DienstbundelGroepAttr
+DienstbundelGroepAttrID
+
+ID
+
+DienstbundelGroep > DienstbundelGroep
+Element
+
+Attr >
+
+Dienstbundel > Dienstbundel
+
+SG
+
+SG
+*i
+
+PartijRol
+
+*
+
+DatIngang
+
+Dat
+
+.
+
+DatEinde
+
+Dat
+
+BijhouderBijhvoorstel > PartijRol
+
+.
+
+IndAGSel
+
+JaNee
+
+*
+
+*l
+
+SG
+BijhautorisatieID
+
+*i
+*
+
+Naam
+
+NaamEnumeratiewaarde
+
+. u1
+
+DatIngang
+
+Dat
+
+.
+
+DatEinde
+
+Dat
+
+.
+
+Verwerkingsresultaat
+ID
+
+IndBlok
+
+Ja
+
+.
+
+IndAG
+
+JaNee
+
+*
+
+VerwerkingsresultaatID
+
+.
+
+.
+
+ToegangBijhautorisatie
+
+SrtAdmHnd >
+
+SrtAdmHnd
+
+.
+
+ID
+
+IndBlok
+
+Ja
+
+.
+*
+
+ToegangBijhautorisatieID
+
+SG
+
+Rel
+*i
+
+Naam NaamEnumeratiewaarde * l
+
+.
+
+SrtDoc
+
+JaNee
+
+LeverwijzeSel
+
+Oms OmsEnumeratiewaarde
+
+SrtDoc >
+
+IndAG
+
+.
+
+LeverwijzeSel >
+
+* u1
+
+IndModelautorisatie JaNee
+
+BijhouderFiatuitzID
+
+.
+
+* u1
+
+ID
+
+Bijhouder >
+
+*i
+
+.
+.
+
+*l
+
+ConvLO3Rubriek
+
+Rubr >
+
+*i
+
+Bijhautorisatie
+
+ID
+
+SG
+
+DienstbundelLO3RubriekID
+
+ID
+
+BijhouderFiatuitz
+
+AantalKilobytes
+
+IndVerzVolBerBijWijzAfniNaSe JaNee
+
+.
+
+BijhautorisatieSrtAdmHnd
+
+SG
+
+*i
+
+ID
+
+Geautoriseerde > PartijRol
+
+* u1
+
+Bijhautorisatie > Bijhautorisatie
+
+Bijhautorisatie > Bijhautorisatie
+
+* u1
+
+SrtAdmHnd >
+
+SrtAdmHnd
+
+* u1
+
+Ondertekenaar > Partij
+
+. u1
+
+IndAG
+
+JaNee
+
+*
+
+Transporteur >
+
+Partij
+
+. u1
+
+DatIngang
+
+Dat
+
+.
+
+DatEinde
+
+Dat
+
+.
+
+Afleverpunt
+
+Uri
+
+.
+
+IndBlok
+
+Ja
+
+.
+
+IndAG
+
+JaNee
+
+*
+
+BijhautorisatieSrtAdmHndID
+
+*i
+* u1
+
+*
+
+17-7-2017
+
+

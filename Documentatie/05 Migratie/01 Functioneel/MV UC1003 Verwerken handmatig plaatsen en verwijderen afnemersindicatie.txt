@@ -1,0 +1,732 @@
+UC1003 Verwerken handmatig plaatsen en
+verwijderen afnemersindicatie
+
+2.0
+
+Datum
+Status
+
+15-06-2017
+Definitief
+
+Definitief | 2.0 | UC1003 Verwerken handmatig plaatsen en verwijderen afnemersindicatie | 15-06-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+
+2
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+PRECONDITIE ........................................................................................................................................7
+POSTCONDITIE......................................................................................................................................7
+
+VERLOOP .................................................................................................................................................8
+2.1 REGULIER VERLOOP ..............................................................................................................................8
+2.2 ALTERNATIEF VERLOOP: AFNEMERSINDICATIE VERWIJDEREN ..........................................................8
+2.3 ALTERNATIEF VERLOOP: GEEN GELDIGE PARTIJ .................................................................................8
+2.3.1 Bij plaatsen ................................................................................................................................8
+2.3.2 Bij verwijderen ..........................................................................................................................8
+2.4 ALTERNATIEF VERLOOP: GEEN GELDIGE LEVERINGSAUTORISATIE ...................................................9
+2.4.1 Bij plaatsen ................................................................................................................................9
+2.4.2 Bij verwijderen ..........................................................................................................................9
+2.5 ALTERNATIEF VERLOOP: BIJ PLAATSEN, MEERDERE PERSONEN GEVONDEN.....................................9
+2.6 ALTERNATIEF VERLOOP: PERSOON NIET GEVONDEN .........................................................................9
+2.6.1 Bij plaatsen ................................................................................................................................9
+2.6.2 Bij verwijderen ..........................................................................................................................9
+2.7 ALTERNATIEF VERLOOP: BIJ PLAATSEN, PERSOON HEEFT VERSTREKKINGSBEPERKING .................9
+2.8 ALTERNATIEF VERLOOP: BIJ PLAATSEN, AFNEMERSINDICATIE REEDS AANWEZIG ...........................9
+2.9 ALTERNATIEF VERLOOP: BIJ VERWIJDEREN, AFNEMERSINDICATIE NIET AANWEZIG .....................10
+
+3
+
+AANVULLENDE SPECIFICATIES ...............................................................................................11
+3.1 PERSOON ZOEKEN ..............................................................................................................................11
+3.1.1 Bij plaatsen ..............................................................................................................................11
+3.1.2 Bij verwijderen ........................................................................................................................11
+3.2 GELDIGE PARTIJ..................................................................................................................................11
+3.3 GELDIGE LEVERINGSAUTORISATIE ....................................................................................................11
+3.4 STATUS IN DE KOP VAN DE AG01.....................................................................................................12
+3.5 MELDEN AAN DE BEHEERDER .............................................................................................................12
+3.5.1 Technische fouten..................................................................................................................12
+3.5.2 Functionele fouten .................................................................................................................12
+3.6 INTERNE SERVICE ...............................................................................................................................12
+3.6.1 Fouten ........................................................................................................................................12
+3.7 PROTOCOLLERING...............................................................................................................................13
+
+4
+
+OPMERKINGEN ..................................................................................................................................14
+4.1
+
+VERSCHILLEN ......................................................................................................................................14
+
+Modernisering GBA
+
+Pagina 2 van 14
+
+Definitief | 2.0 | UC1003 Verwerken handmatig plaatsen en verwijderen afnemersindicatie | 15-06-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+03-06-2014
+21-07-2014
+05-08-2014
+09-04-2015
+
+0.1
+0.2
+0.3
+0.4
+
+Operatie
+Operatie
+Operatie
+Operatie
+
+25-06-2015
+
+1.0
+
+15-01-2016
+21-01-2016
+22-01-2016
+03-02-2016
+
+1.1
+1.2
+1.3
+1.4
+
+26-07-2016
+
+1.5
+
+10-02-2017
+
+1.6
+
+13-02-2017
+02-06-2017
+12-06-2017
+
+1.7
+1.8
+1.9
+
+15-06-2017
+
+2.0
+
+Initiële versie
+Verwerken reviewcommentaar
+Reviewcommentaar verwerkt
+Aanvullende informatie opgenomen over het
+niet fysiek kunnen verwijderen.
+Definitief gemaakt ten behoeve van release
+3.1
+Zaken omtrent blokkering verwijderd
+BMR44 verwerkt
+Reviewcommentaar verwerkt
+Nieuwe AV opgenomen indien er bij plaatsen
+geen spontaan dienst aanwezig is.
+Aanpassing nav nieuwe use cases BRP
+services
+Foutcodes aangepast naar laatste versie.
+Tevens diverse tekstuele aanpassingen
+doorgevoerd.
+Reviewcommentaar verwerkt
+Foutcodes aangepast
+Bijgewerkt op basis van de nieuwe versie
+van de BRP-specificaties.
+Reviewcommentaar verwerkt
+Foutreden H en R verwijderd
+
+BRP
+BRP
+BRP
+BRP
+
+Operatie BRP
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+21-07-2014
+
+0.1
+
+Review
+
+Operatie BRP
+
+21-07-2014
+
+0.2
+
+Review
+
+Operatie BRP
+
+21-01-2016
+
+1.2
+
+Review
+
+Operatie BRP
+
+13-02-2017
+
+1.6
+
+Review
+
+Operatie BRP
+
+15-06-2017
+
+1.9
+
+Review
+
+Operatie BRP
+
+Modernisering GBA
+
+Pagina 3 van 14
+
+Definitief | 2.0 | UC1003 Verwerken handmatig plaatsen en verwijderen afnemersindicatie | 15-06-2017
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Afnemers kunnen door middel van een bericht, een afnemersindicatie plaatsen (Ap01) op een
+persoonslijst of een afnemersindicatie verwijderen (Av01). Door het plaatsen van
+afnemersindicatie zal de afnemer in de toekomst mutaties op de persoonslijst ontvangen.
+Het plaatsen en verwijderen van afnemersindicaties is uitvoerig beschreven in het [LO] (par.
+C.2.11.5 Plaatsen afnemersindicatie bij PL GBA-V en par. C.2.11.6 Verwijderen afnemersindicatie
+bij PL GBA-V).
+In de BRP kunnen afnemersindicaties geplaatst en verwijderd worden met behulp van diensten
+met de Dienst.Soort = ‘Plaatsing afnemerindicatie’ en ‘Verwijdering afnemerindicatie’. De
+migratievoorziening maakt voor het plaatsen en verwijderen van afnemerindicaties gebruik van
+deze diensten.
+Deze use case beschrijft de wijze waarop de migratievoorziening afnemerindicaties plaatst en
+verwijdert en hoe de BRP hiervoor gebruikt wordt.
+
+Modernisering GBA
+
+Pagina 4 van 14
+
+Definitief | 2.0 | UC1003 Verwerken handmatig plaatsen en verwijderen afnemersindicatie | 15-06-2017
+
+Modernisering GBA
+
+Pagina 5 van 14
+
+Definitief | 2.0 | UC1003 Verwerken handmatig plaatsen en verwijderen afnemersindicatie | 15-06-2017
+
+Modernisering GBA
+
+Pagina 6 van 14
+
+Definitief | 2.0 | UC1003 Verwerken handmatig plaatsen en verwijderen afnemersindicatie | 15-06-2017
+
+Referenties
+
+1.2
+
+#
+[LO]
+
+Document
+Logisch Ontwerp
+
+Organisatie
+RvIG
+
+Versie
+3.10
+
+Datum
+08-10-2016
+
+[UC301]
+
+MV UC301 Verwerk vervolginschrijving
+van BRP naar LO3 GBA
+
+Operatie BRP
+
+-
+
+-
+
+[UC102]
+
+MV UC102 Vul autorisatietabelregels in
+BRP initieel
+
+Operatie BRP
+
+-
+
+-
+
+[UC815]
+
+MV UC815 Beheren taken
+
+Operatie BRP
+
+-
+
+-
+
+[UC1004]
+
+Verwerken zoekvraag
+
+Operatie BRP
+
+-
+
+-
+
+[PA]
+
+UCS SA.0.PA.docx
+
+Operatie BRP
+
+-
+
+-
+
+[VA]
+
+UCS SA.0.VA.docx
+
+Operatie BRP
+
+-
+
+-
+
+Preconditie
+N.v.t.
+
+1.3
+
+Postconditie
+N.v.t.
+
+Modernisering GBA
+
+Pagina 7 van 14
+
+Definitief | 2.0 | UC1003 Verwerken handmatig plaatsen en verwijderen afnemersindicatie | 15-06-2017
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+1. De migratievoorziening ontvangt een verzoek (Ap01-bericht) van een afnemer om een
+afnemersindicatie te plaatsen op een persoonslijst
+2. De migratievoorziening stelt vast dat de afnemer een geldige partij is in de BRP (AV: 2.3.1)
+(AS: 3.2)
+3. De migratievoorziening stelt vast dat de afnemer een geldige leveringsautorisatie heeft
+waarmee afnemersindicaties geplaatst kunnen worden (AV: 2.4) (AS: 3.3)
+4. De migratievoorziening stelt vast dat er op basis van de identificerende gegevens uit het
+bericht precies één persoon in de BRP gevonden kan worden (AV: 2.5, 2.6.1) (AS: 3.1)
+5. De migratievoorziening verzoekt de BRP om een afnemersindicatie te plaatsen op een
+persoonslijst (AS: 3.6)
+6. De interne service meldt de migratievoorziening dat de afnemersindicatie is geplaatst (AV:
+2.7, 2.8)
+7. De migratievoorziening verstuurt een Ag01-bericht aan de afnemer met de juiste status in de
+kop van het bericht (AS: 3.7, 3.4)
+8. De use case eindigt.
+
+2.2
+
+Alternatief verloop: afnemersindicatie verwijderen
+1. De migratievoorziening ontvangt een verzoek (Av01-bericht) van een afnemer om een
+afnemersindicatie te verwijderen van een persoonslijst
+2. De migratievoorziening stelt vast dat de afnemer een geldige partij is in de BRP (AV: 2.3.2)
+(AS: 3.2)
+3. De migratievoorziening stelt vast dat de afnemer een geldige leveringsautorisatie heeft
+waarmee afnemersindicaties verwijderd kunnen worden (AV: 2.4) (AS: 3.3)
+4. De migratievoorziening stelt vast de er op basis van de identificerende gegevens uit het
+bericht precies één persoon in de BRP gevonden kan worden (AV: 2.6.2) (AS: 3.1)
+5. De migratievoorziening verzoekt de BRP om een afnemersindicatie te verwijderen van een
+persoonslijst (AS: 3.6)
+6. De interne service meldt de migratievoorziening dat de afnemersindicatie is verwijderd (AV:
+2.9) (AS: 3.6)
+7. De migratievoorziening verstuurt een Null-bericht aan de afnemer
+8. De use case eindigt.
+
+2.3
+
+Alternatief verloop: geen geldige partij
+
+2.3.1
+
+Bij plaatsen
+1. De
+2. De
+3. De
+4. De
+
+2.3.2
+
+migratievoorziening kan geen geldige partij in de BRP vinden (AS: 3.2)
+migratievoorziening verstuurt een Af01-bericht aan de afnemer met foutreden X
+migratievoorziening meldt deze gebeurtenis aan de beheerder (AS: 3.5)
+use case eindigt.
+
+Bij verwijderen
+1. De
+2. De
+3. De
+4. De
+
+migratievoorziening kan geen geldige partij in de BRP vinden (AS: 3.2)
+migratievoorziening legt een technische fout vast (<Exception>)
+migratievoorziening meldt deze gebeurtenis aan de beheerder (AS: 3.5)
+use case eindigt.
+
+Modernisering GBA
+
+Pagina 8 van 14
+
+Definitief | 2.0 | UC1003 Verwerken handmatig plaatsen en verwijderen afnemersindicatie | 15-06-2017
+
+2.4
+
+Alternatief verloop: geen geldige leveringsautorisatie
+
+2.4.1
+
+Bij plaatsen
+1. De
+2. De
+3. De
+4. De
+
+2.4.2
+
+Bij verwijderen
+1. De
+2. De
+3. De
+4. De
+
+2.5
+
+migratievoorziening kan geen geldige leveringsautorisatie in de BRP vinden (AS: 3.3)
+migratievoorziening verstuurt een Af01-bericht aan de afnemer met foutreden X
+migratievoorziening meldt deze gebeurtenis aan de beheerder (AS: 3.5)
+use case eindigt.
+
+migratievoorziening kan geen geldige leveringsautorisatie in de BRP vinden (AS: 3.3)
+migratievoorziening legt een technische fout vast (<Exception>)
+migratievoorziening meldt deze gebeurtenis aan de beheerder (AS: 3.5)
+use case eindigt.
+
+Alternatief verloop: bij plaatsen, meerdere personen gevonden
+1. De migratievoorziening vindt meerdere personen op basis van de opgegeven identificerende
+gegevens (AS: 3.1)
+2. De migratievoorziening verstuurt een Af01-bericht aan de afnemer met foutreden U
+3. De use case eindigt.
+
+2.6
+
+Alternatief verloop: persoon niet gevonden
+
+2.6.1
+
+Bij plaatsen
+1. De migratie kan geen persoon vinden in de BRP met de opgegeven identificerende gegevens
+(AS: 3.1)
+2. De migratievoorziening verstuurt een Af01-bericht aan de afnemer met foutreden G
+3. De use case eindigt.
+
+2.6.2
+
+Bij verwijderen
+1. De migratie kan geen persoon vinden in de BRP met de opgegeven identificerende gegevens
+(AS: 3.1)
+2. De migratievoorziening verstuurt een Af11-bericht aan de afnemer met foutreden G
+3. De use case eindigt.
+
+2.7
+
+Alternatief verloop: Bij plaatsen, persoon heeft verstrekkingsbeperking
+1. De interne service meldt dat de afnemersindicatie niet geplaatst kan worden omdat er sprake
+is van een verstrekkingsbeperking (AS: 3.6)
+2. De migratievoorziening logt een exceptie en meldt dit aan de beheerder
+3. De use case eindigt.
+
+2.8
+
+Alternatief verloop: bij plaatsen, afnemersindicatie reeds aanwezig
+1. De interne service meldt dat er al een afnemersindicatie aanwezig is voor de afnemer (AS:
+3.6)
+
+Modernisering GBA
+
+Pagina 9 van 14
+
+Definitief | 2.0 | UC1003 Verwerken handmatig plaatsen en verwijderen afnemersindicatie | 15-06-2017
+
+2. De migratievoorziening verstuurt een Af01-bericht aan de afnemer met foutreden I
+3. De use case eindigt.
+
+2.9
+
+Alternatief verloop: bij verwijderen, afnemersindicatie niet aanwezig
+1. De interne service meldt dat er geen afnemersindicatie aanwezig is voor de afnemer (AS: 3.6)
+2. De migratievoorziening verstuurt een Af11-bericht aan de afnemer met foutreden I
+3. De use case eindigt.
+
+Modernisering GBA
+
+Pagina 10 van 14
+
+Definitief | 2.0 | UC1003 Verwerken handmatig plaatsen en verwijderen afnemersindicatie | 15-06-2017
+
+3
+
+Aanvullende specificaties
+
+3.1
+
+Persoon zoeken
+Om afnemerindicaties te plaatsen of te verwijderen met de BRP-services dient het
+burgerservicenummer van de persoon gebruikt te worden. Omdat het burgerservicenummer in
+de GBA-berichten (Ap01 en Av01) niet als identificatie van de persoon voorkomt, dient het
+burgerservicenummer eerst opgezocht te worden met behulp van de BRP-dienst Zoek persoon.
+Meer informatie over deze dienst is te vinden in [UC1004].
+Let op: het burgerservicenummer (01.01.20) dient ook als de afnemer niet geautoriseerd is voor
+deze rubriek, gevonden te worden.
+
+3.1.1
+
+Bij plaatsen
+Het Ap01-bericht om een afnemerindicatie te plaatsen, bevat identificerende gegevens van de
+gewenste persoon. Welke identificerende gegevens er bij het plaatsen van een afnemersindicatie
+meegegeven kunnen worden, is beschreven in het [LO] (zie par. C.2.11.5 Plaatsen
+afnemersindicatie bij PL GBA-V en par. III.1.5.2 Identificerende gegevens).
+
+3.1.2
+
+Bij verwijderen
+Het Av01-bericht om een afnemerindicatie te verwijderen, bevat een a-nummer (01.01.10) van
+de gewenste persoon. Meer informatie hierover is te vinden in het [LO] (zie par. C.2.11.6
+Verwijderen afnemersindicatie bij PL GBA-V).
+Afnemersindicaties kunnen niet fysiek verwijderd worden zoals dat in het [LO] is beschreven. Dit
+heeft te maken met gewijzigde wet- en regelgeving en het feit dat de afnemersindicatie geen
+onderdeel meer is van de persoonslijst.
+
+3.2
+
+Geldige partij
+Een partij is geldig als Partij.Datum einde niet is gevuld of als Partij.Datum einde groter is dan de
+huidige datum.
+Indien er bij plaatsen geen geldige partij gevonden kan worden dient foutcode ‘X’ gemeld te
+worden aan de afnemer.
+Indien bij verwijderen geen geldige partij gevonden kan worden, dient er een technische fout
+(<Exception>) op te treden en gelogd te worden. De reden hiervan is dat de Av01-cyclus deze
+situatie niet kent en geen foutreden heeft om dit terug te melden.
+
+3.3
+
+Geldige leveringsautorisatie
+Om afnemerindicaties te kunnen plaatsen of verwijderen dient de afnemer over een geldige
+leveringsautorisatie te beschikken met een Dienst.Soort dienst = ‘Plaatsing afnemerindicatie’ of
+Dienst.Soort dienst = ‘Verwijdering afnemerindicatie’. Een leveringsautorisatie is geldig als voor
+Toegang leveringsautorisatie, Leveringsautorisatie, Dienstbundel en Dienst geen Datum einde is
+gevuld of Datum einde is groter dan de huidige datum. Tevens dient Geblokkeerd? niet aanwezig
+te zijn.
+
+Modernisering GBA
+
+Pagina 11 van 14
+
+Definitief | 2.0 | UC1003 Verwerken handmatig plaatsen en verwijderen afnemersindicatie | 15-06-2017
+
+Indien er bij plaatsen geen geldige autorisatie gevonden kan worden dient foutcode ‘X’ gemeld te
+worden aan de afnemer.
+Indien bij verwijderen geen geldige autorisatie gevonden kan worden, dient er een technische
+fout (<Exception>) op te treden en gelogd te worden. De reden hiervan is dat de Av01-cyclus
+deze situatie niet kent en geen foutreden heeft om dit terug te melden.
+In het geval er meerdere geldige autorisaties gevonden worden is het voor de
+migratievoorziening niet duidelijk welke autorisatie gebruikt dient te worden. Er dient dan een
+technische fout op te treden (<Exception>). Deze fout dient gelogd te worden.
+Meer informatie over leveringsautorisaties en diensten is te vinden in het BMR en in [UC102].
+
+3.4
+
+Status in de kop van de Ag01
+Meer informatie over de juiste status in de kop van het Ag01-bericht is te vinden in het [LO]
+(blz. 503).
+
+3.5
+
+Melden aan de beheerder
+
+3.5.1
+
+Technische fouten
+Mochten er technische fouten optreden bij het plaatsen en/of verwijderen van afnemersindicaties
+dan dient dit gemeld te worden aan de beheerder. De beheerder heeft dan de keuze om de
+verwerking nogmaals uit te voeren of om een Af01-bericht te versturen met foutreden X indien
+er sprake is van het plaatsen van een afnemersindicatie, of om een Af11-bericht te versturen
+met foutreden X indien er sprake is van het verwijderen van een afnemersindicatie. Meer
+informatie over meldingen aan de beheerder is beschreven in [UC815].
+
+3.5.2
+
+Functionele fouten
+In sommige gevallen, die in het [LO] zijn beschreven, dienen ook functionele fouten aan de
+beheerder gemeld te worden. Deze melding is informatief en vereist geen actie van de
+beheerder. Meer informatie over meldingen aan de beheerder is beschreven in [UC815].
+
+3.6
+
+Interne service
+Voor het plaatsen of verwijderen van afnemersindicatie wordt gebruik gemaakt van een interne
+service van de BRP. De services zijn beschreven in [PA] en [VA].
+
+3.6.1
+
+Fouten
+Bij het plaatsen en verwijderen van afnemersindicaties gelden allerlei regels. Wanneer een
+bepaalde regel wordt overtreden zal de BRP dit in het antwoordbericht melden (Regel in het
+antwoord van de interne service). De gefaalde regels dienen vertaald te worden naar GBAfoutredenen indien mogelijk. Deze foutredenen dienen aan de afnemer terug gemeld te worden
+middels een Af01- of Af11-bericht.
+Regel
+R1339
+R1401
+R1402
+
+Toelichting (komt ongeveer overeen met de melding)
+Dienst alleen mogelijk indien geen verstrekkingsbeperking voor de
+verzoekende partij aanwezig is
+Afnemerindicatie bij opgegeven persoon moet bestaan
+Voor een leveringsautorisatie mag maximaal één afnemerindicatie bij
+een persoon aanwezig zijn
+
+Modernisering GBA
+
+Foutreden
+<Exception>
+I
+I
+
+Pagina 12 van 14
+
+Definitief | 2.0 | UC1003 Verwerken handmatig plaatsen en verwijderen afnemersindicatie | 15-06-2017
+
+R1403
+R1405
+R1406
+R1833
+R2343
+
+Het leveringsverzoek moet minimaal één te leveren persoon bevatten
+Een opgegeven datum aanvang materiële periode mag niet in de
+toekomst liggen
+Een opgegeven datum einde volgen moet in de toekomst liggen
+De 'Gemaskeerde objectsleutel' waarmee een persoon in het bericht
+wordt aangewezen moet geldig zijn
+Algemene foutmelding bij schending autorisatieregels
+
+G
+<Exception>
+<Exception>
+<Exception>
+X
+
+Foutreden H en R kunnen niet meer gemeld worden aan de afnemer omdat de BRP-service voor
+het zoeken van personen geen onderscheid maakt of een persoon niet gevonden is omdat deze
+niet bestaat of omdat de persoon niet aan de autorisatie voldoet. Als die situatie zich voordoet
+zal er altijd een foutreden G gemeld worden.
+Indien een regel niet vertaald kan worden naar een GBA-foutreden, treedt er een technische fout
+op (Exception). Bij de technische fout dient de code (Rxxx) van de regel die fout ging gelogd te
+worden. Indien een regel gemeld wordt die niet voorkomt in de bovenstaande tabel dient
+aanvullend gelogd te worden dat deze controleregel niet wordt verwacht.
+
+3.7
+
+Protocollering
+AgXX-berichten die aan de afnemer verstuurd worden dienen te worden geprotocolleerd. Dit is
+echter niet de verantwoordelijkheid van de migratievoorziening maar die van de BRP.
+
+Modernisering GBA
+
+Pagina 13 van 14
+
+Definitief | 2.0 | UC1003 Verwerken handmatig plaatsen en verwijderen afnemersindicatie | 15-06-2017
+
+4
+
+Opmerkingen
+
+4.1
+
+Verschillen
+De BRP verschilt op de volgende punten met GBA:
+• Voor het verwijderen van afnemerindicaties heeft de BRP een geldige autorisatie nodig. In de
+GBA is dat niet zo. Daarom kent de Av01-cyclus geen mogelijkheid om een foutreden X te
+melden zoals dat bij de Ap01-cyclus wel het geval is. Als er geen geldige autorisatie bestaat
+wordt er een exceptie gelogd en dient dit gemeld te worden aan de beheerder. Het is de
+verantwoordelijkheid van de beheerder dat de juiste autorisatie bestaat.
+
+Modernisering GBA
+
+Pagina 14 van 14
+
+

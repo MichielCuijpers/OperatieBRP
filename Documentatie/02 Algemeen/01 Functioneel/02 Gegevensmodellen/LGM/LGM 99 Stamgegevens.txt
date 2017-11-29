@@ -1,0 +1,2439 @@
+Aanduiding inhouding/vermissing reisdocument
+
+Soort adres
+
+SG
+
+Identiteit
+
+-
+
+Nadere bijhoudingsaard
+
+Rel
+
+Identiteit
+
+-
+
+-
+
+Identiteit
+
+-
+
+Rel
+
+LGM 99 Stamgegevens
+
+-
+
+Release 59 17-7-2017
+
+-
+
+ID
+
+D
+
+Aanduiding inhouding/vermissing reisdocument ID
+
+*i
+
+ID
+
+D
+
+Soort adres ID
+
+*i
+
+ID
+
+D
+
+Nadere bijhoudingsaard ID
+
+*i
+
+Code
+
+DX
+
+Aanduiding inhouding/vermissing reisdocument code
+
+*l
+
+Code
+
+DX
+
+Soort adres code
+
+*l
+
+Code
+
+DX
+
+Nadere bijhoudingsaard code
+
+*l
+
+Naam enumeratiewaarde
+
+* u1
+
+Naam DX
+
+Naam enumeratiewaarde
+
+* u1
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+* u1
+
+Omschrijving enumeratiewaarde
+
+*
+
+Naam DX
+
+Omschrijving DX
+
+Gemeente
+Aanduiding verblijfsrecht
+
+SG
+
+SG
+
+Identiteit
+Identiteit
+
+D
+
+ID
+
+Aanduiding verblijfsrecht ID
+
+DX
+
+Code
+
+Omschrijving DX
+
+-
+
+M1
+
+M1
+
+ID
+
+D
+
+Gemeente ID
+
+*i
+
+*i
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*
+
+*l
+
+Code
+
+DX
+
+Gemeente code
+
+*l
+
+Omschrijving enumeratiewaarde
+
+* u1
+
+Partij >
+
+DX
+
+Partij
+
+*
+
+Gemeente
+
+.
+
+Aangever
+-
+
+Geslachtsaanduiding
+
+-
+
+D
+
+Naamgebruik ID
+
+*i
+
+Code
+
+DX
+
+Naamgebruik code
+
+*l
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+* u1
+
+Omschrijving enumeratiewaarde
+
+.
+
+Rel
+
+D
+
+Aangever ID
+
+*i
+
+Identiteit
+
+Code
+
+DX
+
+Aangever code
+
+*l
+
+ID
+
+D
+
+Geslachtsaanduiding ID
+
+*i
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+* u1
+
+Code
+
+DX
+
+Geslachtsaanduiding code
+
+*l
+
+Identiteit
+
+Omschrijving enumeratiewaarde
+
+*
+
+Naam DX
+
+Naam enumeratiewaarde
+
+* u1
+
+ID
+
+-
+
+-
+
+Selectietaak status
+
+Rel
+-
+
+D
+
+Naam D
+
+Adellijke titel
+
+-
+
+ID
+
+ID
+
+Omschrijving DX
+
+-
+
+Omschrijving DX
+
+SG
+
+Identiteit
+
+Rel
+
+Identiteit
+
+Aanduiding verblijfsrecht code
+
+Voortzettende gemeente > DX
+
+Naamgebruik
+
+-
+
+Selectietaak status ID
+
+*i
+
+Naam enumeratiewaarde
+
+*l
+
+Rel
+
+Historievorm
+Identiteit
+
+D
+
+ID
+
+Rel
+
+-
+
+Adellijke titel ID
+
+Stelsel
+
+Rel
+
+*i
+
+Identiteit
+D
+
+Historievorm ID
+
+*i
+
+Identiteit
+
+DX
+
+Naam enumeratiewaarde
+
+*l
+
+ID
+
+Omschrijving enumeratiewaarde
+
+*
+
+Naam D
+
+-
+
+Code
+
+DX
+
+Adellijke titel code
+
+*l
+
+ID
+
+Naam mannelijk
+
+DX
+
+Naam enumeratiewaarde
+
+* u2
+
+Naam
+
+Naam vrouwelijk DX
+
+Naam enumeratiewaarde
+
+* u1
+
+Omschrijving DX
+
+-
+
+D
+
+-
+
+Stelsel ID
+
+*i
+
+Naam enumeratiewaarde
+
+*l
+
+Soort actie
+
+SG
+
+Leverwijze selectie
+Identiteit
+
+Identiteit
+
+D
+
+ID
+
+-
+
+*i
+
+Autoriteit van afgifte buitenlands persoonsnummer code
+
+*l
+
+Land/Gebied > D
+
+Land/gebied
+
+.
+
+Nationaliteit > D
+
+Nationaliteit
+
+.
+
+ID
+
+D
+
+Naam D
+
+Identiteit
+
+-
+
+M1
+
+ID
+
+D
+
+Autoriteittype van afgifte reisdocument ID
+
+*i
+
+Code
+
+DX
+
+Autoriteittype van afgifte reisdocument code
+
+*l
+
+Naam enumeratiewaarde
+
+* u1
+
+Naam DX
+
+Naam D
+
+Soort actie ID
+
+*i
+
+ID
+
+D
+
+Soort document ID
+
+Naam enumeratiewaarde
+
+*l
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*l
+
+Omschrijving enumeratiewaarde
+
+*
+
+Volgnummer
+
+.
+
+Registersoort
+
+.
+
+-
+
+Omschrijving DX
+
+*i
+
+ID
+
+D
+
+Koppelvlak ID
+
+*i
+
+Rangorde
+
+*l
+
+Naam
+
+D
+
+Naam enumeratiewaarde
+
+*l
+
+Registersoort D
+
+Stelsel
+
+*
+
+Stelsel > D
+
+Categorie administratieve handeling
+
+SG
+-
+
+-
+
+D
+
+Categorie administratieve handeling ID
+
+*i
+
+Naam enumeratiewaarde
+
+*l
+
+Naam DX
+
+D
+
+Land/gebied ID
+
+*i
+
+Code
+
+DX
+
+Land/gebied code
+
+*l
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*
+
+ISO 3166-1 alpha 2
+
+.
+
+-
+
+-
+
+Rel
+
+Identiteit
+
+M1
+
+-
+
+M1
+
+ID
+
+D
+
+Nationaliteit ID
+
+*i
+
+ID
+
+D
+
+Soort bericht ID
+
+*i
+
+DX
+
+Nationaliteit code
+
+*l
+
+Identifier
+
+DX
+
+Identifier lang
+
+*l
+
+Naam enumeratiewaarde
+
+*
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*
+
+Module >
+
+D
+
+Burgerzaken module
+
+.
+
+Koppelvlak
+
+*
+
+Bijhoudingsaard ID
+
+*i
+
+Code
+
+Code
+
+DX
+
+Bijhoudingsaard code
+
+*l
+
+Naam DX
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+* u1
+
+Omschrijving enumeratiewaarde
+
+*
+
+Koppelvlak > D
+
+Plaats
+
+-
+
+-
+
+ID
+
+D
+
+Bijhoudingsresultaat ID
+
+*i
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*l
+
+Omschrijving enumeratiewaarde
+
+D
+
+Naam DX
+
+-
+
+-
+
+D
+
+Soort administratieve handeling ID
+
+*i
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*l
+
+Categorie administratieve handeling > DX
+
+Categorie administratieve handeling
+
+.
+
+Koppelvlak >
+
+D
+
+Koppelvlak
+
+*
+
+Module >
+
+D
+
+Burgerzaken module
+
+.
+
+Alias >
+
+D
+
+Soort administratieve handeling
+
+.
+
+*i
+
+Soort administratieve handeling
+
+*l
+
+Soort actie >
+
+DX
+
+Soort actie
+
+*l
+
+Soort document >
+
+DX
+
+Soort document
+
+*l
+
+-
+
+Plaats ID
+
+*i
+
+Naam enumeratiewaarde
+
+*l
+
+Burgerzaken module
+Soort bericht vrij bericht
+
+*
+
+-
+
+-
+
+ID
+
+DX
+
+Bijhoudingssituatie ID
+
+*i
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*l
+
+Omschrijving
+
+DX
+
+Omschrijving enumeratiewaarde
+
+*
+
+Verwerkbaar?
+
+D
+
+Ja/Nee
+
+*
+
+Heeft invloed op bijhoudingsresultaat? D
+
+Ja/Nee
+
+*
+
+Soort bericht \ Element
+
+D
+
+Soort bericht vrij bericht ID
+
+D
+
+Soort bericht > D
+D
+
+Element >
+
+*i
+
+Naam
+
+D
+
+Naam enumeratiewaarde
+
+* u1
+
+Soort bericht
+
+*
+
+-
+
+ID
+
+D
+
+ID module
+
+Naam
+
+D
+
+Naam enumeratiewaarde
+
+*l
+
+Omschrijving enumeratiewaarde
+
+*
+
+Omschrijving D
+
+*i
+
+-
+
+Soort bericht \ Element ID
+
+*il
+
+Soort bericht
+
+*
+
+Element
+
+*
+
+Richting
+
+Rel
+
+Identiteit
+
+-
+
+-
+
+Soort selectie
+
+ID
+
+D
+
+Richting ID
+
+*i
+
+Naam
+
+D
+
+Naam enumeratiewaarde
+
+*l
+
+Identiteit
+
+Omschrijving enumeratiewaarde
+
+*
+
+ID
+
+Omschrijving D
+
+Eenheid selectieinterval
+
+-
+
+SG
+
+Identiteit
+ID
+
+-
+
+ID
+
+Soort bericht > D
+
+Rel
+
+Identiteit
+
+-
+
+Rel
+
+Identiteit
+
+Rel
+
+Identiteit
+
+Bijhoudingssituatie
+
+-
+
+ID
+
+D
+
+Eenheid selectieinterval ID
+
+*i
+
+Naam
+
+D
+
+Naam enumeratiewaarde
+
+*l
+
+-
+
+Rol
+Predicaat
+
+Rel
+-
+
+ID
+
+ID
+
+D
+
+Predicaat ID
+
+*i
+
+Code
+
+DX
+
+Predicaat code
+
+*l
+
+Naam mannelijk
+
+DX
+
+Naam enumeratiewaarde
+
+* u2
+
+Naam vrouwelijk DX
+
+Naam enumeratiewaarde
+
+* u1
+
+D
+
+Naam DX
+
+Rol ID
+
+*i
+
+Naam enumeratiewaarde
+
+*l
+
+Soort betrokkenheid
+
+Rel
+
+ID
+
+D
+
+Soort betrokkenheid ID
+
+*i
+
+Code
+
+D
+
+Soort betrokkenheid code
+
+*l
+
+Naam D
+
+Naam enumeratiewaarde
+
+* u1
+
+Naam
+
+D
+
+Naam enumeratiewaarde
+
+*l
+
+Omschrijving enumeratiewaarde
+
+*
+
+Protocolleringsniveau
+
+Rel
+
+Identiteit
+
+Element
+
+Rel
+
+Identiteit
+
+-
+
+M1
+
+ID
+
+D
+
+Element ID
+
+*i
+
+Naam
+
+DX
+
+Naam enumeratiewaarde lang
+
+*l
+
+Soort >
+
+DX
+
+Soort element
+
+*
+
+Element naam
+
+D
+
+Naam enumeratiewaarde
+
+*
+
+Alias
+
+D
+
+Naam enumeratiewaarde lang
+
+.
+
+Element
+
+.
+
+Groep >
+
+D
+
+Element
+
+.
+
+Volgnummer
+
+D
+
+Volgnummer
+
+*
+
+Alias van >
+
+D
+
+Element
+
+.
+
+Autorisatie >
+
+D
+
+Soort element autorisatie
+
+.
+
+Identificatie database schema
+
+D
+
+Identifier lang
+
+.
+
+/Tabel >
+
+D
+
+Element
+
+.
+
+Identificatie database
+
+D
+
+Identifier lang
+
+.
+
+Historie tabel >
+
+D
+
+Element
+
+.
+
+Historie identificatie database
+
+D
+
+Identifier lang
+
+.
+
+-
+
+Soort partij
+
+M1
+
+Identiteit
+
+Protocolleringsniveau ID
+
+*i
+
+ID
+
+Code
+
+D
+
+Protocolleringsniveau code
+
+*l
+
+Naam
+
+D
+
+Naam enumeratiewaarde
+
+* u1
+
+Identiteit
+
+Omschrijving enumeratiewaarde
+
+* u2
+
+ID
+
+Soort dienst
+
+D
+
+Naam DX
+
+Rel
+-
+
+*l
+
+Omschrijving enumeratiewaarde
+
+*
+
+-
+
+M1
+
+Soort partij ID
+
+*i
+
+Naam enumeratiewaarde
+
+*l
+
+Verwerkingsresultaat
+
+ID
+
+ID
+
+D
+
+Reden einde relatie ID
+
+*i
+
+Code
+
+DX
+
+Reden einde relatie code
+
+*l
+
+Omschrijving enumeratiewaarde
+
+* u1
+
+Omschrijving DX
+
+D
+
+Naam D
+
+*l
+
+Omschrijving enumeratiewaarde
+
+*
+
+-
+
+-
+
+Soort element ID
+
+*i
+
+Naam enumeratiewaarde
+
+*l
+
+SG
+-
+
+-
+
+Verwerkingssoort
+
+M1
+
+M1
+
+ID
+
+D
+
+Rechtsgrond ID
+
+*i
+
+Code
+
+DX
+
+Rechtsgrond code
+
+*l
+
+Omschrijving
+
+DX
+
+Omschrijving enumeratiewaarde
+
+*
+
+Ja
+
+.
+
+Rel
+
+ID
+
+D
+
+Soort persoon ID
+
+*i
+
+Identiteit
+
+Code
+
+DX
+
+Soort persoon code
+
+*l
+
+ID
+
+D
+
+Verwerkingssoort ID
+
+Naam enumeratiewaarde
+
+* u1
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*l
+
+Omschrijving enumeratiewaarde
+
+*
+
+Naam DX
+
+Soort indicatie
+
+-
+
+D
+
+Soort indicatie ID
+
+*i
+
+Naam
+
+D
+
+Naam enumeratiewaarde
+
+*l
+
+Ja/Nee
+
+*
+
+Materiele historie van toepassing? D
+
+Verwerkingswijze
+
+-
+
+ID
+
+D
+
+Historie patroon
+
+.
+
+Identiteit
+
+Verantwoording categorie
+
+D
+
+Verantwoording categorie
+
+.
+
+ID
+
+D
+
+Soort melding ID
+
+Type
+
+D
+
+Element ID
+
+.
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*l
+
+Type identificatie XSD
+
+D
+
+Identifier lang
+
+.
+
+Omschrijving enumeratiewaarde
+
+*
+
+Type identificatie database
+
+D
+
+Identifier lang
+
+.
+
+Volgnummer
+
+*
+
+Soort melding
+
+Rel
+
+Identiteit
+
+Soort vrij bericht
+
+SG
+
+Identiteit
+D
+
+Naam DX
+
+-
+
+M1
+
+Soort vrij bericht ID
+
+*i
+
+Naam enumeratiewaarde
+
+*l
+
+-
+
+Identiteit
+
+-
+
+M1
+
+D
+
+Verwerkingswijze ID
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*l
+
+Omschrijving enumeratiewaarde
+
+*
+
+Omschrijving DX
+
+ID
+
+D
+
+Reden verkrijging NL nationaliteit ID
+
+*i
+
+Code
+
+DX
+
+Reden verkrijging code
+
+*l
+
+Omschrijving enumeratiewaarde
+
+* u1
+
+Omschrijving DX
+
+In bericht
+
+D
+
+Ja
+
+.
+
+Identificatie XSD
+
+D
+
+Identifier lang
+
+.
+
+Minimum lengte
+
+D
+
+Element lengte
+
+.
+
+Maximum lengte
+
+D
+
+Element lengte
+
+.
+
+Identiteit
+
+Sorteervolgorde
+
+D
+
+Sorteervolgorde
+
+.
+
+ID
+
+D
+
+Reden verlies NL nationaliteit ID
+
+Actueel en geldig attribuut >
+
+D
+
+Element
+
+.
+
+Code
+
+DX
+
+Reden verlies code
+
+*l
+
+Identificatie expressie
+
+D
+
+Identifier lang
+
+.
+
+Omschrijving DX
+
+Omschrijving enumeratiewaarde
+
+*
+
+Onderzoek toestaan?
+
+D
+
+Ja
+
+.
+
+Omschrijving DX
+D
+
+Soort migratie
+
+SG
+-
+
+M1
+
+Identiteit
+
+-
+
+-
+
+ID
+
+D
+
+Voorvoegsel ID
+
+Voorvoegsel
+
+DX
+
+Voorvoegsel
+
+*i
+*l
+
+Scheidingsteken
+
+*l
+
+Rel
+
+Scheidingsteken DX
+-
+
+-
+
+ID
+
+D
+
+Soort selectieresultaatset ID
+
+*i
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*l
+
+Omschrijving enumeratiewaarde
+
+*
+
+Versie Stuf BG
+
+SG
+
+Identiteit
+
+-
+
+-
+
+M1
+
+ID
+
+D
+
+Versie Stuf BG ID
+
+*i
+
+ID
+
+D
+
+Soort migratie ID
+
+*i
+
+Nummer
+
+DX
+
+Versie Stuf BG nummer
+
+*l
+
+Code
+
+DX
+
+Soort migratie code
+
+*l
+
+Omschrijving DX
+
+Omschrijving enumeratiewaarde
+
+*
+
+Naam enumeratiewaarde
+
+* u1
+
+Naam DX
+
+*i
+
+Soort relatie
+Soort Nederlands reisdocument
+
+SG
+-
+
+M1
+
+ID
+
+D
+
+Soort Nederlands reisdocument ID
+
+*i
+
+Code
+
+DX
+
+Soort Nederlands reisdocument code
+
+*l
+
+Omschrijving enumeratiewaarde
+
+* u1
+
+Omschrijving DX
+
+SG
+-
+
+Soort selectieresultaat set
+
+Omschrijving DX
+
+Identiteit
+
+Reden wijziging verblijf
+
+Identiteit
+
+Rel
+-
+
+SG
+
+*i
+
+Identiteit
+
+Identiteit
+
+Reden verlies NL nationaliteit
+
+*i
+
+Rel
+-
+
+Niveau
+
+-
+
+ID
+
+Voorvoegsel
+
+SG
+
+*i
+
+Rel
+
+Identiteit
+
+ID
+
+Reden verkrijging NL nationaliteit
+
+*i
+
+Rel
+
+Rel
+
+Omschrijving DX
+
+Rechtsgrond
+
+-
+
+Naam enumeratiewaarde
+
+Identiteit
+
+-
+
+Rel
+-
+
+DX
+
+Historie patroon
+
+.
+
+Naam enumeratiewaarde
+
+Naam
+
+Identiteit
+
+Leidt tot strijdigheid? DX
+
+Identifier lang
+
+DX
+
+*l
+
+.
+
+Inverse associatie identificatie code D
+
+Naam
+
+Omschrijving DX
+
+Soort persoon
+
+-
+
+*i
+
+Naam enumeratiewaarde
+
+.
+
+.
+
+Status onderzoek ID
+
+Verwerkingsresultaat ID
+
+Element ID
+
+.
+
+D
+
+D
+
+SG
+
+Identiteit
+
+-
+
+ID
+
+ID
+
+Soort element
+Reden einde relatie
+
+Rel
+-
+
+*i
+
+Element ID
+
+Objecttype Soort inhoud
+
+*l
+
+-
+
+Soort dienst ID
+
+D
+
+Identifier lang
+
+Naam enumeratiewaarde
+
+Identiteit
+
+D
+
+D
+
+*i
+
+SG
+
+-
+
+Historie database object
+
+D
+
+D
+
+Naam D
+
+Database object
+
+Soort inhoud
+
+Status levering administratieve handeling ID
+
+Omschrijving DX
+
+Identiteit
+
+Expressie Basistype
+
+D
+
+Identiteit
+
+D
+
+Omschrijving D
+
+Rel
+
+Status onderzoek
+
+-
+
+ID
+
+-
+
+*l
+
+-
+
+Naam D
+
+*i
+
+Effect afnemerindicaties ID
+
+Naam enumeratiewaarde
+
+Identiteit
+ID
+
+Identiteit
+
+D
+
+*i
+
+M1
+
+-
+
+ID
+
+D
+
+-
+
+-
+
+Soort selectie ID
+
+Status levering administratieve handeling
+
+Identiteit
+-
+
+Rel
+-
+
+Rel
+
+Rel
+
+Identiteit
+
+Effect afnemerindicaties
+Identiteit
+
+D
+
+Naam D
+
+Rel
+
+Identiteit
+
+Objecttype >
+
+-
+
+ID
+
+Soort actie \ Brongebruik ID
+
+SG
+
+Identiteit
+
+Identiteit
+
+Omschrijving D
+
+D
+
+ID
+
+Rel
+
+M1
+
+Rel
+
+ID
+
+Omschrijving DX
+
+Soort bericht
+
+SG
+
+Identiteit
+
+-
+
+D
+
+Bijhoudingsresultaat
+
+SG
+-
+
+Soort administratieve handeling > DX
+
+ID
+
+Omschrijving DX
+
+-
+
+Identiteit
+
+Soort administratieve handeling
+
+Rel
+
+*i
+
+Soort actie \ Brongebruik
+
+ISO 3166-1 alpha 2 DX
+
+Identiteit
+
+Identiteit
+
+DX
+
+-
+
+Rel
+
+Identiteit
+ID
+
+M1
+
+ID
+
+Nationaliteit
+Bijhoudingsaard
+
+-
+
+Naam enumeratiewaarde
+
+Land/gebied
+
+SG
+
+-
+
+Identiteit
+
+Leverwijze selectie ID
+
+Identiteit
+
+Autoriteittype van afgifte reisdocument
+
+Rel
+
+Identiteit
+
+-
+
+M1
+
+Autoriteit van afgifte buitenlands persoonsnummer ID
+
+DX
+
+Code
+
+Koppelvlak
+
+Rel
+
+SG
+
+-
+
+-
+
+D
+
+ID
+
+Autoriteit van afgifte buitenlands persoonsnummer
+
+Soort document
+
+Rel
+
+Identiteit
+
+Rel
+
+Identiteit
+
+-
+
+-
+
+Vertaling berichtsoort BRP
+Identiteit
+
+SG
+-
+
+M1
+
+ID
+
+D
+
+Soort relatie ID
+
+*i
+
+ID
+
+D
+
+Vertaling berichtsoort BRP ID
+
+Code
+
+D
+
+Soort relatie code
+
+*l
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*l
+
+Naam
+
+D
+
+Naam enumeratiewaarde
+
+* u1
+
+Omschrijving DX
+
+Omschrijving enumeratiewaarde
+
+*
+
+Omschrijving enumeratiewaarde
+
+.
+
+Omschrijving D
+
+*i
+
+Zoekbereik
+
+-
+
+Rel
+
+ID
+
+D
+
+Reden wijziging verblijf ID
+
+*i
+
+Identiteit
+
+Code
+
+DX
+
+Reden wijziging verblijf code
+
+*l
+
+ID
+
+D
+
+Zoekbereik ID
+
+Naam enumeratiewaarde
+
+* u1
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*l
+
+Omschrijving enumeratiewaarde
+
+*
+
+Naam DX
+
+Soort synchronisatie
+Identiteit
+
+Soort element autorisatie
+Identiteit
+
+-
+
+-
+
+D
+
+Soort synchronisatie ID
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*l
+
+Omschrijving enumeratiewaarde
+
+*
+
+Omschrijving DX
+
+Omschrijving DX
+
+*i
+
+-
+
+ID
+
+*i
+
+Rel
+-
+
+Zoekoptie
+
+Rel
+
+Identiteit
+
+-
+
+-
+
+*i
+
+ID
+
+D
+
+Zoekoptie ID
+
+Naam enumeratiewaarde
+
+*l
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*l
+
+Omschrijving enumeratiewaarde
+
+*
+
+Omschrijving DX
+
+Omschrijving enumeratiewaarde
+
+*
+
+ID
+
+D
+
+Soort element autorisatie ID
+
+Naam
+
+D
+
+Omschrijving D
+
+Rel
+
+-
+
+*i
+
+

@@ -1,0 +1,574 @@
+LV.1.AFB - Bijlage Autorisatiefilter bericht
+Versie: Werk
+Gegenereerd op: 12 juli 2017
+Status: Definitief
+
+1 Regels voor usecase LV.1.AFB.FH - Toepassen
+autorisatiefilter formele historie
+1.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1540
+
+3
+
+'Inhoudelijke groep'
+
+R1543
+
+4
+
+'Onderzoeksgroep'
+
+1.2
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1353
+
+3
+
+Voorkomen voor levering mutatie niet opnemen in VolledigBericht
+
+R1546
+
+3
+
+Vervallen groepen alleen opnemen bij autorisatie voor formele historie
+
+R1548
+
+4
+
+Leveren van Datum/tijd registratie en Datum/tijd verval mag alleen bij
+autorisatie voor formele historie
+
+2 Regels voor usecase LV.1.AFB.MH - Toepassen autorisatie
+materiele historie en verantwoording
+2.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1540
+
+3
+
+'Inhoudelijke groep'
+
+R1543
+
+4
+
+'Onderzoeksgroep'
+
+2.2
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1349
+
+3
+
+Beeindigde groep alleen leveren bij autorisatie op materiele historie
+
+R1547
+
+3
+
+Leveren van DatumEindeGeldigheid mag alleen bij autorisatie op materiele
+historie
+
+R1549
+
+3
+
+Leveren van ActieInhoud, ActieAanpassingGeldigheid en ActieVerval mag
+alleen bij autorisatie voor verantwoordingsinformatie
+
+R2051
+
+1
+
+Actie attributen alleen opnemen als actie voorkomt in verantwoording
+
+R2062
+
+3
+
+Alias leveren voor administratieve handeling
+
+3 Regels voor usecase LV.1.AFB.AA - Toepassen autorisatie op
+attributen
+3.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1540
+
+3
+
+'Inhoudelijke groep'
+
+R1541
+
+2
+
+'Verantwoordingsgroep'
+
+R1543
+
+4
+
+'Onderzoeksgroep'
+
+3.2
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1562
+
+4
+
+Een bericht bevat alleen onderzoeken die betrekking hebben op
+geautoriseerde attributen
+
+R1974
+
+8
+
+Alleen attributen leveren waarvoor autorisatie bestaat
+
+R1975
+
+4
+
+Alleen groepen waarvoor autorisatie bestaat worden geleverd
+
+R1976
+
+2
+
+Alleen objecten waarvoor autorisatie bestaat worden geleverd.
+
+R2065
+
+3
+
+Een bericht aan een afnemer bevat geen onderzoek naar ontbrekende
+gegevens
+
+4 Uitwerking regels
+R1349
+Beeindigde groep alleen leveren bij autorisatie op materiele historie
+Definitie:
+
+Een beëindigde Inhoudelijke groep (DatumEindeGeldigheid is gevuld met een
+waarde, eventueel volledig onbekend) mag alleen worden opgenomen in het te
+leveren resultaat (Persoonslijst of Mutatielevering) als er bij de Dienst waarvoor
+geleverd wordt een corresponderend voorkomen bestaat van Dienstbundel \ Groep
+met Dienstbundel \ Groep.Materiële historie? = 'Ja'.
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R1353
+Voorkomen voor levering mutatie niet opnemen in VolledigBericht
+Definitie:
+
+Een voorkomen van een groep waarin IndMuteLev de waarde 'Ja' heeft, mag alleen
+worden opgenomen in een MutatieBericht.
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R1540
+'Inhoudelijke groep'
+Definitie:
+
+Inhoudelijke groepen zijn groepen van de Persoonslijst die bij de Persoon horen. Dit
+zijn alle groepen onder Objecttypen Persoon, Persoon \ Adres, Persoon \
+Geslachtsnaamcomponent, Persoon \ Indicatie, Persoon \ Nationaliteit, Persoon \
+Reisdocument, Persoon \ Verificatie, Persoon \ Verstrekkingsbeperking, Persoon \
+Voornaam, Persoon \ Buitenlands persoonsnummer, Relatie (soorten Huwelijk en
+Geregistreerd partnerschap) en Betrokkenheid (rol Ouder).
+(Dit zijn dus de groepen uit het persoonsdeel van het bericht over de persoon, in
+tegenstelling tot de groepen uit bijvoorbeeld het verantwoordingsdeel en het
+onderzoeksdeel)
+
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R1541
+'Verantwoordingsgroep'
+Definitie:
+
+Verantwoordingsgroepen zijn groepen van de Persoonslijst die de verantwoording
+van de 'Inhoudelijke groep' (R1540) vormen. Dit zijn groepen onder de Objecttypen
+Administratieve handeling, Actie, Actie \ Bron, Document, Gedeblokkeerde melding
+en de koppelingen tussen die Objecttypen.
+(Dit zijn dus de groepen uit het verantwoordingsdeel van het bericht over de
+persoon)
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1543
+'Onderzoeksgroep'
+Definitie:
+
+Een Onderzoeksgroep is een groep die gegevens bevat omtrent onderzoeken op bij
+de Persoon aanwezige of ontbrekende gegevens. We hebben het hier altijd over de
+aan de Persoon gerelateerde Onderzoeken. Dus de Persoon \ Onderzoek gegevens,
+die direct gerelateerd zijn aan de uitgangspersoon.
+
+Voor het 'Onderzoeksdeel' worden de volgende begrippen gehanteerd:
+• Onderzoeksdeel: het deel binnen het bericht, dat informatie bevat over de
+onderzoeken.
+• Onderzoek: Binnen het onderzoeksdeel komen de 'Onderzoeken' voor, die de
+o.a. de Onderzoek.Datum aanvang, Onderzoek.Status en eventueel
+Onderzoek.Datum einde van het onderzoek bevatten
+• Gegeven in onderzoek: Als onderdeel van 'Onderzoek', zijn de in het onderzoek
+betrokken gegevens vastgelegd in Gegeven in onderzoek. Deze geeft aan
+welke gegevens (Gegeven in onderzoek.Element en optioneel: Gegeven in
+onderzoek.Object sleutel gegeven en Gegeven in onderzoek.Voorkomen sleutel
+gegeven) in het Onderzoek zijn betrokken.
+• Persoon \ Adres.Persoon aangetroffen op adres? valt ook onder het
+onderzoekdeel. Bijzonder aan dit attribuut is dat deze geen onderdeel is van
+Onderzoek of Gegeven in onderzoek, maar van Persoon \ Adres.
+Een onderzoeksgroep gedraagt zich verder hetzelfde als een Inhoudelijke groep, er
+is dus sprake van een afgeleid administratief en verantwoording d.m.v. een
+administratieve handeling met acties en bronnen.
+(Het betreft hier de groepen uit het Onderzoeksdeel van het bericht, deze hebben
+betrekking op de onderzoeken op persoonsgegevens, in tegenstelling tot de
+groepen uit bijvoorbeeld het Verantwoordingsdeel en het Persoonsdeel)
+Versie:
+
+4
+
+Soort:
+
+Definitieregel
+
+R1546
+Vervallen groepen alleen opnemen bij autorisatie voor formele historie
+Definitie:
+
+Een vervallen groep (TijdstipVerval en ActieVerval zijn gevuld met een waarde)
+wordt alleen in het te leveren bericht opgenomen indien:
+Het niet een MutatieBericht betreft
+EN
+er autorisatie bestaat voor de formele historie van de betreffende groep
+(de groep komt voor in Dienstbundel \ Groep met Dienstbundel \
+Groep.Formele historie? = 'Ja' bij de Dienst waarvoor geleverd wordt).
+OF
+Het een Mutatiebericht betreft
+EN
+het een voorkomen betreft dat in de te leveren Administratieve handeling
+is komen te vervallen (ActieVerval is een Actie bij de onderhanden
+Administratieve handeling).
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R1547
+Leveren van DatumEindeGeldigheid mag alleen bij autorisatie op materiele historie
+Definitie:
+
+Het attribuut DatumEindeGeldigheid van een inhoudelijke groep ('Inhoudelijke
+groep' (R1540)) mag alleen worden opgenomen in het te leveren resultaat als er bij
+
+de Dienst waarvoor geleverd wordt een corresponderend voorkomen bestaat van
+Dienstbundel \ Groep met Dienstbundel \ Groep.Materiële historie? = 'Ja'
+Opmerking: Het betreft hier het wissen van materiële historie gegevens. Deze
+regel heeft dus geen betrekking op formele historie gegevens met een materieel
+aspect (zoals Onderzoek met de datum Einde Onderzoek en Huwelijk met de datum
+einde Huwelijk).
+NB: Deze regel leidt momenteel niet tot zichtbaar gedrag: als
+DatumEindeGeldigheid gevuld is wordt onder dezelfde conditie de hele groep niet
+opgenomen in het bericht en als hij leeg is dan wordt het attribuut op die grond niet
+in het bericht opgenomen. Functioneel bestaat deze regel echter nog steeds en om
+redenen van toekomstbestendigheid wordt deze gehandhaafd.
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R1548
+Leveren van Datum/tijd registratie en Datum/tijd verval mag alleen bij autorisatie voor
+formele historie
+Definitie:
+
+De attributen Datum/tijd registratie en Datum/tijd verval van een 'Inhoudelijke
+groep' (R1540) of van een 'Onderzoeksgroep' (R1543) mogen alleen worden
+opgenomen in het te leveren resultaat als er bij de Dienst waarvoor geleverd wordt
+een corresponderend voorkomen bestaat van Dienstbundel \ Groep met
+Dienstbundel \ Groep.Formele historie? = 'Ja'.
+NB: Nadere aanduiding verval en bijhouding beëindigd? worden (indien gevuld) bij
+de levering van een vervallen voorkomen altijd meegeleverd.
+
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+R1549
+Leveren van ActieInhoud, ActieAanpassingGeldigheid en ActieVerval mag alleen bij
+autorisatie voor verantwoordingsinformatie
+Definitie:
+
+De attributen ActieInhoud, ActieAanpassingGeldigheid en ActieVerval van een
+'Inhoudelijke groep' (R1540) of van een 'Onderzoeksgroep' (R1543) mogen alleen
+worden opgenomen in het te leveren resultaat:
+Als er bij de Dienst waarvoor geleverd wordt een corresponderend voorkomen
+bestaat van Dienstbundel \ Groep met Dienstbundel \ Groep.Verantwoording? =
+'Ja'.
+OF
+Als de bijhouder een ABO-partij betreft, zie hiervoor R1545 - Verplicht leveren van
+ABO-partij en rechtsgrond..
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R1562
+Een bericht bevat alleen onderzoeken die betrekking hebben op geautoriseerde attributen
+Definitie:
+
+Een bericht bevat alleen voorkomens van Gegeven in onderzoek waarbij:
+Gegeven in onderzoek niet verwijst naar een specifiek attribuut (Gegeven in
+onderzoek.Element bevat geen Element met Element.Soort = 'Attribuut')
+
+OF
+Gegeven in onderzoek verwijst naar een geautoriseerd attribuut (Gegeven in
+onderzoek.Element bevat een Element met Element.Soort = 'Attribuut', waarbij dit
+Element ook voorkomt in Dienstbundel \ Groep \ Attribuut.Attribuut bij de Dienst)
+
+Toelichting:
+Het volstaat om te filteren op ongeautoriseerde attributen. Voor ongeautoriseerde
+groepen en objecten geldt dat deze niet in het bericht komen en de betreffende
+onderzoeken er vervolgens door R1561 - Een bericht bevat alleen onderzoeken naar
+ontbrekende gegevens en naar gegevens die ook aanwezig zijn in het bericht
+worden uitgefilterd. Voor onderzoeken naar ontbrekende gegevens geldt dat alleen
+Bijhouders deze geleverd krijgen en die mogen alle onderzoeksgegevens geleverd
+krijgen.
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+R1974
+Alleen attributen leveren waarvoor autorisatie bestaat
+Definitie:
+
+Bij de levering van een 'Inhoudelijke groep' (R1540), 'Verantwoordingsgroep'
+(R1541) of 'Onderzoeksgroep' (R1543) voor een Dienst mag een Attribuut alleen in
+het bericht voorkomen als er een corresponderend voorkomen van Dienstbundel \
+Groep \ Attribuut bestaat.
+
+Versie:
+
+8
+
+Soort:
+
+Verwerkingslogica
+
+R1975
+Alleen groepen waarvoor autorisatie bestaat worden geleverd
+Definitie:
+
+Het te leveren resultaat bevat alleen inhoudelijke groepen waarvoor enige
+attribuutautorisatie bestaat in de Dienstbundel.
+De attribuut-autorisatie staat beschreven in R1974 - Alleen attributen leveren
+waarvoor autorisatie bestaat.
+Toelichting:
+Dit kan geinterpreteerd worden als: er is een voorkomen van Dienstbundel \ Groep
+waarbij tenminste één voorkomen van Dienstbundel \ Groep \ Attribuut bestaat.
+
+NB: Het gaat er dus niet om of er attributen daadwerkelijk voorkomen in het
+bericht maar of ze gezien de autorisatie voor kunnen komen. Bijvoorbeeld: er is
+autorisatie voor A-nummer en de te leveren persoon heeft een groep
+identificatienummers met A-nummer afwezig en BSN gevuld. Dan is er volgens deze
+definitie autorisatie voor de groep Identificatienummers en wordt deze groep
+geleverd, hoewel A-nummer niet aanwezig zal zijn in het bericht.
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+R1976
+
+Alleen objecten waarvoor autorisatie bestaat worden geleverd.
+Definitie:
+
+Het te leveren resultaat bevat alleen Objecten die, binnen hun berichtdeel, enig
+geautoriseerd Attribuut kunnen bevatten.
+De attribuut-autorisatie staat beschreven in R1974 - Alleen attributen leveren
+waarvoor autorisatie bestaat.
+Toelichting: De attribuut-autorisatie van een Dienstbundel wordt beschreven door
+de voorkomens van Dienstbundel \ Groep \ Attribuut. Het Object neemt een
+bepaalde plek in binnen het bericht, waarbij een XSD beschrijft welke inhoud (een
+hiërarchische structuur van andere Objecten, Groepen en Attributen) er binnen dat
+Object in het bericht aanwezig mogen zijn. Als er binnen die hiërarchische structuur
+geen enkel Attribuut te vinden is waarvoor autorisatie bestaat, dan kunnen we
+daaruit afleiden dat er ook geen autorisatie voor dit Object bestaat op deze plek in
+het bericht. We filteren dit Object (en de hele structuur er onder) dan weg uit het
+bericht.
+Noot 1: Of de betreffende attributen daadwerkelijk voorkomen in het bewuste
+bericht is dus niet relevant. Als bijvoorbeeld een afnemer geautoriseerd is voor
+attribuut "GerelateerdeOuder.OuderlijkGezag?" dan filteren we Object
+GerelateerdeOuder niet weg, zelfs als de groep "Ouderlijk Gezag" niet daadwerkelijk
+voorkomt in het uiteindelijke bericht.
+Noot 2: Deze hiërarchie voor deze afleiding verloopt dus via de structuur van het
+bericht! Bijvoorbeeld: in een VolledigBericht bevat de betrokkenheid Kind van de
+hoofdpersoon de objecten FamilierechtelijkeBetrekking, Ouder en Persoon
+('GerelateerdeOuder.Persoon'). Als de afnemer geautoriseerd is voor het
+Geboorteland van de ouder, dan wordt het object betrokkenheid Kind op grond
+daarvan niet verwijderd uit het bericht. De betrokkenheid Kind van zijn eigen
+kinderen bevatten binnen het bericht alleen Persoon ('GerelateerdKind'). Als de
+afnemer ook geautoriseerd is voor het BSN van het kind, dan wordt om die redenen
+de betrokkenheid Kind niet weggefilterd. De afleiding is voor betrokkenheid Kind
+dus op verschillende plekken in de berichtstructuur verschillend qua uitwerking.
+
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R2051
+Actie attributen alleen opnemen als actie voorkomt in verantwoording
+Definitie:
+
+De attributen ActieInhoud, ActieAanpassingGeldigheid en ActieVerval van een
+'Inhoudelijke groep' (R1540) of een 'Onderzoeksgroep' (R1543) worden alleen
+opgenomen als ze verwijzen naar een Actie die voorkomt in de
+verantwoordingsinformatie die de Persoonslijst van de hoofdpersoon hebben
+bijgehouden of hebben geleid tot een mutatie van het onderzoeksdeel
+('Onderzoeksgroep' (R1543)).
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2062
+Alias leveren voor administratieve handeling
+Definitie:
+
+Indien Leveringsautorisatie.Alias soort administratieve handeling leveren? de
+waarde "Ja" heeft dan moet voor ieder bericht die voor deze Leveringsautorisatie
+geleverd wordt de Soort administratieve handeling geleverd worden die refereert
+aan Soort administratieve handeling.Alias. Is Soort administratieve handeling.Alias
+niet gevuld, dan moet de Soort administratieve handeling geleverd worden.
+
+Toelichting: als de afnemer een beperkte autorisatie heeft geeft dit soms meer
+privacygevoelige informatie prijs dan wenselijk is. Zo hoeft een afnemer die alleen
+NAW gegevens krijgt niet te weten dat de reden dat de naam wijzigt bv Adoptie is.
+In dat geval is in de Leveringsautorisatie opgenomen dat een Alias wordt geleverd
+die minder prijsgeeft over de achterliggende bijhouding.
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R2065
+Een bericht aan een afnemer bevat geen onderzoek naar ontbrekende gegevens
+Definitie:
+
+Een bericht bevat geen voorkomens van Gegeven in onderzoek waarbij:
+Het een Toegang leveringsautorisatie betreft met Partij \ Rol.Rol =
+"Afnemer"
+EN
+Het een onderzoek betreft naar een ontbrekend gegeven:
+(Gegeven in onderzoek.Object sleutel gegeven is leeg
+EN
+Gegeven in onderzoek.Voorkomen sleutel gegeven is leeg).
+
+Toelichting: Het leveren van onderzoeken naar ontbrekende gegevens aan
+afnemers is juridisch niet verplicht binnen de Wet BRP en de bepaling of een
+onderzoek naar ontbrekende gegevens binnen de autorisatie valt is complex.
+Vooralsnog leveren we dit daarom alleen aan bijhouders.
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+

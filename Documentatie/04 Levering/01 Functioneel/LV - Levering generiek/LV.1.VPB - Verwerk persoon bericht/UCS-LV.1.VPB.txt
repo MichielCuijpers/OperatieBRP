@@ -1,0 +1,212 @@
+UCS LV.1.VPB – Verwerk Persoon Bericht
+Versie
+
+2.0
+
+Datum
+
+14 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+25-11-2016
+
+0.1
+
+Eerste opzet
+
+oBRP
+
+29-11-2016
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+13-12-2016
+
+0.3
+
+AD aangepast ((*) verwijderd)
+
+oBRP
+
+15-02-2017
+
+1.0
+
+UC’s en regels aangemaakt en omgehangen in BMR. Versie
+document gereed.
+
+oBRP
+
+14-07-2017
+
+2.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS LV.1.VPB – Verwerk Persoon Bericht
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Verwerk persoon bericht ........................................................................................... 4
+2.1
+2.2
+
+3
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Activiteitendiagram ...............................................................................................................4
+Beschrijving van de stappen ...................................................................................................4
+
+Ontwerpbeslissingen ................................................................................................ 6
+
+Status: Definitief, versie: 2.0
+
+Pagina 2 van 6
+
+UCS LV.1.VPB – Verwerk Persoon Bericht
+
+1 Inleiding
+1.1
+
+Doel
+
+Deze Use Case beschrijft de te nemen stappen voor het samenstellen van een “verwerk persoon
+bericht”. Dit is een bericht dat asynchroon verstuurd wordt door de BRP en dit betreft een volledig
+bericht of een mutatiebericht.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de stappen van het verwerken van een persoon bericht. In Hoofdstuk 3
+staan de Use Case specifieke ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 2.0
+
+Pagina 3 van 6
+
+UCS LV.1.VPB – Verwerk Persoon Bericht
+
+2 Verwerk persoon bericht
+Een “verwerk persoon bericht” is een verzamelnaam voor de berichtsoorten volledig bericht en
+mutatiebericht. Dit zijn berichten die asynchroon door de BRP worden verstuurd.
+Het opstellen van een “verwerk persoon bericht” kent een aantal specifieke stappen. Deze staan in
+het activiteitendiagram.
+In de paragraaf daarna worden de stappen stuk voor stuk beschreven. Voor een meer
+gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden wordt verwezen
+naar de aan deze Use Case gekoppelde regels in BMR.
+
+2.1
+
+Activiteitendiagram
+
+2.2
+
+Beschrijving van de stappen
+
+In deze paragraaf worden de stappen in het activiteitendiagram beschreven.
+1. Toepassen filter `verwerk persoon bericht´ (LV.1.VPB.FV).
+Het bericht wordt begrenst op datum aanvang materiële periode.
+Wanneer een volledig bericht of mutatiebericht wordt aangemaakt naar aanleiding van een
+afnemerindicatie. Dan worden van de groepen die een materiële historie kennen, alleen de
+voorkomens geleverd waarbij geldt dat de datum einde geldigheid (voor onderzoeken
+onderzoek.datum einde) na de datum aanvang materiële periode van de afnemerindicatie ligt.
+Wanneer de afnemerindicatie datum aanvang materiële periode niet gevuld is dan mogen alle
+voorkomens geleverd worden.
+
+2. Samenstellen stuurgegevens (LV.1.VPB.SS).
+De stuurgegevens van het uitgaande asynchrone bericht worden gevuld.
+
+Status: Definitief, versie: 2.0
+
+Pagina 4 van 6
+
+UCS LV.1.VPB – Verwerk Persoon Bericht
+
+3. Bepaal volgorde en aantal hoofdpersonen (LV.1.VPB.VA).
+•
+
+De volgorde van hoofdpersonen in het uitgaande bericht wordt bepaald door de
+sorteervolgorde.
+Berichten ontvangen door de BRP in het bijhoudingskoppelvlak betreffen vaak meerdere
+personen. Hierbij is soms een natuurlijke volgorde van vermelding van deze personen van
+toepassing. Ook in een uitgaand leverbericht over deze bijhouding is een natuurlijke en
+reproduceerbare volgorde gewenst, deze wordt bewerkstelligt met het attribuut
+persoon.sorteervolgorde.
+
+•
+
+Het aantal geleverde personen in een volledig bericht of een mutatiebericht wordt gelogd.
+
+Status: Definitief, versie: 2.0
+
+Pagina 5 van 6
+
+UCS LV.1.VPB – Verwerk Persoon Bericht
+
+3 Ontwerpbeslissingen
+Er zijn geen Use Case specifieke ontwerpbeslissingen.
+
+Status: Definitief, versie: 2.0
+
+Pagina 6 van 6
+
+

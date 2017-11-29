@@ -1,0 +1,402 @@
+UCS BY.1.MN – Maak bijhoudingsnotificatie
+Versie
+
+0.9
+
+Datum
+
+28 februari 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+18-07-2016
+
+0.1
+
+Initiële versie
+
+Operatie BRP
+
+19-07-2016
+
+0.2
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+27-07-2016
+
+0.3
+
+Enkele tekstuele wijzigingen n.a.v. grooming
+
+Operatie BRP
+
+28-07-2016
+
+0.4
+
+Ontvangende systeem afhankelijk gemaakt van stelsel ontvangende partij
+
+Operatie BRP
+
+24-08-2016
+
+0.5
+
+Voor generieke berichtelementen verwijzing naar LO opgenomen.
+
+Operatie BRP
+
+27-09-2016
+
+0.6
+
+Tabel met reviewhistorie opgenomen.
+Referenties bijgewerkt.
+
+Operatie BRP
+
+26-10-2016
+
+0.7
+
+Review commentaar Operatie BRP verwerkt (alleen tekstueel).
+
+Operatie BRP
+
+13-12-2016
+
+0.8
+
+Attribuut “GBA geboorte partijcode” in bijhoudingsplan toegevoegd.
+
+Operatie BRP
+
+28-02-2017
+
+0.9
+
+Attribuut “GBA melding” toegevoegd in notificatie.
+
+Operatie BRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Operatie BRP
+
+0.5
+
+Operatie BRP
+
+UCS BY.1.MN – Maak bijhoudingsnotificatie
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+
+2
+
+Doel ....................................................................................................................................3
+Referenties ..........................................................................................................................4
+
+Berichtdelen.............................................................................................................. 5
+2.1
+2.2
+2.3
+2.4
+2.5
+2.6
+
+Stuurgegevens .....................................................................................................................5
+Administratieve handeling ......................................................................................................5
+Bijhoudingsplan ....................................................................................................................6
+BijhoudingsvoorstelVerzoekbericht ..........................................................................................6
+BijhoudingsvoorstelResultaatbericht ........................................................................................6
+Bijhoudingsplanpersonen .......................................................................................................6
+
+Status: Definitief, versie: 0.9
+
+Pagina 2 van 6
+
+UCS BY.1.MN – Maak bijhoudingsnotificatie
+
+1 Inleiding
+1.1
+
+Doel
+
+Deze Use Case beschrijft het vervaardigen van het bijhoudingsnotificatiebericht. Met een bijhoudingsnotificatiebericht informeren de centrale voorzieningen en de migratievoorziening een bijhoudingspartij over de verwerking van een bijhoudingsvoorstel. Dit gebeurt in de situatie dat het bijhoudingsvoorstel betrekking heeft op een of meer personen die niet onder de bijhoudingsverantwoordelijkheid van de indiener van het bijhoudingsvoorstel vallen. Een voorbeeld van een dergelijke situatie is de voltrekking van een huwelijk in een andere gemeente dan de woongemeente; ook
+wel de feitgemeente genoemd. Naar aanleiding van het bijhoudingsvoorstel van de feitgemeente
+ontvangt de woongemeente een bijhoudingsnotificatiebericht.
+Een bijhoudingsnotificatiebericht is een berichtsoort van het type notificatie. Een overzicht en beschrijving van alle berichttypen staat in paragraaf 8.1.4 Berichttypen en van de berichtsoorten in
+paragraaf 8.1.5 Berichtsoorten in het Logisch Ontwerp Basisregistratie Personen [3]. Figuur 1
+geeft de berichtsamenstelling van de berichtsoort Bijhoudingsnotificatiebericht met generieke berichtdelen weer. Een overzicht van de berichtsamenstelling van alle berichtsoorten staat in paragraaf 8.3.3 Berichtsamenstelling en de beschrijving van de generieke berichtdelen staat in paragraaf 8.3.4. Generieke berichtdelen van het Logisch Ontwerp Basisregistratie Personen [3].
+
+Legenda
+Berichtdeel (verplicht)
+
+Berichtdeel (optioneel)
+
+Hiërarchie
+berichtdelen
+...
+...
+
+Figuur 1 Berichtsamenstelling van het bijhoudingsnotificatiebericht
+In hoofdstuk 2 wordt per berichtdeel beschreven hoe het wordt gevuld.
+
+Status: Definitief, versie: 0.9
+
+Pagina 3 van 6
+
+UCS BY.1.MN – Maak bijhoudingsnotificatie
+
+1.2
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+XSD’s
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Voorbeeldberichten
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Logisch Ontwerp Basisregistratie Personen
+
+Operatie BRP
+
+-
+
+-
+
+4
+
+UCS BY.1.MP - Maak bijhoudingsplan
+
+Operatie BRP
+
+-
+
+-
+
+5
+
+UCS BY.0.AV - Afhandeling verzoek
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 0.9
+
+Pagina 4 van 6
+
+UCS BY.1.MN – Maak bijhoudingsnotificatie
+
+2 Berichtdelen
+In dit hoofdstuk wordt per berichtdeel voor elk berichtelement beschreven hoe het moet worden
+gevuld.
+Deze beschrijving moet in samenhang worden beschouwd met de XSD-berichtspecificatie [1]. Voor
+voorbeeldberichten wordt verwezen naar [2]. Generieke berichtmechanismen, zoals de wijze waarop technische sleutels en interne berichtreferenties in het bericht worden opgenomen, zijn beschreven in paragraaf 8.3.5 Verwijsmechanismen in berichten in [3].
+
+2.1
+
+Stuurgegevens
+
+Het berichtdeel stuurgegevens bevat de gegevens over de identificatie van het bericht, de adressering en de berichtlogistiek. Het wordt als volgt gevuld:
+Berichtelement
+
+Afleiding
+
+Zendende partij
+
+Vaste waarde: de partijcode van de Minister (199901)
+
+Zendende systeem
+
+Vaste waarde: ‘BRP’
+
+Ontvangende partij
+
+Partijcode van de bijhoudingspartij waarvoor het bericht wordt gemaakt.
+Zie de aanroepende Use Case [5] voor een specificatie van de partijen
+waarvoor een bijhoudingsnotificatiebericht moet worden gemaakt.
+
+Ontvangende systeem
+
+Als ontvangende partij een BRP-partij is: ‘Bijhoudingsysteem’.
+Als ontvangende partij een GBA-partij is: ‘ISC’.
+NB: Een partij is een BRP-partij als ‘Partij.Datum overgang naar BRP’
+niet leeg is en kleiner of gelijk is aan de systeemdatum. Anders is de
+partij een GBA-partij.
+
+Referentienummer
+
+Gegenereerde unieke ID in UUID-formaat versie 4
+
+Tijdstip
+
+Systeem datum/tijd bij het aanmaken van het bericht.
+Formaat: JJJJ-MM-DDTuu:mm:ss.ddd+0Z:00
+Bijvoorbeeld: 2012-04-18T15:32:03.234+01:00
+NB: Tijdzone Z is een Nederlandse tijdzone; afhankelijk van winter- of
+zomertijd respectievelijk de waarde ‘1’ of ‘2’.
+
+2.2
+
+Administratieve handeling
+
+Dit berichtdeel bevat de identificerende gegevens van de administratieve handeling die ten grondslag hebben gelegen aan de nieuwe of gewijzigde persoonsgegevens. Het berichtdeel wordt als
+volgt gevuld aan de hand van de geregistreerde Administratieve handeling uit het verwerkte bijhoudingsvoorstel:
+Berichtelement
+
+Afleiding
+
+Code
+
+Code van de Soort administratieve handeling die wordt aangeduid door
+Administratieve handeling.Soort
+
+Naam
+
+Naam van de Soort administratieve handeling die wordt aangeduid
+door Administratieve handeling.Soort
+
+Categorie
+
+Categorie administratieve handeling van de Soort administratieve
+handeling die wordt aangeduid door Administratieve handeling.Soort
+
+Status: Definitief, versie: 0.9
+
+Pagina 5 van 6
+
+UCS BY.1.MN – Maak bijhoudingsnotificatie
+
+Partijcode
+
+Code van de Partij die wordt aangeduid door Administratieve handeling.Partij
+
+Tijdstip registratie
+
+Administratieve handeling.Tijdstip registratie
+
+2.3
+
+Bijhoudingsplan
+
+Dit berichtdeel bevat het bijhoudingsplan dat naar aanleiding van het bijhoudingsvoorstel is gemaakt in [4].
+Dit berichtdeel wordt als volgt gevuld:
+Berichtelement
+
+Afleiding1
+
+Bijhoudingsvoorstel partijcode
+
+Bijhoudingsplan.Partij bijhoudingsvoorstel
+
+GBA geboorte partijcode
+
+Bijhoudingsplan.Partij GBA geboorte
+
+GBA melding
+
+Wordt gevuld door de migratievoorziening indien zich een situatie
+voordoet tijdens het verwerken van het bijhoudingsvoorstel die aandacht behoeft van de bijhoudingspartij die het voorstel heeft ingediend.
+
+Zoals het schema van paragraaf 1.1 illustreert, bevat het berichtdeel bijhoudingsplan zelf ook weer
+een aantal berichtdelen. Deze worden in de paragrafen hierna toegelicht.
+
+2.4
+
+BijhoudingsvoorstelVerzoekbericht
+
+Dit berichtdeel bevat een kopie van de volledige inhoud (XML) van het ingekomen bijhoudingsvoorstel waar het bijhoudingsnotificatiebericht betrekking op heeft.
+
+2.5
+
+BijhoudingsvoorstelResultaatbericht
+
+Dit berichtdeel bevat een kopie van de volledige inhoud (XML) van het bijhoudingsresultaatbericht
+dat de response vormt op het bijhoudingsvoorstelbericht (paragraaf 2.4).
+
+2.6
+
+Bijhoudingsplanpersonen
+
+Voor elke persoon in het bijhoudingsplan worden de volgende gegevens in het bericht opgenomen:
+Berichtelement
+
+Afleiding1
+
+Tijdstip laatste wijziging
+
+Bijhoudingsplan \ Persoon.Tijdstip laatste wijziging
+
+Burgerservicenummer
+
+Bijhoudingsplan \ Persoon.Burgerservicenummer
+
+Partijcode
+
+Bijhoudingsplan \ Persoon.Bijhoudingspartij
+
+Situatienaam
+
+Bijhoudingsplan \ Persoon.Situatie.
+
+1
+
+De centrale voorzieningen slaan het bijhoudingsplan niet op. In deze kolom wordt verwezen naar de uitkomst van UC
+BY.1.MP (Maak bijhoudingsplan) [4].
+
+Status: Definitief, versie: 0.9
+
+Pagina 6 van 6
+
+

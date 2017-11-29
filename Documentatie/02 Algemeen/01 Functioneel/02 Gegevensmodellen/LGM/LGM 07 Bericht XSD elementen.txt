@@ -1,0 +1,864 @@
+Bericht
+
+LGM 07 Bericht XSD elementen
+
+Dyn
+
+Release 59
+Identiteit
+
+-
+
+-
+
+ID
+
+D
+
+Bericht ID
+
+*i
+
+/Tijdstip registratie
+
+D
+
+Datum/Tijd
+
+* s2
+
+Bericht \ Persoon
+
+Dyn
+
+Identiteit
+
+D
+
+Soort >
+
+D
+
+Soort bericht
+
+.
+
+Bericht >
+
+Richting >
+
+D
+
+Richting
+
+*
+
+/Tijdstip registratie D
+D
+
+Persoon >
+Stuurgegevens
+
+-
+
+17-7-2017
+
+-
+
+Bericht
+
+* s1
+
+Datum/Tijd
+
+* s2
+
+Persoon
+
+*
+
+-
+
+Bericht \ Scope Elementen
+
+Zendende partij >
+
+DX
+
+Partij
+
+*
+
+Zendende systeem
+
+DX
+
+Systeem naam
+
+*
+
+Identiteit
+
+DX
+
+Bericht
+
+Ontvangende partij >
+
+DX
+
+Partij
+
+*
+
+Referentienummer
+
+DX
+
+Referentienummer
+
+* s1
+
+Element > DX Element *
+
+Cross referentienummer
+
+DX
+
+Referentienummer
+
+.
+
+Datum/tijd verzending
+
+DX
+
+Datum/Tijd
+
+.
+
+Datum/tijd ontvangst
+
+D
+
+Datum/Tijd
+
+.
+-
+
+Dyn
+
+Zoekcriterium
+Identiteit
+
+Parameters
+
+-
+
+*
+
+Bericht >
+
+Gesynchroniseerde Persoon
+
+Dyn
+
+-
+
+Bericht >
+
+DX
+
+Bericht
+
+Dyn
+
+-
+
+Identiteit
+
+*
+
+-
+
+-
+
+Verwerkingswijze >
+
+DX
+
+Verwerkingswijze
+
+.
+
+Rol >
+
+DX
+
+Rol
+
+.
+
+Waarde
+
+DX
+
+Naam enumeratiewaarde lang .
+
+Soort synchronisatie >
+
+DX
+
+Soort synchronisatie
+
+.
+
+Optie >
+
+DX
+
+Zoekoptie
+
+Leveringsautorisatie >
+
+DX
+
+Leveringsautorisatie
+
+.
+
+Dienst >
+
+DX
+
+Dienst
+
+.
+
+Zoekbereik
+
+.
+
+Zoekbereik >
+Peilmoment materieel
+Peilmoment materieel resultaat
+
+Persoon > DX Persoon *
+
+X
+X
+X
+
+Datum
+Datum
+
+Identiteit
+Bericht >
+
+DX
+
+*
+
+*
+
+Dyn
+
+Bericht
+
+-
+
+*
+
+Bericht \ Zoekcriteria
+
+Persoon > DX Bericht \ Geselecteerde persoon *
+
+.
+
+Dyn
+
+Identiteit
+
+DX
+
+Bericht
+
+*
+
+.
+
+Bericht >
+
+Historievorm
+
+.
+
+Zoekcriterium > DX Zoekcriterium *
+
+Verantwoording
+
+.
+
+X
+
+Datum/Tijd
+
+Historievorm >
+
+X
+
+Verantwoording >
+
+X
+
+Stamgegeven
+
+X
+
+Stamgegeven
+
+.
+
+Vertaling berichtsoort BRP >
+
+X
+
+Vertaling berichtsoort BRP
+
+.
+
+Versie Stuf BG >
+
+X
+
+Versie Stuf BG
+
+.
+
+Zender vrij bericht >
+
+X
+
+Partij
+
+.
+
+X
+
+Bericht \ Geselecteerde persoon container
+
+.
+
+Peilmoment formeel resultaat
+
+Ontvanger vrij bericht >
+
+Element > DX Element
+
+Partij
+
+Selectiekenmerken
+
+Bericht \ Geselecteerde persoon
+Identiteit
+
+-
+
+-
+
+Persoon > DX Persoon .
+
+.
+-
+
+Dyn
+
+-
+
+Soort selectieresultaat set >
+
+X
+
+Soort selectieresultaat set
+
+*
+
+Volgnummer selectieresultaat set
+
+X
+
+Volgnummer
+
+*
+
+Soort selectie >
+
+X
+
+Soort selectie
+
+*
+
+Identiteit
+
+-
+
+Identiteit
+
+Selectie leveringsautorisatie >
+
+X
+
+Leveringsautorisatie
+
+*
+
+ID
+
+D
+
+Verwerkingswijze ID
+
+*i
+
+Bericht \ Geselecteerde persoon > DX Bericht \ Geselecteerde persoon *
+
+Selectie dienst >
+
+X
+
+Dienst
+
+*
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*l
+
+Melding >
+
+Selectietaak >
+
+X
+
+Selectietaak
+
+*
+
+Omschrijving DX Omschrijving enumeratiewaarde *
+
+Selectie datum
+
+X
+
+Datum
+
+*
+
+Peilmoment materieel resultaat selectie
+
+X
+
+Datum
+
+*
+
+Peilmoment formeel resultaat selectie
+
+X
+
+Datum/Tijd
+
+*
+
+Selectie historievorm >
+
+X
+
+Historievorm
+
+.
+
+Verwerkingswijze
+
+Rel
+-
+
+Soort synchronisatie
+
+-
+
+Verwerking >
+
+DX
+
+Verwerkingsresultaat
+
+*
+
+Bijhouding >
+
+DX
+
+Bijhoudingsresultaat
+
+.
+
+Hoogste meldingsniveau >
+
+DX
+
+Soort melding
+
+.
+
+Aantal selectieresultaat personen
+
+X
+
+Aantal resultaten
+
+.
+
+Aantal selectieresultaat sets
+
+X
+
+Aantal resultaten
+
+.
+
+Standaard
+
+-
+
+-
+
+-
+
+D
+
+Soort synchronisatie ID
+
+*i
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*l
+
+Omschrijving DX Omschrijving enumeratiewaarde *
+
+-
+
+Verantwoording
+
+Rel
+
+Administratieve handeling >
+
+DX
+
+Administratieve handeling
+
+.
+
+Identiteit
+
+Data
+
+D
+
+Berichtdata
+
+.
+
+ID
+
+D
+
+Verantwoording ID
+
+*i
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*l
+
+Identificatiecriteria
+
+-
+
+-
+
+Burgerservicenummer
+
+X
+
+Burgerservicenummer
+
+.
+
+Administratienummer
+
+X
+
+Administratienummer
+
+.
+
+Object sleutel
+
+X
+
+Sleutelwaardetekst
+
+.
+
+Geboortedatum kind
+
+X
+
+Datum evt. (deels) onbekend
+
+.
+
+Gemeente code
+
+X
+
+Gemeente code
+
+.
+
+Afgekorte naam openbare ruimte
+
+X
+
+Afgekorte naam openbare ruimte
+
+.
+
+Huisnummer
+
+X
+
+Huisnummer
+
+.
+
+Huisletter
+
+X
+
+Huisletter
+
+.
+
+Huisnummertoevoeging
+
+X
+
+Huisnummertoevoeging
+
+.
+
+Locatie ten opzichte van adres
+
+X
+
+Locatie ten opzichte van adres
+
+.
+
+Postcode
+
+X
+
+Postcode
+
+.
+
+Woonplaatsnaam
+
+X
+
+Naam enumeratiewaarde
+
+.
+
+Identificatiecode adresseerbaar object
+
+X
+
+Identificatiecode adresseerbaar object .
+
+Identificatiecode nummeraanduiding
+
+X
+
+Identificatiecode nummeraanduiding
+
+Bericht vertaling
+
+BerichtdataLax (XSD)
+
+.
+
+Vertaalde bericht
+
+X
+
+BerichtdataSkip (XSD)
+
+.
+
+Soort vrij bericht >
+
+X
+
+Soort vrij bericht
+
+*
+
+Inhoud vrij bericht
+
+X
+
+Vrij bericht data
+
+*
+
+-
+
+-
+
+Administratieve handeling \ Bezien vanuit persoon
+Identiteit
+
+Dyn
+-
+
+D
+
+ID
+
+Administratieve handeling > D
+DX
+
+Persoon >
+
+Persoon \ GBA - relaties
+
+Dyn
+
+Identiteit
+-
+
+X
+
+-
+
+Omschrijving DX Omschrijving enumeratiewaarde *
+
+.
+
+Te vertalen bericht
+
+Vrij bericht
+
+DX
+
+-
+
+ID
+
+-
+
+Persoon >
+
+X
+
+Persoon
+
+*
+
+Stapels >
+
+X
+
+Stapel
+
+*
+
+-
+
+-
+
+/Persoon \ Onderzoek
+Identiteit
+
+Dyn
+-
+
+-
+
+Persoon >
+
+X
+
+Persoon
+
+*
+
+Onderzoek >
+
+X
+
+Onderzoek
+
+*
+
+Dyn
+-
+
+Rel
+
+Identiteit
+
+Resultaat
+
+Bericht \ Geselecteerde persoon \ Melding
+
+-
+
+Administratieve handeling \ Bezien vanuit persoon ID
+
+*i
+
+Administratieve handeling
+
+*
+
+Persoon
+
+*
+
+Melding
+
+-
+
+*
+
+

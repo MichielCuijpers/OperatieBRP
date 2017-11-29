@@ -1,0 +1,406 @@
+UCS BS.0.BCS - Bestands controle selectietaak
+Versie
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Datum
+
+17 juli 2017
+
+Status
+
+Definitief
+
+Locatie
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+04-07-2017
+
+0.1
+
+Initiële opzet
+
+oBRP
+
+17-07-2017
+
+1.0
+
+Definitief gemaakt. Hfd. openstaande punten toegevoegd
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+oBRP
+
+UCS BS.0.BCS - Bestands controle selectietaak
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Gebruikersinteractie ................................................................................................. 4
+2.1
+2.2
+2.3
+2.4
+2.5
+2.5.1
+
+3
+
+Aanleiding ............................................................................................................................4
+Preconditie ...........................................................................................................................4
+Postconditie .........................................................................................................................4
+Regulier verloop....................................................................................................................4
+Alternatief verloop ................................................................................................................5
+Geen te controleren selectietaken gevonden ........................................................................5
+
+Systeemfuncties ....................................................................................................... 6
+3.1
+3.2
+3.3
+3.4
+
+4
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+Openstaande punten .............................................................................................................3
+
+Beschrijving .........................................................................................................................6
+Schematische weergave.........................................................................................................6
+Beschrijving Use Cases ..........................................................................................................6
+Bedrijfsregels .......................................................................................................................7
+
+Ontwerpbeslissingen ................................................................................................ 8
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 2 van 8
+
+UCS BS.0.BCS - Bestands controle selectietaak
+
+1 Inleiding
+1.1
+
+Doel
+
+Indien bij de selectiedienst is aangegeven dat een steekproefcontrole uitgevoerd moet worden, dan
+wordt tijdens de uitvoer van een selectietaak een controlebestand gegenereerd.
+De beheerder krijgt de mogelijkheid om dit controlebestand te controleren vanuit de
+beheerapplicatie.
+Vanuit het overzicht ‘te controleren selectietaken’ selecteert de gebruiker een selectietaak waarop
+de persoonslijsten uit het controlebestand op het scherm getoond worden.
+De gebruiker kan de selectietaak vervolgens afkeuren indien het resultaat niet naar wens is of de
+status wijzigen naar ‘Te leveren’.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de gebruikersinteractie. In hoofdstuk 3 staan de systeemfuncties benoemd.
+In hoofdstuk 4 staan de Use Case specifieke ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+1.4
+
+Openstaande punten
+•
+•
+
+Deze use case is een initiële opzet, is niet gerealiseerd en er zijn nog geen bedrijfsregels in
+BMR voor aangemaakt.
+Het scherm toont de eerste persoonslijst uit het te controleren bestand op het scherm.
+Daarbij staan nog de volgende vragen open:
+o Hier ook nog een beperkte set gegevens van de dienst/taak bij tonen? Bijvoorbeeld
+de populatiebeperkingen en selectie criterium? Bijvoorbeeld het aantal totaal
+resultaten en de verwacht aantal personen uit de dienst?
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 3 van 8
+
+UCS BS.0.BCS - Bestands controle selectietaak
+
+2 Gebruikersinteractie
+2.1
+
+Aanleiding
+
+De actor wil het resultaat van een selectietaak controleren omdat dit is aangeven bij de
+selectiedienst.
+
+2.2
+
+Preconditie
+
+De beheerder heeft in de beheerapplicatie de functie “Controleren selectie” aangeroepen.
+Er is een selectietaak uitgevoerd waarbij een controlebestand is klaargezet omdat dit is ingesteld
+bij de betreffende selectiedienst.
+
+2.3
+
+Postconditie
+
+De selectietaak is of klaar om geleverd te worden of is afgekeurd/geannuleerd.
+
+2.4
+
+Regulier verloop
+
+In het regulier verloop wordt de interactie van de gebruiker met het systeem beknopt beschreven.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 4 van 8
+
+UCS BS.0.BCS - Bestands controle selectietaak
+
+Stap
+
+Actor
+
+Actie
+
+Alternatief
+
+1.
+
+Systeem
+
+Geeft de gebruiker een overzicht van te
+controleren selectietaken.
+
+Geen te controleren
+selectietaken
+gevonden (2.5.1)
+
+2.
+
+Gebruiker
+
+Kiest welke selectietaak hij wil controleren
+
+3.
+
+Systeem
+
+Toont de eerste persoonslijst uit het te
+controleren bestand op het scherm.
+Geeft de gebruiker de mogelijkheid om te
+bladeren tussen de persoonslijsten uit het
+te controleren bestand.
+
+4.
+
+Gebruiker
+
+Wijzigt de status van de selectietaak.
+De status van de selectietaak kan alleen
+één van de volgende waarden krijgen:
+•
+•
+•
+
+2.5
+
+Te leveren
+Afgekeurd
+Geannuleerd
+
+Alternatief verloop
+
+In het alternatief verloop wordt de interactie van de gebruiker met het systeem beschreven
+wanneer deze interactie afwijkt van het regulier verloop.
+(Afkortingen: S = Stap, C = Conditie, A = Actie, V = Vervolg)
+2.5.1
+
+Geen te controleren selectietaken gevonden
+
+S
+
+Stap 1 uit het regulier verloop
+
+C
+
+Er worden geen in te controleren selecties gevonden
+
+A
+
+Systeem geeft een melding: ‘Er zijn geen te controleren selectietaken gevonden’
+
+V
+
+Stap 1 uit het regulier verloop
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 5 van 8
+
+UCS BS.0.BCS - Bestands controle selectietaak
+
+3 Systeemfuncties
+3.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft de hoofdfuncties met betrekking tot het controleren van een selectietaak.
+
+3.2
+
+Schematische weergave
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen
+wordt verwezen naar de Leeswijzer BRP [1].
+
+3.3
+
+Beschrijving Use Cases
+
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de specificatie van de Use Cases en de aan de Use Cases gekoppelde regels
+in BMR.
+
+•
+
+BS.1.RC – Raadplegen te controleren selectietaken
+In deze stap worden de ‘te controleren’ selectietaken getoond op het scherm ‘Overzicht te
+controleren selectietaken’.
+
+•
+
+BS.1.RDS – Raadplegen detailgegevens selectietaak
+Vanuit het scherm ‘Raadplegen te controleren selectietaken’ kan de gebruiker één
+selectietaak selecteren waarop de detailgegevens van de betreffende selectietaak worden
+getoond in het scherm ‘Detailgegevens selectietaak’. Op dit scherm worden de gegevens
+van de geselecteerde selectietaak getoond met de daarbij behorende dienst gegevens.
+
+•
+
+BS.1.RDD – Raadplegen detailgegevens selectiedienst
+Vanuit het scherm ‘Detailgegevens selectietaak’ kan de gebruiker het detailscherm van de
+selectiedienst aanroepen. Op het detailscherm van de selectiedienst staan de gegevens van
+de betreffende dienst. Alle toegang leveringsautorisaties bij deze dienst en alle
+selectietaken.
+
+•
+
+BS.1.BCS.CB – Controleer bestand
+Op het scherm ‘Overzicht te controleren selectietaken’ krijgt de gebruiker de mogelijkheid
+om per te controleren selectietaak het controlebestand in te zien.
+Op het scherm wordt de eerste persoonslijst uit het bestand getoond aan de gebruiker. De
+gebruiker heeft vervolgens de mogelijkheid om te bladeren tussen de persoonslijsten uit
+het controlebestand.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 6 van 8
+
+UCS BS.0.BCS - Bestands controle selectietaak
+
+•
+
+BS.1.BCS.WSS – Wijzig status selectietaak
+Op het scherm ‘Detailgegevens selectietaak’ en op het scherm ‘Overzicht te controleren
+selectietaken’ heeft de gebruiker de mogelijkheid om de status van de selectietaak te
+wijzigen.
+De status van de selectietaak kan slechts één van de volgende statussen krijgen:
+o
+o
+o
+
+3.4
+
+Geannuleerd
+Afgekeurd
+Te leveren
+
+Bedrijfsregels
+
+Voor een toelichting op de verschillende soorten bedrijfsregels, de meldingsniveaus, de toepassing
+en werking ervan in het bijhoudingsproces, wordt verwezen naar de daartoe opgestelde
+aspectbeschrijving Controles [2].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels, verwerkingslogica en definitieregels zijn opgenomen de bijlage: BS.0.BCS – Bijlage
+Bestands controle selectietaak.doc
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 7 van 8
+
+UCS BS.0.BCS - Bestands controle selectietaak
+
+4 Ontwerpbeslissingen
+Er zijn geen Use Case specifieke ontwerpbeslissingen.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 8 van 8
+
+

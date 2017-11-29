@@ -1,0 +1,371 @@
+UC501 Verwerk vrij bericht
+
+0.3
+
+Datum
+Status
+
+26-05-2017
+Definitief
+
+Definitief | 0.3| UC501 Verwerk vrij bericht | 26-05-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................5
+2.1
+2.2
+2.3
+2.4
+
+3
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................4
+PRECONDITIE ........................................................................................................................................4
+POSTCONDITIE......................................................................................................................................4
+REGULIER VERLOOP: VRIJ BERICHT GBA ..........................................................................................5
+ALTERNATIEF VERLOOP: VRIJ BERICHT BRP .....................................................................................5
+ALTERNATIEF VERLOOP: STELT VAST DAT HET RESULTAATBERICHT FOUTEN BEVAT .......................5
+ALTERNATIEF VERLOOP: STELT VAST DAT HET NOTIFICEER VRIJ BERICHT FOUTEN BEVAT ............5
+
+AANVULLENDE SPECIFICATIES .................................................................................................6
+3.1 VRIJ BERICHT GBA ..............................................................................................................................6
+3.1.1 Converteren Vb01-bericht naar BRP-Verzoekbericht .................................................6
+3.1.2 Foutafhandeling ........................................................................................................................6
+3.2 VRIJ BERICHT BRP ...............................................................................................................................6
+3.2.1 Converteren BRP-Notificatie vrij bericht naar Vb01-bericht ...................................6
+3.2.2 Bericht is te groot ....................................................................................................................7
+3.2.3 Foutafhandeling ........................................................................................................................7
+
+4
+
+OPMERKINGEN ....................................................................................................................................8
+
+Operatie BRP
+
+Pagina 2 van 8
+
+Definitief | 0.3| UC501 Verwerk vrij bericht | 26-05-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+21-04-2017
+12-05-2017
+26-05-2017
+
+0.1
+0.2
+0.3
+
+Initiële versie
+Reviewcommentaar verwerkt
+Verbeterde foutafhandeling toegevoegd
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+12-05-2017
+
+0.1
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 8
+
+Definitief | 0.3| UC501 Verwerk vrij bericht | 26-05-2017
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+In het GBA- en BRP-stelsel kunnen partijen elkaar vrije berichten sturen. Wanneer partijen
+elkaar in hetzelfde stelsel een bericht sturen kan dit zonder tussenkomst van de
+migratievoorziening. Dit kan niet wanneer de partijen in verschillende stelsels zitten.
+Deze use case beschrijft op welke wijze een vrij bericht van een GBA-partij wordt verstuurd aan
+een BRP-partij of omgekeerd en welke rol de migratievoorziening hierin speelt.
+Meer informatie over het vrij bericht is te vinden in [LO] in paragraaf III.2.15 Vrij bericht.
+Meer informatie over het BRP-vrij bericht is te vinden in [VB].
+
+1.2
+
+1.3
+
+Referenties
+#
+[LO]
+
+Document
+Logisch Ontwerp
+
+Organisatie
+RvIG
+
+Versie
+3.10
+
+Datum
+08-10-2016
+
+[VB]
+
+UCS VB.0.AV – Afhandelingen vrij bericht
+
+Operatie BRP
+
+-
+
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 4 van 8
+
+Definitief | 0.3| UC501 Verwerk vrij bericht | 26-05-2017
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop: Vrij bericht GBA
+1. De
+2. De
+3. De
+4. De
+5. De
+6. De
+
+2.2
+
+migratievoorziening
+migratievoorziening
+migratievoorziening
+migratievoorziening
+migratievoorziening
+use case eindigt.
+
+Alternatief verloop: Vrij bericht BRP
+1. De migratievoorziening
+2. De migratievoorziening
+3.2.2)
+3. De migratievoorziening
+4. De migratievoorziening
+5. De use case eindigt
+
+2.3
+
+ontvangt een Vb01-bericht
+converteert het Vb01-bericht naar een BRP-Verzoekbericht (AS: 3.1)
+verstuurt het BRP-Verzoekbericht aan de BRP
+ontvangt een Resultaatbericht van de BRP
+stelt vast dat het Resultaatbericht geen foutmelding bevat (AV: 2.3)
+
+ontvangt een Notificeer vrij bericht van de BRP
+stelt vast dat het Notificeer vrij bericht niet te groot is (AV: 2.4) (AS:
+converteert het Notificeer vrij bericht naar een Vb01-bericht (AS: 3.2)
+verstuurt het Vb01-bericht
+
+Alternatief verloop: stelt vast dat het resultaatbericht fouten bevat
+1. De migratievoorziening stelt vast dat het Resultaatbericht fouten bevat (AS: 3.1.2)
+2. De migratievoorziening stuurt een Pf03-bericht terug aan de afzender (AS: 3.1.2)
+3. De use case eindigt.
+
+2.4
+
+Alternatief verloop: stelt vast dat het Notificeer vrij bericht fouten bevat
+4. De
+5. De
+6. De
+7. De
+
+migratievoorziening stelt vast dat het Notificeer vrij bericht te groot is (AS: 3.2.2)
+migratievoorziening past het bericht aan (AS: 3.2.2)
+migratievoorziening verstuurt het Vb01-bericht
+use case eindigt.
+
+Operatie BRP
+
+Pagina 5 van 8
+
+Definitief | 0.3| UC501 Verwerk vrij bericht | 26-05-2017
+
+3
+
+Aanvullende specificaties
+
+3.1
+
+Vrij bericht GBA
+
+3.1.1
+
+Converteren Vb01-bericht naar BRP-Verzoekbericht
+Het Vb01-bericht dient geconverteerd te worden naar een BRP-Verzoekbericht. In de
+onderstaande tabel is te vinden hoe het Vb01-bericht geconverteerd dient te worden naar een
+BRP-Verzoekbericht. Alleen de voor de conversie relevante gegevens worden getoond.
+GBA-Waarde
+OriginatorOrName van het Vb01-bericht
+‘ISC’
+OriginatorOrName van het Vb01-bericht
+RecipientOrName van het Vb01-bericht
+‘GBA partij’
+De inhoud van het Vb01-bericht
+
+BRP-Verzoekbericht
+Stuurgegevens
+Zendende partij
+Zendende systeem
+Parameters
+Zender vrij bericht
+Ontvanger vrij bericht
+Vrij bericht
+Soort vrij bericht
+Inhoud vrij bericht
+
+Meer informatie over het versturen van een BRP-Verzoekbericht is te vinden [VB].
+
+3.1.2
+
+Foutafhandeling
+Wanneer het element Verwerking in het Resultaatbericht van de BRP de waarde ‘Foutief’ bevat,
+of het bericht kan niet (volledig) geconverteerd worden, dient dit gelogd te worden. Tevens dient
+er een Pf03-bericht aan de afzender verstuurd te worden.
+
+3.2
+
+Vrij bericht BRP
+
+3.2.1
+
+Converteren BRP-Notificatie vrij bericht naar Vb01-bericht
+Het BRP-Notificatie vrij bericht dient geconverteerd te worden naar een Vb01-bericht. In de
+onderstaande tabel is te vinden welke gegevens geconverteerd dienen te worden. Alleen de voor
+de conversie relevante gegevens worden getoond.
+BRP-Notificatie vrij bericht
+Parameters
+Zender vrij bericht
+Ontvanger vrij bericht
+Vrij bericht
+Inhoud vrij bericht
+
+GBA-Waarde
+OriginatorOrName van het Vb01-bericht
+RecipientOrName van het Vb01-bericht
+De inhoud van het Vb01-bericht zie ook (par.
+3.2.2)
+
+Meer informatie over het BRP-Notificatie vrij bericht is te vinden in [VB].
+
+Operatie BRP
+
+Pagina 6 van 8
+
+Definitief | 0.3| UC501 Verwerk vrij bericht | 26-05-2017
+
+3.2.2
+
+Bericht is te groot
+Indien Inhoud vrij bericht uit het BRP-Notificatie vrij bericht groter is dan 18000 bytes dient het
+Inhoud vrij bericht ingekort te worden tot 18000 bytes en dient een melding aan het bericht
+toegevoegd te worden. Het bericht ziet er als volgt uit:
+Het oorspronkelijke vrij bericht dat gestuurd werd is groter dan wat er in dit Vb01-bericht past.
+Neem contact op met de afzender.
+<ingekorte versie van Inhoud vrij bericht>
+Dit nieuwe bericht dient vervolgens als Inhoud vrij bericht in het Vb01-bericht verstuurd te
+worden.
+
+3.2.3
+
+Foutafhandeling
+Wanneer een BRP-Notificatie vrij bericht niet verwerkt kan worden door bijvoorbeeld een
+technische fout, dient dit gelogd te worden. Hierbij dient ook een vrij bericht terug gestuurd te
+worden aan de BRP-partij met de melding dat het versturen niet is gelukt:
+Het versturen van het onderstaande vrij bericht aan <Ontvanger vrij bericht uit het BRPNotificatie vrij bericht> is niet gelukt:
+<Inhoud vrij bericht uit het BRP-Notificatie vrij bericht>
+Indien Inhoud vrij bericht groter is dan 99000 bytes dient deze ingekort te worden tot 99000
+bytes voordat deze aan bovenstaande melding wordt toegevoegd.
+In de onderstaande tabel is te vinden op welke wijze het BRP-Verzoekbericht gevuld dient te
+worden.
+Waarde
+Ontvanger vrij bericht uit het BRP-Notificatie
+vrij bericht
+‘ISC’
+Ontvanger vrij bericht uit het BRP-Notificatie
+vrij bericht
+Zender vrij bericht uit het BRP-Notificatie vrij
+bericht
+‘GBA partij’
+De melding zoals hierboven beschreven.
+
+Operatie BRP
+
+BRP-Verzoekbericht
+Stuurgegevens
+Zendende partij
+Zendende systeem
+Parameters
+Zender vrij bericht
+Ontvanger vrij bericht
+Vrij bericht
+Soort vrij bericht
+Inhoud vrij bericht
+
+Pagina 7 van 8
+
+Definitief | 0.3| UC501 Verwerk vrij bericht | 26-05-2017
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 8 van 8
+
+

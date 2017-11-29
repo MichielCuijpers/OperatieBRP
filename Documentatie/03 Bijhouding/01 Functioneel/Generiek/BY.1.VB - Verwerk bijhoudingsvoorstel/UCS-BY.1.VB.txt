@@ -1,0 +1,494 @@
+UCS BY.1.VB – Verwerk bijhoudingsvoorstel
+Versie
+
+0.12
+
+Datum
+
+7 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+22-08-2016
+
+0.1
+
+Initiële versie
+
+Operatie BRP
+
+24-08-2016
+
+0.2
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+25-08-2016
+
+0.3
+
+Ontwerpbeslissing toegevoegd m.b.t. actie inhoud van Afgeleid administratief en het openstaande punt verwijderd.
+
+Operatie BRP
+
+21-09-2016
+
+0.4
+
+Tekstuele verduidelijkingen n.a.v. grooming Oranje. Geen
+functionele wijzigingen.
+
+Operatie BRP
+
+27-09-2016
+
+0.5
+
+Kolom Datum uit tabel met reviewhistorie verwijderd.
+Referenties bijgewerkt
+
+Operatie BRP
+
+04-10-2016
+
+0.6
+
+Bijhoudingsvoorstel wordt ook verwerkt als bijhoudingssituatie is “Mededeling”
+
+Operatie BRP
+
+02-11-2016
+
+0.7
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+27-01-2017
+
+0.8
+
+In paragraaf 2.4 Historie toegevoegd hoe de DAG wordt
+afgeleid.
+
+Operatie BRP
+
+30-03-2017
+
+0.9
+
+Openstaand m.b.t. eerste inschrijving verwijderd.
+
+Operatie BRP
+
+07-06-2017
+
+0.10
+
+Referenties bijwerkt n.a.v. wijzigen van code van modules
+
+Operatie BRP
+
+28-06-2017
+
+0.11
+
+Hoofdstuk openstaande punten verwijderd
+
+Operatie BRP
+
+05-07-2017
+
+0.12
+
+In paragraaf 2.1 opgenomen welke pseudo-personen moeten
+worden bijgehouden.
+
+Operatie BRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Operatie BRP
+
+0.2
+
+Operatie BRP
+
+0.3
+
+Operatie BRP
+
+0.4
+
+Operatie BRP
+
+0.5
+
+Operatie BRP
+
+UCS BY.1.VB – Verwerk bijhoudingsvoorstel
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+
+2
+
+Doel ....................................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Verwerk bijhoudingsvoorstel .................................................................................... 4
+2.1
+2.2
+2.3
+2.3.1
+2.3.2
+2.3.3
+2.4
+2.5
+2.6
+2.7
+2.7.1
+
+Te verwerken personen .........................................................................................................4
+Persisteren verantwoordingsgegevens .....................................................................................4
+Aanmaken relaties ................................................................................................................4
+Alleen indien noodzakelijk ..................................................................................................4
+Altijd groep Standaard aanmaken .......................................................................................5
+Aanmaken pseudo-personen ..............................................................................................5
+Historie................................................................................................................................5
+Gewijzigde objectsleutels .......................................................................................................6
+Afleiding naamsgegevens .......................................................................................................6
+Afgeleid administratief ...........................................................................................................6
+Vulling groep Afgeleid administratief ...................................................................................6
+
+Status: Definitief, versie: 0.12
+
+Pagina 2 van 7
+
+UCS BY.1.VB – Verwerk bijhoudingsvoorstel
+
+1 Inleiding
+1.1
+
+Doel
+
+Deze Use Case beschrijft hoe een bijhoudingsvoorstel in de BRP wordt verwerkt. Deze verwerking
+vindt plaats aan de hand van het ingekomen bijhoudingsbericht en het op basis daarvan gemaakte
+bijhoudingsplan (zie UCS BY.1.MP – Maak bijhoudingsplan [1]).
+Uit het bijhoudingsplan volgt voor welke personen de administratieve handeling dient te worden
+verwerkt. Zie paragraaf 2.1.
+De administratieve handeling uit het bijhoudingsvoorstel bestaat uit één of meer acties. Het verwerken van het bijhoudingsvoorstel komt dan ook neer op het verwerken van de afzonderlijke acties van de administratieve handeling. Het verwerken van een actie bestaat uit het aanmaken,
+wijzigen en/of laten vervallen van objecten en groepsvoorkomens in de centrale voorzieningen. Al
+naar gelang wat voor de actie nodig is en altijd met behoud van historie. Zie paragrafen 2.2–2.5.
+De te registreren gegevens worden in het bijhoudingsbericht aangeleverd en/of door de centrale
+voorzieningen afgeleid. Afleidingen die specifiek zijn voor bepaalde soorten administratieve handelingen of acties worden bij de betreffende bijhoudingsmodule beschreven. Zie bijvoorbeeld UCS
+BY.0.HGP – Huwelijk en Geregistreerd partnerschap [2] voor de afleidingen die horen bij de module
+Huwelijk en Geregistreerd partnerschap. Generieke afleidingen worden in dit document beschreven
+of er wordt vanuit dit document verwezen naar de aspectbeschrijving waar het in staat. Zie paragraaf 2.6.
+De personen waarvoor het bijhoudingsvoorstel is verwerkt worden gemarkeerd als bijgehouden.
+Zie paragraaf 2.7.
+
+1.2
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+UCS BY.0.HGP – Huwelijk en Geregistreerd partnerschap
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving – Formele en Materiële Historie
+
+Operatie BRP
+
+-
+
+-
+
+4
+
+UCS BY.1.ON – Ontrelateren
+
+Operatie BRP
+
+-
+
+-
+
+5
+
+Aspectbeschrijving – Naamopbouw
+
+Operatie BRP
+
+-
+
+-
+
+6
+
+Architectuur Basisregistratie Personen
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 0.12
+
+Pagina 3 van 7
+
+UCS BY.1.VB – Verwerk bijhoudingsvoorstel
+
+2 Verwerk bijhoudingsvoorstel
+2.1
+
+Te verwerken personen
+
+De verwerking van het bijhoudingsvoorstel dient te worden beperkt tot de volgende personen uit
+het bijhoudingsplan:
+•
+
+•
+•
+
+De personen die onder de bijhoudingsverantwoordelijkheid van de geautoriseerde partij
+vallen. Deze personen staan in het bijhoudingsplan met bijhoudingssituatie ‘Indiener is bijhoudingspartij’.
+De personen waarvoor geldt dat het bijhoudingsvoorstel automatisch is gefiatteerd. Deze
+personen staan in het bijhoudingsplan met bijhoudingssituatie ‘Automatische fiat’.
+De personen waarvoor geldt dat diens (oude of nieuwe) bijhoudingspartij geïnformeerd
+moet worden als teken dat het bijhoudingsvoorstel is verwerkt. Deze personen staan in het
+bijhoudingsplan met bijhoudingssituatie ‘Mededeling’.
+
+Voor de overige personen die in het bijhoudingsplan zijn opgenomen wordt het bijhoudingsvoorstel
+dus niet verwerkt. Als blijkt dat het bijhoudingsvoorstel voor geen enkele persoon kan worden
+verwerkt dan eindigt de use case.
+Het bijhoudingsplan bepaalt voor de ingeschreven personen welke worden bijgehouden. Voor
+pseudo-personen geldt dat de verwerking dient te worden beperkt tot de pseudo-personen die
+horen bij een ingeschreven persoon uit het bijhoudingsplan waarvoor het bijhoudingsvoorstel wordt
+verwerkt. Bovendien zal de bijhouding worden beperkt tot pseudo-personen die door de verwerking
+van het bijhoudingsvoorstel zijn ontstaan1 of in het bijhoudingsvoorstel worden aangewezen.
+
+2.2
+
+Persisteren verantwoordingsgegevens
+
+Bij het verwerken van het bijhoudingsvoorstel worden de verantwoordingsgegevens uit het bijhoudingsvoorstel gepersisteerd door de centrale voorzieningen. De administratieve handeling vormt de
+root van de verantwoordingshiërarchie in het bijhoudingsvoorstel. Daaronder zitten de acties,
+bronnen (zowel documenten als rechtsgronden) en gedeblokkeerde meldingen. Zie Architectuur
+Basisregistratie Personen [6].
+NB Het persisteren van de verantwoordingsgegevens is nodig omdat deze worden geleverd aan
+afnemers en/of bijhouders.
+
+2.3
+2.3.1
+
+Aanmaken relaties
+Alleen indien noodzakelijk
+
+Bij de verwerking van een bijhoudingsvoorstel wordt een nieuwe relatie alleen geregistreerd als
+minimaal één van de te verwerken personen (zie paragraaf 2.1) als betrokkene bij de nieuwe relatie zal worden opgenomen.
+Als het bijhoudingsvoorstel bijvoorbeeld de registratie van een huwelijk betreft dat in een nietwoongemeente is voltrokken (toevallige gebeurtenis dus) én de woongemeente fiatteert het bijhoudingsvoorstel niet automatisch, dan wordt het bijhoudingsvoorstel voor geen van de partners
+verwerkt. Beide partners behoren dan namelijk niet tot de te verwerken personen van paragraaf
+2.1. De relatie kan (en hoeft) dan ook niet worden vastgelegd.
+
+1
+
+Alleen op het moment dat een pseudo-persoon ontstaat is het duidelijk van welke ingeschreven persoon dit een kopie is
+en of een bijhoudingsvoorstel voor deze persoon verwerkt moet worden.
+
+Status: Definitief, versie: 0.12
+
+Pagina 4 van 7
+
+UCS BY.1.VB – Verwerk bijhoudingsvoorstel
+
+2.3.2
+
+Altijd groep Standaard aanmaken
+
+Bij het aanmaken van een nieuwe relatie wordt altijd een voorkomen van de groep Standaard aangemaakt. Voor huwelijken en geregistreerd partnerschappen wordt deze groep gevuld zoals beschreven bij de specifieke bijhoudingsmodule. Zie bijvoorbeeld UCS BY.0.HGP – Huwelijk en Geregistreerd partnerschap [2]. Voor familierechtelijke betrekkingen is deze groep leeg. Aanwezigheid
+van de groep Standaard is nodig om verantwoording (zoals actie inhoud) met betrekking tot de
+relatie te kunnen registreren.
+2.3.3
+
+Aanmaken pseudo-personen
+
+Wanneer op basis van het bijhoudingsvoorstel een nieuwe relatie wordt aangemaakt, dan kan dat
+aanleiding geven tot het aanmaken van pseudo-personen.2
+In de volgende situaties dienen bij het aanmaken van een nieuwe relatie een pseudo-persoon te
+worden aangemaakt:
+1. In het bijhoudingsvoorstel is een pseudo-persoon als betrokkene bij de nieuwe relatie opgenomen. Voor de nieuwe pseudo-persoon worden de gegevens uit het bericht overgenomen.
+2. In het bijhoudingsvoorstel wordt bij de nieuwe relatie een ingeschrevene als betrokkene
+aangewezen en deze behoort niet tot de te verwerken personen (zie paragraaf 2.1). Voor
+deze betrokkene dient een pseudo-persoon te worden gemaakt. De gegevens van de nieuwe pseudo-persoon worden overgenomen van de gegevens die in de BRP zijn vastgelegd
+over de ingeschrevene. Hiertoe wordt van de volgende groepen het actuele voorkomen
+overgenomen:
+a. Identificatienummers
+b. Geboorte
+c. Samengestelde naam
+d. Geslachtsaanduiding (behalve als het een Kind-betrokkene betreft)
+In beide bovenstaande situaties geldt tot slot dat:
+
+2.4
+
+•
+
+Voor de nieuw aangemaakte voorkomens binnen de pseudo-persoon van groepen met materiële historie wordt als ‘Datum aanvang geldigheid’ de ‘Datum aanvang’ van de nieuwe
+Relatie genomen.
+
+•
+
+Het attribuut ‘Afgeleid?’ van de groep ‘Samengestelde naam’ van de pseudo-persoon dient
+de waarde ‘N’ te krijgen.
+
+Historie
+
+Bij de verwerking van groepen vindt de registratie van gegevens plaats op de wijze zoals beschreven in Aspectbeschrijving – Formele en Materiële Historie [3]. Bij groepen met materiële historie
+wordt de ‘Datum aanvang geldigheid’ afgeleid van de ‘Datum aanvang geldigheid’ van de actie uit
+het bericht.
+Een algemene regel daarbij is dat als in een bijhoudingsvoorstel voor een groep dezelfde gegevens
+worden aangeleverd als reeds vastgelegd zijn, deze 'nieuwe' data toch verwerkt wordt en dus leidt
+tot het aanleggen van historie. Bijvoorbeeld: wanneer naamgebruik ‘E’ (Eigen naam) in een bijhoudingsbericht wordt aangeboden, terwijl als actueel naamgebruik van deze persoon al ‘E’ staat
+geregistreerd, dan zal toch een nieuw voorkomen met dezelfde inhoud worden aangemaakt en het
+oude voorkomen vervallen.
+Van deze regel wordt afgeweken als een groep niet expliciet wordt aangeboden, maar deze automatisch wordt afgeleid. In dat geval wordt alleen een nieuw voorkomen aangemaakt als er daadwerkelijk een verschil is tussen de actuele gegevens en de nieuw afgeleide gegevens. Dus als bijvoorbeeld als gevolg van het wijzigen van andere gegevens, de groep ‘Samengestelde naam’ op-
+
+2
+
+Dit is expliciet beperkt tot het aanmaken van nieuwe relaties. Bij het muteren van bestaande relaties zorgt het ontrelateren al voor het aanmaken van de benodigde pseudo-personen.
+
+Status: Definitief, versie: 0.12
+
+Pagina 5 van 7
+
+UCS BY.1.VB – Verwerk bijhoudingsvoorstel
+
+nieuw wordt afgeleid, dan wordt deze alleen geregistreerd als deze afwijkt van het actuele voorkomen van deze groep.
+
+2.5
+
+Gewijzigde objectsleutels
+
+Het kan voorkomen dat objectsleutels uit het bijhoudingsvoorstel niet meer geldig zijn, omdat de
+betreffende objecten inmiddels zijn vervangen door andere objecten. Dit doet zich voor in de volgende situaties:
+•
+
+Naar aanleiding van het bijhoudingsvoorstel zijn één of meer bestaande relaties ontrelateerd. Voor de werking van het ontrelateren zie UCS BY.1.ON – Ontrelateren [4]. Bij de
+verwerking van het bijhoudingsvoorstel moeten de nieuwe objecten worden gebruikt die in
+de plaats zijn gekomen van objecten die in het bijhoudingsvoorstel worden aangeduid en
+door het onrelateren zijn vervallen.
+
+•
+
+Bij het aanmaken van een nieuwe relatie is een pseudo-betrokkene gemaakt op basis van
+de gegevens van een ingeschrevene. Zie paragraaf 2.3.3. Bij de verwerking van het bijhoudingsvoorstel moet deze pseudo-persoon worden gebruikt in plaats van de ingeschrevene die in het bijhoudingsvoorstel wordt aangeduid.
+
+2.6
+
+Afleiding naamsgegevens
+
+Wanneer door de verwerking van een bijhoudingsvoorstel de groep Voornaam of Geslachtsnaamcomponent van een persoon wijzigt, dan is dat in bepaalde gevallen aanleiding om ook de Samengestelde naam (opnieuw) af te leiden. Wijziging van de Samengestelde naam kan op zijn beurt
+aanleiding zijn om Naamgebruik van de persoon zelf en van zijn partner en ex-partners (opnieuw)
+af te leiden.
+Wanneer dit van toepassing is en wat de afleidingen precies inhouden is nader gespecificeerd in
+Aspectbeschrijving – Naamopbouw [5].
+
+2.7
+
+Afgeleid administratief
+
+Alle ingeschreven personen waarvoor het bijhoudingsvoorstel is verwerkt (zoals gedefinieerd in
+paragraaf 2.1) en waarvan dus de persoonslijst is bijgehouden moeten worden gemarkeerd als
+bijgehouden. Dit gebeurt door een nieuw voorkomen van de groep ‘Afgeleid administratief’ voor
+deze personen aan te maken.
+NB Ook als de gegevens van de persoon niet daadwerkelijk zijn gewijzigd, maar deze wel tot de te
+verwerken personen van paragraaf 2.1 behoort, dan wordt er dus een nieuw voorkomen van ‘Afgeleid administratief’ aangemaakt. Dit doet zich voor bij personen die zelf niet wijzigen, maar waarvan de PL wel formeel is gewijzigd door wijziging van een relatie of gerelateerde.
+2.7.1
+
+Vulling groep Afgeleid administratief
+
+Het nieuwe voorkomen van de groep ‘Afgeleid administratief’ wordt met de volgende gegevens
+geregistreerd:
+•
+
+Administratieve handeling: de administratieve handeling uit het verwerkte bijhoudingsvoorstel.
+
+•
+
+Tijdstip laatste wijziging: de systeemdatum/tijd.
+
+•
+
+Sorteervolgorde: waarde ‘1’ als het een hoofdpersoon van de administratieve handeling betreft (zie R1287) en anders waarde ‘2’.
+
+•
+
+Tijdstip laatste wijziging GBA-systematiek: waarde overnemen van het voorkomen van ‘Afgeleid administratief’ dat door registratie van het nieuwe voorkomen komt te vervallen.
+
+•
+
+Actie inhoud: een actie die onderdeel is van de administratieve handeling uit het bijhoudingsvoorstel. Zie ontwerpbeslissing hierna.
+
+Status: Definitief, versie: 0.12
+
+Pagina 6 van 7
+
+UCS BY.1.VB – Verwerk bijhoudingsvoorstel
+
+Ontwerpbeslissing:
+Het maakt niet uit welke actie wordt opgenomen bij ‘Actie inhoud’ van de groep ‘Afgeleid administratief’, zolang het in ieder geval een actie is die onderdeel is van de administratieve handeling die
+is verwerkt.
+
+Status: Definitief, versie: 0.12
+
+Pagina 7 van 7
+
+

@@ -1,0 +1,182 @@
+Scope patroon
+
+LGM 06 Protocol
+
+Dyn
+
+Release 59 17-7-2017
+Identiteit
+ID D
+
+Leveringsaantekening
+
+Scope patroon ID
+
+*i
+
+Dyn
+
+Identiteit
+
+-
+
+-
+
+ID
+
+D
+
+Leveringsaantekening ID
+
+*i
+
+Toegang leveringsautorisatie >
+
+D
+
+Toegang leveringsautorisatie
+
+*
+
+Dienst >
+
+D
+
+Dienst
+
+*
+
+Datum/tijd klaarzetten levering
+
+D
+
+Datum/Tijd
+
+* s1
+
+Datum aanvang materiële periode resultaat
+
+D
+
+Datum
+
+.
+
+Datum einde materiële periode resultaat
+
+D
+
+Datum
+
+.
+
+Datum/tijd aanvang formele periode resultaat D
+
+Datum/Tijd
+
+.
+
+Datum/tijd einde formele periode resultaat
+
+D
+
+Datum/Tijd
+
+*
+
+Administratieve handeling >
+
+D
+
+Administratieve handeling
+
+.
+
+Soort synchronisatie >
+
+D
+
+Soort synchronisatie
+
+.
+
+Scope patroon >
+
+D
+
+Scope patroon
+
+.
+
+Scope patroon \ Element
+Identiteit
+ID
+
+Leveringsaantekening \ Persoon
+
+Dyn
+
+Identiteit
+
+-
+
+-
+
+Leveringsaantekening >
+
+D
+
+Leveringsaantekening
+
+* s2
+
+/Datum/tijd klaarzetten levering
+
+D
+
+Datum/Tijd
+
+* s3
+
+Persoon >
+
+D
+
+Persoon
+
+* s1
+
+Datum
+
+.
+
+Datum/Tijd
+
+*
+
+Datum aanvang materiële periode D
+Tijdstip laatste wijziging persoon
+
+D
+
+D
+
+Scope patroon > D
+Element >
+
+Dyn
+
+D
+
+-
+
+Scope patroon \ Element ID * i
+Scope patroon
+
+* u1
+
+Element
+
+* u1
+
+

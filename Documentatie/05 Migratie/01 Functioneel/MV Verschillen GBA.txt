@@ -1,0 +1,631 @@
+MV Verschillen GBA
+
+0.7
+
+Datum
+Status
+
+30-06-2017
+Definitief
+
+Definitief | 0.7 | MV Verschillen GBA | 30-06-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+
+2
+
+MV UC101 VUL PERSOONSGEGEVENS IN BRP INITIEEL ............................................5
+2.1
+2.2
+2.3
+2.4
+2.5
+2.6
+2.7
+2.8
+2.9
+2.10
+2.11
+2.12
+
+3
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................4
+VERBLIJFSRECHT ..................................................................................................................................5
+NAAMGEBRUIK ......................................................................................................................................5
+VERSTREKKINGSBEPERKING ................................................................................................................5
+STRIJDIG MET DE OPENBARE ORDE .....................................................................................................5
+RELATIES...............................................................................................................................................5
+ONDERZOEK ..........................................................................................................................................6
+RNI-DEELNEMER IN CATEGORIE 07 ...................................................................................................6
+JURIDISCH GEZIEN GEEN OUDER.........................................................................................................6
+DATUM AANVANG GELDIGHEID VAN ADRES BUITENLAND ..................................................................6
+DATUM AANVANG GELDIGHEID VAN SIGNALERING VERSTREKKING REISDOCUMENT ...................6
+GELDIGE WAARDEN VAN RUBRIEKEN ...............................................................................................6
+PRECONDITIES ..................................................................................................................................7
+
+MV UC102 VUL AUTORISATIETABELREGELS IN BRP INITIEEL ..............................8
+3.1
+
+NIET ALLE RUBRIEKEN IN VOORWAARDENREGELS WORDEN (VOLLEDIG) GECONVERTEERD ...........8
+
+4
+
+MV UC103 VUL AFNEMERSINDICATIES IN BRP INITIEEL .........................................9
+
+5
+
+MV UC104 VUL PROTOCOLLERING IN BRP INITIEEL .................................................10
+
+6
+
+MV UC1001 VERWERKEN SPONTANE GEGEVENSVERSTREKKING-CYCLUS ....11
+6.1
+6.2
+6.3
+6.4
+
+LEVERING NA INFRASTRUCTURELE WIJZIGING IN COMBINATIE MET ANDERE WIJZIGINGEN .........11
+VERBLIJFSRECHT ................................................................................................................................11
+AFWIJKENDE BERICHTSOORTEN ........................................................................................................11
+BUITENLANDS PERSOONSNUMMER ....................................................................................................11
+
+7 VERSCHILLEN IN LEVERING ALS GEVOLG VAN INITIËLE VULLING EN
+CONVERSIE .................................................................................................................................................12
+7.1
+7.2
+
+VERGELIJKING MET 07.88.10 VAN PERSOONSLIJST ZONDER GROEP 71 .....................................12
+85.10 OF 86.10 VAN BEËINDIGDE OF GECORRIGEERDE GEGEVENS NIET BESCHIKBAAR OP ALAAG VOOR EXPRESSIES ............................................................................................................................... 12
+8
+
+OPMERKINGEN ..................................................................................................................................13
+
+Operatie BRP
+
+Pagina 2 van 13
+
+Definitief | 0.7 | MV Verschillen GBA | 30-06-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+21-09-2016
+17-01-2017
+03-03-2017
+10-03-2017
+13-03-2017
+27-03-2017
+30-06-2017
+
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+
+Initiële versie
+Reviewcommentaar verwerkt
+UC101 toegevoegd
+Reviewcommentaar verwerkt
+Tekstuele aanpassingen
+Afnemersindicaties toegevoegd
+Protocollering toegevoegd
+
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+16-01-2017
+
+0.1
+
+Review
+
+Operatie BRP
+
+09-03-2017
+
+0.3
+
+Review hoofdstuk 2
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 13
+
+Definitief | 0.7 | MV Verschillen GBA | 30-06-2017
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+De migratievoorziening zorgt tijdens de duale periode, waarbij oude GBA-stelsel en het nieuwe
+BRP-stelsel naast elkaar bestaan, voor de koppeling en vertaling tussen deze twee stelsels.
+Dankzij de migratievoorziening kunnen GBA-partijen conform de GBA-regels en -gedrag met de
+BRP communiceren. Er kunnen hierdoor bijhoudingen en verstrekkingen aan GBA-partijen
+plaatsvinden zoals die in het [LO] beschreven zijn.
+Omdat het GBA-stelsel en het BRP-stelsel op sommige punten van elkaar verschillen is het in
+enkele gevallen voor de migratievoorziening niet mogelijk om zich precies hetzelfde te gedragen
+als wat door het GBA-stelsel verwacht wordt.
+Dit document beschrijft per use case wanneer de migratievoorziening verschilt van wat er door
+het GBA-stelsel verwacht wordt.
+
+1.2
+
+Referenties
+#
+[CONV]
+
+Document
+Documentatie bidirectionele conversie.doc
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+[DELTA]
+
+MV FO Deltabepaling.doc
+
+Operatie BRP
+
+-
+
+-
+
+[UC1001]
+
+MV UC1001 Verwerken spontane
+gegevensverstrekking-cyclus.doc
+
+Operatie BRP
+
+-
+
+-
+
+[UC102]
+
+MV UC102 Vul autorisatietabelregels in
+BRP initieel.doc
+
+Operatie BRP
+
+-
+
+-
+
+[UC103]
+
+MV UC103 Vul afnemersindicaties in BRP
+initieel.doc
+
+Operatie BRP
+
+-
+
+-
+
+[UC104]
+
+MV UC104 Vul protocollering in BRP
+initieel.doc
+
+Operatie BRP
+
+-
+
+-
+
+[VWR]
+
+MV UC102 Vertaling voorwaarderegel.xlsx
+
+Operatie BRP
+
+-
+
+-
+
+[LO GBA]
+
+Logisch Ontwerp GBA
+
+RvIG
+
+3.10
+
+08-10-2016
+
+Operatie BRP
+
+Pagina 4 van 13
+
+Definitief | 0.7 | MV Verschillen GBA | 30-06-2017
+
+2
+
+MV UC101 Vul persoonsgegevens in BRP initieel
+
+2.1
+
+Verblijfsrecht
+Van categorie 10 Verblijfstitel wordt de historische categorie 60 niet geconverteerd.
+De conversie logt deze situatie met de code BIJZ_CONV_LB027.
+
+2.2
+
+Naamgebruik
+Als in categorie 01/51 Persoon de rubriek 61.10 Aanduiding naamgebruik niet is opgenomen,
+dan wordt in de BRP in het attribuut Naamgebruik de waarde ‘Eigen’ opgenomen.
+De conversie logt deze situatie met de code BIJZ_CONV_LB040.
+
+2.3
+
+Verstrekkingsbeperking
+In geval van een gedeeltelijke verstrekkingsbeperking in GBA, in rubriek 07.70.10 Indicatie
+geheim is de waarde 1 – 6 opgenomen, wordt in de BRP in het attribuut Volledige
+verstrekkingsbeperking? de waarde ‘Ja’ opgenomen.
+De conversie logt deze situatie met de code BIJZ_CONV_LB009.
+
+2.4
+
+Strijdig met de openbare orde
+Het element 84.10 Indicatie onjuist is gevuld met de waarde ‘S’ (Strijdig met openbare orde). In
+de BRP wordt dit hetzelfde vastgelegd als ‘O’ (Onjuist), namelijk door in het attribuut Nadere
+aanduiding verval de waarde ‘O’ op te nemen.
+De conversie logt deze situatie met de code BIJZ_CONV_LB022.
+
+2.5
+
+Relaties
+Van gegevens die betrekking hebben op de relatie met gerelateerde personen worden uitsluitend
+de actuele gegevens geconverteerd. Dit heeft betrekking op:
+• de aanvang van de relatie;
+groep 02/03.62 Familierechtelijke betrekking
+groep 05.06 Huwelijkssluiting/aangaan geregistreerd partnerschap
+• het einde van de relatie;
+groep 05.07 Ontbinding huwelijk/geregistreerd partnerschap
+• de gerelateerde persoonsgegevens;
+groep 02/03/05/09.01 Identificatienummers
+groep 02/03/05/09.02 Naam
+groep 02/03/05/09.03 Geboorte
+groep 02/03/05.04 Geslacht
+• het gezag.
+groep 11.32 Gezag minderjarige
+NB: met overzetten van de actuele gegevens wordt hier niet bedoeld dat uitsluitend de actuele
+categorie geconverteerd wordt. Hiermee wordt bedoeld dat van de relatie met iedere
+afzonderlijke persoon - dit kunnen ook oorspronkelijke ouders van voor een adoptie zijn – wordt
+overgezet naar de BRP. Van deze relaties worden zowel de gegevens van de aanvang als van het
+einde, mits opgenomen, overgezet. Als er sprake is van een omzetting van geregistreerd
+partnerschap in een huwelijk (of vice versa), dan wordt zowel het geregistreerd partnerschap als
+het huwelijk in de BRP opgenomen.
+
+Operatie BRP
+
+Pagina 5 van 13
+
+Definitief | 0.7 | MV Verschillen GBA | 30-06-2017
+
+NB2: Naast geconverteerde relatiegegevens worden in de BRP ook de ongeconverteerde
+relatiegegevens opgeslagen in de zogenaamde IST.
+
+2.6
+
+Onderzoek
+Een onderzoek wordt niet opgenomen in de BRP indien het onderzoek betrekking heeft op
+gegevens die zelf niet opgenomen zijn. Bijvoorbeeld: In rubriek 04.83.10 Aanduiding gegevens
+in onderzoek is de waarde ‘046400’ opgenomen en in deze categorie is groep 64 niet
+opgenomen.
+De conversie logt deze situatie met de code BIJZ_CONV_LB039.
+
+2.7
+
+RNI-deelnemer in categorie 07
+Rubriek 07.88.10 RNI-deelnemer wordt niet opgenomen in de BRP als groep 07.71 Verificatie
+niet opgenomen is.
+De conversie logt deze situatie met de code BIJZ_CONV_LB031.
+
+2.8
+
+Juridisch gezien geen ouder
+Als er juridisch gezien geen ouder is, dat wil zeggen in categorie 02/03 zijn uitsluitend gegevens
+uit de groepen 81 – 86 opgenomen, dan worden de gegevens uit groepen 81 – 86 niet
+opgenomen in de BRP.
+De conversie logt deze situatie met de code BIJZ_CONV_LB014.
+
+2.9
+
+Datum aanvang geldigheid van adres buitenland
+De gegevens uit groep 13 Adres buitenland (categorie 08 Verblijfplaats) worden overgezet naar
+Persoon \ Adres en eventueel naar de groep Migratie in de BRP. Datum aanvang geldigheid van
+deze groepen in de BRP worden gevuld op basis van rubriek 13.20 Datum aanvang adres
+buitenland. Rubriek 08.85.10 Ingangsdatum geldigheid wordt niet overgezet naar de BRP.
+De conversie logt deze situatie met de code BIJZ_CONV_LB028.
+
+2.10
+
+Datum aanvang geldigheid van signalering verstrekking reisdocument
+De gegevens uit groep 36 Signalering (categorie 12 Reisdocument) worden overgezet naar groep
+Signalering met betrekking tot verstrekken reisdocument in de BRP. Deze groep heeft geen
+Datum aanvang geldigheid. Dit betekent dat Rubriek 12.85.10 Ingangsdatum geldigheid in geval
+van een signalering niet overgezet wordt naar de BRP.
+De conversie logt deze situatie met de code BIJZ_CONV_LB026.
+
+2.11
+
+Geldige waarden van rubrieken
+De waarde van een rubriek moet voldoen aan de regels zoals die beschreven zijn in [LO GBA].
+De volgende controles worden uitgevoerd:
+•
+•
+•
+•
+
+Is de waarde van het juiste datatype (numeriek, alfanumeriek)
+Heeft de waarde de juiste lengte
+Heeft de waarde het juiste formaat (bij datums)
+Bevat de waarde geldige Telex-karakters
+
+Operatie BRP
+
+Pagina 6 van 13
+
+Definitief | 0.7 | MV Verschillen GBA | 30-06-2017
+
+Als een waarde niet voldoet aan een van deze controles en de categorie is onjuist, dan wordt de
+hele categorie niet opgenomen in de BRP. Als het een juiste categorie betreft wordt de hele
+persoonslijst niet opgenomen in de BRP.
+De conversie logt deze situatie met de code NUMERIEK, LENGTE, STRUC_DATUM of TELETEX.
+
+2.12
+
+Precondities
+Een persoonslijst kan geconverteerd worden naar de BRP als de gegevens van de persoonslijst
+voldoen aan precondities zoals die in [CONV] zijn beschreven. Er zijn twee soorten precondities:
+• Een rubriek of combinatie van rubrieken binnen een categorie moet voldoen aan de door de
+conversie gestelde domein en structuurregels.
+Als een rubriek of combinatie van rubrieken niet voldoet aan een van de precondities en de
+categorie is onjuist, dan wordt de hele onjuiste categorie niet opgenomen in de BRP, maar
+wordt de opname van de gehele persoonslijst in de BRP niet verhinderd. Als het een juiste
+categorie betreft wordt de hele persoonslijst niet opgenomen in de BRP.
+• Binnen een categoriestapel moeten de voorkomens voldoen aan de door de conversie gestelde
+precondities. Afhankelijk van welke preconditie geschonden wordt, worden alle onjuiste
+voorkomens dan wel de gehele categoriestapel niet opgenomen in de BRP.
+De conversie logt deze situatie met de code van preconditie(s) die overtreden is(zijn).
+
+Operatie BRP
+
+Pagina 7 van 13
+
+Definitief | 0.7 | MV Verschillen GBA | 30-06-2017
+
+3
+
+MV UC102 Vul autorisatietabelregels in BRP initieel
+
+In dit hoofdstuk wordt beschreven welke verschillen optreden als gevolg van de initiële vulling
+van autorisatietabelregels. De verschillen worden met name veroorzaakt door het niet (volledig)
+kunnen converteren van een GBA-rubriek naar een BRP-expressie, of door de wijze waarop
+persoonsgegevens geconverteerd worden (zie [CONV]). Dit heeft als gevolg dat de BRP in die
+gevallen iets anders levert aan afnemers dan de GBAV dat zou doen.
+Meer informatie over de conversie van autorisatietabelregels is te vinden in [UC102] en [VWR].
+
+3.1
+
+Niet alle rubrieken in voorwaardenregels worden (volledig) geconverteerd
+Er is geprobeerd om zoveel mogelijk GBA-rubrieken te ondersteunen in de initiële vulling naar de
+BRP-expressietaal. De meeste actuele autorisatietabelregels kunnen hierdoor volledig worden
+geconverteerd. Er zijn echter 21 actuele autorisatietabelregels, welke allen betrekking hebben op
+een selectie, die niet volledig geconverteerd kunnen worden. Dat komt door:
+• 07.66.20 Datum ingang blokkering PL – Dit gegeven wordt niet geconverteerd
+• LIJST() – Deze operator wordt (nog) niet ondersteund
+Voorwaarderegels van historische autorisatietabelregels worden voor zover als dat mogelijk is
+initieel gevuld. Er komen echter allerlei rubrieken in historische voorwaarderegels voor die niet
+meer actueel voorkomen. Deze voorwaarderegels worden niet volledig geconverteerd.
+
+Operatie BRP
+
+Pagina 8 van 13
+
+Definitief | 0.7 | MV Verschillen GBA | 30-06-2017
+
+4
+
+MV UC103 Vul afnemersindicaties in BRP initieel
+
+De initiële vulling van afnemersindicaties is beschreven in [UC103]. In dit document wordt
+beschreven hoe afnemersindicaties gevuld worden en aan welke voorwaarden moet worden
+voldaan.
+In de meeste gevallen lukt het om de afnemersindicaties te vullen. In een aantal gevallen lukt dit
+niet maar zal dit niet de oorzaak zijn van een verschil:
+• Personen bestaan niet in de BRP omdat deze uitgevallen zijn bij de initiële vulling van
+personen, of
+• De brongegevens van de afnemersindicaties zijn inconsistent.
+
+Operatie BRP
+
+Pagina 9 van 13
+
+Definitief | 0.7 | MV Verschillen GBA | 30-06-2017
+
+5
+
+MV UC104 Vul protocollering in BRP initieel
+
+De initiële vulling van protocollering is beschreven in [UC104]. In dit document wordt
+beschreven hoe protocolleringsgegevens gevuld worden en aan welke voorwaarden moet worden
+voldaan.
+Er zijn geen verschillen geconstateerd.
+
+Operatie BRP
+
+Pagina 10 van 13
+
+Definitief | 0.7 | MV Verschillen GBA | 30-06-2017
+
+6
+
+MV UC1001 Verwerken spontane gegevensverstrekking-cyclus
+
+6.1
+
+Levering na infrastructurele wijziging in combinatie met andere wijzigingen
+Als er een infrastructurele wijziging plaatsvindt in combinatie met een andere wijziging, zal dit in
+de BRP altijd een Gv01-bericht opleveren. In de GBAV levert dit een Gv02-bericht op. Let op: dit
+geldt ook als er al een onderzoek aanwezig was (zie ook [CONV]).
+
+6.2
+
+Verblijfsrecht
+Van categorie 10 (verblijfsrecht) wordt de historische categorie 60 niet geconverteerd (zie ook
+[CONV]). Wanneer in de historische categorie een correctie plaatsvindt zal hier geen levering van
+plaatsvinden.
+
+6.3
+
+Afwijkende berichtsoorten
+In de onderstaande tabel is te vinden in welke situaties de migratievoorziening andere berichten
+levert naar aanleiding van een bijhouding dan de GBAV.
+Bijhouding
+Er heeft een actualisering
+plaatsgevonden in meerdere
+categorieën.
+Er hebben meerdere
+actualiseringen
+plaatsgevonden in dezelfde
+categorie.
+Er heeft een normale
+actualisering van een
+categorie plaatsgevonden en
+tevens een wijziging in de
+historie van een categorie.
+
+6.4
+
+GBAV
+Levert per categorie een
+Gv01-bericht.
+
+BRP
+Levert alle categorieën in één
+Gv01-bericht.
+
+Levert per actualisering een
+Gv01-bericht.
+
+Levert alle actualiseringen in
+één Ag31-bericht.
+
+Levert een Gv01-bericht met
+de normale actualisering en
+een Ag31-bericht voor de
+wijziging in de historie.
+
+Levert één Ag31-bericht.
+
+Buitenlands persoonsnummer
+04.73 Buitenlands persoonsnummer mag niet geleverd worden aan afnemers. Het is echter wel
+mogelijk dat dit gegeven toch door een beheerder aan een autorisatie wordt toegevoegd. Mocht
+dit gedaan worden dan zal de levering van dit gegeven aan een afnemer, een onverwacht
+resultaat opleveren. Dit is het gevolg van de conversie van dit gegeven (zie [CONV]). De
+correcte levering van dit gegeven wordt door de migratievoorziening niet ondersteund.
+
+Operatie BRP
+
+Pagina 11 van 13
+
+Definitief | 0.7 | MV Verschillen GBA | 30-06-2017
+
+7
+
+Verschillen in levering als gevolg van initiële vulling en conversie
+
+Verschillen in de initiële vulling en conversie van gegevens zal vaak tot verschillen in de levering
+van deze gegevens aan afnemers leiden. In dit hoofdstuk worden deze verschillen opgesomd.
+
+7.1
+
+Vergelijking met 07.88.10 van persoonslijst zonder groep 71
+Rubriek 07.88.10 RNI-deelnemer wordt niet geconverteerd als groep 07.71 Verificatie niet
+aanwezig is. Het gevolg hiervan is dat het gebruik van rubriek 07.88.10 in de voorwaarderegel
+na conversie, bij het leveren een ander resultaat zal opleveren dan in de BRP. De persoon zal in
+de GBA wel gevonden en geleverd worden, maar in de BRP niet.
+
+7.2
+
+85.10 of 86.10 van beëindigde of gecorrigeerde gegevens niet beschikbaar op A-laag
+voor expressies
+Er is voor gekozen dat de expressietaal alleen werkt met gegevens uit de A-laag. In de GBA
+wordt een rij beëindigd door een lege rij op te nemen met een 85.10 Ingangsdatum geldigheid
+en 86.10 Datum opneming. In de BRP wordt deze rij beëindigd (DatumEindeGeldigheid) of
+vervallen (TsVerval). Daardoor komt deze rij niet meer voor op de A-laag.
+Hierdoor zullen rubrieken 86.10 of 85.10 in een voorwaarderegel in de GBAV wel resultaten
+opleveren als de rij leeg is, maar zal de expressie in de BRP geen resultaten opleveren.
+
+Operatie BRP
+
+Pagina 12 van 13
+
+Definitief | 0.7 | MV Verschillen GBA | 30-06-2017
+
+8
+
+Opmerkingen
+
+Dit verschillendocument is niet volledig en beschrijft (nog) niet alle verschillen. Het is mogelijk
+dat nieuwe verschillen worden toegevoegd, of dat verschillen worden verwijderd omdat ze niet
+meer van toepassing zijn.
+
+Operatie BRP
+
+Pagina 13 van 13
+
+

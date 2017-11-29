@@ -1,0 +1,185 @@
+UCS SA.1.CH – Controleer handeling op nu te
+leveren
+Versie
+
+1.0
+
+Datum
+
+12 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+23-02-2017
+
+0.1
+
+Eerste opzet
+
+oBRP
+
+12-07-2017
+
+1.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS SA.1.CH – Controleer handeling op nu te leveren
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Controleer handeling op nu te leveren ...................................................................... 4
+2.1
+2.2
+
+3
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Activiteitendiagram ...............................................................................................................4
+Beschrijving van de stappen ...................................................................................................4
+
+Ontwerpbeslissingen ................................................................................................ 6
+
+Status: Definitief, versie: 1.0
+
+Pagina 2 van 6
+
+UCS SA.1.CH – Controleer handeling op nu te leveren
+
+1 Inleiding
+1.1
+
+Doel
+
+Er moet worden vastgesteld of de aangeboden Administratieve Handeling in aanmerking komt om
+uitgeleverd te worden. Daarvoor moet de Administratieve Handeling de status “Te Leveren” hebben
+en in de zelfde volgorde te worden aangeboden als waarin ze bijgehouden is.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de stappen om het bericht op te schonen. In Hoofdstuk 3 staan de Use Case
+specifieke ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 1.0
+
+Pagina 3 van 6
+
+UCS SA.1.CH – Controleer handeling op nu te leveren
+
+2 Controleer handeling op nu te leveren
+Het controleren van de Administratieve Handeling kent een aantal stappen, deze staan in het
+activiteitendiagram.
+In de paragraaf daarna worden de stappen stuk voor stuk beschreven. Voor een meer
+gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden wordt verwezen
+naar de aan deze Use Case gekoppelde regels in BMR.
+
+2.1
+
+Activiteitendiagram
+
+2.2
+
+Beschrijving van de stappen
+
+In deze paragraaf worden de stappen in het activiteitendiagram beschreven.
+
+1. Controleer status levering (SA.1.CH.CSL )
+Er wordt gecontroleerd of de betreffende Administratieve Handeling de Status Levering “Te
+Leveren” heeft.
+
+Status: Definitief, versie: 1.0
+
+Pagina 4 van 6
+
+UCS SA.1.CH – Controleer handeling op nu te leveren
+
+Hiermee wordt voorkomen dat een parallel proces probeert dezelfde handeling opnieuw op te
+pakken. Ook zal de migratievoorziening geen nieuwe synchronisatie uitvoeren op een persoon
+zolang er nog ongeleverde handelingen aanwezig zijn.
+
+2. Controleer of alle voorafgaande handelingen zijn geleverd (SA.1.CH.CVH)
+Handelingen moeten in dezelfde volgorde worden geleverd als waarin ze zijn bijgehouden. Dit
+betekent dat er geen enkel bijgehouden persoon mag zijn waarvoor nog eerdere bijhoudingen
+zijn die niet geleverd zijn.
+Bij elke persoonslijst die door een Administratieve Handeling is bijgehouden, wordt een
+voorkomen van Afgeleid Administratief aangemaakt bij de persoon die verwijst naar die
+handeling. In deze controlestap wordt omgekeerd bepaald, aan de hand van de
+Administratieve Handeling, welke persoonslijsten bijgehouden moeten zijn door te bepalen bij
+waar deze voorkomt in Afgeleid Administratief.
+Voor al deze personen moet gelden dat alle Administratieve Handelingen uit eerdere
+voorkomens van Afgeleid Administratief niet de status “Te leveren”, “In levering” of “Fout”
+mag zijn.
+
+3. Wijzig status levering naar in levering (SA.1.CH.WSL)
+Als uit de vorige stappen blijkt dat de handeling op dit moment geleverd kan worden dan wordt
+de Status Levering gewijzigd naar “In Levering”.
+
+Status: Definitief, versie: 1.0
+
+Pagina 5 van 6
+
+UCS SA.1.CH – Controleer handeling op nu te leveren
+
+3 Ontwerpbeslissingen
+Er zijn geen Use Case specifieke ontwerpbeslissingen.
+
+Status: Definitief, versie: 1.0
+
+Pagina 6 van 6
+
+

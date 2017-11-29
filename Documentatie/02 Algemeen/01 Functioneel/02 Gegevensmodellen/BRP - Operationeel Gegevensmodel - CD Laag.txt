@@ -1,0 +1,3583 @@
+BRP - Operationeel Gegevensmodel - CD Laag
+Persoon
+Dyn
+
+His_PersOverlijden
+
+Dyn
+
+His_PersVoornaam
+
+Dyn
+
+His_PersAdres
+
+Dyn
+
+ID
+
+His_PersIDsID
+
+*i
+
+ID
+
+His_PersOverlijdenID
+
+*i
+
+ID
+
+His_PersVoornaamID
+
+*i
+
+ID
+
+His_PersAdresID
+
+*i
+
+Pers >
+
+Pers
+
+* u1
+
+Pers >
+
+Pers
+
+* u1
+
+PersVoornaam >
+
+PersVoornaam
+
+* u1
+
+PersAdres >
+
+PersAdres
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+ActieInh >
+
+Actie
+
+*
+
+ActieInh >
+
+Actie
+
+*
+
+ActieInh >
+
+Actie
+
+*
+
+ActieInh >
+
+Actie
+
+*
+
+TsVerval
+
+Ts
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+.
+
+IndVoorkomenTbvLevMuts
+
+Ja
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+DatAanvGel
+
+DatEvtDeelsOnbekend
+
+* u1
+
+DatOverlijden
+
+DatEvtDeelsOnbekend
+
+*
+
+DatAanvGel
+
+DatEvtDeelsOnbekend
+
+* u1
+
+DatAanvGel
+
+DatEvtDeelsOnbekend
+
+* u1
+
+DatEindeGel
+
+DatEvtDeelsOnbekend
+
+.
+
+GemOverlijden >
+
+Gem
+
+.
+
+DatEindeGel
+
+DatEvtDeelsOnbekend
+
+.
+
+DatEindeGel
+
+DatEvtDeelsOnbekend
+
+.
+
+ActieAanpGel >
+
+Actie
+
+.
+
+WplnaamOverlijden
+
+NaamEnumeratiewaarde
+
+.
+
+ActieAanpGel >
+
+Actie
+
+.
+
+ActieAanpGel >
+
+Actie
+
+.
+
+BSN
+
+BSN
+
+. s2
+
+BLPlaatsOverlijden
+
+BLPlaats
+
+.
+
+Naam
+
+Voornaam
+
+*
+
+Srt >
+
+SrtAdres
+
+* S1
+
+ANr
+
+ANr
+
+. s1
+
+BLRegioOverlijden
+
+BLRegio
+
+.
+
+RdnWijz >
+
+RdnWijzVerblijf
+
+*
+
+OmsLocOverlijden
+
+Locoms
+
+.
+
+AangAdresh >
+
+Aang
+
+.
+
+LandGebiedOverlijden >
+
+LandGebied
+
+*
+
+DatAanvAdresh
+
+DatEvtDeelsOnbekend
+
+.
+
+His_PersGeslnaamcomp
+His_PersGeboorte
+
+Dyn
+
+ID
+
+His_PersGeboorteID
+
+*i
+
+Pers >
+
+Pers
+
+* u1
+
+ID
+
+His_PersNaamgebruik
+
+TsReg
+
+Ts
+
+* u1
+
+ActieInh >
+
+Actie
+
+*
+
+TsVerval
+
+Ts
+
+ActieVerval >
+
+Actie
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+Dyn
+
+DatGeboorte
+
+Gem
+
+.
+
+WplnaamGeboorte
+
+NaamEnumeratiewaarde
+
+.
+
+BLPlaatsGeboorte
+
+BLPlaats
+BLRegio
+
+.
+
+OmsLocGeboorte
+
+Locoms
+
+.
+
+LandGebiedGeboorte >
+
+LandGebied
+
+ActieInh >
+TsVerval
+
+Ts
+
+.
+
+* u1
+
+ActieVerval >
+
+Actie
+
+.
+
+ActieInh >
+
+Actie
+
+*
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+DatAanvGel
+
+DatEvtDeelsOnbekend
+
+* u1
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+DatEindeGel
+
+DatEvtDeelsOnbekend
+
+.
+
+IndVoorkomenTbvLevMuts
+
+Ja
+
+.
+
+ActieAanpGel >
+
+Actie
+
+.
+
+Naamgebruik >
+
+Naamgebruik
+
+*
+
+Predicaat >
+
+Predicaat
+
+.
+
+IndNaamgebruikAfgeleid
+
+JaNee
+
+*
+
+AdellijkeTitel >
+
+AdellijkeTitel
+
+.
+
+PredicaatNaamgebruik >
+
+Predicaat
+
+.
+
+Voorvoegsel
+
+Voorvoegsel
+
+.
+
+VoornamenNaamgebruik
+
+Voornamen
+
+.
+
+Scheidingsteken
+
+Scheidingsteken
+
+.
+
+Stam
+
+Geslnaamstam
+
+*
+
+*
+
+AdellijkeTitelNaamgebruik >
+
+AdellijkeTitel
+
+.
+
+VoorvoegselNaamgebruik
+
+Voorvoegsel
+
+.
+
+ScheidingstekenNaamgebruik Scheidingsteken
+
+His_PersGeslachtsaand
+
+Dyn
+
+*
+
+*i
+
+.
+
+BLRegioGeboorte
+
+* u1
+
+* u1
+
+*
+
+GemGeboorte >
+
+* u1
+
+Ts
+
+Pers
+
+.
+
+DatEvtDeelsOnbekend
+
+PersGeslnaamcomp
+
+TsReg
+
+His_PersNaamgebruikID
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+PersGeslnaamcomp >
+
+Pers >
+
+Ts
+
+.
+
+His_PersGeslachtsaandID
+
+*i
+
+His_PersNation
+
+Pers >
+
+Pers
+
+* u1
+
+ID
+
+His_PersNationID
+
+*i
+
+TsReg
+
+Ts
+
+* u1
+
+PersNation >
+
+PersNation
+
+* u1
+
+ActieInh >
+
+Actie
+
+*
+
+His_PersVerblijfsr
+
+TsReg
+
+Ts
+
+* u1
+
+TsVerval
+
+Ts
+
+.
+
+ID
+
+His_PersVerblijfsrID
+
+*i
+
+ActieInh >
+
+Actie
+
+*
+
+ActieVerval >
+
+Actie
+
+.
+
+Pers >
+
+Pers
+
+* u1
+
+TsVerval
+
+Ts
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+Dyn
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+TsReg
+
+Ts
+
+* u1
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+ActieInh >
+
+Actie
+
+*
+
+IndVoorkomenTbvLevMuts Ja
+DatAanvGel
+DatEindeGel
+
+DatEvtDeelsOnbekend
+DatEvtDeelsOnbekend
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+* u1
+
+ActieVerval >
+
+Actie
+
+.
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+Actie
+
+.
+
+ActieAanpGel >
+
+Actie
+
+.
+
+ActieVervalTbvLevMuts >
+
+Geslachtsaand >
+
+Geslachtsaand
+
+*
+
+IndVoorkomenTbvLevMuts Ja
+
+His_PersInschr
+
+Dyn
+
+AandVerblijfsr >
+
+AandVerblijfsr
+
+*
+
+DatAanvVerblijfsr
+
+DatEvtDeelsOnbekend
+
+*
+
+DatMededelingVerblijfsr
+
+DatEvtDeelsOnbekend
+
+*
+
+DatVoorzEindeVerblijfsr
+
+DatEvtDeelsOnbekend
+
+.
+
+. S2
+
+Gem >
+
+Gem
+
+.
+
+NOR
+
+NOR
+
+.
+
+AfgekorteNOR
+
+AfgekorteNOR
+
+.
+
+Gemdeel
+
+.
+
+Huisnr
+
+Huisnr
+
+. S1
+
+Huisletter
+
+Huisletter
+
+. S1
+
+Huisnrtoevoeging
+
+Huisnrtoevoeging
+
+. S1
+
+Postcode
+
+Postcode
+
+. S1
+
+DatEvtDeelsOnbekend
+
+* u1
+
+DatEvtDeelsOnbekend
+
+.
+
+ActieAanpGel >
+
+Actie
+
+.
+
+RdnVerk >
+
+RdnVerkNLNation
+
+.
+
+RdnVerlies >
+
+RdnVerliesNLNation
+
+.
+
+IndBijhoudingBeeindigd
+
+Ja
+
+.
+
+MigrRdnOpnameNation
+
+LO3RdnOpnameNation
+
+Ts
+
+His_PersBijhouding
+ID
+
+Dyn
+Dyn
+*i
+
+TsReg
+
+Ts
+
+* u1
+
+PersIndicatie >
+
+PersIndicatie
+
+* u1
+
+*
+
+ActieInh >
+
+Actie
+
+*
+
+TsReg
+
+Ts
+
+* u1
+
+Ts
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+ActieInh >
+
+Actie
+
+*
+
+TsVerval
+
+Ts
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+DienstInh >
+
+Dienst
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+DienstVerval >
+
+Dienst
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+DatAanvMaterielePeriode Dat
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+Dat
+
+.
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+IndVoorkomenTbvLevMuts Ja
+DatAanv
+
+DatEvtDeelsOnbekend
+
+.
+
+GemAanv >
+
+Gem
+
+.
+
+WplnaamAanv
+
+NaamEnumeratiewaarde
+
+.
+
+BLPlaatsAanv
+
+BLPlaats
+
+.
+
+BLRegioAanv
+
+BLRegio
+
+.
+
+OmsLocAanv
+
+Locoms
+
+.
+
+His_OuderOuderschap
+ID
+
+LandGebiedAanv >
+
+LandGebied
+
+.
+
+RdnEinde >
+
+RdnEindeRelatie
+
+.
+
+DatEinde
+
+DatEvtDeelsOnbekend
+
+.
+
+GemEinde >
+
+Gem
+
+.
+
+WplnaamEinde
+
+NaamEnumeratiewaarde
+
+.
+
+BLPlaatsEinde
+
+BLPlaats
+
+.
+
+BLRegioEinde
+
+BLRegio
+
+OmsLocEinde
+
+Locoms
+
+.
+
+LandGebiedEinde >
+
+LandGebied
+
+.
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+DatAanv
+
+DatEvtDeelsOnbekend
+
+*
+
+DatAanvGel
+
+DatEvtDeelsOnbekend
+
+* u1
+
+Dat
+
+DatEinde
+
+DatEvtDeelsOnbekend
+
+.
+
+DatEindeGel
+
+DatEvtDeelsOnbekend
+
+.
+
+Oms
+
+OnderzoekOms
+
+.
+
+ActieAanpGel >
+
+Actie
+
+.
+
+Status >
+
+StatusOnderzoek
+
+*
+
+VorigeBSN
+
+BSN
+
+.
+
+VolgendeBSN
+
+BSN
+
+.
+
+VorigeANr
+
+ANr
+
+.
+
+VolgendeANr
+
+ANr
+
+.
+
+His_OuderOuderschapID
+
+*i
+
+Betr >
+
+Betr
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+ActieInh >
+
+Actie
+
+*
+
+TsVerval
+
+Ts
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+His_GegevenInOnderzoek
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+ID
+
+His_GegevenInOnderzoekID
+
+*i
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+GegevenInOnderzoek >
+
+GegevenInOnderzoek
+
+* u1
+
+IndVoorkomenTbvLevMuts
+
+Ja
+
+.
+
+TsReg
+
+Ts
+
+*
+
+DatAanvGel
+
+DatEvtDeelsOnbekend
+
+* u1
+
+ActieInh >
+
+Actie
+
+*
+
+His_PersAfgeleidAdministrati
+
+.
+
+ID
+
+His_PersAfgeleidAdministrati
+
+Dyn
+
+Dyn
+*i
+
+DatEindeGel
+
+DatEvtDeelsOnbekend
+
+.
+
+TsVerval
+
+Ts
+
+ActieAanpGel >
+
+Actie
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+Pers >
+
+Pers
+
+* u1
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+TsReg
+
+Ts
+
+* u1
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+ActieInh >
+
+Actie
+
+*
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+Dyn
+
+ActieVerval >
+
+Actie
+
+.
+
+*i
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+Actie
+
+.
+
+IndOuderUitWieKindIsGeboren JaNee
+
+IndVoorkomenTbvLevMuts Ja
+
+.
+
+Betr >
+
+Betr
+
+* u1
+
+ActieVervalTbvLevMuts >
+
+Ts
+
+* u1
+
+IndVoorkomenTbvLevMuts
+
+Ja
+
+.
+
+Actie
+
+*
+
+AdmHnd >
+
+AdmHnd
+
+*
+
+Ts
+
+*
+
+Sorteervolgorde
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+Sorteervolgorde
+
+TsLaatsteWijzGBASystematiek Ts
+
+BLAdresRegel6
+
+Adresregel
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+LandGebied >
+
+LandGebied
+
+*
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+IndPersAangetroffenOpAdres
+
+Nee
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+*
+.
+
+.
+
+DatAanvGel
+
+DatEvtDeelsOnbekend
+
+* u1
+
+DatEindeGel
+
+DatEvtDeelsOnbekend
+
+.
+
+ActieAanpGel >
+
+Actie
+
+.
+
+IndOuderHeeftGezag
+
+JaNee
+
+*
+
+Dyn
+
+ID
+
+His_PersMigratieID
+
+*i
+
+Pers >
+
+Pers
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+ActieInh >
+
+Actie
+
+*
+
+TsVerval
+
+Ts
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+.
+
+DatAanvGel
+
+DatEvtDeelsOnbekend
+
+* u1
+
+DatEindeGel
+
+DatEvtDeelsOnbekend
+
+.
+
+ActieAanpGel >
+
+Actie
+
+.
+
+SrtMigratie >
+
+SrtMigratie
+
+*
+
+Partij, Authenticatie, Autorisatie, Selectie, Vrij bericht
+
+BLAdresRegel1Migratie
+
+Adresregel
+
+.
+
+BLAdresRegel2Migratie
+
+Adresregel
+
+.
+
+BLAdresRegel3Migratie
+
+Adresregel
+
+.
+
+BLAdresRegel4Migratie
+
+Adresregel
+
+.
+
+BLAdresRegel5Migratie
+
+Adresregel
+
+.
+
+His_Partij
+
+SG
+
+His_Dienstbundel
+
+SG
+
+His_Levsautorisatie
+
+His_PartijID
+
+*i
+
+ID
+
+His_DienstbundelID
+
+*i
+
+ID
+
+His_LevsautorisatieID
+
+*i
+
+ID
+
+His_BijhouderFiatuitzID
+
+*i
+
+Partij >
+
+Partij
+
+* u1
+
+Dienstbundel >
+
+Dienstbundel
+
+* u1
+
+Levsautorisatie >
+
+Levsautorisatie
+
+* u1
+
+BijhouderFiatuitz >
+
+BijhouderFiatuitz
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsVerval
+
+Ts
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+Naam
+
+NaamEnumeratiewaarde
+
+*
+
+Naam
+
+NaamEnumeratiewaarde
+
+*
+
+Naam
+
+NaamEnumeratiewaarde
+
+*
+
+DatIngang
+
+Dat
+
+*
+
+DatIngang
+
+Dat
+
+*
+
+DatIngang
+
+Dat
+
+*
+
+Protocolleringsniveau >
+
+Protocolleringsniveau
+
+*
+
+DatEinde
+
+Dat
+
+DatEinde
+
+Dat
+
+.
+
+DatEinde
+
+Dat
+
+.
+
+IndAliasSrtAdmHndLeveren JaNee
+
+*
+
+BijhouderBijhvoorstel > PartijRol
+
+Populatiebeperking
+
+.
+
+DatIngang
+
+Dat
+
+*
+
+SrtDoc >
+
+SrtDoc
+
+.
+
+.
+
+DatEinde
+
+Dat
+
+.
+
+SrtAdmHnd >
+
+SrtAdmHnd
+
+.
+
+.
+
+IndBlok
+
+Ja
+
+.
+
+*
+
+*
+
+Ts
+
+.
+
+OIN
+
+OIN
+
+.
+
+NaderePopulatiebeperking
+
+Actie
+
+.
+
+Srt >
+
+SrtPartij
+
+.
+
+IndNaderePopbeperkingVolConv Nee
+
+.
+
+IndVerstrbeperkingMogelijk JaNee
+
+*
+
+Toelichting
+
+OnbeperkteOms
+
+.
+
+Populatiebeperking
+
+Populatiebeperking
+
+.
+
+IndBlok
+
+Ja
+
+.
+
+Toelichting
+
+OnbeperkteOms
+
+.
+
+IndBlok
+
+Ja
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+IndVoorkomenTbvLevMuts Ja
+
+*i
+
+IndUitslKiesr
+
+Ja
+
+*
+
+IndVoorkomenTbvLevMuts Ja
+
+* u1
+
+DatVoorzEindeUitslKiesr
+
+DatEvtDeelsOnbekend
+
+.
+
+DatAanvGel
+
+DatEvtDeelsOnbekend
+
+ActieAanpGel >
+
+Actie
+
+.
+
+TsVerval
+
+Ts
+
+ActieVerval >
+
+Actie
+
+Waarde
+
+.
+.
+.
+.
+
+DatAanvGel
+
+DatEvtDeelsOnbekend
+
+* u1
+
+DatEindeGel
+
+DatEvtDeelsOnbekend
+
+.
+
+ActieAanpGel >
+
+Actie
+
+.
+
+Bijhpartij >
+
+Partij
+
+*
+*
+*
+
+*
+
+Dyn
+
+MigrRdnOpnameNation
+His_PersDeelnEUVerkiezingenI
+
+ID
+
+Ja
+LO3RdnOpnameNation
+
+.
+
+*i
+
+MigrRdnBeeindigenNation LO3RdnBeeindigenNation .
+
+Pers >
+
+Pers
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+ActieInh >
+
+Actie
+
+*
+
+TsVerval
+
+Ts
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+IndVoorkomenTbvLevMuts
+
+Ja
+
+.
+
+JaNee
+
+IndDeelnEUVerkiezingen
+
+*
+
+DatAanlAanpDeelnEUVerkiezing DatEvtDeelsOnbekend
+
+.
+
+DatEvtDeelsOnbekend
+
+.
+
+DatVoorzEindeUitslEUVerkiezi
+
+Dat
+
+DatOvergangNaarBRP
+
+His_PersBLPersnr
+
+. u1
+
+*
+
+His_PersDeelnEUVerkiezingen
+
+.
+
+.
+.
+
+Actie
+
+.
+
+Adresregel
+
+Dyn
+His_PersBLPersnrID
+
+*i
+
+PersBLPersnr >
+
+PersBLPersnr
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+ActieInh >
+
+Actie
+
+*
+
+His_ToegangBijhautorisatie
+
+TsVerval
+
+Ts
+
+.
+
+ID
+
+ActieVerval >
+
+Actie
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+ID
+
+His_PersSamengesteldeNaamID
+
+Dyn
+*i
+
+.
+
+ID
+
+His_ToegangLevsautorisatie
+
+ToegangLevsautorisatie
+
+ToegangLevsautorisatie >
+
+SG
+
+SG
+
+His_ToegangLevsautorisatieID
+
+ID
+
+His_PartijBijhouding
+
+His_PersSamengesteldeNaam
+
+SG
+
+ID
+
+Actie
+
+BLAdresRegel6Migratie
+
+His_BijhouderFiatuitz
+
+SG
+
+TsVerval
+ActieVerval >
+
+*
+
+Dyn
+
+.
+
+His_OuderOuderlijkGezagID
+
+DatEindeVolgen
+
+.
+
+DatEvtDeelsOnbekend
+
+ActieInh >
+
+ActieInh >
+
+NadereBijhaard
+
+TsReg
+
+*
+
+.
+
+.
+
+NadereBijhaard >
+
+* u1
+
+Actie
+
+.
+
+DatEvtDeelsOnbekend
+
+Bijhaard
+
+Ts
+
+ActieInh >
+
+Actie
+
+DatEindeGel
+
+Bijhaard >
+
+TsReg
+
+*
+
+Ts
+
+* u1
+
+IndVoorkomenTbvLevMuts Ja
+
+* u1
+
+Actie
+
+ActieVerval >
+
+Ts
+
+Actie
+
+Ts
+
+ActieInh >
+
+TsVerval
+
+TsReg
+
+ActieVervalTbvLevMuts >
+
+TsReg
+
+*
+
+*
+
+Pers
+
+NadereAandVerval
+
+*
+
+Actie
+
+.
+
+Pers >
+
+NadereAandVerval
+
+Ts
+
+ActieInh >
+
+.
+
+.
+
+Dyn
+His_PersBijhoudingID
+
+TsReg
+
+*
+
+Adresregel
+
+*
+
+Dattijdstempel
+
+* u1
+
+Actie
+
+BLAdresRegel5
+
+LandGebied
+
+Versienr
+
+Ts
+
+ActieInh >
+
+.
+
+LandGebiedMigratie >
+
+Versienr
+
+TsReg
+
+Ts
+
+.
+
+DatEvtDeelsOnbekend
+
+* u1
+
+TsVerval
+
+Ts
+
+DatInschr
+
+*i
+
+PersAfnemerindicatie
+
+.
+
+TsVerval
+
+IndVoorkomenTbvLevMuts Ja
+
+His_PersAfnemerindicatieID
+
+PersAfnemerindicatie >
+
+Adresregel
+
+.
+
+* u1
+
+ID
+
+* u1
+
+BLAdresRegel4
+
+Aang
+
+Pers
+
+*i
+
+PersVerificatie
+
+TsLaatsteWijz
+
+AangMigratie >
+
+Pers >
+
+His_PersVerificatieID
+
+PersVerificatie >
+
+ActieInh >
+
+ActieInh >
+
+.
+
+ID
+
+* u1
+
+.
+
+.
+
+Actie
+
+*i
+
+Pers
+
+Adresregel
+
+RdnWijzVerblijf
+
+ActieVervalTbvLevMuts >
+
+His_PersNrverwijzingID
+
+Pers >
+
+BLAdresRegel3
+
+RdnWijzMigratie >
+
+His_PersIndicatieID
+
+ID
+
+* u1
+
+.
+
+*
+
+ID
+
+*i
+
+Onderzoek
+
+Adresregel
+
+Actie
+
+His_PersIndicatie
+
+His_OnderzoekID
+
+Onderzoek >
+
+BLAdresRegel2
+
+* u1
+
+*i
+
+ID
+
+* u1
+
+TsReg
+
+Ts
+
+His_PersUitslKiesrID
+
+*i
+
+ID
+
+TsReg
+
+ID
+
+Dyn
+
+Betr
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+MigrRdnBeeindigenNation LO3RdnBeeindigenNation .
+
+.
+
+His_PersAfnemerindicatie
+
+His_BetrID
+
+Locoms
+
+* u1
+
+NadereAandVerval
+
+Dyn
+
+Betr >
+
+Locoms
+
+Pers
+
+NadereAandVerval
+
+His_PersVerificatie
+
+ID
+
+His_OuderOuderlijkGezag
+
+His_PersMigratie
+
+Dyn
+
+* u1
+
+LocTenOpzichteVanAdres
+
+Pers >
+
+His_PersUitslKiesr
+
+His_PersNrverwijzing
+
+*i
+
+.
+
+*i
+
+.
+
+Dyn
+
+Relatie
+
+.
+
+His_PersInschrID
+
+Actie
+
+His_Onderzoek
+
+His_RelatieID
+
+LocTenOpzichteVanAdres
+
+ID
+
+ActieVerval >
+
+Dyn
+
+.
+
+DatEindeGel
+
+DatEvtDeelsOnbekend
+
+His_Betr
+
+.
+
+DatAanvGel
+
+MigrDatEindeBijhouding
+
+Dyn
+
+Relatie >
+
+NaamEnumeratiewaarde
+
+Adresregel
+
+11-8-2017
+
+ID
+
+Wplnaam
+
+Dyn
+
+IndVoorkomenTbvLevMuts Ja
+
+.
+
+IdentcodeNraand
+
+BLAdresRegel1
+
+*
+
+ID
+
+IdentcodeNraand
+
+Gemdeel
+
+.
+
+Geslnaamstam
+
+GeslnaamstamNaamgebruik
+
+IdentcodeAdresseerbaarObject IdentcodeAdresseerbaarObject . S3
+
+*i
+
+ID
+.
+
+Actie
+
+His_PersGeslnaamcompID
+
+Actie
+
+TsReg
+
+ActieVervalTbvLevMuts >
+
+Dyn
+
+His_Relatie
+
+Release 59
+
+Verantwoording
+
+Betrokkenheid, Relatie
+
+His_PersIDs
+
+BRP - Operationeel Gegevensmodel - CD Laag
+
+*i
+* u1
+
+ID
+
+His_PartijBijhoudingID
+
+*i
+
+TsReg
+
+Ts
+
+* u1
+
+Partij >
+
+Partij
+
+* u1
+
+TsVerval
+
+Ts
+
+.
+
+TsReg
+
+Ts
+
+* u1
+
+DatIngang
+
+Dat
+
+*
+
+TsVerval
+
+Ts
+
+.
+
+DatEinde
+
+Dat
+
+.
+
+.
+
+Pers >
+
+Pers
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+Afleverpunt
+
+Uri
+
+.
+
+ActieInh >
+
+Actie
+
+*
+
+IndBlok
+
+Ja
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+IndAutoFiat JaNee
+
+NaderePopulatiebeperking Populatiebeperking
+
+*
+
+.
+
+.
+
+SG
+
+His_ToegangBijhautorisatieID
+
+ToegangBijhautorisatie > ToegangBijhautorisatie
+Ts
+
+* u1
+
+TsVerval
+
+Ts
+
+.
+
+DatIngang
+
+Dat
+
+*
+
+DatEinde
+
+Dat
+
+.
+
+Afleverpunt
+
+Uri
+
+.
+
+IndBlok
+
+Ja
+
+.
+
+ID
+
+His_PersReisdocID
+
+*i
+
+PersReisdoc >
+
+PersReisdoc
+
+* u1
+
+TsReg
+ActieInh >
+TsVerval
+ActieVerval >
+NadereAandVerval
+ActieVervalTbvLevMuts >
+
+ID
+
+Dyn
+
+Ts
+Actie
+Ts
+Actie
+NadereAandVerval
+Actie
+
+IndVoorkomenTbvLevMuts Ja
+
+* u1
+*
+.
+.
+.
+.
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+His_PersPK
+
+.
+
+His_Dienst
+
+SG
+
+Dyn
+
+DatAanvGel
+
+DatEvtDeelsOnbekend
+
+* u1
+
+ID
+
+His_DienstID
+
+*i
+
+DatEvtDeelsOnbekend
+
+.
+
+Dienst >
+
+Dienst
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+*i
+
+TsVerval
+
+Ts
+
+.
+
+* u1
+
+DatIngang Dat
+
+*
+.
+
+ID
+
+His_PersPKID
+
+*i
+
+DatEindeGel
+
+Pers >
+
+Pers
+
+* u1
+
+ActieAanpGel >
+
+TsReg
+
+Ts
+
+* u1
+
+IndAfgeleid
+
+JaNee
+
+*
+
+ActieInh >
+
+Actie
+
+*
+
+IndNreeks
+
+JaNee
+
+*
+
+TsVerval
+
+Ts
+
+.
+
+Predicaat >
+
+ActieVerval >
+
+Actie
+
+.
+
+Voornamen
+
+Voornamen
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+AdellijkeTitel >
+
+AdellijkeTitel
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+Voorvoegsel
+
+Voorvoegsel
+
+.
+
+.
+
+Scheidingsteken
+
+Scheidingsteken
+
+.
+
+Geslnaamstam
+
+Geslnaamstam
+
+* S1
+
+Actie
+
+Predicaat
+
+.
+
+.
+
+His_PartijRol
+ID
+
+His_PartijRolID
+
+PartijRol > PartijRol
+
+SG
+
+TsReg
+
+Ts
+
+* u1
+
+DatEinde Dat
+
+TsVerval
+
+Ts
+
+.
+
+IndBlok
+
+DatIngang Dat
+
+*
+
+DatEinde Dat
+
+.
+
+Ja
+
+* u1
+
+TsReg
+
+His_Bijhautorisatie
+His_PersReisdoc
+
+*i
+
+SG
+
+His_BijhautorisatieID
+
+Bijhautorisatie > Bijhautorisatie
+
+*i
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsVerval
+
+Ts
+
+.
+
+Naam
+
+NaamEnumeratiewaarde
+
+*
+
+DatIngang
+
+Dat
+
+*
+
+DatEinde
+
+Dat
+
+.
+
+IndBlok
+
+Ja
+
+.
+
+.
+
+Nr
+
+ReisdocNr
+
+*
+
+AutVanAfgifte
+
+AutVanAfgifteReisdocCode
+
+*
+
+DatIngangDoc
+
+DatEvtDeelsOnbekend
+
+*
+
+DatEindeDoc
+
+DatEvtDeelsOnbekend
+
+*
+
+ID
+
+His_DienstSelID
+
+*i
+
+ID
+
+DatUitgifte
+
+DatEvtDeelsOnbekend
+
+*
+
+Dienst >
+
+Dienst
+
+* u1
+
+BijhautorisatieSrtAdmHnd > BijhautorisatieSrtAdmHnd
+
+DatInhingVermissing
+
+DatEvtDeelsOnbekend
+
+.
+
+TsReg
+
+Ts
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+AandInhingVermissing >
+
+AandInhingVermissingReisdoc
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+SrtSel >
+
+SrtSel
+
+*
+
+EersteSeldat
+
+Dat
+
+.
+
+Selinterval
+
+Selinterval
+
+.
+
+EenheidSelinterval >
+
+EenheidSelinterval
+
+.
+
+Selcriterium
+
+Populatiebeperking
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+GemPK >
+
+Partij
+
+.
+
+IndPKVolledigGeconv
+
+JaNee
+
+*
+
+His_DienstSel
+
+His_PersVerstrbeperking
+
+Dyn
+
+ID
+
+His_PersVerstrbeperkingID
+
+*i
+
+PersVerstrbeperking >
+
+PersVerstrbeperking
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+ActieInh >
+
+Actie
+
+*
+
+TsVerval
+
+Ts
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+.
+
+SG
+
+SelPeilmomMaterieelResultaat Dat
+
+His_BijhautorisatieSrtAdmHnd
+
+SG
+
+His_BijhautorisatieSrtAdmHnd
+
+.
+
+SelPeilmomFormeelResultaat
+
+Ts
+
+.
+
+His_PartijVrijBer
+
+HistorievormSel >
+
+Historievorm
+
+*
+
+ID
+
+His_PartijVrijBerID
+
+*i
+
+IndSelresultaatControleren
+
+JaNee
+
+*
+
+Partij >
+
+Partij
+
+* u1
+
+MaxAantalPersPerSelbestand
+
+AantalResultaten
+
+.
+
+TsReg
+
+Ts
+
+* u1
+
+MaxGrootteSelbestand
+
+AantalKilobytes
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+.
+
+OndertekenaarVrijBer > Partij
+
+.
+
+TransporteurVrijBer >
+
+Partij
+
+.
+
+DatIngangVrijBer
+
+Dat
+
+*
+
+DatEindeVrijBer
+
+Dat
+
+.
+
+AfleverpuntVrijBer
+
+Uri
+
+.
+
+IndBlokVrijBer
+
+Ja
+
+.
+
+IndVerzVolBerBijWijzAfniNaSe JaNee
+LeverwijzeSel
+
+LeverwijzeSel >
+
+His_DienstAttendering
+
+SG
+
+.
+
+SG
+
+ID
+
+His_DienstAttenderingID
+
+*i
+
+Dienst >
+
+Dienst
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+His_Seltaak
+
+TsVerval
+
+Ts
+
+.
+
+ID
+
+His_SeltaakID
+
+.
+
+Seltaak >
+
+Seltaak
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsVerval
+
+Ts
+
+.
+
+DatPlanning
+
+Dat
+
+.
+
+DatUitvoer
+
+Dat
+
+.
+
+Attenderingscriterium Attenderingscriterium
+
+His_DienstZoeken
+
+SG
+
+ID
+
+His_DienstZoekenID
+
+*i
+
+Dienst >
+
+Dienst
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsVerval
+
+Ts
+
+MaxAantalZoekresultaten AantalResultaten
+
+.
+*
+
+SG
+
+PeilmomMaterieelResultaat Dat
+
+*i
+
+.
+
+PeilmomFormeelResultaat
+
+Ts
+
+.
+
+IndSelLijstGebruiken
+
+JaNee
+
+*
+
+*i
+* u1
+
+

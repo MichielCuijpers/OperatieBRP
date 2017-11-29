@@ -1,0 +1,3882 @@
+ASP - Expressietaal
+
+1.2
+
+Datum
+Status
+
+20-04-2017
+Definitief
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................6
+
+2
+
+EXPRESSIES ..........................................................................................................................................7
+2.1 BOOLEAN EXPRESSIE............................................................................................................................7
+2.1.1 Constanten .................................................................................................................................8
+2.1.2 Operatoren .................................................................................................................................8
+2.2 NUMERIEKE EXPRESSIE ........................................................................................................................9
+2.2.1 Constanten .................................................................................................................................9
+2.2.2 Operatoren .................................................................................................................................9
+2.3 DATUMEXPRESSIE...............................................................................................................................10
+2.3.1 Constanten ...............................................................................................................................10
+2.3.2 Operatoren ...............................................................................................................................11
+2.4 STRINGEXPRESSIE ..............................................................................................................................13
+2.4.1 Constanten ...............................................................................................................................13
+2.5 LIJSTEXPRESSIE ..................................................................................................................................13
+2.5.1 Constanten ...............................................................................................................................14
+
+3
+
+VERGELIJKING ..................................................................................................................................15
+3.1
+3.2
+3.3
+
+4
+
+EENVOUDIGE VERGELIJKING ..............................................................................................................15
+VERGELIJKING MET EEN PATROON.....................................................................................................16
+VERGELIJKING MET EEN LIJST ...........................................................................................................17
+
+FUNCTIES..............................................................................................................................................18
+4.1 DATUMFUNCTIES ................................................................................................................................18
+4.1.1 DAG .............................................................................................................................................18
+4.1.2 MAAND .......................................................................................................................................18
+4.1.3 JAAR ............................................................................................................................................18
+4.1.4 AANTAL_DAGEN .....................................................................................................................19
+4.1.5 VANDAAG ..................................................................................................................................19
+4.1.6 SELECTIE_DATUM .................................................................................................................19
+4.1.7 DATUM .......................................................................................................................................19
+4.1.8 LAATSTE_DAG.........................................................................................................................20
+4.2 LIJSTFUNCTIES ...................................................................................................................................20
+4.2.1 AANTAL ......................................................................................................................................20
+4.2.2 MAP .............................................................................................................................................20
+4.3 FILTERFUNCTIES .................................................................................................................................21
+4.3.1 ALS ..............................................................................................................................................21
+4.3.2 FILTER ........................................................................................................................................21
+4.3.3 ER_IS .........................................................................................................................................22
+4.3.4 ALLE ............................................................................................................................................22
+4.4 DOMEINFUNCTIES ...............................................................................................................................22
+4.4.1 GEWIJZIGD ..............................................................................................................................22
+4.4.2 AH ................................................................................................................................................23
+4.4.3 ACTIE..........................................................................................................................................24
+4.4.4 HISF ............................................................................................................................................25
+4.4.5 HISM ...........................................................................................................................................25
+4.4.6 HISM_LAATSTE .......................................................................................................................26
+4.5 OVERIGE FUNCTIES ............................................................................................................................26
+4.5.1 IS_NULL ....................................................................................................................................26
+4.5.2 KV ................................................................................................................................................26
+4.5.3 KNV .............................................................................................................................................27
+
+5
+
+OVERIG ..................................................................................................................................................28
+
+OperatieBRP
+
+Pagina 2 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+5.1
+5.2
+5.3
+6
+
+CLOSURE-EXPRESSIES .......................................................................................................................28
+ONBEKENDE WAARDEN ......................................................................................................................28
+CONTEXT .............................................................................................................................................29
+
+OBJECTEN, GROEPEN EN ATTRIBUTEN ...............................................................................30
+6.1 ENKELVOUDIGE ATTRIBUTEN OP PERSOON .......................................................................................30
+6.1.1 Persoon.Identiteit ..................................................................................................................30
+6.1.2 Persoon.AfgeleidAdministratief .........................................................................................30
+6.1.3 Persoon.Identificatienummers ..........................................................................................30
+6.1.4 Persoon.SamengesteldeNaam ..........................................................................................30
+6.1.5 Persoon.Geboorte ..................................................................................................................31
+6.1.6 Persoon.Geslachtsaanduiding ...........................................................................................31
+6.1.7 Persoon.Inschrijving .............................................................................................................31
+6.1.8 Persoon.Nummerverwijzing ...............................................................................................31
+6.1.9 Persoon.Bijhouding ...............................................................................................................31
+6.1.10 Persoon.Overlijden ............................................................................................................32
+6.1.11 Persoon.Naamgebruik ......................................................................................................32
+6.1.12 Persoon.Migratie .................................................................................................................32
+6.1.13 Persoon.Verblijfsrecht ......................................................................................................32
+6.1.14 Persoon.UitsluitingKiesrecht ..........................................................................................32
+6.1.15 Persoon.DeelnameEUVerkiezingen ..............................................................................33
+6.1.16 Persoon.Persoonskaart.....................................................................................................33
+6.1.17 Persoon.Indicatie................................................................................................................33
+6.2 MEERVOUDIGE ATTRIBUTEN ..............................................................................................................33
+6.2.1 Persoon.Voornaam.Identiteit ............................................................................................33
+6.2.2 Persoon.Voornaam.Standaard ..........................................................................................33
+6.2.3 Persoon.Geslachtsnaamcomponent.Identiteit ............................................................33
+6.2.4 Persoon.Geslachtsnaamcomponent.Standaard ..........................................................33
+6.2.5 Persoon.Adres.Standaard ...................................................................................................34
+6.2.6 Persoon.Nationaliteit.Identiteit.........................................................................................34
+6.2.7 Persoon.Nationaliteit.Standaard ......................................................................................34
+6.2.8 Persoon.BuitenlandsPersoonsnummer.Identiteit .......................................................35
+6.2.9 Persoon.BuitenlandsPersoonsnummer.Standaard ....................................................35
+6.2.10 Persoon.Verstrekkingsbeperking.Identiteit ..............................................................35
+6.2.11 Persoon.Reisdocument.Identiteit .................................................................................35
+6.2.12 Persoon.Reisdocument.Standaard ...............................................................................35
+6.2.13 Persoon.Afnemerindicatie.Identiteit............................................................................35
+6.2.14 Persoon.Afnemerindicatie.Standaard .........................................................................35
+6.2.15 Persoon.Verificatie.Identiteit .........................................................................................35
+6.2.16 Persoon.Verificatie.Standaard .......................................................................................35
+6.2.17 Onderzoek.Identiteit .........................................................................................................36
+6.2.18 Onderzoek.Standaard .......................................................................................................36
+6.3 ATTRIBUTEN VAN RELATIES ...............................................................................................................36
+6.3.1 FamilierechtelijkeBetrekking.Identiteit ..........................................................................36
+6.3.2 FamilierechtelijkeBetrekking.Standaard .......................................................................36
+6.3.3 Huwelijk.Identiteit .................................................................................................................36
+6.3.4 Huwelijk.Standaard ...............................................................................................................36
+6.3.5 GeregistreerdPartnerschap.Identiteit .............................................................................37
+6.3.6 GeregistreerdPartnerschap.Standaard ..........................................................................37
+6.3.7 Persoon.Kind.Identiteit ........................................................................................................37
+6.3.8 GerelateerdeKind.Identiteit ...............................................................................................37
+6.3.9 Persoon.Ouder.Identiteit.....................................................................................................37
+6.3.10 Persoon.Ouder.Ouderschap............................................................................................38
+6.3.11 GerelateerdeOuder.Identiteit ........................................................................................38
+6.3.12 GerelateerdeOuder.Ouderschap ...................................................................................38
+6.3.13 GerelateerdeOuder.OuderlijkGezag ............................................................................38
+6.3.14 Persoon.Partner.Identiteit...............................................................................................38
+
+OperatieBRP
+
+Pagina 3 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+6.3.15 GerelateerdePartner.Identiteit ......................................................................................38
+6.3.16 <rol gerelateerde>.Persoon.Identiteit .......................................................................38
+6.3.17 <rol gerelateerde>.Persoon.Identificatienummers ...............................................38
+6.3.18 <rol gerelateerde>.Persoon.SamengesteldeNaam ...............................................38
+6.3.19 <rol gerelateerde>.Persoon.Geboorte .......................................................................39
+6.3.20 <rol gerelateerde>.Persoon.Geslachtsaanduiding ................................................39
+6.4 VERANTWOORDING ............................................................................................................................39
+6.4.1 Attributen van groepen met formele historie .............................................................39
+6.4.2 Attributen van groepen met formele en materiele historie ...................................39
+6.4.3 Historiepatroon per groep ..................................................................................................40
+7
+
+DEFINITIE EXPRESSIETAAL ......................................................................................................42
+7.1 EXPRESSIES ........................................................................................................................................42
+7.1.1 Algemeen ..................................................................................................................................42
+7.1.2 Boolean expressie..................................................................................................................42
+7.1.3 Numerieke expressie ............................................................................................................42
+7.1.4 Datum expressie ....................................................................................................................42
+7.1.5 String expressie .....................................................................................................................43
+7.1.6 Lijst expressie .........................................................................................................................43
+7.2 VERGELIJKING ....................................................................................................................................44
+7.3 FUNCTIES ............................................................................................................................................44
+7.3.1 Boolean functies .....................................................................................................................44
+7.3.2 Numerieke functies ...............................................................................................................44
+7.3.3 Datum functies .......................................................................................................................45
+7.3.4 String functies .........................................................................................................................45
+7.3.5 Lijst functies ............................................................................................................................45
+7.4 OBJECTEN, GROEPEN EN ATTRIBUTEN ..............................................................................................45
+7.5 OVERIG................................................................................................................................................46
+7.5.1 Closure expressie...................................................................................................................46
+
+OperatieBRP
+
+Pagina 4 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+28-11-2016
+
+0.1
+
+Operatie BRP
+
+02-03-2017
+16-03-2017
+27-03-2017
+03-04-2017
+
+0.3
+0.4
+0.5
+1.0
+
+05-04-2017
+20-04-2017
+
+1.1
+1.2
+
+Initiële versie afgesplitst vanuit het
+technisch ontwerp.
+Opmerkingen interne review verwerkt.
+Opmerkingen van verwerkt.
+Reviewcommentaar toegevoegd
+Functie SELECTIE_DATUM() toegevoegd.
+Versie definitief gemaakt.
+Opmaak aangepast.
+Paragraaf 5.2 (Onbekende waarden)
+herschreven. Beschrijvingen van de HIS*
+functies aangepast.
+
+Omschrijving
+
+Reviewers
+
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+OperatieBRP
+
+Versie
+
+Pagina 5 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+1
+
+Inleiding
+
+De BRP-expressietaal (of verkort expressietaal) is een taal om expressies te beschrijven die gaan
+over gegevens uit de Basisregistratie Personen. De expressietaal wordt op twee manieren
+gebruikt:
+• Enerzijds om een populatie van personen uit te drukken. Bijvoorbeeld: “alle vrouwen”,
+“iedereen ouder dan 18 jaar” en “iedereen die woont in gemeente Neerijnen”. Dit wordt
+toegepast bij het autoriseren van afnemers.
+• Anderzijds om vast te stellen of gegevens van een persoon zijn gewijzigd. Dit wordt toegepast
+bij het leveren van gewijzigde gegevens aan afnemers, het zogenaamde “Attenderen”.
+De opzet van de taal heeft overeenkomsten met SQL, maar ook een aantal opvallende
+afwijkingen. Bij het ontwerp van de taal is rekening gehouden met conventies op het gebied van
+talen zoals SQL, de leesbaarheid van expressies en de nauwkeurigheid waarmee expressies
+beschreven kunnen worden.
+Voor het ontwerp en de implementatie van de expressietaal zijn de volgende richtlijnen gebruikt:
+• De expressietaal moet leesbaar en begrijpelijk zijn;
+• Concepten in de taal moeten zoveel mogelijk Nederlands zijn, met eventuele uitzonderingen
+voor specifiek (Engelstalig) jargon;
+• De taal dient zoveel als mogelijk in het Nederlands te zijn. Voor (Engelstalig) jargon geldt
+eventueel een uitzondering.
+• De implementatie moet, waar mogelijk, ontkoppeld zijn van andere onderdelen van de BRP;
+• De implementatie moet efficiënt zijn (het bepalen van gegevens van een persoon,
+bijvoorbeeld, moet snel uitgevoerd kunnen worden);
+• Fouten in expressies moeten zo vroeg mogelijk gevonden worden;
+Dit document is geschreven voor gebruikers van de expressietaal en voor ontwerpers en
+ontwikkelaars die de expressietaal onderhouden. Dit document beschrijft hoe de expressietaal
+gebruikt kan worden. De technische werking van de component in de BRP waarin de
+expressietaal is geïmplementeerd, is beschreven in het technisch ontwerp en is geen onderdeel
+van dit document.
+
+OperatieBRP
+
+Pagina 6 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+2
+
+Expressies
+
+De BRP-expressietaal stelt gebruikers in staat om met behulp van expressies, beweringen over
+personen in de BRP te beschrijven.
+Voorbeelden van beweringen zijn: “de persoon is een man”, “de persoon is geboren in gemeente
+Neerijnen”, “de persoon heeft kinderen” en “de persoon is geboren vóór 1 januari 1950”.
+De expressies die deze beweringen beschrijven zien er als volgt uit:
+•
+•
+•
+•
+
+de
+de
+de
+de
+
+persoon
+persoon
+persoon
+persoon
+
+is een man: Persoon.Geslachtsaanduiding.Code = “M”;
+is geboren in gemeente Neerijnen:Persoon.Geboorte.GemeenteCode = 3041;
+heeft kinderen: AANTAL(GerelateerdeKind) > 0;
+is geboren vóór 1 januari 1950: Persoon.Geboorte.Datum < 1950/jan/01.
+
+De expressies gaan over gegevens die in de BRP beschikbaar zijn. Een gegeven in een expressie,
+zoals “Persoon.Geslachtsaanduiding.Code” of “Persoon.Geboorte.Datum”, wordt een
+attribuut genoemd.
+Nota Bene: werkelijkheid en administratie
+Expressies zeggen iets over geadministreerde gegevens en niet over de werkelijkheid. Als in dit
+document bijvoorbeeld staat dat een expressie controleert of “de persoon P kinderen heeft”,
+dient dat gelezen te worden als “bij de persoon P, zoals die bekend is in de BRP, zijn kinderen
+geregistreerd”. Ten behoeve van leesbaarheid is de verkorte schrijfwijze gekozen ook omdat die
+de intentie beter weerspiegelt.
+Een expressie wordt door het systeem geëvalueerd tot een waarde. In de meeste gevallen tot
+een boolean (Ja/Nee) waarde. Een voorbeeld hiervan is de expressie die de populatiebeperking
+in een leveringsautorisatie beschrijft. Door de expressie te evalueren voor een persoon tot een
+boolean waarde kan worden bepaald of de persoon wel of niet tot de populatie behoort.
+Expressies kunnen worden genest door zelf ook weer gebruik te maken van expressies. Deze
+geneste expressies kunnen evalueren tot een ander soort waarde bijvoorbeeld een getal
+(numeric), datum, datum/tijd of tekst (string). Ook kan een expressie evalueren tot een
+verzameling (set) van waarden.
+De volgende paragrafen beschrijven de verschillende soorten expressies.
+
+2.1
+
+Boolean expressie
+De boolean-expressie evalueert tot een Ja/Nee waarde. Expressies zoals de populatiebeperking
+en het attenderingscriterium binnen de leveringsautorisaties zijn boolean expressies. Een
+boolean expressie is:
+• een constante, bijvoorbeeld:
+WAAR
+• een vergelijking, bijvoorbeeld:
+Persoon.Geslachtsaanduiding.Code = “M”
+
+1
+
+Gemeente Neerijnen heeft als gemeentecode 304 en Persoon.Geboorte.GemeenteCode geeft de code van een gemeente terug.
+
+OperatieBRP
+
+Pagina 7 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+• met operatoren opgebouwd uit kleinere boolean expressies, bijvoorbeeld:
+(Persoon.Geslachtsaanduiding.Code = “M”) EN (Persoon.Geboorte.Datum >
+2010/01/01)
+• een functie met een boolean resultaat, bijvoorbeeld:
+KV(Persoon.Overlijden)
+• een enkelvoudige attribuutwaarde van het type boolean, bijvoorbeeld:
+Persoon.Indicatie.DerdeHeeftGezag.Waarde
+De constanten en operatoren worden in de volgende paragrafen beschreven. Vergelijkingen,
+functies en attributen zijn beschreven in opvolgende hoofdstukken 3, 4 en 6.
+
+2.1.1
+
+Constanten
+Expressies in de BRP gaan vaak over uitspraken die waar of onwaar zijn (het BSN van deze
+persoon is XYZ, deze persoon is nooit gehuwd geweest, etc.). Voor dergelijke boolean-expressies
+bestaan twee constanten: WAAR en ONWAAR.
+
+2.1.2
+
+Operatoren
+Boolean expressies kunnen worden opgebouwd uit kleinere boolean expressies door het gebruik
+van logische operatoren.
+De taal kent de volgende logische operatoren:
+• OF (logische of),
+• EN (logische en),
+• NIET (logische niet).
+Voor deze operatoren gelden de volgende (standaard) logicaregels:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+A OF B = B OF A
+A OF WAAR = WAAR
+A OF ONWAAR = A
+ONWAAR OF ONWAAR = ONWAAR
+A EN B = B EN A
+A EN WAAR = A
+A EN ONWAAR = ONWAAR
+WAAR EN WAAR = WAAR
+NIET WAAR = ONWAAR
+NIET ONWAAR = WAAR
+NIET (NIET A) = A
+
+Ontwerpkeuze expressietaal
+Bij de berekening van een logische expressie worden niet noodzakelijk alle termen uitgerekend.
+De expressietaal volgt dezelfde regels als bijvoorbeeld bij de operatoren && en || in Java.
+WAAR OF X is altijd WAAR ongeacht de waarde van X en ook zonder de waarde van X te
+bepalen (dus ook WAAR OF NULL is WAAR). ONWAAR EN X is altijd ONWAAR ongeacht de
+waarden van X en zonder X te berekenen.
+
+OperatieBRP
+
+Pagina 8 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+Bij de evaluatie van logische operatoren is de EN operator sterker dan de OF operator. Ofwel
+eerst wordt de EN operator uitgevoerd en daarna pas de OF operator. Dit betekent:
+• WAAR OF ONWAAR EN ONWAAR = WAAR OF (ONWAAR EN ONWAAR) = WAAR
+• WAAR EN ONWAAR OF ONWAAR = (WAAR EN ONWAAR) OF ONWAAR = ONWAAR
+Wanneer de EN en OF operatoren in dezelfde expressie gebruikt worden, vergroot het gebruik
+van haakjes de leesbaarheid.
+2.2
+
+Numerieke expressie
+De numerieke expressie evalueert tot een numerieke waarde ofwel een getal. Het resultaat van
+een numerieke expressie kan vervolgens weer worden gebruikt in bijvoorbeeld een vergelijking.
+Een numerieke expressie is:
+• een constante, bijvoorbeeld:
+42
+• met operatoren opgebouwd uit kleinere numerieke expressies, bijvoorbeeld:
+42 + 23
+• een functie met een numeriek resultaat, bijvoorbeeld:
+AANTAL_DAGEN(2000)
+• een enkelvoudige attribuutwaarde van het type getal, bijvoorbeeld:
+Persoon.Geboorte.GemeenteCode
+De constanten en operatoren worden in de volgende paragrafen beschreven. Functies zijn
+beschreven in het volgende hoofdstuk en attribuutwaarden in de bijlage.
+
+2.2.1
+
+Constanten
+De expressietaal kent alleen hele getallen als numerieke waarden – en geen decimalen. Een
+getal kan positief of negatief zijn. Getallen in de expressietaal worden vooral gebruikt bij
+datumberekeningen of het tellen van aantallen gegevens.
+
+2.2.2
+
+Operatoren
+De taal kent de volgende binaire rekenkundige operatoren die toegepast kunnen worden op
+getallen:
+• + (optellen),
+• - (aftrekken).
+Voor de operatoren gelden standaardregels (1 + 1 is 2, 5 - 2 is 3, etc.). Alle termen in een
+rekenkundige expressie worden uitgerekend om het resultaat te bepalen.
+De taal kent ook een unaire operator - om de tegengestelde waarde van een getal te bepalen ((2+3) = -5 en 5 + -5 is 0).
+Het gebruik van haakjes wordt ondersteund en vergroot de leesbaarheid van de expressie.
+
+OperatieBRP
+
+Pagina 9 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+2.3
+
+Datumexpressie
+De datumexpressie evalueert tot een datum of een datum en een tijd. Het resultaat van een
+datumexpressie kan vervolgens weer worden gebruikt in bijvoorbeeld een vergelijking. Een
+datumexpressie is:
+• een constante, bijvoorbeeld:
+2013/04/20
+• met operatoren opgebouwd uit kleinere expressies, bijvoorbeeld:
+2013/04/20 + ^1/0/?
+• een functie met een datum als resultaat, bijvoorbeeld:
+VANDAAG()
+• een enkelvoudige attribuutwaarde van het type datum, bijvoorbeeld:
+Persoon.Geboorte.Datum
+De constanten en operatoren worden in de volgende paragrafen beschreven. Functies en
+attributen zijn beschreven in opvolgende hoofdstukken.
+
+2.3.1
+
+Constanten
+
+2.3.1.1
+
+Datum
+Data worden in de expressietaal als volgt genoteerd: jaar/maand/dag, waarbij
+• jaar een positief, geheel getal, is of 0 indien onbekend,
+• maand een geheel getal, is groter of gelijk aan 1 en kleiner of gelijk aan 12, een naam van de
+maand (zie hieronder) of 0 indien onbekend, en
+• dag een geheel getal, is groter of gelijk aan 1 en kleiner of gelijk aan 31 (afhankelijk van de
+maand) of 0 indien onbekend.
+Het is mogelijk om voor een maand een symbolische naam te gebruiken. De toegestane waarden
+zijn: JANUARI, JAN, FEBRUARI, FEB, MAART, MRT, APRIL, APR, MEI, JUNI, JUN, JULI,
+JUL, AUGUSTUS, AUG, SEPTEMBER, SEP, OKTOBER, OKT, NOVEMBER, NOV, DECEMBER
+en DEC.
+De waarde 0 geeft aan dat een deel van de datum onbekend is. Dit komt bijvoorbeeld voor in
+gevallen waarin brondocumenten onvoldoende informatie bevatten om de datum precies te
+bepalen. Voor het omgaan met geheel of deels onbekende data volgt de expressietaal dezelfde
+regels als de BRP: als de maand onbekend is, is de dag ook onbekend en als het jaartal
+onbekend is, zijn maand en dag ook onbekend.
+Voorbeelden van data in de expressietaal:
+•
+•
+•
+•
+
+2013/04/20 (20 april 2013),
+1940/JAN/1 (1 januari 1940),
+1970/FEBRUARI/8 (8 februari 1970),
+1965/10/0 (oktober 1965, dag onbekend),
+
+OperatieBRP
+
+Pagina 10 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+• 1982/0/0 (jaar 1982, maand en dag onbekend),
+• 0/0/0 (onbekende datum).
+De volgende datumexpressies zijn incorrect:
+• 1975/5 (dag ontbreekt),
+• 2010/16/20 (fout maandnummer),
+
+2.3.1.2
+
+Datumtijd
+Datum met tijd wordt in de expressietaal als volgt genoteerd:
+jaar/maand/dag/uur/minuut/seconde.
+Voor het datumdeel gelden dezelfde voorwaarden als gespecificeerd voor de datumnotatie.
+Voor het tijddeel gelden de volgende voorwaarden:
+• uur; een positief getal groter of gelijk aan 0 en kleiner of gelijk aan 23
+• minuut; een positief getal groter of gelijk aan 0 en kleiner of gelijk aan 59
+• seconde; een positief getal groter of gelijk aan 0 en kleiner of gelijk aan 59
+
+2.3.1.3
+
+Periode
+Ten behoeve van berekeningen met data en periodes is het mogelijk om een periode uit te
+drukken als ^jaar/maand/dag, waarbij jaar, maand en dag getallen zijn, positief of negatief.
+De expressie ^20/0/0 is een periode van 20 jaar en de expressie ^0/0/100 een periode van
+100 dagen.
+Als de periode in jaren en maanden is uitgedrukt, kan de lengte van de periode in dagen
+verschillen. Als bij de datum 1 januari 2001 de periode ^0/1/0 wordt opgeteld tot 1 februari
+2001, is de lengte van de periode 31 dagen; als die periode bij de datum 1 februari 2001 wordt
+opgeteld, is de lengte 28 dagen. Indien de lengte van een periode in dagen van belang is, moet
+de periode ook in dagen worden uitgedrukt. Ongeacht de datum levert het optellen van
+^0/0/50 altijd een datum die precies 50 dagen verder ligt.
+In een periode kan ook het teken ? worden gebruikt om bij het rekenen betreffend deel van de
+datum of tijd tot 0 (onbekend) te laten evalueren, ongeacht de waarde.
+Het rekenen met data en periodes is verder toegelicht in 2.3.2.
+
+2.3.2
+
+Operatoren
+De taal kent de volgende binaire rekenkundige operatoren met data:
+• + (optellen),
+• - (aftrekken).
+Daarbij dient links van de operator een periode, datum of datumtijd gebruikt te worden en rechts
+van de operator moet altijd een periode worden opgegeven.
+De expressietaal biedt verschillende manieren om met data en periodes te rekenen. Dit is niet
+alleen om vrijheid in de expressie te bieden, maar ook omdat de eisen rondom het rekenen met
+periodes onderling kunnen verschillen.
+
+OperatieBRP
+
+Pagina 11 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+De eenvoudigste, tevens meest gebruikte, periode is gedefinieerd als een aantal dagen. Dit kan
+uitgedrukt worden zonder speciale notatie. Als een getal bij een datum wordt opgeteld of ervan
+afgetrokken, is daarmee een aantal dagen bedoeld. De expressie 1980/3/1 + 40 betekent
+bijvoorbeeld 40 dagen na 1 maart 1980 en evalueert naar 10 april 1980 en
+Persoon.Geboorte.Datum + 100 betekent 100 dagen na de geboorte.
+Het is ook mogelijk om een periode (zie 2.3.1.3) bij een datum op te tellen of van een datum af
+te trekken. Als de datum correct is, levert het optellen of aftrekken van een periode ook altijd
+een correcte datum.
+Het optellen van een aantal dagen x bij een datum jaar/maand/dag (jaar/maand/dag + x)
+is gelijk aan jaar/maand/dag + ^0/0/x.
+De expressietaal kent een functie DATUM(jaar, maand, dag) (zie paragraaf 4.1.6 voor een
+precieze beschrijving) die een correcte datum maakt van de drie argumenten. Het optellen van
+een periode bij een datum kan met behulp van die functie gedefinieerd worden:
+j/m/d + ^pj/pm/pd is gedefinieerd als DATUM(j+pj, m+pm, d+pd).
+Voorbeelden
+Expressie
+
+Toelichting
+
+Evaluatie
+
+1980/MRT/01 + 40
+
+40 dagen na 1 maart 1980
+
+1980/04/10
+
+1980/MRT/01 – 40
+
+40 dagen voor 1 maart 1980
+
+1980/01/21
+
+1980/ MRT /01 + ^0/0/40
+
+40 dagen na 1 maart 1980
+
+1980/04/10
+
+1980/MRT/01 - ^0/0/40
+
+40 dagen voor 1 maart 1980
+
+1980/01/21
+
+1980/MRT/01 + ^0/0/-40
+
+40 dagen voor 1 maart 19802
+
+1980/01/21
+
+1980/MEI/31 + ^0/0/30
+
+30 dagen na 31 mei 1980
+
+1980/06/30
+
+1980/MEI/31 + ^0/0/31
+
+31 dagen na 31 mei 1980
+
+1980/07/01
+
+1980/MEI/31 + ^0/0/?
+
+Zet de dag op onbekend van 31 mei 1980
+
+1980/07/?
+
+1980/MRT/01 + ^0/1/0
+
+1 maand na 1 maart 1980
+
+1980/04/01
+
+1980/FEB/28 + ^0/1/0
+
+1 maand na 28 februari 1980
+
+1980/03/28
+
+1980/FEB/28 + ^1/?/?
+
+Zet de dag en maand op onbekend van 1
+jaar na 28 februari 1980
+
+1981/?/?
+
+1980/JAN/31 + ^0/1/0
+
+1 maand na 31 januari 1980; aangezien 31
+februari niet bestaat, maakt de functie
+DATUM er een correcte datum van in
+maart.
+
+1980/03/02
+
+Het rekenen met data op de laatste dag van de maand vereist speciale aandacht. Als een periode
+bij een datum wordt opgeteld, zoals ^0/1/0 bij 28 februari 1980 hierboven, wordt geen
+rekening gehouden met de mogelijk impliciete intentie dat het gaat om de laatste dag van de
+maand. 28 februari is een gewone datum en een maand later is 28 maart bij die berekening.
+In bepaalde gevallen is het echter wel nodig om met de laatste dag van een maand te rekenen.
+De expressietaal biedt daarvoor ondersteunende functies, zoals LAATSTE_DAG (zie 4.1 voor
+datumfuncties).
+
+2 Formeel zegt de expressie: “-40 dagen na 1 maart 1980”.
+
+OperatieBRP
+
+Pagina 12 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+Ontwerpkeuze
+Het rekenen met data, en in het bijzonder met de laatste dag van een maand, moet expliciet
+zichtbaar zijn in een expressie. Dit voorkomt dat er soms wel en soms niet een bijzondere
+betekenis aan bijvoorbeeld 28 februari of 31 december wordt gegeven ten opzichte van 27
+februari en 30 december. Zie de beschrijving van datumfuncties verderop voor de mogelijkheden
+in de expressietaal.
+
+2.4
+
+Stringexpressie
+De datumexpressie evalueert tot een datum of een datum en een tijd. Het resultaat van een
+datumexpressie kan vervolgens weer worden gebruikt in bijvoorbeeld een vergelijking. Een
+datumexpressie is:
+• een constante, bijvoorbeeld:
+“Jan”
+• een functie met een string als resultaat, bijvoorbeeld:
+ALS(Persoon.Geboorte.Datum < 2000/01/01, “voor2000”, “na2000”)
+• een enkelvoudige attribuutwaarde van het type string, bijvoorbeeld:
+Persoon.SamengesteldeNaam.Voornamen
+De constanten worden in de volgende paragraaf beschreven. Functies en attributen zijn
+beschreven in opvolgende hoofdstukken.
+
+2.4.1
+
+Constanten
+Constante stringwaarden worden opgenomen binnen dubbele quotes (“, ASCII code 33). Alle
+karakters tussen de dubbele quotes worden beschouwd onderdeel te zijn van de constante. Er is
+geen escape mechanisme om karakters op bijvoorbeeld ASCII code op te nemen. Dit betekent
+dat de dubbele quote zelf geen onderdeel kan zijn van een string constante.
+
+2.5
+
+Lijstexpressie
+Een lijstexpressie evalueert tot een lijst van waarden. De expressietaal ondersteunt lijsten van
+de volgende typen:
+•
+•
+•
+•
+•
+•
+•
+
+Boolean waarde
+Numerieke waarde
+Datum(tijd) waarde
+String waarde
+Object
+Groep
+Actie
+
+Een lijstexpressie is:
+• een constante, bijvoorbeeld:
+{ 1, 2, 3 }
+
+OperatieBRP
+
+Pagina 13 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+• een functie met een lijst als resultaat, bijvoorbeeld:
+ACTIE(Persoon.Voornaam.Actieverval, Tijdstipregistratie)
+• een object, groep of meervoudig attribuut, bijvoorbeeld:
+Persoon.Geboorte
+Indien een lijstexpressie bestaat uit een meervoudig attribuut resulteert dit in een lijst met de op
+de persoonslijst opgenomen waarden voor dit attribuut. Lijsten met waarden (boolean,
+numeriek, datum(tijd) of string) kunnen worden gebruikt in functies of met vergelijkingen.
+De constanten worden in de volgende paragraaf beschreven. Functies en attributen zijn
+beschreven in opvolgende hoofdstukken.
+
+2.5.1
+
+Constanten
+De expressietaal kan omgaan met lijsten van waarden. Deze worden genoteerd met accolades,
+waarbinnen zich de opsomming van elementen bevindt, gescheiden door komma’s. Een lijst
+zonder elementen wordt aangeduid met enkel accoladen ({}). Lijsten in de expressietaal zijn
+ongeordend; de lijst {1, 2, 3} is in principe gelijk aan {3, 2, 1}.
+De elementen van een lijst zijn zelf weer expressies. Dat kan ook een berekening ({1+2,
+geboorte.datum > 1970/01/01}) zijn.
+Voorbeelden
+Expressie
+
+Toelichting
+
+{ 1, 2, 3 }
+
+Een lijst die als elementen de getallen 1, 2 en 3 heeft.
+
+{}
+
+Een lijst zonder elementen: een lege lijst.
+
+{ “Bilbo”, “Frodo” }
+
+Een lijst die als elementen de datum 1 oktober 1980 en de string
+“Frodo” heeft.
+
+Ontwerpkeuze
+Lijsten in de expressietaal zijn ongeordend omdat de lijsten in de gegevens ook ongeordend zijn.
+De expressietaal voegt niet zelf een ordening toe.
+
+OperatieBRP
+
+Pagina 14 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+3
+
+Vergelijking
+
+Met een vergelijking kan een lijst met een andere waarde of lijst worden vergeleken. Het
+resultaat is WAAR of ONWAAR. Er wordt onderscheid gemaakt tussen eenvoudige
+vergelijkingen tussen een lijst en een waarde, vergelijkingen met een patroon en vergelijkingen
+tussen twee lijsten.
+3.1
+
+Eenvoudige vergelijking
+Vergelijkingen leveren altijd een boolean waarde. Links van de operator staat altijd een
+verzameling (set) van waarden. Indien links van de operator één waarde is opgenomen, wordt
+dit beschouwt als een verzameling (set) van één waarde. De vergelijkingsoperator wordt
+uitgevoerd op de in de verzameling opgenomen waarden links van de operator.
+Met een E of een A voor de operator wordt aangegeven of de vergelijking waar moet zijn voor
+één of voor alle waarden in de verzameling links van de operator.
+De expressietaal ondersteunt de volgende operatoren:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+E= (er is er één gelijk aan),
+A= (alle zijn gelijk aan),
+E<> (er is er één ongelijk aan),
+A<> (alle zijn ongelijk aan),
+E< (er is er één kleiner dan),
+A< (alle zijn kleiner dan),
+E<= (er is er één kleiner dan of gelijk aan),
+A<= (alle zijn kleiner dan of gelijk aan),
+E> (er is er één groter dan),
+A> (alle zijn groter dan),
+E>= (er is er één groter dan of gelijk aan),
+A>= (alle zijn groter dan of gelijk aan),
+
+Deze operatoren zijn te gebruiken voor boolean aarden, numerieke waarden, data en strings.
+Links van de operator staat een verzameling (set) van waarden. Rechts van de operator staat
+een enkele waarde. Het type van de waarde dient links en rechts gelijk te zijn (booleans moeten
+met booleans worden vergeleken, numerieke waarden met numerieke waarden, data met data
+etc).
+Als de verzameling (set) waarden links van de operator exacte één waarde bevat is er geen
+onderscheid tussen de E-operator en de A-operator. De volgende twee vergelijkingen zijn gelijk:
+• {2} E= 2
+• {2} A= 2
+Voor enkelvoudige attributen (attributen op groepen van het object persoon) geldt ook dat er
+geen verschil tussen de E-operator en de A-operator. Ook de volgende twee vergelijkingen zijn
+gelijk:
+• geboortedatum E= 1990/JAN/01
+• geboortedatum A= 1990/JAN/01
+Voor meervoudige attributen (attributen op groepen van andere objecten) geldt dat er wel
+verschil is tussen de E-operator en de A-operator. De volgende twee vergelijkingen zijn niet
+gelijk:
+• kind.geboortedatum E= 1990/JAN/01
+
+OperatieBRP
+
+Pagina 15 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+• kind.geboortedatum A= 1990/JAN/01
+De bovenste E= vereist dat er minimaal één kind is geboren op 1 januari 1990. De onderste A=
+vereist dat alle kinderen zijn geboren op 1 januari 1990.
+Als er geen kinderen zijn, evalueren beide expressies naar ONWAAR.
+Bij het vergelijken van twee expressies worden beide expressies geëvalueerd. Als minstens één
+van beide NULL is, is het resultaat ook NULL, want een ander resultaat is niet met zekerheid
+vast te stellen. In andere gevallen is het resultaat WAAR of ONWAAR, afhankelijk van de
+vergeleken waarden.
+Het vergelijken van getallen en strings gaat op de bekende wijze. Bij het vergelijken van
+booleans geldt WAAR is groter dan ONWAAR.
+Voor data geldt dat de elementwaarde 0 voor onbekend wordt vergeleken als zijnde de
+numerieke waarde 0 in de opvolgende reeks 0, 1, 2, etc. Dus 1979/01/00 < 1979/01/01 is
+WAAR en 1979/01/00 > 1979/01/01 is ONWAAR.
+
+3.2
+
+Vergelijking met een patroon
+Naast de reguliere vergelijkingsoperatoren kent de expressietaal de operator E%= en A%= om
+een verzameling (set) van waarden te vergelijken met een patroon. Hiervoor zijn twee
+toepassingen: vergelijking van een string met behulp van wildcards en vergelijking van een
+datum met een datumpatroon.
+In alle gevallen geldt dat het eerste operand de te controleren waarde is en het tweede operand
+het patroon: <waarde> %= <patroon> (deze operator is niet symmetrisch).
+Voor het vergelijken van strings met operator %= kent de expressietaal twee soorten wildcards:
+een ? matcht één willekeurig teken en een * matcht nul of meer willekeurige tekens. Het patroon
+"?bcd" matcht met "abcd", maar niet met "bcd" of "aabcd"; het patroon "a*d" matcht met "abcd"
+en "ad", maar niet met "abcde".
+Bij het vergelijken van data is het patroon een volledige of onvolledige datum. Bij de vergelijking
+wordt gekeken of de te controleren datum voldoet aan het patroon. Patroon 1980/JAN/?
+matcht met 1980/JAN/04 en 1980/JAN/?, maar niet met 1981/JAN/? of 1980/FEB/?.
+De expressies in de volgende voorbeelden zijn WAAR:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+“Jan” E=% “J*”
+“Jan” E=% “J?n”
+“Jan” E=% “Jan”
+“Jansen” E=% “Jan*”
+1990/JAN/01 E=% 1990/JAN/01
+1990/JAN/01 E=% 1990/JAN/?
+1990/JAN/01 E=% 1990/?/?
+1990/JAN/00 E=% 1990/?/?
+1990/JAN/? E=% 1990/JAN/?
+1990/?/? E=% 1990/?/?
+1990/?/? E=% 1990/JAN/01
+1990/?/? E=% 1990/JAN/?
+
+De volgende expressies zijn ONWAAR:
+• 1990/JAN/? E=% 1990/FEB/?
+• 1990/JAN/? E=% 1990/JAN/01
+
+OperatieBRP
+
+Pagina 16 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+• 1990/JAN/? E=% 1990/JAN/00
+• 1990/JAN/00 E=% 1990/JAN/01
+• 1990/JAN/01 E=% 1990/JAN/00
+Het onderscheid tussen E%= en A%= is vergelijkbaar met de eenvoudige operatoren: Bij E%=
+moet er één waarde in de verzameling links van de operator aan het patroon voldoen. Bij de
+A%= moeten alle waarden in de verzameling links van de operator aan het patroon voldoen.
+
+3.3
+
+Vergelijking met een lijst
+De expressietaal kent een aantal operatoren om te beoordelen of waarden voorkomen in een
+lijst. De volgende operatoren worden door de expressietaal ondersteund:
+•
+•
+•
+•
+
+EIN (er is er één die voorkomt in)
+AIN (alle komen voor in)
+EIN% (er is er één die voldoet aan een patroon in)
+AIN% (alle komen voldoen aan een patroon in)
+
+De operatoren EIN en AIN controleren of een bepaalde waarde voorkomt in een verzameling
+(set) en wordt als volgt genoteerd: set_A EIN set_B. Als minimaal één waarde in set_A
+voorkomt in set_B, is het resultaat WAAR; anders is het ONWAAR. Deze operator kan
+bijvoorbeeld gebruikt worden om te controleren of de geboortegemeente van een persoon
+voorkomt in een lijst van gemeenten.
+De operator EIN% werkt op een vergelijkbare manier als de operator EIN, maar gebruikt de
+operator %= om waarden te vergelijken in plaats van =. De expressie set_A EIN% set_B is
+WAAR als minimaal één waarde van set_A voldoet aan een van de patronen in set_A; met
+andere woorden: als waarde %= element is WAAR. Dergelijke controles komen regelmatig
+voor bij het vaststellen of een postcode in een postcodegebied valt.
+Voorbeelden
+Expressie
+
+Evaluatie
+
+{1} EIN {1, 2, 3}
+
+WAAR
+
+{4} EIN {1, 2, 3}
+
+ONWAAR
+
+{728} EIN { }
+
+ONWAAR
+
+{“Jan”} EIN% {“J*”, “K*”}
+
+WAAR
+
+{“Pedro”} EIN% {“J*”, “K*”}
+
+ONWAAR
+
+{“3515AZ”} EIN% {“3515*”, “3516*, “3520A*”}
+
+WAAR
+
+OperatieBRP
+
+Pagina 17 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+4
+
+Functies
+
+De expressietaal kent diverse functies bijvoorbeeld voor bewerkingen op data, lijsten en het
+raadplegen van persoonsgegevens. Namen van functies worden met hoofdletters geschreven. De
+onderstaande paragrafen geven een overzicht van alle beschikbare functies.
+4.1
+
+Datumfuncties
+De volgende functies evalueren tot een numerieke waarde en kunnen daarmee gebruikt worden
+in numerieke expressies.
+
+4.1.1
+
+DAG
+De functie DAG(datum) geeft het nummer van de dag als numerieke waarde van de datum, of
+NULL als dat onbekend is. Deze functie kan ook gebruikt worden als de datum een tijd bevat.
+Voorbeelden
+
+4.1.2
+
+Expressie
+
+Resultaat
+
+DAG(1980/MRT/10)
+
+10
+
+DAG(1980/MRT/0)
+
+NULL
+
+DAG(NULL)
+
+NULL
+
+MAAND
+De functie MAAND(datum) geeft het maandnummer als numerieke waarde van de datum, of
+NULL als dat onbekend is. Deze functie kan ook gebruikt worden als de datum een tijd bevat.
+Voorbeelden
+
+4.1.3
+
+Expressie
+
+Resultaat
+
+MAAND(1980/MRT/10)
+
+3
+
+MAAND(1960/0/0)
+
+NULL
+
+MAAND(NULL)
+
+NULL
+
+JAAR
+De functie JAAR(datum) geeft het jaartal van de datum als numerieke waarde, of NULL als dat
+onbekend is. Deze functie kan ook gebruikt worden als de datum een tijd bevat.
+Voorbeelden
+Expressie
+
+Resultaat
+
+JAAR(1980/MRT/10)
+
+1980
+
+JAAR(NULL)
+
+NULL
+
+OperatieBRP
+
+Pagina 18 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+4.1.4
+
+AANTAL_DAGEN
+De functie AANTAL_DAGEN(jaar, maand) geeft het aantal dagen in de gegeven maand binnen
+het gegeven jaar als numerieke waarde. De functie is ook te gebruiken als
+AANTAL_DAGEN(jaar); in dat geval is het resultaat het aantal dagen in het gegeven jaar.
+Voorbeelden
+
+4.1.5
+
+Expressie
+
+Resultaat
+
+AANTAL_DAGEN(1950, 1)
+
+31
+
+AANTAL_DAGEN(1950, 2)
+
+28
+
+AANTAL_DAGEN(2000, 2)
+
+29
+
+AANTAL_DAGEN(1950)
+
+365
+
+AANTAL_DAGEN(2000)
+
+366
+
+AANTAL_DAGEN(NULL)
+
+NULL
+
+VANDAAG
+De functie VANDAAG() geeft de huidige datum, de datum waarop de evaluatie wordt
+uitgevoerd. De functie VANDAAG(jaarverschil) geeft de datum plus of min het gegeven
+jaarverschil. Het opgegeven aantal jaren wordt dan bij de datum van vandaag opgeteld. Dit biedt
+een van de mogelijkheden om een leeftijd te controleren.
+
+4.1.6
+
+SELECTIE_DATUM
+De functie SELECTIE_DATUM() geeft de datum waarvoor de selectie wordt uitgevoerd. Deze
+functie is alleen beschikbaar in de context van het uitvoeren van selecties. De functie
+SELECTIE_DATUM (jaarverschil) geeft de datum plus of min het gegeven jaarverschil. Het
+opgegeven aantal jaren wordt dan bij de datum van de selectie opgeteld. Dit biedt een van de
+mogelijkheden om een leeftijd te controleren.
+
+4.1.7
+
+DATUM
+De functie DATUM(jaar, maand, dag), waarbij jaar, maand en dag getallen zijn, maakt een
+correcte datum van gegeven jaartal, maand en dag. Als maand of dag buiten de grenzen
+vallen (bijvoorbeeld als maand 13 is), wordt de datum zodanig aangepast dat een correcte
+datum overblijft.
+Hieronder is in pseudocode gedefinieerd wat de functie DATUM(jaar, maand, dag) oplevert:
+• Zolang maand< 1: verlaag jaar met 1, verhoog maand met 12;
+• Zolang maand> 12: verhoog jaar met 1, verlaag maand met 12;
+• Zolang dag< 1: verlaag maand met 1, verhoog dag met het aantal dagen in maand in jaar;
+als hierdoor maand kleiner dan 1 wordt, verlaag jaar met 1 en verhoog maand met 12;
+• Zolang dag> aantal dagen in maand in jaar: verlaag dag met het aantal dagen in maand
+in jaar, verhoog maand met 1; als hierdoor maand groter dan 12 wordt, verhoog jaar met
+1 en verlaag maand met 12.
+Voorbeelden
+Expressie
+
+Resultaat
+
+DATUM(1970, 2, 20)
+
+1970/02/20
+
+OperatieBRP
+
+Pagina 19 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+4.1.8
+
+DATUM(1970, 0, 1)
+
+1969/12/01
+
+DATUM(1970, -1, 1)
+
+1969/11/01
+
+DATUM(1970, 4, 0)
+
+1970/03/31
+
+DATUM(1970, 13, 1)
+
+1971/01/01
+
+DATUM(1970, 12, 32)
+
+1971/01/01
+
+LAATSTE_DAG
+De functie LAATSTE_DAG(jaar, maand) geeft als datum de laatste dag van de gegeven
+maand in het gegeven jaar. De functie is ook te gebruiken als LAATSTE_DAG(jaar) wat de
+laatste dag van het gegeven jaar oplevert.
+Voorbeelden
+
+4.2
+
+Expressie
+
+Resultaat
+
+LAATSTE_DAG(1950, 1)
+
+1950/01/31
+
+LAATSTE_DAG(2000, 1)
+
+2000/01/31
+
+LAATSTE_DAG(2000, 2)
+
+2000/02/29
+
+LAATSTE_DAG(1950)
+
+1950/12/31
+
+LAATSTE_DAG(1960, NULL)
+
+NULL
+
+Lijstfuncties
+De expressietaal kent een aantal functies voor bewerkingen op lijsten.
+
+4.2.1
+
+AANTAL
+De functie AANTAL(lijst) geeft het aantal elementen van de lijst als numerieke waarde.
+Voorbeelden
+
+4.2.2
+
+Expressie
+
+Resultaat
+
+AANTAL( { 1 } )
+
+1
+
+AANTAL( { 1, 2, 3, 4 } )
+
+4
+
+AANTAL( { } )
+
+0
+
+AANTAL(NULL)
+
+NULL
+
+MAP
+De functie MAP(lijst, variabele, expressie) levert een lijst waarin elk element de evaluatie
+van de expressie is, waarbij variabele achtereenvolgens de waarde van elk element uit de lijst
+krijgt. Gebruik van deze constructie is te zien als de uitvoering van een functie (expressie) op
+een domein van waarden (lijst).
+Voorbeelden
+Expressie
+
+Resultaat
+
+MAP({1,2,3}, x, x + x)
+
+{2, 4, 6}
+
+MAP({ }, x, x + 1)
+
+{}
+
+OperatieBRP
+
+Pagina 20 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+4.3
+
+MAP({2, 4, 8, 16}, a, 10)
+
+{10, 10, 10, 10}
+
+MAP(GerelateerdeKind.Persoon, k,
+k.Geboorte.Datum)
+
+Een lijst met alle geboortedata van de
+kinderen.
+
+MAP(lijst, x, x)
+
+Een lijst met de oorspronkelijke
+elementen uit lijst.
+
+Filterfuncties
+De expressietaal biedt een aantal functies om waarden te controleren of waarden uit een lijst te
+selecteren.
+
+4.3.1
+
+ALS
+De functie ALS(conditie, expressie1, expressie2) levert de waarde van expressie1 als de
+conditie WAAR is, anders de waarde van expressie2.
+Voorbeelden
+
+4.3.2
+
+Expressie
+
+Resultaat
+
+ALS(WAAR, 1, 2)
+
+1
+
+ALS(ONWAAR, 1, 2)
+
+2
+
+ALS(Persoon.Geboorte.Datum <
+2000/01/01, “voor2000”,
+“na2000”)
+
+Als de persoon, waarvoor de expressie wordt
+geëvalueerd, geboren is vóór 1 januari 2000, is het
+resultaat “voor2000”. Zo niet, dan is het resultaat
+“na2000”.
+
+FILTER
+De functie FILTER(lijst, variabele, conditie) geeft een lijst terug van alle elementen uit lijst
+die voldoen aan de conditie. Daarbij krijgt de variabele achtereenvolgens de waarde van elk
+element uit de lijst en wordt de conditie gecontroleerd.
+Voorbeelden
+Gewenst resultaat
+
+Expressie
+
+Alle elementen kleiner dan of gelijk aan
+2
+
+FILTER({1,2,3,4}, x, x <= 2)
+
+Alle ouders die geslachtsaanduiding “M”
+(man) hebben
+
+FILTER(GerelateerdeOuder.Persoon, o, o.
+Geslachtsaanduiding.Code = "M")
+
+De expressie FILTER(lijst, x, x <= 2) dient gelezen te worden als: “geef alle elementen x uit
+de lijst waarvoor geldt x <= 2”.
+
+OperatieBRP
+
+Pagina 21 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+4.3.3
+
+ER_IS
+De functie ER_IS(lijst, variabele, conditie) bepaalt of er een element van de lijst voldoet aan
+de conditie, waarbij variabele achtereenvolgens de waarde van elk element uit de lijst krijgt.
+Als tenminste één element voldoet, is het antwoord WAAR; is er geen element dat voldoet, dan
+is het antwoord ONWAAR.
+Voorbeelden
+
+4.3.4
+
+Expressie
+
+Resultaat
+
+ER_IS({1, 2, 3}, x, x = 1)
+
+WAAR
+
+ER_IS({1, 2, 3}, x, x > 4)
+
+ONWAAR
+
+ER_IS({ }, x, x = 1)
+
+ONWAAR
+
+ER_IS(GerelateerdeKind.Persoon,
+k, k.Geboorte.Datum <
+2000/01/01)
+
+Als de persoon een kind heeft dat geboren is vóór 1
+januari 2000, is het resultaat WAAR. Zo niet, dan is het
+ONWAAR.
+
+ALLE
+De functie ALLE(lijst, variabele, conditie) bepaalt of alle elementen van de lijst voldoen aan
+de conditie, waarbij variabele achtereenvolgens de waarde van elk element uit de lijst krijgt.
+Als alle elementen voldoen, is het antwoord WAAR; anders is het antwoord ONWAAR.
+Voorbeelden
+
+4.4
+
+Expressie
+
+Resultaat
+
+ALLE({1, 2, 3}, x, x = 1)
+
+ONWAAR
+
+ALLE({1, 2, 3}, x, x <= 3)
+
+WAAR
+
+ALLE({1, 2, 3}, x, x > 2)
+
+ONWAAR
+
+ALLE({ }, x, x > 0)
+
+WAAR
+
+ALLE(GerelateerdeKind.Persoon,
+k, k.Geboorte.Datum <
+2000/01/01)
+
+Als alle kinderen van de persoon geboren zijn vóór 1
+januari 2000, is het resultaat WAAR. Zo niet, dan is het
+ONWAAR.
+
+Domeinfuncties
+De expressietaal kent nog een aantal domeinfuncties, functies die niet onder de eerdere
+categorieën passen en van toepassing zijn op het gegevensdomein van de BRP.
+
+4.4.1
+
+GEWIJZIGD
+De functie GEWIJZIGD(oud, nieuw) of GEWIJZIGD(oud, nieuw, expressie) wordt gebruikt
+om te bepalen of er een wijziging heeft plaatsgevonden. Deze functie kan alleen worden gebruikt
+bij mutatielevering en attendering. Alleen bij een mutatielevering en attendering is er sprake van
+een oude situatie en een nieuwe situatie.
+De eerste parameter oud drukt uit welke context gebruikt dient te worden als oude situatie (zie
+ook paragraaf 5.3), voor de mutatie. Door oud als waarde mee te geven wordt de gehele
+persoonslijst voor wijziging als context meegegeven. Maar met een expressie kan deze context
+ook worden versmald tot een object zoals een huwelijk of een adres.
+
+OperatieBRP
+
+Pagina 22 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+De tweede parameter nieuw drukt uit welke context gebruikt dient te worden als nieuwe
+situatie, na de mutatie. Hier kan nieuw als waarde meegegeven worden om de gehele
+persoonslijst voor wijziging als context meegegeven. Het soort object dient gelijk te zijn aan de
+aanduiding in de eerste parameter.
+Vervolgens kan ofwel de gehele context worden vergeleken door geen expressie mee te geven
+met GEWIJZIGD(oud, nieuw), of kan een expressie worden meegegeven om te vergelijken of
+de expressie voor en na de mutatie tot dezelfde waarde evalueert met GEWIJZIGD(oud,
+nieuw, expressie).
+Voorbeelden
+Expressie
+
+Resultaat
+
+GEWIJZIGD(oud, nieuw,
+Persoon.Identificatienummers.Burgerservicenummer)
+
+Als het burgerservicenummer is
+gewijzigd is het resultaat WAAR.
+Zo niet, dan is het ONWAAR.
+
+GEWIJZIGD(FILTER(oud.Persoon.Voornaam, x,
+x.Volgnummer = 1),
+FILTER(nieuw.Persoon.Voornaam, x, x.Volgnummer =
+1), Persoon.Voornaam.Naam)
+
+Als de eerste voornaam is
+gewijzigd is het resultaat WAAR.
+Zo niet, dan is het ONWAAR.
+
+GEWIJZIGD(FILTER(oud.Persoon.Voornaam, x,
+x.Volgnummer = 1),
+FILTER(nieuw.Persoon.Voornaam, x, x.Volgnummer =
+1))
+
+Als eerste voornaam is gewijzigd,
+of als de verantwoording van de
+eerste voornaam is gewijzigd, is
+het resultaat WAAR. Zo niet, dan
+is het ONWAAR.
+
+De functie is als volgt gedefinieerd:
+• Als de expressie een waarde heeft voor beide objecten (oud en nieuw), worden deze
+waarden vergeleken. Als ze ongelijk zijn, is het resultaat WAAR; anders is het ONWAAR.
+• Als de expressie op precies een van beide objecten expressies de waarde NULL heeft (“geen
+waarde heeft”), wordt het attribuut als gewijzigd beschouwd en geeft de functie WAAR
+terug.
+• Als de expressie op beide objecten de waarde NULL heeft, wordt het attribuut niet als
+gewijzigd beschouwd en is het resultaat ONWAAR.
+
+4.4.2
+
+AH
+De functie AH(actieid, attribuutid) levert de attribuutwaarden van de via de actie aangewezen
+administratieve handelingen. De actieid is een identificatie van de actie, bijvoorbeeld
+Persoon.SamengesteldeNaam.ActieInhoud. De attribuutid is een identificatie van het
+attribuut van de administratieve handeling, bijvoorbeeld
+AdministratieveHandeling.PartijCode. Het resultaat is een lijst waarden (het type hangt af
+van het aangewezen attribuut).
+De functie geeft altijd een lijst terug (en dus nooit een NULL-waarde). De lijst kan leeg zijn en
+bevat geen NULL-waarden als objecten worden aangewezen die geen waarde hebben voor het
+aangewezen attribuut.
+Indien een attribuut van Actie, ActieBron of Document wordt opgegeven, dan geeft de functie
+een lijst terug van de attribuutwaarden van alle met de actie geassocieerde acties, actiebronnen
+of documenten.
+Het opgegeven attribuut van de administratieve handeling is een van de volgende attributen:
+
+OperatieBRP
+
+Pagina 23 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+Attribuutid
+
+Type attribuut
+
+AdministratieveHandeling.SoortNaam
+
+STRING
+
+AdministratieveHandeling.CategorieNaam
+
+STRING
+
+AdministratieveHandeling.PartijCode
+
+GETAL
+
+AdministratieveHandeling.ToelichtingOntlening
+
+STRING
+
+AdministratieveHandeling.TijdstipRegistratie
+
+DATUMTIJD
+
+Actie.SoortNaam
+
+STRING
+
+Actie.PartijCode
+
+GETAL
+
+Actie.DatumAanvangGeldigheid
+
+DATUM
+
+Actie.DatumEindeGeldigheid
+
+DATUM
+
+Actie.TijdstipRegistratie
+
+DATUMTIJD
+
+Actie.DatumOntlening
+
+DATUM
+
+ActieBron.RechtsgrondCode
+
+GETAL
+
+ActieBron.Rechtsgrondomschrijving
+
+STRING
+
+Document.SoortNaam
+
+STRING
+
+Document.Aktenummer
+
+STRING
+
+Document.Omschrijving
+
+STRING
+
+Document.PartijCode
+
+GETAL
+
+Voorbeelden
+
+4.4.3
+
+Expressie
+
+Resultaat
+
+AH(Persoon.SamengesteldeNaam.ActieInhoud,
+AdministratieveHandeling.PartijCode)
+
+{ 1234 }
+
+ACTIE
+De functie ACTIE(actieid, attribuutid) levert de attribuutwaarden van de aangewezen acties.
+De actieid is een identificatie van de actie, bijvoorbeeld
+Persoon.SamengesteldeNaam.ActieInhoud. De attribuutid is een identificatie van het
+attribuut van de actie, bijvoorbeeld Actie.TijdstipRegistratie. Het resultaat is een lijst waarden
+(het type hangt af van het aangewezen attribuut).
+De functie geeft altijd een lijst terug (en dus nooit een NULL-waarde). De lijst kan leeg zijn en
+bevat geen NULL-waarden als objecten worden aangewezen die geen waarde hebben voor het
+aangewezen attribuut.
+Indien een attribuut van ActieBron of Document wordt opgegeven, dan geeft de functie een lijst
+terug van de attribuutwaarden van alle met de actie geassocieerde actiebronnen of documenten.
+Het opgegeven attribuut van de actie is één van de volgende attributen:
+
+Attribuutid
+
+Type attribuut
+
+Actie.SoortNaam
+
+STRING
+
+Actie.PartijCode
+
+GETAL
+
+Actie.DatumAanvangGeldigheid
+
+DATUM
+
+OperatieBRP
+
+Pagina 24 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+Actie.DatumEindeGeldigheid
+
+DATUM
+
+Actie.TijdstipRegistratie
+
+DATUMTIJD
+
+Actie.DatumOntlening
+
+DATUM
+
+ActieBron.RechtsgrondCode
+
+GETAL
+
+ActieBron.Rechtsgrondomschrijving
+
+STRING
+
+Document.SoortNaam
+
+STRING
+
+Document.Aktenummer
+
+STRING
+
+Document.Omschrijving
+
+STRING
+
+Document.PartijCode
+
+GETAL
+
+Voorbeelden
+
+4.4.4
+
+Expressie
+
+Resultaat
+
+AH(Persoon.SamengesteldeNaam.ActieInhoud,
+Actie.TijdstipRegistratie)
+
+{ 2014/12/15 }
+
+HISF
+De functie HISF(attribuutid) levert een lijst met alle in de materiele en formele historie
+voorkomende attribuutwaarden van het opgegeven attribuut.
+De functie geeft een lijst terug. De lijst kan leeg zijn, maar zal geen NULL-waarden bevatten
+voor attributen die niet zijn gevuld in wel aanwezige records.
+De functie HISF(groepid) levert een lijst met records van alle in de materiele en formele
+historie voorkomende records van het opgegeven groep. Met de functie MAP kan een attribuut
+worden benaderd van een record. Als een attribuut van een record geen waarde heeft wordt de
+waarde NULL teruggegeven.
+Voorbeelden
+
+4.4.5
+
+Expressie
+
+Resultaat
+
+HISF(Persoon.Afnemerindicatie.Partijcode)
+
+{ 602201 }
+
+HISM
+De functie HISM(attribuutid) levert een lijst met alle in de materiele historie voorkomende
+attribuutwaarden van het opgegeven attribuut.
+De functie geeft een lijst terug. De lijst kan leeg zijn, maar zal geen NULL-waarden bevatten
+voor attributen die niet zijn gevuld in wel aanwezige records.
+De functie HISF(groepid) levert een lijst met records van alle in de materiele en formele
+historie voorkomende records van het opgegeven groep. Met de functie MAP kan een attribuut
+worden benaderd van een record. Als een attribuut van een record geen waarde heeft wordt de
+waarde NULL teruggegeven.
+Voorbeelden
+Expressie
+
+Resultaat
+
+HISM(Persoon.Bijhouding.PartijCode)
+
+{ 1234, 1999 }
+
+OperatieBRP
+
+Pagina 25 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+4.4.6
+
+HISM_LAATSTE
+De functie HISM_LAATSTE(groepid) levert een lijst met voor elk object het record dat is
+beëindigd als gevolg van de laatste actualisering. Dit is op elk object het record van de
+opgegeven groep dat als laatste materieel beëindigd is. Als een attribuut van een record geen
+waarde heeft wordt de waarde NULL teruggegeven.
+Deze functie is bijvoorbeeld praktisch om de beëindiging van een nationaliteit aan te wijzen. De
+groep standaard moet expliciet worden opgegeven in groepid: bijvoorbeeld
+Persoon.Standaard.
+Voorbeelden
+Expressie
+
+Resultaat
+
+ER_IS(HISM_LAATSTE(Persoon.Nationaliteit.Standaard),
+n, IS_NULL(n.RedenVerliesCode))
+
+WAAR
+
+4.5
+
+Overige functies
+
+4.5.1
+
+IS_NULL
+De functie IS_NULL(expressie) geeft WAAR als de expressie een NULL-waarde is, anders
+ONWAAR.
+Voorbeelden
+
+4.5.2
+
+Expressie
+
+Resultaat
+
+IS_NULL( 10 )
+
+ONWAAR
+
+IS_NULL( NULL )
+
+WAAR
+
+IS_NULL( {} )
+
+ONWAAR
+
+IS_NULL( 1 + NULL)
+
+WAAR
+
+KV
+De functie KV(expressie) geeft WAAR als de expressie niet een NULL-waarde is of een lijst is
+met minstens één waarde ongelijk aan NULL, anders ONWAAR.
+Voorbeelden
+Expressie
+
+Resultaat
+
+KV( 10 )
+
+WAAR
+
+KV( NULL )
+
+NULL
+
+KV( {} )
+
+ONWAAR
+
+KV( { NULL } )
+
+WAAR
+
+KV( { NULL, 12 } )
+
+WAAR
+
+KV( { 12, 13 } )
+
+WAAR
+
+OperatieBRP
+
+Pagina 26 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+4.5.3
+
+KNV
+De functie KV(expressie) geeft WAAR als de expressie een NULL-waarde is, een lege lijst is of
+een lijst is met uitsluitend waarden ongelijk aan NULL, anders ONWAAR.
+Voorbeelden
+Expressie
+
+Resultaat
+
+KNV( 10 )
+
+ONWAAR
+
+KNV( NULL )
+
+NULL
+
+KNV( {} )
+
+WAAR
+
+KNV( { NULL } )
+
+ONWAAR
+
+KNV( { NULL, 12 } )
+
+ONWAAR
+
+KNV( { 12, 13 } )
+
+ONWAAR
+
+OperatieBRP
+
+Pagina 27 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+5
+
+Overig
+
+5.1
+
+Closure-expressies
+Soms kan het handig zijn om een variabele te definiëren binnen een expressie. In de
+expressietaal kan dit met closures. Een closure definieert een of meer variabelen met een
+waarde die binnen een expressie te gebruiken zijn. Dit ziet er als volgt uit:
+expressie WAARBIJ variabele1 = waarde1, variabele2 = waarde2, ...
+Een closure-expressie kan de leesbaarheid van een expressie verbeteren, zodat het doel van de
+expressie duidelijker wordt.
+Voorbeeld
+In de volgende expressie wordt een lange (constante) waarde toegekend aan een variabele. De
+waarde verdwijnt daarmee uit de expressie en wordt vervangen door een symbolische naam die
+de intentie kan uitdrukken.
+persoon.geslachtsaanduiding = “V” EN persoon.bijhouding.bijhoudingspartij IN
+zorgregio WAARBIJ zorgregio = {3, 5, 7, 9, 10, 14, 15, 17, 18, 22, 24, 25, 37, 40, 47,
+48, 51, 53, 55, 56, 58, 59, 60, 63, 70, 72, 74, 79, 80, 81, 82, 85, 86, 88, 90, 93, 96,
+98, 106, 109}
+De waarden van variabelen zijn weer expressies. In die expressies zijn de in de closure
+gedefinieerde variabelen niet bekend. De expressie (x+y) WAARBIJ x = 1, y = x geeft een
+foutmelding (variabele “x” kan niet worden gevonden). Voordat de expressie (x+y) berekend
+wordt, worden één voor één de waarden voor x en y berekend. In de context waarbinnen die
+berekend worden, komen die x en y nog niet voor.
+
+5.2
+
+Onbekende waarden
+Binnen de expressietaal wordt leeg ({}) gebruikt als onbekende waarde. Een uitzondering hierop
+vormen de functies HISF en HISM. Deze functies geven een record van een groep terug. Niet
+gevulde attributen van het betreffende record geven de waarde NULL in plaats van leeg ({}).
+Om te bepalen of een waarde leeg ({}) is kunnen de functies KV en KNV worden gebruikt (zie
+4.5.2 en 4.5.3).
+Om te bepalen of een waarde NULL is kan de functie IS_NULL worden gebruikt (zie 4.5.1).
+Omdat alleen de functies HISF en HISM de waarde NULL kunnen teruggeven is de functie
+IS_NULL alleen relevant in combinatie met deze functies.
+
+Ontwerpkeuze
+Er is gekozen voor de ‘waarde’ NULL en leeg ({}) in plaats van iets als ONBEKEND, omdat op
+basis van de gegevens die voor de expressietaal beschikbaar zijn, geen onderscheid te maken is
+tussen iets wat bewust (bijvoorbeeld omdat het niet van toepassing is) of onbewust
+(bijvoorbeeld omdat het niet vast te stellen is op basis van een brondocument) is weggelaten.
+Ontwerpkeuze
+De evaluatie van een expressie leidt tot een waarde die met zekerheid bepaald kan worden op
+basis van de BRP-gegevens ten tijde van de evaluatie. Als die zekerheid niet gegarandeerd kan
+worden, zal de evaluatie leiden tot NULL. Met behulp van de functie IS_NULL kunnen expressies
+wel omgaan met dit soort waarden.
+
+OperatieBRP
+
+Pagina 28 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+5.3
+
+Context
+Een expressie wordt uitgevoerd in een context. Standaard is de context de persoon of
+persoonslijst. Dit betekent dat alle attributen van het object persoon enkelvoudig zijn en een
+enkele (actuele) waarde leveren. Groepen en attributen van andere objecten zijn in de standaard
+context meervoudig, dat wil zeggen dat er meerdere (actuele) waarden leveren.
+De functie GEWIJZIGD hanteert niet de standaard context, zie hiervoor paragraaf 4.4.1.
+In de functies ER_IS, ALLE, MAP en FILTER, kan als parameter een expressie worden
+opgegeven die in een beperktere context wordt uitgevoerd. Deze functies kennen het volgende
+patroon:
+FUNCTIE(lijst, variabele, expressie)
+De lijst kan een lijst van waarden zijn, maar ook hele groepen of objecten. De opgegeven
+expressie wordt vervolgens uitgevoerd voor elk element in de lijst. De variabele representeert in
+dat geval een element in de lijst. Daarbij wordt de context verkleind tot dat element. Daarmee
+zijn attributen die meervoudig zijn in de standaard context persoon enkelvoudig.
+Zo is het attribuut Nationaliteit.Code in de context persoon meervoudig, omdat een persoon
+meerdere nationaliteiten kan bevatten. Het direct verwijzen naar Nationaliteit.Code levert een
+lijst van numerieke waarden (een lijst codes).
+Door Nationaliteit mee te geven aan bijvoorbeeld de ER_IS functie, kan een expressie gebruikt
+worden waarbij de attributen op nationaliteit enkelvoudig zijn. Deze attributen kunnen direct in
+vergelijkingen worden gebruikt. In het onderstaande voorbeeld wordt er gecontroleerd of er een
+nationaliteit is met code 1 en met een aanvang geldigheid die na 1990 ligt:
+ER_IS(Persoon.Nationaliteit, n, (n.NationaliteitCode E= 1) AND
+(n.DatumAanvangGeldigheid E> 1990/00/00))
+
+OperatieBRP
+
+Pagina 29 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+6
+
+Objecten, groepen en attributen
+
+Expressies zullen in de regel betrekking hebben op persoonsgegevens (zoals geboorte.datum).
+Deze gegevens zijn met behulp van attributen in de expressies te gebruiken.
+In principe bestaat voor elk persoonsgegeven een attribuut in de expressietaal. Niet alleen
+personen hebben attributen, maar ook afgeleide objecten zoals nationaliteiten en
+reisdocumenten. Deze afgeleide objecten worden meestal via een persoon benaderd
+(bijvoorbeeld alle nationaliteiten van een persoon die voldoen aan een bepaalde voorwaarde).
+Een attribuut heeft een type (samengestelde_naam.namenreeks is een BOOLEAN,
+overlijden.woonplaatsnaam is een STRING, enzovoort). Dit type is afgeleid van het
+corresponderende gegeven in de gegevensset en database. De namen van attributen zijn
+afgeleid uit de gegevensset. Ze worden altijd met kleine letters geschreven en kunnen
+underscores bevatten. Een lijst van alle attributen is als bijlage opgenomen.
+Attributen zijn ingedeeld in groepen. Voor het benaderen van waarden van attributen is de
+opdeling in groepen niet bijzonder relevant anders dan dat deze tot uitdrukking komt in de naam
+van de groep. Een uitzondering hierop vormt de functie HISM_LAATSTE, deze functie geeft een
+lijst met voor elk object in de actuele context (zie paragraaf 5.3) de laatste groep uit de
+materiele historie (zie ook paragraaf 4.4.6).
+Let op: Een verandering van de gegevensset kan ervoor zorgen dat nieuwe attributen
+beschikbaar moeten zijn in de expressietaal, dat oude attributen niet meer bestaan of bestaande
+attributen een nieuwe naam moeten krijgen.
+6.1
+
+Enkelvoudige attributen op persoon
+De volgende attributen zijn enkelvoudig in de default context (zie ook 5.3). Dit zijn groepen op
+het object persoon.
+
+6.1.1
+
+Persoon.Identiteit
+Geen attributen beschikbaar.
+
+6.1.2
+
+6.1.3
+
+Persoon.AfgeleidAdministratief
+Persoon.AfgeleidAdministratief.AdministratieveHandeling
+
+GETAL
+
+Persoon.AfgeleidAdministratief.TijdstipLaatsteWijziging
+
+DATUMTIJD
+
+Persoon.AfgeleidAdministratief.Sorteervolgorde
+
+GETAL
+
+Persoon.AfgeleidAdministratief.TijdstipLaatsteWijzigingGBASystematiek
+
+DATUMTIJD
+
+Persoon.Identificatienummers
+Persoon.Identificatienummers.Burgerservicenummer
+
+GETAL
+
+Persoon.Identificatienummers.Administratienummer
+
+GETAL
+
+Ook de aliassen Persoon.Identificatienummers.BSN en
+Persoon.Identificatienummers.ANr kunnen worden gebruikt.
+6.1.4
+
+Persoon.SamengesteldeNaam
+
+OperatieBRP
+
+Pagina 30 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+6.1.5
+
+6.1.6
+
+Persoon.SamengesteldeNaam.IndicatieAfgeleid
+
+BOOLEAN
+
+Persoon.SamengesteldeNaam.IndicatieNamenreeks
+
+BOOLEAN
+
+Persoon.SamengesteldeNaam.PredicaatCode
+
+STRING
+
+Persoon.SamengesteldeNaam.Voornamen
+
+STRING
+
+Persoon.SamengesteldeNaam.AdellijkeTitelCode
+
+STRING
+
+Persoon.SamengesteldeNaam.Voorvoegsel
+
+STRING
+
+Persoon.SamengesteldeNaam.Scheidingsteken
+
+STRING
+
+Persoon.SamengesteldeNaam.Geslachtsnaamstam
+
+STRING
+
+Persoon.Geboorte
+Persoon.Geboorte.Datum
+
+DATUM
+
+Persoon.Geboorte.GemeenteCode
+
+GETAL
+
+Persoon.Geboorte.Woonplaatsnaam
+
+STRING
+
+Persoon.Geboorte.BuitenlandsePlaats
+
+STRING
+
+Persoon.Geboorte.BuitenlandseRegio
+
+STRING
+
+Persoon.Geboorte.OmschrijvingLocatie
+
+STRING
+
+Persoon.Geboorte.LandGebiedCode
+
+GETAL
+
+Persoon.Geslachtsaanduiding
+Persoon.Geslachtsaanduiding.Code
+
+6.1.7
+
+6.1.8
+
+6.1.9
+
+STRING
+
+Persoon.Inschrijving
+Persoon.Inschrijving.Datum
+
+DATUM
+
+Persoon.Inschrijving.Versienummer
+
+GETAL
+
+Persoon.Inschrijving.Datumtijdstempel
+
+DATUMTIJD
+
+Persoon.Nummerverwijzing
+Persoon.Nummerverwijzing.VorigeBurgerservicenummer
+
+GETAL
+
+Persoon.Nummerverwijzing.VolgendeBurgerservicenummer
+
+GETAL
+
+Persoon.Nummerverwijzing.VorigeAdministratienummer
+
+GETAL
+
+Persoon.Nummerverwijzing.VolgendeAdministratienummer
+
+GETAL
+
+Persoon.Bijhouding
+Persoon.Bijhouding.PartijCode
+
+GETAL
+
+Persoon.Bijhouding.BijhoudingsaardCode
+
+STRING
+
+Persoon.Bijhouding.NadereBijhoudingsaardCode
+
+STRING
+
+OperatieBRP
+
+Pagina 31 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+6.1.10
+
+6.1.11
+
+6.1.12
+
+6.1.13
+
+6.1.14
+
+Persoon.Overlijden
+Persoon.Overlijden.Datum
+
+DATUM
+
+Persoon.Overlijden.GemeenteCode
+
+GETAL
+
+Persoon.Overlijden.Woonplaatsnaam
+
+STRING
+
+Persoon.Overlijden.BuitenlandsePlaats
+
+STRING
+
+Persoon.Overlijden.BuitenlandseRegio
+
+STRING
+
+Persoon.Overlijden.OmschrijvingLocatie
+
+STRING
+
+Persoon.Overlijden.LandGebiedCode
+
+GETAL
+
+Persoon.Naamgebruik
+Persoon.Naamgebruik.Code
+
+STRING
+
+Persoon.Naamgebruik.IndicatieAfgeleid
+
+BOOLEAN
+
+Persoon.Naamgebruik.PredicaatCode
+
+STRING
+
+Persoon.Naamgebruik.Voornamen
+
+STRING
+
+Persoon.Naamgebruik.AdellijkeTitelCode
+
+STRING
+
+Persoon.Naamgebruik.Voorvoegsel
+
+STRING
+
+Persoon.Naamgebruik.Scheidingsteken
+
+STRING
+
+Persoon.Naamgebruik.Geslachtsnaamstam
+
+STRING
+
+Persoon.Migratie
+Persoon.Migratie.SoortCode
+
+STRING
+
+Persoon.Migratie.RedenWijzigingCode
+
+STRING
+
+Persoon.Migratie.AangeverCode
+
+STRING
+
+Persoon.Migratie.LandGebiedCode
+
+GETAL
+
+Persoon.Migratie.BuitenlandsAdresRegel1
+
+STRING
+
+Persoon.Migratie.BuitenlandsAdresRegel2
+
+STRING
+
+Persoon.Migratie.BuitenlandsAdresRegel3
+
+STRING
+
+Persoon.Migratie.BuitenlandsAdresRegel4
+
+STRING
+
+Persoon.Migratie.BuitenlandsAdresRegel5
+
+STRING
+
+Persoon.Migratie.BuitenlandsAdresRegel6
+
+STRING
+
+Persoon.Verblijfsrecht
+Persoon.Verblijfsrecht.AanduidingCode
+
+GETAL
+
+Persoon.Verblijfsrecht.DatumAanvang
+
+DATUM
+
+Persoon.Verblijfsrecht.DatumMededeling
+
+DATUM
+
+Persoon.Verblijfsrecht.DatumVoorzienEinde
+
+DATUM
+
+Persoon.UitsluitingKiesrecht
+Persoon.UitsluitingKiesrecht.Indicatie
+
+OperatieBRP
+
+BOOLEAN
+
+Pagina 32 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+Persoon.UitsluitingKiesrecht.DatumVoorzienEinde
+6.1.15
+
+6.1.16
+
+6.1.17
+
+DATUM
+
+Persoon.DeelnameEUVerkiezingen
+Persoon.DeelnameEUVerkiezingen.IndicatieDeelname
+
+BOOLEAN
+
+Persoon.DeelnameEUVerkiezingen.DatumAanleidingAanpassing
+
+DATUM
+
+Persoon.DeelnameEUVerkiezingen.DatumVoorzienEindeUitsluiting
+
+DATUM
+
+Persoon.Persoonskaart
+Persoon.Persoonskaart.PartijCode
+
+GETAL
+
+Persoon.Persoonskaart.IndicatieVolledigGeconverteerd
+
+BOOLEAN
+
+Persoon.Indicatie
+Persoon.Indicatie.DerdeHeeftGezag.Waarde
+
+BOOLEAN
+
+Persoon.Indicatie.OnderCuratele.Waarde
+
+BOOLEAN
+
+Persoon.Indicatie.VolledigeVerstrekkingsbeperking.Waarde
+
+BOOLEAN
+
+Persoon.Indicatie.VastgesteldNietNederlander.Waarde
+
+BOOLEAN
+
+Persoon.Indicatie.BehandeldAlsNederlander.Waarde
+
+BOOLEAN
+
+Persoon.Indicatie.SignaleringMetBetrekkingTotVerstrekkenReisdocument.Waarde BOOLEAN
+
+6.2
+
+Persoon.Indicatie.Staatloos.Waarde
+
+BOOLEAN
+
+Persoon.Indicatie.BijzondereVerblijfsrechtelijkePositie.Waarde
+
+BOOLEAN
+
+Meervoudige attributen
+De volgende attributen zijn meervoudig in de default context (zie ook 5.3). Dit zijn groepen op
+andere objecten dan persoon (m.u.v. de objecten rond relaties).
+
+6.2.1
+
+Persoon.Voornaam.Identiteit
+Persoon.Voornaam.Volgnummer
+
+6.2.2
+
+Persoon.Voornaam.Standaard
+Persoon.Voornaam.Naam
+
+6.2.3
+
+STRING
+
+Persoon.Geslachtsnaamcomponent.Identiteit
+Persoon.Geslachtsnaamcomponent.Volgnummer
+
+6.2.4
+
+GETAL
+
+GETAL
+
+Persoon.Geslachtsnaamcomponent.Standaard
+Persoon.Geslachtsnaamcomponent.PredicaatCode
+
+STRING
+
+Persoon.Geslachtsnaamcomponent.AdellijkeTitelCode
+
+STRING
+
+Persoon.Geslachtsnaamcomponent.Voorvoegsel
+
+STRING
+
+Persoon.Geslachtsnaamcomponent.Scheidingsteken
+
+STRING
+
+OperatieBRP
+
+Pagina 33 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+Persoon.Geslachtsnaamcomponent.Stam
+6.2.5
+
+6.2.6
+
+Persoon.Adres.Standaard
+Persoon.Adres.SoortCode
+
+STRING
+
+Persoon.Adres.RedenWijzigingCode
+
+STRING
+
+Persoon.Adres.AangeverAdreshoudingCode
+
+STRING
+
+Persoon.Adres.DatumAanvangAdreshouding
+
+DATUM
+
+Persoon.Adres.IdentificatiecodeAdresseerbaarObject
+
+STRING
+
+Persoon.Adres.IdentificatiecodeNummeraanduiding
+
+STRING
+
+Persoon.Adres.GemeenteCode
+
+GETAL
+
+Persoon.Adres.NaamOpenbareRuimte
+
+STRING
+
+Persoon.Adres.AfgekorteNaamOpenbareRuimte
+
+STRING
+
+Persoon.Adres.Gemeentedeel
+
+STRING
+
+Persoon.Adres.Huisnummer
+
+GETAL
+
+Persoon.Adres.Huisletter
+
+STRING
+
+Persoon.Adres.Huisnummertoevoeging
+
+STRING
+
+Persoon.Adres.Postcode
+
+STRING
+
+Persoon.Adres.Woonplaatsnaam
+
+STRING
+
+Persoon.Adres.LocatieTenOpzichteVanAdres
+
+STRING
+
+Persoon.Adres.Locatieomschrijving
+
+STRING
+
+Persoon.Adres.BuitenlandsAdresRegel1
+
+STRING
+
+Persoon.Adres.BuitenlandsAdresRegel2
+
+STRING
+
+Persoon.Adres.BuitenlandsAdresRegel3
+
+STRING
+
+Persoon.Adres.BuitenlandsAdresRegel4
+
+STRING
+
+Persoon.Adres.BuitenlandsAdresRegel5
+
+STRING
+
+Persoon.Adres.BuitenlandsAdresRegel6
+
+STRING
+
+Persoon.Adres.LandGebiedCode
+
+GETAL
+
+Persoon.Adres.IndicatiePersoonAangetroffenOpAdres
+
+BOOLEAN
+
+Persoon.Nationaliteit.Identiteit
+Persoon.Nationaliteit.NationaliteitCode
+
+6.2.7
+
+STRING
+
+GETAL
+
+Persoon.Nationaliteit.Standaard
+Persoon.Nationaliteit.RedenVerkrijgingCode
+
+GETAL
+
+Persoon.Nationaliteit.RedenVerliesCode
+
+GETAL
+
+Persoon.Nationaliteit.IndicatieBijhoudingBeeindigd
+
+BOOLEAN
+
+Persoon.Nationaliteit.MigratieRedenOpnameNationaliteit
+
+STRING
+
+Persoon.Nationaliteit.MigratieRedenBeeindigenNationaliteit
+
+STRING
+
+OperatieBRP
+
+Pagina 34 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+Persoon.Nationaliteit.MigratieDatumEindeBijhouding
+6.2.8
+
+6.2.9
+
+DATUM
+
+Persoon.BuitenlandsPersoonsnummer.Identiteit
+Persoon.BuitenlandsPersoonsnummer.AutoriteitVanAfgifteCode
+
+GETAL
+
+Persoon.BuitenlandsPersoonsnummer.Nummer
+
+STRING
+
+Persoon.BuitenlandsPersoonsnummer.Standaard
+Geen attributen, alleen verantwoording
+
+6.2.10
+
+6.2.11
+
+Persoon.Verstrekkingsbeperking.Identiteit
+Persoon.Verstrekkingsbeperking.PartijCode
+
+GETAL
+
+Persoon.Verstrekkingsbeperking.OmschrijvingDerde
+
+STRING
+
+Persoon.Verstrekkingsbeperking.GemeenteVerordeningPartijCode
+
+GETAL
+
+Persoon.Reisdocument.Identiteit
+Persoon.Reisdocument.SoortCode
+
+6.2.12
+
+6.2.13
+
+6.2.14
+
+6.2.15
+
+6.2.16
+
+STRING
+
+Persoon.Reisdocument.Standaard
+Persoon.Reisdocument.Nummer
+
+STRING
+
+Persoon.Reisdocument.AutoriteitVanAfgifte
+
+STRING
+
+Persoon.Reisdocument.DatumIngangDocument
+
+DATUM
+
+Persoon.Reisdocument.DatumEindeDocument
+
+DATUM
+
+Persoon.Reisdocument.DatumUitgifte
+
+DATUM
+
+Persoon.Reisdocument.DatumInhoudingVermissing
+
+DATUM
+
+Persoon.Reisdocument.AanduidingInhoudingVermissingCode
+
+STRING
+
+Persoon.Afnemerindicatie.Identiteit
+Persoon.Afnemerindicatie.AfnemerCode
+
+GETAL
+
+Persoon.Afnemerindicatie.LeveringsautorisatieIdentificatie
+
+GETAL
+
+Persoon.Afnemerindicatie.Standaard
+Persoon.Afnemerindicatie.DatumAanvangMaterielePeriode
+
+DATUM
+
+Persoon.Afnemerindicatie.DatumEindeVolgen
+
+DATUM
+
+Persoon.Verificatie.Identiteit
+Persoon.Verificatie.PartijCode
+
+GETAL
+
+Persoon.Verificatie.Soort
+
+STRING
+
+Persoon.Verificatie.Standaard
+
+OperatieBRP
+
+Pagina 35 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+Persoon.Verificatie.Datum
+6.2.17
+
+DATUM
+
+Onderzoek.Identiteit
+Geen attributen beschikbaar.
+
+6.2.18
+
+6.3
+
+Onderzoek.Standaard
+Onderzoek.DatumAanvang
+
+DATUM
+
+Onderzoek.DatumEinde
+
+DATUM
+
+Onderzoek.Omschrijving
+
+STRING
+
+Onderzoek.StatusNaam
+
+STRING
+
+Attributen van relaties
+De volgende attributen hebben betrekking op relaties en zijn meervoudig in de default context
+(zie ook 5.3).
+Onderstaand schema toont de verschillende objecten rond relaties:
+
+6.3.1
+
+Omschrijving
+
+Beschikbare objecten
+
+De relatie
+
+FamilierechtelijkeBetrekking
+Huwelijk
+GeregistreerdPartnerschap
+
+De betrokkenheid van de hoofdpersoon
+
+Persoon.Kind
+Persoon.Ouder
+Persoon.Partner
+
+De betrokkenheid van de gerelateerde persoon
+
+GerelateerdeKind
+GerelateerdeOuder
+GerelateerdePartner
+
+De persoonsgegevens van de gerelateerde persoon
+
+GerelateerdeKind.Persoon
+GerelateerdeOuder.Persoon
+GerelateerdePartner.Persoon
+
+FamilierechtelijkeBetrekking.Identiteit
+Geen attributen beschikbaar.
+
+6.3.2
+
+FamilierechtelijkeBetrekking.Standaard
+Geen attributen, alleen verantwoording
+
+6.3.3
+
+Huwelijk.Identiteit
+Geen attributen beschikbaar.
+
+6.3.4
+
+Huwelijk.Standaard
+Huwelijk.DatumAanvang
+
+DATUM
+
+Huwelijk.GemeenteAanvangCode
+
+GETAL
+
+Huwelijk.WoonplaatsnaamAanvang
+
+STRING
+
+OperatieBRP
+
+Pagina 36 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+6.3.5
+
+Huwelijk.BuitenlandsePlaatsAanvang
+
+STRING
+
+Huwelijk.BuitenlandseRegioAanvang
+
+STRING
+
+Huwelijk.OmschrijvingLocatieAanvang
+
+STRING
+
+Huwelijk.LandGebiedAanvangCode
+
+GETAL
+
+Huwelijk.RedenEindeCode
+
+STRING
+
+Huwelijk.DatumEinde
+
+DATUM
+
+Huwelijk.GemeenteEindeCode
+
+GETAL
+
+Huwelijk.WoonplaatsnaamEinde
+
+STRING
+
+Huwelijk.BuitenlandsePlaatsEinde
+
+STRING
+
+Huwelijk.BuitenlandseRegioEinde
+
+STRING
+
+Huwelijk.OmschrijvingLocatieEinde
+
+STRING
+
+Huwelijk.LandGebiedEindeCode
+
+GETAL
+
+GeregistreerdPartnerschap.Identiteit
+Geen attributen beschikbaar.
+
+6.3.6
+
+6.3.7
+
+GeregistreerdPartnerschap.Standaard
+GeregistreerdPartnerschap.DatumAanvang
+
+DATUM
+
+GeregistreerdPartnerschap.GemeenteAanvangCode
+
+GETAL
+
+GeregistreerdPartnerschap.WoonplaatsnaamAanvang
+
+STRING
+
+GeregistreerdPartnerschap.BuitenlandsePlaatsAanvang
+
+STRING
+
+GeregistreerdPartnerschap.BuitenlandseRegioAanvang
+
+STRING
+
+GeregistreerdPartnerschap.OmschrijvingLocatieAanvang
+
+STRING
+
+GeregistreerdPartnerschap.LandGebiedAanvangCode
+
+GETAL
+
+GeregistreerdPartnerschap.RedenEindeCode
+
+STRING
+
+GeregistreerdPartnerschap.DatumEinde
+
+DATUM
+
+GeregistreerdPartnerschap.GemeenteEindeCode
+
+GETAL
+
+GeregistreerdPartnerschap.WoonplaatsnaamEinde
+
+STRING
+
+GeregistreerdPartnerschap.BuitenlandsePlaatsEinde
+
+STRING
+
+GeregistreerdPartnerschap.BuitenlandseRegioEinde
+
+STRING
+
+GeregistreerdPartnerschap.OmschrijvingLocatieEinde
+
+STRING
+
+GeregistreerdPartnerschap.LandGebiedEindeCode
+
+GETAL
+
+Persoon.Kind.Identiteit
+Geen attributen, alleen verantwoording.
+
+6.3.8
+
+GerelateerdeKind.Identiteit
+Geen attributen, alleen verantwoording.
+
+6.3.9
+
+Persoon.Ouder.Identiteit
+
+OperatieBRP
+
+Pagina 37 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+Geen attributen, alleen verantwoording.
+6.3.10
+
+Persoon.Ouder.Ouderschap
+Persoon.Ouder.Ouderschap.IndicatieOuderUitWieKindIsGeboren
+
+6.3.11
+
+BOOLEAN
+
+GerelateerdeOuder.Identiteit
+Geen attributen, alleen verantwoording.
+
+6.3.12
+
+GerelateerdeOuder.Ouderschap
+GerelateerdeOuder.Ouderschap.IndicatieOuderUitWieKindIsGeboren
+
+6.3.13
+
+GerelateerdeOuder.OuderlijkGezag
+GerelateerdeOuder.OuderlijkGezag.IndicatieOuderHeeftGezag
+
+6.3.14
+
+BOOLEAN
+
+BOOLEAN
+
+Persoon.Partner.Identiteit
+Geen attributen, alleen verantwoording.
+
+6.3.15
+
+GerelateerdePartner.Identiteit
+Geen attributen, alleen verantwoording.
+
+6.3.16
+
+<rol gerelateerde>.Persoon.Identiteit
+<rol gerelateerde> kan zijn GerelateerdeKind, GerelateerdeOuder, GerelateerdeHuwelijkspartner
+of GerelateerdeGeregistreerdePartner.
+<rol gerelateerde>.Persoon.SoortCode
+
+6.3.17
+
+STRING
+
+<rol gerelateerde>.Persoon.Identificatienummers
+<rol gerelateerde> kan zijn GerelateerdeKind, GerelateerdeOuder, GerelateerdeHuwelijkspartner
+of GerelateerdeGeregistreerdePartner.
+
+6.3.18
+
+<rol gerelateerde>.Persoon.Identificatienummers.Burgerservicenummer
+
+GETAL
+
+<rol gerelateerde>.Persoon.Identificatienummers.Administratienummer
+
+GETAL
+
+<rol gerelateerde>.Persoon.SamengesteldeNaam
+<rol gerelateerde> kan zijn GerelateerdeKind, GerelateerdeOuder, GerelateerdeHuwelijkspartner
+of GerelateerdeGeregistreerdePartner.
+<rol gerelateerde>.Persoon.SamengesteldeNaam.IndicatieAfgeleid
+
+BOOLEAN
+
+<rol gerelateerde>.Persoon.SamengesteldeNaam.IndicatieNamenreeks
+
+BOOLEAN
+
+<rol gerelateerde>.Persoon.SamengesteldeNaam.PredicaatCode
+
+STRING
+
+<rol gerelateerde>.Persoon.SamengesteldeNaam.Voornamen
+
+STRING
+
+<rol gerelateerde>.Persoon.SamengesteldeNaam.AdellijkeTitelCode
+
+STRING
+
+OperatieBRP
+
+Pagina 38 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+6.3.19
+
+<rol gerelateerde>.Persoon.SamengesteldeNaam.Voorvoegsel
+
+STRING
+
+<rol gerelateerde>.Persoon.SamengesteldeNaam.Scheidingsteken
+
+STRING
+
+<rol gerelateerde>.Persoon.SamengesteldeNaam.Geslachtsnaamstam
+
+STRING
+
+<rol gerelateerde>.Persoon.Geboorte
+<rol gerelateerde> kan zijn GerelateerdeKind, GerelateerdeOuder, GerelateerdeHuwelijkspartner
+of GerelateerdeGeregistreerdePartner.
+
+6.3.20
+
+<rol gerelateerde>.Persoon.Geboorte.Datum
+
+DATUM
+
+<rol gerelateerde>.Persoon.Geboorte.GemeenteCode
+
+GETAL
+
+<rol gerelateerde>.Persoon.Geboorte.Woonplaatsnaam
+
+STRING
+
+<rol gerelateerde>.Persoon.Geboorte.BuitenlandsePlaats
+
+STRING
+
+<rol gerelateerde>.Persoon.Geboorte.BuitenlandseRegio
+
+STRING
+
+<rol gerelateerde>.Persoon.Geboorte.OmschrijvingLocatie
+
+STRING
+
+<rol gerelateerde>.Persoon.Geboorte.LandGebiedCode
+
+GETAL
+
+<rol gerelateerde>.Persoon.Geslachtsaanduiding
+<rol gerelateerde> kan zijn GerelateerdeOuder, GerelateerdeHuwelijkspartner of
+GerelateerdeGeregistreerdePartner.
+<rol gerelateerde>.Persoon.Geslachtsaanduiding.Code
+
+6.4
+
+STRING
+
+Verantwoording
+Groepen hebben alleen formele, of formele en materiele verantwoording. Identiteitsgroepen
+(eindigend met ‘.Identiteit’) hebben geen verantwoording. Groepen hebben daarbij verwijzingen
+naar acties (hieronder aangeduid met ACTIE), deze verwijzingen kunnen gebruikt worden in de
+functies ACTIE en AH.
+
+6.4.1
+
+6.4.2
+
+Attributen van groepen met formele historie
+<groep>.TijdstipRegistratie
+
+DATUMTIJD
+
+<groep>.ActieInhoud
+
+ACTIE
+
+<groep>.TijdstipVerval
+
+DATUMTIJD
+
+<groep>.ActieVerval
+
+ACTIE
+
+<groep>.NadereAanduidingVerval
+
+STRING
+
+Attributen van groepen met formele en materiele historie
+<groep>.TijdstipRegistratie
+
+DATUMTIJD
+
+<groep>.ActieInhoud
+
+ACTIE
+
+<groep>.TijdstipVerval
+
+DATUMTIJD
+
+<groep>.ActieVerval
+
+ACTIE
+
+<groep>.NadereAanduidingVerval
+
+STRING
+
+OperatieBRP
+
+Pagina 39 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+6.4.3
+
+<groep>.DatumAanvangGeldigheid
+
+DATUM
+
+<groep>.DatumEindeGeldigheid
+
+DATUM
+
+<groep>.ActieAanpassingGeldigheid
+
+ACTIE
+
+Historiepatroon per groep
+Op onderstaande groepen zijn verantwoordingsattributen beschikbaar. Bij ‘Standaard’ en
+‘Identiteit’ groepen dient de extensie ‘.Standaard’ / ‘.Identiteit’ te worden weggelaten als een
+attribuut wordt aangewezen. Gebruik dus Persoon.Nationaliteit.TijdstipRegistratie en niet
+Persoon.Nationaliteit.Standaard.TijdstipRegistratie.
+Persoon.Identiteit
+
+Geen
+
+Persoon.AfgeleidAdministratief
+
+Formeel
+
+Persoon.Identificatienummers
+
+Formeel en materieel
+
+Persoon.SamengesteldeNaam
+
+Formeel en materieel
+
+Persoon.Geboorte
+
+Formeel
+
+Persoon.Geslachtsaanduiding
+
+Formeel en materieel
+
+Persoon.Inschrijving
+
+Formeel
+
+Persoon.Nummerverwijzing
+
+Formeel en materieel
+
+Persoon.Bijhouding
+
+Formeel en materieel
+
+Persoon.Overlijden
+
+Formeel
+
+Persoon.Naamgebruik
+
+Formeel
+
+Persoon.Migratie
+
+Formeel en materieel
+
+Persoon.Verblijfsrecht
+
+Formeel
+
+Persoon.UitsluitingKiesrecht
+
+Formeel
+
+Persoon.DeelnameEUVerkiezingen
+
+Formeel
+
+Persoon.Persoonskaart
+
+Formeel
+
+Persoon.Indicatie.DerdeHeeftGezag
+
+Formeel en materieel
+
+Persoon.Indicatie.OnderCuratele
+
+Formeel en materieel
+
+Persoon.Indicatie.VolledigeVerstrekkingsbeperking
+
+Formeel
+
+Persoon.Indicatie.VastgesteldNietNederlander
+
+Formeel en materieel
+
+Persoon.Indicatie.BehandeldAlsNederlander
+
+Formeel en materieel
+
+Persoon.Indicatie.
+SignaleringMetBetrekkingTotVerstrekkenReisdocument
+
+Formeel
+
+Persoon.Indicatie.Staatloos
+
+Formeel en materieel
+
+Persoon.Indicatie.BijzondereVerblijfsrechtelijkePositie
+
+Formeel
+
+Persoon.Indicatie.OnverwerktDocumentAanwezig
+
+Formeel
+
+Persoon.Voornaam.Identiteit
+
+Geen
+
+Persoon.Voornaam.Standaard
+
+Formeel en materieel
+
+Persoon.Geslachtsnaamcomponent.Identiteit
+
+Geen
+
+Persoon.Geslachtsnaamcomponent.Standaard
+
+Formeel en materieel
+
+Persoon.Adres.Identiteit
+
+Geen
+
+Persoon.Adres.Standaard
+
+Formeel en materieel
+
+Persoon.Nationaliteit.Identiteit
+
+Geen
+
+Persoon.Nationaliteit.Standaard
+
+Formeel en materieel
+
+Persoon.BuitenlandsPersoonsnummer.Identiteit
+
+Geen
+
+Persoon.BuitenlandsPersoonsnummer.Standaard
+
+Formeel
+
+Persoon.Verstrekkingsbeperking.Identiteit
+
+Formeel
+
+Persoon.Reisdocument.Identiteit
+
+Geen
+
+Persoon.Reisdocument.Standaard
+
+Formeel
+
+Persoon.Afnemerindicatie.Identiteit
+
+Geen
+
+OperatieBRP
+
+Pagina 40 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+Persoon.Afnemerindicatie.Standaard
+
+Alleen de attributen
+‘TijdstipRegistratie’ en
+‘TijdstipVerval’
+
+Persoon.Verificatie.Identiteit
+
+Geen
+
+Persoon.Verificatie.Standaard
+
+Formeel
+
+Onderzoek.Identiteit
+
+Geen
+
+Onderzoek.Standaard
+
+Formeel
+
+FamilierechtelijkeBetrekking.Identiteit
+
+Geen
+
+FamilierechtelijkeBetrekking.Standaard
+
+Formeel
+
+Huwelijk.Identiteit
+
+Geen
+
+Huwelijk.Standaard
+
+Formeel
+
+GeregistreerdPartnerschap.Identiteit
+
+Geen
+
+GeregistreerdPartnerschap.Standaard
+
+Formeel
+
+Persoon.Kind.Identiteit
+
+Formeel
+
+Persoon.Ouder.Identiteit
+
+Formeel
+
+Persoon.Ouder.Ouderschap
+
+Formeel en materieel
+
+GerelateerdeKind.Identitieit
+
+Formeel
+
+GerelateerdeOuder.Identiteit
+
+Formeel
+
+GerelateerdeOuder.Ouderschap
+
+Formeel en materieel
+
+GerelateerdeOuder.OuderlijkGezag
+
+Formeel en materieel
+
+Persoon.Partner.Identiteit
+
+Formeel
+
+GerelateerdePartner.Identiteit
+
+Formeel
+
+GerelateerdeKind.Persoon.Identiteit
+
+Geen
+
+GerelateerdeKind.Persoon.Identificatienummers
+
+Formeel en materieel
+
+GerelateerdeKind.Persoon.SamengesteldeNaam
+
+Formeel en materieel
+
+GerelateerdeKind.Persoon.Geboorte
+
+Formeel
+
+GerelateerdeOuder.Persoon.Identiteit
+
+Geen
+
+GerelateerdeOuder.Persoon.Identificatienummers
+
+Formeel en materieel
+
+GerelateerdeOuder.Persoon.SamengesteldeNaam
+
+Formeel en materieel
+
+GerelateerdeOuder.Persoon.Geboorte
+
+Formeel
+
+GerelateerdeOuder.Persoon.Geslachtsaanduiding
+
+Formeel en materieel
+
+GerelateerdeHuwelijkspartner.Persoon.Identiteit
+
+Geen
+
+GerelateerdeHuwelijkspartner.Persoon.Identificatienummers
+
+Formeel en materieel
+
+GerelateerdeHuwelijkspartner.Persoon.SamengesteldeNaam
+
+Formeel en materieel
+
+GerelateerdeHuwelijkspartner.Persoon.Geboorte
+
+Formeel
+
+GerelateerdeHuwelijkspartner.Persoon.Geslachtsaanduiding
+
+Formeel en materieel
+
+GerelateerdeGeregistreerdePartner.Persoon.Identiteit
+
+Geen
+
+GerelateerdeGeregistreerdePartner.Persoon.Identificatienummers
+
+Formeel en materieel
+
+GerelateerdeGeregistreerdePartner.Persoon.SamengesteldeNaam
+
+Formeel en materieel
+
+GerelateerdeGeregistreerdePartner.Persoon.Geboorte
+
+Formeel
+
+GerelateerdeGeregistreerdePartner.Persoon.Geslachtsaanduiding
+
+Formeel en materieel
+
+OperatieBRP
+
+Pagina 41 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+7
+
+Definitie expressietaal
+
+7.1
+
+Expressies
+
+7.1.1
+
+Algemeen
+
+7.1.2
+
+7.1.3
+
+7.1.4
+
+expressie ::=
+
+boolexpressie |
+numexpressie |
+stringexpressie |
+datumexpressie |
+lijstexpressie
+
+lijstexpressie ::=
+
+boollijstexpressie |
+numlijstexpressie |
+stringlijstexpressie |
+datumlijstexpressie |
+groeplijstexpressie |
+objectlijstexpressie
+
+Boolean expressie
+boolexpressie ::=
+
+(boolexpressie) |
+boolexpressie waarbij |
+boolexpressie EN boolexpressie |
+boolexpressie OF boolexpressie |
+NIET boolexpressie |
+singleboolattribuutid |
+boolconstante |
+boolfunctie |
+variabele |
+vergelijking
+
+boolconstante ::=
+
+WAAR | ONWAAR
+
+Numerieke expressie
+numexpressie ::=
+
+(numexpressie) |
+numexpressie waarbij |
+numexpressie + numexpressie |
+numexpressie - numexpressie |
+- numexpressie |
+singlenumattribuutid |
+numconstante |
+numfunctie |
+variabele
+
+numconstante ::=
+
+…zie tekst…
+
+Datum expressie
+datumexpressie ::=
+
+OperatieBRP
+
+datumexpressie waarbij |
+datumexpressie + periodeconstante |
+datumexpressie - periodeconstante |
+
+Pagina 42 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+singledatumattribuutid |
+datumconstante |
+datumfunctie |
+variabele
+periodeconstante ::= ˆperiodedeel/periodedeel/periodedeel |
+numconstante
+
+7.1.5
+
+7.1.6
+
+periodedeel ::=
+
+numconstante | ?
+
+datumconstante ::=
+
+jaar/mnd/dag |
+jaar/mnd/dag/uur/min/sec
+
+String expressie
+stringexpressie ::=
+
+stringexpressie waarbij |
+singlestringattribuutid |
+stringconstante |
+stringfunctie |
+variabele
+
+stringconstante ::=
+
+…
+
+Lijst expressie
+boollijstexpressie ::= boollijstexpressie waarbij |
+boolattribuutid |
+boollijstfunctie
+numlijstexpressie ::= numlijstexpressie waarbij |
+numattribuutid |
+numlijstfunctie |
+{}|
+{ numexpressielijst }
+numexpressielijst ::= numexpressie |
+numexpressie, numexpressielijst
+datumlijstexpressie ::= datumlijstexpressie waarbij |
+datumattribuutid |
+datumlijstfunctie |
+{}|
+{ datumexpressielijst }
+datumexpressielijst ::= datumexpressie |
+datumexpressie, datumexpressielijst
+stringlijstexpressie ::=
+
+stringsetepxressie waarbij |
+stringattribuutid |
+stringlijstfunctie |
+{}|
+{ stringexpressielijst }
+
+stringexpressielijst ::=
+
+stringexpressie |
+stringexpressie, stringexpressielijst
+
+OperatieBRP
+
+Pagina 43 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+objectlijstexpressie ::= objectlijstexpressie waarbij |
+objectid |
+objectlijstfunctie
+groeplijstexpressie ::=
+
+7.2
+
+groeplijstexpressie waarbij |
+groepid |
+groeplijstfunctie
+
+Vergelijking
+vergelijking ::=
+
+boolsetvergelijking |
+numsetvergelijking |
+stringsetvergelijking |
+datumsetvergelijking
+
+boolvergelijking ::=
+
+boollijstexpressie boolsetop boolexpressie |
+boollijstexpressie setopset boollijstexpressie
+
+numsetvergelijking ::= numlijstexpressie setop numexpressie |
+numlijstexpressie setopset numlijstexpressie
+datumsetvergelijking ::=
+
+datumlijstexpressie setop datumexpressie |
+datumlijstexpressie setopset datumlijstexpressie
+
+stringsetvergelijking ::=
+
+stringlijstexpressie stringsetop stringexpressie |
+stringlijstexpressie stringsetopset stringlijstexpressie
+
+setop ::=
+setopset ::=
+boolsetop ::=
+stringsetop ::=
+stringsetopset ::=
+
+7.3
+
+Functies
+
+7.3.1
+
+Boolean functies
+boolfunctie ::=
+
+7.3.2
+
+E= | A= | E<> | A<> | E> | A> | E>= | A>= | E< | A< | E<= | A<=
+EIN | AIN
+E= | A=
+setop | E=% | A=%
+setopset | EIN=% | AIN=%
+
+KV(lijstexpressie) |
+KNV(lijstexpressie) |
+IS_NULL(expressie) |
+ER_IS(lijstexpressie, variabele, boolexpressie) |
+ALLE(lijstexpressie, variabele, boolexpressie) |
+ALS(boolexpressie, boolexpressie, boolexpressie) |
+GEWIJZIGD(expressie, expressie) |
+GEWIJZIGD(oud, nieuw, elementid)
+
+Numerieke functies
+numfunctie ::=
+
+OperatieBRP
+
+JAAR(datumexpressie) |
+DAG(datumexpressie) |
+MAAND(datumexpressie) |
+AANTAL_DAGEN(numexpressie, numexpressie) |
+AANTAL_DAGEN(numexpressie) |
+AANTAL(lijstexpressie) |
+ALS(boolexpressie, numexpressie, numexpressie)
+
+Pagina 44 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+7.3.3
+
+Datum functies
+datumfunctie ::=
+
+7.3.4
+
+String functies
+stringfunctie ::=
+
+7.3.5
+
+VANDAAG() |
+DATUM(numexpressie, numexpressie, numexpressie) |
+LAATSTE_DAG(numexpressie, numexpressie) |
+LAATSTE_DAG(numexpressie) |
+ALS(boolexpressie, datumexpressie, datumexpressie)
+
+ALS(boolexpressie, stringexpressie, stringexpressie)
+
+Lijst functies
+boollijstfunctie ::= MAP(objectlijstexpressie, boolattribuutid) |
+MAP(groeplijstexpressie, boolattribuutid) |
+HIS(boolattribuutid) |
+HISM(boolattribuutid) |
+ALS(boolexpressie, boollijstexpressie, boollijstexpressie)
+numlijstfunctie ::= MAP(objectlijstexpressie, numattribuutid) |
+MAP(groeplijstexpressie, numattribuutid) |
+AH(actieattribuutid, numahattribuutid) |
+ACTIE(actieattribuutid, numactieattribuutid) |
+HIS(numattribuutid) |
+HISM(numattribuutid) |
+ALS(boolexpressie, numlijstexpressie, numsetxpressie)
+datumlijstfunctie ::= MAP(objectlijstexpressie, datumattribuutid) |
+MAP(groeplijstexpressie, datumattribuutid) |
+AH(actieattribuutid, datumattribuutid) |
+ACTIE(actieattribuutid, datumattribuutid) |
+ALS(boolexpressie, datumlijstexpressie, datumlijstexpressie)
+stringlijstfunctie ::=
+
+MAP(objectlijstexpressie, stringattribuutid) |
+MAP(groeplijstexpressie, stringattribuutid) |
+AH(actieattribuutid, stringattribuutid) |
+ACTIE(actieattribuutid, stringattribuutid) |
+ALS(boolexpressie, stringlijstexpressie, stringlijstexpressie)
+
+objectlijstfunctie ::= FILTER(objectlijstexpressie, boolexpressie) |
+ALS(boolexpressie, objectlijstexpressie, objectlijstexpressie)
+groeplijstfunctie ::=
+
+7.4
+
+HISM_LAATSTE(groepid) |
+FILTER(groeplijstexpressie, boolexpressie) |
+ALS(boolexpressie, groeplijstexpressie, groeplijstexpressie)
+
+Objecten, groepen en attributen
+singleboolattribuutid ::=
+boolattribuutid ::=
+singlenumattribuutid ::=
+numattribuutid ::=
+
+OperatieBRP
+
+…
+…
+…
+…
+
+het
+het
+het
+het
+
+id
+id
+id
+id
+
+van
+van
+van
+van
+
+een
+een
+een
+een
+
+enkelvoudig attribuut van het type boolean …
+attribuut van het type boolean …
+enkelvoudig attribuut van het type getal …
+attribuut van het type getal …
+
+Pagina 45 van 46
+
+Definitief | 1.2 | ASP - Expressietaal | 20-04-2017
+
+singledatumattribuutid ::=
+datumattribuutid ::=
+singlestringattribuutid ::=
+stringattribuutid ::=
+actieattribuutid ::=
+groepid ::=
+objectid ::=
+
+7.5
+
+Overig
+
+7.5.1
+
+Closure expressie
+
+…
+…
+…
+…
+…
+…
+…
+
+het
+het
+het
+het
+het
+het
+het
+
+id
+id
+id
+id
+id
+id
+id
+
+van
+van
+van
+van
+van
+van
+van
+
+een
+een
+een
+een
+een
+een
+een
+
+enkelvoudig attribuut van het type datum …
+attribuut van het type datum …
+enkelvoudig attribuut van het type string …
+attribuut van het type string …
+attribuut van het type actie …
+groep van attributen …
+object …
+
+waarbij ::=
+
+WAARBIJ varlijst
+
+varlijst ::=
+
+variabele = expressie |
+variabele = expressie, varlijst
+
+OperatieBRP
+
+Pagina 46 van 46
+
+

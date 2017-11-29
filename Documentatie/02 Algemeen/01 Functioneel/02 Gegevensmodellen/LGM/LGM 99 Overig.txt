@@ -1,0 +1,85 @@
+LGM 99 Overig
+Release 59 17-7-2017
+
+Blokkering
+
+Dyn
+
+Identiteit
+
+-
+
+-
+
+ID
+
+D
+
+Blokkering ID
+
+*i
+
+Administratienummer
+
+D
+
+Administratienummer
+
+* u1
+
+Reden blokkering >
+
+D
+
+Reden blokkering
+
+.
+
+Process instantie ID
+
+D
+
+Process instantie ID
+
+.
+
+LO3 gemeente vestiging
+
+D
+
+LO3 gemeente code
+
+.
+
+LO3 gemeente registratie D
+
+LO3 gemeente code
+
+.
+
+Datum/Tijd
+
+*
+
+Tijdstip registratie
+
+D
+
+Reden blokkering
+Identiteit
+ID
+
+D
+
+Naam D
+
+Rel
+-
+
+Reden blokkering ID
+
+*i
+
+Naam enumeratiewaarde *
+
+

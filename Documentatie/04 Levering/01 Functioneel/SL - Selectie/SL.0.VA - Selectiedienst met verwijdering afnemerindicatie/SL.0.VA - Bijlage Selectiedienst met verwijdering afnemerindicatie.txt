@@ -1,0 +1,4215 @@
+SL.0.VA - Bijlage Selectiedienst met verwijdering
+afnemerindicatie
+Versie: Werk
+Gegenereerd op: 21 juli 2017
+Status: Definitief
+
+1 Bericht: Verwerk selectieresultaat set
+Berichtspecificatie
+
+Verwerk selectieresultaat set (lvg_selVerwerkSelectieresultaatSet)
+
+Kardinaliteit
+1
+
+Stuurgegevens
+Zendende partij, Zendende systeem, Ontvangende partij, Referentienummer, Datum/tijd verzending
+
+Selectiekenmerken
+
+1
+
+Soort selectieresultaat set, Volgnummer selectieresultaat set, Soort selectie, Leveringsautorisatie, Dienst, Selectietaak,
+Selectie datum, Peilmoment materieel resultaat selectie, Peilmoment formeel resultaat selectie, Selectie historievorm
+
+0..1
+
+Resultaat
+Aantal selectieresultaat personen, Aantal selectieresultaat sets
+
+Geselecteerde Personen
+Geselecteerdepersoon
+Meldingen
+Melding (objecttype="Melding", referentieID)
+
+0..1
+0..n
+0..1
+0..n
+
+Regel, Soort, Melding
+
+Persoon (objecttype="Persoon", objectSleutel, communicatieID)
+
+0..1
+
+Soort
+
+Afgeleid administratief (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Tijdstip laatste
+wijziging, Tijdstip laatste wijziging GBA-systematiek
+
+Identificatienummers (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Burgerservicenummer,
+Administratienummer
+
+Samengestelde naam (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Afgeleid?, Namenreeks?, Predicaat,
+Voornamen, Adellijke titel, Voorvoegsel, Scheidingsteken, Geslachtsnaamstam
+
+Geboorte (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+geboorte, Gemeente geboorte, Woonplaatsnaam geboorte, Buitenlandse plaats geboorte, Buitenlandse regio
+geboorte, Omschrijving locatie geboorte, Land/gebied geboorte
+
+Geslachtsaanduiding (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Geslachtsaanduiding
+
+Inschrijving (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+inschrijving
+
+Nummerverwijzing (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Vorige burgerservicenummer,
+Volgende burgerservicenummer, Vorige administratienummer, Volgende administratienummer
+
+Bijhouding (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Bijhoudingspartij, Bijhoudingsaard,
+Nadere bijhoudingsaard
+
+Overlijden (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+overlijden, Gemeente overlijden, Woonplaatsnaam overlijden, Buitenlandse plaats overlijden, Buitenlandse
+regio overlijden, Omschrijving locatie overlijden, Land/gebied overlijden
+
+Voornamen
+Persoon \ Voornaam (objecttype="PersoonVoornaam", Verwerkingssoort, objectSleutel,
+
+0..1
+0..n
+
+voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Volgnummer, Naam
+
+Geslachtsnaamcomponenten
+Persoon \ Geslachtsnaamcomponent (objecttype="PersoonGeslachtsnaamcomponent",
+
+0..1
+0..n
+
+Verwerkingssoort, objectSleutel, voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Volgnummer, Predicaat,
+Adellijke titel, Voorvoegsel, Scheidingsteken, Stam
+
+Naamgebruik (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Naamgebruik,
+Naamgebruik afgeleid?, Predicaat naamgebruik, Voornamen naamgebruik, Adellijke titel naamgebruik,
+Voorvoegsel naamgebruik, Scheidingsteken naamgebruik, Geslachtsnaamstam naamgebruik
+
+Adressen
+
+0..1
+
+Persoon \ Adres (objecttype="PersoonAdres", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..n
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Soort, Reden wijziging,
+Aangever adreshouding, Datum aanvang adreshouding, Identificatiecode adresseerbaar object,
+Identificatiecode nummeraanduiding, Gemeente, Naam openbare ruimte, Afgekorte naam openbare
+ruimte, Gemeentedeel, Huisnummer, Huisletter, Huisnummertoevoeging, Postcode, Woonplaatsnaam,
+Locatie ten opzichte van adres, Locatieomschrijving, Buitenlands adres regel 1, Buitenlands adres
+regel 2, Buitenlands adres regel 3, Buitenlands adres regel 4, Buitenlands adres regel 5, Buitenlands
+adres regel 6, Land/gebied, Persoon aangetroffen op adres?
+
+Nationaliteiten
+Nationaliteit (objecttype="PersoonNationaliteit", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..1
+0..n
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Nationaliteit, Reden
+verkrijging, Reden verlies, Bijhouding beëindigd?
+
+BuitenlandsPersoonsnummers
+
+0..1
+
+Buitenlandspersoonsnummer (objecttype="PersoonBuitenlandsPersoonsnummer", Verwerkingssoort,
+
+0..n
+
+objectSleutel, voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval,
+Autoriteit van afgifte, Nummer
+
+Indicaties
+Derde heeft gezag (objecttype="PersoonIndicatie", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..1
+0..n
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Waarde
+
+Onder curatele (objecttype="PersoonIndicatie", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..n
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Waarde
+
+Volledige verstrekkingsbeperking (objecttype="PersoonIndicatie", Verwerkingssoort, objectSleutel,
+
+0..n
+
+voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval,
+Waarde
+
+Vastgesteld niet Nederlander (objecttype="PersoonIndicatie", Verwerkingssoort, objectSleutel,
+
+0..n
+
+voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Waarde
+
+Behandeld als Nederlander (objecttype="PersoonIndicatie", Verwerkingssoort, objectSleutel,
+
+0..n
+
+voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Waarde
+
+Signalering met betrekking tot verstrekken reisdocument (objecttype="PersoonIndicatie",
+
+0..n
+
+Verwerkingssoort, objectSleutel, voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval,
+Waarde
+
+Staatloos (objecttype="PersoonIndicatie", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..n
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Waarde
+
+Bijzondere verblijfsrechtelijke positie (objecttype="PersoonIndicatie", Verwerkingssoort, objectSleutel,
+
+0..n
+
+voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval,
+Waarde
+
+Onverwerkt document aanwezig (objecttype="PersoonIndicatie", Verwerkingssoort, objectSleutel,
+
+0..n
+
+voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval,
+Waarde
+
+Verstrekkingsbeperkingen
+
+0..1
+
+Persoon \ Verstrekkingsbeperking (objecttype="PersoonVerstrekkingsbeperking", Verwerkingssoort,
+
+0..n
+
+objectSleutel, voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Partij,
+Omschrijving derde, Gemeente verordening
+
+Betrokkenheden
+
+0..1
+
+Kind (objecttype="Betrokkenheid", Verwerkingssoort, objectSleutel, voorkomenSleutel, communicatieID)
+
+0..1
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval
+
+Familierechtelijke betrekking (objecttype="Relatie", Verwerkingssoort, objectSleutel,
+
+0..1
+
+communicatieID)
+
+Relatie (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..1
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval
+
+Betrokkenheden
+Ouder (objecttype="Betrokkenheid", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..1
+0..n
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval
+
+Persoon (objecttype="Persoon", Verwerkingssoort, objectSleutel, referentieID,
+
+0..1
+
+communicatieID)
+Soort
+
+Identificatienummers (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie aanpassing
+geldigheid, Burgerservicenummer, Administratienummer
+
+Samengestelde naam (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie aanpassing
+geldigheid, Afgeleid?, Namenreeks?, Predicaat, Voornamen, Adellijke titel, Voorvoegsel,
+Scheidingsteken, Geslachtsnaamstam
+
+Geboorte (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum geboorte, Gemeente geboorte, Woonplaatsnaam geboorte, Buitenlandse
+plaats geboorte, Buitenlandse regio geboorte, Omschrijving locatie geboorte,
+Land/gebied geboorte
+
+Geslachtsaanduiding (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie aanpassing
+geldigheid, Geslachtsaanduiding
+
+Ouderschap (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid,
+Ouder uit wie kind is geboren?
+
+Ouderlijk gezag (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid,
+Ouder heeft gezag?
+
+Ouder (objecttype="Betrokkenheid", Verwerkingssoort, objectSleutel, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval
+
+Familierechtelijke betrekking (objecttype="Relatie", Verwerkingssoort, objectSleutel,
+
+0..1
+
+communicatieID)
+
+Relatie (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..1
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval
+
+Betrokkenheden
+Kind (objecttype="Betrokkenheid", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..1
+0..1
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval
+
+Persoon (objecttype="Persoon", Verwerkingssoort, objectSleutel, referentieID,
+
+0..1
+
+communicatieID)
+Soort
+
+Identificatienummers (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie aanpassing
+geldigheid, Burgerservicenummer, Administratienummer
+
+Samengestelde naam (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie aanpassing
+geldigheid, Afgeleid?, Namenreeks?, Predicaat, Voornamen, Adellijke titel, Voorvoegsel,
+Scheidingsteken, Geslachtsnaamstam
+
+Geboorte (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum geboorte, Gemeente geboorte, Woonplaatsnaam geboorte, Buitenlandse
+plaats geboorte, Buitenlandse regio geboorte, Omschrijving locatie geboorte,
+Land/gebied geboorte
+
+Ouderschap (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Ouder uit wie kind is
+geboren?
+
+Partner (objecttype="Betrokkenheid", Verwerkingssoort, objectSleutel, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval
+
+<Keuze>
+Geregistreerd partnerschap (objecttype="Relatie", Verwerkingssoort, objectSleutel,
+
+1
+
+communicatieID)
+
+Relatie (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval,
+Datum aanvang, Gemeente aanvang, Woonplaatsnaam aanvang, Buitenlandse plaats aanvang,
+Buitenlandse regio aanvang, Omschrijving locatie aanvang, Land/gebied aanvang, Reden
+einde, Datum einde, Gemeente einde, Woonplaatsnaam einde, Buitenlandse plaats einde,
+Buitenlandse regio einde, Omschrijving locatie einde, Land/gebied einde
+
+Betrokkenheden
+Partner (objecttype="Betrokkenheid", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..1
+0..1
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval
+
+Persoon (objecttype="Persoon", Verwerkingssoort, objectSleutel, referentieID,
+
+0..1
+
+communicatieID)
+Soort
+
+Identificatienummers (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere
+aanduiding verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie
+aanpassing geldigheid, Burgerservicenummer, Administratienummer
+
+Samengestelde naam (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere
+aanduiding verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie
+aanpassing geldigheid, Afgeleid?, Namenreeks?, Predicaat, Voornamen, Adellijke
+titel, Voorvoegsel, Scheidingsteken, Geslachtsnaamstam
+
+Geboorte (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere
+aanduiding verval, Datum geboorte, Gemeente geboorte, Woonplaatsnaam
+geboorte, Buitenlandse plaats geboorte, Buitenlandse regio geboorte, Omschrijving
+locatie geboorte, Land/gebied geboorte
+
+Geslachtsaanduiding (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere
+aanduiding verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie
+aanpassing geldigheid, Geslachtsaanduiding
+
+<Of>
+Huwelijk (objecttype="Relatie", Verwerkingssoort, objectSleutel, communicatieID)
+Relatie (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+1
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval,
+Datum aanvang, Gemeente aanvang, Woonplaatsnaam aanvang, Buitenlandse plaats aanvang,
+Buitenlandse regio aanvang, Omschrijving locatie aanvang, Land/gebied aanvang, Reden
+einde, Datum einde, Gemeente einde, Woonplaatsnaam einde, Buitenlandse plaats einde,
+Buitenlandse regio einde, Omschrijving locatie einde, Land/gebied einde
+
+Betrokkenheden
+Partner (objecttype="Betrokkenheid", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval
+
+0..1
+0..1
+
+Persoon (objecttype="Persoon", Verwerkingssoort, objectSleutel, referentieID,
+
+0..1
+
+communicatieID)
+Soort
+
+Identificatienummers (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere
+aanduiding verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie
+aanpassing geldigheid, Burgerservicenummer, Administratienummer
+
+Samengestelde naam (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere
+aanduiding verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie
+aanpassing geldigheid, Afgeleid?, Namenreeks?, Predicaat, Voornamen, Adellijke
+titel, Voorvoegsel, Scheidingsteken, Geslachtsnaamstam
+
+Geboorte (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere
+aanduiding verval, Datum geboorte, Gemeente geboorte, Woonplaatsnaam
+geboorte, Buitenlandse plaats geboorte, Buitenlandse regio geboorte, Omschrijving
+locatie geboorte, Land/gebied geboorte
+
+Geslachtsaanduiding (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere
+aanduiding verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie
+aanpassing geldigheid, Geslachtsaanduiding
+
+<Einde keuze>
+Migratie (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Soort migratie, Reden wijziging
+migratie, Aangever migratie, Land/gebied migratie, Buitenlands adres regel 1 migratie, Buitenlands adres
+regel 2 migratie, Buitenlands adres regel 3 migratie, Buitenlands adres regel 4 migratie, Buitenlands adres
+regel 5 migratie, Buitenlands adres regel 6 migratie
+
+Verblijfsrecht (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Aanduiding
+verblijfsrecht, Datum aanvang verblijfsrecht, Datum mededeling verblijfsrecht, Datum voorzien einde
+verblijfsrecht
+
+Reisdocumenten
+Reisdocument (objecttype="PersoonReisdocument", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..1
+0..n
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Soort,
+Nummer, Autoriteit van afgifte, Datum ingang document, Datum einde document, Datum uitgifte,
+Datum inhouding/vermissing, Aanduiding inhouding/vermissing
+
+Uitsluiting kiesrecht (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Uitsluiting
+kiesrecht?, Datum voorzien einde uitsluiting kiesrecht
+
+Deelname EU verkiezingen (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Deelname EU
+verkiezingen?, Datum aanleiding aanpassing deelname EU verkiezingen, Datum voorzien einde uitsluiting EU
+verkiezingen
+
+Persoonskaart (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Gemeente
+persoonskaart, Persoonskaart volledig geconverteerd?
+
+Verificaties
+
+0..1
+
+Verificatie (objecttype="PersoonVerificatie", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..n
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Partij,
+Soort, Datum
+
+Onderzoeken
+
+0..1
+
+Onderzoek (objecttype="Onderzoek", Verwerkingssoort, objectSleutel, referentieID, communicatieID)
+
+0..n
+
+Partij
+
+Onderzoek (Verwerkingssoort, voorkomenSleutel, referentieID, communicatieID)
+
+1..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang, Datum einde, Omschrijving, Status
+
+Gegevens in onderzoek
+Gegeven in onderzoek (objecttype="GegevenInOnderzoek", Verwerkingssoort, objectSleutel,
+
+0..1
+0..n
+
+referentieID, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval,
+Element, Object sleutel gegeven, Voorkomen sleutel gegeven
+
+Administratieve handelingen
+Administratieve handeling (objecttype="AdministratieveHandeling", objectSleutel, referentieID,
+
+0..1
+0..n
+
+communicatieID)
+Soort, Categorie, Partij, Toelichting ontlening, Tijdstip registratie
+
+Gedeblokkeerde meldingen
+Gedeblokkeerde melding (objecttype="GedeblokkeerdeMelding", objectSleutel, referentieID,
+
+0..1
+0..n
+
+communicatieID)
+Regel, Melding
+
+Bronnen
+
+0..1
+
+Bron (objecttype="AdministratieveHandelingBron", objectSleutel, communicatieID)
+Document (objecttype="Document", objectSleutel, voorkomenSleutel, referentieID,
+
+0..n
+0..1
+
+communicatieID)
+Soort, Aktenummer, Omschrijving, Partij
+Rechtsgrond, Rechtsgrondomschrijving
+
+Bijgehouden acties
+Actie (objecttype="Actie", objectSleutel, referentieID, communicatieID)
+
+0..1
+0..n
+
+Soort, Partij, Datum ontlening
+
+Bronnen
+
+0..1
+
+Bron (objecttype="ActieBron", objectSleutel, referentieID, communicatieID)
+
+0..n
+
+2 Bericht: Verwerk persoon
+Berichtspecificatie
+
+Verwerk persoon (lvg_synVerwerkPersoon)
+Stuurgegevens
+
+Kardinaliteit
+1
+
+Zendende partij, Zendende systeem, Ontvangende partij, Referentienummer, Datum/tijd verzending
+
+0..1
+
+Parameters
+Soort synchronisatie, Leveringsautorisatie, Dienst
+
+Meldingen
+
+0..1
+
+Melding (objecttype="Melding", referentieID)
+
+1..n
+
+Regel, Soort, Melding
+
+Synchronisatie (objecttype="AdministratieveHandeling", Verwerkingssoort, objectSleutel, communicatieID)
+
+0..1
+
+Soort, Categorie, Partij, Tijdstip registratie
+
+Bijgehouden personen
+Persoon (objecttype="Persoon", Verwerkingssoort, objectSleutel, communicatieID)
+
+1
+1..n
+
+Soort
+
+Afgeleid administratief (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Tijdstip laatste
+wijziging, Tijdstip laatste wijziging GBA-systematiek
+
+Identificatienummers (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum aanvang
+geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Burgerservicenummer, Administratienummer
+
+Samengestelde naam (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum aanvang
+geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Afgeleid?, Namenreeks?, Predicaat,
+Voornamen, Adellijke titel, Voorvoegsel, Scheidingsteken, Geslachtsnaamstam
+
+Geboorte (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+geboorte, Gemeente geboorte, Woonplaatsnaam geboorte, Buitenlandse plaats geboorte, Buitenlandse regio
+geboorte, Omschrijving locatie geboorte, Land/gebied geboorte
+
+Geslachtsaanduiding (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum aanvang
+geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Geslachtsaanduiding
+
+Inschrijving (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+inschrijving
+
+Nummerverwijzing (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum aanvang
+geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Vorige burgerservicenummer, Volgende
+burgerservicenummer, Vorige administratienummer, Volgende administratienummer
+
+Bijhouding (Verwerkingssoort, voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum aanvang
+geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Bijhoudingspartij, Bijhoudingsaard, Nadere
+bijhoudingsaard
+
+0..n
+
+Overlijden (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+overlijden, Gemeente overlijden, Woonplaatsnaam overlijden, Buitenlandse plaats overlijden, Buitenlandse
+regio overlijden, Omschrijving locatie overlijden, Land/gebied overlijden
+
+Voornamen
+Persoon \ Voornaam (objecttype="PersoonVoornaam", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..1
+0..n
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Volgnummer, Naam
+
+Geslachtsnaamcomponenten
+Persoon \ Geslachtsnaamcomponent (objecttype="PersoonGeslachtsnaamcomponent", Verwerkingssoort,
+
+0..1
+0..n
+
+objectSleutel, voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Volgnummer, Predicaat,
+Adellijke titel, Voorvoegsel, Scheidingsteken, Stam
+
+Naamgebruik (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Naamgebruik,
+Naamgebruik afgeleid?, Predicaat naamgebruik, Voornamen naamgebruik, Adellijke titel naamgebruik,
+Voorvoegsel naamgebruik, Scheidingsteken naamgebruik, Geslachtsnaamstam naamgebruik
+
+Adressen
+
+0..1
+
+Persoon \ Adres (objecttype="PersoonAdres", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..n
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Soort, Reden wijziging,
+Aangever adreshouding, Datum aanvang adreshouding, Identificatiecode adresseerbaar object,
+Identificatiecode nummeraanduiding, Gemeente, Naam openbare ruimte, Afgekorte naam openbare
+ruimte, Gemeentedeel, Huisnummer, Huisletter, Huisnummertoevoeging, Postcode, Woonplaatsnaam,
+Locatie ten opzichte van adres, Locatieomschrijving, Buitenlands adres regel 1, Buitenlands adres regel
+2, Buitenlands adres regel 3, Buitenlands adres regel 4, Buitenlands adres regel 5, Buitenlands adres
+regel 6, Land/gebied, Persoon aangetroffen op adres?
+
+Nationaliteiten
+Nationaliteit (objecttype="PersoonNationaliteit", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..1
+0..n
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Nationaliteit, Reden
+verkrijging, Reden verlies, Bijhouding beëindigd?
+
+BuitenlandsPersoonsnummers
+Buitenlandspersoonsnummer (objecttype="PersoonBuitenlandsPersoonsnummer", Verwerkingssoort,
+
+0..1
+0..n
+
+objectSleutel, voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval,
+Autoriteit van afgifte, Nummer
+
+Indicaties
+
+0..1
+
+Derde heeft gezag (objecttype="PersoonIndicatie", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..n
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Waarde
+
+Onder curatele (objecttype="PersoonIndicatie", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Waarde
+
+Volledige verstrekkingsbeperking (objecttype="PersoonIndicatie", Verwerkingssoort, objectSleutel,
+
+0..n
+
+voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Waarde
+
+Vastgesteld niet Nederlander (objecttype="PersoonIndicatie", Verwerkingssoort, objectSleutel,
+
+0..n
+
+voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Waarde
+
+Behandeld als Nederlander (objecttype="PersoonIndicatie", Verwerkingssoort, objectSleutel,
+
+0..n
+
+voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Waarde
+
+Signalering met betrekking tot verstrekken reisdocument (objecttype="PersoonIndicatie",
+
+0..n
+
+Verwerkingssoort, objectSleutel, voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Waarde
+
+Staatloos (objecttype="PersoonIndicatie", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..n
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Waarde
+
+Bijzondere verblijfsrechtelijke positie (objecttype="PersoonIndicatie", Verwerkingssoort, objectSleutel,
+
+0..n
+
+voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Waarde
+
+Onverwerkt document aanwezig (objecttype="PersoonIndicatie", Verwerkingssoort, objectSleutel,
+
+0..n
+
+voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Waarde
+
+Verstrekkingsbeperkingen
+Persoon \ Verstrekkingsbeperking (objecttype="PersoonVerstrekkingsbeperking", Verwerkingssoort,
+
+0..1
+0..n
+
+objectSleutel, voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Partij,
+Omschrijving derde, Gemeente verordening
+
+Betrokkenheden
+
+0..1
+
+Kind (objecttype="Betrokkenheid", Verwerkingssoort, objectSleutel, voorkomenSleutel, communicatieID)
+
+0..1
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval
+
+Familierechtelijke betrekking (objecttype="Relatie", Verwerkingssoort, objectSleutel, communicatieID)
+Relatie (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..1
+0..1
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval
+
+Betrokkenheden
+Ouder (objecttype="Betrokkenheid", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..1
+0..n
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval
+
+Persoon (objecttype="Persoon", Verwerkingssoort, objectSleutel, referentieID, communicatieID)
+
+0..1
+
+Soort
+
+Identificatienummers (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid,
+Burgerservicenummer, Administratienummer
+
+Samengestelde naam (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid,
+Afgeleid?, Namenreeks?, Predicaat, Voornamen, Adellijke titel, Voorvoegsel,
+Scheidingsteken, Geslachtsnaamstam
+
+Geboorte (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum geboorte, Gemeente geboorte, Woonplaatsnaam geboorte, Buitenlandse
+plaats geboorte, Buitenlandse regio geboorte, Omschrijving locatie geboorte,
+Land/gebied geboorte
+
+Geslachtsaanduiding (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid,
+Geslachtsaanduiding
+
+Ouderschap (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid,
+Ouder uit wie kind is geboren?
+
+Ouderlijk gezag (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid,
+Ouder heeft gezag?
+
+Ouder (objecttype="Betrokkenheid", Verwerkingssoort, objectSleutel, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval
+
+Familierechtelijke betrekking (objecttype="Relatie", Verwerkingssoort, objectSleutel, communicatieID)
+Relatie (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..1
+0..1
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval
+
+Betrokkenheden
+Kind (objecttype="Betrokkenheid", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..1
+0..1
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval
+
+Persoon (objecttype="Persoon", Verwerkingssoort, objectSleutel, referentieID, communicatieID)
+
+0..1
+
+Soort
+
+Identificatienummers (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid,
+Burgerservicenummer, Administratienummer
+
+Samengestelde naam (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid,
+Afgeleid?, Namenreeks?, Predicaat, Voornamen, Adellijke titel, Voorvoegsel,
+Scheidingsteken, Geslachtsnaamstam
+
+Geboorte (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval, Datum geboorte, Gemeente geboorte, Woonplaatsnaam geboorte, Buitenlandse
+plaats geboorte, Buitenlandse regio geboorte, Omschrijving locatie geboorte,
+Land/gebied geboorte
+
+Ouderschap (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Ouder uit wie kind is
+geboren?
+
+Partner (objecttype="Betrokkenheid", Verwerkingssoort, objectSleutel, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval
+
+<Keuze>
+Geregistreerd partnerschap (objecttype="Relatie", Verwerkingssoort, objectSleutel,
+
+1
+
+communicatieID)
+
+Relatie (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval,
+Datum aanvang, Gemeente aanvang, Woonplaatsnaam aanvang, Buitenlandse plaats aanvang,
+Buitenlandse regio aanvang, Omschrijving locatie aanvang, Land/gebied aanvang, Reden einde,
+Datum einde, Gemeente einde, Woonplaatsnaam einde, Buitenlandse plaats einde, Buitenlandse
+regio einde, Omschrijving locatie einde, Land/gebied einde
+
+Betrokkenheden
+Partner (objecttype="Betrokkenheid", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..1
+0..1
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval
+
+Persoon (objecttype="Persoon", Verwerkingssoort, objectSleutel, referentieID,
+
+0..1
+
+communicatieID)
+Soort
+
+Identificatienummers (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere
+aanduiding verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie
+aanpassing geldigheid, Burgerservicenummer, Administratienummer
+
+Samengestelde naam (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere
+aanduiding verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie
+aanpassing geldigheid, Afgeleid?, Namenreeks?, Predicaat, Voornamen, Adellijke titel,
+Voorvoegsel, Scheidingsteken, Geslachtsnaamstam
+
+Geboorte (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere
+aanduiding verval, Datum geboorte, Gemeente geboorte, Woonplaatsnaam geboorte,
+Buitenlandse plaats geboorte, Buitenlandse regio geboorte, Omschrijving locatie
+geboorte, Land/gebied geboorte
+
+Geslachtsaanduiding (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere
+aanduiding verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie
+aanpassing geldigheid, Geslachtsaanduiding
+
+<Of>
+Huwelijk (objecttype="Relatie", Verwerkingssoort, objectSleutel, communicatieID)
+
+1
+
+Relatie (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval,
+Datum aanvang, Gemeente aanvang, Woonplaatsnaam aanvang, Buitenlandse plaats aanvang,
+Buitenlandse regio aanvang, Omschrijving locatie aanvang, Land/gebied aanvang, Reden einde,
+Datum einde, Gemeente einde, Woonplaatsnaam einde, Buitenlandse plaats einde, Buitenlandse
+regio einde, Omschrijving locatie einde, Land/gebied einde
+
+Betrokkenheden
+Partner (objecttype="Betrokkenheid", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..1
+0..1
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding
+verval
+
+Persoon (objecttype="Persoon", Verwerkingssoort, objectSleutel, referentieID,
+
+0..1
+
+communicatieID)
+Soort
+
+Identificatienummers (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere
+aanduiding verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie
+aanpassing geldigheid, Burgerservicenummer, Administratienummer
+
+Samengestelde naam (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere
+aanduiding verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie
+aanpassing geldigheid, Afgeleid?, Namenreeks?, Predicaat, Voornamen, Adellijke titel,
+Voorvoegsel, Scheidingsteken, Geslachtsnaamstam
+
+Geboorte (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere
+aanduiding verval, Datum geboorte, Gemeente geboorte, Woonplaatsnaam geboorte,
+Buitenlandse plaats geboorte, Buitenlandse regio geboorte, Omschrijving locatie
+geboorte, Land/gebied geboorte
+
+Geslachtsaanduiding (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere
+aanduiding verval, Datum aanvang geldigheid, Datum einde geldigheid, Actie
+aanpassing geldigheid, Geslachtsaanduiding
+
+<Einde keuze>
+Migratie (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum aanvang
+geldigheid, Datum einde geldigheid, Actie aanpassing geldigheid, Soort migratie, Reden wijziging migratie,
+Aangever migratie, Land/gebied migratie, Buitenlands adres regel 1 migratie, Buitenlands adres regel 2
+migratie, Buitenlands adres regel 3 migratie, Buitenlands adres regel 4 migratie, Buitenlands adres regel 5
+migratie, Buitenlands adres regel 6 migratie
+
+Verblijfsrecht (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Aanduiding
+verblijfsrecht, Datum aanvang verblijfsrecht, Datum mededeling verblijfsrecht, Datum voorzien einde
+verblijfsrecht
+
+Reisdocumenten
+Reisdocument (objecttype="PersoonReisdocument", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+communicatieID)
+
+0..1
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Soort,
+Nummer, Autoriteit van afgifte, Datum ingang document, Datum einde document, Datum uitgifte,
+Datum inhouding/vermissing, Aanduiding inhouding/vermissing
+
+Uitsluiting kiesrecht (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Uitsluiting
+kiesrecht?, Datum voorzien einde uitsluiting kiesrecht
+
+Deelname EU verkiezingen (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Deelname EU
+verkiezingen?, Datum aanleiding aanpassing deelname EU verkiezingen, Datum voorzien einde uitsluiting EU
+verkiezingen
+
+Persoonskaart (Verwerkingssoort, voorkomenSleutel, communicatieID)
+
+0..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Gemeente
+persoonskaart, Persoonskaart volledig geconverteerd?
+
+Afnemerindicaties
+Afnemerindicatie (objecttype="PersoonAfnemerindicatie", Verwerkingssoort, objectSleutel,
+
+0..1
+0..n
+
+voorkomenSleutel, communicatieID)
+Datum/tijd registratie, Datum/tijd verval, Partij, Leveringsautorisatie, Datum aanvang materiële
+periode, Datum einde volgen
+
+Verificaties
+
+0..1
+
+Verificatie (objecttype="PersoonVerificatie", Verwerkingssoort, objectSleutel, voorkomenSleutel,
+
+0..n
+
+communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Partij,
+Soort, Datum
+
+Onderzoeken
+
+0..1
+
+Onderzoek (objecttype="Onderzoek", Verwerkingssoort, objectSleutel, referentieID, communicatieID)
+
+0..n
+
+Partij
+
+Onderzoek (Verwerkingssoort, voorkomenSleutel, referentieID, communicatieID)
+
+1..n
+
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval, Datum
+aanvang, Datum einde, Omschrijving, Status
+
+Gegevens in onderzoek
+Gegeven in onderzoek (objecttype="GegevenInOnderzoek", Verwerkingssoort, objectSleutel,
+
+0..1
+0..n
+
+referentieID, communicatieID)
+Datum/tijd registratie, Actie inhoud, Datum/tijd verval, Actie verval, Nadere aanduiding verval,
+Element, Object sleutel gegeven, Voorkomen sleutel gegeven
+
+Administratieve handelingen
+Administratieve handeling (objecttype="AdministratieveHandeling", objectSleutel, referentieID,
+
+0..1
+0..n
+
+communicatieID)
+Soort, Categorie, Partij, Toelichting ontlening, Tijdstip registratie
+
+Gedeblokkeerde meldingen
+Gedeblokkeerde melding (objecttype="GedeblokkeerdeMelding", objectSleutel, referentieID,
+
+0..1
+0..n
+
+communicatieID)
+Regel, Melding
+
+Bronnen
+Bron (objecttype="AdministratieveHandelingBron", objectSleutel, communicatieID)
+
+0..1
+0..n
+
+Document (objecttype="Document", objectSleutel, voorkomenSleutel, referentieID,
+
+0..1
+
+communicatieID)
+Soort, Aktenummer, Omschrijving, Partij
+Rechtsgrond, Rechtsgrondomschrijving
+
+Bijgehouden acties
+Actie (objecttype="Actie", objectSleutel, referentieID, communicatieID)
+
+0..1
+0..n
+
+Soort, Partij, Datum ontlening
+
+Bronnen
+Bron (objecttype="ActieBron", objectSleutel, referentieID, communicatieID)
+
+0..1
+0..n
+
+3 Regels voor usecase SL.1.VA.VVA - Verwerken verwijderen
+afnemerindicatie
+3.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1342
+
+2
+
+3.2
+
+'Persoon heeft een verstrekkingsbeperking voor Partij'
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2591
+
+1
+
+Indien ingesteld bij selectiedienst dan Volledig bericht na verwijdering
+afnemerindicatie
+
+4 Regels voor usecase SL.1.MST - Maak selectieresultaat
+totaal
+4.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2557
+
+1
+
+Bestandsnaam selectieresultaat set
+
+R2560
+
+3
+
+Vullen selectieresultaatset totalen
+
+5 Regels voor usecase SL.1.SP.GSL - Gebruik selectielijst
+5.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2631
+
+1
+
+Selecteer personen op basis van selectiebestand
+
+6 Regels voor usecase SL.1.SP.GSC - Gebruik selectiecriteria
+6.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2059
+
+2
+
+6.2
+
+Totale populatiebeperking
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2540
+
+7
+
+Selecteer personen die voldoen aan de totale populatiebeperking en de
+nadere selectiecriteria
+
+7 Regels voor usecase SL.1.SP.NLP - Niet te leveren personen
+7.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1342
+
+2
+
+7.2
+
+'Persoon heeft een verstrekkingsbeperking voor Partij'
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1538
+
+5
+
+Alleen persoonslijsten van ingeschreven personen kunnen geleverd worden.
+
+R1539
+
+8
+
+Alleen niet-vervallen personen kunnen geleverd worden
+
+R1983
+
+6
+
+Dienst verstrekt geen gegevens indien sprake is van een
+verstrekkingsbeperking voor de afnemer
+
+8 Regels voor usecase LV.1.SPL.VP - Volledig persoon
+samenstellen
+8.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1540
+
+3
+
+'Inhoudelijke groep'
+
+R1541
+
+2
+
+'Verantwoordingsgroep'
+
+R1543
+
+4
+
+'Onderzoeksgroep'
+
+R1556
+
+5
+
+Gereconstrueerde persoon na de onderhanden Administratieve handeling
+(strippen latere handelingen)
+
+R1998
+
+5
+
+'Volledig persoon'
+
+8.2
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2063
+
+3
+
+Stel Volledig persoon samen
+
+R2529
+
+1
+
+Leveren van Gedeblokkeerde melding
+
+9 Regels voor usecase LV.1.SPL.FG - Filteren op grens PL
+9.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1328
+
+9
+
+Een bericht aan een afnemer mag geen pre-relatiegegevens bevatten
+
+10 Regels voor usecase LV.1.SPL.PVB - Persoon met
+verstrekkingsbeperking
+10.1 Definitieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1341
+
+4
+
+'Persoon heeft verstrekkingsbeperking'
+
+10.2 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R1340
+
+4
+
+W
+
+Waarschuwing indien op geleverde persoonsgegevens
+verstrekkingsbeperking van toepassing is
+
+11 Regels voor usecase LV.1.AFB.FH - Toepassen
+autorisatiefilter formele historie
+11.1 Definitieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1540
+
+3
+
+'Inhoudelijke groep'
+
+R1543
+
+4
+
+'Onderzoeksgroep'
+
+11.2 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R1353
+
+3
+
+Voorkomen voor levering mutatie niet opnemen in VolledigBericht
+
+R1546
+
+3
+
+Vervallen groepen alleen opnemen bij autorisatie voor formele historie
+
+R1548
+
+4
+
+Leveren van Datum/tijd registratie en Datum/tijd verval mag alleen bij
+autorisatie voor formele historie
+
+12 Regels voor usecase LV.1.AFB.MH - Toepassen autorisatie
+materiele historie en verantwoording
+12.1 Definitieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1540
+
+3
+
+'Inhoudelijke groep'
+
+R1543
+
+4
+
+'Onderzoeksgroep'
+
+12.2 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R1349
+
+3
+
+Beeindigde groep alleen leveren bij autorisatie op materiele historie
+
+R1547
+
+3
+
+Leveren van DatumEindeGeldigheid mag alleen bij autorisatie op materiele
+historie
+
+R1549
+
+3
+
+Leveren van ActieInhoud, ActieAanpassingGeldigheid en ActieVerval mag
+alleen bij autorisatie voor verantwoordingsinformatie
+
+R2051
+
+1
+
+Actie attributen alleen opnemen als actie voorkomt in verantwoording
+
+R2062
+
+3
+
+Alias leveren voor administratieve handeling
+
+13 Regels voor usecase LV.1.AFB.AA - Toepassen autorisatie op
+attributen
+13.1 Definitieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1540
+
+3
+
+'Inhoudelijke groep'
+
+R1541
+
+2
+
+'Verantwoordingsgroep'
+
+R1543
+
+4
+
+'Onderzoeksgroep'
+
+13.2 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R1562
+
+4
+
+Een bericht bevat alleen onderzoeken die betrekking hebben op
+geautoriseerde attributen
+
+R1974
+
+8
+
+Alleen attributen leveren waarvoor autorisatie bestaat
+
+R1975
+
+4
+
+Alleen groepen waarvoor autorisatie bestaat worden geleverd
+
+R1976
+
+2
+
+Alleen objecten waarvoor autorisatie bestaat worden geleverd.
+
+R2065
+
+3
+
+Een bericht aan een afnemer bevat geen onderzoek naar ontbrekende
+gegevens
+
+14 Regels voor usecase LV.1.VPB.SS - Samenstellen
+stuurgegevens
+14.1 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R1267
+
+3
+
+Vulling stuurgegevens in uitgaand bericht bij asynchroon leveringsbericht
+
+15 Regels voor usecase LV.1.VPB.FV - Toepassen filter verwerk
+persoon bericht
+15.1 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R1544
+
+4
+
+Begrens het bericht op datum aanvang materiële periode
+
+16 Regels voor usecase LV.1.VPB.VA - Bepaal volgorde en
+aantal hoofdpersonen
+16.1 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R1568
+
+2
+
+Volgorde personen in uitgaand bericht
+
+R1621
+
+3
+
+Logging aantal geleverde personen in volledigbericht of mutatiebericht
+
+17 Regels voor usecase LV.1.BO.CM - Bericht consistent maken
+17.1 Definitieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1540
+
+3
+
+'Inhoudelijke groep'
+
+R1541
+
+2
+
+'Verantwoordingsgroep'
+
+R1543
+
+4
+
+'Onderzoeksgroep'
+
+17.2 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R1551
+
+2
+
+Alleen Acties die verantwoording vormen voor inhoudelijke-of
+onderzoeksgroepen meeleveren
+
+R1552
+
+2
+
+Alleen de Administratieve handelingen waarnaar daadwerkelijk wordt
+verwezen als verantwoording leveren.
+
+R1561
+
+4
+
+Een bericht bevat alleen onderzoeken naar ontbrekende gegevens en naar
+gegevens die ook aanwezig zijn in het bericht
+
+R1563
+
+2
+
+Geen lege onderzoeken leveren
+
+R2015
+
+1
+
+Alleen bronnen waarnaar daadwerkelijk wordt verwezen meeleveren
+
+18 Regels voor usecase LV.1.BO.SO - Berichtstructuur
+opschonen
+18.1 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R1622
+
+3
+
+Het systeem logt de situatie 'bericht bevat geen gegevens'
+
+R1980
+
+1
+
+Een BRP bericht bevat geen lege containers
+
+19 Regels voor usecase LV.1.BO.GS - Gegevens in bericht
+sorteren
+19.1 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R1804
+
+5
+
+Sortering verantwoording in een bericht
+
+R1805
+
+5
+
+Volgorde van meervoudig voorkomende objecten in een bericht
+
+R1806
+
+3
+
+Volgorde historie in een bericht
+
+20 Regels voor usecase LV.1.PB - Protocolleer bericht
+20.1 Definitieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2016
+
+1
+
+'Systeemdatum'
+
+R2395
+
+1
+
+'Peilmoment materieel'
+
+20.2 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R1613
+
+6
+
+Vaststelling protocolleringsgegevens bij verstrekking op verzoek afnemer
+
+R1614
+
+6
+
+Vaststelling protocolleringsgegevens bij verstrekking op administratieve
+handeling
+
+R1615
+
+9
+
+Vaststelling protocolleringsgegevens bij verstrekking door systeemactie
+
+R1617
+
+6
+
+Afleiding Datum aanvang materiele periode resultaat
+
+R1618
+
+5
+
+Afleiding Datum einde materiele periode resultaat
+
+R1619
+
+6
+
+Afleiding Datum/tijd aanvang formele periode resultaat
+
+R1620
+
+4
+
+Afleiding Datum/tijd einde formele periode resultaat
+
+R1995
+
+3
+
+Een levering van persoonsgegevens aan een afnemer dient geprotocolleerd
+te worden
+
+R2236
+
+2
+
+Vulling Leveringsaantekening \ Persoon
+
+21 Regels voor usecase LV.1.VE - Verzend bericht
+21.1 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R1985
+
+1
+
+Verzending uitgaand bericht
+
+R1986
+
+2
+
+Berichten voor mutatielevering worden gegarandeerd en in de juiste volgorde
+afgeleverd.
+
+R1991
+
+3
+
+Stelsel bepaalt de wijze waarop BRP het bericht verstuurd
+
+22 Regels voor usecase LV.1.AB - Archiveer bericht
+22.1 Definitieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2016
+
+1
+
+'Systeemdatum'
+
+R2085
+
+3
+
+De dienst die gevraagd wordt
+
+R2129
+
+2
+
+Geldig
+
+22.2 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R1268
+
+12
+
+Stel te registreren gegevens berichtarchivering vast
+
+R1270
+
+6
+
+Berichtarchivering persoonsreferentie uitgaand bericht
+
+23 Regels voor usecase LV.1.VA - Verwijder afnemerindicatie
+23.1 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R1409
+
+4
+
+Verwerken verwijdering afnemerindicatie
+
+R2594
+
+1
+
+Logregel mislukken verwijderen afnemerindicatie
+
+24 Regels voor usecase SL.1.VA.CAA - Controleer aanwezigheid
+afnemerindicatie
+24.1 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R2592
+
+1
+
+Er moet een afnemerindicatie bestaan
+
+25 Regels voor usecase SL.1.VA.WS - Wijzigen status
+selectietaak
+25.1 Definitieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2016
+
+1
+
+'Systeemdatum'
+
+25.2 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R2667
+
+1
+
+Wijzigen status selectietaak na selecteren personen bij selectiedienst met
+plaatsing of verwijdering afnemerindicatie
+
+R2673
+
+1
+
+Datum uitvoer vullen bij de selectietaak
+
+R2692
+
+1
+
+Aanvullende gegevens wijziging status selectietaak
+
+26 Uitwerking regels
+R1267
+Vulling stuurgegevens in uitgaand bericht bij asynchroon leveringsbericht
+Definitie:
+
+Bij een asynchroon bericht aan een afnemer dienen de stuurgegevens in het
+leveringsbericht als volgt gevuld te worden:
+
+•
+•
+•
+
+•
+•
+
+Bericht.Zendende partij : '199903'
+Bericht.Zendende systeem : 'BRP'
+Bericht.Ontvangende partij : Partij \ Rol.Partij (Partijcode van de afnemer voor
+wie het bericht bedoeld is, bepaald via de Toegang
+leveringsautorisatie.Geautoriseerde van het Toegang leveringsautorisatie
+waarvoor geleverd wordt)
+Bericht.Referentienummer: unieke ID genereren
+Bericht.Datum/tijd verzending : Datum\tijd systeem bij aanmaken van het
+bericht inclusief de tijdzone (bijvoorbeeld: '2012-04-18T15:32:03.234+01:00')
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R1268
+Stel te registreren gegevens berichtarchivering vast
+Definitie:
+
+Voor elk ingaand of uitgaand bericht in de BRP wordt een voorkomen van Bericht
+gearchiveerd. De te registreren gegevens t.b.v. de berichtarchivering zijn
+afhankelijk van twee parameters:
+(1) De berichtsoortcategorie (wordt bepaald aan de hand van Soort bericht.Naam):
+• Bevraging: berichtsoorten die beginnen met 'lvg_bvg'
+• Synchronisatie: berichtsoorten die beginnen met 'lvg_synGeefSynchronisatie'
+• Mutatielevering: berichtsoort 'lvg_synVerwerkPersoon'
+• Plaatsing/Verwijdering afnemerindicatie: berichten die beginnen met
+'lvg_synPlaatsing' of 'lvg_synVerwijdering'
+• Stuf BG bericht: berichten die beginnen met 'stv_stvGeefStufbgBericht'
+(2) Of het een 'Ingaand' of 'Uitgaand' bericht betreft.
+
+De attributen worden als volgt gevuld:
+
+•
+
+Soort bericht.Naam (b.v, 'lvg_bvgZoekPersoon')
+
+•
+
+Bericht.Richting De waarde van (2), Ingaand of Uitgaand
+
+•
+
+Bericht.Administratieve handeling:
+Als (1)="Mutatielevering": Indien het bericht wordt verstuurd vanwege een
+mutatie op grond van een administratieve handeling, dan de handeling die
+aanleiding was tot deze levering hier opnemen.
+In alle andere gevallen: 'leeg'
+
+•
+
+Bericht.Data:
+De inhoud van het bericht zelf (inclusief protocol headers/envelope)
+
+•
+
+Bericht.Zendende partij:
+Vullen met de Partij.ID van de Partij uit stuurgegeven Bericht.Zendende partij
+in bericht (is bij uitgaande berichten dus de BRP zelf). Is leeg als
+
+Bericht.Zendende partij niet verwijst naar een Geldig (R2129) voorkomen op
+'Systeemdatum' (R2016) in Partij.
+
+•
+
+Bericht.Zendende systeem:
+Overnemen uit stuurgegeven Bericht.Zendende systeem in bericht (is bij
+uitgaande berichten dus de BRP zelf).
+
+•
+
+Bericht.Ontvangende partij:
+Als (1)="Mutatielevering" dan vullen met de Partij.ID van de Partij uit
+stuurgegeven Bericht.Ontvangende partij in bericht.
+Als (1)= "Bevraging", "Synchronisatie", "Plaatsing/Verwijdering
+afnemerindicatie" of "Stuf BG bericht" dan vullen met het Bericht.Zendende
+partij zoals dat in de stuurgegevens van het corresponderende vraagbericht
+stond. Is leeg als Bericht.Zendende partij niet verwijst naar een Geldig
+(R2129) voorkomen op 'Systeemdatum' (R2016) in Partij.
+In alle andere gevallen: 'leeg'.
+
+•
+
+Bericht.Referentienummer:
+Overnemen uit stuurgegeven Bericht.Referentienummer in bericht.
+
+•
+
+Bericht.Cross referentienummer:
+Overnemen uit stuurgegeven Bericht.Cross referentienummer in bericht.
+Indien deze niet in het bericht aanwezig: 'leeg'.
+
+•
+
+Bericht.Datum/tijd verzending:
+Overnemen uit stuurgegeven Bericht.Datum/tijd verzending in bericht.
+
+•
+
+Bericht.Datum/tijd ontvangst:
+Als (2)='Ingaand': Vullen met Datum\tijd systeem van binnenkomst bericht in
+de BRP service.
+Als (2)='Uitgaand': 'leeg'.
+
+•
+
+Bericht.Verwerkingswijze:
+'leeg'.
+
+•
+
+Bericht.Rol:
+Als (2)='Ingaand' en het inkomend bericht bevat de stuurparameter
+"rolNaam": Vullen met Bericht.Rol uit de parameters van het inkomende
+bericht.
+Als (1)="Levering" en (2)='Uitgaand': Vullen met de Rol bij de Toegang
+leveringsautorisatie waarvoor geleverd wordt (Via Partij \ Rol).
+Anders: 'leeg'
+
+•
+
+Bericht.Soort synchronisatie:
+Als (1)=Mutatielevering: Vullen met "Volledigbericht" of "Mutatiebericht"
+afhankelijk van wat voor bericht het betreft (uit context).
+Anders: 'leeg'.
+
+•
+
+Bericht.Leveringsautorisatie:
+Als (2)='Ingaand': Het Bericht.Leveringsautorisatie in de parameters van het
+vraagbericht.
+Als (2)='Uitgaand': De Leveringsautorisatie waarvoor geleverd wordt (indien
+niet beschikbaar, bijvoorbeeld door een autorisatiefout: het
+Bericht.Leveringsautorisatie zoals dat in de parameters van het
+corresponderende vraagbericht stond).
+
+•
+
+Bericht.Dienst
+Als (1)="Mutatielevering": De dienst waarvoor geleverd wordt.
+
+Als (1)="Bevraging", "Synchronisatie", "Plaatsing/verwijdering
+afnemerindicatie" of "Stuf BG bericht": De dienst die gevraagd wordt (R2085).
+
+•
+
+Bericht.Verwerking:
+Als (1)=Ongelijk aan "Mutatielevering" EN (2)='Uitgaand': Overnemen uit
+resultaat Bericht.Verwerking in (antwoord) bericht; 'Geslaagd' indien
+verwerking van bericht zonder problemen/fouten verloopt (geen meldingen),
+anders 'Foutief'; foutief indien er meldingen optreden (van het niveau
+'Deblokkeerbaar' of 'Fout') en/of er technische fouten optreden.
+Anders: 'leeg'.
+
+•
+
+Bericht.Bijhouding:
+'leeg'.
+
+•
+
+Bericht.Hoogste meldingsniveau:
+Als (1)=Ongelijk aan "Levering" EN (2)='Uitgaand': Overnemen uit resultaat
+Bericht.Hoogste meldingsniveau in (antwoord) bericht; 'Geen' indien er geen
+meldingen (uit bedrijfsregels) zijn opgetreden of anders het hoogste
+meldingsniveau van de opgetreden meldingen (afkomstig uit bedrijfsregels).
+Anders: 'leeg'.
+
+Versie:
+
+12
+
+Soort:
+
+Verwerkingslogica
+
+R1270
+Berichtarchivering persoonsreferentie uitgaand bericht
+Definitie:
+
+Indien berichtarchivering wordt vastgelegd van een uitgaand bericht, dan wordt per
+in het bericht gerefereerde Persoon een voorkomen van Bericht \ Persoon
+vastgelegd:
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Geef details persoon > Opnemen van de persoon in het antwoord (excl.
+betrokkenen)
+Geef kandidaat ouder > Opnemen van de personen in het antwoord (excl.
+betrokkenen)
+Geef medebewoners van persoon > Opnemen van de personen in het antwoord
+(excl. betrokkenen)
+Zoek persoon > Opnemen van de personen in het antwoord (excl.
+betrokkenen)
+Zoek persoon op adresgegevens > Opnemen van de personen in het antwoord
+(excl. betrokkenen)
+Synchronisatie persoon > Opnemen van de gesynchroniseerde persoon
+Synchronisatie stamgegeven > Niets opnemen (geen personen geleverd)
+Geef relatiegegevens GBA > Opnemen van de persoon in het antwoord (excl.
+betrokkenen)
+Geef StUF BG bericht > Niets opnemen (er is geen sprake van het leveren van
+personen)
+Bij diensten met plaatsing of verwijdering afnemerindicatie > Opnemen van
+bijgehouden persoon
+Volledigberichten > Alle personen die werkelijk in het bericht zitten (excl.
+betrokkenen)
+Mutatieberichten > Alle personen die werkelijk in het bericht zitten (excl.
+betrokkenen)
+
+Versie:
+
+6
+
+Soort:
+
+Verwerkingslogica
+
+R1328
+
+Een bericht aan een afnemer mag geen pre-relatiegegevens bevatten
+Definitie:
+
+Een bericht aan een Partij met Rol = 'Afnemer' mag geen voorkomens van groepen
+van de gerelateerde Persoon bevatten die een geldigheidsperiode hebben die geheel
+voor de aanvangsdatum van de Relatie met die Persoon ligt.
+Dit zijn voorkomens die voldoen aan deze voorwaarde:
+Datum einde geldigheid is gevuld en is kleiner of gelijk aan aanvangsdatum van de
+Relatie of Betrokkenheid (*1) tussen de te leveren persoon en de gerelateerde;
+OF
+(
+IndMuteLev is ongelijk 'J'
+EN
+Datum/tijd verval is gevuld en is kleiner of gelijk aan TsReg van de groep Identiteit
+van minstens één van beide Betrokkenheid van de Relatie (de eigen betrokkenheid
+en de gerelateerde betrokkenheid).
+)
+(*1): De _aanvangsdatum is gelijk aan Relatie.Datum aanvang bij een Huwelijk of
+Geregistreerd Partnerschap en gelijk aan Ouder.Ouderschap.Datum aanvang
+geldigheid bij een Familierechtelijke betrekking.
+Toelichting:
+1. Als de aanvangsdatum van de Relatie een (deels) onbekende datum is, dan
+dient hier bij het filteren "streng" mee om te worden gegaan. Dat wil zeggen
+dat alleen groepsvoorkomens van gerelateerden worden weggefilterd waarvan
+zeker is dat deze voor aanvang van de relatie waren beëindigd. Zie ook regel
+R1283 - Vergelijken (partiële) datums.
+2. In geval van meerdere Relaties of Ouder.Ouderschappen tussen dezelfde
+betrokkenen zal in het bericht de gerelateerde meerdere keren voor komen en
+er per "voorkomen" van deze gerelateerde een verschillend filterresultaat
+ontstaan.
+3. Als IndMutLev = 'J' geeft TsVerval slechts een ondergrens aan. Er kan niet
+worden vastgesteld of de groep na TsVerval niet meer bekend was. Omdat
+daarmee niet vast staat dat de groep al vervallen was op het moment dat de
+relatie werd geregistreerd, mag de groep niet gefilterd worden
+
+Versie:
+
+9
+
+Soort:
+
+Verwerkingslogica
+
+R1340
+Waarschuwing indien op geleverde persoonsgegevens verstrekkingsbeperking van
+toepassing is
+Definitie:
+
+Wanneer gegevens van een persoon worden geleverd én de 'Persoon heeft een
+actuele(1) verstrekkingsbeperking' (zie 'Persoon heeft verstrekkingsbeperking'
+(R1341)) dan bevat het uitgaande bericht een Melding voor die Persoon met de
+Melding.Soort "Waarschuwing" (ongeacht aan welke Partij wordt geleverd).
+(Toelichting: dit betreft het ten alle tijden meeleveren van 'de aantekening' dat er
+sprake is van een verstrekkingsbeperking, conform art 3.10 van de Wet BRP).
+(1) Deze waarschuwing is gebaseerd op de actuele status en staat los van de
+gegevens die geleverd moeten worden. Dus als er een historische levering
+
+plaatsvindt, zal toch uitgegaan worden van de actuele status
+"Verstrekkingsbeperking" voor de te leveren waarschuwing. De waarschuwing is
+alleen van toepassing op de te leveren hoofdpersoon(en) in het uitgaande bericht.
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+De persoon heeft een verstrekkingsbeperking.
+
+R1341
+'Persoon heeft verstrekkingsbeperking'
+Definitie:
+
+Een Persoon 'heeft een verstrekkingsbeperking' als er sprake is van een actuele
+(niet vervallen) volledige verstrekkingsbeperking of één of meer specifieke
+verstrekkingsbeperkingen:
+(
+Persoon.Volledige verstrekkingsbeperking? = 'Ja'
+OF
+er bestaat tenminste één actueel (niet vervallen) voorkomen van Persoon \
+Verstrekkingsbeperking
+)
+
+Versie:
+
+4
+
+Soort:
+
+Definitieregel
+
+R1342
+'Persoon heeft een verstrekkingsbeperking voor Partij'
+Definitie:
+
+Een Persoon 'heeft een verstrekkingsbeperking voor een Partij' als een
+verstrekkingsbeperking voor die Partij mogelijk is en (er sprake is van een volledige
+verstrekkingsbeperking of een specifieke verstrekkingsbeperking voor die Partij):
+Partij.Verstrekkingsbeperking mogelijk? = 'Ja'
+EN
+(
+Persoon.Volledige verstrekkingsbeperking? = 'Ja'
+OF
+er bestaat bij de Persoon een voorkomen van Persoon \ Verstrekkingsbeperking
+met Partij gelijk aan de betreffende Partij
+)
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1349
+Beeindigde groep alleen leveren bij autorisatie op materiele historie
+Definitie:
+
+Een beëindigde Inhoudelijke groep (DatumEindeGeldigheid is gevuld met een
+waarde, eventueel volledig onbekend) mag alleen worden opgenomen in het te
+leveren resultaat (Persoonslijst of Mutatielevering) als er bij de Dienst waarvoor
+geleverd wordt een corresponderend voorkomen bestaat van Dienstbundel \ Groep
+met Dienstbundel \ Groep.Materiële historie? = 'Ja'.
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R1353
+Voorkomen voor levering mutatie niet opnemen in VolledigBericht
+
+Definitie:
+
+Een voorkomen van een groep waarin IndMuteLev de waarde 'Ja' heeft, mag alleen
+worden opgenomen in een MutatieBericht.
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R1409
+Verwerken verwijdering afnemerindicatie
+Definitie:
+
+De Bijhouding op de groep Persoon \ Afnemerindicatie, wordt verwerkt conform het
+patroon FormeleHistorie met de volgende aantekeningen:
+
+•
+
+"Indicatie Actueel en Geldig?" van de Persoon \ Afnemerindicatie dient de
+waarde "Nee" te krijgen.
+
+•
+
+Persoon \ Afnemerindicatie.Standaard.Dienst verval wordt gevuld met de
+Dienst.ID van de Dienst waarbinnen de betreffende afnemerindicatie als
+vervallen wordt aangemerkt.
+
+•
+
+Het verwijderen van een afnemerindicatie is het vullen van het tijdstip
+vervallen van de groep Persoon \ Afnemerindicatie met de -Datum\tijd systeem
+
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+R1538
+Alleen persoonslijsten van ingeschreven personen kunnen geleverd worden.
+Definitie:
+
+Het systeem levert alleen persoonslijsten van ingeschreven personen
+(Persoon.Soort = 'Ingeschrevene' (I)).
+De overige personen ('pseudo personen') komen slechts voor als gerelateerde van
+een ingeschreven persoon en worden alleen geleverd als onderdeel van de
+persoonslijst van een ingeschreven persoon.
+
+Versie:
+
+5
+
+Soort:
+
+Verwerkingslogica
+
+R1539
+Alleen niet-vervallen personen kunnen geleverd worden
+Definitie:
+
+Het systeem levert alleen niet vervallen personen (eis: Persoon.Soort =
+'Ingeschrevene' (I) en Persoon.Nadere bijhoudingsaard <> 'Fout' (F) of 'Onbekend'
+(?) of 'Gewist' (W))
+Vanuit het perspectief van een gebruiker (afnemer of bijhouder) bezien bestaan
+deze personen dus niet. Ontsluiting is slechts mogelijk via de beheerder.
+
+Versie:
+
+8
+
+Soort:
+
+Verwerkingslogica
+
+R1540
+'Inhoudelijke groep'
+Definitie:
+
+Inhoudelijke groepen zijn groepen van de Persoonslijst die bij de Persoon horen. Dit
+zijn alle groepen onder Objecttypen Persoon, Persoon \ Adres, Persoon \
+Geslachtsnaamcomponent, Persoon \ Indicatie, Persoon \ Nationaliteit, Persoon \
+Reisdocument, Persoon \ Verificatie, Persoon \ Verstrekkingsbeperking, Persoon \
+Voornaam, Persoon \ Buitenlands persoonsnummer, Relatie (soorten Huwelijk en
+Geregistreerd partnerschap) en Betrokkenheid (rol Ouder).
+
+(Dit zijn dus de groepen uit het persoonsdeel van het bericht over de persoon, in
+tegenstelling tot de groepen uit bijvoorbeeld het verantwoordingsdeel en het
+onderzoeksdeel)
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R1541
+'Verantwoordingsgroep'
+Definitie:
+
+Verantwoordingsgroepen zijn groepen van de Persoonslijst die de verantwoording
+van de 'Inhoudelijke groep' (R1540) vormen. Dit zijn groepen onder de Objecttypen
+Administratieve handeling, Actie, Actie \ Bron, Document, Gedeblokkeerde melding
+en de koppelingen tussen die Objecttypen.
+(Dit zijn dus de groepen uit het verantwoordingsdeel van het bericht over de
+persoon)
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1543
+'Onderzoeksgroep'
+Definitie:
+
+Een Onderzoeksgroep is een groep die gegevens bevat omtrent onderzoeken op bij
+de Persoon aanwezige of ontbrekende gegevens. We hebben het hier altijd over de
+aan de Persoon gerelateerde Onderzoeken. Dus de Persoon \ Onderzoek gegevens,
+die direct gerelateerd zijn aan de uitgangspersoon.
+Voor het 'Onderzoeksdeel' worden de volgende begrippen gehanteerd:
+• Onderzoeksdeel: het deel binnen het bericht, dat informatie bevat over de
+onderzoeken.
+• Onderzoek: Binnen het onderzoeksdeel komen de 'Onderzoeken' voor, die de
+o.a. de Onderzoek.Datum aanvang, Onderzoek.Status en eventueel
+Onderzoek.Datum einde van het onderzoek bevatten
+• Gegeven in onderzoek: Als onderdeel van 'Onderzoek', zijn de in het onderzoek
+betrokken gegevens vastgelegd in Gegeven in onderzoek. Deze geeft aan
+welke gegevens (Gegeven in onderzoek.Element en optioneel: Gegeven in
+onderzoek.Object sleutel gegeven en Gegeven in onderzoek.Voorkomen sleutel
+gegeven) in het Onderzoek zijn betrokken.
+• Persoon \ Adres.Persoon aangetroffen op adres? valt ook onder het
+onderzoekdeel. Bijzonder aan dit attribuut is dat deze geen onderdeel is van
+Onderzoek of Gegeven in onderzoek, maar van Persoon \ Adres.
+Een onderzoeksgroep gedraagt zich verder hetzelfde als een Inhoudelijke groep, er
+is dus sprake van een afgeleid administratief en verantwoording d.m.v. een
+administratieve handeling met acties en bronnen.
+(Het betreft hier de groepen uit het Onderzoeksdeel van het bericht, deze hebben
+betrekking op de onderzoeken op persoonsgegevens, in tegenstelling tot de
+groepen uit bijvoorbeeld het Verantwoordingsdeel en het Persoonsdeel)
+
+Versie:
+
+4
+
+Soort:
+
+Definitieregel
+
+R1544
+Begrens het bericht op datum aanvang materiële periode
+Definitie:
+
+Indien een VolledigBericht of een MutatieBericht wordt aangemaakt voor een
+aanwezige Persoon \ Afnemerindicatie, en in die Afnemerindicatie is Persoon \
+Afnemerindicatie.Datum aanvang materiële periode gevuld, dan geldt dat bepaalde
+
+historische voorkomens van groepen uit de juridische persoonslijst niet geleverd
+worden:
+Van groepen die een materiële historie kennen, mogen alleen voorkomens waarbij
+geldt dat DatumEindeGeldigheid (voor Onderzoeken is dit Onderzoek.Datum einde)
+> Persoon \ Afnemerindicatie.Datum aanvang materiële periode in het Bericht
+worden opgenomen.
+Deze regel geldt voor zowel de inhoudelijke groepen als voor de
+onderzoeksgroepen.
+Toelichting:
+• Als Persoon \ Afnemerindicatie.Datum aanvang materiële periode leeg is, dan
+mogen dus alle voorkomens geleverd worden.
+• Als DatumEindeGeldigheid leeg is, dan mag dat voorkomen altijd geleverd
+worden.
+• Als DatumEindeGeldigheid geheel of gedeeltelijk onbekend is, dan dient de
+(reguliere) 'soepele' vergelijking gebruikt te worden: als de bovenstaande
+conditie mogelijk WAAR kan zijn, dan wordt het voorkomen in het bericht
+opgenomen.
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+R1546
+Vervallen groepen alleen opnemen bij autorisatie voor formele historie
+Definitie:
+
+Een vervallen groep (TijdstipVerval en ActieVerval zijn gevuld met een waarde)
+wordt alleen in het te leveren bericht opgenomen indien:
+Het niet een MutatieBericht betreft
+EN
+er autorisatie bestaat voor de formele historie van de betreffende groep
+(de groep komt voor in Dienstbundel \ Groep met Dienstbundel \
+Groep.Formele historie? = 'Ja' bij de Dienst waarvoor geleverd wordt).
+OF
+Het een Mutatiebericht betreft
+EN
+het een voorkomen betreft dat in de te leveren Administratieve handeling
+is komen te vervallen (ActieVerval is een Actie bij de onderhanden
+Administratieve handeling).
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R1547
+Leveren van DatumEindeGeldigheid mag alleen bij autorisatie op materiele historie
+Definitie:
+
+Het attribuut DatumEindeGeldigheid van een inhoudelijke groep ('Inhoudelijke
+groep' (R1540)) mag alleen worden opgenomen in het te leveren resultaat als er bij
+de Dienst waarvoor geleverd wordt een corresponderend voorkomen bestaat van
+Dienstbundel \ Groep met Dienstbundel \ Groep.Materiële historie? = 'Ja'
+
+Opmerking: Het betreft hier het wissen van materiële historie gegevens. Deze
+regel heeft dus geen betrekking op formele historie gegevens met een materieel
+aspect (zoals Onderzoek met de datum Einde Onderzoek en Huwelijk met de datum
+einde Huwelijk).
+NB: Deze regel leidt momenteel niet tot zichtbaar gedrag: als
+DatumEindeGeldigheid gevuld is wordt onder dezelfde conditie de hele groep niet
+opgenomen in het bericht en als hij leeg is dan wordt het attribuut op die grond niet
+in het bericht opgenomen. Functioneel bestaat deze regel echter nog steeds en om
+redenen van toekomstbestendigheid wordt deze gehandhaafd.
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R1548
+Leveren van Datum/tijd registratie en Datum/tijd verval mag alleen bij autorisatie voor
+formele historie
+Definitie:
+
+De attributen Datum/tijd registratie en Datum/tijd verval van een 'Inhoudelijke
+groep' (R1540) of van een 'Onderzoeksgroep' (R1543) mogen alleen worden
+opgenomen in het te leveren resultaat als er bij de Dienst waarvoor geleverd wordt
+een corresponderend voorkomen bestaat van Dienstbundel \ Groep met
+Dienstbundel \ Groep.Formele historie? = 'Ja'.
+NB: Nadere aanduiding verval en bijhouding beëindigd? worden (indien gevuld) bij
+de levering van een vervallen voorkomen altijd meegeleverd.
+
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+R1549
+Leveren van ActieInhoud, ActieAanpassingGeldigheid en ActieVerval mag alleen bij
+autorisatie voor verantwoordingsinformatie
+Definitie:
+
+De attributen ActieInhoud, ActieAanpassingGeldigheid en ActieVerval van een
+'Inhoudelijke groep' (R1540) of van een 'Onderzoeksgroep' (R1543) mogen alleen
+worden opgenomen in het te leveren resultaat:
+Als er bij de Dienst waarvoor geleverd wordt een corresponderend voorkomen
+bestaat van Dienstbundel \ Groep met Dienstbundel \ Groep.Verantwoording? =
+'Ja'.
+OF
+Als de bijhouder een ABO-partij betreft, zie hiervoor R1545 - Verplicht leveren van
+ABO-partij en rechtsgrond..
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R1551
+Alleen Acties die verantwoording vormen voor inhoudelijke-of onderzoeksgroepen
+meeleveren
+Definitie:
+
+In het resultaat van een levering mogen geen 'Verantwoordingsgroep' (R1541) met
+een 'Actie' worden opgenomen waarnaar geen enkele verwijzing (meer) bestaat
+vanuit een 'Inhoudelijke groep' (R1540) of een 'Onderzoeksgroep' (R1543) in
+hetzelfde resultaat.
+
+(Toelichting: dit betekent dat wanneer een Actie alleen groepen heeft geraakt die
+door autorisatie of een ander filtermechanisme niet (meer) in het bericht worden
+opgenomen, de Actie dus niets meer 'verantwoordt' en zelf ook uit het bericht
+verwijderd moet worden).
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R1552
+Alleen de Administratieve handelingen waarnaar daadwerkelijk wordt verwezen als
+verantwoording leveren.
+Definitie:
+
+In het resultaat van een levering mogen geen 'Verantwoordingsgroep' (R1541)
+'Administratieve handeling' en onderliggende groepen Actie \ Bron en Document
+worden opgenomen als er binnen die Administratieve handeling geen enkele Actie
+voorkomt waarvoor een verwijzing bestaat vanuit een 'Inhoudelijke groep' (R1540)
+uit hetzelfde resultaat.
+
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R1556
+Gereconstrueerde persoon na de onderhanden Administratieve handeling (strippen latere
+handelingen)
+Definitie:
+
+Deze regel beschrijft de reconstructie van het beeld van een Persoon zoals de
+situatie is geweest direct na het doorvoeren van de 'onderhanden' Administratieve
+handeling op die Persoon. Deze reconstructie houdt in dat groepen die na die
+onderhanden Administratieve handeling geldig waren maar later zijn vervallen, weer
+geldig worden gemaakt. Groepen die pas later zijn geregistreerd, worden
+verwijderd.
+
+Input voor de reconstructie zijn:
+1.
+2.
+
+Een persoon inclusief de voor de levering van zijn persoonslijst relevante
+Betrokkenheid, Relatie en gerelateerde personen, met alle historie.
+Een verwijzing naar de onderhanden Administratieve handeling, die voorkomt
+in de groep Persoon.Afgeleid administratief van die Persoon.
+
+De reconstructie verloopt via de volgende stappen:
+1.
+2.
+
+3.
+4.
+5.
+
+Ga voor de reconstructie initieel uit van (een kopie van) de 'Volledig persoon'
+(R1998) (alle groepen en objecttypen).
+Bepaal de 'latere handelingen': de Administratieve handelingen in de groep
+Persoon.Afgeleid administratief later zijn doorgevoerd dan de onderhanden
+handeling, aan de hand van Persoon.Tijdstip laatste wijziging.
+Bepaal de 'latere acties': Alle Acties die bij die 'latere handelingen' horen.
+Verwijder alle latere aangemaakte voorkomens van groepen: (ActieInhoud is
+een 'latere actie') OF (ActieAanpassingGeldigheid is een 'latere actie').
+Maak voor alle groepen in het beeld waar ActieVerval een 'latere actie' is de
+attributen Datum\Tijd verval en ActieVerval leeg.
+
+Toelichting:
+• De laatste stap (schrappen van het verval) is in principe buiten de scope. Het
+team kijkt of we deze meenemen (mogelijk besparen we op testen als we deze
+
+•
+
+•
+
+stap toch bouwen, omdat het resultaatbericht stabieler wordt) Zie JIRA
+TEAMBRP-1900.
+Het attribuut NadereAanduidingVerval wordt daarbij niet geschrapt, omdat we
+wettelijk verplicht zijn aan te geven dat een gegeven onjuist is gebleken. Dit
+moet voorkomen dat een afnemer actie gaat ondernemen op grond van een
+gegeven waarvan op het moment van leveren al bekend is dat dit later onjuist
+is gebleken.
+Een 'latere handeling"' zal altijd een BRP handeling zijn, omdat de
+migratievoorziening geen handelingen doorvoert voordat alle eerdere
+handelingen geleverd zijn.
+
+Versie:
+
+5
+
+Soort:
+
+Definitieregel
+
+R1561
+Een bericht bevat alleen onderzoeken naar ontbrekende gegevens en naar gegevens die ook
+aanwezig zijn in het bericht
+Definitie:
+
+Een bericht bevat alleen voorkomens van Gegeven in onderzoek waarbij:
+Gegeven in onderzoek verwijst naar een gegeven dat ook aanwezig is in het
+bericht:
+(Gegeven in onderzoek.Object sleutel gegeven en/of Gegeven in
+onderzoek.Voorkomen sleutel gegeven verwijst naar een object of groep
+die (na filtering op autorisatie en historie) in het bericht aanwezig is)
+OF
+Het een onderzoek betreft naar een ontbrekend gegeven:
+(Gegeven in onderzoek.Object sleutel gegeven is leeg
+EN
+Gegeven in onderzoek.Voorkomen sleutel gegeven is leeg).
+
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+R1562
+Een bericht bevat alleen onderzoeken die betrekking hebben op geautoriseerde attributen
+Definitie:
+
+Een bericht bevat alleen voorkomens van Gegeven in onderzoek waarbij:
+Gegeven in onderzoek niet verwijst naar een specifiek attribuut (Gegeven in
+onderzoek.Element bevat geen Element met Element.Soort = 'Attribuut')
+OF
+Gegeven in onderzoek verwijst naar een geautoriseerd attribuut (Gegeven in
+onderzoek.Element bevat een Element met Element.Soort = 'Attribuut', waarbij dit
+Element ook voorkomt in Dienstbundel \ Groep \ Attribuut.Attribuut bij de Dienst)
+
+Toelichting:
+
+Het volstaat om te filteren op ongeautoriseerde attributen. Voor ongeautoriseerde
+groepen en objecten geldt dat deze niet in het bericht komen en de betreffende
+onderzoeken er vervolgens door R1561 - Een bericht bevat alleen onderzoeken naar
+ontbrekende gegevens en naar gegevens die ook aanwezig zijn in het bericht
+worden uitgefilterd. Voor onderzoeken naar ontbrekende gegevens geldt dat alleen
+Bijhouders deze geleverd krijgen en die mogen alle onderzoeksgegevens geleverd
+krijgen.
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+R1563
+Geen lege onderzoeken leveren
+Definitie:
+
+In het te leveren resultaat mogen geen lege Onderzoeken voorkomen. Dat wil
+zeggen: als er bij een Onderzoek geen enkel te leveren Gegeven in onderzoek meer
+aanwezig is, dan dient de hele groep uit het resultaat verwijderd te worden.
+Als er geen enkele Groep Onderzoek meer resteert, dan zal het Onderzoeksdeel
+binnen het bericht niet meer aanwezig zijn.
+Zie ook 'Onderzoeksgroep' (R1543) voor de definitie van de "Onderzoeksgroep" en
+de daarin gehanteerde begrippen.
+
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R1568
+Volgorde personen in uitgaand bericht
+Definitie:
+
+Bij het opstellen van een Leverinsgsbericht waarin meerdere personen zijn
+opgenomen geldt het volgende:
+De volgorde van hoofdpersonen in het leveringsbericht wordt bepaald door het
+attribuut Persoon.Sorteervolgorde in de groep Persoon.Afgeleid administratief. In
+het bericht worden de Personen in oplopende Persoon.Sorteervolgorde opgenomen.
+Bij gelijke Persoon.Sorteervolgorde vindt sortering plaats op oplopende technische
+sleutel (ID) van het object Persoon.
+
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R1613
+Vaststelling protocolleringsgegevens bij verstrekking op verzoek afnemer
+Definitie:
+
+Indien een verstrekking van persoonsgegevens plaatsvindt als directe reactie op
+een bevraging van een afnemer (diensten Geef details persoon, Zoek persoon,
+Zoek persoon op adresgegevens en Geef medebewoners van persoon)
+DAN moeten de protocolleringsgegevens als volgt worden samengesteld:
+• Leveringsaantekening.Toegang leveringsautorisatie = Toegang
+leveringsautorisatie.ID waarvoor verstrekt wordt
+• Leveringsaantekening.Dienst = Dienst.ID van de geleverde Dienst (volgt uit
+opgegeven de parameters van het verzoekbericht)
+• Leveringsaantekening.Datum/tijd klaarzetten levering = Datum\tijd systeem
+van ophalen gegevens(Persoon en Autorisatie) uit de database
+• Leveringsaantekening.Datum aanvang materiële periode resultaat = R1617 Afleiding Datum aanvang materiele periode resultaat
+• Leveringsaantekening.Datum einde materiële periode resultaat = R1618 Afleiding Datum einde materiele periode resultaat
+
+•
+•
+•
+•
+•
+
+Leveringsaantekening.Datum/tijd aanvang formele periode resultaat = R1619 Afleiding Datum/tijd aanvang formele periode resultaat
+Leveringsaantekening.Datum/tijd einde formele periode resultaat = R1620 Afleiding Datum/tijd einde formele periode resultaat
+Leveringsaantekening.Administratieve handeling = 'leeg'
+Leveringsaantekening.Soort synchronisatie = 'leeg'
+Leveringsaantekening.Scope patroon: Indien scoping is toegepast vullen met
+het Elementpatroon van die scoping, anders 'leeg'.
+
+Versie:
+
+6
+
+Soort:
+
+Verwerkingslogica
+
+R1614
+Vaststelling protocolleringsgegevens bij verstrekking op administratieve handeling
+Definitie:
+
+Indien een verstrekking van persoonsgegevens aan een afnemer plaatsvindt als
+reactie op een bijhouding van de persoon (diensten Mutatielevering op basis van
+afnemerindicatie, Mutatielevering op basis van doelbinding en Attendering)
+DAN moeten de protocolleringsgegevens als volgt worden samengesteld:
+• Leveringsaantekening.Toegang leveringsautorisatie = Toegang
+leveringsautorisatie.ID waarvoor verstrekt wordt
+• Leveringsaantekening.Dienst = Dienst.ID van de geleverde Dienst
+• Leveringsaantekening.Datum/tijd klaarzetten levering = Datum\tijd systeem
+van ophalen gegevens(Persoon en Autorisatie) uit de database
+• Leveringsaantekening.Datum aanvang materiële periode resultaat = R1617 Afleiding Datum aanvang materiele periode resultaat
+• Leveringsaantekening.Datum einde materiële periode resultaat = R1618 Afleiding Datum einde materiele periode resultaat
+• Leveringsaantekening.Datum/tijd aanvang formele periode resultaat = R1619 Afleiding Datum/tijd aanvang formele periode resultaat
+• Leveringsaantekening.Datum/tijd einde formele periode resultaat = R1620 Afleiding Datum/tijd einde formele periode resultaat
+• Leveringsaantekening.Administratieve handeling = Administratieve
+handeling.ID van de Administratieve handeling die de levering heeft getriggerd.
+• Leveringsaantekening.Scope patroon = 'leeg'
+ALS het geleverde bericht (BRP of GBA) een Volledig bericht is
+DAN
+• Leveringsaantekening.Soort synchronisatie = 'Volledigbericht'
+ANDERS
+• Leveringsaantekening.Soort synchronisatie = 'Mutatiebericht'
+
+Versie:
+
+6
+
+Soort:
+
+Verwerkingslogica
+
+R1615
+Vaststelling protocolleringsgegevens bij verstrekking door systeemactie
+Definitie:
+
+Indien een verstrekking van persoonsgegevens aan een afnemer plaatsvindt op
+initiatief van het systeem anders dan naar aanleiding van een Bijhouding
+(leveren een een VolledigBericht als gevolg van Plaatsing afnemerindicatie,
+Synchronisatie persoon of Selectie.
+DAN moeten de protocolleringsgegevens als volgt worden samengesteld:
+• Leveringsaantekening.Toegang leveringsautorisatie = Toegang
+leveringsautorisatie.ID waarvoor verstrekt wordt
+• Leveringsaantekening.Dienst = Dienst.ID van de geleverde Dienst (1)
+
+•
+•
+•
+•
+•
+•
+•
+•
+
+Leveringsaantekening.Datum/tijd klaarzetten levering = Datum\tijd systeem
+van ophalen gegevens(Persoon en Autorisatie) uit de database
+Leveringsaantekening.Datum aanvang materiële periode resultaat = R1617 Afleiding Datum aanvang materiele periode resultaat
+Leveringsaantekening.Datum einde materiële periode resultaat = R1618 Afleiding Datum einde materiele periode resultaat
+Leveringsaantekening.Datum/tijd aanvang formele periode resultaat = R1619 Afleiding Datum/tijd aanvang formele periode resultaat
+Leveringsaantekening.Datum/tijd einde formele periode resultaat = R1620 Afleiding Datum/tijd einde formele periode resultaat
+Leveringsaantekening.Administratieve handeling = 'leeg'
+Leveringsaantekening.Soort synchronisatie = 'Volledigbericht'(2)
+Leveringsaantekening.Scope patroon = 'leeg'
+
+(1): Wanneer een levering asynchroon wordt getriggerd door bijvoorbeeld het op
+verzoek of via een selectie plaatsen van een afnemerindicatie of door een
+synchronisatieverzoek, dan wordt Dienst gevuld met de Dienst.ID van de
+betreffende dienst Plaatsing afnemerindicatie, Synchronisatie persoon of Selectie.
+(2): Er zijn momenteel geen asynchrone triggers zonder Administratieve Handeling
+die een Mutatiebericht laten vervaardigen.
+Versie:
+
+9
+
+Soort:
+
+Verwerkingslogica
+
+R1617
+Afleiding Datum aanvang materiele periode resultaat
+Definitie:
+
+Indien Soort dienst = Mutatielevering op basis van afnemerindicatie (daaronder
+ook: bij het leveren van een Volledig bericht als gevolg van de nieuwe of aanwezige
+afnemerindicatie bij de Soort dienst = Plaatsing afnemerindicatie of Synchronisatie
+persoon):
+Dan Leveringsaantekening.Datum aanvang materiële periode resultaat
+vullen met Persoon \ Afnemerindicatie.Datum aanvang materiële periode
+uit de Afnemerindicatie;
+Indien Soort dienst = Geef details persoon en Bericht.Historievorm uit het
+verzoekbericht = 'Geen':
+Dan Leveringsaantekening.Datum aanvang materiële periode resultaat vullen
+met Bericht.Peilmoment materieel resultaat uit het verzoekbericht
+Bericht.Peilmoment materieel resultaat indien aanwezig of gevuld, anders
+Leveringsaantekening.Datum aanvang materiële periode resultaat vullen met
+'Systeemdatum' (R2016);
+Indien Soort dienst = Geef medebewoners van persoon:
+Dan Leveringsaantekening.Datum aanvang materiële periode resultaat vullen
+met 'Peilmoment materieel' (R2395);
+Indien Soort dienst = Selectie en Dienst.Historievorm selectie = 'Geen':
+Dan Leveringsaantekening.Datum aanvang materiële periode resultaat vullen
+met Selectietaak.Peilmoment materieel resultaat
+Indien Selectietaak.Peilmoment materieel resultaat niet is gevuld, dan
+Leveringsaantekening.Datum aanvang materiële periode resultaat niet vullen
+('leeg');
+Anders (in alle overige gevallen):
+Dan Leveringsaantekening.Datum aanvang materiële periode resultaat niet
+vullen ('leeg').
+
+Versie:
+
+6
+
+Soort:
+
+Verwerkingslogica
+
+R1618
+Afleiding Datum einde materiele periode resultaat
+Definitie:
+
+Indien Soort dienst = Geef details persoon:
+Dan Leveringsaantekening.Datum einde materiële periode resultaat vullen met
+(Bericht.Peilmoment materieel resultaat uit het verzoekbericht) + 1 dag indien
+Bericht.Peilmoment materieel resultaat aanwezig of gevuld, anders
+Leveringsaantekening.Datum einde materiële periode resultaat vullen met
+'Systeemdatum' (R2016) + 1 dag;
+Indien Soort dienst = Geef medebewoners van persoon:
+Dan Leveringsaantekening.Datum einde materiële periode resultaat vullen met
+'Peilmoment materieel' (R2395) + 1 dag;
+Indien Soort dienst = Selectie:
+Dan Leveringsaantekening.Datum einde materiële periode resultaat vullen met
+Selectietaak.Peilmoment materieel resultaat + 1 dag
+Indien Selectietaak.Peilmoment materieel resultaat niet is gevuld, dan
+Leveringsaantekening.Datum einde materiële periode resultaat niet vullen
+('leeg');
+Anders (in alle overige gevallen):
+Dan Leveringsaantekening.Datum einde materiële periode resultaat niet
+vullen ('leeg').
+
+Versie:
+
+5
+
+Soort:
+
+Verwerkingslogica
+
+R1619
+Afleiding Datum/tijd aanvang formele periode resultaat
+Definitie:
+
+Indien Soort dienst = Geef details persoon en Bericht.Historievorm uit het
+verzoekbericht = 'Geen' of 'Materieel'):
+Dan Leveringsaantekening.Datum/tijd aanvang formele periode resultaat
+vullen met Bericht.Peilmoment formeel resultaat uit het verzoekbericht
+indien aanwezig of gevuld, anders Leveringsaantekening.Datum/tijd
+aanvang formele periode resultaat vullen met 'Systeemdatum' (R2016);
+Indien Soort dienst = Selectie en Dienst.Historievorm selectie = 'Geen' of
+'Materieel':
+Dan Leveringsaantekening.Datum/tijd aanvang formele periode resultaat
+vullen met Selectietaak.Peilmoment formeel resultaat.
+Indien Selectietaak.Peilmoment formeel resultaat niet is gevuld dan
+Leveringsaantekening.Datum/tijd aanvang formele periode resultaat niet
+vullen ('leeg');
+Anders (in alle overige gevallen):
+Leveringsaantekening.Datum/tijd aanvang formele periode resultaat niet
+vullen ('leeg').
+
+Versie:
+
+6
+
+Soort:
+
+Verwerkingslogica
+
+R1620
+Afleiding Datum/tijd einde formele periode resultaat
+
+Definitie:
+
+Indien Soort dienst = Geef details persoon EN Bericht.Peilmoment formeel resultaat
+in het verzoekbericht is gevuld:
+Dan Leveringsaantekening.Datum/tijd einde formele periode resultaat
+vullen met Bericht.Peilmoment formeel resultaat uit het verzoekbericht;
+Indien Soort dienst = Selectie
+Dan Leveringsaantekening.Datum/tijd einde formele periode resultaat
+vullen met Selectietaak.Peilmoment formeel resultaat.
+Indien Selectietaak.Peilmoment formeel resultaat niet is gevuld dan
+Leveringsaantekening.Datum/tijd einde formele periode resultaat vullen
+met Selectietaak.Datum uitvoer;
+Anders (in alle overige gevallen):
+Dan Leveringsaantekening.Datum/tijd einde formele periode resultaat vullen
+met Datum\tijd systeem van klaarzetten bericht
+Toelichting: Met betrekking tot 'alle overige gevallen' geldt dat de
+datum\tijd_systeem van het klaarzetten van het bericht een impliciete bovengrens
+is als er niet expliciet gefilterd wordt op die bovengrens: het systeem kan immers
+geen gegevens leveren die op het moment van leveren nog niet geregistreerd zijn.
+
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+R1621
+Logging aantal geleverde personen in volledigbericht of mutatiebericht
+Definitie:
+
+Indien het systeem een Volledigbericht of Mutatiebericht verstuurt naar een
+Afnemer, dan dient in de logging het aantal geleverde (hoofd)personen vastgelegd
+te worden.
+(Indien simpel mogelijk op een manier waarop dit geëxtraheerd kan worden, zodat
+deze cijfers ook in een rapportage gebruikt kunnen worden)
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+Meldingstekst:
+
+Aantal geleverde personen in bericht.
+
+Loggingsniveau:
+
+Melding
+
+R1622
+Het systeem logt de situatie 'bericht bevat geen gegevens'
+Definitie:
+
+Indien het systeem een bericht verstuurt naar een Partij en er is geen enkel
+gegeven geautoriseerd, dan dient een logregel weggeschreven te worden.
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+Meldingstekst:
+
+Leveringsautorisatie fout geconfigureerd: bericht bevat geen gegevens.
+
+Loggingsniveau:
+
+Illegale poging
+
+R1804
+Sortering verantwoording in een bericht
+Definitie:
+
+De gewenste sortering voor verantwoordingsinformatie is als volgt:
+• Administratieve handeling zijn aflopend gesorteerd op TijdstipRegistratie en
+daarbinnen oplopend op Id (dus de meest recente handeling bovenaan in het
+bericht)
+• Actie \ Bron (binnen die handelingen) en Actie\Bronnen zijn als volgt
+gesorteerd: Eerst Administratieve handeling \ Bron.Document, oplopend
+
+•
+
+gesorteerd op Id, daarna Administratieve handeling \ Bron.Rechtsgrond,
+oplopend gesorteerd op Id, daarna Administratieve handeling \
+Bron.Rechtsgrondomschrijving, gesorteerd op alfabetische volgorde van die
+omschrijving.
+Actie zijn aflopend gesorteerd op TijdstipRegistratie en daarbinnen oplopend op
+Id.
+
+Versie:
+
+5
+
+Soort:
+
+Verwerkingslogica
+
+R1805
+Volgorde van meervoudig voorkomende objecten in een bericht
+Definitie:
+
+Een aantal objecten kunnen bij een Persoon gelijktijdig meermalen aanwezig zijn,
+zoals voornamen en nationaliteiten. In uitgaande berichten moeten we deze
+gegevens zo sorteren, dat gegevens die logisch bij elkaar horen ook bij elkaar
+blijven. Pas daarbinnen moeten we de normale sortering op groepen toepassen,
+zoals beschreven in R1806 - Volgorde historie in een bericht.
+Dit betekent dat de volgende objecttypen eerst (oplopend) gesorteerd worden op de
+bijbehorende logische kenmerken:
+
+•
+•
+•
+•
+•
+•
+•
+•
+
+Persoon \ Geslachtsnaamcomponent op Persoon \
+Geslachtsnaamcomponent.Volgnummer
+Persoon \ Indicatie op Persoon \ Indicatie.Soort
+Persoon \ Nationaliteit op Persoon \ Nationaliteit.Nationaliteit
+Onderzoek op Onderzoek.Datum aanvang
+Gegeven in onderzoek op Gegeven in onderzoek.ID (aflopend)
+Persoon \ Verificatie op Persoon \ Verificatie.Partij en daarbinnen op Persoon \
+Verificatie.Soort
+Persoon \ Voornaam op Persoon \ Voornaam.Volgnummer
+Persoon \ Buitenlands persoonsnummer op Persoon \ Buitenlands
+persoonsnummer.Autoriteit van afgifte en daarbinnen op Persoon \ Buitenlands
+persoonsnummer.Nummer
+
+Overige objecten worden gesorteerd op Object.ID (aflopend).
+Dit met volgende sorteer-regels:
+• Onbekende delen (00) in een datum worden gesorteerd volgens de normale
+systematiek voor getallen
+Versie:
+
+5
+
+Soort:
+
+Verwerkingslogica
+
+R1806
+Volgorde historie in een bericht
+Definitie:
+
+Als van een groep een repeterende voorkomens van materiele en/of formele
+historie is opgenomen in een bericht, dan is de sortering als volgt:
+Als sorteervolgorde van actuele/historische verschijningen van een gegevensgroep:
+a) Verwerkingssoort - Volgens logica sorteren verwerkingssoort
+b) "Datum\Tijd verval" - Aflopend
+c) DatumAanvangGeldigheid - Aflopend
+d) DatumEindeGeldigheid - Aflopend
+e) "Datum\Tijd registratie" - Aflopend
+Dit met volgende sorteer-regels:
+
+•
+•
+•
+•
+•
+•
+
+Verwerkingssoort in de volgorde Identificatie, Toevoeging, Wijziging, Verval,
+Verwijdering, Referentie
+"Datum\Tijd verval" als eerste sorteerelement om zo de materiële en formele
+historie te scheiden
+'aflopend' om meest actuele situatie vooraan te hebben
+indien "Datum\Tijd verval" en DatumEindeGeldigheid niet zijn gevuld, dan
+wordt hiervoor ten behoeve van de sortering de 'eeuwigheidswaarde' genomen
+(voor DatumEindeGeldigheid dus 99991231)
+Onbekende delen (00) in een datum worden gesorteerd volgens de normale
+systematiek voor getallen
+"Datum\Tijd registratie" speelt in de sortering alleen maar een rol bij groepen
+met alleen formele historie
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R1974
+Alleen attributen leveren waarvoor autorisatie bestaat
+Definitie:
+
+Bij de levering van een 'Inhoudelijke groep' (R1540), 'Verantwoordingsgroep'
+(R1541) of 'Onderzoeksgroep' (R1543) voor een Dienst mag een Attribuut alleen in
+het bericht voorkomen als er een corresponderend voorkomen van Dienstbundel \
+Groep \ Attribuut bestaat.
+
+Versie:
+
+8
+
+Soort:
+
+Verwerkingslogica
+
+R1975
+Alleen groepen waarvoor autorisatie bestaat worden geleverd
+Definitie:
+
+Het te leveren resultaat bevat alleen inhoudelijke groepen waarvoor enige
+attribuutautorisatie bestaat in de Dienstbundel.
+De attribuut-autorisatie staat beschreven in R1974 - Alleen attributen leveren
+waarvoor autorisatie bestaat.
+Toelichting:
+Dit kan geinterpreteerd worden als: er is een voorkomen van Dienstbundel \ Groep
+waarbij tenminste één voorkomen van Dienstbundel \ Groep \ Attribuut bestaat.
+
+NB: Het gaat er dus niet om of er attributen daadwerkelijk voorkomen in het
+bericht maar of ze gezien de autorisatie voor kunnen komen. Bijvoorbeeld: er is
+autorisatie voor A-nummer en de te leveren persoon heeft een groep
+identificatienummers met A-nummer afwezig en BSN gevuld. Dan is er volgens deze
+definitie autorisatie voor de groep Identificatienummers en wordt deze groep
+geleverd, hoewel A-nummer niet aanwezig zal zijn in het bericht.
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+R1976
+Alleen objecten waarvoor autorisatie bestaat worden geleverd.
+Definitie:
+
+Het te leveren resultaat bevat alleen Objecten die, binnen hun berichtdeel, enig
+geautoriseerd Attribuut kunnen bevatten.
+
+De attribuut-autorisatie staat beschreven in R1974 - Alleen attributen leveren
+waarvoor autorisatie bestaat.
+Toelichting: De attribuut-autorisatie van een Dienstbundel wordt beschreven door
+de voorkomens van Dienstbundel \ Groep \ Attribuut. Het Object neemt een
+bepaalde plek in binnen het bericht, waarbij een XSD beschrijft welke inhoud (een
+hiërarchische structuur van andere Objecten, Groepen en Attributen) er binnen dat
+Object in het bericht aanwezig mogen zijn. Als er binnen die hiërarchische structuur
+geen enkel Attribuut te vinden is waarvoor autorisatie bestaat, dan kunnen we
+daaruit afleiden dat er ook geen autorisatie voor dit Object bestaat op deze plek in
+het bericht. We filteren dit Object (en de hele structuur er onder) dan weg uit het
+bericht.
+Noot 1: Of de betreffende attributen daadwerkelijk voorkomen in het bewuste
+bericht is dus niet relevant. Als bijvoorbeeld een afnemer geautoriseerd is voor
+attribuut "GerelateerdeOuder.OuderlijkGezag?" dan filteren we Object
+GerelateerdeOuder niet weg, zelfs als de groep "Ouderlijk Gezag" niet daadwerkelijk
+voorkomt in het uiteindelijke bericht.
+Noot 2: Deze hiërarchie voor deze afleiding verloopt dus via de structuur van het
+bericht! Bijvoorbeeld: in een VolledigBericht bevat de betrokkenheid Kind van de
+hoofdpersoon de objecten FamilierechtelijkeBetrekking, Ouder en Persoon
+('GerelateerdeOuder.Persoon'). Als de afnemer geautoriseerd is voor het
+Geboorteland van de ouder, dan wordt het object betrokkenheid Kind op grond
+daarvan niet verwijderd uit het bericht. De betrokkenheid Kind van zijn eigen
+kinderen bevatten binnen het bericht alleen Persoon ('GerelateerdKind'). Als de
+afnemer ook geautoriseerd is voor het BSN van het kind, dan wordt om die redenen
+de betrokkenheid Kind niet weggefilterd. De afleiding is voor betrokkenheid Kind
+dus op verschillende plekken in de berichtstructuur verschillend qua uitwerking.
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R1980
+Een BRP bericht bevat geen lege containers
+Definitie:
+
+Een BRP bericht bevat geen lege containers.
+Dat wil zeggen dat als een bericht een container zou bevatten die geen enkel object
+bevat, deze container niet moet worden aangemaakt (dan wel moet worden
+weggefilterd uit het resultaat)
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R1983
+Dienst verstrekt geen gegevens indien sprake is van een verstrekkingsbeperking voor de
+afnemer
+Definitie:
+
+Indien er sprake is van een 'verstrekkingsbeperking bij de Persoon voor de
+ontvangende partij' dan mag die Persoon in principe Niet geleverd worden als
+zoekresultaat, bevragingsresultaat, selectieresultaat of in een spontaan bericht van
+het systeem. Dit betekent ook dat voor de ontvangende partij geen
+afnemersindicatie geplaatst mag worden.
+Er is sprake van een 'verstrekkingsbeperking bij de Persoon voor de ontvangende
+partij' als Persoon voldoet aan 'Persoon heeft een verstrekkingsbeperking voor
+Partij' (R1342).
+
+In de volgende situatie is er echter sprake van een uitzondering en mag de Dienst
+Wel worden geleverd:
+• Diensten die de afnemerindicatie verwijderen (daarbij wordt ook geen /
+minimale persoonsinformatie geleverd): Verwijdering afnemerindicatie en
+'Selectie met verwijdering afnemerindicatie'.
+Noot:
+• De dienst Mutatielevering op basis van doelbinding ondersteunen we niet voor
+afnemers waarbij aangegeven is dat een verstrekkingsbeperking van
+toepassing kan zijn. Hiervan is sprake indien Partij.Verstrekkingsbeperking
+mogelijk? waarde TRUE heeft.
+• Voor de dienst Mutatielevering op basis van afnemerindicatie moet bepaald
+worden hoe de persoonslijst er voor en na de handeling uit zag. Op basis van
+deze expressie evaluaties wordt 'Persoon heeft een verstrekkingsbeperking
+voor Partij' (R1342) bepaald. Voor de afhandeling van deze expressie
+evaluaties zijn andere regels beschreven die specifiek zijn voor deze dienst.
+Versie:
+
+6
+
+Soort:
+
+Verwerkingslogica
+
+R1985
+Verzending uitgaand bericht
+Definitie:
+
+Als binnen een leveringsdienst een bericht is aangemaakt dan wordt dat afgeleverd
+op het endpoint van de afnemer, zoals vastgelegd in Toegang
+leveringsautorisatie.Afleverpunt.
+(Opmerking: in de situatie dat de Partij en Leveringsautorisatie bekend zijn, maar
+er meerdere geldige Toegangen leveringsautorisatie zijn voor deze combinatie, dan
+zal er maar één geldige combinatie zijn waar Afleverpunt gevuld is)
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R1986
+Berichten voor mutatielevering worden gegarandeerd en in de juiste volgorde afgeleverd.
+Definitie:
+
+VolledigBerichten en MutatieBerichten die worden aangemaakt binnen de
+synchronisatiediensten
+Plaatsing afnemerindicatie, Mutatielevering op basis van afnemerindicatie,
+Mutatielevering op basis van doelbinding, Synchronisatie persoon, Attendering en
+Selectie dienen gegarandeerd en in de juiste volgorde bij de afnemer afgeleverd te
+worden.
+(Noot: hiervoor maken we gebruik van het Web Services Reliable Messaging (WSRM) protocol)
+
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R1991
+Stelsel bepaalt de wijze waarop BRP het bericht verstuurd
+Definitie:
+
+De waarde van Leveringsautorisatie.Stelsel bepaald hoe het bericht verstuurd
+wordt. Als Stelsel de waarde 'BRP' heeft wordt het bericht via het BRP koppelvlak
+Levering naar de afnemer verstuurd. Als Stelsel de waarde 'GBA' heeft wordt het
+bericht voor de afnemer klaargezet en kan de afnemer het via het LO3 koppelvlak
+ophalen.
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R1995
+Een levering van persoonsgegevens aan een afnemer dient geprotocolleerd te worden
+Definitie:
+
+Ieder uitgaand bericht, waarin persoonsgegevens zijn opgenomen en waarbij geldt
+dat:
+
+•
+•
+
+Het protcolleringsniveau van de Leveringsautorisatie niet geheim is
+(Leveringsautorisatie.Protocolleringsniveau heeft niet de waarde "Geheim")
+De Rol van de Toegang leveringsautorisatie (Via Partij \ Rol) gelijk is aan
+"Afnemer"
+
+dient geprotocolleerd te worden. De wijze waarop geprotocolleerd dient te worden is
+afhankelijk van de Soort dienst en is uitgewerkt in aparte verwerkingslogica.
+(Toelichting: Leveringen aan bijhouders dienen dus NIET geprotocolleerd te worden.
+Leveringen aan afnemers dienen wel geprotocolleerd te worden, maar NIET als de
+leveringsautorisatie protocolleringsniveau "Geheim" heeft)
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R1998
+'Volledig persoon'
+Definitie:
+
+Een volledig Persoon is het complete beeld van de persoon zoals deze in de BRP is
+geadministreerd. Het gaat om de administratie van alle gegevens (Element) van het
+Element.Soort 'Attribuut' met Element.Autorisatie: 'Optioneel', 'Via
+groepsautorisatie', 'Verplicht', 'Aanbevolen', 'Uitzondering' en
+'Bijhoudingsgegevens'.
+Een volledig persoon bevat attributen uit:
+Inhoudelijke groepen ('Inhoudelijke groep' (R1540))
+Verantwoordingsgroepen ('Verantwoordingsgroep' (R1541))
+De verantwoordingsinformatie betreft alle Administratieve handeling die de
+Persoonslijst van de hoofdpersoon hebben bijgehouden of hebben geleid tot een
+mutatie van het onderzoeksdeel ('Onderzoeksgroep' (R1543)). Dit betreft alle
+Administratieve handelingen die voorkomen in de groep Persoon.Afgeleid
+administratief van de hoofdpersoon. Ook de Actie en Actie \ Bron die bij die
+Administratieve handelingen horen, worden opgenomen.
+Onderzoeksgroepen ('Onderzoeksgroep' (R1543))
+De gegevens uit Onderzoek, die betrekking hebben op de te leveren Persoon
+moeten worden opgenomen. Het betreft altijd aan de Persoon gerelateerde
+Onderzoeken. Dus de Persoon \ Onderzoek gegevens, die gerelateerd zijn aan de
+persoon.
+
+Versie:
+
+5
+
+Soort:
+
+Definitieregel
+
+R2015
+Alleen bronnen waarnaar daadwerkelijk wordt verwezen meeleveren
+Definitie:
+
+In het verantwoordingsgedeelte van een levering mogen onder een Administratieve
+handeling geen bronnen (d.w.z. Document of Rechtsgrond) worden opgenomen
+waarnaar geen enkele verwijzing (meer) bestaat vanuit een Actie \ Bron binnen
+dezelfde bovenliggende Administratieve handeling.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2016
+'Systeemdatum'
+Definitie:
+
+De systeemdatum is de actuele datum tijdens het evalueren van een regel van het
+BRP syteem en heeft het formaat 'jjjjmmdd'.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2051
+Actie attributen alleen opnemen als actie voorkomt in verantwoording
+Definitie:
+
+De attributen ActieInhoud, ActieAanpassingGeldigheid en ActieVerval van een
+'Inhoudelijke groep' (R1540) of een 'Onderzoeksgroep' (R1543) worden alleen
+opgenomen als ze verwijzen naar een Actie die voorkomt in de
+verantwoordingsinformatie die de Persoonslijst van de hoofdpersoon hebben
+bijgehouden of hebben geleid tot een mutatie van het onderzoeksdeel
+('Onderzoeksgroep' (R1543)).
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2059
+Totale populatiebeperking
+Definitie:
+
+Voor elke levering is een 'Totale populatiebeperking' vast te stellen. Hiervoor zijn de
+volgende voorkomens nodig:
+• De Toegang leveringsautorisatie waarvoor geleverd wordt
+• De Leveringsautorisatie die daar bij hoort
+• De Dienst die geleverd wordt
+• De Dienstbundel die daarbij hoort
+De 'Totale populatiebeperking' is dan een expressie die bestaat uit de logische EN
+van:
+• Leveringsautorisatie.Populatiebeperking
+• Toegang leveringsautorisatie.Nadere populatiebeperking
+• Dienstbundel.Nadere populatiebeperking
+Hierbij geldt dat elk van de drie attributen leeg kan zijn. In dat geval worden ze niet
+meegenomen in de logische EN (of worden ze vervangen door de constante
+expressie 'WAAR').
+Als alle drie de attributen leeg zijn dan geldt dat ook als 'WAAR' (er is dan geen
+beperking).
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2062
+Alias leveren voor administratieve handeling
+Definitie:
+
+Indien Leveringsautorisatie.Alias soort administratieve handeling leveren? de
+waarde "Ja" heeft dan moet voor ieder bericht die voor deze Leveringsautorisatie
+geleverd wordt de Soort administratieve handeling geleverd worden die refereert
+aan Soort administratieve handeling.Alias. Is Soort administratieve handeling.Alias
+niet gevuld, dan moet de Soort administratieve handeling geleverd worden.
+
+Toelichting: als de afnemer een beperkte autorisatie heeft geeft dit soms meer
+privacygevoelige informatie prijs dan wenselijk is. Zo hoeft een afnemer die alleen
+NAW gegevens krijgt niet te weten dat de reden dat de naam wijzigt bv Adoptie is.
+In dat geval is in de Leveringsautorisatie opgenomen dat een Alias wordt geleverd
+die minder prijsgeeft over de achterliggende bijhouding.
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R2063
+Stel Volledig persoon samen
+Definitie:
+
+1: Stel de 'Volledig persoon' (R1998) samen.
+2: Indien er sprake is van een levering naar aanleiding van een onderhanden
+Administratieve handeling, dan:
+• Pas Gereconstrueerde persoon na de onderhanden Administratieve handeling
+(strippen latere handelingen) (R1556) toe.
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R2065
+Een bericht aan een afnemer bevat geen onderzoek naar ontbrekende gegevens
+Definitie:
+
+Een bericht bevat geen voorkomens van Gegeven in onderzoek waarbij:
+Het een Toegang leveringsautorisatie betreft met Partij \ Rol.Rol =
+"Afnemer"
+EN
+Het een onderzoek betreft naar een ontbrekend gegeven:
+(Gegeven in onderzoek.Object sleutel gegeven is leeg
+EN
+Gegeven in onderzoek.Voorkomen sleutel gegeven is leeg).
+
+Toelichting: Het leveren van onderzoeken naar ontbrekende gegevens aan
+afnemers is juridisch niet verplicht binnen de Wet BRP en de bepaling of een
+onderzoek naar ontbrekende gegevens binnen de autorisatie valt is complex.
+Vooralsnog leveren we dit daarom alleen aan bijhouders.
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R2085
+De dienst die gevraagd wordt
+Definitie:
+
+De _'Dienst die gevraagd wordt'_ leiden we als volgt af:
+
+•
+
+In het geval van een bevraging (het verzoekbericht bevat de parameter
+Bericht.Dienst):
+De Dienst met Dienst.ID gelijk aan de berichtparameter Bericht.Dienst
+
+•
+
+Voor overige verzoekberichten (het bericht bevat NIET de parameter
+Bericht.Dienst) betekent dit:
+Het voorkomen van Dienst:
+• Zich bevindt onder de Leveringsautorisatie die in het bericht is opgegeven
+middels berichtparameter Bericht.Leveringsautorisatie
+• De Soort dienst heeft, die volgt uit de berichtsoort en de handeling in het
+bericht:
+• Registreer afnemerindicatie => waarbij de berichtparameter
+Bericht.Administratieve handeling = "Plaatsing afnemerindicatie"
+• Registreer afnemerindicatie => waarbij de berichtparameter
+Bericht.Administratieve handeling = "Verwijdering afnemerindicatie"
+• Geef synchronisatie persoon => Synchronisatie persoon
+• Geef synchronisatie stamgegeven => Synchronisatie stamgegeven
+• Geef StUF BG bericht => Geef StUF BG bericht
+
+•
+
+Voor selecties (is er geen verzoekbericht):
+De Dienst met Dienst.ID gelijk aan Selectietaak.Dienst
+
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R2129
+Geldig
+Definitie:
+
+Een object is geldig op een peildatum als:
+De Datum aanvang geldigheid op of voor de peildatum ligt en de Datum einde
+geldigheid na de peildatum ligt.
+of
+De Datum ingang op of voor de peildatum ligt en de Datum einde na de peildatum
+ligt.
+(dus: de geldigeheidsperiode is inclusief de ingangsdatum, maar exclusief de
+einddatum)
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2236
+Vulling Leveringsaantekening \ Persoon
+Definitie:
+
+Bij elke Leveringsaantekening dienen één of meer voorkomens van
+Leveringsaantekening \ Persoon aangemaakt te worden die aangeven op welke
+personen die protocollering betrekking heeft.
+Daarbij dient per persoon Leveringsaantekening \ Persoon.Tijdstip laatste wijziging
+persoon gevuld te worden met de geleverde actuele waarde van Persoon.Tijdstip
+laatste wijziging.
+
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R2395
+'Peilmoment materieel'
+Definitie:
+
+Dit is, indien gevuld, Bericht.Peilmoment materieel,
+anders 'Systeemdatum' (R2016).
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2529
+Leveren van Gedeblokkeerde melding
+Definitie:
+
+Objecttype Gedeblokkeerde melding als onderdeel van de verantwoordingsgroep
+wordt samengesteld op basis van Administratieve handeling \ Gedeblokkeerde
+regel.Regel en de Gedeblokkeerde melding.Melding uit de Gedeblokkeerde melding
+waarnaar de Administratieve handeling \ Gedeblokkeerde regel.Regel verwijst.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2540
+Selecteer personen die voldoen aan de totale populatiebeperking en de nadere
+selectiecriteria
+Definitie:
+
+Indien Dienst.Soort selectie gelijk is aan 'Selectiedienst standaard'
+OF
+Dienst.Soort selectie gelijk is aan 'Selectiedienst met plaatsing afnemerindicatie'
+DAN
+Selecteer de Persoon(en) die voldoen aan de Totale populatiebeperking (R2059) en
+het Dienst.Selectiecriterium
+Indien Dienst.Soort selectie gelijk is aan 'Selectiedienst met verwijdering
+afnemerindicatie'
+DAN
+Selecteer de Persoon(en) die voldoen aan het Dienst.Selectiecriterium
+
+Versie:
+
+7
+
+Soort:
+
+Verwerkingslogica
+
+R2557
+Bestandsnaam selectieresultaat set
+Definitie:
+
+De naam van de folder waarin de selectieresultaat sets worden opgegeslagen
+bestaat uit de volgende gegevens:
+
+•
+•
+
+Selectiedatum
+SelectietaakID
+
+De bestandsnaam van een selectieresultaat set bestaat uit de volgende gegevens:
+
+•
+•
+
+Volgnummer
+Soort selectieresultaat set
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2560
+
+Vullen selectieresultaatset totalen
+Definitie:
+
+Bij een selectieresultaat set van het soort selectieresultaat totalen worden de
+selectiekenmerken op de volgende wijze gevuld:
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Bericht.Soort selectieresultaat set = 'Resultaatset totalen'
+Bericht.Volgnummer selectieresultaat set = het volgnummer van de
+betreffende selectieresultaat set
+Bericht.Soort selectie = Selectie.soort selectie
+Bericht.Selectie leveringsautorisatie = Leveringsautorisatie ID
+Bericht.Selectie dienst = Dienst ID
+Bericht.Selectietaak = Selectietaak ID
+Bericht.Selectie datum = systeemdatum
+Bericht.Peilmoment materieel resultaat selectie = Selectietaak.Peilmoment
+materieel resultaat
+Bericht.Peilmoment formeel resultaat selectie = Selectietaak.Peilmoment
+formeel resultaat
+Bericht.Aantal selectieresultaat personen = het aantal geselecteerde personen
+Bericht.Aantal selectieresultaat sets = het aantal selectieresultaat sets inclusief
+deze set
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R2591
+Indien ingesteld bij selectiedienst dan Volledig bericht na verwijdering afnemerindicatie
+Definitie:
+
+Indien bij de Dienst is ingesteld dat Dienst.Verzend volledig bericht bij wijziging
+afnemerindicatie na selectie? is gelijk aan 'Ja'
+EN
+het laten vervallen van Persoon \ Afnemerindicatie op een Persoon was succesvol
+EN
+bij de Persoon mag geen verstrekkingsbeperking voor de verzoekende partij zijn.
+(zie 'Persoon heeft een verstrekkingsbeperking voor Partij' (R1342))
+dan wordt een Volledig bericht met die Persoon geleverd aan de betreffende
+Afnemer (Partij) voor de Leveringsautorisatie behorende bij de Persoon \
+Afnemerindicatie.
+Opmerking:
+1.
+
+De Administratieve handeling in het Volledig bericht is in dit geval Verwijdering
+afnemerindicatie.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2592
+Er moet een afnemerindicatie bestaan
+Definitie:
+
+Persoon \ Afnemerindicatie moet bestaan bij deze Persoon en deze
+Leveringsautorisatie.
+Zo niet dan stopt de verwerking van deze Persoon.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2594
+Logregel mislukken verwijderen afnemerindicatie
+Definitie:
+
+Indien het verwijderen van de afnemerindicatie mislukt, dient dit in de functionele
+logging te worden opgenomen.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2631
+Selecteer personen op basis van selectiebestand
+Definitie:
+
+Indien er een selectiebestand aanwezig is dient OF het
+Persoon.Administratienummer
+OF het Persoon.Burgerservicenummer van de te selecteren persoon voor te komen
+in het bestand.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2667
+Wijzigen status selectietaak na selecteren personen bij selectiedienst met plaatsing of
+verwijdering afnemerindicatie
+Definitie:
+
+Na de verwerking van de standaard selectiedienst wijzigt de Selectietaak.Status
+als volgt:
+
+•
+
+Indien de uitvoering succesvol was
+dan wijzig de status naar Selectietaak.Status = 'Selectie uitgevoerd'
+
+•
+
+Indien de uitvoering is afgebroken
+dan wijzig de status naar Selectietaak.Status = 'Uitvoering afgebroken'
+
+•
+
+Indien tijdens de uitvoering een fout is opgetreden
+dan wijzig de status naar Selectietaak.Status = 'Uitvoering mislukt'
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2673
+Datum uitvoer vullen bij de selectietaak
+Definitie:
+
+Registreer de daadwerkelijke selectiedatum in Selectietaak.Datum uitvoer
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2692
+Aanvullende gegevens wijziging status selectietaak
+Definitie:
+
+Indien er een nieuwe Selectietaak.Status door het systeem wordt toegevoegd
+worden van de nieuwe status de Selectietaak.Status gewijzigd door gevuld door
+'Systeem'
+
+EN
+de nieuwe Selectietaak.Status.Datum/tijd registratie gevuld door 'Systeemdatum'
+(R2016)
+EN
+de oude Selectietaak.Status.Datum/tijd verval gevuld door 'Systeemdatum' (R2016)
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+

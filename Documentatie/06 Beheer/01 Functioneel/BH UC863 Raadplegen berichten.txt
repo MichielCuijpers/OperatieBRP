@@ -1,0 +1,407 @@
+UC863 Raadplegen berichten
+
+1.2
+
+Datum
+Status
+
+22-01-2016
+Definitief
+
+Definitief | 1.2 | UC863 Raadplegen berichten | 22-01-2016
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................6
+2.1
+
+3
+
+REGULIER VERLOOP ..............................................................................................................................6
+
+AANVULLENDE SPECIFICATIES .................................................................................................7
+3.1
+3.2
+
+4
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................5
+PRECONDITIE ........................................................................................................................................5
+POSTCONDITIE......................................................................................................................................5
+
+ZOEKEN .................................................................................................................................................7
+DETAILS ................................................................................................................................................8
+
+OPMERKINGEN ....................................................................................................................................9
+
+Operatie BRP
+
+Pagina 2 van 9
+
+Definitief | 1.2 | UC863 Raadplegen berichten | 22-01-2016
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+07-05-2015
+18-05-2015
+25-06-2015
+
+0.1
+0.2
+1.0
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+22-01-2016
+23-08-2016
+
+1.1
+1.2
+
+Initiële versie
+Reviewcommentaar verwerkt
+Definitief gemaakt ten behoeve van release
+3.1
+Verwijzing naar BMR-versie verwijderd
+BMR44 verwerkt
+Hernoemd van UC842 naar UC863
+
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+18-05-2015
+
+0.1
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 9
+
+Definitief | 1.2 | UC863 Raadplegen berichten | 22-01-2016
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Bericht zoals verzonden door of ontvangen door de centrale voorzieningen van de BRP.
+Berichten worden door de BRP gearchiveerd. Dit betreft enerzijds ontvangen Berichten,
+anderzijds Berichten die verzonden gaan worden. (Bron: [BMR])
+Samengevat zijn berichten alle berichten die door de centrale voorziening BRP zijn ontvangen,
+verstuurd of nog verstuurd worden. Het betreft hier niet de berichten die de BRP intern verstuurt
+en ontvangt.
+Bericht is een dynamisch gegeven en wordt beschreven in het [BMR]: Ber.Bericht.
+In dit document wordt beschreven op welke wijze de beheerder berichten kan raadplegen.
+
+Operatie BRP
+
+Pagina 4 van 9
+
+Definitief | 1.2 | UC863 Raadplegen berichten | 22-01-2016
+
+1.2
+
+1.3
+
+Referenties
+#
+[BMR]
+
+Document
+https://www.modernodam.nl/bmr
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+[UCRAH]
+
+BH UC860 Raadplegen
+administratieve handelingen.doc
+
+Operatie BRP
+
+-
+
+-
+
+[UCRA]
+
+BH UC840 Beheren
+leveringsautorisatie.doc
+
+Operatie BRP
+
+-
+
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 5 van 9
+
+Definitief | 1.2 | UC863 Raadplegen berichten | 22-01-2016
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+1. De beheerder meldt het systeem aan de hand van een aantal zoekcriteria welke berichten
+getoond dienen te worden (AS: 3.1)
+2. Het systeem toont een lijst van berichten die voldoen aan de zoekcriteria (AS: 3.1)
+3. De beheerder selecteert een bericht
+4. Het systeem toont de details van het geselecteerde bericht (AS: 3.2)
+5. De use case eindigt
+
+Operatie BRP
+
+Pagina 6 van 9
+
+Definitief | 1.2 | UC863 Raadplegen berichten | 22-01-2016
+
+3
+
+Aanvullende specificaties
+
+3.1
+
+Zoeken
+De beheerder kan op basis van de volgende zoekcriteria berichten vinden:
+Label
+ID
+Soort
+Zendende partij
+Zendende systeem
+Ontvangende partij
+Ontvangende systeem
+(Cross) Referentienummer
+Begindatum
+Einddatum
+Leveringsautorisatie
+Dienst
+Soort synchronisatie
+Verwerkingswijze
+Bijhouding
+
+In te zoeken attribuut(en)
+Bericht.Identiteit.ID
+Bericht.Identiteit.Soort
+Bericht.Stuurgegevens.Zendende partij
+Bericht.Stuurgegevens.Zendende systeem
+Bericht.Stuurgegevens.Ontvangende partij
+Bericht.Stuurgegevens.Ontvangende systeem
+Bericht.Stuurgegevens.Referentienummer of
+Bericht.Stuurgegevens.Cross referentienummer
+Bericht.Stuurgegevens.Datum/tijd verzending of
+Bericht.Stuurgegevens.Datum/tijd ontvangst
+Bericht.Stuurgegevens.Datum/tijd verzending of
+Bericht.Stuurgegevens.Datum/tijd ontvangst
+Bericht.Parameters.Leveringsautorisatie.Naam
+Bericht.Parameters.Dienst.Soort
+Bericht.Parameters.Soort synchronisatie
+Bericht.Parameters.Verwerkingswijze
+Bericht.Resultaat.Bijhouding
+
+De onderstaande gegevens worden in het zoekresultaat getoond. Omdat het mogelijk is op veel
+verschillende criteria te zoeken en het aantal kolommen dat getoond kan worden beperkt is,
+worden niet alle zoekcriteria in het zoekresultaat getoond.
+Label
+ID
+Soort
+Zendende partij
+Ontvangende partij
+Referentienummer
+Cross referentienummer
+Verzenddatum
+Ontvangstdatum
+Soort synchronisatie
+Verwerkingswijze
+Bijhouding
+
+Operatie BRP
+
+Te tonen attribuut(en)
+Bericht.Identiteit.ID
+Bericht.Identiteit.Soort
+Bericht.Stuurgegevens.Zendende partij
+Bericht.Stuurgegevens.Ontvangende partij
+Bericht.Stuurgegevens.referentienummer
+Bericht.Stuurgegevens.Cross referentienummer
+Bericht.Stuurgegevens.Datum/tijd verzending
+Bericht.Stuurgegevens.Datum/tijd ontvangst
+Bericht.Parameters.Soort synchronisatie
+Bericht.Parameters.Verwerkingswijze
+Bericht.Resultaat.Bijhouding
+
+Pagina 7 van 9
+
+Definitief | 1.2 | UC863 Raadplegen berichten | 22-01-2016
+
+3.2
+
+Details
+De volgende details van een Bericht worden getoond:
+Label
+ID
+Soort
+Richting
+Zendende partij
+Zendende systeem
+Ontvangen partij
+Ontvangende
+systeem
+Referentienummer
+
+Attribuut
+Identiteit.ID
+Identitieit.Soort
+Identiteit.Richting
+Stuurgegevens.Zendende partij
+Stuurgegevens.Zendende systeem
+Stuurgegevens.Ontvangen partij
+Stuurgegevens.Ontvangende
+systeem
+Stuurgegevens.Referentienummer
+
+Cross
+referentienummer
+
+Stuurgegevens.Cross
+referentienummer
+
+Datum/tijd
+verzending
+Datum/tijd
+ontvangst
+Verwerkingswijze
+Soort
+synchronisatie
+Leveringsautorisatie
+
+Stuurgegevens.Datum/tijd
+verzending
+Stuurgegevens.Datum/tijd
+ontvangst
+Parameters.Verwerkingswijze
+Parameters.Soort synchronisatie
+
+Dienst
+Verwerking
+Bijhouding
+Hoogste
+meldingsniveau
+Administratieve
+handeling
+
+Parameters.Dienst.Soort
+Resultaat.Verwerking
+Resultaat.Bijhouding
+Resultaat.Hoogste meldingsniveau
+
+Antwoord op
+
+Standaard.Antwoord op
+
+Data
+
+Standaard.Data
+
+Operatie BRP
+
+Parameters.Leveringsautorisatie.Naa
+m
+
+Standaard.Administratieve handeling
+
+Toelichting
+Naam en code tonen
+Naam en code tonen
+Door Referentienummer te
+selecteren wordt een zoekactie in
+berichten uitgevoerd met dat
+nummer.
+Door Cross referentienummer te
+selecteren wordt een zoekactie in
+berichten uitgevoerd met dat
+nummer.
+Door Leveringsautorisatie te
+selecteren kunnen de details van
+de leveringsautorisatie
+geraadpleegd worden [UCRA].
+Door Administratieve handeling te
+selecteren kunnen de details van
+de administratieve handeling
+geraadpleegd worden [UCRAH].
+Door Antwoord op te selecteren
+kunnen de details van het bericht
+geraadpleegd worden waar het
+onderhavige bericht antwoord op
+is.
+Geformatteerd weergeven.
+
+Pagina 8 van 9
+
+Definitief | 1.2 | UC863 Raadplegen berichten | 22-01-2016
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 9 van 9
+
+

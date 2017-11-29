@@ -1,0 +1,586 @@
+UCS SA.0.PA - Plaatsing afnemerindicatie
+Versie
+
+2.0
+
+Datum
+
+11 juli 2017
+
+Status
+
+Definitief
+
+Locatie
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+08-11-2016
+
+0.1
+
+oBRP
+
+SA.0.PA en SA.1.PA samengevoegd n.a.v. herstructurering
+specificaties.
+
+10-11-2016
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+08-12-2016
+
+0.3
+
+Aangepast nav herzien onderliggende UC’s
+
+oBRP
+
+09-12-2016
+
+0.4
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+13-12-2016
+
+0.5
+
+UCM en AD aangepast ((*) verwijderd en ‘vorkjes’
+toegevoegd
+
+oBRP
+
+15-02-2017
+
+1.0
+
+UC’s en Regels in BMR opnieuw gekoppeld. Versie
+document gereed
+
+oBRP
+
+20-02-2017
+
+1.1
+
+UCS-AL.1.AB -> UCS-LV.1.AB
+
+oBRP
+
+30-03-2017
+
+1.2
+
+SA.1.PA.CA -> SA.1.CAA
+
+oBRP
+
+11-07-2017
+
+2.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+0.3
+
+Interne review
+
+UCS SA.0.PA - Plaatsing afnemerindicatie
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Invoer ....................................................................................................................... 4
+2.1
+2.2
+2.3
+2.4
+
+3
+
+Beschrijving .........................................................................................................................4
+Verzoekbericht .....................................................................................................................4
+Specifieke toelichting op het verzoekbericht .............................................................................4
+Bijzonderheden.....................................................................................................................4
+
+Verwerking ............................................................................................................... 6
+3.1
+3.2
+3.3
+3.4
+
+4
+
+Doel ....................................................................................................................................3
+Functionele context ...............................................................................................................3
+Referenties ..........................................................................................................................3
+
+Beschrijving .........................................................................................................................6
+Schematische weergave.........................................................................................................6
+Beschrijving activiteitendiagram .............................................................................................8
+Bedrijfsregels ..................................................................................................................... 10
+
+Uitvoer .................................................................................................................... 11
+4.1
+Beschrijving ....................................................................................................................... 11
+4.2
+Resultaatbericht.................................................................................................................. 11
+4.2.1
+Toelichting op het resultaatbericht .................................................................................... 11
+4.3
+Volledig bericht ................................................................................................................... 11
+
+5
+
+Ontwerpbeslissingen .............................................................................................. 12
+
+Status: Definitief, versie: 2.0
+
+Pagina 2 van 12
+
+UCS SA.0.PA - Plaatsing afnemerindicatie
+
+1 Inleiding
+1.1
+
+Doel
+
+Met deze dienst is het voor de afnemer mogelijk om aan de hand van een identificerend kenmerk
+een afnemerindicatie te plaatsen voor een bepaalde leveringsautorisatie bij een persoon en deze
+hiermee in de groep van te volgen personen op te nemen.
+De afnemer ontvangt direct (synchroon) een bevestiging van het plaatsen van de afnemerindicatie.
+Hierna ontvangt de afnemer een tweede bericht (asynchroon) van de centrale voorzieningen. Dit
+betreft een zogenaamd volledig bericht voor de persoon. Een volledig bericht omvat alle gegevens
+die aan de afnemer geleverd mogen worden over de persoon. Met deze gegevens kan de afnemer
+een kopie van de persoonsgegevens opnemen in de eigen administratie.
+
+1.2
+
+Functionele context
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitdiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving Generieke Berichtstructuur
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 2.0
+
+Pagina 3 van 12
+
+UCS SA.0.PA - Plaatsing afnemerindicatie
+
+2 Invoer
+2.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft het verzoekbericht waarmee de afnemer een afnemerindicatie kan plaatsen
+voor de opgegeven persoon.
+
+2.2
+
+Verzoekbericht
+
+De structuur van het verzoekbericht staat beschreven in Aspectbeschrijving Generieke
+berichtstructuur [2]. De inhoud van het verzoekbericht is opgenomen in de bijlage: SA.0.PA –
+Bijlage Plaatsing afnemerindicatie.doc.
+
+2.3
+
+Specifieke toelichting op het verzoekbericht
+
+Toelichting op het verzoekbericht van deze dienst.
+Stuurgegevens
+Van een ingevoerd bericht worden stuurgegevens Zendende partij, het Zendende systeem, een
+Referentienummer en het Tijdstip vastgelegd en meegeleverd als onderdeel van het
+verzoekbericht.
+Parameters
+De Leveringsautorisatie waarop het verzoek betrekking heeft. Deze is noodzakelijk voor de
+autorisatiebepaling. Daarnaast wordt dit gegeven gebruikt bij het daadwerkelijk registreren van de
+afnemerindicatie.
+Administratieve handeling: plaatsing afnemerindicatie
+Van het verzoek wordt de Partij waarvoor de afnemerindicatie moet worden geplaatst opgenomen.
+Actie: registratie afnemerindicatie
+In het bericht wordt de persoon uitsluitend geïdentificeerd door het opgegeven
+Burgerservicenummer.
+
+Afnemerindicatie, Afnemer
+De afnemer wordt geïdentificeerd door het gegeven Afnemer. De voor de afnemer geldende
+leveringsautorisatie, waarop de afnemerindicatie moet worden geplaatst wordt geïdentificeerd door
+de Leveringsautorisatie uit de parameters.
+Datum aanvang materiele periode
+In het bericht kan de afnemer het gegeven Datum aanvang materiële periode opgeven. De Datum
+aanvang materiele periode geeft aan vanaf welke datum in het verleden de afnemer geïnteresseerd
+is in de persoon. Historische gegevens die geheel vóór deze periode liggen worden niet opgenomen
+in het te leveren bericht. Indien de afnemer geen datum opgeeft, wordt van betreffende persoon
+de complete historie waarvoor de afnemer geautoriseerd is, opgenomen in het volledig bericht.
+Datum einde volgen
+In het bericht kan de afnemer het gegeven Datum einde volgen opgeven (optioneel). De Datum
+einde volgen geeft het moment in de toekomst aan, waarop de afnemer niet meer geïnteresseerd
+is in het doorkrijgen van wijzigingen over de persoon.
+
+2.4
+
+Bijzonderheden
+•
+
+Een correctie op een afnemerindicatie is alleen mogelijk door de afnemerindicatie eerst te
+verwijderen en daarna opnieuw te plaatsen.
+
+Status: Definitief, versie: 2.0
+
+Pagina 4 van 12
+
+UCS SA.0.PA - Plaatsing afnemerindicatie
+
+•
+
+Met deze dienst kan per bericht voor 1 persoon (BSN) een afnemerindicatie worden
+geplaatst.
+
+Status: Definitief, versie: 2.0
+
+Pagina 5 van 12
+
+UCS SA.0.PA - Plaatsing afnemerindicatie
+
+3 Verwerking
+3.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft de verwerking van het verzoekbericht waarmee de afnemer een
+afnemerindicatie wil plaatsen voor de opgegeven persoon.
+
+3.2
+
+Schematische weergave
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitendiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+Activiteitendiagram met de verwerking van een verzoek tot het plaatsen van een afnemerindicatie.
+In het diagram is alleen de happy flow weergegeven. Foutafhandeling is hier niet opgenomen maar
+de XSD-validatie en invoercontrole’s staan beschreven in de begeleidende tekst in de volgende
+paragraaf of in de aangeroepen Use Cases.
+
+Status: Definitief, versie: 2.0
+
+Pagina 6 van 12
+
+UCS SA.0.PA - Plaatsing afnemerindicatie
+
+Status: Definitief, versie: 2.0
+
+Pagina 7 van 12
+
+UCS SA.0.PA - Plaatsing afnemerindicatie
+
+3.3
+
+Beschrijving activiteitendiagram
+
+De verwerking van het ontvangen verzoekbericht bestaat uit een aantal volgordelijke stappen die
+uitgevoerd worden. In de onderstaande toelichtende tekst zijn de stappen onderverdeeld in ‘XSD
+controle’, ‘Controle invoer’, ‘Verwerking’ en ‘Uitvoer’. Elke toegelichte stap is terug te vinden in het
+activiteitendiagram in de vorige paragraaf.
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de aan de Use Cases gekoppelde regels in BMR.
+
+XSD controle
+•
+
+AL.1.XV – XSD validatie
+Het inkomende verzoek wordt gevalideerd door deze te controleren tegen het bij het
+verzoek behorende XSD-schema (XML Schema Definition). Als er een XSD fout wordt
+geconstateerd, dan wordt er direct een technische foutmelding teruggegeven aan de
+zendende applicatie.
+
+Controle invoer
+•
+
+LV.1.AB – Archiveer bericht
+Draagt zorg voor de archivering van het technisch verwerkbare inkomende verzoekbericht
+en van de uitgaande berichten (het resultaatbericht en het volledig bericht).
+
+•
+
+LV.1.AL – Autorisatie levering
+Het inkomende verzoek wordt gecontroleerd op geldigheid van leveringsautorisatie en
+dienst autorisatie.
+
+•
+
+SA.1.CAA- Controleer autorisatie afnemersindicatie
+Dienst specifieke autorisatie: De afnemer mag alleen voor zichzelf een afnemerindicatie
+plaatsen of verwijderen bij een persoon.
+
+•
+
+LV.1.CPI – Controleer persoonsselectie identiteitsnummer
+Het in het bericht opgenomen identificatienummer (Burgerservicenummer,
+Administratienummer of Persoonsobjectsleutel) mag maar één persoon opleveren. Omdat
+het plaatsen van een afnemerindicatie middels deze dienst alleen per persoon mogelijk is.
+
+•
+
+SA.1.PA.CI – Controleer inhoud
+Vervolgens wordt er gecontroleerd of de diens specifieke invoergegevens juist zijn. Zo mag
+binnen één leveringsautorisatie voor een afnemer maximaal één afnemerindicatie bij een
+persoon vastgelegd worden. Mag de opgegeven materiële periode niet in de toekomst
+liggen en moet de opgegeven einde datum volgen juist wel in de toekomst liggen.
+
+Verwerking
+•
+
+SA.1.PA.VPA – Verwerken plaatsen afnemerindicatie
+Na het goed doorlopen van alle controles wordt in deze stap de afnemerindicatie
+daadwerkelijk geregistreerd. Na de registratie van de afnemerindicatie volgt naast het
+standaard resultaatbericht ook een volledig bericht aan de verzoekende partij.
+
+Status: Definitief, versie: 2.0
+
+Pagina 8 van 12
+
+UCS SA.0.PA - Plaatsing afnemerindicatie
+
+Uitvoer
+•
+LV.1.MR – Maak resultaatbericht
+De “geslaagd” melding of de eventuele foutmelding(en) worden in een (synchroon)
+resultaatbericht opgenomen. Er wordt dus altijd een resultaatbericht vervaardigd.
+
+•
+
+LV.1.VR – Verzend resultaatbericht
+Vervolgens wordt het resultaatbericht afgeleverd aan de indiener van het verzoekbericht.
+Het resultaatbericht wordt gearchiveerd (LV.1.AB).
+
+•
+
+LV.1.SPL – Samenstellen persoonslijst
+Er wordt een volledige persoonslijst samengesteld in de BRP van de persoon waarvoor een
+afnemerindicatie is geplaatst. In deze stap wordt er ook gefilterd op de grens van deze
+persoonslijst.
+
+•
+
+LV.1.AFB – Autorisatiefilter bericht
+De in de vorige stap samengestelde persoonslijst wordt in deze stap vervolgens gefilterd op
+autorisatie op historie, verantwoording, onderzoek, inhoudelijke groepen en attributen.
+
+•
+
+LV.1.VPB – Verwerk persoon bericht
+Er wordt vervolgens een verwerk persoon bericht samengesteld. In dit geval wordt een
+volledig bericht gemaakt. Dit is bepaald in SA.1.PA.VPA. In deze stap wordt het bericht
+begrenst op datum aanvang materiële periode van de afnemerindicatie, worden de
+stuurgegevens van het asynchrone bericht gevuld.
+
+•
+
+LV.1.BO – Bericht opschonen
+Na het filteren in de voorgaande stappen kunnen er lege groepen of niet relevante
+verwijzingen in het bericht ontstaan. In deze stap wordt ook de sortering van groepen en
+objecten bepaald.
+
+•
+
+LV.1.PB – Protocolleer bericht
+Alle leveringen waarin persoonsgegevens zijn opgenomen (zoals een volledig bericht)
+moeten worden geprotocolleerd alvorens de levering aan afnemers mag plaatsvinden.
+Wanneer de dienst Plaatsing afnemerindicatie dan ook wordt uitgevoerd voor een afnemer
+dan moeten, alvorens het volledig bericht verzonden wordt, de reeds aangemaakte levering
+in de protocolleringsadministratie worden vastgelegd.
+Wanneer de dienst Plaatsing afnemerindicatie ten behoeve van bijhouders wordt uitgevoerd
+dan is protocollering niet nodig.
+
+•
+
+LV.1.VE – Verzend Bericht
+Tot slot wordt het asynchrone volledige bericht verzonden en gearchiveerd (LV.1.AB).
+Echter indien het niet mogelijk is om een levering te protocolleren dan mogen er geen
+gegevens geleverd worden.
+
+Status: Definitief, versie: 2.0
+
+Pagina 9 van 12
+
+UCS SA.0.PA - Plaatsing afnemerindicatie
+
+3.4
+
+Bedrijfsregels
+
+Voor een toelichting op de verschillende soorten bedrijfsregels, de meldingsniveaus, de toepassing
+en werking ervan in het bijhoudingsproces, wordt verwezen naar de daartoe opgestelde
+Aspectbeschrijving Controles [3].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels en definitieregels zijn opgenomen de bijlage: SA.0.PA – Bijlage Plaatsing
+afnemerindicatie.doc.
+
+Status: Definitief, versie: 2.0
+
+Pagina 10 van 12
+
+UCS SA.0.PA - Plaatsing afnemerindicatie
+
+4 Uitvoer
+4.1
+
+Beschrijving
+
+Dit proces levert altijd direct een resultaatbericht en na succesvolle registratie van de
+afnemerindicatie op een later tijdstip tevens een volledig bericht voor de opgegeven persoon.
+Voor de volledige beschrijving en inhoud van de uitvoerberichten wordt verwezen naar
+Aspectbeschrijving Generieke Berichtstructuur [2] en de bijlage: SA.0.PA – Bijlage Plaatsing
+afnemerindicatie.doc.
+
+4.2
+
+Resultaatbericht
+
+In antwoord op de aanroep van de dienst ontvangt de afnemer een synchroon resultaatbericht.
+4.2.1
+
+Toelichting op het resultaatbericht
+
+Stuurgegevens
+Van het bericht worden stuurgegevens Zendende partij, het Zendende systeem, een
+Referentienummer, een Crossreferentienummer (referentienummer uit de stuurgegevens van het
+Verzoekbericht) en het Tijdstip vastgelegd en meegeleverd als onderdeel van het resultaatbericht.
+Resultaat
+Het resultaat van de Verwerking kan de waarde “Geslaagd” of “Foutief” aannemen. Daarachter
+wordt aangegeven wat het Hoogste Meldingsniveau is, dat is aangetroffen tijdens de uitgevoerde
+controles. De ernst wordt uitgedrukt in het meldingsniveau en betreft in aflopende hoogte:
+Fout
+Deblokkeerbaar
+Waarschuwing
+Informatie1
+Meldingen
+In het bericht zijn de Regels opgenomen die gecontroleerd zijn, met daarbij aangegeven welke
+Soort melding (informatief, waarschuwing, deblokkeerbaar, fout) en de Melding zelf, die in tekst
+aangeeft wat er op basis van de gecontroleerde regel is geconstateerd.
+Administratieve handeling:
+Voor de uitgevoerde Plaatsing afnemerindicatie wordt aangegeven welke Partijcode de
+afnemerindicatie heeft geplaatst en op welke datum/tijd (Tijdstip registratie) de afnemerindicatie is
+geregistreerd. Uiteraard wordt daarbij ook aangegeven voor welke persoon (Burgerservicenummer)
+deze afnemerindicatie is geplaatst.
+Voor een niet uitgevoerde Plaatsing afnemerindicatie (het resultaat van de Verwerking heeft de
+waarde “Foutief”) wordt aangegeven met welke Partijcode de afnemerindicatie is geprobeerd te
+plaatsten en op welke datum/tijd (Tijdstip registratie) de verwerking heeft plaatsgevonden.
+
+4.3
+
+Volledig bericht
+
+Na het succesvol plaatsen van een afnemerindicatie wordt asynchroon voor de betreffende persoon
+een volledig bericht aan de afnemer gezonden. Bij het aanmaken van het volledig bericht wordt
+rekening gehouden met de opgegeven datum aanvang materiële periode.
+Vervolgens zal de Afnemer op basis van de leveringsautorisatie en de hiervoor geplaatste
+afnemerindicatie de relevante mutatieberichten voor deze Persoon ontvangen; dit zolang de Datum
+einde volgen van de geplaatste afnemerindicatie niet is verstreken.
+
+1
+
+Dit meldingsniveau wordt momenteel nog niet gehanteerd, maar is gereserveerd voor toekomstig gebruik.
+
+Status: Definitief, versie: 2.0
+
+Pagina 11 van 12
+
+UCS SA.0.PA - Plaatsing afnemerindicatie
+
+5 Ontwerpbeslissingen
+Het volledig bericht wordt direct aangemaakt, niet via de “bijhoudingsroute”.
+In eerste instantie werd voor deze dienst het bijhoudingsregime gevolgd. De administratieve
+handeling voor het plaatsen van de afnemerindicatie werd na de verwerking op de verwerkings
+wachtrij geplaatst om de levering van een volledig bericht te triggeren.
+Er zijn 3 redenen om dit niet zo te doen:
+1. Afnemerindicaties zijn geen onderdeel van de persoonslijst en in formele zin dus ook geen
+echte bijhouding.
+2. Een zeer groot deel van het huidige berichtenverkeer gaat over afnemer indicaties. Gevolg
+zou een enorme toename zijn van het aantal handelingen. Dit is o.a. ivm de performance
+niet gewenst.
+3. Het plaatsen van afnemerindicaties komt ook voor als onderdeel van de dienst Attendering
+met plaatsing afnemerindicatie en diensten rond selecties. De gewenste herbruikbaarheid
+van de kernfunctionaliteit (het plaatsen van indicaties) was slecht te combineren met de
+techniek voor het bijhoudingsregime.
+Dus direct na het succesvol plaatsen van de afnemerindicatie wordt binnen deze Use Case met als
+Actie het plaatsen van de afnemerindicatie het volledig bericht samengesteld en daarna via de
+reguliere route verzonden.
+
+Status: Definitief, versie: 2.0
+
+Pagina 12 van 12
+
+

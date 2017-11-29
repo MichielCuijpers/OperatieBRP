@@ -1,0 +1,230 @@
+Naamgebruik
+Wijziging Samengestelde naam en/of
+Geslachtsnaam component en de
+doorwerking hiervan op de PL van een
+gerelateerde partner.
+
+Afleiding van naamgebruik - Start
+Geslachtsnaam
+component
+
+Partner 1
+
+Partner 2
+
+de Boer
+
+Janssen
+
+Voornaam
+
+Jan
+
+Marie
+
+Samengestelde naam
+
+Naamgebruik
+
+Jan de Boer
+
+Jan de BoerJanssen
+
+(Afleiding = Ja)
+
+Marie
+Janssen
+(Afleiding = Ja)
+
+(Afleiding = Ja,
+NG= N)
+
+Marie
+Janssen - de
+Boer
+(Afleiding = Ja,
+NG=N)
+
+Afleiding van naamgebruik –
+P1 wijzigt zijn Achternaam, P1&P2 hebben zelfde
+bijhoudingsgemeente
+Geslachtsnaam
+component
+
+Partner 1
+
+Partner 2
+
+van
+Schie
+
+Janssen
+
+Voornaam
+
+Samengestelde naam
+
+Naamgebruik
+
+Jan
+
+Jan van
+Schie
+
+Jan van
+SchieJanssen
+
+(Afleiding = Ja)
+
+Marie
+
+Marie
+Janssen
+(Afleiding = Ja)
+
+(Afleiding = Ja,
+NG= N)
+
+Marie
+Janssen –
+van Schie
+(Afleiding = Ja,
+NG=N)
+
+Afleiding van naamgebruik –
+P1 wijzigt zijn Achternaam, P1&P2 hebben zelfde
+bijhoudingsgemeente, afleiding staat uit bij P2
+Geslachtsnaam
+component
+
+Partner 1
+
+Partner 2
+
+van
+Schie
+
+Janssen
+
+Voornaam
+
+Samengestelde naam
+
+Naamgebruik
+
+Jan
+
+Jan van
+Schie
+
+Jan van
+SchieJanssen
+
+(Afleiding = Ja)
+
+Marie
+
+(Afleiding = Ja,
+NG= N)
+
+Marie
+Janssen
+
+Marie
+Janssen – de
+Boer
+
+(Afleiding = Ja)
+
+(Afleiding = Nee)
+
+Afleiding van naamgebruik –
+P1 wijzigt zijn Achternaam, P1&P2 hebben afwijkende
+bijhoudingsgemeente, afleiding staat aan bij P2
+Geslachtsnaam
+component
+
+Partner 1
+
+van
+Schie
+
+Voornaam
+
+Samengestelde naam
+
+Naamgebruik
+
+Jan
+
+Jan van
+Schie
+
+Jan van
+SchieJanssen
+
+(Afleiding = Ja)
+
+(Afleiding = Ja,
+NG= N)
+
+?
+
+Partner 2
+
+Janssen
+
+Marie
+
+Marie
+Janssen
+(Afleiding = Ja)
+
+Marie
+Janssen – de
+Boer
+(Afleiding = Ja,
+NG=N)
+
+Afleiding van naamgebruik –
+P1 wijzigt zijn Achternaam, P1&P2 hebben afwijkende
+bijhoudingsgemeente, afleiding staat aan bij P2
+Hoe wordt het Naamgebruik van P2?
+Opties:
+1)
+
+Automatisch opnieuw afleiden.
+①
+②
+
+2)
+
+P2 weet niet dat zijn naamgebruik gewijzigd is
+Persoonslijst P2 wordt zonder toestemming van bijhoudingspartij bijgewerkt.
+
+Bijhoudingsvoorstel
+1)
+
+Automatische fiat = Ja -> automatisch opnieuw afleiden
+①
+②
+
+2)
+
+P2 weet niet dat zijn naamgebruik gewijzigd is
+Krijgt de Bijhoudingspartij van P2 dit wel te horen?
+
+Automatische fiat = Nee -> geen automatische afleiding
+①
+②
+③
+
+Moet er ontrelateerd worden? (Lijkt niet wenselijk)
+Hoe kan bijhoudingsgemeente 2 de afleiding alsnog laten plaats vinden.
+Optie: AH: Wijzigen naamgebruik, met alleen Afleiding naamgebruik? = Ja doorgeven in bericht?
+P2 weet niet dat zijn naamgebruik gewijzigd is.
+
+Bovenstaande geldt ook voor ex-partners die de naam van hun ex kunnen voeren. Hun relatie is inmiddels beëindigd en toch werkt het nog
+door, tenminste volgens de ASP Naamopbouw.
+
+

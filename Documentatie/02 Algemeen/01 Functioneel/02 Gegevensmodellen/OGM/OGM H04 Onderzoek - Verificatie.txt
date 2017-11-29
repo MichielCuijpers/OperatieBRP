@@ -1,0 +1,202 @@
+His_Onderzoek
+
+Dyn
+
+His_PersVerificatie
+
+Dyn
+
+OGM H04 Onderzoek - Verificatie
+
+ID
+
+His_OnderzoekID
+
+*i
+
+ID
+
+His_PersVerificatieID
+
+*i
+
+Release 59
+
+Onderzoek >
+
+Onderzoek
+
+* u1
+
+PersVerificatie >
+
+PersVerificatie
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+ActieInh >
+
+Actie
+
+*
+
+ActieInh >
+
+Actie
+
+*
+
+TsVerval
+
+Ts
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+Dat
+
+IndVoorkomenTbvLevMuts Ja
+DatAanv
+
+DatEvtDeelsOnbekend
+
+*
+
+DatEinde
+
+DatEvtDeelsOnbekend
+
+.
+
+Oms
+
+OnderzoekOms
+
+.
+
+Status >
+
+StatusOnderzoek
+
+*
+
+His_GegevenInOnderzoek
+
+Dyn
+
+ID
+
+His_GegevenInOnderzoekID
+
+GegevenInOnderzoek >
+
+GegevenInOnderzoek
+
+* u1
+
+TsReg
+
+Ts
+
+*
+
+ActieInh >
+
+Actie
+
+*
+
+TsVerval
+
+Ts
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+*i
+
+.
+
+DatEvtDeelsOnbekend
+
+.
+*
+
+17-7-2017
+
+

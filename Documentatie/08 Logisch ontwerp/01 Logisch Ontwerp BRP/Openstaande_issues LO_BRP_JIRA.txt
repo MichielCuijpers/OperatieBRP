@@ -1,0 +1,2600 @@
+[LOB-104] Mismatch verantwoordingsgegevens Bijlage A Created: 13-04-17 Updated: 1307-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Bijlage A - Gegegevenswoordenboek
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Major
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Mismatch verantwoordingsgevenes A.7.3 en Bijlage A.5.1 oplossen, omdat het kenmerk uitsluitend
+“In bericht” voorkomt.. Betreft AH.Tijdstipregistratie en Actie.soort
+
+1
+
+[LOB-109] Gebruik termen college en gemeente. Created: 13-04-17 Updated: 11-07-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Diffuus
+Affects
+None
+Version/s:
+Fix Version/s:
+1.1
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Epic Link:
+
+Terminologie aandachtspunten LO BRP
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+In het LO BRP is gebruik van het woord "gemeente" volstrekt onduidelijk, omdat een gemeente als
+zodanig niets doet, noch juridisch, noch technisch. (volgens mdw BZK review H4 begin 2017).
+Er dient derhalve exact te worden aangegeven wie (welk orgaan) wat doet. Het woord 'gemeente'
+moet worden vermeden.
+Bestaande termen:
+
+•
+•
+•
+•
+•
+
+gemeente
+feitgemeente
+college van de feitgemeente
+bijhoudingsverantwoordelijk college
+etc.
+
+2
+
+[LOB-124] Berichtenwoordenboek of regels anders koppelen? Created: 11-07-17 Updated:
+11-07-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Bijlage A - Gegegevenswoordenboek
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+Attachments:
+
+Story
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+RE_ Regels op schema _Ber_.pdf
+
+Description
+In de BMR is het mogelijk om een Gegevenswoordenboek te genereren. Op basis daarvan wordt
+bijlage A volledig geactualiseerd voor de oplevering van een nieuwe LO-BRP versie. Nu bleek dat er
+een aantal regels in het gegevenswoordenboek ontbraken. Deze regels zijn namelijk gekoppeld aan
+berichtelementen en niet gekoppeld aan een handeling of dienst, die de berichten gebruikt.
+Daardoor zijn deze regels uitsluitend beschikbaar in het Berichtenwoordenboek (een extra optie tot
+uit lijsten binnen de BMR).
+Zie tevens de bijgesloten e-mail: onderzoek of de "berichtregels" aan een handeling/dienst of
+attribuut/groep moet worden gekoppeld, of dat er daadwerkelijk een extra Gegevenswoordenboek
+aan Bijlage A moet worden toegevoegd?!
+
+3
+
+[LOB-123] Aanpassen concept C.9.12 t/m C9.19 (H/GP correcties) Created: 11-0717 Updated: 11-07-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Bijlage C - Administratieve handelingenboek
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+Attachments:
+
+Story
+
+Priority:
+Assignee:
+
+Major
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Logisch Ontwerp 1.0.9 HGP-correcties.docx
+correcties.pdf
+partnerschap.docx
+
+RE_ HGP-
+
+Wijziging partnergegevens geregistreerd
+Wijziging partnergegevens huwelijk.docx
+
+Description
+De correcties voor de module H/GP (zou eigenlijk al meegaan in 1.0.8 versie) zijn in concept ter
+interne review opgeleverd. <mdw Operatie BRP> heeft daar commentaar op geleverd. Aangezien
+ik de schrijver ben lijkt het me verstandig, dat (of <mdw Operatie BRP>) de stukken reviewt in
+combinatie met de opmerkingen van <mdw Operatie BRP>.
+NB: volgens mij beschrijven we in de bijlagen bij zowel diensten als handelingen nergens wat een
+dienst of handeling NIET doet, maar uitsluitend waartoe de dienst af handeling staat opgesteld.
+
+4
+
+[LOB-122] Selectiecriterium in combinatie met een opgaaf van identificatienummers
+Created: 11-07-17 Updated: 11-07-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Bijlage D - Dienstenboek, Hoofdstuk 5 - Leveren
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+Attachments:
+
+Story
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Beperking of uitbreiding.docx
+
+RE_ Review LO selectiediensten.pdf
+
+Description
+Uit het reviewcommentaar op de conceptstukken van Selecties heeft <mdw Operatie BRP>
+aangegeven, dat de opgaaf aan identificatienummers én het selectiecriterium gelijk moeten zijn
+naan elkaar (logische en). Dit is ook zo verwoord in de specificaties.
+Persoonlijk heb ik mijn twijfels over de bedoeling hiervan. Volgens mij is de opgaaf aanvullend
+bedoeld, dus en/of: geselecteerd adhv het selectiecriterium en/of geselecteerd adhv de opgaaf van
+identificatienummers.
+Voorgelegd via de mail, maar <mdw Operatie BRP> is nu op vakantie en het project is vorige week
+donderdag door de Minister beëindigd.
+
+5
+
+[LOB-107] Stamtabellen in bericht zuiveren Created: 13-04-17 Updated: 10-07-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Bijlage A - Gegegevenswoordenboek, Bijlage C - Administratieve
+Component/s:
+handelingenboek
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+Attachments:
+
+Story
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+RE_ LO-BRP 1.0.pdf
+
+Description
+In het bericht Synchronisatie Stamtabel zijn stamtabellen opgenomen die wellicht geschrapt
+worden. Impact op Bijlage D - Dienstenboek maar ook op Bijalge A - Gegevenswoordenboek.
+Actie i.o.m. <MDW OPERATIE BRP> uitvoeren.
+
+Comments
+Comment by [ 10-07-17 ]
+Is aI afgerond in oplevering versie 1.0.8. Versie 1.0.9 is daarop nog aangepast. 1 openstaand
+puntje (zie mail als bijlage): stamtabel naam "Soort actie / brongebruik" moet worden "Soort
+administratieve handeling / brongebruik". Wordt pas in een volgende BMR release meegenomen,
+dus daarop wachten.
+
+6
+
+[LOB-121] Afnemers/bijhouders/geautoriseerde partijen Created: 29-06-17 Updated: 2906-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Hoofdstuk 5 - Leveren
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+In H5 is het construct afnemer/bijhouder/geautoriseerde partij nog niet goed uiteengezet en
+doorgevoerd.
+Notitie van mdw BZK over Binnengemeentelijke levering moet input geven om het construct te
+verfijnen.
+
+7
+
+[LOB-120] Slim zoeken bij datumvelden: refactoring? Created: 29-06-17 Updated: 29-06-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Hoofdstuk 5 - Leveren
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+De opties voor slim zoeken voor datumvelden is nog niet helemaal lekker ontworpen. Zie Paragraaf
+5.9.2.2.
+Voor datumvelden mag de optie "Klein" niet worden toegepast, maar wel de optie "Vanaf klein".
+Ligt bij team Rood.
+
+8
+
+[LOB-82] Attentiepunt bij Attendering m.b.t. doorgevoerde correcties Created: 13-1216 Updated: 23-06-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Hoofdstuk 4 - Bijhouden, Hoofdstuk 5 - Leveren
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+Attachments:
+
+Epic Link:
+
+Story
+
+Priority:
+Assignee:
+
+Major
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Aanvulling voor het LO voor Attendering in combinatie met
+Correctie.pdf
+Re_ gecommit_ van afnemer naar geautoriseerde
+partij.pdf
+hoofdstuk 5 - levering (aanvullende paragrafen)
+
+Description
+Zie de in de PDF opgenomen mail van <mdw Operatie BRP>.
+We moeten ergens bij Attendering opnemen, dat niet alle doorgevoerde correcties zullen leiden tot
+mutatieleveringen aan de afnemer. Dit kan of in hoofdstuk 5 (wellicht 5.10?) of in de bijlage B5
+onder de kop Correcties en Attendering.?
+
+Comments
+Comment by [ 16-06-17 ]
+In eerste instantie dacht ik aan een extra bullet-tekst bij paragraaf 5.8.3, maar volgens mij hoort
+deze tekst onderdeel te zijn van de nieuwe paragraaf 5.7.
+Zie tevens de reactie van <mdw Operatie BRP> in de bijgevoegde mail. We laten dit onderwerp
+even staan totdat we Corrigeren oppaken in het LO-BRP.
+
+9
+
+[LOB-119] Zoeken op BAG identificaties Created: 23-06-17 Updated: 23-06-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Bijlage D - Dienstenboek, Hoofdstuk 5 - Leveren
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+Attachments:
+
+Story
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+RE_ RE_ Datum afronding BAG.pdf
+
+Description
+Uit de informatie van <mdw Operatie BRP> is de datum overgang naar BAG adressen vastgesteld
+op 1-6-2012 (zie bijlage)
+Het is dus pas zinvol dat je op een BAG identificatiecode zoekt vanaf deze peildatum, anders
+bestaat de mogelijkheid dat je adressen mist die nog niet zijn overgezet naar BAG-adressen.
+Dit is verwerkt bij de dienst "Geef medebewoners van persoon" en voor het bevragen tevens
+opgenomen bij de BAG-identificatiecodes in het overzicht "elementen en opties.xlsx".
+Voor de zoekcriteria van selecties en bevragingen geldt dus ook deze waarschuwing. Nog bezien of
+en waar we deze informatie op moeten nemen (hangt ook af van de wijze waarop we de
+zoekcriteria informatie uit het overzicht "elementen en opties.xlsx" in het LO-BRP gaan verwerken).
+
+10
+
+[LOB-118] Begrippen m.b.t. historie Created: 23-06-17 Updated: 23-06-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Bijlage I - Verklarende woordenlijst, Diffuus
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+Attachments:
+
+Story
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+RE_ Historiefilter.pdf
+
+Description
+Bij het vervaardigen van de toelichting op het historiefilter zijn er vragen gerezen over de te
+hanteren begrippen.
+We moeten deze completeren en daarover volledige consensus verkrijgen (zie bijlage).
+Vervolgens moeten deze begrippen opgenomen worden in de begrippenlijst en het gehele LO-BRP
+moet worden nagelopen op het juist hanteren van deze begrippen.
+
+11
+
+[LOB-117] Teksten bij "Nadere bijhoudingsaard" aanpassen Created: 22-06-17 Updated:
+22-06-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Diffuus
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+Attachments:
+
+Story
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+RE_ Regel in LO aangaande _Gewiste gegevens__.pdf
+
+Description
+In het LO wordt hier en daar verwezen naar de "Nadere bijhoudingsaard" en dan met name naar
+de waarden "F", "W" en "?".
+Zie bijgevoegde mail. Moeten we in deze gevallen niet ook spreken in de algemene termen van
+"Een persoon mag niet worden bijgehouden als de reden van opschorting foutief is."
+Zie ook de toelichting in Bijlage A.2.9.
+
+12
+
+[LOB-56] Termen "attenderingscriterium" vs "set voorwaarden" Created: 09-0616 Updated: 20-06-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Bijlage C - Administratieve handelingenboek, Hoofdstuk 5 - Leveren
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Epic Link:
+
+Opmerkingen op opgeleverde versie 1.04
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Zie eerdere opm. H5; ‘criterium’is feitelijk ook een ‘set aan voorwaarden’. Nader bepalen of we dit
+consequent ‘set aan voorwaarden’ noemen (dan voor het bepalen van de doelgroep, dan voor het
+bepalen of er geattendeerd moet worden.
+Stelling <mdw Operatie BRP>. Bij uitleg over mechanisme introduceer je voorwaarden. Vervolgens
+in zinsconstructies:
+
+▪
+▪
+
+moet voldoen aan de doelgroep van de leveringsautorisatie
+moet voldoen aan het attenderingscriterium.
+
+Oh ja, beide zijn idd obv voorwaarden vastgelegd in de CV. technisch gezien dmv expressies.
+Opmerking (<mdw Operatie BRP>): In 5.1 wordt set genoemd. Hier zou je kunnen verwijs]zen
+naar 5.2.3, waarin de set aan voorwaarden wordt uitgelegd als attenderingscriterium, vervolgens
+zou ik bij 5.4.2 en 5.4.3 uitsluitend nog van "attenderingscriterium" spreken (daar dus de "set
+voorwaarden" vervangen)
+
+Comments
+Comment by <mdw Operatie BRP> [ 20-06-17 ]
+Dit is ook het geval bij de selectiediensten
+
+13
+
+[LOB-33] ToDo's
+Status:
+Project:
+Component/s:
+Affects
+Version/s:
+Fix Version/s:
+
+op versie 1.04 Created: 06-06-16 Updated: 15-06-17
+To Do
+Logisch Ontwerp BRP
+None
+None
+na 1.0.8
+
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Epic
+
+Priority:
+Assignee:
+
+Epic Name:
+
+Opmerkingen op opgeleverde versie 1.04
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Verschillende openstaande punten en (review-)opmerkingen op de laatst opgeleverde versie van
+het LO: versie 1.04
+
+14
+
+[LOB-65] Opstellen paragraaf 5.10.6:Levering “Onderzoek Created: 29-06-16 Updated: 1506-17
+Status:
+Review
+Project:
+Logisch Ontwerp BRP
+Component/s:
+None
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+Attachments:
+Epic Link:
+Sprint:
+
+Story
+
+Priority:
+Assignee:
+
+Major
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Concept Tekst Levering onderzoek v0.7.docx
+_onderzoek_.pdf
+hoofdstuk 5 - levering (aanvullende paragrafen)
+Sprint 2
+
+RE_ Overleg
+
+Comments
+Comment by [ 01-07-16 ]
+Concept tekst in de bijlage opgenomen inclusief de laatste mailwisseling.
+
+15
+
+[LOB-66] Opstellen paragraaf 5.7 tot stand koming van een levering in combinatie met
+bijlage X: generieke berichtafhandeling/verwerking? Created: 29-06-16 Updated: 15-06-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+None
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Epic Link:
+
+hoofdstuk 5 - levering (aanvullende paragrafen)
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+16
+
+Oneffenheden bij oplevering LO-BRP 1.0.7. (LOB-88)
+[LOB-91] Gegevenselement "Persoon.Autoriteit van afgifte" Created: 27-0317 Updated: 15-06-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Bijlage A - Gegegevenswoordenboek, Diffuus
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+Attachments:
+
+Sub-task
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Re_ Tabellen.pdf
+
+Vraag over stamtabel.docx
+
+Description
+Tijdens de controle van tabel "Autoriteittype van afgifte reisdocument" bleek dat de Code maximaal
+2 karakters alfanumeriek betreft. Deze code is echter slechts een onderdeel van het in de database
+opgenomen gegevenselement Autoriteit van afgifte reisdocument code. Deze is namelijk minimaal
+2 en maximaal 6 alfanumerieke tekens lang en wordt uit twee delen opgebouwd.
+Vooralsnog de tabelcode zo gelaten en geen opmerkingen erbij geplaatst.
+Zie voor meer informatie de twee opgenomen bijlagen.
+
+17
+
+[LOB-103] Indeling Algemeen Bijlage D uitlijnen op Deel I van Bijlage C Created: 13-0417 Updated: 15-06-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Bijlage C - Administratieve handelingenboek
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Major
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Bijlage C - Administratieve handelingenboek kent een deel 1 en een deel 2. Deel 1 geeft algemene
+zaken over invoer, verwerking en uitvoer.
+Bijlage D - Dienstboek is nog van de oude stempel, er zijn veel zaken beschreven die al in Bijlage B
+staan. Bovendien is de indeling van het algemene deel nog niet in lijn met die van het modernere
+Bijlage C.
+
+18
+
+[LOB-46] Bevraging functionaliteit uitwerken Created: 09-06-16 Updated: 15-06-17
+Status:
+In Progress
+Project:
+Logisch Ontwerp BRP
+Component/s:
+None
+Affects
+None
+Version/s:
+Fix Version/s:
+1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Epic
+
+Epic Name:
+
+Bevraging
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Dit Epic geeft aan welke stories gerealiseerd moeten worden om Bevraging uit te werken in het
+Logisch Ontwerp BRP.
+
+19
+
+Issues review Bijhouding / HGP oplossen (LOB-81)
+[LOB-87] XSD
+Status:
+Project:
+Component/s:
+Affects
+Version/s:
+Fix Version/s:
+
+validaties Created: 27-03-17 Updated: 08-06-17
+To Do
+Logisch Ontwerp BRP
+Bijlage A - Gegegevenswoordenboek, Diffuus
+
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Sub-task
+
+Attachments:
+Issue Links:
+
+None
+na 1.0.8
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+xsd controles.pdf
+Related
+Is related to LOB-88 Oneffenheden bij oplevering LO-BRP 1....
+
+To Do
+
+Description
+Na vaststelling van de gegevensset op 13 maart 2017 voor oplevering van het LO-BRP 1.0.7, zijn
+een aantal gegevensregels voorzien van het kenmerk "Validatie via XSD / afleiding". Deze zijn dus
+nog als gegevensregels in bijlage A en F opgenomen.
+Het betreft (momentopname) de volgende regels:
+R1569: moet weg bij A.2.6 en uit bijlage F
+R1674: moet weg bij A.2.4 en uit bijlage F
+R1675: moet weg bij A.2.4 en uit bijlage F
+R1681: moet weg bij A.2.13 en uit bijlage F
+R2156: moet weg bij A.2.12 en uit bijlage F
+R2157: moet weg bij A.2.12 en uit bijlage F
+R2158: moet weg bij A.2.13 en uit bijlage F
+R2159: moet weg bij A.2.13 en uit bijlage F
+Verder uiteraard de vraag of en hoe we de XSD-controles op gaan nemen in het LO-BRP.
+
+20
+
+[LOB-101] XSD-validatieregels opnemen of niet Created: 13-04-17 Updated: 08-06-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Diffuus
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Epic Link:
+
+Terminologie aandachtspunten LO BRP
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Known issue uit de interne review november 2016 op H4 Bijhouding / HGP:
+
+•
+
+XSD-validatieregels opnemen in LO of niet, volledigheid? (Ron)
+
+21
+
+[LOB-110] Opnemen XSD controles in LO Created: 11-05-17 Updated: 11-05-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Bijlage A - Gegegevenswoordenboek, Bijlage B - Berichtafhandeling, Bijlage C Component/s:
+Administratieve handelingenboek, Bijlage D - Dienstenboek, Bijlage F Controleregels
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Issue Links:
+
+Duplicate
+Duplicated
+by
+Duplicated
+by
+Duplicated
+by
+Duplicated
+by
+Duplicated
+by
+Duplicated
+by
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+LOB112
+LOB111
+LOB113
+LOB114
+LOB115
+LOB116
+
+Meenemen XSD in doorontwikkeling Bijl...
+
+Done
+
+To
+Do
+Check aandachtspunten mail <MDW OPERATIE BRP> To
+over XS...
+Do
+To
+Check Marco: XSD-controles compleet e...
+Do
+To
+Genereren overzicht XSD-controles bij...
+Do
+To
+LO-waardig maken definities en titels...
+Do
+Voorstel wijziging leeswijzer Bijlage...
+
+Description
+Collega's,
+Even per mail de afspraken over hoe we XSD-controles willen opnemen in het LO BRP.
+<mdw Operatie BRP> heeft een (zijn) classificatie gemaakt van de soorten XSD-controles, aan de
+hand daarvan de methode van beschrijven in LO.
+Let op: de XSD zelf wordt gegenereerd uit BMR, we mogen dan verwachten dat de controleregels
+die in BMR zijn gemarkeerd met verschijningsvorm "XSD/Afl." ook in te techniek zijn
+geïmplementeerd. M.a.w. een export van BMR zou een actueel en volledig overzicht van alle
+werkende XSD-controles (per bericht) moeten opleveren. (ACTIE: check bij <mdw Operatie BRP>)
+Verplichte gegevens
+Voor een deel van de soorten XSD-controles hoeven we niet veel te doen: dit zijn controles op het
+verplicht zijn van elementen en berichtdelen. Dit is in berichten in Bijlage C en D aangegeven met
+underlines en kardinaliteit. De relatie met controles op deze verplichte elementen kunnen we
+beschrijven bij de leeswijzers van Bijlage C en D.
+Bepaalde waarden, type, minimale/maximale lengte
+In Bijlage A is per element - indien van toepassing - aangeven wat het waardebereik is. Als dit van
+toepassing is, dan gelden daarvoor XSD-controles.
+Ook is in Bijlage A per element opgenomen wat het type gegeven is en wat de minimale/maximale
+lengte is. Deze zaken worden ook afgevangen door de XSD.
+Let op: * controle op voorkomen in dynamische stamtabellen wordt afgevangen in controleregels
+en niet door XSD.
+
+•
+
+aandachtspunten <MDW OPERATIE BRP> in mail over XSD-controles
+
+Dit kunnen we generiek toelichten in de leeswijzer van Bijlage A.
+
+22
+
+Bepaalde formaten
+Beschrijving van sommige formaten doen we niet helemaal uniform in het LO. Soms alleen Bijlage
+A, soms ook een toelichting in H7 of H8. OP die complexere formaten zijn ook XSD-controles van
+toepassing.
+Voorstel is om de XSD-controles hiervoor op te nemen in Bijlage A, de vraag is even hoe: * bij elk
+element dat dat format heeft (mindere optie)
+
+•
+•
+
+generiek bij de leeswijzer, per formaat (betere optie)
+
+Specifieke XSD-validaties per AH of Dienst
+Naast bovengenoemde XSD-validaties zijn er ook validaties die alleen gelden voor een specifieke
+(groep) handelingen of diensten.
+Voorstel is om deze als apart kopje op te nemen bij VERWERKING per AH en dienst, op dezelfde
+manier als bij de controleregels.
+Vraag: opname van de groen gemarkeerde XSD-validaties in een bijlage zoals Bijlage F lijkt op
+zijn plaats. Nieuwe bijlage of als part groepje in Bijlage F?
+Vanuit perspectief LO bezien: naast dit alles hebben we Bijlage B, stap 1 XSD-controles. Voorstel is
+om daar uit te leggen hoe de verschillende XSD-controles zijn opgenomen in het LO.
+Vervolgstappen
+1.
+2.
+3.
+4.
+5.
+
+Voorstel wijziging leeswijzer Bijlage A, C en D
+Meenemen XSD in doorontwikkeling Bijlage B
+Check aandachtspunten mail <MDW OPERATIE BRP> over XSD-controles
+Check Marco compleet en actueel in BMR
+Genereren overzicht XSD-controles bij 3 specifieke berichten bij AH's bij wijze van proef (1
+HGP, 1 correctieHGP, 1 V&A): inzicht in omvang, afstemming haalbaarheid
+6. LO-waardig maken definities en titels XSD-controles voor opname in (aparte) Bijlage.
+
+Ik zal e.e.a. opnemen als LOB, heeft nog geen super-prio.
+Eerste 2 vervolgstappen kunnen snel, ik zal dat alvast oppakken.
+Met vriendelijke groet
+
+LO-specialist, Team LO BRP
+
+23
+
+[LOB-111] Voorstel wijziging leeswijzer Bijlage A, C en D tbv XSD controles Created: 1105-17 Updated: 11-05-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+None
+Affects
+None
+Version/s:
+Fix Version/s:
+None
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Task
+
+Issue Links:
+
+Duplicate
+Duplicate
+
+Priority:
+Assignee:
+
+Major
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+LOB-110
+
+Opnemen XSD controles in LO
+
+To Do
+
+24
+
+[LOB-116] LO-waardig maken definities en titels XSD-controles voor opname in (aparte)
+Bijlage. Created: 11-05-17 Updated: 11-05-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+None
+Affects
+None
+Version/s:
+Fix Version/s:
+None
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Task
+
+Issue Links:
+
+Duplicate
+Duplicate
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+LOB-110
+
+Opnemen XSD controles in LO
+
+To Do
+
+25
+
+[LOB-115] Genereren overzicht XSD-controles bij 3 specifieke berichten & afstemmen
+Created: 11-05-17 Updated: 11-05-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+None
+Affects
+None
+Version/s:
+Fix Version/s:
+None
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Task
+
+Issue Links:
+
+Duplicate
+Duplicate
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+LOB-110
+
+Opnemen XSD controles in LO
+
+To Do
+
+Description
+Genereren overzicht XSD-controles bij 3 specifieke berichten bij AH's bij wijze van proef (1 HGP, 1
+correctieHGP, 1 V&A): inzicht in omvang, afstemming haalbaarheid
+
+26
+
+[LOB-114] Check Marco: XSD-controles compleet en actueel in BMR Created: 11-0517 Updated: 11-05-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+None
+Affects
+None
+Version/s:
+Fix Version/s:
+None
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Task
+
+Issue Links:
+
+Duplicate
+Duplicate
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+LOB-110
+
+Opnemen XSD controles in LO
+
+To Do
+
+27
+
+[LOB-113] Check
+Created: 11-05-17
+Status:
+Project:
+Component/s:
+Affects
+Version/s:
+Fix Version/s:
+
+aandachtspunten mail <MDW OPERATIE BRP> over XSD-controles
+Updated: 11-05-17
+To Do
+Logisch Ontwerp BRP
+None
+
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Task
+
+Issue Links:
+
+Duplicate
+Duplicate
+
+None
+None
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+LOB-110
+
+Opnemen XSD controles in LO
+
+To Do
+
+28
+
+[LOB-48] Nieuwe ordening van bedrijfsregels doorvoeren Created: 09-06-16 Updated: 1304-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Bijlage C - Administratieve handelingenboek, Bijlage F - Controleregels
+Affects
+None
+Version/s:
+Fix Version/s:
+None
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Epic Link:
+
+Opmerkingen op opgeleverde versie 1.04
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Er is een nieuwe regelindeling op Bijhouding en Algemeen van toepassing: invoervalidatieregel,
+autorisatieregel, controleregel, verwerkingsregel, integriteitsregel, gegevensvalidatieregel en
+resultaatvalidatieregel.
+Besloten is om deze nieuwe indeling niet door te voeren op de regels van Levering. Dus vooralsnog
+geen consequenties voor de regels t.b.v. Levering.
+In bijlage B extra aandacht aan de indeling van de regels naar : Gegevensregels in het
+Gegevenswoordenboek, Controleregels, Verwerkingsregels en Definitieregels. Vraag is ook welke
+regels we opnemen (veel verwerkingsregels zullen als tekst worden opgenomen en niet als regel)
+
+29
+
+[LOB-97] Gehele LO BRP kent concepten die wellicht aanscherping behoeven Created: 1304-17 Updated: 13-04-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Diffuus
+Affects
+None
+Version/s:
+Fix Version/s:
+1.1
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Epic
+
+Priority:
+Assignee:
+
+Epic Name:
+
+Terminologie aandachtspunten LO BRP
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+30
+
+[LOB-108] Actualiseren, corrigeren en verwijderen Created: 13-04-17 Updated: 13-04-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Diffuus
+Affects
+None
+Version/s:
+Fix Version/s:
+1.1
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Epic Link:
+
+Terminologie aandachtspunten LO BRP
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Nieuw, wijzigingen en verwijderen van gegevens daar waar nodig consequent vervangen door
+'actualiseren / corrigeren en verwijderen'
+
+31
+
+[LOB-105] 8.3.4
+Status:
+Project:
+Component/s:
+Affects
+Version/s:
+Fix Version/s:
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Berichtdelen naar nieuwe structuur Created: 13-04-17 Updated: 13-04-17
+To Do
+Logisch Ontwerp BRP
+Hoofdstuk 8 - Berichtstructuur
+None
+1.1
+Story
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Par 8.3.4 omgooien tot nieuwe structuur
+
+32
+
+[LOB-102] Controleregels aanscherpen Created: 13-04-17 Updated: 13-04-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Bijlage F - Controleregels
+Affects
+None
+Version/s:
+Fix Version/s:
+1.1
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Epic Link:
+
+Terminologie aandachtspunten LO BRP
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Verbeteren LO-definities, titels en meldingsteksten (ontkennend/voorschrijvend) in Controleregels.
+Uniformeren taalgebruik en stijl.
+
+33
+
+[LOB-100] Bijhouder/indiener/bijhoudingsorgaan Created: 13-04-17 Updated: 13-04-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Hoofdstuk 4 - Bijhouden
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Epic Link:
+
+Terminologie aandachtspunten LO BRP
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Known issues uit de interne review november 2016 op H4 Bijhouding / HGP:
+
+•
+
+terminologie bijhouder/indiener/bijhoudingsorgaan etc. (<mdw Operatie BRP>)
+
+34
+
+[LOB-99] terminologie bijhoudingsverzoek/voorstel/prevalidatie Created: 13-0417 Updated: 13-04-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Hoofdstuk 4 - Bijhouden
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Epic Link:
+
+Terminologie aandachtspunten LO BRP
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Known issue uit de interne review november 2016 op H4 Bijhouding / HGP:
+
+•
+
+terminologie bijhoudingsverzoek/voorstel/prevalidatie (<mdw Operatie BRP>)
+
+35
+
+[LOB-98] Technische sleutels Created: 13-04-17 Updated: 13-04-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Diffuus
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Epic Link:
+
+Terminologie aandachtspunten LO BRP
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Known issue uit de interne review november 2016 op H4 Bijhouding / HGP:
+Term "technische sleutels" vervangen door kunstmatige sleutel o.i.d. (<mdw Operatie BRP>)
+
+36
+
+[LOB-92] Verbetering documentatie rondom Adresgegevens Created: 27-03-17 Updated:
+13-04-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Diffuus, Hoofdstuk 7 - Gegegevensstructuur
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+In paragraaf 7.4.8.1 "Vastlegging adresgegevens" is een tabel opgenomen, die aangeeft welke
+combinaties van gegevens toegestaan is bij de verschillende adres voorkomens.
+Daarin is opgenomen dat "Gemeentedeel" optioneel is. Dit gegeven wordt echter in de BRP niet
+bijgehouden (wel gebruikt om te tonen). Moet daar niet een voetnoot aan worden gewijd?
+In de tabel worden de Nederlandse adressen geduid als BAG - combinatie 1 en Niet-BAG
+combinatie 2 en combinatie 3.
+In de regels en Use Case teksten wordt voor de Nederlandse adressen gesproken over:
+
+•
+•
+•
+
+BAG adressen (naam openbare ruimte verplicht) = combinatie 1
+Niet-BAG adres met openbare ruimte (geen naam openbare ruimte en geen
+locatieomschrijving) = combinatie 2
+Niet-BAG adres met locatieomschrijving (locatieomschrijving verplicht) = combinatie 3
+
+Wellicht handig om deze naamgeving over te nemen in plaats van de combinaties 1 t/m 3. Dan
+tevens nagaan of we deze naamgeving nog elders moeten gebruiken in het LO.
+
+37
+
+[LOB-88] Oneffenheden bij oplevering LO-BRP 1.0.7. Created: 27-03-17 Updated: 13-04-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Diffuus
+Affects
+None
+Version/s:
+Fix Version/s:
+1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Σ Remaining
+Estimate:
+Σ Time Spent:
+Σ Original
+Estimate:
+
+Story
+
+Issue Links:
+
+Related
+Related
+Key
+
+Sub-Tasks:
+
+Unresolved
+LO-BRP
+Not Specified
+Not Specified
+Not Specified
+
+LOB-89
+LOB-90
+LOB-91
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Not Specified
+
+LOB-87
+Summary
+Kalenderdatum
+controle op
+gegevensele...
+BZVU ten onrechte
+opgenomen in
+berichten
+Gegevenselement
+"Persoon.Autoriteit
+v...
+
+Not Specified
+Not Specified
+
+XSD validaties
+Type
+Status
+Sub-task
+
+Done
+
+Sub-task
+
+Done
+
+Sub-task
+
+To Do
+
+To Do
+Assignee
+
+Description
+Uitgangspunt voor de oplevering van LO-BRP is de BMR op 13 maart 2017. Op basis van deze
+stand zijn alle berichten en regels opgenomen in het LO-BRP.
+Er zijn daarin een aantal onvolkomenheden geconstateerd, maar nog niet opgelost voor oplevering.
+Tevens zijn er na 13 maart nog wijzigingen doorgevoerd in regels.
+In de onderliggende subtasks zijn deze uitdagingen opgenomen.
+
+38
+
+[LOB-85] Nieuwe waarde Nadere bijhoudingsaard "W" (gewist) Created: 13-0317 Updated: 13-04-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Hoofdstuk 4 - Bijhouden
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+Attachments:
+Epic Link:
+
+Story
+<mdw Operatie BRP>
+Unresolved
+Corrigeren
+Not Specified
+
+Priority:
+Assignee:
+
+Major
+<mdw Operatie BRP>
+
+Not Specified
+Not Specified
+
+R1580.docx
+R1580.docx
+Hoofdstuk 4 - bijhouden
+
+Description
+Een tijdje geleden kwam <mdw Operatie BRP> langs om te zeggen dat er een nieuwe waarde was
+toegevoegd aan Nadere bijhoudingsaard.
+Het betreft de waarde "W" (Gewist). Maar Team Wit heeft daar een opmerking bij geplaatst dat
+deze waarde geen onderdeel zal zijn van het LO-BRP. Hoe moeten we daar mee omgaan?
+Voor mij valt of staat dit met hoe we het onderwerp 'verwijderen' gaan oppakken. Ik begrijp dat in
+het LO BRP niet verteld moet worden 'hoe' we het verwijderen hebben georganiseerd. Als dat de
+lijn is dan zouden we het weg kunnen laten, maar aangezien deze waarde ook in berichten voor
+kan komen ben ik voorstander voor transparantie en dan ook vertellen hoe het echt werkt.
+Ik zou het voorlopig maar even zo laten, totdat we dit onderwerp oppakken in het LO. Dmv een
+voetnoot aangeven dat dit onderwerp nog nader uitgewerkt dient te worden.
+
+39
+
+[LOB-83] Leveren n.a.v. verschillende fiattering-scenario's beschrijven Created: 09-0217 Updated: 13-04-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Hoofdstuk 5 - Leveren
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+Leveren
+Not Specified
+Not Specified
+Not Specified
+
+Description
+
+<Reviewer> tijdens review H4, H/GP:
+Voor afnemers is het van belang tot in detail te weten hoe het berichtenverkeer richting afnemer
+werkt in verschillende fiatterings- situaties.
+Indien nog niet gebeurd, dit ook in LO beschrijven.
+
+40
+
+[LOB-75] Naamgeving stamtabellen uniformeren Created: 04-08-16 Updated: 13-04-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Diffuus
+Affects
+None
+Version/s:
+Fix Version/s:
+1.1
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Bug
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Door het gehele LO verwijzen we naar de soorten tabellen: tabellen uit de GBA (bijv.
+voorvoegseltabel), de BAG (bijv. woonplaatsentabel) en eigen stamtabellen.
+Daar waar we naar eigen tabellen verwijzen, bestaat nog niet een goede naamgevingsconventie.
+Zo gebruiken we in het LO de term "elementtabel", "stamtabel Land/Gebied", "stamtabel
+land/gebied", "stamtabel Plaats" maar in berichten weer "bijhoudingsresultaat tabel".
+Even los van de verwijzing naar GBA of BAG-tabellen (suggestie en dat doen we al: letterlijk
+overnemen) dienen we de verwijzing naar eigens tabellen te uniformeren.
+Mogelijkheden:
+
+▪
+▪
+▪
+▪
+
+stamtabel Plaats
+tabel Plaats
+plaats tabel
+niet: plaatstabel (want dat is de conventie van GBA en BAG: schept verwarring als 2 zelfde
+tabellen met andere oorsprong moeten worden aangeduid)
+
+41
+
+[LOB-57] Betere
+17
+Status:
+Project:
+Component/s:
+Affects
+Version/s:
+Fix Version/s:
+
+term voor "niet sluitende doelgroep" Created: 09-06-16 Updated: 13-04To Do
+Logisch Ontwerp BRP
+Hoofdstuk 5 - Leveren
+None
+na 1.0.8
+
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Epic Link:
+
+Opmerkingen op opgeleverde versie 1.04
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Niet sluitende doelgroep irt het plaatsen afnemerindicaties heeft wat tegenstrijdigs in zich. Vraag:
+moeten we hier wat mee?
+Paragraaf 5.8.2 Volgen van personen op basis van een afnemerindicatie
+In gevallen waarbij er sprake is van een niet-sluitend vastgelegde doelgroep van de
+leveringsautorisatie (zie paragraaf 5.4.3), moet de afnemer handmatig een afnemerindicatie
+plaatsen bij de te volgen personen.
+opmerking <MDW OPERATIE BRP>K (ToDo):
+Mmm … waarmee de doelgroep juist zeer sluitend is vastgelegd’. Is de term nu ‘sluitend
+vastgelegd’ of ‘sluitend afleidbaar’
+
+42
+
+[LOB-55] Positionering van "Leveringsautorisatie" in teksthiërarchie Created: 09-0616 Updated: 13-04-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Hoofdstuk 4 - Bijhouden, Hoofdstuk 5 - Leveren
+Affects
+None
+Version/s:
+Fix Version/s:
+1.1
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Epic Link:
+
+Opmerkingen op opgeleverde versie 1.04
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Vraag: moeten we leveringsautorisatie een nog prominentere plek geven in het LO BRP?
+Nu is het een paragraaf dat valt onder autorisatiemodel en zit qua hierarchie op kop3. De overige
+concepten: zoals dienstautorisatie, gegevensautorisatie staan qua hierarchie op kop2.
+Is dat logisch voor de lezer?
+Opmerking (ES): volgens mij wel het juiste niveau, maar er moet ook nog iets gedaan worden met
+"Toegang bijhoudingsautorisatie". Dat is voor de Bijhouders, wat "Leveringsautorisatie" is voor de
+afnemers. Wellicht moet 5.3 dan naar een algeme(e)n(er) niveau getild worden?!
+
+43
+
+[LOB-53] Gebruik temen "Verstrekken" vs "Leveren" Created: 09-06-16 Updated: 13-04-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Bijlage C - Administratieve handelingenboek, Hoofdstuk 5 - Leveren
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Epic Link:
+
+Opmerkingen op opgeleverde versie 1.04
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Voor het eerst ook het gebruik van woord ‘Verstrekking’ … juridisch de goede term, maar hiervoor
+steeds vermeden en ‘leveren/levering’ gebruikt.
+Duidelijkere lijn trekken in LO BRP voor gebruik verstrekken vs. leveren. Stelregel LO team. H1 H3 = verstrekken, daarna = leveren in de context van de CV.
+Resultaten naar WIKI wegschrijven
+
+44
+
+[LOB-52] Mapping van autorisatiebesluit naar diensten opnemen Created: 09-0616 Updated: 13-04-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Hoofdstuk 5 - Leveren
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+Attachments:
+
+Epic Link:
+
+Story
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+20151119 Totaal besparingen BuitenScope-Vrieskist-Schrappen.xlsx
+Systematische gegevensverstrekking Wet en Diensten.docx
+Systematische gegevensverstrekking Wetgeving _ Diensten BRP.pdf
+Opmerkingen op opgeleverde versie 1.04
+
+Description
+Toevoegen paragraaf met de mapping van WetBRP (autorisatiebesluit) naar diensten (inrichting
+Centrale voorzieningen).
+Zie voorstel van <mdw Operatie BRP> in de toegvoegde bijlagen.
+
+45
+
+[LOB-62] alle stories and subtasks mbt hoofdstuk 4 leveren worden hier gebundeld
+Created: 29-06-16 Updated: 13-03-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+None
+Affects
+None
+Version/s:
+Fix Version/s:
+None
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Epic
+
+Epic Name:
+
+Hoofdstuk 4 - bijhouden
+
+Priority:
+Assignee:
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+46
+
+[LOB-64] alle stories and subtasks mbt hoofdstuk 5 leveren worden hier gebundeld
+Created: 29-06-16 Updated: 13-12-16
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+None
+Affects
+None
+Version/s:
+Fix Version/s:
+None
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Epic
+
+Priority:
+Assignee:
+
+Epic Name:
+
+hoofdstuk 5 - levering (aanvullende paragrafen)
+
+Major
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+47
+
+[LOB-84] Vervang symbool voor H/GP in afbeeldingen Created: 16-02-17 Updated: 13-0417
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Diffuus
+Affects
+None
+Version/s:
+Fix Version/s:
+1.1
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Minor
+Unassigned
+
+Unresolved
+Reviewcommentaar
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Gebruikte symbool is nu een mannetje en een vrouwtje. Dit is niet in lijn met deze moderne tijd:
+geslachtsonafhankelijk aangeven (vergl. vader en moeder -> ouders)
+
+48
+
+[LOB-73] Gegevensgroep Opschorting in figuur 8 verwijderen Created: 26-07-16 Updated:
+13-04-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Hoofdstuk 5 - Leveren
+Affects
+None
+Version/s:
+Fix Version/s:
+na 1.0.8
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Minor
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+Plaat vervangen dor de actuele plaat in H7.
+
+49
+
+[LOB-39] Gehele LO: symbolen betrokkenheid geslachtsonafhankelijk maken Created: 0606-16 Updated: 13-04-17
+Status:
+To Do
+Project:
+Logisch Ontwerp BRP
+Component/s:
+Diffuus
+Affects
+None
+Version/s:
+Fix Version/s:
+1.1
+Type:
+Reporter:
+Resolution:
+Labels:
+Remaining
+Estimate:
+Time Spent:
+Original
+Estimate:
+
+Story
+
+Priority:
+Assignee:
+
+Minor
+Unassigned
+
+Unresolved
+None
+Not Specified
+Not Specified
+Not Specified
+
+Description
+De symbolen voor "betrokkenheid" in afbeeldingen door gehele LO zijn soms geslachtsafhankelijk:
+een hoed en een sluier. (zie voorbeeld paragraaf Soorten Persoon). Deze symbolen vervangen door
+een geslachtsonafhankelijk symbool voor HGP.
+
+Generated at Thu Jul 20 11:52:35 CEST 2017 by using JIRA 7.3.7#73018sha1:17f7a2e4314e5442e36799ac64ba66469353a4b7.
+
+50
+
+

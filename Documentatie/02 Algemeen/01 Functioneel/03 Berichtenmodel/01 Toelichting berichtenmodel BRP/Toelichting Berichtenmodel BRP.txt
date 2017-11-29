@@ -1,0 +1,693 @@
+KING
+
+Operatie BRP
+Toelichting Berichtenmodel
+BRP versie 1.0
+
+Operatie BRP
+14 juli 2017
+
+Leeswijzer …
+Deze toelichting bevat de onderwerpen die nog niet eerder
+beschreven zijn en nog opgenomen moeten worden in de Bijlage
+Berichtenmodel van het Architectuurdocument BRP.
+Andere belangrijke bron voor het afronden van deze in het
+Architectuurdocument BRP is het Logisch Ontwerp BRP (zowel de
+officiële publicatieversie v1.08 als de werk-versie v1.09); zie
+hiervoor hoofdstuk 8 ‘Berichtstructuur’, hoofdstuk 10 ‘Toegang en
+beveiliging’ en de bijlagen B, C, D en E).
+Tijdens de uitvoering van het project is bewust de keuze gemaakt
+om betreffende onderwerpen eerst in presentatievorm en in het LO
+BRP op te nemen om deze later te verwerken in de beoogde bijlage
+van het Architectuurdocument.
+2
+
+Toelichting Berichtenmodel BRP
+
+Inhoud …
+•
+•
+•
+•
+•
+
+3
+
+Toepassing eOverheid-standaarden …
+Van BRP-model naar BRP-berichten …
+XSD-structuur Berichtenmodel BRP …
+Berichtconcepten en -kenmerken …
+Webservices BRP …
+
+Toelichting Berichtenmodel BRP
+
+Toepassing eOverheidstandaarden …
+
+4
+
+Toelichting Berichtenmodel BRP
+
+Toepassing eOverheidstandaarden …
+
+5
+
+Standaard
+
+Toepassen
+
+Opmerking
+
+DigiNetwerk
+
+Ja
+
+DigiKoppeling 2.0 - WUS
+
+Ja
+
+1) Voor Bevragingen en Bijhoudingen
+volgens DigiKoppeling Bevragingpatroon. Afgestemd met Logius en OK
+vanwege sluitende controle-maatregelen
+(geldigheid Objectsleutel).
+2) Realisatie volgt nog; hetzij op het niveau
+van de Servicebus (RvIG/DICTU), hetzij
+binnen applicatie.
+
+DigiKoppeling 2.0 - eBMS
+
+Ja
+
+Realisatie volgt nog; op het niveau van de
+Servicebus (RvIG/DICTU).
+
+Toelichting Berichtenmodel BRP
+
+Toepassing eOverheidstandaarden …
+Standaard
+
+6
+
+Toepassen
+
+Opmerking
+
+DigiKoppeling 2.0 - GB
+
+Nee
+
+De GroteBerichten-standaard wordt (nog)
+niet gevolgd. In plaats hiervan via sFTP.
+Dit is een bewuste keuze van RvIG, omdat zij
+gedurende de duale periode ook sFTP zullen
+gebruiken t.b.v. GBA-afnemers.
+
+DigiLevering
+
+Nee
+
+1) Prestatie-eisen niet afdoende
+2) Functioneel niet rijk genoeg voor gebruik
+door BRP.
+
+StUF BG
+
+Deels
+
+1) Alleen voor Mutatie- en Volledigberichten binnen het koppelvlak Levering
+2) Via centrale vertaalvoorziening; deze
+door gemeente/afnemer aan te roepen
+met dienst ‘Geef StUF BG bericht’.
+
+Toelichting Berichtenmodel BRP
+
+Afspraken StUF-harmonisatie oBRP – VNG (2013) …
+1. Operatie BRP hanteert BRPXML …
+
+2. Voor mutatie- en vulberichten wordt een vertaalvoorziening BRPXML 
+StUF BG (0310) gerealiseerd …
+3. De vertaalvoorziening wordt centraal gepositioneerd en is gebaseerd
+op de variant ‘SynchroneVertaalService’
+4. Voor de vertaalvoorziening wordt een nieuwe (synchrone) dienst
+gerealiseerd ‘Geef StUF BG bericht’. Deze dienst roept een StUF BGVertaalcomponent aan die door derden wordt gerealiseerd
+5. Operatie BRP levert een bijdrage aan volgende versie
+StUF-standaard en Logius-initiatief GAB - Gemeenschappelijke
+Afspraken Berichten; dit voor zover de planning oBRP dit
+toe laat …
+7
+
+Toelichting Berichtenmodel BRP
+
+Van BRP-model naar BRP-berichten …
+
+8
+
+Toelichting Berichtenmodel BRP
+
+9
+
+Toelichting Berichtenmodel BRP
+
+Van BRP-model naar Berichten
+Ingrediënten …
+• BRP-model onderscheidt t.b.v. Berichtenmodel:
+• Objecttypen, Groepen en Attributen Persoonsgegevens
+• Objecttypen, Groepen en Attributen Berichtgegevens (oa. Berichten, Adm.Handelingen, Acties)
+• Orthogonale aspecten als historie, verantwoording en onderzoek
+
+• Vanuit BRP-model generatie basislaag Berichtenmodel BRP:
+• Attribuuttypen.xsd; attribuut-definities in Berichtmodel
+• Objecttypen.xsd; object-definities in Berichtenmodel
+
+• Voor verdere uitwerking Berichtenmodel in basislagen de toevoeging van:
+• Metagegevens t.b.v. specifieke kenmerken Objecten/Groepen
+• Generieke Structuren t.b.v. gemeenschappelijke definities Objecten/Groepen
+• Containers t.b.v. bundeling meerdere voorkomens van Objecten
+
+• Voor verdere opbouw Berichtenmodel BRP in lagen zie ook Slide 13
+10
+
+Toelichting Berichtenmodel BRP
+
+Van BRP-model naar Berichten
+Metagegevens …
+• Metagegevens  XML-attributes (voor betekenis zie LO BRP par. 8.3.1.5):
+1.
+2.
+3.
+4.
+5.
+6.
+
+Objecttype
+Verwerkingssoort
+Objectsleutel
+Voorkomensleutel
+CommunicatieID
+ReferentieID
+
+• Metagegevens  Verantwoording/Historie betekenis zie LO BRP par. 3.3 e.v.):
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+11
+
+Tijdstip registratie
+Actie inhoud
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Datum aanvang geldigheid
+Datum einde geldigheid
+Actie aanpassing geldigheid
+Toelichting Berichtenmodel BRP
+
+Van BRP-model naar Berichten
+Generieke structuren …
+Volgende Generieke structuren worden in berichtenmodel onderkend:
+• ‘Structuur’;
+Basisstructuur ten behoeve van Containers; bevat geen metagevens
+
+• ‘StructuurIdentificeerbaar’;
+Basisstructuur ten behoeve van Objecttypen en Gegevensgroepen; is een
+extensie op ‘Structuur’ en bevat de metagegevens (1), (2), (3), (4), (5) en (6).
+• ‘StructuurFormeleHistorie’;
+Basisstructuur ten behoeve van Objecttypen en Gegevensgroepen; is een
+extensie op ‘StructuurIdentificeerbaar’ en bevat de extra metagegevens (7), (8),
+(9), (10) en (11).
+• ‘StructuurMaterieleHistorie’;
+Basisstructuur ten behoeve van Objecttypen en Gegevensgroepen; is een
+extensie op ‘StructuurFormeleHistorie’ en bevat de extra metagegevens (12),
+(13) en (14).
+12
+
+Toelichting Berichtenmodel BRP
+
+XSD-structuur Berichtenmodel BRP …
+
+13
+
+Toelichting Berichtenmodel BRP
+
+Van BRP-model naar Berichten
+Lagenstructuur …
+• Vanuit model gegeneerde basislagen Berichtenmodel BRP:
+• Attribuuttypen.xsd; attribuut-definities in Berichtmodel
+• Objecttypen.xsd; object-definities in Berichtenmodel
+
+• Basis-lagen over verschillende koppelvlakken heen:
+• BRP_Basis; herbruikbare elementen over verschillende koppelvlakken
+• Bijhouding_Basis; herbruikbare elementen koppelvlakken Bijhouding en Migratievoorzieningen
+• Levering_Basis; herbruikbare elementen koppelvlakken Bevraging en Synchronisatie
+
+• Lagen per module Administratieve handelingen/Diensten:
+• <module>_Basis; herbruikbare elementen binnen dezelfde module
+• <module>_Berichten; specifieke berichtdefinities per administratieve handeling/dienst
+
+14
+
+Toelichting Berichtenmodel BRP
+
+BRP-Koppelvlak Bijhouding (1) …
+
+_Basis
+
+_Berichten
+
+_Basis
+
+bijhouding.wsdl
+
+bhgNationaliteit
+
+_Basis
+
+_Berichten
+
+bijhouding.wsdl
+
+bhgVerblijfAdres
+
+_Basis
+
+_Berichten
+
+bijhouding.wsdl
+
+bhgHuwelijkGeregi…
+
+_Basis
+
+_Berichten
+
+bijhouding.wsdl
+
+bhgDocumentVerz…
+
+_Berichten
+
+bijhouding.wsdl
+
+bhgNaamGeslacht
+
+bhgAfstamming
+
+bijhouding.wsdl
+
+_Berichten
+
+_Basis
+
+Bijhouding
+brp0200_brpBijhouding_Basis
+
+Basis
+brp0200_brpBasis
+brp0200_brpObjecttypen
+brp0200_brpAttribuuttypen
+
+Berichtenmodel BRPXML 2.0 …
+15
+
+Berichtenmodel BRP | 14 juli 2017
+
+BRP-Koppelvlak Bijhouding (2) …
+
+_Basis
+
+bijhouding.wsdl
+
+bijhouding.wsdl
+
+_Berichten
+
+_Berichten
+
+_Basis
+
+_Basis
+
+…
+
+_Basis
+
+_Berichten
+
+bhgVerkiezingen
+
+_Basis
+
+_Berichten
+
+bijhouding.wsdl
+
+bhgOnderzoek
+
+_Basis
+
+_Berichten
+
+bijhouding.wsdl
+
+bhgBijzondereBijh…
+
+_Berichten
+
+bijhouding.wsdl
+
+bhgOverlijden
+
+bhgReisdocument
+
+bijhouding.wsdl
+
+Bijhouding
+brp0200_brpBijhouding_Basis
+
+Basis
+brp0200_brpBasis
+brp0200_brpObjecttypen
+brp0200_brpAttribuuttypen
+
+Berichtenmodel BRPXML 2.0 …
+16
+
+Berichtenmodel BRP | 14 juli 2017
+
+BRP-Koppelvlak Bijhouding (3) …
+berichtverwerking
+.wsdl
+
+…
+
+…
+
+…
+
+…
+
+_Berichten
+
+_Berichten
+
+_Basis
+
+_Basis
+
+_Basis
+
+_Basis
+
+_Basis
+
+…
+
+_Berichten
+
+…
+
+_Berichten
+
+…
+
+_Berichten
+
+…
+
+bhgSysteemhand…
+
+bijhouding.wsdl
+
+Bijhouding
+brp0200_brpBijhouding_Basis
+
+Basis
+brp0200_brpBasis
+brp0200_brpObjecttypen
+brp0200_brpAttribuuttypen
+
+Berichtenmodel BRPXML 2.0 …
+17
+
+Berichtenmodel BRP | 14 juli 2014
+
+BRP-Koppelvlak Levering …
+
+_Berichten
+
+_Basis
+
+…
+
+sFTP of DK GB
+
+_Berichten
+
+_Berichten
+
+_Basis
+
+_Basis
+
+…
+
+_Basis
+
+berichtverwerking
+.wsdl
+
+lvgSelectie
+
+_Basis
+
+_Berichten
+
+synchronisatie.wsdl
+
+lvgSynchronisatie
+
+_Berichten
+
+afnemerindicatie
+.wsdl
+
+lvgAfnemerIndica…
+
+lvgBevraging
+
+bevraging.wsdl
+
+Levering
+brp0200_brpLevering_Basis
+
+Basis
+brp0200_brpBasis
+brp0200_brpObjecttypen
+brp0200_brpAttribuuttypen
+
+Berichtenmodel BRPXML 2.0 …
+18
+
+Berichtenmodel BRP | 14 juli 2017
+
+BRP-Koppelvlak Vrij bericht …
+berichtverwerking
+.wsdl
+
+…
+
+…
+
+…
+
+…
+
+_Berichten
+
+_Berichten
+
+_Basis
+
+_Basis
+
+_Basis
+
+_Basis
+
+_Basis
+
+…
+
+_Berichten
+
+…
+
+_Berichten
+
+…
+
+_Berichten
+
+…
+
+vrbVrijeberichten
+
+vrijbericht.wsdl
+
+Basis
+BRP_Basis
+BRP_Objecttypen
+BRP_Attribuuttypen
+
+Berichtenmodel BRPXML 2.0 …
+19
+
+Berichtenmodel BRP | 14 juli 2017
+
+BRP-Koppelvlak StUF BG Vertaling …
+…
+
+…
+
+…
+
+…
+
+…
+
+_Berichten
+
+_Berichten
+
+_Basis
+
+_Basis
+
+_Basis
+
+_Basis
+
+_Basis
+
+_Basis
+
+…
+
+_Berichten
+
+…
+
+_Berichten
+
+…
+
+_Berichten
+
+…
+
+_Berichten
+
+…
+
+stvStufbgVertaling
+
+stufbgvertaling.
+wsdl
+
+Basis
+BRP_Basis
+BRP_Objecttypen
+BRP_Attribuuttypen
+
+Berichtenmodel BRPXML 2.0 …
+20
+
+Berichtenmodel BRP | 14 juli 2017
+
+Berichtenconcepten en –kenmerken …
+
+21
+
+Toelichting Berichtenmodel BRP
+
+Berichtconcepten en -kenmerken …
+
+De berichtconcepten en -kenmerken zijn uitgebreid beschreven in
+het Logisch Ontwerp BRP; zowel in de officiële publicatieversie
+v1.08 als de ‘werk’-versie 1.09. Zie hiervoor LO BRP hoofdstuk 8
+‘Berichtstructuur’, hoofdstuk 10 ‘Toegang en beveiliging’ en de
+bijlagen B, C, D en E.
+.
+
+22
+
+Toelichting Berichtenmodel BRP
+
+Webservices BRP …
+
+23
+
+Toelichting Berichtenmodel BRP
+
+Berichtconcepten en -kenmerken …
+De BRP biedt de volgende webservices aan:
+•
+•
+•
+•
+•
+•
+
+bevraging.wsdl
+bijhouding.wsdl
+afnemerindicatie.wsdl
+synchronisatie.wsdl
+vrijbericht.wsdl
+stufbgvertaling.wsdl
+
+ verwerking Bevragingsdiensten
+ verwerking Administratieve handelingen
+ verwerking Plaatsing/verwijdering afnemerind.
+ verwerking Synchronisatiediensten
+ verwerking Versturen vrije berichten
+ verwerking Vertaling BRPXML naar StUF BG
+
+NB. Let wel; dit betreft alleen de vertaling van mutatieberichten en volledigberichten.
+
+Voor ontvangst van de asynchrone berichten vanuit de BRP zal een
+aangesloten partij de volgende webservice moeten implementeren:
+• berichtverwerking.wsdl
+
+ verwerking ontvangen BRP-berichten
+
+NB. Afhankelijk van de rol van de partij betreft dit mutatieberichten, volledigberichten,
+bijhoudingsnotificaties of vrije berichten.
+24
+
+Toelichting Berichtenmodel BRP
+
+Berichtconcepten en -kenmerken …
+
+De webservices en de indeling hiervan in messages, porttypes en
+operaties is beschreven in Bijlage E van het Logisch Ontwerp BRP;
+zowel in de officiële publicatieversie v1.08 als de ‘werk’-versie
+v1.09.
+De opmerkende lezer zal de webservice ‘stufbgvertaling.wsdl’
+missen in het LO BRP. Dit komt omdat dit een speciale voorziening
+is, die vooralsnog buiten het LO BRP is gehouden. Deze wsdl is wel
+beschreven in het document ‘WebservicelandschapBRP.pdf’ versie
+2.25 dd. 14 juli 2017.
+
+25
+
+Toelichting Berichtenmodel BRP
+
+26
+
+Toelichting Berichtenmodel BRP
+
+

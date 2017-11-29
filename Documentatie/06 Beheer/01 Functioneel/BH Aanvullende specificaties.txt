@@ -1,0 +1,639 @@
+BH Aanvullende specificaties
+
+1.6
+
+Datum
+Status
+
+18-05-2016
+Definitief
+
+Definitief | 1.6| BH Aanvullende specificaties | 18-05-2016
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+
+2
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................4
+
+REQUIREMENTS ..................................................................................................................................5
+2.1 LEESWIJZER USE CASES.......................................................................................................................5
+2.1.1 Bedrijfsregels ............................................................................................................................5
+2.2 BEHEERAPPLICATIE...............................................................................................................................5
+2.2.1 Webapplicatie ............................................................................................................................5
+2.2.2 Resolutie .....................................................................................................................................5
+2.2.3 Paginering ...................................................................................................................................5
+2.2.4 Na opslaan terug naar vorige ververste pagina ...........................................................5
+2.2.5 Zoekvelden .................................................................................................................................5
+2.2.6 Zoeken op tekst .......................................................................................................................6
+2.2.7 Technisch ID tonen indien mogelijk .................................................................................6
+2.2.8 Lijsten ..........................................................................................................................................6
+2.2.9 Taal ...............................................................................................................................................6
+2.2.10 Foutmeldingen .......................................................................................................................6
+2.2.11 Sorteren ...................................................................................................................................6
+2.2.12 Na annuleren terug naar de vorige pagina ................................................................6
+2.2.13 Bedrijfsregels .........................................................................................................................6
+2.2.14 Responsetijden ......................................................................................................................7
+2.2.15 Integriteit van de gegevens (RD-BET-002) ...............................................................7
+2.2.16 Logging (RD-BET-002) .......................................................................................................7
+2.2.17 Validaties ook door het systeem (RD-BEV-018) ......................................................7
+2.2.18 Mobiele code (RD-BEV-024) ............................................................................................7
+2.2.19 Versienummer .......................................................................................................................8
+2.2.20 Browser ....................................................................................................................................8
+2.3 BEVEILIGING .........................................................................................................................................8
+2.3.1 Autorisatie (RD-BEV-020, RD-BEV-036).........................................................................8
+2.3.2 Sessies (RD-BEV-031, RD-BEV-035) ...............................................................................8
+2.3.3 Inloggen (RD-BEV-033, RD-BEV-034).............................................................................8
+2.4 MONITORING SYSTEEMDETAILS (RD-BEV-048) .............................................................................8
+2.5 BEHEREN RAPPORTAGE ........................................................................................................................9
+2.6 ALGEMEEN ...........................................................................................................................................10
+2.6.1 Historie ......................................................................................................................................10
+2.6.2 Attributen in groep identiteit .............................................................................................10
+2.6.3 Verwijderen ..............................................................................................................................10
+
+3
+
+OPMERKINGEN ..................................................................................................................................11
+
+Operatie BRP
+
+Pagina 2 van 11
+
+Definitief | 1.6| BH Aanvullende specificaties | 18-05-2016
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+23-02-2015
+05-03-2015
+
+0.1
+0.2
+
+Operatie BRP
+Operatie BRP
+
+24-03-2015
+25-03-2015
+10-04-2015
+18-05-2015
+01-06-2015
+02-06-2015
+03-06-2015
+
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+0.9
+
+05-08-2015
+
+1.0
+
+02-09-2015
+
+1.1
+
+06-11-2015
+
+1.2
+
+30-11-2015
+
+1.3
+
+22-01-2016
+13-04-2016
+
+1.4
+1.5
+
+18-05-2016
+
+1.6
+
+Initiële versie
+• Reviewcommentaar verwerkt
+• Toelichting op aanmaken historie
+opgenomen
+• Toelichting op bedrijfsregels omtrent
+groep identiteit opgenomen
+Diverse NFR’s opgenomen
+Reviewcommentaar verwerkt
+Toelichting op verwijderen opgenomen
+Raadplegen loggegevens opgenomen
+Monitoring systeemdetails opgenomen
+Reviewcommentaar verwerkt
+• Requirements omtrent beheer
+rapportages opgenomen
+• Tonen versienummer in beheerapplicatie
+• Definitief gemaakt ten behoeve van
+release 3.1
+• Requirements omtrent lange lijsten
+opgenomen
+• Requirements omtrent te tonen velden in
+zoekresultaten opgenomen
+• Tonen van technisch ID opgenomen
+• Zoeken met diakritische tekens
+beschreven
+• Zoeken op teksten aangepast (tekstueel)
+• Annuleren aangepast
+• Na inloggen terug naar pagina verwijderd
+• Coderingen NFR’s opgenomen
+• NFR’s opgenomen (mobiele code,
+integriteit van gegevens)
+• BMR44 verwerkt
+• Functionaliteit omtrent het tonen van
+zoekcriteria van het type tekst in the
+zoekresultaat verwijderd
+• Zoeken op tekst verduidelijkt
+
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+
+Operatie BRP
+
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+05-03-2015
+
+0.1
+
+Review
+
+Operatie BRP
+
+24-03-2015
+
+0.3
+
+Review
+
+Operatie BRP
+
+02-06-2015
+
+0.7
+
+Review
+
+Operatie BRP
+
+03-06-2015
+
+0.8
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 11
+
+Definitief | 1.6| BH Aanvullende specificaties | 18-05-2016
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Dit document bevat aanvullende specificaties op de beheer use case cases. Deze aanvullende
+specificaties gelden in ieder geval voor use cases waarbij geen standaard software wordt
+gebruikt. Voor use cases waar standaard software toegepast worden deze specificaties zoveel als
+mogelijk toegepast.
+
+1.2
+
+Referenties
+#
+
+Operatie BRP
+
+Document
+
+Organisatie
+
+Versie
+
+Datum
+
+Pagina 4 van 11
+
+Definitief | 1.6| BH Aanvullende specificaties | 18-05-2016
+
+2
+
+Requirements
+
+2.1
+
+Leeswijzer use cases
+In de onderstaande paragrafen wordt beschreven waar rekening mee gehouden dient te worden
+bij het lezen van de use cases omtrent het beheer van de BRP.
+
+2.1.1
+
+Bedrijfsregels
+Alleen de bedrijfsregels die niet in het BMR zijn beschreven worden in de use cases vastgelegd.
+De bedrijfsregels die onder andere in het BMR staan zijn: verplicht of niet, type attribuut, lengte
+attribuut, uniciteit et cetera.
+
+2.2
+
+Beheerapplicatie
+
+2.2.1
+
+Webapplicatie
+De beheerapplicatie wordt opgezet als webapplicatie.
+
+2.2.2
+
+Resolutie
+De beheerapplicatie werkt bij een schermresolutie van 1280x1024 of hoger.
+
+2.2.3
+
+Paginering
+Het resultaat van een zoekactie dient gepagineerd weergegeven te worden. Het aantal resultaten
+per pagina dient instelbaar te zijn. De volgende aantallen zijn mogelijk: 10, 20, 50, 100, 200,
+500. Standaard is het aantal 20 resultaten per pagina.
+
+2.2.4
+
+Na opslaan terug naar vorige ververste pagina
+Wanneer een wijziging heeft plaats gevonden dient altijd terug gegaan te worden naar de pagina
+voor de wijziging. Deze pagina dient bovendien bijgewerkt te worden zodat deze eventuele
+nieuwe wijzigingen toont.
+
+2.2.5
+
+Zoekvelden
+Zoekvelden bevinden zich gegroepeerd bovenaan de pagina. De zoekvelden dienen verborgen te
+kunnen worden zodat er meer ruimte is voor de resultaten. Standaard worden de zoekvelden
+niet getoond.
+
+Operatie BRP
+
+Pagina 5 van 11
+
+Definitief | 1.6| BH Aanvullende specificaties | 18-05-2016
+
+2.2.6
+
+Zoeken op tekst
+Bij zoeken op tekst worden diakritische tekens in het zoekcriterium en de mogelijke
+zoekresultaten genegeerd. Ook hoeft er geen exacte match te zijn en mag het zoekcriterium in
+zijn geheel in een deel van het zoekresultaat voorkomen. Zoeken naar bijvoorbeeld Marië of
+Marie kan voor beide Marien en Mariëlle opleveren in het zoekresultaat.
+
+2.2.7
+
+Technisch ID tonen indien mogelijk
+Daar waar mogelijk dient het technisch ID getoond te worden van het hoofdonderwerp. Dat geldt
+voor alle soorten pagina’s (zoekresultaten, wijzigen, raadplegen et cetera). Wordt er bijvoorbeeld
+gezocht op personen dan dient het technische ID van de persoon in de zoekresultaten getoond te
+worden. Worden bijvoorbeeld de details van een administratieve handeling getoond, dan dient
+ook het technische ID van de administratieve handeling getoond te worden.
+
+2.2.8
+
+Lijsten
+Wanneer een lijst waaruit een waarde geselecteerd dient te worden, langer is dan 30, dient in de
+lijst gezocht te kunnen worden. Lijsten zijn alfabetisch gesorteerd.
+
+2.2.9
+
+Taal
+De taal die in de beheerapplicatie gehanteerd dient te worden is Nederlands. Engels is
+toegestaan als er geen goede Nederlandse vertaling bestaat.
+
+2.2.10
+
+Foutmeldingen
+Indien er een fout optreedt omdat de validatie van een bedrijfsregel faalt, wordt in de
+beheerapplicatie direct helder en volledig beschreven wat de fout is geweest zodat de beheerder
+weet hoe de fout eventueel opgelost kan worden.
+Technische fouten, zoals stack traces, worden ook gemeld. Hierbij mag in de melding verwezen
+worden naar de plek waar de volledige technische fout te vinden is.
+
+2.2.11
+
+Sorteren
+Het is mogelijk om op alle kolommen van het resultaat van een zoekactie te sorteren waarvoor
+een index aanwezig is, of wanneer het aantal resultaten nooit groter kan zijn dan 10000. Dit zal
+vooral afhangen van het type gegevens dat in het resultaat getoond wordt.
+
+2.2.12
+
+Na annuleren terug naar de vorige pagina
+Gebruikershandelingen kunnen door een gebruiker geannuleerd worden. Er wordt dan niets
+opgeslagen. Na het annuleren van een handeling dient terug gegaan te worden naar de pagina
+voor de handeling.
+
+2.2.13
+
+Bedrijfsregels
+Bedrijfsregels worden zoveel als mogelijk in de user interface gecontroleerd en/of afgedwongen.
+
+Operatie BRP
+
+Pagina 6 van 11
+
+Definitief | 1.6| BH Aanvullende specificaties | 18-05-2016
+
+2.2.14
+
+Responsetijden
+De beheerapplicatie reageert onder normale omstandigheden gemiddeld binnen 3 seconden. In
+uitzonderlijke situaties mag dit langer duren (bijvoorbeeld tijdens onderhoud).
+In sommige situatie kan het voorkomen dat de beheerapplicatie deze responsetijd niet haalt.
+Indien dit het geval is zal dit in de use case worden aangegeven.
+
+2.2.15
+
+Integriteit van de gegevens (RD-BET-002)
+De integriteit van de opgeslagen gegevens die binnen de beheerapplicatie gewijzigd worden zijn
+gewaarborgd. Fouten in het systemen leiden niet tot inconsistente opgeslagen gegevens.
+
+2.2.16
+
+Logging (RD-BET-002)
+Alle verzoeken in de beheerapplicatie, inclusief de verwerking daarvan, worden gelogd:
+•
+•
+•
+•
+•
+•
+
+Tijdstip van het verzoek
+Identificatie van de persoon die het verzoek heeft uitgevoerd (indien geauthentiseerd)
+Of de gebruiker geautoriseerd was om het verzoek uit te voeren (Ja/Nee)
+Het IP-adres waar vandaan het verzoek is ontvangen
+De URL van het verzoek
+De gegevens (GET/POST) die met het verzoek zijn meegestuurd
+
+Verstrekking van persoonsgegevens in de beheerapplicatie aan de beheerder hoeft niet
+geprotocolleerd te worden.
+Het loggen van gegevens mag het functioneren van de beheerapplicatie niet beïnvloeden. De
+beheerapplicatie dient echter te stoppen met functioneren indien er geen logging plaats kan
+vinden en er loggegevens verloren gaan. Er dient hiervan een melding gegeven te worden aan
+de gebruikers van de beheerapplicatie.
+
+2.2.17
+
+Validaties ook door het systeem (RD-BEV-018)
+Alle controles van bedrijfsregels die in de user interface worden uitgevoerd, dienen ook door het
+systeem uitgevoerd te worden. Dit geldt bijvoorbeeld voor lengte en typen van velden.
+
+2.2.18
+
+Mobiele code (RD-BEV-024)
+Het gebruik van mobile code is toegestaan. Dit dient mag alleen Javascript zijn en mag alleen
+binnen de beheerapplicatie gebruikt worden.
+
+Operatie BRP
+
+Pagina 7 van 11
+
+Definitief | 1.6| BH Aanvullende specificaties | 18-05-2016
+
+2.2.19
+
+Versienummer
+Het is in de beheerapplicatie duidelijk zichtbaar wat het versienummer van de beheerapplicatie
+is.
+
+2.2.20
+
+Browser
+De beheerapplicatie dient te werken in recente versies (> 2012) van in de browsers Firefox,
+Chrome, Internet Explorer en Edge.
+
+2.3
+
+Beveiliging
+
+2.3.1
+
+Autorisatie (RD-BEV-020, RD-BEV-036)
+Een gebruiker wordt een enkele rol toegewezen in de beheerapplicatie.
+Een rol binnen de beheerapplicatie is geautoriseerd om bepaalde acties uit te voeren (pagina’s
+op te vragen/verzoeken te sturen).
+Het systeem controleert bij elke actie of de gebruiker een rol heeft die hiervoor is geautoriseerd.
+
+2.3.2
+
+Sessies (RD-BEV-031, RD-BEV-035)
+Wanneer een gebruiker inlogt, krijgt de gebruiker een sessie. Zolang de sessie geldig is hoeft de
+gebruiker niet opnieuw in te loggen.
+De sessie heeft een duur van 30 minuten. De sessie verloopt als de gebruiker uitlogt of
+gedurende de duur van de sessie, geen actie heeft uitgevoerd. Elke actie ververst de duur van
+de sessie.
+De sessie van de gebruiker is gekoppeld aan het IP-adres en de browser van de gebruiker.
+
+2.3.3
+
+Inloggen (RD-BEV-033, RD-BEV-034)
+Wanneer een gebruiker inlogt wordt nooit de gebruikersnaam of het wachtwoord vooraf ingevuld
+of anderszins op getoond.
+
+2.4
+
+Monitoring systeemdetails (RD-BEV-048)
+De beheerder heeft in de beheerapplicatie inzage in gegevens van systemen en applicaties van
+de BRP. Hiervoor hoeft de beheerder niet voor elk systeem en/of applicatie apart in te loggen.
+De beheerder heeft op z’n minst inzage in de volgende gegevens van een systeem:
+•
+•
+•
+•
+•
+•
+•
+•
+
+De CPU-belasting van het systeem
+Het aantal gebruikers dat is ingelogd op het operating system van het systeem
+Hoeveel fysieke schijfruimte er per partitie wel en niet in gebruik is
+Hoeveel geheugen er wel en niet in gebruik is
+Het aantal processen dat er aanwezig is
+Het geheugengebruik per proces
+De CPU-belasting van het systeem per proces
+De responsetijd van het systeem (ping)
+
+Operatie BRP
+
+Pagina 8 van 11
+
+Definitief | 1.6| BH Aanvullende specificaties | 18-05-2016
+
+•
+•
+•
+•
+
+De status van voor de beheerder relevante services/applicaties (SSH, HTTP et cetera)
+Het aantal I/O operaties per seconde per partitie
+De gemiddelde I/O operatie wachttijd per partitie
+De hoeveelheid inkomend en uitgaand netwerkverkeer per seconde per netwerkinterface
+
+De beheerder heeft op z’n minst inzage in de volgende gegevens van BRP-applicaties (indien van
+toepassing):
+•
+•
+•
+•
+•
+•
+
+Welke queues er per applicatie aanwezig zijn
+De status van de queues
+Hoeveel berichten er per seconde op de queue gezet worden
+Hoeveel berichten er op elke queue zitten
+Hoeveel berichten er per seconde van de queue gehaald worden
+Gemiddelde wachttijd van een bericht op de queue
+
+De beheerder heeft inzage in de actuele en historische gegevens van systemen en applicaties.
+De beheerder kan met behulp van diagrammen het verloop van de actuele en historische
+gegevens in de tijd inzien.
+In welke gegevens de beheerder inzage heeft, kan door middel van configuratie aangepast
+worden.
+Beheerders kunnen configureren dat ze een notificatie per e-mail en/of SMS ontvangen wanneer
+een gegeven een vooraf ingestelde waarde bereikt.
+
+2.5
+
+Beheren rapportage
+Een beheerder heeft behoefte aan informatie over het gebruik en werking van de BRP. De
+beheerder wil bijvoorbeeld weten hoeveel berichten er aan de verschillende afnemers zijn
+gestuurd de afgelopen maand, of het aantal berichten per type dat er het afgelopen jaar is
+verstuurd.
+Een beheerder kan zelf rapporten beheren (maken, wijzigen, raadplegen, inplannen, et cetera).
+Het beheren van rapporten dient aan de volgende eisen te voldoen:
+• Het genereren van rapporten heeft geen negatieve invloed op de prestaties van de
+productieomgeving van de BRP
+• De beheerapplicatie genereert op basis van templates rapporten
+• Beheerders kunnen zelf templates opstellen
+• In het template kan het volgende geconfigureerd worden:
+o Welke gegevens uit de BRP in het rapport getoond worden (SQL toegestaan)
+o De vormgeving van het rapport (diagrammen, lettertype, tabellen, kleur, et cetera)
+• Templates op basis waarvan rapporten gegenereerd worden zijn toegankelijk in de
+beheerapplicatie
+• Het gegenereerde rapport kan uitgevoerd worden in verschillende bestandsformaten: CSV,
+PDF, HTML, Excel
+• Datum en tijdstip waarop een rapport gegenereerd wordt kan in de beheerapplicatie
+geconfigureerd worden
+• De frequentie waarmee een rapport gegenereerd wordt kan in de beheerapplicatie
+geconfigureerd worden
+• De locatie waar het gegenereerde rapport wordt opgeslagen kan in de beheerapplicatie
+geconfigureerd worden
+• Gegenereerde rapporten zijn toegankelijk in de beheerapplicatie
+
+Operatie BRP
+
+Pagina 9 van 11
+
+Definitief | 1.6| BH Aanvullende specificaties | 18-05-2016
+
+2.6
+
+Algemeen
+
+2.6.1
+
+Historie
+Voor Kern.Partij en alles uit AutAut dient bij wijzigingen BRP historie aangemaakt te worden.
+TsReg en TsVerval dienen gevuld te worden met de huidige datumtijd. Er dient geen actie
+gekoppeld te worden. Op het moment van schrijven kan dit nog, maar deze mogelijkheid zal in
+de toekomst in een nieuwe versie van het BMR verdwijnen.
+Er dient alleen historie aangemaakt te worden als er daadwerkelijk iets is gewijzigd.
+
+2.6.2
+
+Attributen in groep identiteit
+In het BMR worden alle attributen van een objecttype gekenmerkt door de groep waar ze toe
+behoren. Voor de attributen die tot de groep identiteit behoren geldt dat deze niet meer
+gewijzigd mogen worden nadat ze zijn vastgelegd.
+
+2.6.3
+
+Verwijderen
+Voor alle gegevens die beheerd worden geldt dat deze alleen logisch verwijderd mogen worden.
+Er wordt niets fysiek verwijderd.
+Concreet betekent dit dat:
+• het attribuut Datum einde gevuld dient te worden door de beheerder met een datum in het
+verleden, of
+• dat de beheerder het attribuut Toestand de waarde ‘Inactief’ geeft, of
+• dat het mechanisme van het attribuut Actief met de waarde ‘Ja’ gebruikt wordt waarbij bij het
+verwijderen TsVerval wordt gevuld.
+
+Operatie BRP
+
+Pagina 10 van 11
+
+Definitief | 1.6| BH Aanvullende specificaties | 18-05-2016
+
+3
+
+Opmerkingen
+
+• Het is nu nog mogelijk om verantwoording vast te leggen bij Partij en AutAut. Dit mag niet en
+het BMR zal hierop aangepast worden. Dan moet ook de paragraaf Historie aangepast
+worden.
+
+Operatie BRP
+
+Pagina 11 van 11
+
+

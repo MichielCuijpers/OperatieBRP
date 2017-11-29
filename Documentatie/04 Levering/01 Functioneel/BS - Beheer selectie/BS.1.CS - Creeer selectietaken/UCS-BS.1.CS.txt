@@ -1,0 +1,500 @@
+UCS BS.1.CS – Creëer selectietaken
+Versie
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Datum
+
+17 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+10-05-2017
+
+0.1
+
+Eerste opzet
+
+oBRP
+
+16-05-2017
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+17-05-2017
+
+0.3
+
+Selectietaken dienen gecreëerd te worden per
+selectiedienst per toegang leveringsautorisatie
+
+oBRP
+
+23-05-2017
+
+0.4
+
+Controle op autorisatie toegevoegd
+
+oBRP
+
+29-05-2017
+
+0.5
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+21-06-2017
+
+0.6
+
+Creëren selectietaken niet direct bij registreren dienst, eind
+statussen aangepast waarop een nieuwe taak moet worden
+gecreëerd.
+
+oBRP
+
+17-07-2017
+
+1.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+0.3
+
+Interne review
+
+0.4
+
+Interne review
+
+UCS BS.1.CS – Creëer selectietaken
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................4
+Referenties ..........................................................................................................................4
+
+Creëer selectietaken ................................................................................................. 5
+2.1
+2.2
+
+Activiteitendiagram ...............................................................................................................5
+Beschrijving van de stappen ...................................................................................................5
+
+3
+
+Scenario’s ................................................................................................................. 7
+
+4
+
+Ontwerpbeslissingen .............................................................................................. 10
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 2 van 10
+
+UCS BS.1.CS – Creëer selectietaken
+
+1 Inleiding
+1.1
+
+Doel
+
+Een selectiedienst kan eenmalig of periodiek uitgevoerd worden. Een eenmalige selectiedienst
+wordt in principe uitgevoerd door één selectietaak per toegang leveringsautorisatie.
+Een periodieke selectiedienst resulteert in meerdere selectietaken. Een selectietaak wordt
+gecreëerd afhankelijk van de instellingen bij de selectiedienst en aan de hand van de gekoppelde
+toegang leveringsautorisaties.
+Bij een periodieke selectiedienst wordt er een interval en een eenheid meegegeven waarin de
+betreffende selectiedienst uitgevoerd dient te worden.
+Door de eerste selectiedatum, de eenheid en interval te combineren ontstaan er zo meerdere
+momenten waarop de selectiedienst moet worden uitgevoerd. Deze momenten worden omgezet in
+selectietaken met berekende selectiedata. Per gekoppelde toegang leveringsautorisatie worden er
+op deze manier selectietaken gecreëerd.
+Voorbeeld:
+Selectiedienst met de volgende kenmerken:
+•
+•
+•
+•
+
+1e selectiedatum = 01-02-2017
+Interval = 1
+Eenheid = maand
+Einddatum = 30-04-2017
+
+Op de volgende momenten dient deze selectiedienst uitgevoerd te worden:
+1. 01-02-2017
+2. 01-03-2017
+3. 01-04-2017
+Dit resulteert in de volgende selectietaken:
+•
+Selectietaak 1 met de voorgestelde selectiedatum 01-02-2017
+•
+Selectietaak 2 met de voorgestelde selectiedatum 01-03-2017
+•
+Selectietaak 3 met de voorgestelde selectiedatum 01-04-2017
+In dit bovenstaande voorbeeld heeft de selectiedienst een einddatum. In de praktijk is dit meestal
+niet het geval.
+Stel dat er drie toegang leveringsautorisaties (A, B en C) gebruik maken van de dienst uit
+bovenstaande voorbeeld dan ontstaan de bovengenoemde selectietaken per toegang
+leveringsautorisatie.
+Dit resulteert in de volgende selectietaken:
+•
+Selectietaak A1 met de voorgestelde
+•
+Selectietaak A2 met de voorgestelde
+•
+Selectietaak A3 met de voorgestelde
+•
+Selectietaak B1 met de voorgestelde
+•
+Selectietaak B2 met de voorgestelde
+•
+Selectietaak B3 met de voorgestelde
+•
+Selectietaak C1 met de voorgestelde
+•
+Selectietaak C2 met de voorgestelde
+•
+Selectietaak C3 met de voorgestelde
+
+selectiedatum
+selectiedatum
+selectiedatum
+selectiedatum
+selectiedatum
+selectiedatum
+selectiedatum
+selectiedatum
+selectiedatum
+
+01-02-2017
+01-03-2017
+01-04-2017
+01-02-2017
+01-03-2017
+01-04-2017
+01-02-2017
+01-03-2017
+01-04-2017
+
+Deze use case beschrijft hoe de selectietaken bij een selectiedienst worden gegenereerd.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 3 van 10
+
+UCS BS.1.CS – Creëer selectietaken
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de stappen met betrekking tot het creëren van selectietaken. In Hoofdstuk 3
+staan de Use Case specifieke ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 4 van 10
+
+UCS BS.1.CS – Creëer selectietaken
+
+2 Creëer selectietaken
+Het creëren van selectietaken kent een aantal stappen, deze staan in het activiteitendiagram.
+In de paragraaf daarna worden de stappen stuk voor stuk beschreven. Voor een meer
+gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden wordt verwezen
+naar de aan deze Use Case gekoppelde regels in BMR.
+
+2.1
+
+Activiteitendiagram
+
+2.2
+
+Beschrijving van de stappen
+
+In deze paragraaf worden de stappen in het activiteitendiagram beschreven.
+
+1. Bepaal periode (BS.1.CS.BP)
+Deze stap heeft betrekking op alle geldige selectiediensten.
+In de beheerapplicatie moet de gebruiker een gewenste periode opgeven wanneer selectietaken
+ingepland dienen te worden. De op te geven periode heeft een startdatum en een einddatum.
+
+2. Creëer selectietaken ( BS.1.CS.CS)
+Deze stap wordt uitgevoerd per selectiedienst.
+Per selectiedienst wordt gecontroleerd of er aan de hand van de 1e selectiedatum, interval en
+eenheid een selectie uitgevoerd dient te worden binnen de opgegeven periode. Indien dit het geval
+is wordt er gecontroleerd of er reeds een selectietaak aanwezig is voor dat moment.
+Een selectietaak wordt alleen automatisch gecreëerd indien er voor de berekende selectiedatum
+geen ingeplande selectietaak is, of als er meer geplande selectietaken bestaan die alle één van de
+volgende eind statussen hebben:
+Geannuleerd
+
+Niet geleverd
+
+Uitvoering mislukt
+
+Afgekeurd
+
+Uitvoering afgebroken
+Wanneer er selectietaken zijn met een eind status kan de beheerder ervoor kiezen toch nóg een
+selectietaak handmatig in de beheerapplicatie te creëren bij de betreffende draaidatum.
+Op de berekende selectiedatum van de selectietaak moet de autorisatie geldig zijn. De
+autorisatiecontrole bestaat uit:
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 5 van 10
+
+UCS BS.1.CS – Creëer selectietaken
+
+•
+•
+•
+•
+•
+•
+•
+
+De
+De
+De
+De
+De
+De
+De
+
+gevraagde dienst moet nog geldig zijn;
+dienstbundel moet nog geldig zijn;
+toegang leveringsautorisatie moet nog geldig zijn;
+leveringsautorisatie moet nog geldig zijn;
+combinatie partij en rol van de toegang leveringsautorisatie moet nog geldig zijn;
+geautoriseerde partij moet nog geldig zijn;
+autorisatie mag niet geblokkeerd zijn.
+
+Wanneer een selectietaak niet wordt gecreëerd vanwege het niet doorstaan van de
+autorisatiecontrole dan wordt dit in de log geregistreerd.
+Indien aan alle voorwaarden wordt voldaan dan worden selectietaken gecreëerd voor alle toegang
+leveringsautorisaties welke zijn gekoppeld aan de dienst.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 6 van 10
+
+UCS BS.1.CS – Creëer selectietaken
+
+3 Scenario’s
+Er zijn een aantal functionele scenario’s waarmee rekening gehouden dient te worden bij het
+creëren van selectietaken. Deze scenario’s kunnen later ook als testcases gebruikt worden.
+
+Startsituatie
+Selectiedienst met de volgende kenmerken:
+•
+•
+•
+•
+
+1e selectiedatum = 01-02-2017
+Interval = 1
+Eenheid = maand
+Geen einddatum
+
+De beheerder creëert voor 3 maanden vooruit selectietaken. Dit resulteert in de volgende
+selectietaken:
+4. 01-02-2017
+5. 01-03-2017
+6. 01-04-2017
+
+Daarna worden selectietaken gecreëerd op het moment dat in de beheerapplicatie de in te plannen
+selectietaken worden opgevraagd. Bij het opvragen van in te plannen selectietaken kan een
+(willekeurige) periode meegegeven worden door de gebruiker waarbinnen de voorgestelde
+selectiedatums moeten voorkomen. Deze periode kent een begin- en een einddatum.
+
+Scenario 1:
+
+Ga uit van de startsituatie.
+Op 15-03-2017 wordt een overzicht gemaakt in de beheer applicatie met de voorgestelde periode
+van 15 maart t/m 15 juni. Dit resulteert in de volgende selectietaken bij deze dienst:
+•
+•
+•
+
+01-04-2017 -> die kenden we al
+01-05-2017
+01-06-2017
+
+Aandachtspunt: De selectietaak van 01-04-2017 moet niet opnieuw worden aangemaakt maar
+moet herkend worden, ook al is deze nog niet gepland.
+Regel: Wanneer een selectietaak is gecreëerd bij een voorgestelde datum dan mag deze een
+volgende keer niet opnieuw gecreëerd worden tenzij de selectietaak een eindstatus heeft en de
+gebruiker er expliciet voor kiest om een nieuwe taak te creëren.
+Bijvoorbeeld door elke taak een volgnummer n te geven dat hoort bij het ne draaimoment.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 7 van 10
+
+UCS BS.1.CS – Creëer selectietaken
+
+Scenario 2:
+
+Ga uit van de startsituatie.
+Op 15-05-2017 wordt een overzicht gemaakt in de beheerapplicatie tot einde van het jaar. Dit
+resulteert in de volgende selectietaken:
+•
+•
+•
+•
+•
+•
+•
+
+01-06-2017
+01-07-2017
+01-08-2017
+01-09-2017
+01-10-2017
+01-11-2017
+01-12-2017
+
+We missen dan de selectietaak die op 01-05-2017 had moeten draaien (ingepland had moeten
+worden).
+Aandachtspunt: De beheerder moet erop geattendeerd worden dat op 01-05-2017 een selectietaak
+had moeten draaien (ingepland had moeten worden).
+Regel: Elke vanuit de instellingen van de dienst, mogelijke selectietaak moet geïdentificeerd
+worden. Het creëren van selectietaken moet sluitend zijn.
+Bijvoorbeeld 1: De startdatum alleen voor presentatie gebruiken. Op basis van einddatum wordt
+gecheckt of er taken gecreëerd moeten worden vanaf 1e selectiedatum. Daarmee zijn ze altijd
+sluitend.
+Bijvoorbeeld 2: Alleen wanneer er een taak n bestaat mag er een taak ‘n + 1’ aangemaakt worden.
+
+Scenario 3
+Ga uit van de startsituatie.
+
+De selectietaak van 01-04-2017 wordt op verzoek van de afnemer niet op 01-04-2017 gepland
+maar op 15-04-2017.
+Op 15-03-2017 wordt een overzicht gemaakt in de beheer applicatie 3 maanden vooruit. Dit
+resulteert in de volgende taken:
+•
+•
+•
+
+01-04-2017 -> die kenden we al, maar wordt gepland op 15-04-2017.
+01-05-2017
+01-06-2017
+
+Aandachtspunt: De selectietaak van 01-04-2017 moet niet opnieuw worden aangemaakt maar
+moet herkend worden, ook al is deze op een andere dag gepland.
+Regel: Wanneer reeds een selectietaak bestaat die hoort bij de voorgestelde datum dan mag deze
+een volgende keer niet opnieuw gecreëerd worden tenzij de gebruiker hier expliciet voor kiest.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 8 van 10
+
+UCS BS.1.CS – Creëer selectietaken
+
+Scenario 4
+Ga uit van de startsituatie.
+
+De selectietaak van 01-03-2017 is tijdens de controle door de beheerder afgekeurd. Echter de
+selectie van 01-03-2017 moet nog wel worden uitgevoerd. Er dient door de beheerder een nieuwe
+selectietaak aangemaakt te kunnen worden. Deze ‘hoort bij’ het moment 01-03-2017.
+Aandachtspunt: De selectietaak behorend bij 01-03-2017 moet opnieuw worden aangemaakt.
+Regel: Wanneer reeds een selectietaak bestaat die hoort bij de voorgestelde datum dan mag deze
+een volgende keer niet opnieuw gecreëerd worden tenzij de gebruiker hier expliciet voor kiest.
+Hier kiest de gebruiker dus voor het opnieuw creëren van een selectietaak bij een selectiemoment.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 9 van 10
+
+UCS BS.1.CS – Creëer selectietaken
+
+4 Ontwerpbeslissingen
+•
+
+Er worden selectietaken gecreëerd per selectiedienst per toegang leveringsautorisatie.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 10 van 10
+
+

@@ -1,0 +1,255 @@
+UCS SL.1.MPB – Maak protocollering bestand
+Versie
+
+1.0
+
+Datum
+
+12 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+09-03-2017
+
+0.1
+
+Eerste opzet
+
+oBRP
+
+15-03-2017
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+16-03-2017
+
+0.3
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+21-03-2017
+
+0.4
+
+Er wordt geen protocollering bestand gemaakt bij een
+selectie voor een partij in de rol van ‘Bijhouder’.
+
+oBRP
+
+04-05-2017
+
+0.5
+
+Er wordt geen protocollering bestand gemaakt bij een
+selectie voor een leveringsautorisatie met
+protocolleringsniveau = Geheim.
+
+oBRP
+
+08-06-2017
+
+0.6
+
+Referentie bijgewerkt,
+
+oBRP
+
+12-07-2017
+
+1.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+0.2
+
+Interne review
+
+UCS SL.1.MPB – Maak protocollering bestand
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+
+2
+
+Maak protocollering bestand ..................................................................................... 4
+2.1
+2.2
+
+3
+
+Doel ....................................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Activiteitendiagram ...............................................................................................................4
+Beschrijving van de stappen ...................................................................................................4
+
+Ontwerpbeslissingen ................................................................................................ 6
+
+Status: Definitief, versie: 1.0
+
+Pagina 2 van 6
+
+UCS SL.1.MPB – Maak protocollering bestand
+
+1 Inleiding
+1.1
+
+Doel
+
+Ten behoeve van het inzagerecht van de burger moeten alle leveringen waarin persoonsgegevens
+zijn opgenomen worden geprotocolleerd zo ook de levering die voortvloeit uit selecties.
+Dit geldt niet voor de leveringen aan de zogenoemde bijhouders. De leveringen (en daarmee ook
+de selectieverstrekking) aan partijen in de rol ‘Bijhouder’ worden niet geprotocolleerd. Ook aan
+partijen met een leveringsautorisatie waarbij het protocolleringsniveau ‘Geheim’ is worden
+leveringen niet geprotocolleerd.
+Aangezien de verstrekking van een standaard selectiedienst alleen middels indirecte verzending
+wordt gerealiseerd en niet via berichten verloopt de protocollering op een iets andere wijze dan bij
+de overige leveringsdiensten.
+Een verstrekking van een selectiedienst wordt pas geprotocolleerd op het moment dat het
+selectieresultaat is opgehaald door de afnemer. Nadat de afnemer het bestand heeft opgehaald zal
+de beheerder vanuit de beheerapplicatie het protocolleringsproces starten. Waarna de te
+protocolleren gegevens worden opgenomen in de BRP.
+De te protocolleren gegevens worden tijdens de selectierun alvast klaargezet ten behoeve van het
+later uit te voeren protocolleer proces waarbij deze gegevens in de protocolleringsadministratie van
+de centrale voorzieningen worden geregistreerd.
+Het doel van deze Use Case is te beschrijven hoe het bestand met de te protocolleren gegevens
+wordt aangelegd ten behoeve van het latere protocolleringsproces. Leeswijzer
+Hoofdstuk 2 beschrijft de stappen van het protocolleren. In hoofdstuk 3 staan de Use Case
+specifieke ontwerpbeslissingen beschreven.
+
+1.2
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 1.0
+
+Pagina 3 van 6
+
+UCS SL.1.MPB – Maak protocollering bestand
+
+2 Maak protocollering bestand
+In dit hoofdstuk wordt beschreven hoe het protocolleringsbestand wordt aangelegd ten behoeve
+van het later uit te voeren protocolleerproces waarbij de protocolleringsadministratie wordt
+bijgewerkt.
+De te nemen stappen staan beschreven in het activiteitendiagram. In de paragraaf daarna worden
+de stappen verder toegelicht.
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de aan deze Use Case gekoppelde regels in BMR.
+
+2.1
+
+Activiteitendiagram
+
+2.2
+
+Beschrijving van de stappen
+
+In deze paragraaf worden de stappen in het activiteitendiagram beschreven.
+
+1. Maak bestand (SL.1.MPB.MB)
+Wanneer de selectie wordt uitgevoerd voor een partij in de rol van ‘Bijhouder’ of wanneer er sprake
+is van een geheim protocolleringsniveau dan wordt er niet geprotocolleerd en wordt deze Use Case
+verder niet uitgevoerd.
+Wanneer er wel geprotocolleerd dient te worden, wordt er een bestand aangemaakt met de te
+protocolleren gegevens. Dit bestand wordt geplaatst op dezelfde locatie als de selectieresultaatset
+personen en de selectieresultaatset totalen, mogelijk wel in een aparte map. Het bestand met de te
+protocolleren gegevens krijgt een herkenbare naam waaruit op te maken valt bij welke uitgevoerde
+selectietaak dit bestand hoort.
+2. Plaats gegevens (SL.1.MPB.PG)
+Bij elke levering wordt de protocollering zodanig vastgelegd dat:
+•
+•
+•
+
+Het duidelijk is welke personen geleverd zijn;
+Welke gegevens er exact geleverd zijn over die persoon;
+Aan welke afnemer(s) deze gegevens geleverd zijn binnen welke autorisatie.
+
+Status: Definitief, versie: 1.0
+
+Pagina 4 van 6
+
+UCS SL.1.MPB – Maak protocollering bestand
+
+Te protocolleren gegevens
+Protocollering gebeurt door het vastleggen van een Leveringsaantekening. Welke personen
+geleverd zijn, en welke ‘versie’ van die persoon geleverd is, wordt vastgelegd door het aanmaken
+van één of meer voorkomens van Leveringsaantekening \ Persoon.
+In de leveringsaantekening wordt vastgelegd welke Dienst is geleverd binnen welke
+Leveringsautorisatie, aan welke afnemer en op welk datum/tijdstip er geleverd is. Aan de hand
+hiervan is vast te stellen welk autorisatieprofiel er precies is toegepast.
+Als er sprake is van parameters die effect hebben op het geleverde resultaat, dan is het
+noodzakelijk om dit in de protocollering vast te leggen.
+In de Leveringsaantekening \ Persoon wordt ook Tijdstip laatst wijziging persoon vastgelegd. Hieruit
+blijkt welke ‘versie’ van de persoon is geleverd wat noodzakelijk kan zijn om achteraf te bepalen
+welke inhoud er precies geleverd is.
+Deze te protocolleren gegevens worden nog niet direct weggeschreven in de BRP bij
+Leveringsaantekening en Leveringsaantekening \ Persoon. De gegevens met betrekking tot
+Leveringsaantekening \ Persoon worden in het protocolleer bestand tijdelijk opgeslagen zodat
+wanneer later het proces van protocolleren wordt gestart deze gegevens direct verwerkt kunnen
+worden in de BRP.
+De gegevens met betrekking tot Leveringsaantekening worden niet in dit bestand apart gezet, deze
+gegevens zijn op het moment van protocolleren af te leiden.
+
+Status: Definitief, versie: 1.0
+
+Pagina 5 van 6
+
+UCS SL.1.MPB – Maak protocollering bestand
+
+3 Ontwerpbeslissingen
+Er zijn geen Use Case specifieke ontwerpbeslissingen.
+
+Status: Definitief, versie: 1.0
+
+Pagina 6 van 6
+
+

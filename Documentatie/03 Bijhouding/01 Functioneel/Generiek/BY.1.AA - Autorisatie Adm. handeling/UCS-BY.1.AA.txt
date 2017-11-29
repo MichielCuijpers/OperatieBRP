@@ -1,0 +1,652 @@
+UCS BY.1.AA – Autorisatie administratieve handeling
+Versie
+
+0.18
+
+Datum
+
+5 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+28-07-2016
+
+0.1
+
+Initiële versie
+
+Operatie BRP
+
+02-08-2016
+
+0.2
+
+Reviewcommentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+08-08-2016
+
+0.3
+
+Reviewcommentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+08-08-2016
+
+0.4
+
+•
+
+Operatie BRP
+
+•
+
+Aan H2 een paragraaf toegevoegd voor toelichting op
+stap 3. R2098 (Bijhouding geblokkeerd wegens verhuizing) daarbij opgenomen.
+Ontwerpbeslissing toegevoegd m.b.t. blokkeren van
+autorisaties.
+
+11-08-2016
+
+0.5
+
+Reviewcommentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+11-08-2016
+
+0.6
+
+Enkele opmerkingen ten aanzien van te controleren regels
+toegevoegd.
+
+Operatie BRP
+
+16-08-2016
+
+0.7
+
+Reviewcommentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+18-08-2016
+
+0.8
+
+N.a.v. overleg met Operatie BRP: paragraaf over samenwerkingsverbanden laten vervallen en openstaande punten bijgewerkt.
+
+Operatie BRP
+
+26-09-2016
+
+0.9
+
+•
+
+•
+•
+27-09-2016
+
+0.10
+
+Fout hersteld in 2.1.1, stap 4 bij ‘situatie als onderteOperatie BRP
+kenaar niet gelijk is aan geautoriseerde partij’ en bij ‘situatie als de transporteur niet gelijk is aan de geautoriseerde partij’.
+N.a.v. IOO-69: aan 2.1.3 deelcontroles R2250, R2251 en
+R2252 toegevoegd.
+N.a.v. IOO-69: 2.4 (Functionele logging) toegevoegd.
+
+Tabel met reviewhistorie opgenomen.
+
+Operatie BRP
+
+Referenties bijgewerkt.
+28-09-2016
+
+0.11
+
+Algemene foutmelding (R2343) toegevoegd.
+
+Operatie BRP
+
+06-10-2016
+
+0.12
+
+Reviewcommentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+28-10-2016
+
+0.13
+
+Reviewcommentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+UCS BY.1.AA – Autorisatie administratieve handeling
+
+25-11-2016
+
+0.14
+
+Term ISC vervangen door migratievoorziening
+
+Operatie BRP
+
+13-03-2017
+
+0.15
+
+Bijhoudingsvoorstelorgaan toegevoegd in paragraaf 2.1 en
+2.1.1
+
+Operatie BRP
+
+18-04-2017
+
+0.16
+
+Paragraaf omtrent Haagse akte toegevoegd.
+
+Operatie BRP
+
+07-06-2017
+
+0.17
+
+Referenties bijwerkt n.a.v. wijzigen van code van modules
+
+Operatie BRP
+
+05-07-2017
+
+0.18
+
+Paragraaf 2.6 opgenomen.
+
+Operatie BRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Operatie BRP
+
+0.4
+
+Operatie BRP
+
+0.5
+
+Operatie BRP
+
+0.8
+
+Operatie BRP
+
+0.11
+
+Operatie BRP
+
+Status: Definitief, versie: 0.18
+
+Pagina 2 van 10
+
+UCS BY.1.AA – Autorisatie administratieve handeling
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 4
+1.1
+1.2
+
+2
+
+Doel ....................................................................................................................................4
+Referenties ..........................................................................................................................5
+
+Autorisatie van administratieve handelingen ............................................................ 6
+2.1
+2.1.1
+2.1.2
+2.1.3
+2.2
+2.2.1
+2.2.2
+2.2.3
+2.3
+2.3.1
+2.4
+2.5
+2.6
+
+Toegangsautorisatie ..............................................................................................................6
+Toegang bijhoudingsautorisatie ..........................................................................................6
+Blokkeren van autorisaties .................................................................................................7
+Uit te voeren controles ......................................................................................................7
+Autorisatie naar soort administratieve handeling .......................................................................8
+Modelautorisatie ...............................................................................................................8
+Blokkeren van autorisaties .................................................................................................8
+Uit te voeren controles ......................................................................................................9
+Autorisatie naar inhoud administratieve handeling ....................................................................9
+Uit te voeren controles ......................................................................................................9
+Functionele logging ...............................................................................................................9
+Haagse akte .........................................................................................................................9
+De samenhang met automatisch fiatteren .............................................................................. 10
+
+Status: Definitief, versie: 0.18
+
+Pagina 3 van 10
+
+UCS BY.1.AA – Autorisatie administratieve handeling
+
+1 Inleiding
+1.1
+
+Doel
+
+Deze Use Case beschrijft op welke wijze de centrale voorzieningen bij een ingekomen bijhoudingsbericht kunnen vaststellen of de indiener gerechtigd is tot het aanbieden van de administratieve
+handeling uit het bijhoudingsbericht. Middels deze autorisatiecontroles wordt geborgd dat er geen
+ongeautoriseerde bijhoudingen of prevalidatieverzoeken worden verwerkt. Deze Use Case is niet
+van toepassing op bijhoudingsberichten die via de migratievoorziening worden aangeboden.
+De Use Case bestaat uit de volgende onderdelen:
+1. Toegangsautorisatie:
+Betreft controle of de indiener bijhoudingsberichten mag aanbieden aan de centrale voorzieningen. Hierbij spelen ook bewerkers een rol, waarbij de geautoriseerde partij1 aan heeft
+gegeven dat één of meer andere partijen namens hem bijhoudingsberichten digitaal mogen
+ondertekenen (‘ondertekenaar’) of namens hem een beveiligde verbinding met de BRP mogen opzetten (‘transporteur’).
+2. Autorisatie naar soort administratieve handeling:
+Als bij de toegangsautorisatie is gebleken dat de indiener bijhoudingsberichten mag aanbieden, vindt aanvullende controle plaats of de betreffende partij de specifieke soort administratieve handeling uit het ingekomen bericht mag aanbieden.
+3. Autorisatie naar inhoud administratieve handeling:
+Wanneer een partij een bepaald soort administratieve handeling mag aanbieden, betekent
+dit nog niet dat deze partij in alle gevallen een administratieve handeling van die soort mag
+aanbieden. Dat hangt namelijk af van welke partij of partijen in het specifieke geval voor
+de bijhouding verantwoordelijk zijn en—in geval van toevallige gebeurtenissen—welke partij de feitgemeente is. Zo mag bijvoorbeeld elke gemeente in Nederland verhuizingen aanbieden aan de centrale voorzieningen, maar in een concreet geval is alleen de nieuwe
+woongemeente van de persoon gerechtigd om dit te doen. Dergelijke controles vinden in
+deze stap plaats.
+Bovenstaande onderdelen worden in het volgende hoofdstuk verder toegelicht.
+Wanneer een autorisatiecontrole faalt leidt dit tot een blokkerende fout die in het bijhoudingsresultaatbericht aan de indiener wordt teruggekoppeld.
+Het onderwerp ‘automatisch fiatteren’ valt buiten de scope van deze use case. De fiatteringsinstellingen stellen namelijk geen verdere beperkingen aan het aanbieden door een partij van een administratieve handeling. Fiatteringsinstellingen zijn van belang voor de verdere verwerking, maar niet
+eerder dan dat de autorisatie (onderhavige use case) is geslaagd.
+Authenticatie—dat wil zeggen het zeker stellen dat een ontvangen bericht afkomstig is van een
+bekende partij—valt buiten de scope van deze use case. Zie paragraaf 10.2.5 in Logisch Ontwerp
+Basisregistratie Personen [1] voor een beschrijving hiervan.
+Bewerkerconstructies—waarbij de geautoriseerde partij heeft aangegeven dat één of meer andere
+partijen namens hem verzoeken digitaal mogen ondertekenen (‘ondertekenaar’) of namens hem
+een beveiligde verbinding met de BRP mogen opzetten (‘transporteur’)—spelen in deze use case
+een rol, maar voor een algemene inleidende beschrijving hiervan wordt verwezen naar paragraaf
+10.2.4 in Logisch Ontwerp Basisregistratie Personen [1].
+
+1
+
+De geautoriseerde partij is de wettelijke bijhoudingspartij zoals bekend bij de centrale voorzieningen namens wie het
+bericht wordt verzonden.
+
+Status: Definitief, versie: 0.18
+
+Pagina 4 van 10
+
+UCS BY.1.AA – Autorisatie administratieve handeling
+
+1.2
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Logisch Ontwerp Basisregistratie Personen
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+UCS BY.0.HGP - Huwelijk en geregistreerd partnerschap
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving - Controles
+
+Operatie BRP
+
+-
+
+-
+
+4
+
+UCS BY.0.AV - Afhandeling verzoek
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 0.18
+
+Pagina 5 van 10
+
+UCS BY.1.AA – Autorisatie administratieve handeling
+
+2 Autorisatie van administratieve handelingen
+2.1
+
+Toegangsautorisatie
+
+Deze use case gaat ervan uit dat authenticatie van het ingekomen bericht heeft plaatsgevonden.
+Als dit succesvol was is bekend welke partij het bericht heeft verstuurd (‘transporteur’) en welke
+partij het bericht heeft ondertekend (‘ondertekenaar’).
+In het meest eenvoudige geval zijn de ondertekenaar en transporteur gelijk aan de partij die als
+zendende partij in het bericht wordt genoemd (de ‘geautoriseerde partij’). Het is echter mogelijk
+dat deze ‘geautoriseerde partij’ anderen inschakelt om namens hemzelf bijhoudingsberichten te
+versturen (‘bewerkers’).
+Het deel van het Logisch Gegevensmodel dat relevant is voor het kunnen uitvoeren van de autorisatiecontroles is hieronder afgebeeld:
+
+Toegangsautorisatie bestaat eruit dat de combinatie van de geautoriseerde partij, transporteur en
+ondertekenaar in de BRP bekend is als een geldige combinatie. Voor de betreffende combinatie
+moet een geldig object van het type Toegang bijhoudingsautorisatie bestaan. Bovendien moet
+daaraan een geldig object van het type Bijhoudingsautorisatie zijn gekoppeld. De toegangsautorisatie is geslaagd indien één Toegang bijhoudingsautorisatie geselecteerd is (paragraaf 2.1.1) en
+die niet geblokkeerd is (paragraaf 2.1.2), anders wordt dit als blokkerende fout aan de indiener
+teruggekoppeld. Paragraaf 2.1.3 benoemt de controles die hiervoor uitgevoerd moeten worden.
+2.1.1
+
+Toegang bijhoudingsautorisatie
+
+Om bij een ingekomen bericht de bijbehorende Bijhoudingsautorisatie te vinden moet de van toepassing zijnde Toegang bijhoudingsautorisatie worden bepaald. Via de Toegang bijhoudingsautorisatie wordt de autorisatie verstrekt aan één of meer partijen, waarbij ook de te gebruiken authenticatie en bewerkerconstructies zijn vastgelegd. De attributen Transporteur en Ondertekenaar zijn
+in een Toegang bijhoudingsautorisatie alleen gevuld als ze afwijken van de geautoriseerde partij.
+Gegeven een ingekomen bijhoudingsbericht wordt als volgt bepaald wat de bijbehorende Toegang
+bijhoudingsautorisatie is.
+1. Bepalen geautoriseerde partij:
+Het attribuut Zendende partij in de stuurgegevens van het bericht duidt de geautoriseerde
+partij aan.
+
+Status: Definitief, versie: 0.18
+
+Pagina 6 van 10
+
+UCS BY.1.AA – Autorisatie administratieve handeling
+
+2. Bepalen ondertekenaar:
+De ondertekenaar is de partij waarvan het attribuut OIN (Overheidsidentificatienummer)
+gelijk is aan het OIN van het certificaat waarmee het bericht is ondertekend.2
+3. Bepalen transporteur:
+De transporteur is de partij waarvan het attribuut OIN gelijk is aan het OIN van het certificaat waarmee de beveiligde verbinding was opgezet. 3
+4. Bepalen Toegang bijhoudingsautorisatie:
+Selecteer het voorkomen van Toegang bijhoudingsautorisatie dat aan de volgende voorwaarden voldoet:
+•
+Het attribuut Geautoriseerde verwijst naar een voorkomen van Partij \ Rol dat op
+zijn beurt verwijst naar de geautoriseerde partij (stap 1) en naar de rol ‘Bijhoudingsorgaan College’, ‘Bijhoudingsorgaan Minister’4 of ‘Bijhoudingsvoorstelorgaan’.
+•
+
+Als de ondertekenaar (stap 2) gelijk is aan de geautoriseerde partij: het attribuut
+Ondertekenaar is leeg.
+
+•
+
+Als de ondertekenaar niet gelijk is aan de geautoriseerde partij: het attribuut Ondertekenaar verwijst naar de ondertekenaar.
+
+•
+
+Als de transporteur (stap 3) gelijk is aan de geautoriseerde partij: het attribuut
+Transporteur is leeg.
+
+•
+
+Als de transporteur niet gelijk is aan de geautoriseerde partij: het attribuut Transporteur verwijst naar de transporteur.
+
+Omdat een bijhouder altijd precies één rol vervult binnen dezelfde Toegang bijhoudingsautorisatie
+zal dit algoritme nooit meer dan één Toegang bijhoudingsautorisatie selecteren. Het is natuurlijk
+ook mogelijk dat geen enkele Toegang bijhoudingsautorisatie aan de voorwaarden voldoet. In dat
+geval is de autorisatie niet geslaagd en wordt dit als blokkerende fout aan de indiener teruggekoppeld.
+Zoals uit het diagram blijkt kan bij een gegeven Toegang bijhoudingsautorisatie de Bijhoudingsautorisatie eenduidig worden bepaald.
+2.1.2
+
+Blokkeren van autorisaties
+
+De stelselbeheerder kan een Toegang bijhoudingsautorisatie tijdelijk blokkeren, bijvoorbeeld als er
+aanwijzingen zijn voor misbruik. Hiermee is het mogelijk om alleen een bepaalde bijhouder te
+blokkeren of om een toegang via een specifieke bewerker te blokkeren. De andere bijhouders of
+toegangen die niet via deze bewerker lopen worden hierdoor niet geraakt.
+2.1.3
+
+Uit te voeren controles
+
+De volgende hoofdregel bevat de eis voor een correcte authenticatie:
+•
+
+Er bestaat een toegang bijhoudingsautorisatie voor het bijhoudingsbericht (R2246)
+
+Ten behoeve van zo specifiek mogelijke melding aan de beheerder vangen onderstaande deelcontroles al een deel af van wat er in R2246 fout kan gaan. In afwijking van het algemene stramien
+zoals beschreven in de Aspectbeschrijving - Controles [3] dient de foutmelding van R2246 dan ook
+alleen op te treden in de situatie dat het met de andere regels nog niet is afgevangen. De deelcontroles betreffen de volgende regels:
+•
+•
+•
+
+Er bestaat een toegang bijhoudingsautorisatie voor deze partij en rol (R2250)
+Er bestaat een toegang bijhoudingsautorisatie voor deze partij, rol en ondertekenaar
+(R2251)
+Er bestaat een toegang bijhoudingsautorisatie voor deze partij, rol en transporteur (R2252)
+
+2
+
+De OIN’s van het certificaat waarmee het bericht is ondertekend is onderdeel van het resultaat van authenticatie.
+De OIN’s van het certificaat waarmee de beveiligde verbinding is opgezet is onderdeel van het resultaat van authenticatie.
+4 De rol ‘Bijhoudingsorgaan Minister’ is pas van toepassing als de RNI wordt aangesloten op de BRP. Dit is voor nu out-ofscope van Operatie BRP. RNI-bijhoudingen komen vooralsnog binnen via GBA-mutatiekanaal.
+3
+
+Status: Definitief, versie: 0.18
+
+Pagina 7 van 10
+
+UCS BY.1.AA – Autorisatie administratieve handeling
+
+Door eerst de deelcontroles uit te voeren kan de hoofdregel (R2246) alleen nog geschonden worden als er meerdere voorkomens van ‘Toegang bijhoudingsautorisatie’ zijn waarbij in sommige
+voorkomens de Ondertekenaar klopt en in andere de Transporteur klopt, maar waarbij ze in geen
+enkel voorkomen beiden kloppen. Ofwel R2246 zal alleen nog afgaan in de situatie dat de Ondertekenaar en Transporteur op onjuiste wijze gecombineerd zijn. De foutmelding van R2246 is daarom
+afgestemd op die situatie.
+Daarnaast dienen nog de volgende controles te worden uitgevoerd:
+•
+•
+•
+•
+•
+•
+•
+•
+
+2.2
+
+De
+De
+De
+De
+De
+De
+De
+De
+
+toegang bijhoudingsautorisatie is geldig (R2247)
+toegang bijhoudingsautorisatie is niet geblokkeerd (R2248)
+bijhoudingsautorisatie is geldig (R2299)
+bijhoudingsautorisatie is niet geblokkeerd (R2115)
+geautoriseerde partij is een geldige partij (R2268)
+partij\rol voor toegang bijhoudingsautorisatie is geldig (R2271)
+ondertekenaar is een geldige partij (R2269)
+transporteur is een geldige partij (R2270)
+
+Autorisatie naar soort administratieve handeling
+
+Als de toegangsautorisatie is geslaagd staat vast dat de geautoriseerde partij en de eventuele afzonderlijke ondertekenaar en transporteur in die betreffende combinatie bijhoudingsberichten mogen aanbieden aan de centrale voorzieningen. De volgende stap is het controleren of de specifieke
+soort administratieve handeling uit het ingekomen bericht mag worden aangeboden door de betreffende combinatie van partijen5.
+Om deze controle uit te kunnen voeren is bij elke Bijhoudingsautorisatie vastgelegd wat de toegestane Soorten administratieve handeling zijn. Als de Soort administratieve handeling niet is toegestaan wordt dit als blokkerende fout aan de indiener teruggekoppeld.
+
+2.2.1
+
+Modelautorisatie
+
+Omdat veel geautoriseerde partijen dezelfde autorisaties zullen hebben op het niveau van soorten
+administratieve handelingen is het beheermatig handig om hetzelfde autorisatieprofiel aan meer
+dan één partij toe te kunnen kennen. Dit noemen we modelautorisatie. Zo zullen alle gemeenten in
+principe alle soorten administratieve handelingen mogen aanbieden.
+Modelautorisaties zijn te herkennen aan ‘Bijhoudingsautorisaties’ waarvan het attribuut ‘Modelautorisatie?’ de waarde ‘Ja’ heeft.
+Voor het autorisatieproces is het niet relevant of een ‘Bijhoudingsautorisatie’ een modelautorisatie
+is of niet.
+2.2.2
+
+Blokkeren van autorisaties
+
+Naast het blokkeren van een Toegang bijhoudingsautorisatie (zie paragraaf 2.1.2) kan de stelselbeheerder ook een Bijhoudingsautorisatie blokkeren. Dit treft dan alle administratieve handelingen
+onder deze Bijhoudingsautorisatie voor alle bijhouders die toegang hebben tot deze Bijhoudingsau5
+
+Elke gemeente mag weliswaar alle soorten administratieve handelingen uitvoeren voor eigen ingezetenen, maar in het
+kader van gemeentelijke samenwerking zou een gemeente ook een aantal soorten handelingen kunnen uitbesteden aan
+een andere gemeente die dan als ondertekenaar in de Toegang bijhoudingsautorisatie wordt opgenomen.
+
+Status: Definitief, versie: 0.18
+
+Pagina 8 van 10
+
+UCS BY.1.AA – Autorisatie administratieve handeling
+
+torisatie. Zou de beheerder bijvoorbeeld de modelautorisatie voor gemeenten blokkeren, dan kan
+geen enkele gemeente nog een administratieve handeling aanbieden.
+Ontwerpbeslissing: Er is bewust voor gekozen om niet nog een niveau dieper een blokkeringsmogelijkheid te hebben, dus op Bijhoudingsautorisatie \ Soort administratieve handeling. Dit laatste is
+feitelijk een inregeling van een bepaalde bijhoudingsautorisatie, analoog aan Dienstbundel \ Groep
+en Dienstbundel \ Groep \ Attribuut bij leveringsautorisatie. Omdat nu niet exact duidelijk is wat de
+werkwijze van de beheerpartij gaat worden is ervoor gekozen om vooralsnog de blokkeringsmogelijkheden niet uit te breiden tot de inregelingsniveaus.
+2.2.3
+
+Uit te voeren controles
+
+Het uitvoeren van de autorisatie naar soort administratieve handeling komt neer op de volgende
+controle:
+•
+
+2.3
+
+De administratieve handeling is toegestaan voor de bijhoudingsautorisatie (R2106)
+
+Autorisatie naar inhoud administratieve handeling
+
+Als de toegangsautorisatie (paragraaf 2.1) is geslaagd en ook is vastgesteld dat de betreffende
+soort administratieve handeling mocht worden aangeboden (paragraaf 2.2) door de geautoriseerde
+partij (eventueel in combinatie met een andere ondertekenaar en transporteur), resteren nog de
+autorisatiecontroles die afhankelijk zijn van de inhoud van de administratieve handeling. Deze autorisatiecontroles hebben betrekking op de bij te houden personen.
+2.3.1
+
+Uit te voeren controles
+
+De in deze stap uit te voeren controles zijn opgenomen bij het soort administratieve handeling
+waar de controle betrekking op heeft. Zie bijvoorbeeld UCS BY.0.HGP - Huwelijk en geregistreerd
+partner-schap [2] voor de autorisatieregels die specifiek zijn voor administratieve handelingen van
+de module Huwelijk en geregistreerd partnerschap.
+
+2.4
+
+Functionele logging
+
+Schending van de algemene regels van bijhoudingsautorisatie (2.1.3) en de autorisatie naar soort
+administratieve handeling (2.2.3) leiden tot het aanmaken van een logregel in de functionele log
+met daarin de meldingstekst van de regel.
+In afwijking van wat beschreven is in de Aspectbeschrijving - Controles [3] dient bij schending van
+de hiervoor genoemde regels een algemene foutmelding naar buiten te gaan waaruit niet precies
+blijkt wat er aan de hand is (R2343).
+NB: Voor de autorisatieregels naar inhoud van de administratieve handeling (2.3.1) geldt het normale stramien zoals beschreven in de Aspectbeschrijving - Controles [3]. Bij schending van deze
+regels zal dus wél een specifieke melding naar buiten gaan. Dus als een gemeente bijvoorbeeld een
+naamswijziging zou willen doorvoeren van een ingezetene van een andere gemeente, dan volgt
+niet een algemene autorisatiefout, maar een specifieke melding dat de betreffende gemeente niet
+de bijhoudingsverantwoordelijke is van de hoofdpersoon van het bijhoudingsvoorstel.
+
+2.5
+
+Haagse akte
+
+Van een Haagse akte spreekt men wanneer een buitenlandse akte omgezet wordt in een Nederlandse akte en ingeschreven wordt in de registers van de burgerlijke stand van de gemeente Den
+Haag. Dit kan handig zijn voor het geval men later een uittreksel of trouwboekje nodig heeft.
+De BRP bevat geen voorzieningen voor ondersteuning van deze Haagse akte. Binnen de BRP zijn
+regels gedefinieerd die stellen dat slechts een beperkte groep van partijen een bijhoudingsvoorstel
+voor een administratieve handeling mag indienen, zoals de geboortegemeente van een persoon
+en/of de bijhoudingspartij van die persoon. Deze partijen worden altijd in algemene benamingen
+beschreven om de autorisatiestructuur generiek te houden. Er worden geen uitzonderingen voor
+
+Status: Definitief, versie: 0.18
+
+Pagina 9 van 10
+
+UCS BY.1.AA – Autorisatie administratieve handeling
+
+specifieke gemeenten gemaakt, zoals bijvoorbeeld “… alleen de geboortegemeente of de gemeente
+Den Haag mag dit bijhoudingsvoorstel indienen…”.
+In het geval van een Haagse akte betekent dit dat Den Haag wel de akte kan opstellen maar niet
+kan indienen. Den Haag zal de Nederlandse akte naar de bijhoudingspartij van de betreffende persoon moeten sturen die vervolgens een bijhoudingsvoorstel kan indienen bij de BRP.
+Mocht het toch wenselijk zijn dat Den Haag bijhoudingsvoorstellen moet kunnen indienen ten behoeve van andere gemeenten dan moet de oplossing gezocht worden in de juiste inrichting van
+bovengenoemde generieke autorisatiestructuur.
+
+2.6
+
+De samenhang met automatisch fiatteren
+
+Of een administratieve handeling die een gemeente ter verwerking aanbiedt voor een persoon verwerkt wordt hangt, naast de dat toegangsautorisatie (2.1), autorisatie naar soort administratieve
+handeling (paragraaf 2.2) en autorisatie naar inhoud administratieve handeling (paragraaf 2.3) ook
+af van de instellingen voor automatische fiattering (zie UCS BY.0.AV - Afhandeling verzoek [4]).
+Met behulp van onderstaand voorbeeld wordt deze samenhang in op hoofdlijnen beschreven.
+Stel dat Piet en Marie getrouwd zijn en Marie in Groningen woont en Piet in Delfzijl. De gemeente
+Delfzijl is (net als alle gemeenten) als partij geautoriseerd voor de administratieve handeling ‘Ontbinding huwelijk in Nederland’. Omdat Piet in Delfzijl woont is deze gemeente verantwoordelijk
+voor de bijhouding van zijn gegevens. Als het huwelijk van Piet en Marie is ontbonden mag Delfzijl
+deze ontbinding registreren, die is immers geautoriseerd voor de juiste handeling en is de verantwoordelijk bijhoudingspartij voor Piet. Maar het ontbinden van het huwelijk heeft ook gevolgen
+voor Marie6 en voor haar gegevens is Groningen de verantwoordelijke bijhoudingspartij. Alleen als
+Groningen heeft aangegeven automatisch te fiatteren zal de ontbinding van het huwelijk ook voor
+Marie worden doorgevoerd. Als Groningen dit bijhoudingsvoorstel niet automatisch fiatteert zal de
+huwelijksrelatie ontrelateerd worden. Hierdoor kan de ontbinding van het huwelijk voor Piet worden vastgelegd zonder dat dit gevolgen heeft voor de gegevens van Marie.
+Samengevat zijn de volgende punten van belang om te bepalen of een administratieve handeling
+die een gemeente aanbiedt bij een persoon verwerkt wordt:
+1. Is de partij geautoriseerd om bijhoudingsberichten aan te bieden (paragraaf 2.1)?
+2. Is de gemeente als partij geautoriseerd om de administratieve handeling uit te voeren (paragraaf 2.2)?
+3. Is de gemeente bijhoudingspartij van een hoofdpersoon die betrokken is bij de administratieve handeling (paragraaf 2.3)?
+4. Heeft de gemeente, die bijhoudingspartij is van een betrokken persoon maar de administratieve handeling niet heeft aangeboden, aangegeven automatisch te fiatteren?
+
+6
+
+Als het huwelijk symmetrisch is vastgelegd.
+
+Status: Definitief, versie: 0.18
+
+Pagina 10 van 10
+
+

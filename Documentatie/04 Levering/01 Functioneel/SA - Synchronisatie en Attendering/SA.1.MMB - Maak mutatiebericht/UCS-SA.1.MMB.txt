@@ -1,0 +1,444 @@
+UCS SA.1.MMB – Maak mutatiebericht
+Versie
+
+2.0
+
+Datum
+
+14 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+28-11-2016
+
+0.1
+
+Eerste opzet
+
+oBRP
+
+30-11-2016
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+13-12-2016
+
+0.3
+
+AD aangepast ((*) verwijderd)
+
+oBRP
+
+15-02-2017
+
+1.0
+
+UC’s en regels in BMR aangemaakt/omgehangen. Versie
+document gereed.
+
+oBRP
+
+09-03-2017
+
+1.1
+
+UC gesplitst. Consistent maken en eindcontrole is
+UC.1.EMB geworden.
+
+oBRP
+
+01-06-2017
+
+1.2
+
+Bepalen verwerkingssoort verder toegelicht
+
+oBRP
+
+14-07-2017
+
+2.0
+
+Definitief gemaakt. Naam gewijzigd (LV->SA)
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS SA.1.MMB – Maak mutatiebericht
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Maak mutatiebericht ................................................................................................. 5
+2.1
+2.2
+
+3
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+Openstaande punten .............................................................................................................3
+
+Activiteitendiagram ...............................................................................................................5
+Beschrijving van de stappen ...................................................................................................5
+
+Ontwerpbeslissingen ................................................................................................ 8
+
+Status: Definitief, versie: 2.0
+
+Pagina 2 van 8
+
+UCS SA.1.MMB – Maak mutatiebericht
+
+1 Inleiding
+1.1
+
+Doel
+
+Waar bij de overige berichten een volledig persoon wordt geleverd bevat een mutatiebericht in
+essentie een ‘delta’ op de persoon van één administratieve handeling. Het doel van dit document is
+te beschrijven welke stappen er gezet worden om een mutatiebericht samen te stellen.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de stappen met betrekking tot het maken van een mutatiebericht. In
+Hoofdstuk 3 staan de Use Case specifieke ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+1.4
+
+Openstaande punten
+•
+
+Default waarde verwerkingssoort: in de huidige implementatie wordt als default waarde
+‘Referentie’ gehanteerd. Deze waarde is eigenlijk specifiek bedoeld voor groepen die alleen
+in het bericht komen omdat er een (bijgehouden) onderzoek is dat op deze groep
+betrekking heeft. De keuze voor die default waarde manifesteert zich net zozeer in de
+groepen zelf (het maakt alleen verschil voor groepen die niet in het bericht komen) maar in
+de afgeleide verwerkingssoort op objectniveau. Een niet in de handeling geraakt
+betrokkenheid object krijgt zo verwerkingssoort ‘Referentie’ waar we ‘Identificatie’ zouden
+willen hebben. Hiervoor moeten regel R1317 ‘Bepaling verwerkingssoort van
+groepsvoorkomens’ worden aangepast zodat de default ‘Identificatie’ is en regel R1320
+‘Bepaling verwerkingssoort van objecten’ worden aangepast zodat bij een mix van groepen
+met ‘Referentie’ en ‘Identificatie’ het object de waarde ‘Referentie’ krijgt.
+
+•
+
+Functionele identificatie: Een mutatiebericht bevat niet de hele PL maar in essentie alleen
+de door de bijhouding geraakte (vervallen, gewijzigde en toegevoegde) groepen plus
+‘identificerende’ groepen die duidelijk maken waar de bijhouding precies betrekking op
+heeft. Dat zijn zowel identificerende kenmerken (BSN, samengestelde naam,
+geslachtsaanduiding, geboortedatum) van de hoofdpersoon maar ook van de gerelateerde
+personen. Bijvoorbeeld: stel dat van één van de kinderen van een persoon de
+geslachtsaanduiding wijzigt, dan moet het ook duidelijk zijn op welk kind dit betrekking
+heeft.
+De berichten bevatten objectsleutels en voorkomensleutels maar die mag de afnemer niet
+persisteren: ze zijn alleen bedoeld voor verwijzingen binnen het bericht en eventueel
+binnen een dialoog (zeg maar maximaal binnen 24 uur). Dit betekent dus dat een afnemer
+op grond van alleen de functionele identificerende kenmerken in staat moet zijn om een
+mutatiebericht juist te kunnen interpreteren. De huidige realisatie heeft op dat punt nog
+een paar grijze vlekken:
+o Op dit moment worden de complete groepen Identificatienummers, Samengestelde
+naam, Geboorte en Geslachtsaanduiding als identificerend aangemerkt en in
+principe in zijn geheel geleverd. Het is mogelijk om hier nog preciezer in te zijn. Zo
+zijn de adellijke titel / predicaat en de datum aanvang geldigheid van de
+geslachtsaanduiding niet echt noodzakelijk om te bepalen over welke persoon het
+gaat.
+o Als een persoon meerdere huwelijken of geregistreerde partnerschappen met
+dezelfde persoon heeft gehad, dan volstaan de kenmerken van de gerelateerde
+persoon niet om te kunnen begrijpen over welk huwelijk het gaat. De Datum
+
+Status: Definitief, versie: 2.0
+
+Pagina 3 van 8
+
+UCS SA.1.MMB – Maak mutatiebericht
+
+o
+o
+
+aanvang van het huwelijk (de groep Relatie.Standaard) moet daarom ook nog als
+identificerend worden beschouwd. De Datum aanvang van een Huwelijk of
+Geregistreerd partnerschap moet in de Element tabel ook met autorisatie
+‘Aanbevolen’ worden geregistreerd.
+Hetzelfde patroon geldt misschien ook nog voor de groep Ouderschap, hoewel het
+daar lastiger is om een praktijkvoorbeeld te bedenken.
+De vorige punten hebben betrekking op ‘over welk object gaat het’. Daarnaast is er
+nog het issue ‘over welk groepsvoorkomen gaat het’, met name als er sprake is
+van materiële historie waardoor een object meer dan één niet-vervallen groep van
+dezelfde soort kan bevatten. De aannamen is dat het leveren van de Datum
+Aanvang Geldigheid altijd voldoende moet zijn en als de afnemer geen materiële
+historie krijgt gaat het per definitie altijd om het actuele voorkomen. De eis is dan
+dat wanneer een afnemer materiële historie van een groep krijgt, hij ook altijd
+geautoriseerd moet zijn voorde Datum Aanvang Geldigheid van die groep. Dat lijkt
+een logische eis. We hebben nog niet uitputtend kunnen toetsen of dit alles afdekt.
+
+•
+
+Bevinding uit de Geconverteerde Data Test (GDT): ‘Hartbeat’ op groep Inschrijving in duale
+periode. Als een nieuwe versie van een PL wordt ontvangen via het LO3 koppelvlak dan zijn
+daarin het versienummer en het tijdstipLaatsteWijzigingGBASystematiek opgehoogd. Dit
+leidt tot het toevoegen van een nieuw voorkomen van de groep Inschrijving, waarbij de
+oude versie vervalt. Als een afnemer geautoriseerd is voor de groep Inschrijving, dan krijgt
+hij alleen op grond hiervan al een mutatiebericht verstrekt met die geraakte
+groepsvoorkomens van Inschrijving. Dat is wat wonderlijk omdat de gewijzigde attributen
+niet autoriseerbeer zijn; alleen Datum inschrijving is autoriseerbaar en die zal normaliter
+na de eerste inschrijving niet meer wijzigen. Het gevolg is wel dat zelfs als er iets is
+bijgehouden via het LO3 koppelvlak waar de afnemer niet voor geautoriseerd is, hij
+middels de groep Inschrijving toch een seintje krijgt dat er iets gebeurd is met die persoon.
+Dit noemen we een ‘hartbeat’ en dit effect is onwenselijk. Het kan verholpen worden door
+een extra filter te realiseren dat een groep alleen levert als een daadwerkelijk iets
+gewijzigd is in de inhoud.
+
+•
+
+Bevinding uit de Geconverteerde Data Test (GDT): Explosie van ongewijzigde groepen. LO3
+categorieën hebben grotere granulariteit dan BRP groepen. Het gevolg is dat wanneer er
+bijvoorbeeld een wijziging in LO3 categorie 01 ‘Persoon’ wordt aangeleverd, dit de levering
+van een hele reeks groepen tot gevolg heeft. Als het gaat om een kleine wijziging dan zijn
+bovendien bij de meeste groepen de vervallen en de nieuwe waarden gelijk. Dit overlapt
+enigszins met het vorige punt: als we zorgen dat inhoudelijk ongewijzigde groepen niet
+meer geleverd worden, dan is daarmee ook het vorige punt opgelost. Het voorstel is
+daarom om deze twee punten in één keer op te pakken en langs dezelfde oplossing beide
+op te lossen.
+
+Status: Definitief, versie: 2.0
+
+Pagina 4 van 8
+
+UCS SA.1.MMB – Maak mutatiebericht
+
+2 Maak mutatiebericht
+Het maken van een mutatiebericht kent een aantal stappen, deze staan in het activiteitendiagram.
+In de paragraaf daarna worden de stappen stuk voor stuk beschreven. Voor een meer
+gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden wordt verwezen
+naar de aan deze Use Case gekoppelde regels in BMR.
+
+2.1
+
+Activiteitendiagram
+
+2.2
+
+Beschrijving van de stappen
+
+In deze paragraaf worden de stappen in het activiteitendiagram beschreven.
+
+1. Bepaal verwerkingssoort (SA.1.MMB.BV)
+Voor een mutatiebericht wordt per object en per groep de verwerkingssoort bepaald. Met de
+verwerkingssoort wordt de afnemer geïnformeerd wat er in de BRP is gemuteerd door de
+onderhanden handeling. De verwerkingssoort beschrijft wat er gebeurd is vanuit het
+gezichtspunt van de BRP en kan dus per handeling worden afgeleid.
+
+Status: Definitief, versie: 2.0
+
+Pagina 5 van 8
+
+UCS SA.1.MMB – Maak mutatiebericht
+
+De mogelijke waarden van verwerkingssoort zijn:
+Waarde
+
+Omschrijving
+
+“Identificatie”
+
+Objecttype of gegevensgroep in mutatiebericht opgenomen ter
+identificatie.
+
+“Referentie”
+
+Objecttype of gegevensgroep in mutatiebericht opgenomen ter referentie.
+In gebruik wanneer objecttype of gegevensgroep ongewijzigd is, maar in
+een verplicht te leveren onderzoek is betrokken (bijvoorbeeld als in de
+handeling alleen een onderzoek is gestart).
+
+“Toevoeging”
+
+Objecttype of gegevensgroep als gevolg van een bijhouding in centrale
+voorzieningen toegevoegd.
+
+“Wijziging”
+
+Objecttype of gegevensgroep als gevolg van een bijhouding in centrale
+voorzieningen gewijzigd.
+
+“Verval”
+
+Objecttype of gegevensgroep als gevolg van een bijhouding in centrale
+voorzieningen komen te vervallen.
+
+“Verwijdering”
+
+Objecttype of gegevensgroep als gevolg van een bijhouding fysiek
+verwijderd uit centrale voorzieningen.
+
+a). Bepalen verwerkingssoort voor gegevensgroep;
+Voor gegevensgroepen wordt de verwerkingssoort bepaald door een vergelijking te maken
+tussen de Actie inhoud, Actie aanpassing geldigheid en Actie verval (of Actie verval levering
+mutatie als deze een waarde heeft) van de gegevensgroepen en acties die bij de
+administratieve handeling horen waarvoor geleverd wordt. Hierbij worden de
+gegevensgroepen beschouwt van de 'gereconstrueerde persoon' na de onderhanden
+handeling. Dit betekend dat gegevensgroepen die na die administratieve handeling geldig
+waren maar later zijn vervallen, geldig worden gemaakt en gegevensgroepen die pas later
+zijn geregistreerd, worden verwijderd. De verwerkingssoort is dan:
+•
+•
+•
+•
+
+•
+
+“Toevoeging” als er een match is met Actie inhoud.
+“Wijziging” als er geen match met Actie inhoud maar wel met Actie Aanpassing
+Geldigheid.
+“Verval” als er geen match met Actie inhoud en Actie aanpassing geldigheid is maar
+wel met Actie verval.
+“Identificatie” als het een identificerende groep betreft, en er is geen match met
+Actie inhoud, Actie Aanpassing Geldigheid of 'Gecombineerde Actie Verval', en de
+groep geen Datum einde geldigheid heeft.
+“Referentie” in alle overige gevallen.
+
+Gegevensgroepen met verwerkingssoort “Referentie” komen alleen in een mutatiebericht
+als het wettelijk verplicht te leveren gegevens betreft of omdat een bijgehouden Onderzoek
+naar die groep verwijst.
+b). Bepalen verwerkingssoort voor objecttype
+Voor objecten wordt de verwerkingssoort afgeleid op basis van de verwerkingssoorten van
+alle groepsvoorkomens die zich in het object bevinden. Voor de objecten waar de
+verwerkingssoort voor moet worden bepaald wordt uitgegaan van de 'gereconstrueerde
+persoon' na de onderhanden handeling. Dit betekend dat gegevensgroepen die na die
+administratieve handeling geldig waren maar later zijn vervallen, geldig worden gemaakt
+en gegevensgroepen die pas later zijn geregistreerd, worden verwijderd. Van alle
+groepsvoorkomens die zich in het object bevinden moeten alleen die groepsvoorkomen
+worden meegenomen die deel zijn van de juridische persoonslijst (dus bijvoorbeeld voor
+een object ‘Persoon’ dat een gerelateerd kind betreft, blijft de groep ‘Geslachtsaanduiding’
+leeg omdat de ‘Geslachtsaanduiding’ van een kind niet tot de persoonslijst behoort).
+Voor objecten is de afleiding van de verwerkingssoort dan als volgt:
+
+Status: Definitief, versie: 2.0
+
+Pagina 6 van 8
+
+UCS SA.1.MMB – Maak mutatiebericht
+
+•
+•
+•
+•
+
+•
+•
+
+•
+
+De verwerkingssoort van de onderhanden administratieve handeling is altijd
+“Toevoeging”.
+De verwerkingssoort van de bijgehouden Persoon is altijd “Wijziging”.
+Als alle groepsvoorkomens onder een object de verwerkingssoort “Referentie” hebben
+dan is de verwerkingssoort van het object “Referentie”.
+Als er ten minste één groepsvoorkomen is met verwerkingssoort “Identificatie” en alle
+overige groepsvoorkomens hebben verwerkingssoort “Identificatie” of “Referentie”, dan
+is de verwerkingssoort van het object 'Identificatie'
+Als alle groepsvoorkomens onder een object de verwerkingssoort “Toevoeging” hebben
+dan is de verwerkingssoort van het object “Toevoeging”.
+Als ten minste één groepsvoorkomen verwerkingssoort “Vervallen” heeft en alle overige
+voorkomens van groepen met historie zijn al eerder vervallen (d.w.z. Datum/tijd verval
+en Actie verval zijn gevuld), dan is de verwerkingssoort van het object “Vervallen”.
+Groepen zonder historie worden hierbij genegeerd.
+In alle andere gevallen is de verwerkingssoort van het object “Wijziging”.
+
+Objecten met verwerkingssoort “Referentie” komen alleen in een mutatiebericht voor als
+het ongewijzigde, wettelijk verplicht te leveren gegevens bevat of omdat een bijgehouden
+Onderzoek naar een groep in dat object verwijst.
+2. Toepassen handelingenfilter (SA.1.MMB.HF)
+Deze filtering zorgt ervoor dat alleen de door een mutatie geraakte groepen geleverd worden:
+•
+
+•
+
+•
+
+Een mutatiebericht bevat het door de handeling bijgehouden Onderzoek én de
+gegevens uit het persoonsdeel waarop het onderzoek betrekking heeft. Hiermee
+worden de persoonsgegevens die in het onderzoek zijn betrokken ook meegeleverd in
+een mutatiebericht, ook al zijn deze persoonsgegevens zelf niet gewijzigd.
+Een mutatiebericht bevat slechts groepen die in de administratieve handeling zijn
+geraakt, gemarkeerd zijn als ‘in onderzoek’ of een identificerende groep / relevante
+identiteit zijn.
+Objecten filteren in mutatiebericht. Een mutatiebericht bevat alleen Objecten die:
+•
+(na de vorige filtering nog) groepen bevat;
+•
+zich in het pad bevinden tussen een Object dat gewijzigde groepen bevat en een
+Object dat groepen bevat die deze identificeert;
+•
+zich in het pad bevindt tussen het rootobject in het bericht (de hoofdpersoon) en
+een Object dat gewijzigde groepen bevat.
+
+Status: Definitief, versie: 2.0
+
+Pagina 7 van 8
+
+UCS SA.1.MMB – Maak mutatiebericht
+
+3 Ontwerpbeslissingen
+Er zijn geen Use Case specifieke ontwerpbeslissingen.
+
+Status: Definitief, versie: 2.0
+
+Pagina 8 van 8
+
+

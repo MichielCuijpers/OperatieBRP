@@ -1,0 +1,1608 @@
+Technisch ontwerp GBA functionaliteit in BRP
+
+0.10
+
+Datum
+Status
+
+12-07-2017
+Definitief
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................5
+BEKNOPTE OMSCHRIJVING ...................................................................................................................5
+REFERENTIES ........................................................................................................................................5
+LEESWIJZER ..........................................................................................................................................5
+
+2
+
+CONTEXT .................................................................................................................................................6
+FOUTAFHANDELING ..............................................................................................................................6
+
+3
+
+LEVERING AAN GBA AFNEMERS ................................................................................................7
+BRP MUTATIELEVERING ......................................................................................................................8
+Maak berichten .........................................................................................................................8
+Converteer naar LO3 ..............................................................................................................9
+Filter rubrieken .........................................................................................................................9
+Maak uitgaand bericht ...........................................................................................................9
+BRP VERZENDING ................................................................................................................................9
+
+4 PLAATSEN EN VERWIJDEREN VAN AFNEMERSINDICATIES DOOR GBA
+AFNEMERS ...................................................................................................................................................10
+GBA AFNEMERINDICATIES SERVICE .................................................................................................10
+Input ...........................................................................................................................................10
+Output ........................................................................................................................................10
+BRP INTERNE AFNEMERINDICATIE SERVICE ....................................................................................11
+plaatsAfnemerindicatie ........................................................................................................11
+verwijderAfnemerindicatie .................................................................................................12
+5
+
+ARCHIVERING VAN GBA BERICHTEN ...................................................................................13
+GBA ARCHIEF SERVICE .....................................................................................................................13
+Input ...........................................................................................................................................13
+
+6
+
+TOEVALLIGE GEBOORTE ..............................................................................................................14
+TOEVALLIGE GEBOORTE IN EEN GBA GEMEENTE .............................................................................14
+TOEVALLIGE GEBOORTE IN EEN BRP GEMEENTE .............................................................................14
+
+7
+
+TOEVALLIGE GEBEURTENIS .......................................................................................................15
+TOEVALLIGE GEBEURTENIS IN GBA GEMEENTE ...............................................................................15
+Input ...........................................................................................................................................15
+Output ........................................................................................................................................16
+BRP INTERNE BIJHOUDING SERVICE ................................................................................................16
+verwerkBericht ........................................................................................................................16
+TOEVALLIGE GEBEURTENIS IN EEN BRP GEMEENTE ........................................................................17
+
+8
+
+AD HOC GEGEVENSVERSTREKKING ......................................................................................18
+VIA NETWERK......................................................................................................................................18
+Input ...........................................................................................................................................18
+Output ........................................................................................................................................18
+VIA WEBSERVICE ................................................................................................................................19
+BRP INTERNE BEVRAGING SERVICE ..................................................................................................19
+
+9
+
+LO3 CONVERSIE BIBLIOTHEEK................................................................................................22
+IDENTIFICATIENUMMER MUTATIE BEPALING .....................................................................................23
+CONVERSIE .........................................................................................................................................23
+Persoon ......................................................................................................................................23
+Mutatie .......................................................................................................................................24
+
+Pagina 2 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+Wa11 ..........................................................................................................................................24
+Caching ......................................................................................................................................24
+FILTER .................................................................................................................................................24
+VulBericht-filter ......................................................................................................................25
+Resync-filter.............................................................................................................................25
+MutatieBericht-filter ..............................................................................................................25
+Wa11-filter ...............................................................................................................................25
+FORMATTERING...................................................................................................................................25
+Ag01, Ag11, Ag21 en Ag31 ...............................................................................................25
+Gv01 en Gv02 .........................................................................................................................26
+Ng01 ...........................................................................................................................................26
+Wa11 ..........................................................................................................................................26
+Wa11-Dubbele inschrijving ................................................................................................26
+10
+
+BIJLAGE A: VERWIJDEREN MIGRATIE SPECIFIEKE ONDERDELEN .................27
+
+MIGRATIE SPECIFIEKE PROJECTEN ...............................................................................................................27
+MIGRATIE SPECIFIEKE VERZENDING ............................................................................................................27
+MIGRATIE SPECIFIEKE MUTATIELEVERING ...................................................................................................27
+MIGRATIE SPECIFIEKE ADMINISTRATIEVE HANDELINGEN ..........................................................................28
+OPRUIMEN OVERIGE REFERENTIES...............................................................................................................28
+
+Pagina 3 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+18-07-2014
+21-07-2014
+
+0.1
+0.2
+
+Operatie BRP
+Operatie BRP
+
+28-05-2015
+
+0.3
+
+07-12-2015
+
+0.4
+
+22-12-2015
+29-01-2016
+
+0.5
+0.6
+
+19-08-2016
+24-05-2017
+09-06-2017
+
+0.7
+0.8
+0.9
+
+12-07-2017
+
+0.10
+
+Initiële versie
+Verwerking review commentaar; toevoegen
+bijlage over protocollering; toevoegen
+bijlage over verwijderen migratie
+programmatuur
+Bijwerken nav aangepaste historie
+verwerking (met name mutatie bepaling)
+Bijwerken met nieuwe routes; nieuwe
+indeling; naam document aangepast
+Verwijderen gba-levering-route
+Verwerken refactor (routes naar services);
+nalopen tbv release
+Verwerken refactor (levering model)
+Bijwerken met adhoc gegevensverstrekking
+Bijwerken bijlage verwijderen gba specifieke
+onderdelen
+Toevoegen component voor vrij bericht
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+18-07-2014
+
+0.1
+
+Review eerste opzet
+
+Operatie BRP
+
+09-12-2015
+
+0.4
+
+Review
+
+Operatie BRP
+
+29-08-2016
+
+0.7
+
+Review
+
+Operatie BRP
+
+Pagina 4 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+1
+
+Inleiding
+
+Beknopte omschrijving
+Dit technisch ontwerp beschrijft de functionaliteit in BRP ten behoeve van de duale periode
+waarin het GBA stelsel en het BRP stelsel naast elkaar bestaan. BRP.
+Referenties
+#
+[LO GBA]
+[FO Bidirectioneel]
+[FO UC1001]
+[FO UC1003]
+[SAD Migratie]
+[TO Conversie]
+[TO ISC]
+[TO Sync]
+
+Document
+Versie
+Datum
+Logisch Ontwerp GBA
+3.9
+31-01-2015
+Documentatie bidirectionele conversie
+Functioneel ontwerp UC1001
+Functioneel ontwerp UC1003
+Software Architecture Design Migratie
+Technisch ontwerp Conversie
+Technisch ontwerp ISC
+Technisch ontwerp BRP Synchronisatie
+Service
+[TO VOISC]
+Technisch ontwerp VOISC
+[SAD BRP]
+Software Architecture Design BRP
+[TO BRP]
+Technisch ontwerp BRP
+Nota: versienummers van ‘interne’ documenten worden niet opgenomen. Deze dienen consistent
+te zijn.
+
+Leeswijzer
+Hoofstuk 2 en 3 geven een overzicht van het systeem in componenten en hoe het systeem
+functioneert in het grotere geheel van de systemen. Hoofdstuk 4 geeft details over de
+componenten en hoe deze samenwerken met de BRP componenten. Hoofdstuk 5 geeft details
+over de interne werking van de LO3 conversie componenten; de details in dit hoofdstuk zijn niet
+relevant voor het BRP systeem en kunnen door een lezer die alleen belang heeft bij de impact op
+het BRP systeem worden overgeslagen.
+
+Pagina 5 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+2
+
+Context
+
+Tijdens de ‘duale’ periode dienen de GBA en BRP stelsels naast elkaar te bestaan en dienen de
+gemeenten, die zich in één van beide stelsels bevinden, met elkaar te kunnen samenwerken om
+de persoonsgegevens bij te houden en te leveren aan afnemers.
+Er is voor gekozen om de BRP voorziening in principe alleen te laten voorzien in de functionaliteit
+die benodigd is voor het BRP stelsel. De ‘migratievoorzieningen’ voorzien in de functionaliteit die
+benodigd is voor het GBA stelsel. Deze migratievoorzieningen zijn zoveel mogelijk ontkoppeld
+van de BRP functionaliteit, maar dat is niet in elke situatie haalbaar (of gewenst). Voor de
+volgende functionaliteiten is binnen de BRP voorziening ‘migratie-functionaliteit’ geplaatst.
+
+•
+•
+•
+•
+
+Het leveren van wijzigingen aan afnemers in het GBA formaat
+Het handmatig plaatsen en verwijderen van afnemersindicaties door afnemers
+Alle ingaande en uitgaande berichten dienen te worden gearchiveerd in het berichtarchief
+van BRP
+Het verwerken van een toevallige geboorte of gebeurtenis waarbij de betrokken
+gemeenten zich in verschillende stelsels bevinden
+
+Voor de benodigde functionaliteit is in vele gevallen een koppelvlak binnen BRP gecreëerd,
+waarmee de migratievoorziening met de BRP functionaliteit kan communiceren. In een enkel
+geval (conversie van gegeven van BRP naar GBA formaat) is de volledige functionaliteit
+opgenomen in de BRP voorziening. Er is voor gekozen om in dat geval de functionaliteit op te
+nemen in de BRP voorziening omdat alle benodigde gegevens (persoonslijst, stamgegevens,
+conversietabellen) zich in de BRP voorziening bevinden.
+
+Foutafhandeling
+Indien er technische fouten optreden in een service, dan wordt het bericht niet verwerkt en
+wordt de standaard afhandeling gebruikt zoals die door de message broker ([TO BRP]) wordt
+ondersteund. De verwerking van een bericht wordt opnieuw geprobeerd en na een aantal keer
+gefaald te zijn zal het berichten op een Dead Letter Queue (DLQ) worden geplaatst.
+
+Pagina 6 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+3
+
+Levering aan GBA afnemers
+
+Functioneel gezien zijn er twee informatie stromen waardoor levering wordt getriggerd. Deze
+informatiestromen bestaan zowel als een LO3 (zie [FO UC1001] en [FO UC1003]), als een BRP
+variant.
+Informatie
+
+Variant
+
+Omschrijving
+
+Bijhouding door gemeente
+
+BRP
+
+Een bijhouding door de gemeente (via de BZM)
+resulteert in het opslaan van een administratieve
+handeling in de database. Deze administratieve
+handeling (AH.id) wordt aan de BRP levering
+module doorgegeven via de Bijhoudingen queue.
+Het BRP leveringen subcomponent leest de
+administratieve handeling van de queue en bepaalt
+op basis van de opgeslagen abonnementsgegevens
+welke berichten (BRP of LO3) gemaakt moeten
+worden en of er afnemerindicaties aangemaakt
+dienen te worden (via de interne afnemerindicaties
+service). De berichten worden op de specifieke
+afnemers queue gezet en uiteindelijk verstuurd
+door de BRP verzending module. Een LO3 bericht
+zal door de BRP verzending module via de Levering
+queue aan ISC worden geleverd die het bericht via
+de VOISC verstuurt aan de mailbox van de
+afnemer. Een BRP bericht wordt door de BRP
+verzending module afgeleverd bij de BRP afnemer.
+Een actualisering door de gemeente resulteert in
+een Lg01 bericht dat via de mailbox en de VOISC
+module aan ISC wordt aangeboden. ISC verstuurt
+een synchronisatie verzoek aan de BRP
+synchronisatie module die de persoonslijst bijwerkt
+in de BRP database en de administratieve
+handeling registreert op de Bijhoudingen queue.
+Vanaf dit moment volgt de stroom dezelfde
+handelingen als de BRP variant.
+Een BRP afnemer kan via de BRP Afnemerindicatie
+webservice een afnemerindicatie plaatsen of
+verwijderen. Dit resulteert in het onderhouden van
+een afnemerindicatie (via de interne
+afnemerindicatie service) en eventueel het maken
+van een (vul)bericht. Het vulbericht wordt
+vervolgens via de specifieke afnemers queue en de
+BRP verzending module verstuurd naar de BRP
+afnemer.
+Een LO3 afnemer kan via een Ap01 of Av01 bericht
+afnemerindicaties onderhouden. Deze berichten
+worden via de mailbox en VOISC aangeboden aan
+ISC. ISC zal via de BRP synchronisatie service een
+bericht op de GbaAfnemerindicaties queue
+zetten. De GBA Afnemerindicaties service zal dit
+bericht oppakken en (via de interne
+afnemerindicatie service) een afnemerindicatie
+onderhouden. Na het plaatsen van de
+afnemerindicatie wordt een (Ag01) bericht op de
+specifieke afnemers queue geplaatst. Het Ag01
+bericht wordt via de BRP verzending module aan de
+
+LO3
+
+Onderhouden
+afnemerindicatie
+
+BRP
+
+LO3
+
+Pagina 7 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+ISC verstuurd op de levering queue. ISC koppelt
+het leveringsbericht aan het proces wat het Ap01
+bericht heeft afgehandeld en verstuurt vervolgens
+het bericht via de VOISC en de mailbox aan de
+afnemer.
+Let op: dit betekent dus dat een LO3 afnemer via het plaatsen van een afnemerindicatie nooit
+een BRP vulbericht kan veroorzaken (en vice versa). Een bijhouding uit één van beide stelsels
+kan leiden tot leveringen in beide stelsels.
+
+BRP Mutatielevering
+Project
+Levering-service\mutatielevering
+Packages
+nl.bzk.brp.levering.mutatielevering.service.lo3
+Klassen
+nl.bzk.brp.levering.mutatielevering.service.lo3 MaakLo3BerichtService
+nl.bzk.brp.levering.mutatielevering.service.lo3 MaakLo3BerichtServiceImpl
+
+BRP Mutatielevering wordt beschreven in [TO BRP]. Bij de verwerking van een administratieve
+handeling (gedefinieerd in de klasse nl.bzk.brp.levering.mutatielevering.service.
+VerwerkHandelingServiceImpl) een migratie specifieke service (gedefinieerd in de klasse
+MaakLo3BerichtServiceImpl) aangeroepen voor LO3 leveringen.
+Deze levering van LO3 berichten wordt in dit ontwerp beschreven; de overige functionaliteit van
+de BRP mutatielevering wordt hier buiten beschouwing gelaten.
+De MaakLo3BerichtServiceImpl wordt aangeroepen met de volgende parameters (koppelvlak
+met BRP functionaliteit):
+Parameter
+mutatieleveringen
+
+Omschrijving
+De mutatieleveringen waarvoor (eventueel)
+LO3 berichten verstuurd moeten worden
+
+Als voor een Mutatielevering geldt dat het stelsel ‘GBA’ is, dan worden door de
+MaakLo3BerichtServiceImpl de migratie specifieke stappen aangeroepen om LO3 berichten te
+maken voor deze levering. De volgende stappen worden uitgevoerd (en maken gebruik van de
+conversie bibliotheek zoals beschreven in hoofdstuk 10).
+
+Maak berichten
+Deze stap roept de methode maakBerichten van de Lo3 Conversie service BerichtFactory aan
+welke resulteert in een lijst van Bericht objecten.
+Het Bericht object fungeert als interface tussen de stappen en de LO3 conversie bibliotheek. De
+implementerende klasse zorgt voor de compatibiliteit met hergebruikte BRP stappen en bevat de
+tussenresultaten zonder deze expliciet uit te wisselen tussen de stappen. Hierdoor worden de
+omringende BRP klassen niet belast met specifieke migratie functionaliteit en wordt de scheiding
+gemaximaliseerd.
+Nota: voor het bepalen van de berichten wordt de identificatienummer mutatie bepaling
+aangeroepen om eventueel een additioneel a-nummer wijzigingsbericht te kunnen versturen.
+
+Pagina 8 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+Converteer naar LO3
+Deze stap roept de methode converteerNaarLo3 aan op alle Bericht objecten die resulteren uit
+de stap ‘Maak berichten’.
+Nota: in de verwerking wordt een cache voor geconverteerde gegevens gebruikt, zodat voor de
+verwerking van meerdere abonnementen (ten behoeve van één administratieve handeling)
+slechts één keer een conversie hoeft te worden uitgevoerd.
+
+Filter rubrieken
+Deze stap bepaalt op basis van de Dienstbundel in het MutatieLevering de lijst met rubrieken.
+Met deze rubrieken wordt de methode filterRubrieken aangeroepen op alle Bericht objecten.
+Indien het bericht geen informatie (alle rubrieken worden gefilterd) meer bevat zal het Bericht
+object uit de lijst met Bericht objecten worden verwijderd. Indien de lijst met Bericht objecten
+geen berichten meer bevat zal de verdere verwerking worden gestaakt.
+
+Maak uitgaand bericht
+Deze stap roept de methode maakUitgaandBericht aan op alle Bericht objecten. Het resultaat
+wordt geregistreerd als Mutatiebericht en uiteindelijk als resultaat lijst van de aanroep van de
+MaakLo3BerichtServiceImpl.
+
+BRP Verzending
+BRP Verzending wordt beschreven in [TO Verzending]. Tijdens het uitvoeren van de route wordt
+op basis van de header ‘JMSType’ bepaald of een bericht via LO3 geleverd dient te worden.
+Indien het bericht via LO3 geleverd dient te worden wordt de processor VerzendLO3Stap
+uitgevoerd.
+De VerzendLO3Stap registreert het te verzenden bericht op de Lo3Queue. Als metadata bij het
+bericht worden de ontvangende partij, de administratieve handeling id (in geval van een
+mutatie) en het referentienummer (in geval van het plaatsen van een afnemerindicatie)
+geregistreerd.
+
+Pagina 9 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+4
+
+Plaatsen en verwijderen van afnemersindicaties door GBA afnemers
+
+Het plaatsen en verwijderen van afnemersindicaties door GBA afnemers wordt grotendeels
+ondersteund door functionaliteit in de migratievoorzieningen. Echter om de daadwerkelijke
+afnemersindicatie uiteindelijk te plaatsen wordt de BRP functionaliteit die hiervoor bestemd is
+gebruikt. Door deze BRP functionaliteit te gebruiken wordt gegarandeerd dat autorisatie- en
+bedrijfsregels, zoals deze in BRP gelden, worden uitgevoerd en afgedwongen.
+
+GBA Afnemerindicaties service
+
+Project
+gba\gba-centrale
+Packages
+nl.bzk.brp.gba.centrale
+nl.bzk.brp.gba.centrale.berichten
+nl.bzk.brp.gba.centrale.services
+Klassen
+nl.bzk.brp.gba.centrale.GbaMessageListener
+nl.bzk.brp.gba.centrale.services.AfnemerindicatiesService
+nl.bzk.brp.gba.centrale.services.GbaService
+De GBA afnemerindicaties service (gedefinieerd in klasse AfnemerindicatiesService) leest van
+de GbaAfnemerindicaties queue en bestaat uit twee stappen alvorens het antwoord te
+registreren op de GbaAfnemerindicatiesAntwoord queue. De eerste stap zorgt voor het
+aanroepen van de relevante methode van de BRP Interne Afnemerindicatie service. De tweede
+stap zorgt, enkel als het om het plaatsen van een afnemerindicatie gaat en dit is gelukt, voor het
+aanroepen van de verschillende services in de LO3 conversie bibliotheek om de (via BRP
+services) gelezen persoonsgegevens te converteren naar een Ag01 leveringsbericht en deze te
+versturen naar de afnemer specifieke queue.
+Input
+Klasse
+nl.bzk.brp.centrale.berichten.AfnemerindicatieOnderhoudOpdracht
+Let op: dit dient technisch gelijk te zijn aan nl.bzk.migratiebrp.synchronisatie.runtime.
+bericht.brp.AfnemerindicatieOnderhoudOpdracht welke wordt gebruikt om het bericht aan te
+maken.
+Attribuut
+
+Gerelateerd database veld
+
+Omschrijving
+
+persoonId
+toegangLeveringsautorisatieId
+
+Kern.Pers.Id
+AutAut.ToegangLevsautorisatie.
+Id
+
+dienstId
+effectAfnemerindicatie
+
+AutAut.Dienst.Id
+AutAut.
+Effectafnemerindicaties.Naam
+-
+
+Persoon – technisch id
+Toegang
+Leveringsautorisatie –
+technisch id
+Dient – technisch id
+Effect afnemerindicatie
+(plaatsen of verwijdering)
+Referentienummer
+
+referentienummer
+
+Output
+
+Pagina 10 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+Klasse
+nl.bzk.brp.centrale.berichten.AfnemerindicatieOnderhoudAntwoord
+Let op: dit dient technisch gelijk te zijn aan nl.bzk.migratiebrp.synchronisatie.runtime.
+bericht.brp.AfnemerindicatieOnderhoudAntwoord welke wordt gebruikt om het bericht te
+lezen.
+Attribuut
+
+Gerelateerd database veld
+
+Omschrijving
+
+-
+
+Foutcode indien het bericht niet
+succesvol verwerkt kon worden.
+Referentienummer
+
+foutcode
+Referentienummer
+
+BRP Interne afnemerindicatie service
+Package
+nl.bzk.brp.levering.service.onderhoudafnemerindicatie_gba
+De BRP Interne afnemerindicatie service (gedefinieerd in klasse
+GbaOnderhoudAfnemerindicatieService) is een koppelvlak naar BRP functionaliteit die gebruikt
+wordt door de migratie specifieke functionaliteit (de GBA afnemerindicaties route). De werking
+van deze service staat beschreven in [TO BRP], maar ten behoeve van het overzicht en de
+koppeling wordt hier de gebruikte interface opgenomen.
+plaatsAfnemerindicatie
+Met deze methode wordt een afnemerindicatie geplaatst.
+4.2.1.1
+
+Input
+Parameter
+
+Omschrijving
+
+toeganglevingautorisatie
+persoonId
+verantwoordingDienstId
+datumAanvangMaterielePeriode
+
+Toegang Leveringsautorisatie
+Persoon – technisch id
+Dienst – technisch id
+Datum aantal materiele periode (niet gebruikt door
+migratie)
+DatumTijd einde volgen (niet gebruikt door migratie)
+
+datumTijdEindeVolgen
+4.2.1.2
+
+Output
+Klasse
+nl.bzk.brp.levering.service.afnemerindicatie.BewerkAfnemerindicatieResultaat
+Attribuut
+administratieveHandelingId
+
+-
+
+Soort
+
+-
+
+Regel
+
+Omschrijving
+Administratieve handeling (niet gebruikt door
+migratie)
+Meldingen
+Soort melding (indien een succesvol verwerkte
+opdracht een melding van het soort FOUT
+bevat, dan is de opdracht functioneel gefaald)
+De overtreden regel
+
+-
+
+Melding
+
+Melding tekst
+
+-
+
+ReferentieID
+
+Referentie (niet gebruikt door migratie)
+
+Melding
+
+Pagina 11 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+De meldingen worden ‘vertaald’ naar de LO3 foutcode zoals beschreven in het [FO UC1003].
+verwijderAfnemerindicatie
+Met deze methode wordt een afnemerindicatie verwijderd.
+
+4.2.2.1
+
+4.2.2.2
+
+Input
+Parameter
+
+Omschrijving
+
+toeganglevingautorisatie
+persoonId
+verantwoordingDienstId
+
+Toegang Leveringsautorisatie
+Persoon – technisch id
+Dienst – technisch id
+
+Output
+Klasse
+nl.bzk.brp.levering.service.afnemerindicatie.BewerkAfnemerindicatieResultaat
+Attribuut
+
+Omschrijving
+
+administratieveHandelingId
+
+-
+
+Soort
+
+-
+
+Regel
+
+Administratieve handeling (niet gebruikt door
+migratie)
+Meldingen
+Soort melding (indien een succesvol verwerkte
+opdracht een melding van het soort FOUT
+bevat, dan is de opdracht functioneel gefaald)
+De overtreden regel
+
+-
+
+Melding
+
+Melding tekst
+
+-
+
+ReferentieID
+
+Referentie (niet gebruikt door migratie)
+
+Melding
+
+De meldingen worden ‘vertaald’ naar de LO3 foutcode zoals beschreven in het [FO UC1003].
+
+Pagina 12 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+5
+
+Archivering van GBA berichten
+
+Wanneer in de migratievoorzieningen een bericht wordt verzonden naar of ontvangen van de
+GBA mailbox, dient dit bericht te worden geregistreerd in het BRP bericht archief. Binnen de
+migratievoorzieningen gebeurt dit door het VOISC component. Het VOISC component registreert
+een archivering verzoek binnen de migratievoorzieningen welke door het BRP Synchronisatie
+Service component wordt opgepakt en verstuurd naar de GBA Archief route binnen BRP.
+
+GBA Archief service
+
+Project
+brp\brp-delivery\brp-delivery-bevraging-gba
+brp\archivering\archivering-delivery\archivering-delivery-dal
+brp\archivering\archivering-service\archivering-service-algemeen
+brp\archivering\archivering-domain\archivering-domain-algemeen
+Packages
+nl.bzk.brp.delivery.archivering.gba
+nl.bzk.brp.delivery.archivering.delivery.dal
+nl.bzk.brp.delivery.archivering.service.algemeen
+nl.bzk.brp.delivery.archivering.domain.algemeen
+Klassen
+nl.bzk.brp.delivery.archivering.gba.ArchiveringMessageListener
+nl.bzk.brp.archivering.service.algemeen.ArchiefService
+nl.bzk.brp.archivering.domain.algemeen.ArchiveringOpdracht
+De ArchiveringMessageListener leest van de GbaArchiveringQueue en slaat met behulp van
+de ArchiefService uit de BRP de gegeven ArchiveringOpdracht op in de BRP database.
+
+Input
+Klasse
+nl.bzk.brp.archivering.domain.algemeen.ArchiveringOpdracht
+Attribuut
+
+Gerelateerd database veld
+
+Omschrijving
+
+soortBericht
+richting
+zendendePartijId
+zendendeSysteem
+ontvangendePartijId
+ontvangendeSysteem
+Referentienummer
+crossReferentienummer
+tijdstipRegistratie
+tijdstipVerzending
+tijdstipOntvangst
+data
+
+ber.ber.Srt
+ber.ber.Richting
+ber.ber.zendendepartij
+ber.ber.zendendesysteem
+ber.ber.ontvangendepartij
+ber.ber.ontvangendesysteem
+ber.ber.referentienr
+ber.ber.crossreferentienr
+ber.ber.tsreg
+ber.ber.tsverzending
+ber.ber.tsontv
+ber.ber.data
+
+Soort bericht
+Ingaand of uitgaand
+Zendende partij
+Zendende systeem
+Ontvangende partij
+Ontvangende systeem
+Referentienummer
+Cross-referentienummer
+Tijdstip registratie
+Tijdstip verzending
+Tijdstip ontvangst
+Bericht gegegevens
+
+Pagina 13 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+6
+
+Toevallige geboorte
+
+Een toevallige geboorte is een voorval waarbij het (nieuw in te schrijven) kind is geboren in een
+gemeente waar het volgens de regel niet ingeschreven dient te worden. De gemeente waar de
+geboorte wordt geregistreerd dient een bericht te sturen naar de gemeente waar de ouder uit
+wie het kind is geboren als ingezetene is ingeschreven.
+De toevallige geboorte kent binnen de duale periode een aantal varianten, die voor deze
+functionaliteit relevant zijn:
+
+•
+•
+
+Een geboorte in een GBA gemeente, waarbij de ouder uit wie het kind is geboren
+ingeschreven is in een BRP gemeente.
+Een geboorte in een BRP gemeente, waarbij de ouder uit wie het kind is geboren
+ingeschreven is in een GBA gemeente.
+
+In de overige varianten (beide gemeenten bevinden zich in hetzelfde stelsel) wordt de duale
+functionaliteit niet geraakt.
+
+Toevallige geboorte in een GBA gemeente
+Wanneer het kind is geboren in een GBA gemeente, zal deze gemeente een Tb01 bericht
+versturen naar de gemeente waarbij de ouder uit wie het kind is geboren is ingeschreven. Dit
+Tb01 wordt door het ISC verwerkt (zie [UC307]) en verstuurd naar de BRP Synchronisatie
+Service. De BRP Synchronisatie Service zal het bericht inhoudelijk vertalen en versturen naar
+BRP op de GbaGeboorte queue.
+Ten behoeve van de GBA cyclus dienen de uiteindelijk opgeslagen persoonsgegevens (inclusief
+identificatienummers die worden uitgegeven door de gemeente van inschrijving) terug gemeld te
+worden aan de feit gemeente (de gemeente waar het feit initieel is vastgelegd).
+
+Toevallige geboorte in een BRP gemeente
+Wanneer het kind is geboren in een BRP gemeente, zal deze gemeente een BRP
+bijhoudingsvoorstel doen om het kind te registreren. Dit bijhoudingsvoorstel dient te worden
+geconverteerd en verstuurd als Tb01 bericht naar de GBA gemeente. Het door de GBA gemeente
+rapporteerde Tv01 (verwijsgegevens) bericht kan worden genegeerd.
+
+Pagina 14 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+7
+
+Toevallige gebeurtenis
+
+Een toevallige gebeurtenis (betreft een bestaande inschrijving), is een voorval waarbij het feit
+plaatsvindt in een andere gemeente dan waar de registratie van dit feit dient plaats te vinden.
+Bijvoorbeeld: een huwelijk wordt gesloten tussen twee personen in een gemeente anders dan de
+gemeente waarin deze personen staan ingeschreven.
+De toevallige gebeurtenis kent binnen de duale periode een aantal varianten, die voor deze
+functionaliteit relevant zijn:
+
+•
+•
+
+Een gebeurtenis in een GBA gemeente, waarbij de hoofdpersoon in een BRP gemeente is
+ingeschreven.
+Een gebeurtenis in een BRP gemeente, waarbij de hoofdpersoon in een GBA gemeente is
+ingeschreven.
+
+In de overige varianten (beide gemeenten bevinden zich in hetzelfde stelsel) wordt de duale
+functionaliteit niet geraakt.
+
+Toevallige gebeurtenis in GBA gemeente
+Wanneer het rechtsfeit heeft plaatsgevonden in een GBA gemeente, zal deze gemeente een Tb02
+bericht versturen naar de gemeente waarbij de hoofdpersoon is ingeschreven. Dit Tb02 wordt
+door het ISC verwerkt (zie [UC309]) en verstuurd naar de BRP Synchronisatie Service. De BRP
+Synchronisatie Service zal het bericht inhoudelijk vertalen en versturen naar BRP op de
+GbaToevalligeGebeurtenissen queue.
+
+Project
+gba\gba-centrale
+Packages
+nl.bzk.brp.gba.centrale
+nl.bzk.brp.gba.centrale.berichten
+nl.bzk.brp.gba.centrale.services
+Klassen
+nl.bzk.brp.gba.centrale.GbaMessageListener
+nl.bzk.brp.gba.centrale.services.ToevalligeGebeurtenisService
+nl.bzk.brp.gba.centrale.services.GbaService
+De GBA toevallige gebeurtenis service (gedefinieerd in klasse ToevalligeGebeurtenisService)
+leest van de GbaToevalligeGebeurtenissen queue, verwerkt de binnenkomende gegevens,
+roept de interne BRP bijhouding service aan, verwerkt het resultaat en verstuurt een antwoord
+op de GbaToevalligeGebeurtenissenAntwoorden queue.
+De BRP Synchronisatie Service zal het antwoord bericht van de
+GbaToevalligeGebeurtenissenAntwoorden queue oppakken, vertalen en versturen naar het
+ISC, waardoor de cyclus vervolgd kan worden.
+
+Input
+
+Pagina 15 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+Omdat de gegevens die betrekking hebben op de toevallige gebeurtenis zeer verschillend kunnen
+zijn, is ervoor gekozen om de input gelijk te houden aan de input die de BRP bijhouding
+verwacht; met dien verstande dat alleen de administratieve handelingen worden geaccepteerd
+die specifiek voor de migratievoorzieningen zijn bedoeld.
+
+Output
+Het verwerkingsresultaat uit de interne bijhouding service wordt gebruikt om een
+antwoordbericht te vullen. De belangrijkste elementen uit dit antwoordbericht zijn de
+administratieve handeling en de meldingen. De administratieve handeling wordt gebruikt om in
+de migratievoorzieningen een referentie naar BRP op te nemen. De meldingen worden gebruikt
+om te bepalen of de bijhouding succesvol is uitgevoerd en om bij fouten te bepalen welke fout is
+opgetreden.
+Nota: de specifieke vertaling van BRP bedrijfsregel naar GBA foutreden staat beschreven in de
+desbetreffende use case en wordt uitgevoerd door de BRP Synchronisatie Service van de
+migratievoorzieningen.
+
+BRP Interne bijhouding service
+Package
+nl.bzk.brp.bijhouding.business
+De interne BRP service om bijhoudingen te verwerken (gedefinieerd in klasse
+BijhoudingService) is een koppelvlak naar BRP functionaliteit die gebruikt wordt door de
+migratie specifieke functionaliteit (de GBA toevallige gebeurtenissen route).
+Ten behoeve van het overzicht en de koppeling wordt hier de gebruikte interface opgenomen.
+Deze wordt beschreven in [TO BRP].
+verwerkBericht
+Met deze methode wordt een bijhouding verwerkt in BRP.
+7.2.1.1
+
+Input
+Parameter
+bericht
+
+Omschrijving
+Bijhouding verzoek bericht
+
+Nota: het bijhouding verzoek bericht kan worden geïnstantieerd door gebruik te maken van de
+BijhoudingVerzoekBerichtParser om het ‘tekst’-bericht te ontleden.
+Ten behoeve van de autorisatie van BRP wordt bij het verzoek geregistreerd dat dit wordt
+getransporteerd en ondertekend door ISC door het doorgeven van de OIN van de partij met de
+code ‘199902’.
+
+7.2.1.2
+
+Output
+Output
+
+Omschrijving
+
+resultaat
+
+Het bijhouding antwoord bericht
+
+Nota: het bijhouding antwoord bericht kan worden geformateerd tot een ‘tekst’-bericht door
+gebruik te maken van de BijhoudingAntwoordBerichtWriter.
+
+Pagina 16 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+Toevallige gebeurtenis in een BRP gemeente
+Wanneer het rechtsfeit heeft plaatsgevonden in een BRP gemeente, zal deze gemeente een BRP
+bijhoudingsvoorstel doen om het feit te registreren. Dit bijhoudingsvoorstel dient te worden
+geconverteerd en verstuurd als Tb02 bericht naar de GBA gemeente. Binnen de stappen waarin
+het bijhoudingsplan wordt bepaald zal worden bepaald dat de rechtsgemeente een GBA
+gemeente is. Hierna zal in plaats van een BRP notificatie een GBA bericht worden opgesteld. Het
+opstellen van dit GBA bericht vindt plaats tijdens het opstellen van de notificatie berichten. Het
+bericht zal op de desbetreffende verzending queue worden geplaatst en dezelfde weg doorlopen
+als bij de levering van GBA berichten.
+
+Pagina 17 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+8
+
+Ad hoc gegevensverstrekking
+
+Ad hoc gegevensverstrekking is het leveren van persoonsgegevens naar aanleiding van adhoc
+vragen van GBA afnemers. Hiervoor wordt de bevraging functionaliteit uit de BRP gebruikt. Door
+deze BRP functionaliteit te gebruiken wordt gegarandeerd dat autorisatie- en bedrijfsregels, zoals
+deze in BRP gelden, worden uitgevoerd en afgedwongen. Adhoc gegevens verstrekking kan via
+het netwerk of via webservices plaatsvinden.
+Via netwerk
+Projecten
+brp\brp-delivery\brp-delivery-bevraging-gba
+gba\gba-domain
+Packages
+nl.bzk.brp.service.bevraging.gba
+nl.bzk.brp.gba.domain.bevraging
+De PersoonsvraagMessageListener en AdresvraagMessageListener objecten lezen van de
+GbaAdhocPersoonsvraagVerzoek en GbaAdhocAdresvraagVerzoek queues respectievelijk.
+De berichten (zie paragraaf 8.1.1) worden vervolgens door specifieke verwerkers (zie paragraaf
+8.3) verwerkt en het antwoord (zie paragraaf 8.1.2) wordt geplaatst op de
+GbaAdhocPersoonsvraagAntwoord en
+GbaAdhocAdresvraagAntwoord queues respectievelijk.
+Input
+Klasse
+nl.bzk.brp.gba.domain.bevraging.Persoonsvraag
+Attribuut
+
+Gerelateerd database veld
+
+Omschrijving
+
+partijCode
+zoekCriteria
+zoekRubrieken
+
+Kern.Partij.Code
+-
+
+gevraagdeRubrieken
+
+-
+
+soortDienst
+
+-
+
+Partij code
+Lijst van BRP zoek criteria
+Lijst van LO3 zoek rubrieken
+benodigd voor autorisatie
+Lijst van gevraagde LO3 rubriek
+nummers
+Soort dienst enum
+
+Klasse
+nl.bzk.brp.gba.domain.bevraging.Adresvraag
+Idem als persoonsvraag, met als aanvulling:
+Attribuut
+Gerelateerd database veld
+soortIdentificatie
+-
+
+Omschrijving
+Adres- of persoonsidentificatie
+
+Output
+Klasse
+nl.bzk.brp.gba.domain.bevraging.Persoonsantwoord
+Idem voor Adresantwoord:
+
+Pagina 18 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+Attribuut
+
+Gerelateerd database veld
+
+Omschrijving
+
+-
+
+Foutcode indien het bericht niet
+succesvol verwerkt kon worden.
+Inhoud van het Netwerk bericht
+
+foutcode
+inhoud
+
+Via webservice
+Projecten
+brp\brp-delivery\brp-delivery-bevraging-gba-ws
+brp\gba\gba-domain
+Packages
+nl.bzk.brp.service.bevraging.gba.ws
+nl.bzk.brp.service.bevraging.gba.ws.model
+nl.bzk.brp.service.bevraging.gba.ws.validators
+nl.bzk.brp.service.bevraging.gba.ws.vertaler
+nl.bzk.brp.gba.domain.bevraging
+
+webservice impl en bijbehorende
+verwerkers
+klassen om vraag te interpreteren
+en antwoord op te bouwen
+validaties voor de adhoc vraag en
+opvragen persoonslijst
+Foutcode vertalingen
+domein klassen
+
+De adhoc webservice is gebaseerd op de WSDL definitie vanuit de GBA-V zoals bijgevoegd in de
+folder reference/LrdPlus.wsdl.
+Voor de implementatie wordt Apache CXF gebruikt, waarbij vanuit de WSDL en bijbehorende
+XSD’s Java classes worden gegenereerd met behulp van JAXB.
+Webservice
+
+Implementatie
+
+Gebruikte verwerkers
+
+adhocService
+
+AdhocServiceImpl
+
+vraagPLService
+
+VraagPLServiceImpl
+
+PersoonsvraagVerwerker
+AdresvraagVerwerker
+OpvragenPLVerwerker
+
+Vervolgens wordt dezelfde interface naar BRP gebruikt als voor de netwerkvragen. Zie paragraaf
+8.3.
+BRP interne bevraging service
+Projecten
+brp\brp-service\brp-service-bevraging-gba
+Packages
+nl.bzk.brp.service.bevraging.gba.adres
+nl.bzk.brp.service.bevraging.gba.bericht
+nl.bzk.brp.service.bevraging.gba.generiek
+nl.bzk.brp.service.bevraging.gba.persoon
+Voor adhoc gegevensverstrekking wordt gebruik gemaakt van de bevraging functionaliteit van de
+BRP. De werking van deze service staat beschreven in [TO BRP]. De koppeling tussen de adhoc
+gegevensverstrekking binnen de migratie met de BRP wordt hieronder beschreven.
+Als ingang in de BRP wordt de interface BevragingVerzoekVerwerker gebruikt. De verwerk
+methode neemt een instantie van type BevragingVerzoek en een BevragingCallback. De
+callback wordt na het verwerken van het verzoek aangeroepen met als resultaat ofwel een lijst
+van (fout)meldingen ofwel een lijst van gevonden (beperkte) persoonslijsten.
+
+Pagina 19 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+Vervolgens wordt per persoonslijst de volledige persoonslijst opgehaald. Deze wordt daarna
+gefilterd aan de hand van de gevraagde rubrieken.
+Er worden verschillende typen BevragingVerzoek gebruikt voor de netwerkvraag en de
+webservice vraag en voor de persoons- en adresvraag. Op basis van deze typen kan onderscheid
+gemaakt worden tussen wel of niet moeten archiveren/protocolleren.
+
+Pagina 20 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+9
+
+Vrij bericht
+
+Vrije berichten zijn berichten (zonder functionele betekenis voor het systeem) die worden
+verstuurd tussen de verschillende partijen binnen het systeem.
+Via netwerk
+Projecten
+brp\brp-delivery\brp-delivery-vrijbericht-gba
+gba\gba-domain
+Packages
+nl.bzk.brp.delivery.vrijbericht.gba
+nl.bzk.brp.gba.domain.bevraging
+De VrijBerichtMessageListener en leest van de GbaVrijeBerichten queues.
+De berichten worden vervolgens verwerkt door de interne BRP vrij bericht service en het
+antwoord wordt geplaatst op de GbaVrijeBerichtenAntwoorden queue.
+Input
+Klasse
+nl.bzk.brp.gba.domain.vrijbericht.VrijBerichtOpdracht
+Attribuut
+
+Gerelateerd database veld
+
+Omschrijving
+
+verzendendePartijCode
+verzendendePartijCode
+bericht
+referentienummer
+
+Kern.Partij.Code
+Kern.Partij.Code
+-
+
+Partij code verzender
+Partij code ontvanger
+De inhoud van het vrije bericht
+Referentienummer
+
+Output
+Klasse
+nl.bzk.brp.gba.domain.vrijbericht. VrijBerichtAntwoord
+Attribuut
+
+Gerelateerd database veld
+
+Omschrijving
+
+geslaagd
+
+-
+
+referentienummer
+
+-
+
+Indicatie of het vrije bericht correct is
+verwerkt
+Referentienummer
+
+BRP interne vrij bericht service
+Projecten
+brp\brp-service\brp-service-vrijbericht
+Packages
+nl.bzk.brp.service.vrijbericht
+Voor het verwerken van vrije berichten van het GBA stelsel wordt gebruik gemaakt van de vrij
+bericht functionaliteit van de BRP. Als ingang in de BRP wordt de interface VrijBerichtService
+gebruikt. De verwerkVerzoek methode neemt een instantie van type VrijBerichtVerzoek. Als
+resultaat wordt een VrijBerichtResultaat geretourneerd. De werking van deze service staat
+beschreven in [TO BRP].
+
+Pagina 21 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+10
+
+LO3 Conversie bibliotheek
+
+De LO3 Conversie bibliotheek verzorgt de conversie van BRP gegevens naar LO3 en ondersteunt
+het maken van de leveringsberichten. Hiervoor wordt initieel door een BerichtFactory object
+een (lijst van) Bericht object(en) opgesteld, waarbij een Bericht object alle informatie bevat
+die nodig is voor de conversie, filtering en formattering van het leveringsbericht.
+De bibliotheek wordt ook gebruikt als koppelpunt tussen BRP programmatuur en
+migratievoorzieningen. Hiervoor is een interface gedefinieerd waardoor de koppeling tussen de
+verschillende ‘werelden’ zo klein mogelijk wordt gemaakt.
+BerichtFactory
+Methode
+maakBerichten
+
+Parameter
+leveringAutorisatie
+populatie
+administratieveHandeling
+identificatienummerMutatieResultaat
+
+maakAg01Bericht
+persoon
+
+Omschrijving
+Maak berichten voor abonnement
+Levering autoristatie
+Map van alle betrokken personen
+De administratieve handeling
+waarvoor deze levering is
+Het resultaat van de
+identificatienummer mutatie
+bepaling
+Maak vulbericht tbv plaatsen
+afnemerindicatie
+Betrokken persoon
+
+Bericht
+Methode
+converteerNaarLo3
+
+Parameter
+
+Omschrijving
+Converteer naar LO3 rubrieken
+Cache
+Filter rubrieken
+Rubrieken
+Maak uitgaand tekst bericht
+
+Cache
+filterRubrieken
+rubrieken
+maakUitgaandBericht
+
+Het volgende overzicht geeft de configuratie van berichten weer die gebruikt worden. De
+verschillende onderdelen van de configuratie worden later gespecificeerd.
+Bericht
+Ag01
+
+Conversie
+Persoon
+
+Filter
+VulBericht
+
+Formattering
+Ag (Code Ag01)
+
+Ag11
+
+Persoon
+
+VulBericht
+
+Ag (Code Ag11)
+
+Ag21
+
+Persoon
+
+VulBericht
+
+Ag (Code Ag21)
+
+Ag31
+
+Persoon
+
+Resync
+
+Ag (Code Ag31)
+
+Gv01
+Gv02
+
+Mutatie
+Mutatie
+
+MutatieBericht
+MutatieBericht
+
+Gv (Code Gv01)
+Gv (Code Gv02)
+
+Wa11
+
+Wa11
+
+Wa11
+
+Wa11
+
+Ng01
+
+Persoon
+
+Ng01
+
+Ng01
+
+Wa11
+
+Persoon
+
+Wa11
+
+Wa11Dubbel
+
+Omschrijving
+Vulbericht na (handmatig) plaatsen
+afnemerindicatie
+Vulbericht na (automatisch) plaatsen
+afnemerindicatie obv sleutelrubrieken
+Vul bericht zonder plaatsen
+afnemerindicatie obv sleutelrubrieken
+Foutherstel bericht (indien mutatie
+niet als Gv bericht geleverd kan
+worden)
+Mutatie bericht
+Mutatie bericht bij infrastructurele
+wijziging
+Kennisgeving van a-nummer
+wijziging
+Kennisgeving van afvoeren
+persoonslijst
+Kennisgeving van a-nummer
+wijziging als gevolg van het afvoeren
+
+Pagina 22 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+van een persoonlijst
+Een bericht wordt geinitialiseerd met de relevante conversie, filter en formattering configuratie
+en met de administratieve handeling en de persoonsgegevens.
+Tijdens de verwerking van de plaatsing van een afnemerindicatie door een afnemer (GBA
+Afnemerindicatie route) wordt aan de BerichtFactory een bericht gevraagd met de Ag01
+configuratie en wordt de betrokken persoon toegevoegd (zonder administratieve handeling
+gegevens). Tijdens de verwerking van een mutatie wordt op basis van de personen, het
+abonnement en de populatie, bepaald welke berichten gemaakt dienen te worden. De afleiding
+van het bericht-type staat beschreven in [UC1001].
+
+Identificatienummer mutatie bepaling
+Klasse
+nl.bzk.brp.levering.lo3.conversie.IdentificatienummerMutatie
+Het wijzigen van het identificerend gegeven van een persoonslijst (in het geval van LO3 is dit het
+element 01.01.10 Administratienummer) is een bijzondere situatie waarvoor een speciaal bericht
+verstuurd zal worden (het Wa11 bericht).
+Om dit correct te kunnen bepalen in het geval van een BRP of GBA bijhouding wordt de inhoud
+van de groep identificatienummers bepaald voor en na de administratieve handeling (waarbij
+rekening wordt gehouden met GBA bijhouding waardoor historie veranderd kan worden) en
+wordt op basis van deze daadwerkelijke gegevens bepaald of er sprake is van een wijziging in
+het identificerende gegeven.
+
+Conversie
+Package
+nl.bzk.brp.levering.lo3.conversie
+nl.bzk.brp.levering.lo3.mapper
+Binnen de LO3 Conversie bibliotheek bestaan drie conversie mechanismen. De basis wordt
+gevormd door het conversie mechanisme waardoor BRP persoonsgegevens worden
+geconverteerd naar LO3 persoonsgegevens. Voor de conversie van een mutatie wordt deze
+conversie als basis gebruikt.
+Persoon
+Klasse
+PersoonConverteerder
+Het converteren van een persoon staat uitgebreid beschreven in [FO Bidirectioneel] en [TO
+Conversie]. Bij het converteren van persoonsgegevens wordt gebruik gemaakt van de daarin
+beschreven programmatuur. Het startpunt van de [TO Conversie] is een migratie specifiek model
+van de BRP persoonsgegevens. De LO3 conversie bibliotheek vertaalt het BRP specifieke
+Persoonsgegevens object naar een migratie specifieke BrpPersoonslijst door een aanroep van
+de PersoonslijstMapper. De conversie wordt vervolgens uitgevoerd door een aanroep van de
+[TO Conversie] programmatuur (de methode converteerBrpPersoonslijst uit de klasse
+ConverteerBrpNaarLo3Service). De geconverteerde Lo3Persoonslijst wordt vervolgens omgezet
+naar een generieke LO3 structuur (een lijst van Lo3CategorieWaarde objecten) die gebruikt kan
+worden bij filtering en formattering.
+
+Pagina 23 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+Mutatie
+Klasse
+MutatieConverteerder
+Het bepalen van de mutaties gebeurd (in de klasse MutatieVisitor) door het analyseren van
+alle historie sets die betrekking hebben op een persoon (voor zover dit een weergave heeft op
+een GBA persoonlijst, dus inclusief relaties en gerelateerde persoonsgegevens).
+Voor een historie set wordt, op basis van de acties die gekoppeld zijn aan de administratieve
+handeling die geleverd moet worden, bepaald welk record heeft gezorgd voor ‘nieuwe’ gegevens
+(gekoppeld als ‘actie inhoud’ of als ‘actie aanpassing geldigheid’) en welk record heeft gezorgd
+voor ‘oude’ gegevens (gekoppeld als ‘actie verval’ of als ‘actie verval tbv levering mutaties’).
+Wanneer deze records zijn bepaald worden deze achtereenvolgens gemapped (omzetten van
+BRP entiteiten naar het migratie BRP model) en geconverteerd (omzetten van het migratie BRP
+model naar het migratie LO3 model). Voor de mapping worden de klassen gebruikt die door de
+PersoonslijstMapper worden gebruikt om de specifieke records te mappen. Voor de conversie
+worden klassen gebruikt uit de [TO Conversie] programmatuur (subklassen van de
+BrpGroepConverteerder). Wanneer alle historie sets zijn verwerkt, worden de specifieke LO3
+modellen omgezet naar de generieke LO3 structuur (een lijst van Lo3CategorieWaarde objecten)
+die gebruikt kan worden bij filtering en formattering, door gebruik te maken van klassen uit de
+[TO Conversie] programmatuur (subklassen van de Lo3CategorieFormatter).
+Om deze mutatie bepaling te ondersteunen wordt gebruik gemaakt van de basis klassen
+AbstractFormeelMutatieVerwerker en AbstractMaterieelMutatieVerwerker om de juiste
+entiteiten, mapping, conversie en LO3 model te koppelen. Om de omzetting van specifiek naar
+generiek LO3 model te ondersteunen wordt de basis klasse Lo3Wijzigingen gebruikt om de
+juiste LO3 model te koppelen.
+
+Wa11
+Klasse
+Wa11Converteerder
+Het converteren van een persoon staat uitgebreid beschreven in [FO Bidirectioneel] en [TO
+Conversie]. Bij het converteren van persoonsgegevens voor een a-nummer wijziging is het van
+belang dat de persoonsgegevens worden gebruikt die golden ‘voor’ de administratieve handeling
+die heeft geleid tot een a-nummer wijziging. Dit zijn namelijk de gegevens die de afnemer
+gebruikt ter verificatie. Indien er ook persoonsgegevens zijn gewijzigd naast de a-nummer
+wijziging zullen deze worden geleverd in een ‘ander’ bericht en opgepakt worden door de andere
+conversie mechanismen.
+
+Caching
+Klasse
+ConversieCache
+Voor een (persoons, mutatie of wa11) conversie wordt bepaald of voor deze verwerking, van een
+administratieve handeling, deze conversie reeds is uitgevoerd. Indien dat het geval is wordt dat
+resultaat gebruikt en wordt de conversie niet opnieuw uitgevoerd. Indien de conversie
+uitgevoerd moet worden, wordt na de conversie het resultaat bewaard in de cache.
+
+Filter
+
+Pagina 24 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+Package
+nl.bzk.brp.levering.lo3.filter
+Binnen de LO3 Conversie bibliotheek bestaan filter mechanismen (waaronder ‘geen filter’). De
+basis wordt gelegd door het zogenoemde VulBericht-filter. De filtering voor een mutatie bericht
+neemt het VulBericht-filter als basis en voegt hier enkele extra handelingen aan toe.
+
+VulBericht-filter
+Dit filter gebruikt de aangeboden lijst van rubrieken (elementen met de daarbij behorende groep
+en categorie) om per element in de aangeboden lijst van elementen te bepalen of dit element
+wel of niet geleverd dient te worden. Daarbij wordt specifiek ook gekeken of de groepen 83 en
+84 gefilterd moeten worden, zoals beschreven in [LO GBA Par. 5.4.6].
+
+Resync-filter
+Dit filter wordt gebruikt om op basis van de administratieve handeling de geraakte rubrieken te
+bepalen en op basis van de aangeboden lijst van rubrieken te bepalen of er een bericht geleverd
+moet worden.
+
+MutatieBericht-filter
+Dit filter gebruikt de aangeboden lijst van rubrieken om eerst een lijst van enkel rubrieken van
+actuele categorieën te bepalen. Vervolgens wordt deze lijst gedupliceerd door bij alle actuele
+rubrieken eenzelfde rubriek op te nemen voor de historische categorie. Op basis van deze
+aangepaste lijst van rubrieken worden de elementen aangeboden aan het VulBericht-filter.
+
+Wa11-filter
+Binnen het Wa11 bericht mogen enkel de groepen 02 (Naam) en 03 (Geboorte) uit categorie 01
+(Persoon) getoond worden, indien de afnemer hiervoor is geautoriseerd. Dit filter beperkt dus de
+aangeboden lijst van rubrieken tot maximaal die toegestane groepen en roept vervolgens het
+basis VulBericht-filter aan met de beperkte lijst van rubrieken.
+
+Formattering
+Package
+nl.bzk.brp.levering.lo3.format
+Het opstellen van het uitgaande bericht bestaat uit het opstellen van de header informatie en het
+formatteren van de LO3 categorieën, groepen en elementen in het LO3 formaat (zoals
+beschreven in [LO GBA]).
+
+Ag01, Ag11, Ag21 en Ag31
+Zie voor een volledige beschrijving van de berichten het [LO GBA, bladzijde 475, 476 en 477].
+De header wordt gevuld met de status zoals na conversie wordt gevonden in element 67.20
+(categorie 07). Indien de status niet is gevuld wordt de status “A” gevuld. Indien de status wel is
+gevuld wordt de datum gevuld zoals gevonden in element 67.10 (categorie 07).
+
+Pagina 25 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+De inhoud van het bericht wordt gevuld met alle categorieën, groepen en elementen zoals
+bepaald na filtering van het bericht.
+
+Gv01 en Gv02
+Zie voor een volledige beschrijving van het bericht het [LO GBA, bladzijde 496 en 497].
+De header wordt gevuld met het a-nummer zoals na conversie wordt gevonden in element 01.10
+(categorie 01).
+De inhoud van het bericht wordt gevuld met alle categorieën, groepen en elementen zoals
+bepaald na filtering van het bericht.
+
+Ng01
+Zie voor een volledige beschrijving van het bericht het [LO GBA, bladzijde 514].
+De header bevat geen overige gegevens buiten het berichtnummer (en de ongebruikte random
+key).
+De inhoud van het bericht wordt gevuld met de elementen 01.10 (categorie 01), 67.10
+(categorie 07) en 67.20 (categorie 07).
+
+Wa11
+Zie voor een volledige beschrijving van het bericht het [LO GBA, bladzijde 537].
+De header wordt gevuld met het a-nummer zoals na conversie wordt gevonden in element 01.10
+(categorie 01) en de datum ingang geldigheid zoals wordt gevonden in element 85.10 (categorie
+01).
+De inhoud van het bericht wordt gevuld met het ‘vorige a-nummer’ (zoals gevonden in element
+20.10) in het element 01.10 (categorie 01) en de elementen uit groepen 02 (categorie 01) en 03
+(categorie 01).
+
+Wa11-Dubbele inschrijving
+Het GBA kent een speciale vorm bij het afvoeren van een persoonslijst wanneer een persoon
+dubbel is ingeschreven onder verschillende a-nummers. In dat geval moeten de afnemers die
+een afnemersindicatie hebben op het ‘verkeerde’ a-nummer, een bericht krijgen die aangeeft dat
+voor die persoon een ander a-nummer gebruikt gaat worden. Hiervoor wordt evenals bij een anummer wijziging een Wa11 bericht verstuurd, echter de header wordt gevuld met het ‘volgend
+a-nummer’ zoals na conversie wordt gevonden in element 20.20 (categorie 01) en de datum
+ingang geldigheid zoals wordt gevonden in element 85.10 (categorie 01).
+De inhoud van het bericht wordt gevuld met het ‘a-nummer’ in het element 01.10 (categorie 01)
+en de elementen uit groepen 02 (categorie 01) en 03 (categorie 01).
+
+Pagina 26 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+11
+
+Bijlage A: Verwijderen migratie specifieke onderdelen
+
+Wanneer de migratie voorziening uit gefaseerd wordt, kan de migratie specifieke programmatuur
+te worden verwijderd uit de BRP programmatuur. Deze bijlage kan hiervoor niet een compleet
+stappenplan leveren maar dient als eerste aanzet tot het schonen van de programmatuur. Na
+het verwijderen van de genoemde projecten en/of klassen zullen alle geraakte referenties of
+refererende klassen ook eventueel aangepast moeten worden.
+
+Migratie specifieke projecten
+De migratie specifieke projecten binnen het brp project kunnen geheel worden verwijderd. Dit
+zijn de volgende (maven) projecten:
+
+-
+
+brp-bijhouding-delivery-gba
+brp-delivery-afnemerindicatie-gba
+brp-delivery-archivering-gba
+brp-delivery-bevraging-gba
+brp-delivery-bevraging-gba-ws
+brp-delivery-vrijbericht-gba
+brp-service-bevraging-gba
+gba-algemeen
+gba-conversie
+gba-domain
+conversie-expressies
+conversie-levering
+conversie-sleutelrubrieken
+
+De relevante distributie projecten kunnen verwijderd te worden:
+
+-
+
+docker-brp-afnemerindicatie-gba
+docker-brp-bevraging-gba
+docker-brp-bevraging-gba-ws
+docker-brp-bijhouding-gba
+docker-brp-vrijbericht-gba
+
+Migratie specifieke verzending
+In brp-delivery-verzending kan de GBA specifieke verzending verwijderd worden door de
+klasse GBAStelselServiceImpl te verwijderen.
+
+Migratie specifieke mutatielevering
+Binnen het mutatielevering project dienen de package
+nl.bzk.brp.levering.mutatielevering.service.lo3 te worden verwijderd.
+
+Pagina 27 van 28
+
+Definitief | 0.10 | Technisch ontwerp GBA functionaliteit in BRP | 12-07-2017
+
+Migratie specifieke administratieve handelingen
+De migratie specifieke implementaties van administratieve handelingen kunnen worden
+verwijderd. De administratieve handelingen zelf kunnen niet worden verwijderd doordat deze in
+de persoonshistorie worden gerefereerd.
+Opruimen overige referenties
+Er moet worden bepaald of de LO3 specifieke model klassen nodig zijn voor de uitvoering van
+het systeem. Denk hierbij aan de conversie tabellen, IST tabel en de LO3 bericht tabellen. Het is
+aannemelijk dat de gegevens bijhouden dienen te blijven, maar dat het uitvoerende systeem
+hier geen model meer voor bevat.
+Er moet worden bepaald of de LO3 specifieke configuraties tegengehouden moeten worden in de
+beheerapplicatie. Het lijkt na de duale periode onwenselijk dat nog een leveringsautorisatie voor
+het GBA stelsel opgevoerd kan worden.
+
+Pagina 28 van 28
+
+

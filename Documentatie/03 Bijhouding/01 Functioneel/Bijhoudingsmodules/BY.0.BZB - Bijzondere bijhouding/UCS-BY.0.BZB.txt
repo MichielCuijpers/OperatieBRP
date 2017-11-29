@@ -1,0 +1,2308 @@
+UCS BY.0.BZB - Bijzondere bijhoudingen
+Versie
+
+0.36
+
+Datum
+
+12 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+15-09-2016
+
+0.1
+
+Initiële opzet
+
+Operatie BRP
+
+23-09-2016
+
+0.2
+
+Review commentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+28-09-2016
+
+0.3
+
+Registratie verstrekkingsbeperking verwijderd bij Wijziging
+gemeente infrastructureel. Daar tevens de functionele
+context uitgebreid met een paragraaf over
+verstrekkingsbeperkingen met een gemeentelijke
+verordening.
+
+Operatie BRP
+
+28-09-2016
+
+0.4
+
+Review commentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+03-10-2016
+
+0.5
+
+Titel van document gewijzigd.
+Referenties bijgewerkt
+
+Operatie BRP
+
+26-10-2016
+
+0.6
+
+Reviewcommentaar Operatie BRP m.b.t. GAG ook hier
+doorgevoerd.
+
+Operatie BRP
+
+01-11-2016
+
+0.7
+
+Reviewcommentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+02-11-2016
+
+0.8
+
+AH Wijziging gemeente infrastructureel verplaatst naar
+module Verblijf en Adres.
+
+Operatie BRP
+
+17-05-2017
+
+0.9
+
+Code van de module aangepast
+
+Operatie BRP
+
+24-05-2017
+
+0.10
+
+Opschorting bijhouding persoonsgegevens reden foutief.
+
+Operatie BRP
+
+30-05-2017
+
+0.11
+
+Review commentaar Operatie BRP verwerkt (GBA-Wissen
+person)
+Review commentaar Operatie BRP verwerkt (Opschorting
+bijhouding persoonsgegevens reden foutief.
+
+Operatie BRP
+
+02-06-2017
+
+0.12
+
+Review commentaar Operatie BRP (GBA – Wissen persoon)
+verwerkt
+
+Operatie BRP
+
+02-06-2017
+
+0.13
+
+Correctie bijhouding toegevoegd.
+
+Operatie BRP
+
+06-06-2017
+
+0.14
+
+Review commentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+07-06-2017
+
+0.15
+
+AH’s Wijziging identificatienummers en Wijziging
+nummerverwijzing toegevoegd.
+
+Operatie BRP
+
+09-06-2017
+
+0.16
+
+AH Wijziging buitenlands persoonsnummer toegevoegd.
+
+Operatie BRP
+
+12-06-2017
+
+0.17
+
+Reviewcommentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+13-06-2017
+
+0.18
+
+Review commentaar Operatie BRP (Correctie bijhouding)
+verwerkt.
+
+Operatie BRP
+
+15-06-2017
+
+0.19
+
+-
+
+Operatie BRP
+
+16-06-2017
+
+0.20
+
+Review commentaar Operatie BRP (Wijziging
+identificatienummers, Wijziging nummerverwijzing,
+Wijziging buitenlands persoonsnummer) verwerkt.
+AH Wijziging documentindicatie toegevoegd.
+
+AH Correctie persoonkaart toegevoegd
+
+Operatie BRP
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+19-06-2017
+
+0.21
+
+Review commentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+20-06-2017
+
+0.22
+
+Review commentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+20-06-2017
+
+0.23
+
+AH Correctie onverwerkt document aanwezig toegevoegd
+
+Operatie BRP
+
+21-06-2017
+
+0.24
+
+AH Correctie inschrijving toegevoegd
+
+Operatie BRP
+
+21-06-2017
+
+0.25
+
+AH Correctie buitenlands persoonsnummer toegevoegd
+AH Correctie nummerverwijzing toegevoegd
+
+Operatie BRP
+
+22-06-2017
+
+0.26
+
+Reviewcommentaar Operatie BRP verwerkt (Correctie
+buitenlands persoonsnummer)
+
+Operatie BRP
+
+26-06-2017
+
+0.27
+
+Document aangepast m.b.t. documentatierichtlijnen.
+
+Operatie BRP
+
+27-06-2017
+
+0.28
+
+Reviewcommentaar Operatie BRP verwerkt (Correctie
+nummerverwijzing)
+
+Operatie BRP
+
+28-06-2017
+
+0.29
+
+UCM toegevoegd
+
+Operatie BRP
+
+29-06-2017
+
+0.30
+
+Reviewcommentaar Operatie BRP verwerkt (Correctie
+nummerverwijzing)
+
+Operatie BRP
+
+30-06-2017
+
+0.31
+
+Reviewcommentaar Operatie BRP verwerkt (Wijziging
+identificatienummers, Wijziging nummerverwijzing)
+
+Operatie BRP
+
+04-07-2017
+
+0.32
+
+AH Correctie inschrijving aangepast
+
+Operatie BRP
+
+04-07-2017
+
+0.33
+
+Reviewcommentaar Operatie BRP verwerkt (Wijziging
+documentindicatie, Correctie documentindicatie)
+
+Operatie BRP
+
+07-07-2017
+
+0.34
+
+Reviewcommentaar Operatie BRP verwerkt (Correctie
+Bijhouding, Correctie persoonskaart) en Operatie BRP
+(Correctie inschrijving)
+
+Operatie BRP
+
+11-07-2017
+
+0.35
+
+Reviewcommentaar Operatie BRP verwerkt (Correctie
+bijhouding, Correctie documentindicatie, Wijziging
+documentindicatie, Wijziging buitenlands persoonsnummer,
+Correctie buitenlands persoonsnummer)
+
+Operatie BRP
+
+12-07-2017
+
+0.36
+
+Reviewcommentaar Operatie BRP verwerkt (Correctie
+inschrijving)
+
+Operatie BRP
+
+Reviewhistorie
+Versie Review
+0.1
+
+Operatie BRP
+
+0.3
+
+Operatie BRP
+
+0.6
+
+Operatie BRP
+
+0.10
+
+Operatie BRP
+
+0.11
+
+Operatie BRP
+
+0.13
+
+Operatie BRP
+
+0.16
+
+Operatie BRP
+
+0.17
+
+Operatie BRP
+
+0.20
+
+Operatie BRP
+
+0.20
+
+Operatie BRP
+
+Status: Definitief, versie: 0.36
+
+Pagina 2 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+0.25
+
+Operatie BRP
+
+0.27
+
+Operatie BRP
+
+0.28
+
+Operatie BRP
+
+0.30
+
+Operatie BRP
+
+0.34
+
+Operatie BRP
+
+0.35
+
+Operatie BRP
+
+Status: Definitief, versie: 0.36
+
+Pagina 3 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 7
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Doel ....................................................................................................................................7
+Leeswijzer ............................................................................................................................7
+Referenties ..........................................................................................................................7
+Use case model ....................................................................................................................8
+
+Wijziging identificatienummers ................................................................................ 9
+2.1
+Functionele context ...............................................................................................................9
+2.1.1
+Brondocumenten ..............................................................................................................9
+2.1.2
+Betrokken personen ..........................................................................................................9
+2.1.3
+Proces .............................................................................................................................9
+2.1.4
+Bijhoudings(voorstel)partijen .............................................................................................9
+2.1.5
+Vastgelegde gegevens .......................................................................................................9
+2.2
+Specifieke verwerking.......................................................................................................... 10
+
+3
+
+Wijziging nummerverwijzing .................................................................................. 11
+3.1
+Functionele context ............................................................................................................. 11
+3.1.1
+Brondocumenten ............................................................................................................ 11
+3.1.2
+Betrokken personen ........................................................................................................ 11
+3.1.3
+Proces ........................................................................................................................... 11
+3.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 12
+3.1.5
+Vastgelegde gegevens ..................................................................................................... 12
+3.2
+Specifieke verwerking.......................................................................................................... 12
+
+4
+
+Correctie nummerverwijzing ................................................................................... 13
+4.1
+Functionele context ............................................................................................................. 13
+4.1.1
+Brondocumenten ............................................................................................................ 13
+4.1.2
+Betrokken personen ........................................................................................................ 13
+4.1.3
+Proces ........................................................................................................................... 13
+4.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 13
+4.1.5
+Vastgelegde gegevens ..................................................................................................... 13
+4.2
+Specifieke verwerking.......................................................................................................... 13
+
+5
+
+Wijziging buitenlands persoonsnummer ................................................................. 15
+5.1
+Functionele context ............................................................................................................. 15
+5.1.1
+Brondocumenten ............................................................................................................ 15
+5.1.2
+Betrokken personen ........................................................................................................ 15
+5.1.3
+Proces ........................................................................................................................... 15
+5.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 15
+5.1.5
+Vastgelegde gegevens ..................................................................................................... 15
+5.2
+Specifieke verwerking.......................................................................................................... 15
+
+6
+
+Correctie buitenlands persoonsnummer ................................................................. 17
+6.1
+Functionele context ............................................................................................................. 17
+6.1.1
+Brondocumenten ............................................................................................................ 17
+6.1.2
+Betrokken personen ........................................................................................................ 17
+6.1.3
+Proces ........................................................................................................................... 17
+6.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 17
+6.1.5
+Vastgelegde gegevens ..................................................................................................... 17
+6.2
+Specifieke verwerking.......................................................................................................... 17
+
+7
+
+Opschorting bijhouding persoonsgegevens reden foutief ....................................... 18
+7.1
+Functionele context ............................................................................................................. 18
+7.1.1
+Brondocumenten ............................................................................................................ 18
+7.1.2
+Betrokken personen ........................................................................................................ 18
+7.1.3
+Proces ........................................................................................................................... 18
+
+Status: Definitief, versie: 0.36
+
+Pagina 4 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+7.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 18
+7.1.5
+Vastgelegde gegevens ..................................................................................................... 19
+7.2
+Specifieke verwerking.......................................................................................................... 19
+7.3
+Aanvullende informatie voor LO en HUP ................................................................................. 19
+
+8
+
+GBA – Wissen persoon ............................................................................................ 20
+8.1
+Functionele context ............................................................................................................. 20
+8.1.1
+Brondocumenten ............................................................................................................ 20
+8.1.2
+Betrokken personen ........................................................................................................ 20
+8.1.3
+Proces ........................................................................................................................... 20
+8.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 20
+8.1.5
+Vastgelegde gegevens ..................................................................................................... 20
+8.2
+Specifieke verwerking.......................................................................................................... 20
+
+9
+
+Wijziging documentindicatie ................................................................................... 21
+9.1
+Functionele context ............................................................................................................. 21
+9.1.1
+Brondocumenten ............................................................................................................ 21
+9.1.2
+Betrokken personen ........................................................................................................ 21
+9.1.3
+Proces ........................................................................................................................... 21
+9.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 21
+9.1.5
+Vastgelegde gegevens ..................................................................................................... 21
+9.2
+Specifieke verwerking.......................................................................................................... 21
+
+10
+
+Correctie documentindicatie ................................................................................... 22
+
+10.1
+Functionele context ............................................................................................................. 22
+10.1.1
+Brondocumenten ........................................................................................................ 22
+10.1.2
+Betrokken personen .................................................................................................... 22
+10.1.3
+Proces ....................................................................................................................... 22
+10.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 22
+10.1.5
+Vastgelegde gegevens ................................................................................................. 22
+10.2
+Specifieke verwerking.......................................................................................................... 22
+
+11
+
+Correctie persoonskaart .......................................................................................... 24
+
+11.1
+Functionele context ............................................................................................................. 24
+11.1.1
+Brondocumenten ........................................................................................................ 24
+11.1.2
+Betrokken personen .................................................................................................... 24
+11.1.3
+Proces ....................................................................................................................... 24
+11.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 24
+11.1.5
+Vastgelegde gegevens ................................................................................................. 24
+11.2
+Specifieke verwerking.......................................................................................................... 24
+
+12
+
+Correctie bijhouding ............................................................................................... 25
+
+12.1
+Functionele context ............................................................................................................. 25
+12.1.1
+Brondocumenten ........................................................................................................ 25
+12.1.2
+Betrokken personen .................................................................................................... 25
+12.1.3
+Proces ....................................................................................................................... 25
+12.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 25
+12.1.5
+Vastgelegde gegevens ................................................................................................. 25
+12.2
+Specifieke verwerking.......................................................................................................... 25
+
+13
+
+Correctie inschrijving .............................................................................................. 26
+
+13.1
+Functionele context ............................................................................................................. 26
+13.1.1
+Brondocumenten ........................................................................................................ 26
+13.1.2
+Betrokken personen .................................................................................................... 26
+13.1.3
+Proces ....................................................................................................................... 26
+13.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 26
+13.1.5
+Vastgelegde gegevens ................................................................................................. 26
+13.2
+Specifieke verwerking.......................................................................................................... 26
+
+14
+
+Acties ...................................................................................................................... 27
+
+14.1
+
+Registratie bijhouding .......................................................................................................... 27
+
+Status: Definitief, versie: 0.36
+
+Pagina 5 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+14.2
+14.3
+14.4
+14.5
+14.6
+14.7
+14.8
+14.9
+14.10
+14.11
+14.12
+14.13
+14.14
+14.15
+14.16
+14.17
+
+Correctieverval Bijhouding ................................................................................................... 27
+Correctieregistratie Bijhouding .............................................................................................. 27
+Registratie identificatienummers ........................................................................................... 27
+Registratie nummerverwijzing volgend .................................................................................. 28
+Registratie nummerverwijzing vorig ...................................................................................... 28
+Registratie buitenlands persoonsnummer ............................................................................... 28
+Beëindiging onverwerkt document aanwezig........................................................................... 28
+Correctieverval Persoonskaart .............................................................................................. 28
+Correctieregistratie Persoonskaart ......................................................................................... 28
+Correctieverval onverwerkt document aanwezig...................................................................... 28
+Correctieregistratie onverwerkt document aanwezig ................................................................ 29
+Correctieverval inschrijving .................................................................................................. 29
+Correctieregistratie inschrijving ............................................................................................ 29
+Correctieverval buitenlands persoonsnummer ......................................................................... 29
+Correctieregistratie buitenlands persoonsnummer ................................................................... 29
+Correctieverval nummerverwijzing ........................................................................................ 29
+
+15
+
+Openstaande punten ............................................................................................... 30
+
+16
+
+Appendix A – BZVU en plaatsonafhankelijke bijhouding ......................................... 31
+
+Status: Definitief, versie: 0.36
+
+Pagina 6 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+1 Inleiding
+1.1
+
+Doel
+
+De Module ‘Bijzondere Bijhoudingen’ bevat administratieve handelingen die als bijzonder
+aangemerkt kunnen worden omdat ze slechts zelden voorkomen.
+Het doel van dit document is om de afhandeling van deze handelingen te beschrijven.
+
+1.2
+
+Leeswijzer
+
+Per administratieve handeling wordt de functionele context en specifieke verwerking beschreven.
+De functionele context beschrijft de situatie waarin de administratieve handeling van toepassing is.
+In de specifieke verwerking wordt beschreven welke acties relevant zijn voor de administratieve
+handeling en wordt per actie eventuele specifieke functionaliteit binnen de context van de
+handeling benoemd. Voor de definitie van het invoerbericht en bedrijfsregels die bij een
+administratieve handeling horen wordt verwezen naar ‘UCS-BY.0.BZB - Bijlage Actualiseer
+persoonsgegevens’ [5], ‘UCS-BY.0.BZB - Bijlage Corrigeer persoonsgegevens’ [6].
+Verder wordt het ‘peildatum’ voor regels met een tijdsaspect gedefinieerd.
+De beschrijving van de generieke functionaliteit van de acties staat beschreven in hoofdstuk 13.
+NB Bij enkele use cases is een paragraaf opgenomen met de titel ‘Aanvullende informatie voor LO
+en HUP’. Deze paragraaf heeft geen functionele impact, maar dient als kapstok voor het schrijven
+van het LO en de HUP.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Logisch Ontwerp Basisregistratie Personen
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+UCS BY.1.ON – Ontrelateren
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving – Corrigeren
+
+Operatie BRP
+
+-
+
+-
+
+4
+
+UCS BY.0.AV – Afhandeling verzoek
+
+Operatie BRP
+
+-
+
+-
+
+5
+
+UCS-BY.0.BZB - Bijlage Actualiseer persoonsgegevens
+
+Operatie BRP
+
+-
+
+-
+
+6
+
+UCS-BY.0.BZB - Bijlage Corrigeer persoonsgegevens
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 0.36
+
+Pagina 7 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+1.4
+
+Use case model
+
+In onderstaand use case model staan alle administratieve handelingen voor de module ‘Bijzondere
+bijhoudingen’. Hierin is te zien dat alle administratieve handelingen subtype zijn van het supertype
+BY.0.AV – Afhandeling verzoek. De laatste beschrijft de generieke afhandeling van een verzoek wat
+relevant is voor de verwerking van alle handelingen.
+
+Status: Definitief, versie: 0.36
+
+Pagina 8 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+2 Wijziging identificatienummers
+2.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Wijziging identificatienummers’ is het wijzigen van een
+Administratienummer en/of Burgerservicenummer bij een ingezetene of het toevoegen van een
+identificatienummer dat eerder aan de ingezetene was toegekend.
+Deze handeling wordt in de volgende situaties gebruikt:
+•
+•
+
+Bij de ingezetene ontbreekt een Administratienummer en/of Burgerservicenummer 1;
+De ingezetene krijgt een ander Administratienummer en/of Burgerservicenummer, bijvoorbeeld
+omdat eenzelfde identificatienummer aan meerdere personen is toegekend. Elk van deze
+personen krijgt een nieuw identificatienummer.
+
+De ingezetene kan overleden zijn.
+2.1.1
+•
+•
+•
+
+Besluit wijziging BSN
+Besluit wijziging Administratienummer
+Overige
+
+2.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+Hoofdpersoon (ingezetene)
+
+2.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+Let op: In paragraaf 3.3, stap BY.1.MN, van UCS BY.0.AV – Afhandeling verzoek [4] staat ook
+beschreven dat extra notificaties verstuurd worden naar alle GBA-gemeenten waar de
+hoofdpersoon eerder ingeschreven stond, teneinde de verwijsgegevens binnen het GBA bij te
+kunnen werken:
+
+2.1.4
+•
+
+De bijhoudingspartij van de persoon.
+
+2.1.5
+•
+•
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Identificatienummers
+Nummerverwijzing
+
+1
+
+De kans dat het Administratienummer en/of Burgerservicenummer ontbreekt is uiterst klein. Door het ontbreken van een
+correctiehandeling is er echter geen andere mogelijkheid om deze ontbrekende gegevens op te nemen.
+
+Status: Definitief, versie: 0.36
+
+Pagina 9 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+2.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie identificatienummers
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’ van de actie ‘Registratie identificatienummers’.
+
+Status: Definitief, versie: 0.36
+
+Pagina 10 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+3 Wijziging nummerverwijzing
+3.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Wijziging nummerverwijzing’ is het opnemen van een
+vorig of volgend Administratienummer of Burgerservicenummer bij een ingezetene.
+Deze handeling wordt in de volgende situaties gebruikt:
+•
+
+Van de ingezetene bestaan twee persoonslijsten met verschillende identificatienummers
+Eén van de persoonslijsten wordt opgeschort met reden ‘Foutief’ en de andere blijft bestaan.
+Bij de op te schorten persoonslijst wordt een volgend Administratienummer en/of
+Burgerservicenummer vastgelegd, zijnde het/de identificatienummer(s) van de overblijvende
+persoonslijst. Bij de overblijvende persoonslijst wordt een vorig Administratienummer en/of
+Burgerservicenummer vastgelegd, zijnde het/de identificatienummer(s) van de op te schorten
+persoonslijst. Let op: Bij deze vorm van ontdubbeling worden geen nieuw identificatienummers
+toegekend aan de ingezetene.
+De ingezetene kan overleden zijn.
+
+•
+
+Van de ingezetene bestaan twee persoonslijsten met hetzelfde identificatienummer2
+Eén van de persoonslijsten wordt opgeschort met reden ‘Foutief’ en de andere blijft bestaan.
+Bij de op te schorten persoonslijst wordt een volgend Administratienummer en/of
+Burgerservicenummer vastgelegd, zijnde het/de identificatienummer(s) van de overblijvende
+persoonslijst. Bij de overblijvende persoonslijst wordt een vorig Administratienummer en/of
+Burgerservicenummer vastgelegd, zijnde het/de identificatienummer(s) van de op te schorten
+persoonslijst. Let op: volgende en vorige Administratienummer zijn hier gelijk. Hetzelfde geldt
+voor volgende en vorige Burgerservicenummer. Bij deze vorm van ontdubbeling worden geen
+nieuw identificatienummers toegekend aan de ingezetene.
+De ingezetene kan overleden zijn.
+
+Het daadwerkelijk opschorten van de persoonslijst wordt in een vervolgstap uitgevoerd met de
+administratieve handeling ‘Opschorting bijhouding persoonsgegevens met reden foutief’.
+3.1.1
+•
+•
+•
+
+Besluit wijziging BSN
+Besluit wijziging Administratienummer
+Overig
+
+3.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+Hoofdpersoon (ingezetene)
+
+Deze administratieve handeling wijzigt alleen de persoonslijst van de hoofdpersoon. Bij
+ontdubbeling van persoonslijsten, zoals in de functionele context beschreven, moet deze
+administratieve handeling twee maal gebruikt worden. Eén maal om het volgende
+identificatienummer vast te leggen bij de op te schorten persoonslijst en één maal om het vorige
+identificatienummer vast te leggen bij de overblijvende persoonslijst.
+3.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+Let op: In paragraaf 3.3, stap BY.1.MN, van UCS BY.0.AV – Afhandeling verzoek [4] staat ook
+beschreven dat extra notificaties verstuurd worden naar alle GBA-gemeenten waar de
+2
+
+In de BRP is een uniciteitscontrole op BSN en A-nr. Daarom kan dit alleen voorkomen tijdens de duale periode, waarbij de
+ene PL zich in het BRP-stelsel bevindt en de ander in het GBA-stelsel.
+
+Status: Definitief, versie: 0.36
+
+Pagina 11 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+hoofdpersoon eerder ingeschreven stond, teneinde de verwijsgegevens binnen het GBA bij te
+kunnen werken:
+
+3.1.4
+•
+
+De bijhoudingspartij van de persoon.
+
+3.1.5
+•
+
+3.2
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Nummerverwijzing
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie nummerverwijzing volgend (optioneel)
+Geen bijzonderheden voor deze actie.
+
+•
+
+Hoofdactie Registratie nummerverwijzing vorig (optioneel)
+Geen bijzonderheden voor deze actie.
+
+In het bericht moet precies één van bovenstaande acties opgegeven worden.
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’ van de actie ‘Registratie nummerverwijzing volgend’ dan wel
+de actie ‘Registratie nummerverwijzing vorig’.
+
+Status: Definitief, versie: 0.36
+
+Pagina 12 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+4 Correctie nummerverwijzing
+4.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Correctie nummerverwijzing’ is het corrigeren van een
+vorig of volgend Administratienummer of Burgerservicenummer bij een ingezetene.
+Een correctie kan nodig zijn wanneer:
+•
+•
+
+met de administratieve handeling ‘Wijziging nummerverwijzing’ een fout is gemaakt bij het
+overnemen van een vorig of volgend Administratienummer of Burgerservicenummer;
+met de administratieve handeling ‘Wijziging identificatienummers’ een fout is gemaakt in het
+Administratienummer of Burgerservicenummer.
+
+De ingezetene kan zijn overleden.
+Het foutieve nummer kan ook opgenomen zijn op de persoonslijst welke is opgeschort met reden
+‘Foutief’. Deze persoonslijst kan echter niet meer gecorrigeerd worden.
+4.1.1
+
+Brondocumenten
+
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [3]. Het ligt echter voor de
+hand dat de volgende documenten als bron dienen:
+•
+•
+•
+
+Besluit wijziging BSN
+Besluit wijziging Administratienummer
+Overig
+
+4.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon (ingezetene)
+
+4.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+NB In tegenstelling tot de administratieve handeling ‘Wijziging nummerverwijzing’ worden bij deze
+administratieve handeling bij het wijzigen van een (historisch of actueel) Administratienummer
+geen notificaties verstuurd naar GBA-gemeenten om verwijsgegevens bij te werken. Indien nodig,
+zal dit via handmatig procedures geregeld moeten worden.
+4.1.4
+•
+
+Bijhoudings(voorstel)partijen
+
+De bijhoudingspartij van de persoon.
+
+4.1.5
+
+Vastgelegde gegevens
+
+Met deze administratieve handeling kunnen bestaande voorkomens van de onderstaande groep van
+de gerelateerde persoon naar de formele historie vervallen en kunnen nieuwe voorkomens worden
+geregistreerd:
+•
+
+4.2
+
+Nummerverwijzing
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Correctieverval nummerverwijzing volgend (optioneel)
+Geen bijzonderheden voor deze actie.
+
+Status: Definitief, versie: 0.36
+
+Pagina 13 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+•
+
+Hoofdactie Correctieregistratie nummerverwijzing vorig (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling is de systeemdatum.
+
+Status: Definitief, versie: 0.36
+
+Pagina 14 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+5 Wijziging buitenlands persoonsnummer
+5.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Wijziging buitenlands persoonsnummer’ is het opnemen
+van een buitenlands persoonsnummer bij een ingezetene.
+Bij de eerste inschrijving in de BRP wordt, indien bekend, het buitenlands persoonsnummer
+opgenomen bij de ingezetene. Het doel hiervan is het voorkomen van fraude (bijvoorbeeld doordat
+een persoon onder verschillende namen meerdere keren in de BRP wordt opgenomen).
+Alleen buitenlandse persoonsnummers afgegeven door staten van de Europese Unie mogen worden
+geregistreerd.
+Na inschrijving in de BRP kan uit een overgelegd buitenlands reisdocument of identiteitsbewijs
+blijken dat de persoon een buitenlands persoonsnummer heeft dat nog niet is opgenomen:
+•
+•
+
+De persoon kan van meerdere staten van de Europese Unie een buitenlands persoonsnummer
+toegewezen gekregen hebben;
+De persoon kan van één staat van de Europese Unie meerdere buitenlandse persoonsnummers
+toegewezen gekregen hebben.
+
+Naast het buitenlands persoonsnummer wordt ook de autoriteit die het nummer heeft afgegeven
+opgenomen.
+Het buitenlands persoonsnummer blijft altijd actueel geregistreerd, ook als de persoon de
+nationaliteit van het land dat het nummer toekende, verliest. Tevens kunnen van één land
+meerdere buitenlandse persoonsnummers als actueel geregistreerd staan.
+Ook voor personen die naast het Nederlanderschap nog een andere nationaliteit bezitten van één
+van de staten van de Europese Unie en een buitenlands persoonsnummer bezitten wordt het
+buitenlands persoonsnummer geregistreerd.
+Het buitenlands persoonsnummer wordt uitsluitend opgenomen in de historie wanneer het
+gecorrigeerd moet worden: een fout in de registratie moet worden hersteld. Hiervoor dient de
+administratieve handeling ‘Correctie buitenlands persoonsnummer’.
+5.1.1
+•
+
+Het buitenlands persoonsnummer mag uitsluitend worden ontleend aan het buitenlandse
+reisdocument of identiteitsbewijs. Geen enkel ander brondocument is toegestaan.
+
+5.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+Hoofdpersoon (ingezetene)
+
+5.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+5.1.4
+•
+
+De bijhoudingspartij van de persoon.
+
+5.1.5
+•
+
+5.2
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Buitenlands persoonsnummer
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+
+Status: Definitief, versie: 0.36
+
+Pagina 15 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+•
+
+Hoofdactie Registratie buitenlands persoonsnummer
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+Status: Definitief, versie: 0.36
+
+Pagina 16 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+6 Correctie buitenlands persoonsnummer
+6.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Correctie buitenlands persoonsnummer’ is het laten
+vervallen van een buitenlands persoonsnummer bij een ingezetene.
+Een correctie kan noodzakelijk zijn wanneer:
+•
+•
+•
+
+het nummer van foutief is overgenomen van het buitenlandse ID-document;
+het nummer van onterecht is overgenomen van het buitenlandse ID-document;
+een fout is gemaakt bij de registratie van de autoriteit die het nummer heeft afgegeven.
+
+6.1.1
+
+Brondocumenten
+
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [3].
+Echter, omdat het buitenlands persoonsnummer uitsluitend mag worden ontleend aan het
+buitenlandse identiteitsbewijs zal dit het document zijn op basis waarvan de correctie wordt
+aangebracht.
+6.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon (ingezetene)
+
+6.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+6.1.4
+•
+
+Bijhoudings(voorstel)partijen
+
+De bijhoudingspartij van de persoon.
+
+6.1.5
+
+Vastgelegde gegevens
+
+Met deze administratieve handeling vervalt een bestaand voorkomen van de onderstaande groep
+naar de formele historie en wordt er optioneel een nieuw voorkomen van deze groep geregistreerd:
+•
+
+6.2
+
+Buitenlands persoonsnummer
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met minimaal één van de onderstaande
+acties:
+•
+
+Hoofdactie Correctieverval buitenlands persoonsnummer (optioneel)
+Geen bijzonderheden voor deze actie.
+
+•
+
+Hoofdactie Correctieregistratie buitenlands persoonsnummer (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+Status: Definitief, versie: 0.36
+
+Pagina 17 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+7 Opschorting bijhouding persoonsgegevens reden foutief
+7.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Opschorting bijhouding persoonsgegevens reden foutief’
+is het registreren van de opschorting van de bijhouding van persoonsgegevens met als nadere
+bijhoudingsaard ‘Foutief’ omdat de persoonslijst niet in de BRP mag voorkomen.
+Een persoonslijst wordt opgeschort met de reden ‘Foutief’ als:
+•
+•
+
+•
+
+er meerdere persoonslijsten met hetzelfde A-nummer en/of BSN in de BRP zijn
+opgenomen3. Eén of meerdere ervan is/zijn ten onrechte opgenomen, óf:
+er zijn meerdere persoonslijsten van dezelfde persoon in de BRP opgenomen met
+verschillend A-nummer en/of BSN. Na het bijhouden van de persoonslijst die over moet
+blijven wordt/worden de andere persoonslijst(en) opgeschort, óf:
+een persoonslijst is ten onrechte aangelegd omdat de persoon bijvoorbeeld niet blijkt te
+bestaan.
+
+Van de hierboven opgesomde aanleidingen worden aanleidingen 1 en 2 doorgaans voorafgegaan
+door een opname van een nummerverwijzing op de op te schorten persoonslijst naar de
+overblijvende persoonslijst en vice versa. Hiervoor wordt de administratieve handeling ‘Wijziging
+nummerverwijzing’ gebruikt. Bij aanleiding 3 is dit niet het geval.
+Let op: Een afgevoerde persoonslijst blijft fysiek en inhoudelijk deel uitmaken van de BRP (een
+eenmaal in de BRP opgenomen algemeen gegeven mag namelijk niet meer worden verwijderd).
+Een afgevoerde persoonslijst wordt uitgezonderd van leverdiensten, relateren en (her)inschrijving
+als ingezetene.
+De persoonslijst moet raadpleegbaar blijven voor nader onderzoek4.
+Let op: Wanneer een persoonslijst per ongeluk is afgevoerd reden ‘Fout’ dan wordt deze NIET
+hergebruikt voor het herstellen van de fout. Met de procedure ‘Vestiging niet-ingeschrevene’,
+gevolgd door reguliere administratieve handelingen en correcties wordt de fout hersteld.
+7.1.1
+
+Brondocumenten
+
+N.v.t., omdat het besluit om een persoonslijst op te schorten met een reden ‘Fout’ een ambtshalve
+besluit is van het college van burgemeester en wethouders of de Minister.
+7.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon (ingezetene)
+
+Tevens moet nagegaan worden of de gegevens van de persoonslijst welke wordt opgeschort met
+reden ‘Fout’, ook aanwezig zijn op de persoonslijst van een gerelateerde persoon. De
+identiteitsnummers en eventuele andere gegevens kunnen met de daarvoor bedoelde specifieke
+administratieve handelingen op de persoonslijst van de gerelateerden worden verwerkt: ‘Wijziging
+partnergegevens huwelijk’, ‘Wijziging partnergegevens geregistreerd partnerschap’, ‘Wijziging
+kindgegevens’ en ‘Wijziging oudergegevens’.
+7.1.3
+
+Proces
+
+N.v.t.
+7.1.4
+•
+
+Bijhoudings(voorstel)partijen
+
+De bijhoudingspartij van de hoofdpersoon (ingezetene).
+
+3
+
+In de BRP is een uniciteitscontrole op BSN en A-nr. Daarom kan dit alleen voorkomen tijdens de duale periode, waarbij de
+ene PL zich in het BRP-stelsel bevindt en de ander in het GBA-stelsel.
+4 Deze PL-en kunnen uitsluitend benaderd worden door de (technisch) beheerder en zijn niet met de diensten bedoeld voor
+raadplegen benaderbaar.
+
+Status: Definitief, versie: 0.36
+
+Pagina 18 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+7.1.5
+•
+
+7.2
+
+Vastgelegde gegevens
+
+Bijhouding
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie bijhouding
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’ van de actie ‘Registratie bijhouding’.
+
+7.3
+
+Aanvullende informatie voor LO en HUP
+
+Een met reden ‘Foutief’ opgeschorte persoonslijst hoeft niet per sé in de BRP Centrale Voorziening
+opgeslagen te blijven. Het is bijvoorbeeld ook toegestaan de persoonslijst op een afdruk te
+bewaren. Zolang de persoonslijst maar raadpleegbaar is.
+In geval van ontdubbeling van persoonslijsten worden afnemersindicaties niet automatisch
+overgezet naar de overblijvende persoonslijst. Dit is een handmatige actie die door de afnemer(s)
+moet worden uitgevoerd.
+
+Status: Definitief, versie: 0.36
+
+Pagina 19 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+8 GBA – Wissen persoon
+8.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Wissen persoon’ is het registreren van de opschorting
+van de bijhouding van persoonsgegevens met als nadere bijhoudingsaard ‘Wissen’ omdat de
+persoonslijst niet in de BRP opgenomen had mogen worden. Deze administratieve handeling wordt
+alleen gebruikt door de beheerder van de BRP en is voor wat betreft het gebruik beperkt tot
+personen die een GBA-gemeente of de Minister (RNI) als bijhoudingspartij heeft.
+Een belangrijke oorzaak van de onterechte opname van de persoonslijst in de GBA-V, is de
+zogenaamde ‘aangehaakte persoonslijst’ (een persoonslijst van een persoon die vóór 1 oktober
+1994 is geëmigreerd of overleden). Als gevolg daarvan ontstaat er inconsistentie tussen GBA-V en
+een lokale GBA.
+Een andere reden is dat er is geconstateerd dat er inconsistentie bestaat tussen GBA-V en de
+lokale GBA. De lokale GBA kent de PL niet of de PL komt al niet meer voor in de lokale GBA als
+gevolg waarvan er géén bericht aan GBA-V kan worden verzonden om de betreffende PL af te
+voeren
+Let op: Een afgevoerde persoonslijst blijft fysiek en inhoudelijk deel uitmaken van de BRP (een
+eenmaal in de BRP opgenomen algemeen gegeven mag namelijk niet meer worden verwijderd).
+Een afgevoerde persoonslijst met opschortreden ‘W’ maakt juridisch (in tegenstelling tot die met
+reden ‘F’ is opgeschort) géén onderdeel uit van de BRP en wordt uitgezonderd van leverdiensten,
+relateren en (her)inschrijving als ingezetene.
+8.1.1
+
+Brondocumenten
+
+N.v.t.
+8.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon (ingezetene)
+
+De persoonslijst van de hoofdpersoon bevindt zich in GBA-V. Daaronder valt ook de RNI. De
+hoofdpersoon is derhalve een ingeschrevene.
+8.1.3
+
+Proces
+
+N.v.t.
+8.1.4
+•
+
+De beheerder van de BRP middels de beheerapplicatie.
+
+8.1.5
+•
+
+8.2
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Bijhouding
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie bijhouding
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’ van de actie ‘Registratie bijhouding’.
+
+Status: Definitief, versie: 0.36
+
+Pagina 20 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+9 Wijziging documentindicatie
+9.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Wijziging documentindicatie’ is het laten vervallen van
+de indicator nadat alle gegevens, uit de van de Minister ontvangen documenten, zijn geregistreerd.
+Het bestaan van deze documenten was de aanleiding waardoor de indicator ‘Onverwerkt document
+aanwezig?’ bij de niet-ingezetene werd opgenomen.
+Bij niet-ingezetenen kan op de persoonslijst de indicator ‘Onverwerkt document aanwezig?’ zijn
+opgenomen. De indicator geeft aan dat er documenten bij de bijhoudingsverantwoordelijke
+aanwezig zijn van feiten die nog verwerkt moeten worden op de persoonslijst maar die niet
+bijgehouden mochten worden bij de niet-ingezetene.
+Bij de ‘vestiging niet-ingezetene’ worden de documenten opgevraagd bij de Minister. De indicator
+mag pas worden verwijderd als alle documenten zijn ontvangen en de wijzigingen die op basis van
+de documenten moeten worden aangebracht, zijn verwerkt5.
+Het kan voorkomen dat de indicator ten onrechte, te vroeg, is verwijderd. Om te voorkomen dat
+gebruikers concluderen dat alle gegevens van de persoon actueel zijn moet dit worden hersteld
+met de administratieve handeling ‘Correctie documentindicatie’.
+9.1.1
+
+Brondocumenten
+
+N.v.t.
+9.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon (ingezetene).
+
+9.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+9.1.4
+•
+
+De bijhoudingspartij van de persoon.
+
+9.1.5
+•
+
+9.2
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Documentindicatie
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Beëindiging onverwerkt document aanwezig
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+5
+
+Het ‘ontvangen’ van de documenten die bij de Minister (RvIG) worden bewaard voor registreren van gegevens die niet op
+de persoonslijst van de niet-ingezetene mochten worden bijgehouden duurt enige tijd. De documentindicatie zal dan ook
+(bijna) nooit gelijktijdig worden verwijderd bij de inschrijving/Vestiging niet-ingezetene.
+
+Status: Definitief, versie: 0.36
+
+Pagina 21 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+10 Correctie documentindicatie
+10.1 Functionele context
+Het doel van de administratieve handeling ‘Correctie documentindicatie’ is het (opnieuw) opnemen
+of juist laten vervallen van de indicator ‘Onverwerkt document aanwezig?’ bij een ingezetene,
+waarbij de indicator ten onrechte is verwijderd, ten onrechte niet is opgenomen of ten onrechte wel
+is opgenomen.
+Bij niet-ingezetenen kan op de persoonslijst de indicator ‘Onverwerkt document aanwezig?’ zijn
+opgenomen. De indicator geeft aan dat er documenten bij de bijhoudingsverantwoordelijke
+aanwezig zijn van feiten die nog verwerkt moeten worden op de persoonslijst maar die niet
+bijgehouden mochten worden bij de niet-ingezetene.
+Bij de ‘vestiging niet-ingezetene’ worden de documenten opgevraagd bij de Minister. De indicator
+mag pas worden verwijderd als alle documenten zijn ontvangen en de wijzigingen die op basis van
+de documenten moeten worden aangebracht zijn verwerkt 6.
+Het kan voorkomen dat de indicator ten onrechte, te vroeg, is verwijderd. Om te voorkomen dat
+gebruikers concluderen dat alle gegevens van de persoon actueel zijn, moet dit worden hersteld.
+Het kan ook voorkomen dat de indicator ten onrechte is gezet. Om te voorkomen dat gebruikers
+concluderen dat de gegevens van de persoon niet actueel zijn, moet dit worden hersteld.
+10.1.1 Brondocumenten
+N.v.t
+10.1.2 Betrokken personen
+•
+
+Hoofdpersoon (ingezetene).
+
+10.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+10.1.4 Bijhoudings(voorstel)partijen
+•
+
+De bijhoudingspartij van de hoofdpersoon.
+
+10.1.5 Vastgelegde gegevens
+Met deze administratieve handeling vervalt er optioneel een bestaand voorkomen van de
+onderstaande groep naar de formele historie en wordt er optioneel een nieuw voorkomen van deze
+groep geregistreerd:
+•
+
+Documentindicatie
+
+10.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met minimaal één van de onderstaande
+acties:
+•
+
+Hoofdactie Correctieverval onverwerkt document aanwezig (optioneel)
+Geen bijzonderheden voor deze actie.
+
+6
+
+Het ‘ontvangen’ van de documenten die bij de Minister (RvIG) worden bewaard voor registreren van gegevens die niet op
+de PL van de niet-ingezetene mochten worden bijgehouden duurt enige tijd. De documentindicatie zal dan ook (bijna) nooit
+gelijktijdig worden verwijderd bij de inschrijving/Vestiging niet-ingezetene.
+
+Status: Definitief, versie: 0.36
+
+Pagina 22 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+•
+
+Hoofdactie Correctieregistratie onverwerkt document aanwezig (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+Status: Definitief, versie: 0.36
+
+Pagina 23 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+11 Correctie persoonskaart
+11.1 Functionele context
+Het doel van de administratieve handeling ‘Correctie persoonskaart’ is het corrigeren van de
+gegevens over de persoonskaart op de persoonslijst van de hoofdpersoon.
+Oorzaak voor het corrigeren van de gegevens over de persoonskaart kan bijvoorbeeld zijn dat:
+•
+•
+
+gegevens over de gemeente van conversie persoonskaart zijn onterechte of niet
+opgenomen
+de aantekening dat de ouder-kindgegevens allemaal zijn overgenomen van de
+persoonskaart is ten onrechte of is niet geplaatst.
+
+Omdat alle gegevens over de ouder-kind relatie vanaf persoonskaart bij de invoering van de GBA
+opgenomen konden worden en hierbij de aantekening ‘PK volledig geconverteerd’ werd geplaatst is
+het zeer uitzonderlijk dat deze ontbreken. Om deze reden is er voor deze gegevensgroep
+uitsluitend een correctiehandeling. Dit betekent echter wel dat het mogelijk moet zijn om
+uitsluitend actuele gegevens op te kunnen nemen, indien na conversie blijkt dat deze ontbreken.
+11.1.1 Brondocumenten
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [3].
+11.1.2 Betrokken personen
+•
+
+Hoofdpersoon (ingezetene)
+
+11.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+11.1.4 Bijhoudings(voorstel)partijen
+
+•
+
+Bijhoudingspartij van de hoofdpersoon
+
+11.1.5 Vastgelegde gegevens
+Met deze administratieve handeling vervalt een bestaand voorkomen van de onderstaande groep
+naar de formele historie en wordt er optioneel een nieuw voorkomen van deze groep geregistreerd:
+•
+
+Persoon.Persoonskaart
+
+11.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met minimaal één van de onderstaande
+acties:
+•
+•
+
+Correctieverval Persoonskaart (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieregistratie Persoonskaart (optioneel)
+Geen bijzonderheden voor deze actie.
+
+Normaliter moet bij een groep met formele historie de actie Correctieverval verplicht meegegeven
+worden. Bij deze handeling is het echter ook mogelijk om uitsluitend de actie Correctieregistratie
+mee te geven. Dit om te zorgen dat ontbrekende gegevens alsnog geregistreerd kunnen worden.
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Persoon.Datum inschrijving’.
+
+Status: Definitief, versie: 0.36
+
+Pagina 24 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+12 Correctie bijhouding
+12.1 Functionele context
+Het doel van de administratieve handeling ‘Correctie bijhouding’ is het corrigeren van de actuele en
+materieel historische gegevens van de groep Bijhouding op de persoonslijst van de hoofdpersoon.
+Dit betreft zowel het corrigeren van de bijhoudingspartij als de (nadere) bijhoudingsaard.
+Gegevens in deze groep worden over het algemeen afgeleid geregistreerd. Dit betekent dat
+correcties op deze groep samenhangen met correcties op een of meerdere van de volgende
+gegevens: Overlijden, Migratie en Adres. Meer informatie hierover is te vinden in Hoofdstuk 5
+Groep Bijhouding van Aspectbeschrijving – Corrigeren [3].
+Oorzaak voor het corrigeren van de groep Bijhouding kan zijn dat:
+•
+•
+•
+•
+•
+•
+•
+•
+
+de persoon onterecht is verhuisd naar een andere gemeente (verkeerde persoon);
+er een fout is gemaakt in de datum van verhuizing naar een andere gemeente;
+de persoon ten onrechte is geëmigreerd of geïmmigreerd;
+er een fout is gemaakt in de datum van emigratie of immigratie;
+de persoon ten onrechte is overleden (verkeerde persoon);
+er een fout is gemaakt in de datum van overlijden;
+Er een fout is gemaakt in de reden ‘nadere bijhoudingsaard’;
+de persoonslijst ten onrechte is opgeschort met reden ‘V’ of ‘M’.
+
+12.1.1 Brondocumenten
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [3].
+12.1.2 Betrokken personen
+•
+
+Hoofdpersoon (ingezetene)
+
+12.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+12.1.4 Bijhoudings(voorstel)partijen
+
+•
+
+Bijhoudingspartij van de hoofdpersoon na correctie
+
+12.1.5 Vastgelegde gegevens
+Met deze administratieve handeling kunnen bestaande voorkomens van de onderstaande groep
+naar de formele historie vervallen en kunnen nieuwe voorkomens worden geregistreerd:
+•
+
+Persoon.Bijhouding
+
+12.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met minimaal één van de onderstaande
+acties:
+•
+•
+
+Correctieverval Bijhouding (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieregistratie Bijhouding (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+Status: Definitief, versie: 0.36
+
+Pagina 25 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+13 Correctie inschrijving
+13.1 Functionele context
+Het doel van de administratieve handeling ‘Correctie inschrijving’ is het corrigeren van de datum
+inschrijving in de BRP van een ingezetene.
+De datum inschrijving in de BRP is gelijk aan:
+•
+•
+
+•
+•
+
+De geboortedatum wanneer de persoon is ingeschreven met een administratieve handeling
+geboorte (al dan niet met erkenning)
+De datum vestiging wanneer de persoon voor het eerst wordt ingeschreven met een
+administratieve handeling vestiging vanuit het buitenland (niet-ingeschrevene of nietingezetene)
+De datum aangifte wanneer de persoon voor het eerst wordt ingeschreven met de
+administratieve handeling ‘Constatering verblijf kind’
+De datum inschrijving kan al zijn opgenomen in de GBA, dan betreft dit de datum
+inschrijving in de GBA.
+
+Correctie kan nodig zijn wanneer er een fout is gemaakt in een van de hierboven genoemde
+administratieve handelingen of met een mutatie aangebracht op een GBA-PL.
+Naast het corrigeren van de ‘Datum inschrijving’ worden ook andere correctie bij de persoon
+aangebracht. Deze correcties worden apart doorgevoerd, bijvoorbeeld met de administratieve
+handeling ‘Correctie adres’, ‘Correctie bijhouding’ en ‘Correctie migratie’.
+13.1.1 Brondocumenten
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [3].
+13.1.2 Betrokken personen
+•
+
+Hoofdpersoon (ingezetene)
+
+13.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+13.1.4 Bijhoudings(voorstel)partijen
+•
+
+De bijhoudingspartij van de hoofdpersoon.
+
+13.1.5 Vastgelegde gegevens
+Met deze administratieve handeling vervalt een bestaand voorkomen van de onderstaande groep
+naar de formele historie en wordt er optioneel een nieuw voorkomen van deze groep geregistreerd:
+•
+
+Persoon.Inschrijving
+
+13.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties:
+•
+•
+
+Correctieverval inschrijving (verplicht)
+Geen bijzonderheden voor deze actie.
+Correctieregistratie inschrijving (verplicht)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de ‘Datum inschrijving’.
+
+Status: Definitief, versie: 0.36
+
+Pagina 26 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+14 Acties
+De generiek functionaliteit van de relevante acties binnen de context van deze module is in dit
+hoofdstuk per actie beschreven.
+
+14.1 Registratie bijhouding
+Met de actie worden gegevens van de onderstaande groep geregistreerd:
+•
+
+Persoon.Bijhouding
+Element
+
+Afleiding
+
+Bijhoudingsaard
+
+Overnemen van het voorkomen dat door deze actie komt te vervallen.
+
+PartijCode
+
+Overnemen van het voorkomen dat door deze actie komt te vervallen.
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+14.2 Correctieverval Bijhouding
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de onderstaande
+groep van de persoon:
+•
+
+Persoon.Bijhouding
+
+14.3 Correctieregistratie Bijhouding
+Met de actie wordt een nieuw voorkomen van de onderstaande groep van de persoon
+geregistreerd:
+•
+
+Persoon.Bijhouding
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Datum einde geldigheid
+
+Actie.Datum einde geldigheid (indien aanwezig)
+
+14.4 Registratie identificatienummers
+Met de actie worden gegevens van de onderstaande groepen geregistreerd:
+•
+
+•
+
+Persoon. Identificatienummers
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon.Nummerverwijzing
+
+Deze groep wordt alleen geregistreerd als het Administratienummer en/of
+Burgerservicesnummer wijzigt.
+Element
+
+Afleiding
+
+Vorige
+burgerservicenummer
+
+Het oude Persoon.Identificatienummers.Burgerservicenummer, mits
+gewijzigd.
+
+Vorige
+administratienummer
+
+Het oude Persoon.Identificatienummers.Administratienummer, mits
+gewijzigd.
+
+Status: Definitief, versie: 0.36
+
+Pagina 27 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+14.5 Registratie nummerverwijzing volgend
+Met de actie worden gegevens van de onderstaande groep geregistreerd:
+•
+
+Persoon.Nummerverwijzing
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+14.6 Registratie nummerverwijzing vorig
+Met de actie worden gegevens van de onderstaande groep geregistreerd:
+•
+
+Persoon.Nummerverwijzing
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+14.7 Registratie buitenlands persoonsnummer
+Met de actie worden gegevens van de onderstaande groep geregistreerd:
+•
+
+Persoon \ Buitenlands persoonsnummer.Identiteit
+
+•
+
+Persoon \ Buitenlands persoonsnummer.Standaard
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+14.8 Beëindiging onverwerkt document aanwezig
+Met deze actie komt een bestaand niet-vervallen voorkomen van de groep Persoon.Onverwerkt
+document aanwezig te vervallen.
+
+14.9 Correctieverval Persoonskaart
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de onderstaande
+groep van de persoon:
+•
+
+Persoon.Persoonskaart
+
+14.10 Correctieregistratie Persoonskaart
+Met de actie wordt een nieuw voorkomen van de onderstaande groep van de persoon
+geregistreerd:
+•
+
+Persoon.Persoonskaart
+
+14.11 Correctieverval onverwerkt document aanwezig
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de onderstaande
+groep van de persoon:
+
+Status: Definitief, versie: 0.36
+
+Pagina 28 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+•
+
+Persoon.Documentindicatie
+
+14.12 Correctieregistratie onverwerkt document aanwezig
+Met de actie wordt een nieuw voorkomen van de onderstaande groep van de persoon
+geregistreerd:
+•
+
+Persoon. Documentindicatie
+
+14.13 Correctieverval inschrijving
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de onderstaande
+groep van de persoon:
+•
+
+Persoon. Inschrijving
+
+14.14 Correctieregistratie inschrijving
+Met de actie wordt een nieuw voorkomen van de onderstaande groep van de persoon
+geregistreerd:
+•
+
+Persoon.Inschrijving
+Element
+
+Afleiding
+
+Datumtijdstempel
+
+Overnemen van het voorkomen dat door deze handeling komt te
+vervallen.
+
+Versienummer
+
+Overnemen van het voorkomen dat door deze handeling komt te
+vervallen.
+
+14.15 Correctieverval buitenlands persoonsnummer
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de onderstaande
+groep van de persoon:
+•
+
+Persoon \ Buitenlands persoonsnummer.Standaard
+
+14.16 Correctieregistratie buitenlands persoonsnummer
+Met de actie wordt een nieuw voorkomen van de onderstaande groep van de persoon
+geregistreerd:
+•
+
+Persoon \ Buitenlands persoonsnummer.Standaard
+
+14.17 Correctieverval nummerverwijzing
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de onderstaande
+groep van de persoon:
+•
+
+Persoon.Nummerverwijzing
+
+Status: Definitief, versie: 0.36
+
+Pagina 29 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+15 Openstaande punten
+Correctie buitenlands persoonsnummer
+Over deze administratieve handeling is discussie met betrekking tot de actie ‘Correctieregistratie
+buitenlands persoonsnummer’.
+Omdat het buitenlands persoonsnummer onderdeel is van de sleutel zou met deze
+correctiehandeling geen nieuwe stapel aangemaakt mogen worden. Voor het registreren van een
+nieuw (gecorrigeerd) voorkomen moet dan de administratieve handeling ‘Wijziging buitenlands
+persoonsnummer’7 worden gebruikt.
+Anderen menen echter dat de administratieve handeling (service) de gekozen technische oplossing
+van de gegevensstructuur moet afschermen en dat alle correctiehandelingen een zelfde opzet moet
+hebben.
+
+7
+
+De reden voor het ontbreken van een correctieregistratie-actie is dat alle attributen zich in de groep Identiteit bevinden
+welke bovendien geen historie bevat. Er is dus geen sprake van het corrigeren van een bepaald voorkomen. In plaats
+daarvan komt het oude voorkomen te vervallen en wordt er vervolgens een nieuwe stapel aangemaakt.
+
+Status: Definitief, versie: 0.36
+
+Pagina 30 van 31
+
+UCS BY.0.BZB - Bijzondere bijhoudingen
+
+16 Appendix A – BZVU en plaatsonafhankelijke bijhouding
+In onderstaande tabel staat per handeling aangegeven of het berichtelement BZVU (Bezien vanuit
+persoon) van toepassing is – inclusief motivatie – en de toegestane indienende partijen – ook
+inclusief motivatie.
+Wanneer BZVU niet van toepassing is zal het berichtelement niet aanwezig zijn in het bericht. Voor
+meer informatie over BZVU zie UCS-BY.1.ON – Ontrelateren [2].
+Bij toegestane indienende partijen wordt vermeld of het bijhoudingsvoorstel (ook) door andere dan
+de eigen gemeente mag worden ingestuurd. In onderstaande tabel kan deze kolom de volgende
+waarden aannemen:
+•
+•
+•
+
+A(lle): het bijhoudingsvoorstel mag door elke bijhoudingspartij worden ingediend;
+H(uidige): het bijhoudingsvoorstel mag alleen door de huidige bijhoudingspartij worden
+ingediend;
+B(eperkt): het bijhoudingsvoorstel mag door een beperkt aantal bijhoudingspartijen
+worden ingediend. In de motivatie staat vermeld welke partijen dat zijn.
+
+Administratieve
+Handeling
+
+BZVU?
+
+Motivatie
+
+Plaatsonafh.
+bijh.?
+
+Toegestane indienende
+partij(en)
+
+Wijziging
+identifcatienummers
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Wijziging
+nummerverwijzing
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Correctie
+nummerverwijzing
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Wijziging buitenlands
+persoonsnummer
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Correctie buitenlands
+persoonsnummer
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Opschorting bijhouding
+persoonsgegevens
+reden foutief
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+GBA – Wissen persoon
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+n.v.t.
+
+Wijziging
+documentindicatie
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Correctie
+documentindicatie
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Correctie bijhouding
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Correctie persoonkaart
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Correctie inschrijving
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Status: Definitief, versie: 0.36
+
+Alleen BRP-beheerder
+
+Pagina 31 van 31
+
+

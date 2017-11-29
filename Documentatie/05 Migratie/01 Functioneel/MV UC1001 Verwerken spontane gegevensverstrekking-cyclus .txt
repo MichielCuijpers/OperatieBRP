@@ -1,0 +1,412 @@
+UC1001 Verwerken spontane
+gegevensverstrekking-cyclus
+
+1.1
+
+Datum
+Status
+
+31-08-2016
+Definitief
+
+Definitief | 1.1 | UC1001 Verwerken spontane gegevensverstrekking-cyclus | 31-08-2016
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................7
+2.1
+2.2
+
+3
+
+REGULIER VERLOOP ..............................................................................................................................7
+ALTERNATIEF VERLOOP: TYPE VERSTREKKING KAN NIET BEPAALD WORDEN ...................................7
+
+SPECIAL REQUIREMENTS ..............................................................................................................8
+3.1
+3.2
+3.3
+3.4
+
+4
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................6
+PRECONDITIE ........................................................................................................................................6
+POSTCONDITIE......................................................................................................................................6
+
+BEPALEN TYPE SPONTANE VERSTREKKING ..........................................................................................8
+MAKEN BERICHT ...................................................................................................................................8
+VERSTUREN BERICHT ...........................................................................................................................8
+GROEPEN ONDERZOEK EN ONJUIST ....................................................................................................9
+
+OPMERKINGEN ..................................................................................................................................10
+
+Operatie BRP
+
+Pagina 2 van 10
+
+Definitief | 1.1 | UC1001 Verwerken spontane gegevensverstrekking-cyclus | 31-08-2016
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+06-02-2014
+15-05-2014
+04-08-2014
+
+0.1
+0.3
+0.4
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+29-04-2015
+
+0.5
+
+06-05-2015
+25-06-2015
+
+0.6
+1.0
+
+31-08-2016
+
+1.1
+
+Initiële versie
+Reviewcommentaar verwerkt
+Paragraaf over leveren onderzoek en juist
+opgenomen
+Tabel met administratieve handelingen en
+berichten aangepast (BMR 39)
+Reviewcommentaar verwerkt
+Definitief gemaakt ten behoeve van release
+3.1
+AH a-nummerwijziging verwijderd
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+14-03-2014
+
+0.1
+
+Review
+
+Operatie BRP
+
+01-05-2014
+
+0.2
+
+Review
+
+Operatie BRP
+
+06-05-2015
+
+0.5
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 10
+
+Definitief | 1.1 | UC1001 Verwerken spontane gegevensverstrekking-cyclus | 31-08-2016
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Wanneer een persoonslijst gewijzigd wordt dienen afnemers die daarvoor geautoriseerd zijn op
+de hoogte gesteld te worden. Dit worden spontane verstrekkingen genoemd. In de duale periode
+zullen spontane verstrekkingen plaatsvinden aan zowel GBA- als BRP-afnemers. Deze
+verstrekkingen verschillen in grote mate van elkaar.
+In de BRP wordt bij elke wijziging van een persoonslijst bijgehouden naar aanleiding van welke
+soort administratieve handeling de wijziging heeft plaatsgevonden. Op basis van de soort
+administratieve handeling, de gewijzigde persoonslijst(en) en de abonnementen/diensten van
+afnemers, kan bepaald worden welke verstrekkingen plaats dienen te vinden.
+Omdat dit een document betreft van de migratievoorziening wordt alleen beschreven op welke
+wijze bepaald wordt welk type spontane gegevensverstrekking aan welke GBA-afnemer plaats
+dient te vinden. Er wordt in dit document vanuit gegaan dat bekend is welke soort
+administratieve handeling heeft plaatsgevonden, welke persoonslijst(en) het betreft en in het
+kader van welke diensten van afnemers verstrekkingen plaats dienen te vinden. Hoe het
+systeem dit bepaald heeft wordt niet beschreven en is onderdeel van de beschrijving van de
+diensten met betrekking tot synchronisatie van de BRP.
+Ofwel, in dit document wordt enkel beschreven welke combinatie van administratieve
+handelingen (AH) en soorten diensten (catalogusoptie) van een afnemer tot een bepaald type
+LO3-verstrekking leidt.
+Dit document beschrijft niet hoe spontane gegevensverstrekking in het GBA-stelsel plaatsvindt.
+Dit wordt in het [LO] beschreven (par. III.2.7 Spontane gegevensverstrekking). Op de volgende
+pagina is een diagram uit het [LO] te vinden waarin dit is samengevat.
+
+Operatie BRP
+
+Pagina 4 van 10
+
+Definitief | 1.1 | UC1001 Verwerken spontane gegevensverstrekking-cyclus | 31-08-2016
+
+Operatie BRP
+
+Pagina 5 van 10
+
+Definitief | 1.1 | UC1001 Verwerken spontane gegevensverstrekking-cyclus | 31-08-2016
+
+1.2
+
+1.3
+
+Referenties
+#
+[LO]
+
+Document
+Logisch Ontwerp
+
+Organisatie
+RvIG
+
+Versie
+3.9
+
+Datum
+31-01-2015
+
+[UC102]
+
+Vul autorisatietabelregels in BRP
+initieel
+
+Operatie BRP
+
+-
+
+-
+
+[CONV]
+
+Documentatie bidirectionele
+conversie
+
+Operatie BRP
+
+-
+
+-
+
+[SUPPL]
+
+MV Aanvullende specificaties ISC
+
+Operatie BRP
+
+-
+
+-
+
+Preconditie
+• Er is een persoonslijst gewijzigd
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 6 van 10
+
+Definitief | 1.1 | UC1001 Verwerken spontane gegevensverstrekking-cyclus | 31-08-2016
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+1. Het systeem bepaalt welke type spontane verstrekking plaats dient te vinden (AV: 2.2)
+2. Het systeem maakt het bericht
+3. Het systeem verstuurt het bericht
+4. De use case eindigt
+
+2.2
+
+Alternatief verloop: type verstrekking kan niet bepaald worden
+1. Het systeem kan niet bepalen welk type spontane verstrekking plaats dient te vinden
+2. De use case eindigt
+
+Operatie BRP
+
+Pagina 7 van 10
+
+Definitief | 1.1 | UC1001 Verwerken spontane gegevensverstrekking-cyclus | 31-08-2016
+
+3
+
+Special requirements
+
+3.1
+
+Bepalen type spontane verstrekking
+In de onderstaande tabel is te vinden welke combinatie van catalogusoptie, categorie AH en
+soort AH tot welke berichtsoort leidt (en daarmee het type spontane verstrekking).
+Catalogusoptie (ID)
+Mutatielevering op basis
+van afnemersindicatie
+
+Categorie AH
+GBA - Synchronisatie
+
+Mutatielevering op basis
+van afnemersindicatie
+Mutatielevering op basis
+van afnemersindicatie
+Mutatielevering op basis
+van afnemersindicatie
+Mutatielevering op basis
+van afnemersindicatie
+Mutatielevering op basis
+van afnemersindicatie
+Attendering zonder
+effect AI
+Attendering met effect
+AI plaatsing
+afnemerindicatie
+Mutatielevering op basis
+van afnemersindicatie
+
+GBA - Synchronisatie
+GBA - Synchronisatie
+GBA - Synchronisatie
+
+Soort AH
+GBA Infrastructurele
+wijziging
+GBA - Bijhouding
+actueel
+GBA - Afvoeren PL
+
+LO3-bericht
+Gv02
+
+Wa11
+Ng01, Wa11 of
+niets
+Ag31
+
+Actualisering
+
+GBA - Bijhouding
+overig
+GBA - Bijhouding
+actueel
+N.v.t.
+
+N.v.t.
+
+N.v.t.
+
+Ag21
+
+N.v.t.
+
+N.v.t.
+
+Ag11
+
+N.v.t.
+
+N.v.t.
+
+Ag31
+
+GBA - Synchronisatie
+
+Gv01
+Gv01
+
+Indien bij Mutatielevering op basis van afnemersindicatie geen administratieve handeling uit de
+bovenstaande tabel wordt gevonden, wordt er een Ag31 verstuurd.
+Meer informatie over het afvoeren van de PL en wanneer welke berichten verstuurd worden, is
+beschreven in het [LO] in paragraaf 3.23.3.
+Meer informatie over catalogusoptie, diensten en abonnementen is te vinden in [UC102].
+
+3.2
+
+Maken bericht
+Het maken van een bericht dient plaats te vinden zoals dat in het [LO] is beschreven.
+Informatie over het converteren van persoonsgegevens is te vinden in [CONV].
+
+3.3
+
+Versturen bericht
+Informatie over het versturen van berichten is te vinden in [SUPPL].
+
+Operatie BRP
+
+Pagina 8 van 10
+
+Definitief | 1.1 | UC1001 Verwerken spontane gegevensverstrekking-cyclus | 31-08-2016
+
+3.4
+
+Groepen onderzoek en onjuist
+Wat er geleverd dient te worden wanneer een categorie in onderzoek is geplaatst of onjuist is
+verklaard, staat beschreven in het [LO] in paragraaf 5.4.6.
+
+Operatie BRP
+
+Pagina 9 van 10
+
+Definitief | 1.1 | UC1001 Verwerken spontane gegevensverstrekking-cyclus | 31-08-2016
+
+4
+
+Opmerkingen
+
+• Er wordt van uitgegaan dat correcties in de BRP niet leiden tot een administratieve handeling
+van de categorie Actualisering.
+
+Operatie BRP
+
+Pagina 10 van 10
+
+

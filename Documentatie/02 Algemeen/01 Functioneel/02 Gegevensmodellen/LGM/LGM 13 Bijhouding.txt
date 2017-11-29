@@ -1,0 +1,93 @@
+LGM 13 Bijhouding
+Release 59 17-7-2017
+
+Bijhoudingsplan
+
+Dyn
+
+Identiteit
+
+-
+
+-
+
+Partij bijhoudingsvoorstel >
+
+DX
+
+Partij
+
+Partij GBA geboorte >
+
+DX
+
+Partij
+
+.
+
+Melding GBA
+
+DX
+
+Melding GBA
+
+.
+
+Bijhoudingsvoorstel verzoekbericht
+
+DX
+
+BerichtdataLax (XSD)
+
+.
+
+Bijhoudingsvoorstel resultaatbericht DX BerichtdataLax (XSD)
+Administratieve handeling >
+
+D
+
+Administratieve handeling
+
+*
+
+.
+.
+
+Bijhoudingsplan \ Persoon
+Identiteit
+
+Dyn
+-
+
+-
+
+Bijhoudingsplan >
+
+D
+
+Bijhoudingsplan
+
+*
+
+Persoon >
+
+DX
+
+Persoon
+
+*
+
+/Bijhoudingspartij > D
+Situatie >
+
+DX
+
+Partij
+
+*
+
+Bijhoudingssituatie
+
+*
+
+

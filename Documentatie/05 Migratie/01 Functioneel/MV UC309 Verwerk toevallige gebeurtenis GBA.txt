@@ -1,0 +1,1839 @@
+UC309 Verwerk toevallige gebeurtenis GBA
+
+1.0
+
+Datum
+Status
+
+26-09-2016
+Definitief
+
+Definitief | 1.0| UC309 Verwerk toevallige gebeurtenis GBA | 26-09-2016
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................7
+2.1
+2.2
+2.3
+2.4
+
+3
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................6
+PRECONDITIE ........................................................................................................................................6
+POSTCONDITIE......................................................................................................................................6
+REGULIER VERLOOP ..............................................................................................................................7
+ALTERNATIEF VERLOOP: INHOUD VAN HET TB02-BERICHT IS ONJUIST ..........................................7
+ALTERNATIEF VERLOOP: FOUTSITUATIES GECONSTATEERD ..............................................................7
+ALTERNATIEF VERLOOP: GEEN OF EEN ONJUIST ANTWOORDBERICHT ONTVANGEN ........................7
+
+ALGEMEEN ..............................................................................................................................................8
+3.1 TOELICHTING TERMEN ..........................................................................................................................8
+3.1.1 Akteaanduidingen ....................................................................................................................8
+3.1.2 Categorieën ................................................................................................................................8
+3.1.3 Groepen .......................................................................................................................................9
+3.2 RELEVANTE CATEGORIEËN PER AKTEAANDUIDING .............................................................................9
+3.3 RELEVANTE GROEPEN PER AKTEAANDUIDING ...................................................................................10
+
+4
+
+AANVULLENDE SPECIFICATIES ...............................................................................................11
+4.1 CONTROLEREN INHOUD TB02-BERICHT ...........................................................................................11
+4.1.1 Algemeen ..................................................................................................................................11
+4.1.2 Akteaanduiding 3B, 5B, 3H ................................................................................................11
+4.1.3 Akteaanduiding 3H ................................................................................................................11
+4.1.4 Akteaanduiding 3B, 5B ........................................................................................................12
+4.1.5 Akteaanduiding 3A, 3H, 5A ................................................................................................12
+4.1.6 Akteaanduiding 2A, 2G ........................................................................................................12
+4.1.7 Akteaanduiding 1C, 1E, 1J, 1N, 1U, 1Q, 1V ................................................................12
+4.1.8 Akteaanduiding 1M................................................................................................................12
+4.1.9 Akteaanduiding 1H ................................................................................................................12
+4.1.10 Akteaanduiding 1S.............................................................................................................13
+4.2 CONTROLEREN FOUTSITUATIES .........................................................................................................13
+4.3 FOUTBERICHTEN .................................................................................................................................13
+4.4 TECHNISCHE FOUTEN .........................................................................................................................13
+4.5 BRP-BERICHT OPSTELLEN .................................................................................................................13
+4.5.1 Vertalen naar BRP-bericht ..................................................................................................13
+4.5.2 Objectsleutels..........................................................................................................................14
+4.5.3 Zoeken hoofdpersoon ..........................................................................................................14
+4.5.4 Zoeken gerelateerde personen .........................................................................................14
+4.6 EXTRA HANDELINGEN .........................................................................................................................15
+4.6.1 Automatisch in onderzoek plaatsen ................................................................................15
+4.6.2 Opgeschort ...............................................................................................................................15
+
+5
+
+OPMERKINGEN ..................................................................................................................................16
+
+Operatie BRP
+
+Pagina 2 van 16
+
+Definitief | 1.0| UC309 Verwerk toevallige gebeurtenis GBA | 26-09-2016
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+09-09-2015
+21-09-2015
+02-10-2015
+06-10-2015
+13-10-2015
+02-02-2016
+21-03-2016
+18-05-2016
+
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8
+
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+
+23-09-2016
+
+0.9
+
+26-09-2016
+
+1.0
+
+Initiële versie
+Reviewcommentaar verwerkt
+Extra bedrijfsregels toegevoegd
+Reviewcommentaar verwerkt
+Reviewcommentaar verwerkt
+BRP-zaken verwijderd
+Dummy BRP-foutcodes opgenomen
+• Akte 5h verwijderd
+• Nieuwe mapping aktenummer naar
+administratieve handeling en bericht
+• Controle op landcode toegevoegd
+• Automatisch in onderzoek plaatsen
+verwijderd
+• Alle controles worden door de MV
+uitgevoerd
+• Reviewcommentaar verwerkt
+
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+18-09-2015
+
+0.1
+
+Review
+
+Operatie BRP
+
+06-10-2015
+
+0.3
+
+Review
+
+Operatie BRP
+
+13-10-2015
+
+0.4
+
+Review
+
+Operatie BRP
+
+26-09-2016
+
+0.9
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 16
+
+Definitief | 1.0| UC309 Verwerk toevallige gebeurtenis GBA | 26-09-2016
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Wanneer een akte is opgemaakt en opgenomen in de registers van de burgerlijke stand in een
+andere gemeente (feitgemeente) dan waar de hoofdpersoon als ingezetene is ingeschreven
+(rechtsgemeente), wordt gesproken over een toevallige gebeurtenis.
+Hoe de toevallige gebeurtenis verwerkt wordt in de GBA, is beschreven in de toevallige
+gebeurtenis berichtcyclus in het [LO]. Er zijn altijd twee verschillende gemeenten betrokken bij
+de toevallige gebeurtenis berichtcyclus.
+Toevallige gebeurtenissen komen ook voor in de BRP. Hier is dit echter een ‘gewone’ bijhouding.
+De migratievoorziening mag bij toevallige gebeurtenissen niet zelf personen bijwerken, maar
+moet gebruik maken van de interne bijhoudingservice van de BRP. Meer informatie over
+bijhoudingen in de BRP is te vinden in [BIJ].
+Deze use case beschrijft op welke wijze de migratievoorziening de toevallige gebeurtenis
+verwerkt indien de feitgemeente een GBA gemeente is en de rechtsgemeente een BRP
+gemeente. Er wordt beschreven welke bedrijfsregels door de migratievoorziening worden
+gecontroleerd en op welke wijze gebruik gemaakt wordt van de interne service van de BRP.
+Meer informatie over de toevallige gebeurtenis in het [LO] is te vinden in:
+• Paragraaf III.2.17 Toevallige gebeurtenis: pagina 461
+• Tb02: pagina 559
+• Tf21: pagina 564
+
+Veel informatie is ook te vinden in [HUP] (hoofdstuk 5 Procedures op basis van een in Nederland
+opgemaakte akte van de burgerlijke stand).
+
+Operatie BRP
+
+Pagina 4 van 16
+
+Definitief | 1.0| UC309 Verwerk toevallige gebeurtenis GBA | 26-09-2016
+
+Operatie BRP
+
+Pagina 5 van 16
+
+Definitief | 1.0| UC309 Verwerk toevallige gebeurtenis GBA | 26-09-2016
+
+1.2
+
+1.3
+
+Referenties
+#
+[BMR]
+
+Document
+https://www.modernodam.nl/bmr
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+[LO]
+
+Logisch Ontwerp
+
+RvIG
+
+3.9
+
+31-01-2015
+
+[UC808]
+
+BH UC808 Beoordelen onduidelijke
+synchronisatie migratievoorziening
+
+Operatie BRP
+
+-
+
+-
+
+[XSD]
+
+brp0200_iscMigratievoorziening_Berichten.xsd
+
+Operatie BRP
+
+-
+
+-
+
+[HUP]
+
+Handleiding Uitvoeringsprocedures
+
+RvIG
+
+2.3
+
+18-12-2015
+
+[UCAV]
+
+BRP Use case afhandelen verzoek
+
+Operatie BRP
+
+-
+
+-
+
+[CONV]
+
+Documentatie bidirectionele conversie.doc
+
+Operatie BRP
+
+-
+
+-
+
+[BIJ]
+
+UCS BY.0.AV.docx
+
+Operatie BRP
+
+-
+
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 6 van 16
+
+Definitief | 1.0| UC309 Verwerk toevallige gebeurtenis GBA | 26-09-2016
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+1. De GBA-feitgemeente stuurt een kennisgeving (Tb02-bericht) aan de BRP-rechtsgemeente
+2. De migratievoorziening ontvangt een Tb02-bericht van een GBA-feitgemeente omdat deze de
+mailbox van de BRP-rechtsgemeente uitleest
+3. De migratievoorziening stelt vast dat de inhoud van het bericht correct is (AV: 2.2) (AS: 4.1)
+4. De migratievoorziening stelt vast dat er geen foutsituaties zijn (AV: 2.3) (AS: 4.2)
+5. De migratievoorziening maakt bijhoudingsvoorstel (AS: 4.5)
+6. De migratievoorziening stuurt het bijhoudingsvoorstel naar de interne BRP-service (zie ook
+[UCAV])
+7. De migratievoorziening ontvangt een antwoordbericht van de interne BRP-service (AV: 2.4)
+8. De migratievoorziening stelt op basis van het antwoord vast dat de verwerking in de BRP geen
+foutsituaties heeft opgeleverd (AV: 2.4) (AS: 4.4)
+9. De migratievoorziening verstuurt een null-bericht aan de GBA-feitgemeente
+10. Einde use case.
+
+2.2
+
+Alternatief verloop: inhoud van het Tb02-bericht is onjuist
+1. De migratievoorziening stelt vast dat de inhoud van het bericht niet correct is (AS: 4.1)
+2. De migratievoorziening verstuurt een Pf03-bericht aan de GBA-feitgemeente (AS: 4.3)
+3. De migratievoorziening verstuurt een Vb01-bericht met een toelichting op wat er niet goed is
+aan de inhoud van het bericht aan de GBA-feitgemeente (AS: 4.3)
+4. Einde use case.
+
+2.3
+
+Alternatief verloop: foutsituaties geconstateerd
+1. De migratievoorziening stelt vast dat er een of meer foutsituaties zijn (AS: 4.2)
+2. De migratievoorziening verstuurt een Tf21-bericht aan de GBA-feitgemeente
+3. Einde use case.
+
+2.4
+
+Alternatief verloop: geen of een onjuist antwoordbericht ontvangen
+1. De migratievoorziening stelt vast dat er geen of een onjuist antwoordbericht ontvangen wordt
+van de interne BRP-service (AS: 4.4)
+2. De migratievoorziening start een beheerderstaak
+3. Einde use case.
+
+Operatie BRP
+
+Pagina 7 van 16
+
+Definitief | 1.0| UC309 Verwerk toevallige gebeurtenis GBA | 26-09-2016
+
+3
+
+Algemeen
+
+3.1
+
+Toelichting termen
+Om de leesbaarheid van dit document te vergroten worden een aantal coderingen die verder in
+het document gebruikt worden toegelicht. Het betreft de toelichting op de nummers van de
+akteaanduidingen, de groepen en de categorieën. Deze zaken zijn uit het [LO] gekopieerd.
+
+3.1.1
+
+Akteaanduidingen
+Het aktenummer bestaat uit zeven posities waarbij het eerste en derde karakter van belang zijn.
+Het tweede karakter is in deze use case niet relevant en is in de onderstaande lijst vervangen
+door een punt (.).
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+3.1.2
+
+1.C erkenning
+1.E ontkenning ouderschap
+1.H geslachtsnaamwijziging (eventueel t.g.v. geslachtsnaamwijziging ouder)
+1.J notariële akte van erkenning
+1.M voornaamswijziging
+1.N vernietiging erkenning
+1.Q adoptie
+1.S transseksualiteit
+1.U verklaring ontkenning ouderschap
+1.V gerechtelijke vaststelling ouderschap
+2.A overlijden
+2.G lijkvinding
+3.A huwelijkssluiting
+3.B echtscheiding
+3.H omzetten geregistreerd partnerschap in huwelijk
+5.A aan gaan geregistreerd partnerschap
+5.B beëindiging geregistreerd partnerschap door overeenkomst of ontbinding
+
+Categorieën
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+01
+51
+02
+52
+03
+53
+05
+55
+06
+
+Persoon
+Persoon (historie)
+Ouder1
+Ouder1 (historie)
+Ouder2
+Ouder2 (historie)
+Huwelijk/geregistreerd partnerschap
+Huwelijk/geregistreerd partnerschap (historie)
+Overlijden
+
+Operatie BRP
+
+Pagina 8 van 16
+
+Definitief | 1.0| UC309 Verwerk toevallige gebeurtenis GBA | 26-09-2016
+
+3.1.3
+
+Groepen
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+3.2
+
+01
+02
+03
+04
+06
+07
+08
+15
+62
+81
+85
+
+Identificatienummers
+Naam
+Geboorte
+Geslacht
+Huwelijkssluiting/aangaan geregistreerd partnerschap
+Ontbinding huwelijk/geregistreerd partnerschap
+Overlijden
+Soort verbintenis
+Familierechtelijke betrekking
+Akte
+Geldigheid
+
+Relevante categorieën per akteaanduiding
+In de onderstaande tabel is te zien welke categorieën er per akteaanduiding aanwezig moeten
+zijn (V), welke optioneel aanwezig kunnen zijn (O) en welke niet aanwezig zijn (-). De punt (.)
+uit het aktenummer is ten behoeve van de leesbaarheid weggelaten.
+
+Cat.
+
+1C
+
+1E
+
+1H
+
+1J
+
+1M
+
+1N
+
+1Q
+
+1S
+
+1U
+
+1V
+
+2A
+
+2G
+
+3A
+
+3B
+
+3H
+
+5A
+
+5B
+
+01
+
+V
+
+V
+
+V
+
+V
+
+V
+
+V
+
+V
+
+V
+
+V
+
+V
+
+V
+
+V
+
+V
+
+V
+
+V
+
+V
+
+V
+
+51
+
+O
+
+O
+
+V
+
+O
+
+V
+
+O
+
+O
+
+V
+
+O
+
+O
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+02
+
+V
+
+-
+
+-
+
+V
+
+-
+
+-
+
+V
+
+-
+
+-
+
+V
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+52
+
+-
+
+V
+
+-
+
+-
+
+-
+
+V
+
+O
+
+-
+
+V
+
+O
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+03
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+O
+
+-
+
+-
+
+O
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+53
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+O
+
+-
+
+-
+
+O
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+05
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+V
+
+V
+
+V
+
+V
+
+V
+
+55
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+V
+
+V
+
+-
+
+V
+
+06
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+V
+
+V
+
+-
+
+-
+
+-
+
+-
+
+-
+
+Operatie BRP
+
+Pagina 9 van 16
+
+Definitief | 1.0| UC309 Verwerk toevallige gebeurtenis GBA | 26-09-2016
+
+3.3
+
+Relevante groepen per akteaanduiding
+In de onderstaande tabel is te zien welke groepen per categorie per akteaanduiding kunnen
+voorkomen.
+Gr.
+
+1C
+
+1E
+
+1H
+
+1J
+
+1M
+
+1N
+
+1Q
+
+1S
+
+1U
+
+1V
+
+2A
+
+2G
+
+3A
+
+3B
+
+3H
+
+5A
+
+5B
+
+01
+
+01
+02
+
+01
+
+01
+
+01
+02
+
+01
+
+01
+
+01
+02
+03
+
+01
+
+01
+
+01
+02
+03
+
+01
+
+01
+
+01
+05
+
+01
+05
+
+01
+05
+
+01
+05
+
+01
+05
+
+02
+
+01
+51
+02
+
+01
+51
+52
+
+01
+51
+
+01
+51
+02
+
+01
+51
+
+01
+51
+52
+
+01
+51
+02
+52
+03
+53
+
+01
+51
+
+01
+51
+52
+
+01
+51
+02
+52
+03
+53
+
+01
+
+01
+
+01
+05
+
+01
+05
+55
+
+01
+05
+55
+
+01
+05
+
+01
+05
+55
+
+03
+
+01
+51
+02
+
+01
+51
+52
+
+01
+51
+
+01
+51
+02
+
+01
+51
+
+01
+51
+52
+
+01
+51
+02
+52
+03
+53
+
+01
+51
+
+01
+51
+52
+
+01
+51
+02
+52
+03
+53
+
+01
+
+01
+
+01
+05
+
+01
+05
+55
+
+01
+05
+55
+
+01
+05
+
+01
+05
+55
+
+04
+
+01
+51
+02
+
+01
+51
+
+01
+51
+
+01
+51
+02
+
+01
+51
+
+01
+51
+
+01
+51
+02
+03
+
+01
+51
+
+01
+51
+
+01
+51
+02
+03
+
+01
+
+01
+
+01
+05
+
+01
+05
+
+01
+05
+
+01
+05
+
+01
+05
+
+06
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+05
+
+55
+
+05
+55
+
+05
+
+55
+
+07
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+05
+
+-
+
+-
+
+05
+
+08
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+06
+
+06
+
+-
+
+-
+
+-
+
+-
+
+-
+
+15
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+05
+
+05
+55
+
+05
+55
+
+05
+
+05
+55
+
+62
+
+02
+
+52
+
+-
+
+02
+
+-
+
+52
+
+02
+52
+03
+53
+
+-
+
+52
+
+02
+52
+03
+53
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+81
+
+01
+02
+
+01
+
+01
+
+01
+02
+
+01
+
+01
+
+01
+02
+03
+
+01
+
+01
+
+01
+02
+03
+
+06
+
+06
+
+05
+
+05
+
+05
+
+05
+
+05
+
+85
+
+01
+02
+
+01
+
+01
+
+01
+02
+
+01
+
+01
+
+01
+02
+03
+
+01
+
+01
+
+01
+02
+03
+
+06
+
+06
+
+05
+
+05
+
+05
+
+05
+
+05
+
+Operatie BRP
+
+Pagina 10 van 16
+
+Definitief | 1.0| UC309 Verwerk toevallige gebeurtenis GBA | 26-09-2016
+
+4
+
+Aanvullende specificaties
+
+4.1
+
+Controleren inhoud Tb02-bericht
+In deze paragraaf worden de controles beschreven die zich beperken tot de inhoud van het
+bericht. Hierbij wordt gekeken of de inhoud semantisch juist is. Indien er een fout geconstateerd
+wordt leidt dit tot het versturen van een Pf03-bericht aan de feitgemeente.
+
+4.1.1
+
+Algemeen
+Onderstaande controles worden ongeacht de akteaanduiding uitgevoerd. Elke controle kan een
+foutmelding opleveren welke gemeld wordt aan de GBA-feitgemeente.
+Controle
+Voor een aktenummer mogen alleen de
+categorieën voorkomen zoals die in paragraaf
+3.2 beschreven zijn.
+Alle 81.10 Registergemeente akte dienen
+overeen te komen met de verzendende
+gemeente van het bericht (gemeentecode).
+Alle 81.20 Aktenummer in het bericht dienen
+overeen te komen. Ook die in de kop van het
+bericht.
+Alle 85.10 Ingangsdatum geldigheid in het
+bericht dienen overeen te komen.
+Indien groep 03 voorkomt in een historische
+categorie dient deze altijd overeen te komen
+met groep 03 in de actuele categorie.
+
+4.1.2
+
+Niet alle voorkomens van 81.10
+Registergemeente akte zijn gelijk.
+Niet alle voorkomens van 81.20 Aktenummer
+zijn gelijk.
+Niet alle voorkomens van 85.10 Ingangsdatum
+geldigheid zijn gelijk.
+Groep 03 van actuele categorie <waarde>
+komt niet overeen met groep 03 van de
+historische categorie <waarde>.
+
+Akteaanduiding 3B, 5B, 3H
+Controle
+Er mag niet tegelijk een naamswijziging
+plaatsvinden. Groep 02 uit categorie 05 dient
+overeen te komen met groep 02 uit categorie
+55.
+
+4.1.3
+
+Foutmelding
+Voor aktenummer <waarde> is categorie
+<waarde> niet toegestaan.
+
+Foutmelding
+Voor aktenummer <waarde> is het niet
+toegestaan om gelijktijdig een naamswijziging
+door te voeren. Groep 02 uit categorie 05 komt
+niet overeen met groep 02 uit categorie 55.
+
+Akteaanduiding 3H
+Controle
+Soort verbintenis dient gewijzigd te zijn. Groep
+15 van categorie 05 dient niet overeen te
+komen met groep 15 van categorie 55.
+
+Operatie BRP
+
+Foutmelding
+Voor aktenummer <waarde> dient het soort
+verbintenis gewijzigd te zijn. Groep 15 van
+categorie 05 komt overeen met groep 15 van
+categorie 55.
+
+Pagina 11 van 16
+
+Definitief | 1.0| UC309 Verwerk toevallige gebeurtenis GBA | 26-09-2016
+
+4.1.4
+
+Akteaanduiding 3B, 5B
+Controle
+Soort verbintenis dient hetzelfde te zijn. Groep
+15 van categorie 05 dient overeen te komen
+met groep 15 van categorie 55.
+Element 05.07.30 (Land ontbinding) moet
+landcode ‘6030’ (Nederland) bevatten indien
+aanwezig.
+
+4.1.5
+
+Akteaanduiding 3A, 3H, 5A
+Controle
+Element 05.06.30 (Land
+huwelijkssluting/aangaan geregistreerd
+partnerschap) moet landcode ‘6030’
+(Nederland) bevatten indien aanwezig.
+
+4.1.6
+
+Foutmelding
+Er is een categorie 51 gevonden wat duidt op
+een naamswijziging. Echter de rubrieken
+01.02.20, 01.02.30 en 01.02.40 wijken niet af
+van rubrieken 51.02.20, 51.02.30 en 51.02.40.
+
+Akteaanduiding 1M
+Controle
+Alleen de wijziging van de 01.02.10
+Voornamen is toegestaan. Overige rubrieken
+mogen niet gewijzigd zijn.
+
+4.1.9
+
+Foutmelding
+Element 08.06.30 bevat geen landcode ‘6030’.
+
+Akteaanduiding 1C, 1E, 1J, 1N, 1U, 1Q, 1V
+Controle
+Er is sprake van een naamswijziging als
+categorie 51 aanwezig is. Hierbij dient
+minimaal één van de rubrieken 01.02.20,
+01.02.30 en 01.02.40 af te wijken van
+51.02.20, 51.02.30 en 51.02.40.
+
+4.1.8
+
+Foutmelding
+Element 05.06.30 bevat geen landcode ‘6030’.
+
+Akteaanduiding 2A, 2G
+Controle
+Element 05.06.30 (Land overlijden) moet
+landcode ‘6030’ (Nederland) bevatten indien
+aanwezig.
+
+4.1.7
+
+Foutmelding
+Voor aktenummer <waarde> dient het soort
+verbintenis ongewijzigd te zijn. Groep 15 van
+categorie 05 komt niet overeen met groep 15
+van categorie 55.
+Element 05.07.30 bevat geen landcode ‘6030’.
+
+Foutmelding
+Voor aktenummer <waarde> is het alleen
+toegestaan om 01.02.20 Voornamen te
+wijzigen.
+
+Akteaanduiding 1H
+Controle
+Alleen de wijziging van de 01.02.40
+Geslachtsnaam en 01.02.30 Voorvoegsel
+geslachtsnaam is toegestaan. Overige
+rubrieken mogen niet gewijzigd zijn.
+
+Operatie BRP
+
+Foutmelding
+Voor aktenummer <waarde> is het alleen
+toegestaan om 01.02.40 Geslachtsnaam en
+01.02.30 Voorvoegsel geslachtsnaam te
+wijzigen.
+
+Pagina 12 van 16
+
+Definitief | 1.0| UC309 Verwerk toevallige gebeurtenis GBA | 26-09-2016
+
+4.1.10
+
+Akteaanduiding 1S
+Controle
+Alleen de wijziging van de 01.02.10
+Voornamen, 01.02.20 Adellijke titel en
+01.04.10 Geslachtsaanduiding is toegestaan.
+Overige rubrieken mogen niet gewijzigd zijn.
+
+4.2
+
+Foutmelding
+Voor aktenummer <waarde> is het alleen
+toegestaan om 01.02.10 Voornamen, 01.02.20
+Adellijke titel en 01.04.10 Geslachtsaanduiding
+te wijzigen.
+
+Controleren foutsituaties
+Het [LO] beschrijft welke foutsituaties gecontroleerd dienen te worden voordat een kennisgeving
+wordt doorgevoerd. Wanneer een foutsituatie geconstateerd wordt, wordt een foutbericht (Tf21)
+gestuurd aan de feitgemeente met daarin een foutreden.
+Bij het zoeken naar personen worden alle opgeschorte personen met reden ‘F’ (foutief) niet
+meegenomen. Het administratienummer is hierdoor uniek waardoor foutreden ‘U’ nooit voor kan
+komen.
+
+4.3
+
+Foutberichten
+Indien het Tb02-bericht niet voldoet aan een of meer controles (par. 4.1) wordt een Pf03-bericht
+gestuurd aan de GBA-feitgemeente, gevolgd door een Vb01-bericht met daarin een of meer
+foutmeldingen.
+Meerdere foutmeldingen worden onder elkaar gemeld gescheiden door een witregel.
+
+4.4
+
+Technische fouten
+Wanneer er een technische fout optreedt, dient dit onder de aandacht van de beheerder
+gebracht te worden. Tot de technische fouten wordt ook gerekend als de interne service van de
+BRP geen antwoord geeft of een antwoord met een foutcode/reden.
+Er wordt hiervoor een beheerderstaak gestart. Meer informatie over het starten van
+beheerderstaken is te vinden in [UC808].
+
+4.5
+
+BRP-bericht opstellen
+
+4.5.1
+
+Vertalen naar BRP-bericht
+Het Tb02-bericht bevat een GBA-inhoud. Afhankelijk van het aktenummer dient een bepaald
+BRP-bericht gebruikt te worden. In de onderstaande tabel is te vinden welk aktenummer bij welk
+bericht hoort. De namen van de berichten zijn afgeleid van de [XSD] van de interne BRP-service
+die is opgesteld.
+
+Aktenummer
+1.C
+1.E
+
+Operatie BRP
+
+Administratieve handeling
+BRP
+GBA – Erkenning na geboorte
+GBA – Ontkenning
+ouderschap
+
+Bericht
+isc_migRegistreerErkenning
+isc_migActualiseerAfstamming
+
+Pagina 13 van 16
+
+Definitief | 1.0| UC309 Verwerk toevallige gebeurtenis GBA | 26-09-2016
+
+1.J
+1.N
+1.Q
+1.U
+1.V
+1.H
+1.M
+1.S
+3.A
+3.B
+3.H
+5.B
+5.A
+2.A
+2.G
+
+GBA – Erkenning na geboorte
+GBA – Vernietiging erkenning
+GBA – Adoptie ingezetene
+GBA – Ontkenning
+ouderschap
+GBA – Vaststelling
+ouderschap
+GBA – Wijziging
+geslachtsnaam
+GBA – Wijziging voornaam
+GBA – Wijziging
+geslachtsaanduiding
+GBA – Voltrekking huwelijk
+GBA – Ontbinding huwelijk
+GBA – Omzetting
+geregistreerd partnerschap
+GBA – Beëindiging
+geregistreerd partnerschap
+GBA – Aangaan geregistreerd
+partnerschap
+GBA – Overlijden
+GBA – Overlijden
+
+isc_migRegistreerErkenning
+isc_migRegistreerErkenning
+isc_migRegistreerAdoptie
+isc_migActualiseerAfstamming
+isc_migActualiseerAfstamming
+isc_migRegistreerNaamGeslacht
+isc_migRegistreerNaamGeslacht
+isc_migRegistreerNaamGeslacht
+isc_migRegistreerHuwelijkGeregistreerdPartnerschap
+isc_migRegistreerHuwelijkGeregistreerdPartnerschap
+isc_migRegistreerHuwelijkGeregistreerdPartnerschap
+isc_migRegistreerHuwelijkGeregistreerdPartnerschap
+isc_migRegistreerHuwelijkGeregistreerdPartnerschap
+isc_migRegistreerOverlijden
+isc_migRegistreerOverlijden
+
+Afhankelijk van het aktenummer en de overige inhoud van het Tb02-bericht dient het BRPbericht gevuld te worden. Hierbij dienen de GBA-gegevens uit het Tb02-bericht omgezet te
+worden naar de BRP-gegevens in het BRP-bericht (zie [CONV]).
+
+4.5.2
+
+Objectsleutels
+In de berichten aan de interne BRP-service worden van ingeschreven personen de objectsleutels
+gecommuniceerd waarmee deze personen in de BRP geïdentificeerd worden. De objectsleutel is
+een BRP-gegeven en is niet te vinden in het Tb02-bericht. De migratievoorziening zal om de
+objectsleutel mee te kunnen sturen zelf de persoon in de BRP moeten zoeken en vinden.
+Van relaties worden indien van toepassing de technische sleutels gecommuniceerd (bijvoorbeeld
+bij het ontbinden van een huwelijk). Ook deze sleutels komen niet voor in het Tb02-bericht en
+zullen door de migratievoorziening opgezocht worden in de BRP.
+
+4.5.3
+
+Zoeken hoofdpersoon
+Er wordt naar de hoofdpersoon uit het Tb02-bericht gezocht op basis van het 01.01.10 Anummer. Identificerende rubrieken uit de kop van het bericht worden genegeerd.
+
+4.5.4
+
+Zoeken gerelateerde personen
+Voor een gerelateerde van de hoofdpersoon uit het Tb02-bericht (ouder, kind of partner) geldt
+dat deze als gerelateerde wordt opgenomen in het bericht. In tegenstelling tot wat in het [LO]
+staat wordt niet gezocht of de gerelateerde persoon bestaat.
+
+Operatie BRP
+
+Pagina 14 van 16
+
+Definitief | 1.0| UC309 Verwerk toevallige gebeurtenis GBA | 26-09-2016
+
+4.6
+
+Extra handelingen
+
+4.6.1
+
+Automatisch in onderzoek plaatsen
+Het [LO] beschrijft dat in sommige situaties automatisch gegevens in onderzoek geplaatst dienen
+te worden. In de BRP wordt dit niet gedaan en wordt afgeweken van het [LO]. In plaats daarvan
+zullen de betreffende situaties door de maandelijkse BCM-controle opgemerkt worden en aan de
+BRP-gemeenten worden gemeld.
+
+4.6.2
+
+Opgeschort
+Het [LO] beschrijft dat in een bepaalde situatie in 08.75 Documentindicatie geregistreerd dient te
+worden dat er een kennisgeving is ontvangen.
+• Als de gevonden persoon is opgeschort met reden ‘M’ (ministerieel besluit) of ‘E’ (emigratie)
+en het rechtsfeit ligt op of na de datum van opschorten, dan dient de ontvangst van het
+bericht geregistreerd te worden in 08.75 Documentindicatie.
+Deze personen bevinden zich altijd in de RNI. Deze personen worden niet meer door de BRP
+bijgehouden. Wanneer deze situatie zich toch voordoet zal er een Pf03-bericht gestuurd worden
+aan de feitgemeente gevolgd door een Vb01-bericht met daarin een omschrijving van de reden.
+
+Operatie BRP
+
+Pagina 15 van 16
+
+Definitief | 1.0| UC309 Verwerk toevallige gebeurtenis GBA | 26-09-2016
+
+5
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 16 van 16
+
+

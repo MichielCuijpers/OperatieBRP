@@ -1,0 +1,1187 @@
+LV.1.AL - Bijlage Autorisatie levering
+Versie: Werk
+Gegenereerd op: 21 juli 2017
+Status: Definitief
+
+1 Regels voor usecase LV.1.AL.CGA - Controleer
+autorisatieobjecten
+1.1
+
+Autorisatieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1257
+
+5
+
+F
+
+Er moet een toegang leveringsautorisatie voor het leveringsverzoek bestaan
+
+R1258
+
+6
+
+F
+
+De toegang leveringsautorisatie uit een verzoekbericht moet geldig zijn
+
+R1261
+
+8
+
+F
+
+De leveringsautorisatie uit een verzoekbericht moet geldig zijn
+
+R1262
+
+11
+
+F
+
+De gevraagde dienst moet geldig zijn
+
+R1263
+
+7
+
+F
+
+De leveringsautorisatie mag niet geblokkeerd zijn
+
+R1264
+
+6
+
+F
+
+De gevraagde dienst mag niet geblokkeerd zijn
+
+R2052
+
+5
+
+F
+
+De toegang leveringsautorisatie mag niet geblokkeerd zijn
+
+R2053
+
+6
+
+F
+
+De leveringsautorisatie moet bestaan
+
+R2054
+
+5
+
+F
+
+De in het bericht gevraagde dienst moet overeenkomen met de gebruikte
+berichtsoort
+
+R2055
+
+7
+
+F
+
+De gevraagde dienst moet bestaan
+
+R2056
+
+6
+
+F
+
+De dienstbundel van de gevraagde dienst mag niet geblokkeerd zijn
+
+R2120
+
+3
+
+F
+
+Er moet een toegang leveringsautorisatie voor de opgegeven partij en rol
+bestaan
+
+R2130
+
+5
+
+F
+
+De gevraagde dienst moet zijn toegestaan voor de leveringsautorisatie
+
+R2239
+
+5
+
+F
+
+De dienstbundel waarin de gevraagde dienst is opgenomen moet geldig zijn
+
+R2242
+
+6
+
+F
+
+De geautoriseerde voor de toegang leveringsautorisatie moet een geldige
+partij zijn
+
+R2524
+
+2
+
+F
+
+Het stelsel van de leveringsautorisatie moet BRP zijn als de partij op het
+BRP-stelsel aangesloten is
+
+R2585
+
+1
+
+F
+
+Het stelsel van de leveringsautorisatie moet BRP zijn als het leveringsverzoek
+op het BRP-koppelvlak wordt aangeboden
+
+1.2
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2343
+
+4
+
+1.3
+
+F
+
+Algemene foutmelding bij schending autorisatieregels
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2016
+
+1
+
+'Systeemdatum'
+
+R2050
+
+2
+
+De toegang leveringsautorisatie van een verzoekbericht
+
+R2085
+
+3
+
+De dienst die gevraagd wordt
+
+R2129
+
+2
+
+Geldig
+
+1.4
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2258
+
+5
+
+Dienstbundels met onvolledig geconverteerde populatiebeperkingen buiten
+beschouwing laten
+
+2 Regels voor usecase LV.1.AL.BEW - Controleer
+bewerkerconstructie
+2.1
+
+Autorisatieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2121
+
+6
+
+F
+
+Er moet een toegang leveringsautorisatie voor de opgegeven partij, rol en
+ondertekenaar bestaan
+
+R2122
+
+5
+
+F
+
+Er moet een toegang leveringsautorisatie voor de opgegeven partij, rol en
+transporteur bestaan
+
+R2243
+
+4
+
+F
+
+De ondertekenaar voor de toegang leveringsautorisatie moet een geldige
+partij zijn
+
+R2244
+
+4
+
+F
+
+De transporteur voor de toegang leveringsautorisatie moet een geldige partij
+zijn
+
+R2245
+
+6
+
+F
+
+De combinatie partij en rol voor de toegang leveringsautorisatie in het
+verzoekbericht moet geldig zijn
+
+2.2
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2343
+
+4
+
+2.3
+
+F
+
+Algemene foutmelding bij schending autorisatieregels
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2016
+
+1
+
+'Systeemdatum'
+
+R2050
+
+2
+
+De toegang leveringsautorisatie van een verzoekbericht
+
+R2129
+
+2
+
+Geldig
+
+3 Uitwerking regels
+R1257
+Er moet een toegang leveringsautorisatie voor het leveringsverzoek bestaan
+Definitie:
+
+Bij het in behandeling nemen van een leveringsverzoek geldt dat het voorkomen
+gedefinieerd door De toegang leveringsautorisatie van een verzoekbericht (R2050)
+dient te bestaan.
+Noot: Deze regel is in essentie de uiteindelijke eis voor een correcte authenticatie.
+Er zijn echter een aantal andere regels die een deel van deze regel al afvangen. De
+foutmelding van deze regel zal daarom alleen optreden in de situatie die de andere
+regels nog niet afvangen. De andere regels controleren al:
+• Dat er één of meer voorkomens zijn met de juiste Partij\Rol en
+Leveringsautorisatie (R2120 - Er moet een toegang leveringsautorisatie voor de
+opgegeven partij en rol bestaan)
+• Dat er één of meer voorkomens zijn met de juiste Partij\Rol,
+Leveringsautorisatie en Ondertekenaar (R2121 - Er moet een toegang
+leveringsautorisatie voor de opgegeven partij, rol en ondertekenaar bestaan)
+• Dat er één of meer voorkomens zijn met de juiste Partij\Rol,
+Leveringsautorisatie en Transporteur (R2122 - Er moet een toegang
+leveringsautorisatie voor de opgegeven partij, rol en transporteur bestaan)
+Deze regel controleert vervolgens nog dat er een voorkomen is met de juiste
+Partij\Rol, Leveringsautorisatie, Ondertekenaar en Transporteur. Dit kan dan alleen
+nog het geval zijn als er meerdere voorkomens zijn waarbij in sommige
+voorkomens de Ondertekenaar klopt en in andere de Transporteur klopt, maar
+waarbij ze in geen enkel voorkomen beiden kloppen. Ofwel deze regel zal alleen nog
+afgaan in de situatie dat de Ondertekenaar en Transporteur op onjuiste wijze
+gecombineerd zijn. De foutmelding van deze regel is daarom afgestemd op die
+situatie.
+
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De combinatie ondertekenaar en transporteur is onjuist.
+
+Loggingsniveau:
+
+Illegale poging
+
+R1258
+De toegang leveringsautorisatie uit een verzoekbericht moet geldig zijn
+Definitie:
+
+Bij het in behandeling nemen van een leveringsverzoek geldt dat De toegang
+leveringsautorisatie van een verzoekbericht (R2050) Geldig (R2129) is op de
+'Systeemdatum' (R2016).
+
+Versie:
+
+6
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De toegang leveringsautorisatie is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R1261
+De leveringsautorisatie uit een verzoekbericht moet geldig zijn
+Definitie:
+
+Bij het in behandeling nemen van een leveringsverzoek is het voorkomen van
+Leveringsautorisatie zoals bepaald door berichtparameter
+
+leveringsautorisatieIdentificatie in het bericht Geldig (R2129) op de 'Systeemdatum'
+(R2016).
+Versie:
+
+8
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven leveringsautorisatie is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R1262
+De gevraagde dienst moet geldig zijn
+Definitie:
+
+De De dienst die gevraagd wordt (R2085) moet Geldig (R2129) zijn op
+'Systeemdatum' (R2016).
+
+Versie:
+
+11
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De gevraagde dienst is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R1263
+De leveringsautorisatie mag niet geblokkeerd zijn
+Definitie:
+
+Bij de Leveringsautorisatie bij De dienst die gevraagd wordt (R2085) moet
+Leveringsautorisatie.Geblokkeerd? ongelijk zijn aan "Ja"
+
+Versie:
+
+7
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven leveringsautorisatie is geblokkeerd door de beheerder.
+
+Loggingsniveau:
+
+Illegale poging
+
+R1264
+De gevraagde dienst mag niet geblokkeerd zijn
+Definitie:
+
+Bij De dienst die gevraagd wordt (R2085) moet de Dienst.Geblokkeerd? ongelijk zijn
+aan "Ja".
+
+Versie:
+
+6
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De gevraagde dienst is geblokkeerd door de beheerder.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2016
+'Systeemdatum'
+Definitie:
+
+De systeemdatum is de actuele datum tijdens het evalueren van een regel van het
+BRP syteem en heeft het formaat 'jjjjmmdd'.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2050
+De toegang leveringsautorisatie van een verzoekbericht
+Definitie:
+
+Bij een leveringsverzoek kunnen we het voorkomen van Toegang
+leveringsautorisatie aanwijzen dat overeenkomt met de inhoud van de
+
+stuurgegevens en de OIN's uit de gebruikte certificaten voor ondertekening en
+transport van het bericht. Dit noemen we 'de toegang leveringsautorisatie van het
+verzoekbericht'.
+De context van deze definitie bestaat uit de volgende input:
+• De waarde van Bericht.Zendende partij uit de stuurgegevens van het
+inkomende bericht. Deze bevat een Partij.Code die de 'Geautoriseerde Partij'
+aanduidt.
+• Alleen bij bevragingen: De waarde van Bericht.Rol uit de parameters van het
+inkomende bericht. Deze bevat een Rol.Naam die de 'Rol' aanduidt.
+• De waarde van Bericht.Leveringsautorisatie uit de parameters van het
+inkomende bericht. Deze bevat een Leveringsautorisatie.ID die de
+'Leveringsautorisatie' aanduidt.
+• Het OIN van het PKI-overheidscertificaat waarmee het bericht was
+ondertekend. Dit OIN noemen we de 'Ondertekenaar'.
+• Het OIN van het PKI-overheidscertificaat waarmee de beveiligde verbinding
+was opgezet. Dit OIN noemen we de 'Transporteur'
+
+'De toegang leveringsautorisatie van een verzoekbericht' is het voorkomen van
+Toegang leveringsautorisatie waarvoor geldt dat:
+Bij bevragingen (Bericht.Rol is opgegeven):
+• Toegang leveringsautorisatie.Geautoriseerde verwijst naar de Partij \ Rol van
+'Geautoriseerde Partij' en 'Rol'
+Bij niet-bevragingen (Bericht.Rol niet opgegeven):
+• Toegang leveringsautorisatie.Geautoriseerde verwijst naar een Partij \ Rol van
+'Geautoriseerde Partij'
+En bovendien (in alle gevallen):
+• Toegang leveringsautorisatie.Leveringsautorisatie verwijst naar
+de'Leveringsautorisatie'
+• De ondertekenaar klopt:
+• Het OIN van de partij Toegang leveringsautorisatie.Ondertekenaar gelijk is
+aan de 'Ondertekenaar' OF
+• Toegang leveringsautorisatie.Ondertekenaar leeg is en 'Ondertekenaar'
+gelijk is aan de OIN van de 'Geautoriseerde Partij'
+• De transporteur klopt:
+• Het OIN van de Partij Toegang leveringsautorisatie.Transporteur gelijk is
+aan de 'Transporteur' OF
+• Toegang leveringsautorisatie.Transporteur leeg is en 'Transporteur' gelijk
+is aan de OIN van de 'Geautoriseerde Partij'
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2052
+De toegang leveringsautorisatie mag niet geblokkeerd zijn
+Definitie:
+
+De Toegang leveringsautorisatie.Geblokkeerd? bij de te controleren
+Leveringsautorisatie moet ongelijk zijn aan "Ja".
+Indien het een afhandeling van een leveringsverzoek betreft dan dient De toegang
+leveringsautorisatie van een verzoekbericht (R2050) gecontroleerd te worden.
+
+Indien het een Selectie betreft dan dient de Selectietaak.Toegang
+leveringsautorisatie gecontroleerd te worden.
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De toegang leveringsautorisatie is geblokkeerd door de beheerder.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2053
+De leveringsautorisatie moet bestaan
+Definitie:
+
+Bij het in behandeling nemen van een leveringsverzoek geldt dat het voorkomen
+van Leveringsautorisatie zoals bepaald door parameter
+leveringsautorisatieIdentificatie in het bericht dient te bestaan.
+
+Versie:
+
+6
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven leveringsautorisatie bestaat niet.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2054
+De in het bericht gevraagde dienst moet overeenkomen met de gebruikte berichtsoort
+Definitie:
+
+Bij het in behandeling nemen van een leveringsverzoek 'bevraging' moet de Soort
+dienst van de in het bericht via berichtparamter dienstIdentificatie opgegeven
+Dienst overeenkomen met de Soort dienst zoals die volgt uit het "Soort bericht",
+volgens de onderstaande afleiding:
+Geef details persoon => Geef details persoon
+Zoek persoon => Zoek Persoon
+Geef medebewoners => Geef medebewoners van persoon
+Zoek persoon op adresgegevens => Zoek Persoon op Adres
+
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De gebruikte berichtsoort komt niet overeen met de gevraagde dienst.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2055
+De gevraagde dienst moet bestaan
+Definitie:
+
+Bij het in behandeling nemen van een bevraging (het bericht bevat de parameter
+Bericht.Dienst) geldt dat de opgegeven Dienst dient te bestaan.
+
+Versie:
+
+7
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De gevraagde dienst bestaat niet.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2056
+De dienstbundel van de gevraagde dienst mag niet geblokkeerd zijn
+Definitie:
+
+Bij de Dienstbundel van De dienst die gevraagd wordt (R2085) moet
+Dienstbundel.Geblokkeerd? ongelijk zijn aan "Ja".
+
+Versie:
+
+6
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De dienstbundel van de gevraagde dienst is geblokkeerd door de beheerder.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2085
+De dienst die gevraagd wordt
+Definitie:
+
+De _'Dienst die gevraagd wordt'_ leiden we als volgt af:
+
+•
+
+In het geval van een bevraging (het verzoekbericht bevat de parameter
+Bericht.Dienst):
+De Dienst met Dienst.ID gelijk aan de berichtparameter Bericht.Dienst
+
+•
+
+Voor overige verzoekberichten (het bericht bevat NIET de parameter
+Bericht.Dienst) betekent dit:
+Het voorkomen van Dienst:
+• Zich bevindt onder de Leveringsautorisatie die in het bericht is opgegeven
+middels berichtparameter Bericht.Leveringsautorisatie
+• De Soort dienst heeft, die volgt uit de berichtsoort en de handeling in het
+bericht:
+• Registreer afnemerindicatie => waarbij de berichtparameter
+Bericht.Administratieve handeling = "Plaatsing afnemerindicatie"
+• Registreer afnemerindicatie => waarbij de berichtparameter
+Bericht.Administratieve handeling = "Verwijdering afnemerindicatie"
+• Geef synchronisatie persoon => Synchronisatie persoon
+• Geef synchronisatie stamgegeven => Synchronisatie stamgegeven
+• Geef StUF BG bericht => Geef StUF BG bericht
+
+•
+
+Voor selecties (is er geen verzoekbericht):
+De Dienst met Dienst.ID gelijk aan Selectietaak.Dienst
+
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R2120
+Er moet een toegang leveringsautorisatie voor de opgegeven partij en rol bestaan
+Definitie:
+
+Bij het in behandeling nemen van een leveringsverzoek geldt dat er tenminste één
+voorkomen van Toegang leveringsautorisatie dient te bestaan voor de
+Leveringsautorisatie en Toegang leveringsautorisatie.Geautoriseerde die volgt uit
+het bericht:
+• De waarde van Bericht.Leveringsautorisatie uit de stuurgegevens van het
+inkomende bericht.
+• De waarde van Bericht.Zendende partij uit de stuurgegevens van het
+inkomende bericht. Deze bevat een Partij.Code die de 'Geautoriseerde Partij'
+aanduidt.
+• Indien aanwezig in het bericht: de waarde van Bericht.Rol uit de parameters
+van het inkomende bericht. Deze bevat een Rol.Naam die de 'Rol' aanduidt.
+
+Versie:
+
+3
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De gebruikte authenticatie is niet bekend.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2121
+Er moet een toegang leveringsautorisatie voor de opgegeven partij, rol en ondertekenaar
+bestaan
+Definitie:
+
+Bij het in behandeling nemen van een leveringsverzoek geldt dat er tenminste één
+voorkomen van Toegang leveringsautorisatie dient te bestaan voor de Toegang
+leveringsautorisatie.Leveringsautorisatie, Toegang
+leveringsautorisatie.Geautoriseerde en Toegang leveringsautorisatie.Ondertekenaar
+die volgt uit het bericht en de ondertekening:
+• De waarde van Bericht.Leveringsautorisatie uit de stuurgegevens van het
+inkomende bericht.
+• De waarde van Bericht.Zendende partij uit de stuurgegevens van het
+inkomende bericht. Deze bevat een Partij.Code die de 'Geautoriseerde Partij'
+aanduidt.
+• Indien aanwezig in het bericht: De waarde van Bericht.Rol uit de parameters
+van het inkomende bericht. Deze bevat een Rol.Naam die de 'Rol' aanduidt.
+• De OIN van het PKI overheidscertifictaat dat is gebruikt voor de digitale
+ondertekening van het bericht:
+• Indien deze gelijk is aan de OIN van de 'Geautoriseerde partij', dan dient
+Toegang leveringsautorisatie.Ondertekenaar leeg te zijn.
+• Indien deze NIET gelijk is aan de OIN van de 'Geautoriseerde partij', dan
+dient het OIN van de Partij in Toegang leveringsautorisatie.Ondertekenaar
+gelijk te zijn aan de OIN van het PKI overheidscertifictaat dat is gebruikt
+voor de digitale ondertekening
+
+Versie:
+
+6
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De ondertekenaar is onjuist.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2122
+Er moet een toegang leveringsautorisatie voor de opgegeven partij, rol en transporteur
+bestaan
+Definitie:
+
+Bij het in behandeling nemen van een leveringsverzoek geldt dat er tenminste één
+voorkomen van Toegang leveringsautorisatie dient te bestaan voor de Toegang
+leveringsautorisatie.Leveringsautorisatie, Toegang
+leveringsautorisatie.Geautoriseerde en Toegang leveringsautorisatie.Transporteur
+die volgt uit het bericht en de verbinding:
+• De waarde van Bericht.Leveringsautorisatie uit de stuurgegevens van het
+inkomende bericht.
+• De waarde van Bericht.Zendende partij uit de stuurgegevens van het
+inkomende bericht. Deze bevat een Partij.Code die de 'Geautoriseerde Partij'
+aanduidt.
+• Indien aanwezig in het bericht: De waarde van Bericht.Rol uit de parameters
+van het inkomende bericht. Deze bevat een Rol.Naam die de 'Rol' aanduidt.
+• Het OIN van het PKI overheidscertificaat dat is gebruikt voor het opzetten van
+de beveiligde verbinding:
+• Indien deze gelijk is aan het OIN van de 'Geautoriseerde partij', dan dient
+Toegang leveringsautorisatie.Transporteur leeg te zijn.
+• Indien deze NIET gelijk is aan de OIN van de 'Geautoriseerde partij', dan
+dient Toegang leveringsautorisatie.Transporteur gelijk te zijn aan de OIN
+van het PKI overheidscertificaat dat is gebruikt voor het opzetten van de
+beveiligde verbinding.
+
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De transporteur is onjuist.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2129
+Geldig
+Definitie:
+
+Een object is geldig op een peildatum als:
+De Datum aanvang geldigheid op of voor de peildatum ligt en de Datum einde
+geldigheid na de peildatum ligt.
+of
+De Datum ingang op of voor de peildatum ligt en de Datum einde na de peildatum
+ligt.
+(dus: de geldigeheidsperiode is inclusief de ingangsdatum, maar exclusief de
+einddatum)
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2130
+De gevraagde dienst moet zijn toegestaan voor de leveringsautorisatie
+Definitie:
+
+Bij het in behandeling nemen van een leveringsverzoek geldt het volgende:
+Als de Leveringsautorisatie zoals aangegeven door berichtparameter
+Bericht.Leveringsautorisatie en De dienst die gevraagd wordt (R2085) beide
+bestaan, dan dient die Leveringsautorisatie die De dienst die gevraagd wordt
+(R2085) te bevatten.
+
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De leveringsautorisatie bevat de gevraagde dienst niet.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2239
+De dienstbundel waarin de gevraagde dienst is opgenomen moet geldig zijn
+Definitie:
+
+De Dienstbundel die behoort bij de De dienst die gevraagd wordt (R2085) moet
+Geldig (R2129) zijn op 'Systeemdatum' (R2016).
+
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De dienstbundel is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2242
+De geautoriseerde voor de toegang leveringsautorisatie moet een geldige partij zijn
+Definitie:
+
+De Bericht.Zendende partij moet verwijzen naar een Geldig (R2129) voorkomen op
+'Systeemdatum' (R2016) in Partij.
+
+Versie:
+
+6
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De partij is niet geldig
+
+Loggingsniveau:
+
+Illegale poging
+
+R2243
+De ondertekenaar voor de toegang leveringsautorisatie moet een geldige partij zijn
+Definitie:
+
+Het OIN van het PKI-overheidscertificaat waarmee het bericht is ondertekend (de
+ondertekenaar) moet verwijzen naar een Geldig (R2129) voorkomen op
+'Systeemdatum' (R2016) in Partij.
+
+Versie:
+
+4
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De ondertekenaar is geen geldige partij.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2244
+De transporteur voor de toegang leveringsautorisatie moet een geldige partij zijn
+Definitie:
+
+Het OIN van het PKI-overheidscertificaat waarmee de beveiligde verbinding is
+opgezet (de transporteur) moet verwijzen naar Geldig (R2129) voorkomen op
+'Systeemdatum' (R2016) in Partij.
+
+Versie:
+
+4
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De transporteur is geen geldige partij.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2245
+De combinatie partij en rol voor de toegang leveringsautorisatie in het verzoekbericht moet
+geldig zijn
+Definitie:
+
+De toegang leveringsautorisatie van een verzoekbericht (R2050) moet verwijzen
+naar Geldig (R2129) voorkomen op 'Systeemdatum' (R2016) in Partij \ Rol.
+
+Versie:
+
+6
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De combinatie partij en rol is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2258
+Dienstbundels met onvolledig geconverteerde populatiebeperkingen buiten beschouwing
+laten
+Definitie:
+
+Dienstbundels waarbij Dienstbundel.Nadere populatiebeperking volledig
+geconverteerd? gelijk is aan "Nee" dienen buiten beschouwing gelaten te worden.
+
+Versie:
+
+5
+
+Soort:
+
+Verwerkingslogica
+
+R2343
+Algemene foutmelding bij schending autorisatieregels
+Definitie:
+
+Bij schending van één of meer van de autorisatieregels die zijn gekoppeld aan Use
+Case BY.1.AA, Use Case LV.1.AL of Use Case VB.1.AV.CA wordt in plaats van de
+meldingstekst bij de geschonden regel, de in deze regel opgenomen meldingstekst
+
+opgenomen in het berichtonderdeel Meldingen van het resultaatbericht. Zodat niet
+precies blijkt wat er aan de hand is.
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Er is een autorisatiefout opgetreden.
+
+R2524
+Het stelsel van de leveringsautorisatie moet BRP zijn als de partij op het BRP-stelsel
+aangesloten is
+Definitie:
+
+Bij het in behandeling nemen van een leveringsverzoek geldt voor het voorkomen
+van Leveringsautorisatie, zoals bepaald door berichtparameter
+leveringsautorisatieIdentificatie in het bericht, dat Leveringsautorisatie.Stelsel de
+waarde 'BRP' moet bevatten indien
+Bericht.Zendende partij verwijst naar een Partij.Datum overgang naar BRP die
+gevuld is met een waarde die kleiner of gelijk is aan de 'Systeemdatum' (R2016).
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Stelsel van de leveringsautorisatie moet BRP zijn
+
+Loggingsniveau:
+
+Illegale poging
+
+R2585
+Het stelsel van de leveringsautorisatie moet BRP zijn als het leveringsverzoek op het BRPkoppelvlak wordt aangeboden
+Definitie:
+
+Het leveringsverzoek moet door het BRP-koppelvlak zijn aangeboden indien het
+voorkomen van Leveringsautorisatie, zoals bepaald door berichtparameter
+leveringsautorisatieIdentificatie in het bericht, voor Leveringsautorisatie.Stelsel de
+waarde 'BRP' bevat.
+Toelichting:
+• Een leveringsverzoek zal op het GBA-koppelvlak worden aangeboden indien de
+partij nog aangesloten is op het GBA-stelsel.
+• Deze controle voorkomt dat deze partij een BRP-bericht op het BRP-koppelvlak
+aanbiedt terwijl het stelsel van de leveringsautorisatie nog gelijk 'GBA' is.
+
+Versie:
+
+1
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Voor leveringsverzoek op het BRP-koppelvlak moet stelsel van de
+leveringsautorisatie BRP zijn.
+
+Loggingsniveau:
+
+Illegale poging
+
+

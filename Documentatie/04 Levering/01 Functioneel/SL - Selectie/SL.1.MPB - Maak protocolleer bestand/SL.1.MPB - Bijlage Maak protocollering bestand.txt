@@ -1,0 +1,125 @@
+SL.1.MPB - Bijlage Maak protocollering bestand
+Versie: Werk
+Gegenereerd op: 12 juli 2017
+Status: Definitief
+
+1 Regels voor usecase SL.1.MPB.PG - Plaats gegevens
+1.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2566
+
+1
+
+Datum aanvang materiële periode resultaat t.b.v. protocollering selecties
+
+R2567
+
+1
+
+Datum einde materiële periode resultaat t.b.v. protocollering selecties
+
+R2569
+
+1
+
+Vaststellen Leveringsaantekening \ Persoon t.b.v. protocollering selecties
+
+2 Regels voor usecase SL.1.MPB.MB - Maak bestand
+2.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2578
+
+1
+
+Geen protocollering bestand rol 'Bijhouder' of leverinsgsautorisatie
+protocolleringsniveau geheim
+
+3 Uitwerking regels
+R2566
+Datum aanvang materiële periode resultaat t.b.v. protocollering selecties
+Definitie:
+
+Indien Selectietaak.Peilmoment materieel resultaat is gevuld dan
+Datum aanvang materiële periode resultaat in het protocolleer bestand =
+Selectietaak.Peilmoment materieel resultaat
+Anders
+Datum aanvang materiële periode resultaat in het protocolleer bestand =
+Selectietaak.Datum uitvoer
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2567
+Datum einde materiële periode resultaat t.b.v. protocollering selecties
+Definitie:
+
+Indien Selectietaak.Peilmoment materieel resultaat is gevuld dan
+Datum einde materiële periode resultaat in het protocolleer bestand =
+Selectietaak.Peilmoment materieel resultaat + 1
+Anders
+Datum aanvang materiële periode resultaat in het protocolleer bestand =
+Selectietaak.Datum uitvoer + 1
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2569
+Vaststellen Leveringsaantekening \ Persoon t.b.v. protocollering selecties
+Definitie:
+
+Bij elke Leveringsaantekening in het bestand dienen één of meer voorkomens van
+Leveringsaantekening \ Persoon aangemaakt te worden in het bestand die
+aangeven op welke personen die protocollering betrekking heeft.
+Daarbij dient per persoon Leveringsaantekening \ Persoon.Tijdstip laatste wijziging
+persoon in het bestand gevuld te worden met de geleverde actuele waarde van
+Persoon.Tijdstip laatste wijziging.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2578
+Geen protocollering bestand rol 'Bijhouder' of leverinsgsautorisatie protocolleringsniveau
+geheim
+Definitie:
+
+Indien de Partij \ Rol.Rol = "Bijhouder"
+OF
+Leveringsautorisatie.Protocolleringsniveau is gelijk aan 'Geheim'
+
+dan wordt er tijdens de selectie geen protocollering bestand aangelegd.
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+

@@ -1,0 +1,503 @@
+UC830 Beheren vrij bericht
+
+0.4
+
+Datum
+Status
+
+21-02-2017
+Concept
+
+Concept | 0.4 | UC830 Beheren vrij bericht | 21-02-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+
+2
+
+VERLOOP .................................................................................................................................................6
+2.1
+2.2
+2.3
+2.4
+
+3
+
+REGULIER VERLOOP: ZOEKEN VRIJE BERICHTEN................................................................................6
+ALTERNATIEF VERLOOP: TOON DETAILS VRIJE BERICHT(EN) ...........................................................6
+ALTERNATIEF VERLOOP: MARKEREN ALS GELEZEN OF ONGELEZEN ..................................................6
+ALTERNATIEF VERLOOP: TOEVOEGEN UITGAAND VRIJ BERICHT; ZOEKEN PARTIJ(EN) ...................6
+
+AANVULLENDE SPECIFICATIES .................................................................................................7
+3.1
+3.2
+3.3
+3.4
+3.5
+3.6
+3.7
+3.8
+3.9
+3.10
+3.11
+
+4
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+PRECONDITIE ........................................................................................................................................5
+POSTCONDITIE......................................................................................................................................5
+
+ZOEKEN VRIJE BERICHTEN ...................................................................................................................7
+TONEN ZOEKRESULTATEN VRIJE BERICHTEN ......................................................................................7
+TONEN INHOUD VRIJE BERICHT ...........................................................................................................7
+TONEN MARKERING GELEZEN OF ONGELEZEN ....................................................................................8
+MARKEREN ALS GELEZEN OF ONGELEZEN ...........................................................................................8
+ZOEKEN VAN ONTVANGST PARTIJEN ...................................................................................................8
+TONEN ZOEKRESULTAAT GEAUTORISEERDE PARTIJEN .......................................................................8
+LIJST VAN SOORT VRIJ BERICHT ..........................................................................................................9
+VOORINVULLEN TEKSTVELD VAN VRIJ BERICHT .................................................................................9
+BEDRIJFSREGELS VRIJ BERICHT .......................................................................................................9
+TOEVOEGEN UITGAAND VRIJ BERICHT .............................................................................................9
+
+OPMERKINGEN ..................................................................................................................................10
+
+Operatie BRP
+
+Pagina 2 van 10
+
+Concept | 0.4 | UC830 Beheren vrij bericht | 21-02-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+25-01-2017
+30-01-2017
+03-02-2017
+
+0.1
+0.2
+0.3
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+21-02-2017
+
+0.4
+
+Initiële versie
+Aangepast nav review
+Opslaan en versturen uit UC831 en hier
+beschreven
+Aanpassingen nav realisatie
+
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+27-01-2017
+
+0.1
+
+Review van de initiële versie
+
+Operatie BRP
+
+01-02-2017
+
+0.2
+
+Review versie 0.2
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 10
+
+Concept | 0.4 | UC830 Beheren vrij bericht | 21-02-2017
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+In dit document wordt beschreven op welke wijze vrije berichten die gericht zijn aan de ‘BRP’
+opgezocht en getoond kunnen worden.
+Vrije berichten die de beheerder verstuurd heeft kunnen worden opgezocht en getoond. Daarbij
+wordt onderscheid gemaakt tussen een vrij bericht voor een groep ontvangende partijen en een
+vrij bericht voor één ontvangende partij.
+Ook wordt de mogelijkheid beschreven om een vrij bericht toe te voegen en te versturen met de
+‘BRP’ als verzendende partij. De BRP dient te voldoen aan de autorisatieregels die gelden voor
+het verzenden van het vrije bericht, zie ook [UCS VB.0.AV].
+De beheerder heeft de mogelijkheid om het vrije bericht aan meerdere ontvangende partijen te
+adresseren.
+Voor meer informatie over vrij berichten zie [LO].
+
+Operatie BRP
+
+Pagina 4 van 10
+
+Concept | 0.4 | UC830 Beheren vrij bericht | 21-02-2017
+
+Referenties
+
+1.2
+
+#
+[LO]
+
+Document
+Logisch Ontwerp
+
+Organisatie
+RvIG
+
+Versie
+3.10
+
+Datum
+8-10-2016
+
+[UC831]
+
+Verwerken vrij bericht
+
+Operatie BRP
+
+-
+
+-
+
+[UCS VB.0.AV]
+
+Afhandelen vrij bericht
+
+Operatie BRP
+
+Preconditie
+N.v.t.
+
+1.3
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 5 van 10
+
+Concept | 0.4 | UC830 Beheren vrij bericht | 21-02-2017
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop: zoeken vrije berichten
+1.
+2.
+3.
+4.
+5.
+6.
+
+2.2
+
+De beheerder meldt het systeem een vrij bericht te zoeken (AV: 2.4)
+Het systeem toont de beheerder zoekcriteria waarmee vrije berichten gezocht kunnen worden
+De beheerder voert een of meer zoekcriteria in (AS: 3.1)
+Het systeem zoekt op basis van de zoekcriteria naar de vrije berichten
+Het systeem toont de gevonden vrije berichten (AS: 3.2)
+De use case eindigt. (AV: 2.2)
+
+Alternatief verloop: toon details vrije bericht(en)
+1. De beheerder selecteert een vrij bericht
+2. Het systeem toont de inhoud met de kenmerken van het vrije bericht en de bijbehorende
+partij(en) (AS: 3.3)
+3. De use case eindigt. (AV: 2.3)
+
+2.3
+
+Alternatief verloop: markeren als gelezen of ongelezen
+1. De beheerder markeert het geselecteerde bericht als gelezen of ongelezen (AS: 3.4 )
+2. Het systeem legt de gewijzigde details vast (AS: 3.5)
+3. De use case eindigt.
+
+2.4
+
+Alternatief verloop: toevoegen uitgaand vrij bericht; zoeken partij(en)
+1. De beheerder meldt het systeem een uitgaand vrij bericht toe te willen voegen
+2. Het systeem toont de beheerder zoekcriteria waarmee partijen gezocht kunnen worden
+3. De beheerder voert een of meer zoekcriteria in (AS: 3.6)
+4. Het systeem zoekt op basis van de zoekcriteria naar de partijen
+5. Het systeem toont de gevonden partij(en) (AS: 3.7)
+6. De beheerder selecteert een, meerdere of alle van de gevonden partijen
+7. Het systeem toont een lijst van de geldige soorten vrij bericht (AS: 3.8)
+8. De beheerder selecteert één van de soorten uit de lijst
+9. De beheerder vult het tekstveld in van het vrije bericht (AS: 3.9)
+10. De beheerder kiest om het bericht te versturen
+11. Het systeem verwerkt het uitgaande vrije bericht (AS: 3.10)
+12. Het systeem maakt voor elke ontvangst partij het uitgaande vrije bericht (AS: 3.11)
+13. Het systeem biedt elk aangemaakte uitgaande bericht aan de vrij bericht service op de
+centrale voorzieningen (zie [UCS VB.0.AV])
+14. De use case eindigt.
+
+Operatie BRP
+
+Pagina 6 van 10
+
+Concept | 0.4 | UC830 Beheren vrij bericht | 21-02-2017
+
+3
+
+Aanvullende specificaties
+
+3.1
+
+Zoeken vrije berichten
+Op de basis van de onderstaande gegevens kunnen de inkomende vrije berichten en uitgaande
+vrije berichten gevonden worden.
+Naam
+Ingekomen/Verzonden
+
+Ongelezen
+Soort partij
+Partij naam
+Soort vrij bericht
+Begindatum
+Einddatum
+
+Toelichting
+Ingekomen; Vrij bericht.Soort bericht = “Verwerk vrij bericht”
+Verzonden; Vrij bericht.Soort bericht = “Stuur vrij bericht”
+Leeg; Beide.
+Ja/Nee; Vrij bericht.Gelezen?
+Partij.Soort partij naam
+Samengesteld veld; Partij.Naam en Vrij bericht\Partij.Partij
+Soort vrij bericht.Naam
+Vrij bericht.Tijdstip registratie
+Vrij bericht.Tijdstip registratie
+
+Het zoeken op Ongelezen is alleen van toepassing als sprake is van Inkomend vrij bericht.
+Minimaal één zoekcriteria moet zijn opgegeven.
+
+3.2
+
+Tonen zoekresultaten vrije berichten
+De onderstaande gegevens worden in het zoekresultaat getoond.
+Naam
+Ingekomen/Verzonden
+Ongelezen
+Datumtijd registratie
+Soort partij
+Partij code
+Partij naam
+Soort vrij bericht
+
+Toelichting
+“Ingekomen” igv Vrij bericht.Soort bericht = “Verwerk vrij bericht”,
+anders “Verzonden”
+Indien Ingekomen dan Vrij bericht.Gelezen? anders leeg
+Vrij bericht.Tijdstip registratie
+Partij. Soort partij naam die hoort bij Partij code
+Vrij bericht\Partij.Partij
+Partij.Naam die hoort bij Partij code
+Soort vrij bericht.Naam die hoort bij Vrij bericht.Soort vrij bericht
+
+Standaard sortering aflopend op datumtijd registratie.
+Indien er meer dan een Verzonden vrij bericht is met gelijk Datumtijd registratie, dan wordt
+Partij (code, naam en soort) niet gevuld.
+
+3.3
+
+Tonen inhoud vrije bericht
+Het onderstaande detail wordt van het inkomende en uitgaande vrije bericht getoond.
+Naam
+Inhoud
+Ingekomen/Verzonden
+
+Toelichting
+Vrij bericht.Inhoud vrij bericht
+“Ingekomen” igv Vrij bericht.Soort bericht = “Verwerk vrij bericht”,
+anders “Verzonden”
+Ongelezen
+Indien Ingekomen dan Vrij bericht.Gelezen? anders leeg
+Datumtijd registratie
+Vrij bericht.Tijdstip registratie
+Soort vrij bericht
+Soort vrij bericht.Naam die hoort bij Vrij bericht.Soort vrij bericht
+Onderstaande gegevens worden voor elk bijbehorend voorkomen van Vrij bericht\Partij getoond
+
+Operatie BRP
+
+Pagina 7 van 10
+
+Concept | 0.4 | UC830 Beheren vrij bericht | 21-02-2017
+
+Partij code
+Partij naam
+Soort partij
+
+Vrij bericht\Partij.Partij
+Partij.Naam die hoort bij Partij code
+Partij. Soort partij naam die hoort bij Partij code
+
+Voor presentatie doeleinde kan de inhoud een CR, LF of FF (Carriage Return, Teletex/ASCII code
+0D; Line Feed, Teletex/ASCII code 0A; Form Feed, Teletex/ASCII code 0C) bevatten. Als
+maximale regellengte moet 72 aangehouden worden.
+
+3.4
+
+Tonen markering gelezen of ongelezen
+Als Vrij bericht.Soort bericht = “Verwerk vrij bericht” is het mogelijk om Vrij bericht.Gelezen? te
+selecteren en te veranderen in; J -> N of N -> J.
+
+3.5
+
+Markeren als gelezen of ongelezen
+Op de basis van de onderstaande gegevens wordt het inkomende vrije bericht (Soort bericht
+naam is Stuur vrij bericht) gewijzigd.
+Naam
+Vrij bericht.Gelezen?
+
+3.6
+
+Toelichting
+Nieuwe waarde; J of N
+
+Zoeken van ontvangst partijen
+Op basis van de onderstaande gegevens kunnen Ontvangst partijen gevonden worden.
+Naam
+Soort partij
+Partij code
+Partij naam
+
+3.7
+
+Toelichting
+Soort Partij.Soort partij naam
+Partij.Code
+Partij.Naam
+
+Tonen zoekresultaat geautoriseerde partijen
+De onderstaande gegevens worden in het zoekresultaat Ontvangst partijen getoond.
+Naam
+Soort partij
+Partij code
+Partij naam
+
+Toelichting
+Soort Partij.Soort partij naam
+Partij.Code
+Partij.Naam
+
+Standaard sortering aflopend op soort partij en partij code.
+Een partij wordt getoond indien aan de volgende regels voldaan wordt:
+De partij moet geldig zijn op systeemdatum
+EN
+Indien Partij.Datum overgang naar BRP gevuld is en kleiner of gelijk is dan de systeemdatum,
+dan moet gelden:
+• De partij heeft een voorkomen van de groep vrij bericht
+• De groep vrij bericht moet geldig zijn op systeemdatum
+• De groep vrij bericht mag niet geblokkeerd zijn
+• De groep vrij bericht moet een afleverpunt hebben
+
+Operatie BRP
+
+Pagina 8 van 10
+
+Concept | 0.4 | UC830 Beheren vrij bericht | 21-02-2017
+
+3.8
+
+Lijst van soort vrij bericht
+In de onderstaande tabel is te vinden welke gegevens in de lijst van Soort vrij bericht getoond
+worden.
+Naam
+Soort vrij bericht
+
+Toelichting
+Soort vrij bericht.naam
+
+Standaard sortering aflopend op soort vrij bericht naam.
+De lijst bevat alleen voorkomens van Soort vrij bericht die geldig zijn op systeemdatum.
+
+3.9
+
+Voorinvullen tekstveld van vrij bericht
+Het tekstveld is voor ingevuld met de laatst ingevulde waarde binnen de sessie van de
+beheerder.
+
+3.10
+
+Bedrijfsregels vrij bericht
+• Tenminste één ontvangst partij moet geselecteerd zijn
+• Eén soort vrij bericht moet geselecteerd zijn
+• Tekstveld moet gevuld zijn en mag niet meer dan 99.999 tekens bevatten
+
+3.11
+
+Toevoegen uitgaand vrij bericht
+Op de basis van de onderstaande vast te leggen gegevens kunnen de uitgaande vrije berichten
+gevonden worden.
+Naam
+Vrij bericht.Soortbericht
+Vrij bericht.Soort
+Vrij bericht.Inhoud
+Vrij bericht.Tijdstip registratie
+Vrij bericht.Gelezen?
+Voor elke Ontvanger vrij bericht
+Vrij bericht\Partij
+
+Toelichting
+“Stuur vrij bericht”
+Het soort vrij bericht, over te nemen uit het bericht
+De inhoud van het vrije bericht, over te nemen uit het bericht
+Systeemdatum tijd
+Leeg
+Ontvanger vrij bericht, over te nemen uit het bericht
+
+Heeft de beheerder meer dan een ontvangende partij bij het uitgaande vrije bericht ingevuld,
+dan krijgen al deze partijen een gelijke Tijdstip.registratie.
+
+Operatie BRP
+
+Pagina 9 van 10
+
+Concept | 0.4 | UC830 Beheren vrij bericht | 21-02-2017
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 10 van 10
+
+

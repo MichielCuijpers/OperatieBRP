@@ -1,0 +1,428 @@
+SL.0.PS - Bijlage Protocollering selecties
+Versie: Werk
+Gegenereerd op: 21 juli 2017
+Status: Definitief
+
+1 Regels voor usecase SL.1.PS.CP - Controleer te protocolleren
+selectietaken
+1.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2662
+
+1
+
+Selecteer te protocolleren selectietaken
+
+2 Regels voor usecase SL.1.PS.CB - Controleer bestand
+2.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2663
+
+1
+
+Selecteer het te protocolleren bestand van de selectietaak
+
+3 Regels voor usecase SL.1.PS.PS - Protocolleer selectietaak
+3.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2016
+
+1
+
+'Systeemdatum'
+
+R2395
+
+1
+
+'Peilmoment materieel'
+
+3.2
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1617
+
+6
+
+Afleiding Datum aanvang materiele periode resultaat
+
+R1618
+
+5
+
+Afleiding Datum einde materiele periode resultaat
+
+R1619
+
+6
+
+Afleiding Datum/tijd aanvang formele periode resultaat
+
+R1620
+
+4
+
+Afleiding Datum/tijd einde formele periode resultaat
+
+R2568
+
+4
+
+Vaststelling protocolleringsgegevens ten behoeve van protocollering selecties
+
+R2664
+
+1
+
+Verwerk de protocollering van de selectietaak
+
+4 Regels voor usecase SL.1.PS.WS - Wijzig status selectietaak
+4.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2016
+
+1
+
+4.2
+
+'Systeemdatum'
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2665
+
+1
+
+Protocollering selectietaak afgerond
+
+R2692
+
+1
+
+Aanvullende gegevens wijziging status selectietaak
+
+5 Uitwerking regels
+R1617
+Afleiding Datum aanvang materiele periode resultaat
+Definitie:
+
+Indien Soort dienst = Mutatielevering op basis van afnemerindicatie (daaronder
+ook: bij het leveren van een Volledig bericht als gevolg van de nieuwe of aanwezige
+afnemerindicatie bij de Soort dienst = Plaatsing afnemerindicatie of Synchronisatie
+persoon):
+Dan Leveringsaantekening.Datum aanvang materiële periode resultaat
+vullen met Persoon \ Afnemerindicatie.Datum aanvang materiële periode
+uit de Afnemerindicatie;
+Indien Soort dienst = Geef details persoon en Bericht.Historievorm uit het
+verzoekbericht = 'Geen':
+Dan Leveringsaantekening.Datum aanvang materiële periode resultaat vullen
+met Bericht.Peilmoment materieel resultaat uit het verzoekbericht
+Bericht.Peilmoment materieel resultaat indien aanwezig of gevuld, anders
+Leveringsaantekening.Datum aanvang materiële periode resultaat vullen met
+'Systeemdatum' (R2016);
+Indien Soort dienst = Geef medebewoners van persoon:
+Dan Leveringsaantekening.Datum aanvang materiële periode resultaat vullen
+met 'Peilmoment materieel' (R2395);
+Indien Soort dienst = Selectie en Dienst.Historievorm selectie = 'Geen':
+Dan Leveringsaantekening.Datum aanvang materiële periode resultaat vullen
+met Selectietaak.Peilmoment materieel resultaat
+Indien Selectietaak.Peilmoment materieel resultaat niet is gevuld, dan
+Leveringsaantekening.Datum aanvang materiële periode resultaat niet vullen
+('leeg');
+Anders (in alle overige gevallen):
+Dan Leveringsaantekening.Datum aanvang materiële periode resultaat niet
+vullen ('leeg').
+
+Versie:
+
+6
+
+Soort:
+
+Verwerkingslogica
+
+R1618
+Afleiding Datum einde materiele periode resultaat
+Definitie:
+
+Indien Soort dienst = Geef details persoon:
+Dan Leveringsaantekening.Datum einde materiële periode resultaat vullen met
+(Bericht.Peilmoment materieel resultaat uit het verzoekbericht) + 1 dag indien
+Bericht.Peilmoment materieel resultaat aanwezig of gevuld, anders
+Leveringsaantekening.Datum einde materiële periode resultaat vullen met
+'Systeemdatum' (R2016) + 1 dag;
+Indien Soort dienst = Geef medebewoners van persoon:
+Dan Leveringsaantekening.Datum einde materiële periode resultaat vullen met
+'Peilmoment materieel' (R2395) + 1 dag;
+Indien Soort dienst = Selectie:
+Dan Leveringsaantekening.Datum einde materiële periode resultaat vullen met
+Selectietaak.Peilmoment materieel resultaat + 1 dag
+
+Indien Selectietaak.Peilmoment materieel resultaat niet is gevuld, dan
+Leveringsaantekening.Datum einde materiële periode resultaat niet vullen
+('leeg');
+Anders (in alle overige gevallen):
+Dan Leveringsaantekening.Datum einde materiële periode resultaat niet
+vullen ('leeg').
+Versie:
+
+5
+
+Soort:
+
+Verwerkingslogica
+
+R1619
+Afleiding Datum/tijd aanvang formele periode resultaat
+Definitie:
+
+Indien Soort dienst = Geef details persoon en Bericht.Historievorm uit het
+verzoekbericht = 'Geen' of 'Materieel'):
+Dan Leveringsaantekening.Datum/tijd aanvang formele periode resultaat
+vullen met Bericht.Peilmoment formeel resultaat uit het verzoekbericht
+indien aanwezig of gevuld, anders Leveringsaantekening.Datum/tijd
+aanvang formele periode resultaat vullen met 'Systeemdatum' (R2016);
+Indien Soort dienst = Selectie en Dienst.Historievorm selectie = 'Geen' of
+'Materieel':
+Dan Leveringsaantekening.Datum/tijd aanvang formele periode resultaat
+vullen met Selectietaak.Peilmoment formeel resultaat.
+Indien Selectietaak.Peilmoment formeel resultaat niet is gevuld dan
+Leveringsaantekening.Datum/tijd aanvang formele periode resultaat niet
+vullen ('leeg');
+Anders (in alle overige gevallen):
+Leveringsaantekening.Datum/tijd aanvang formele periode resultaat niet
+vullen ('leeg').
+
+Versie:
+
+6
+
+Soort:
+
+Verwerkingslogica
+
+R1620
+Afleiding Datum/tijd einde formele periode resultaat
+Definitie:
+
+Indien Soort dienst = Geef details persoon EN Bericht.Peilmoment formeel resultaat
+in het verzoekbericht is gevuld:
+Dan Leveringsaantekening.Datum/tijd einde formele periode resultaat
+vullen met Bericht.Peilmoment formeel resultaat uit het verzoekbericht;
+Indien Soort dienst = Selectie
+Dan Leveringsaantekening.Datum/tijd einde formele periode resultaat
+vullen met Selectietaak.Peilmoment formeel resultaat.
+Indien Selectietaak.Peilmoment formeel resultaat niet is gevuld dan
+Leveringsaantekening.Datum/tijd einde formele periode resultaat vullen
+met Selectietaak.Datum uitvoer;
+Anders (in alle overige gevallen):
+Dan Leveringsaantekening.Datum/tijd einde formele periode resultaat vullen
+met Datum\tijd systeem van klaarzetten bericht
+Toelichting: Met betrekking tot 'alle overige gevallen' geldt dat de
+datum\tijd_systeem van het klaarzetten van het bericht een impliciete bovengrens
+is als er niet expliciet gefilterd wordt op die bovengrens: het systeem kan immers
+geen gegevens leveren die op het moment van leveren nog niet geregistreerd zijn.
+
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+R2016
+'Systeemdatum'
+Definitie:
+
+De systeemdatum is de actuele datum tijdens het evalueren van een regel van het
+BRP syteem en heeft het formaat 'jjjjmmdd'.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2395
+'Peilmoment materieel'
+Definitie:
+
+Dit is, indien gevuld, Bericht.Peilmoment materieel,
+anders 'Systeemdatum' (R2016).
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2568
+Vaststelling protocolleringsgegevens ten behoeve van protocollering selecties
+Definitie:
+
+Indien een verstrekking van persoonsgegevens plaatsvindt indirect na een selectie
+(Dienst.Soort selectie = 'Standaard selectiedienst')
+DAN moeten de protocolleringsgegevens als volgt worden samengesteld:
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Leveringsaantekening.Toegang leveringsautorisatie = Toegang
+leveringsautorisatie.ID waarvoor verstrekt wordt
+Leveringsaantekening.Dienst = Dienst.ID van de geleverde Dienst
+Leveringsaantekening.Datum/tijd klaarzetten levering = Datum\tijd systeem
+van ophalen gegevens(Persoon en Autorisatie) uit de database
+Leveringsaantekening.Datum aanvang materiële periode resultaat = R1617 Afleiding Datum aanvang materiele periode resultaat
+Leveringsaantekening.Datum einde materiële periode resultaat = R1618 Afleiding Datum einde materiele periode resultaat
+Leveringsaantekening.Datum/tijd aanvang formele periode resultaat = R1619 Afleiding Datum/tijd aanvang formele periode resultaat
+Leveringsaantekening.Datum/tijd einde formele periode resultaat = R1620 Afleiding Datum/tijd einde formele periode resultaat
+Leveringsaantekening.Administratieve handeling = 'leeg'
+Leveringsaantekening.Soort synchronisatie = 'leeg'
+Leveringsaantekening.Scope patroon = 'leeg'
+
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+R2662
+Selecteer te protocolleren selectietaken
+Definitie:
+
+Selecteer de selectietaken ter verwerking waarvoor geldt dat
+Selectietaak.Status = 'Te protocolleren'
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2663
+Selecteer het te protocolleren bestand van de selectietaak
+
+Definitie:
+
+Selecteer het te protocolleren bestand van de selectietaak
+indien er geen protocolleer bestand aanwezig is bij de selectietaak
+dan wijzigt de status van de selectietaak naar
+Selectietaak.Status = 'Te protocolleren bestand niet gevonden'
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2664
+Verwerk de protocollering van de selectietaak
+Definitie:
+
+Wijzig de status van de selectietaak naar Selectietaak.Status = 'Protocollering in
+uitvoering'
+Verwerk het te protocolleren bestand van de selectietaak in
+Leveringsaantekening en Leveringsaantekening \ Persoon.
+Registreer hierbij de voortgang van de verwerking als percentage.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2665
+Protocollering selectietaak afgerond
+Definitie:
+
+Wanneer het te protocolleren bestand van de selectietaak is verwerkt dan wijzigt de
+status van de selectietaak naar
+Selectietaak.Status = 'Protocollering uitgevoerd'
+Wanneer er tijdens de protocollering een technische fout is opgetreden wijzig de
+status van de selectietaak naar
+Selectietaak.Status = 'Protocollering mislukt'
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2692
+Aanvullende gegevens wijziging status selectietaak
+Definitie:
+
+Indien er een nieuwe Selectietaak.Status door het systeem wordt toegevoegd
+worden van de nieuwe status de Selectietaak.Status gewijzigd door gevuld door
+'Systeem'
+EN
+de nieuwe Selectietaak.Status.Datum/tijd registratie gevuld door 'Systeemdatum'
+(R2016)
+EN
+de oude Selectietaak.Status.Datum/tijd verval gevuld door 'Systeemdatum' (R2016)
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+

@@ -1,0 +1,544 @@
+Toelichting Gegevensmodellen
+Versie
+
+1.3
+
+Datum
+
+11 april 2017
+
+Status
+
+Concept
+
+Documenthistorie
+Datum
+
+Versie
+
+Beschrijving
+
+Auteur
+
+1.1
+
+Oorspronkelijke naam ‘Leeswijzer BRP – gegevensmodel’.
+
+Operatie BRP
+
+20-03-2017
+
+1.2
+
+Diverse aanpassingen gedaan i.v.m. inrichting oplevering
+IV. Teksten die al voorkwamen in leeswijzers zijn
+verwijderd. Er zijn verwijzingen gemaakt naar het
+architectuurdocument voor de nadere toelichting van
+bepaalde concepten/aspecten.
+
+Operatie BRP
+
+11-04-2017
+
+1.3
+
+Verdere aanvulling van nieuwe onderwerpen.
+
+Operatie BRP
+
+Reviewhistorie
+Versie
+
+Reviewer
+
+1.2
+
+Operatie BRP. Controle op volledigheid en aansluiting bij overige documentatie.
+
+Operatie BRP, Toelichting Gegevensmodellen
+
+Inhoudsopgave
+1
+
+Inleiding ..................................................................................................................... 3
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Gegevensmodellen ..................................................................................................... 4
+2.1
+2.2
+2.3
+2.4
+2.5
+
+3
+4
+
+Afwijking documentatierichtlijnen............................................................................................4
+Logisch Model, Operationeel Model, Databasestructuur ..............................................................4
+Historielagen ........................................................................................................................4
+Naamgeving deelmodellen .....................................................................................................5
+Legenda’s ............................................................................................................................5
+
+Gegevensgebieden (schema’s) ................................................................................... 7
+Aspecten ..................................................................................................................... 8
+4.1
+4.2
+4.3
+4.4
+
+5
+
+Doel ....................................................................................................................................3
+Voorkennis ...........................................................................................................................3
+Overlap met het Logisch Ontwerp BRP .....................................................................................3
+Referenties ..........................................................................................................................3
+
+Historiepatronen ...................................................................................................................8
+Verantwoordingsstructuren ....................................................................................................8
+Viewindicator........................................................................................................................9
+Soort inhoud ........................................................................................................................9
+
+Openstaande punten................................................................................................. 10
+
+pagina 2 van 10
+
+Operatie BRP, Toelichting Gegevensmodellen
+
+1 Inleiding
+1.1
+
+Doel
+
+Dit document geeft een toelichting bij de opzet van de gegevensmodellen van de BRP.
+
+1.2
+
+Voorkennis
+
+Dit document vereist als voorkennis Deel 1 van het Architectuurdocument [2]. Daarbij verdient
+hoofdstuk 5 van het Architectuurdocument (Gegevens in de BRP) bijzondere aandacht. De in dit
+hoofdstuk besproken concepten zoals verantwoording en historie spelen een belangrijke rol in de
+gegevensmodellen.
+
+1.3
+
+Overlap met het Logisch Ontwerp BRP
+
+Het Logisch Ontwerp BRP (LO) [1] en het gegevensmodel hebben een overlap wat betreft de
+definities. Immers, het LO beschrijft ook een deel van het gegevensmodel. Het gegevensmodel
+bevat alle elementen uit de BRP, ook de technische attributen die noodzakelijk zijn voor de
+registratie en verwerking. Het LO is hier een subset van en beschrijft uitsluitend de formele
+gegevensset die gecommuniceerd wordt met de afnemers. Daar waar de twee sets elkaar
+overlappen is de definitie eenduidig.
+Het onderscheid tussen LO en gegevensmodel zit met name in de doelgroep; het gegevensmodel is
+voor de beheerder van de BRP, het LO met name voor de afnemers van de BRP.
+
+1.4
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Logisch Ontwerp BRP
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Architectuur Basisregistratie Personen
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Legenda Gegevensmodellen
+
+Operatie BRP
+
+-
+
+-
+
+4
+
+Aspectbeschrijving – Formele en Materiële Historie
+
+Operatie BRP
+
+-
+
+-
+
+pagina 3 van 10
+
+Operatie BRP, Toelichting Gegevensmodellen
+
+2 Gegevensmodellen
+2.1
+
+Afwijking documentatierichtlijnen
+
+De gegevensmodellen en het gegevenswoordenboek wijken op een aantal punten af van de
+documentatierichtlijnen. De documenten bevatten namelijk geen versiehistorie, review historie of
+referenties.
+De documenten worden geëxporteerd vanuit het BRP Meta Registern (BMR) bij een BMR-release.
+De versiehistorie van de documenten is dan ook te herleiden uit de historie van de BMR-releases.
+
+2.2
+
+Logisch Model, Operationeel Model, Databasestructuur
+
+De BRP kent twee gegevensmodellen: het Logische gegevensmodel (LGM) en het Operationele
+gegevensmodel (OGM).
+Logisch Model
+
+De basis is het Logische model waarin functioneel wordt beschreven welke gegevens er zijn en
+welke relaties die onderling hebben.
+Het Logische Model toont het model alsof er, in de tijd gezien, van alle gegevens maar één versie
+bestaat. In de praktijk veranderen gegevens door de tijd heen. De gevolgen hiervan zijn echter
+bewust niet uit gemodelleerd in het Logisch model. Hierdoor blijft het model relatief compact en
+begrijpelijk. Wel is met behulp van annotaties aangegeven of er historie wordt vastgelegd en zo ja
+welke vorm van historie.
+Evenzo is in het Logisch model niet uitgewerkt op welke manier verantwoordingsgegevens
+(administratieve handelingen, acties, bronnen en rechtsgronden) gekoppeld zijn aan de
+kerngegevens. Ook dit is gedaan om het model compact en begrijpelijk te houden. Annotaties
+geven aan of er over een bepaalde groep gegevens verantwoordingsinformatie aanwezig is.
+Operationele Model
+
+Het Operationele model is ontstaan uit het Logische model door het uitvoeren van een beperkt
+aantal transformatieregels. Tijdens deze transformatie worden de bijzondere kenmerken omgezet
+in 'fysieke' attributen. Onderdeel van de transformatie is bijvoorbeeld het aanmaken van 'his'
+objecttypen voor historische groepen, het toevoegen van de historie attributen voor de registratie
+van de historiepatronen en het toevoegen van actie attributen waardoor de
+verantwoordingsstructuren verbonden worden met de kerngegevens.
+Databasestructuur
+
+Uit het Operationele model kan vervolgens eenvoudig de PostgreSQL specifieke databasestructuur
+worden afgeleid. De structuur hiervan is identiek aan die van het Operationele model maar wordt
+uitgedrukt in termen van tabellen, datatypen en aanvullende constraints. Het Operationele model is
+dus feitelijk een database onafhankelijke representatie van de uiteindelijke databasestructuur.
+
+2.3
+
+Historielagen
+
+Binnen de BRP wordt onderscheid gemaakt in een viertal lagen waar de historie tot uiting komt. De
+A, B, C en D laag.
+A-Laag
+
+De A-laag bevat de actuele waarde van een gegeven. Bij het adres van een persoon is dit het adres
+waar de persoon momenteel woont. Als een gegeven formeel en/of materieel beëindigd is, dan is
+het gegeven niet meer aanwezig in de A-Laag.
+
+pagina 4 van 10
+
+Operatie BRP, Toelichting Gegevensmodellen
+
+B-Laag
+
+De bestaanslaag. Dit legt vast dat er historie in de C/D laag aanwezig is van het sleutelgegeven.
+Als een persoon ooit een Duitse nationaliteit heeft gehad, dan bevat de B-laag de registratie van
+het feit dat er informatie is over de Duitse nationaliteit.
+C-Laag
+
+De materiële historie wordt vastgelegd in de C-laag. Dit zijn alle gegevens die nog steeds juist zijn.
+Bijvoorbeeld alle adressen waar een persoon ooit heeft gewoond.
+D-Laag
+
+De formele historie wordt vastgelegd in de D-laag. Alles wat ooit gecorrigeerd is (onjuist), wordt
+opgeslagen in de D-laag om te kunnen reproduceren wat de BRP ooit wist.
+Vastlegging van de lagen
+
+In de praktijk worden de vier lagen op twee manieren vastgelegd; de A en B laag in de reguliere
+objecttypen, de C en D laag in de his_ objecttypen. De historie wordt uitsluitend vastgelegd in de
+C/D laag, de A/B laag heeft dus geen informatie over formele of materiële tijd.
+De C/D laag verwijst altijd naar een voorkomen in A/B laag. De logische identificatie van de
+gegevens wordt dan ook niet opgeslagen in de C/D laag maar uitsluitend in de A/B laag.
+
+2.4
+
+Naamgeving deelmodellen
+
+Naast enkele grote overzichtsplaten is ook een aantal kleinere deelmodellen aanwezig. Voor deze
+deelmodellen wordt de volgende naamgeving gehanteerd:
+•
+•
+
+2.5
+
+Prefix voor het logische model: LGM.
+Prefix voor het operationeel model: OGM. Met als nadere opsplitsing:
+o OGM A: Actuele objecttypen (A/B-laag)
+o OGM H: Historische objecttypen (C/D-laag)
+o OGM M: Specifieke migratie tabellen
+o OGM X: Overige gegevens
+
+Legenda’s
+
+De onderstaande legenda's geven een verklaring van de gebruikte tekens en symbolen in het
+Logische gegevensmodel en het Operationele gegevensmodel. Deze legenda is ook als los bestand
+aanwezig onder de naam Legenda Gegevensmodellen.
+
+pagina 5 van 10
+
+Operatie BRP, Toelichting Gegevensmodellen
+
+Logisch gegevensmodel
+
+Operationeel gegevensmodel
+
+pagina 6 van 10
+
+Operatie BRP, Toelichting Gegevensmodellen
+
+3 Gegevensgebieden (schema’s)
+In de onderstaande tabel wordt een toelichting gegeven op de verschillende gegevensgebieden
+waaruit het gegevensmodel bestaat. De gegevensgebieden zijn in de diagrammen te herkennen
+aan de kleur die in de tabel getoond wordt.
+De technische naam voor de gegevensgebieden is ‘schema’s’.
+Gegevensgebied
+
+Karakterisering van de inhoud
+
+Kleur
+
+Kern
+
+Persoonsgegevens. Belangrijkste objecttypen:
+•
+Persoon
+•
+Relatie
+•
+Persoon \ Nationaliteit
+•
+Persoon \ Adres
+
+Autorisatie &
+Authenticatie
+
+Gegevens ten behoeve van controle op toegang tot de BRP.
+•
+Belangrijkste objecttypen:
+•
+Leveringsautorisatie
+•
+Dienst
+•
+Persoon \ Afnemerindicatie
+
+Bericht
+
+Berichtopslag voor binnenkomende én uitgaande berichten.
+Belangrijkste objecttype: Bericht
+
+Conversie
+
+Gegevens ten behoeve van het (heen- en weer) converteren van gegevens tussen het BRPgegevensmodel, en de gegevens zoals die in het GBA-stelsel worden verwacht.
+
+Interstelsel
+tabellen
+
+Gegevens ten behoeve van opslag van gegevens die ontstaan zijn in het GBA-stelsel, en die
+niet volledig kunnen worden vastgelegd in het BRP-formaat.
+
+Levering /
+Protocolleren
+
+Gegevens t.b.v. van de leveringen.
+Belangrijkste objecttypen:
+•
+Leveringsaantekening
+•
+Leveringsaantekening \ Persoon
+
+Verantwoordin
+g conversie
+
+Gegevens ten behoeve van de verantwoording van de conversie.
+
+Migratie
+blokkering
+
+Gegevens ten behoeve registratie blokkering bijhouding tijdens migratie.
+
+Beheer
+
+Gegevens ten behoeve van het beheer (beheerapplicatie).
+
+pagina 7 van 10
+
+Operatie BRP, Toelichting Gegevensmodellen
+
+4 Aspecten
+In het gegevenswoordenboek en de modellen wordt bekendheid verondersteld met een aantal
+algemene aspecten die voor alle objecttypen van toepassing (kunnen) zijn. Deze aspecten worden
+in de volgende paragrafen nader toegelicht.
+
+4.1
+
+Historiepatronen
+
+In het logische model is bij iedere groep vastgelegd welk historiepatroon van toepassing is. De
+volgende patronen zijn gedefinieerd:
+Patroon
+
+Omschrijving
+
+Geen historie
+
+Er wordt geen historie vastgelegd over de gegevens, dit houdt in dat de gegevens
+nooit gewijzigd zullen worden. Veelal gebruikt bij Identiteitsgroepen.
+
+Formele historie
+
+Alle wijzigingen van de gegevens worden geregistreerd en er is maar één actuele
+waarde.
+
+Formele bestaansperiode
+
+Formele historie met de restrictie dat het gegeven uitsluitend afgesloten kan
+worden. Andere mutaties zijn niet mogelijk. Een mutatie houdt in dat er een nieuw
+voorkomen gemaakt wordt met een andere identiteit.
+
+Formele historie en materiele
+bestaansperiode
+
+Er wordt formele historie van het gegeven vastgelegd maar er is uitsluitend één
+voorkomen in de materiele historie.
+Er zijn momenteel geen groepen met dit patroon.
+
+Formele historie en materiele
+historie
+
+Er wordt zowel formele historie als materiele historie van het gegeven vastgelegd.
+
+Bestaansperiode stamgegeven
+
+Er is uitsluitend één voorkomen van het gegeven zonder formele historie. De enige
+mutatie die toegestaan is, is het het vullen van de materiele einddatum.
+
+De Aspectbeschrijving – Formele en Materiële Historie geeft een nadere uitleg van de diverse
+patronen.
+
+4.2
+
+Verantwoordingsstructuren
+
+De persoonsgegegevens die de BRP wijzigt moeten te verantwoorden zijn, dat wil zeggen; er moet
+herleid kunnen worden welke actie heeft geleid tot een wijziging. De BRP gebruikt een aantal
+verantwoordingsstructuren om de wijzigingen te kunnen verantwoorden.
+Op alle gegevens die door middel van administratieve handelingen opgevoerd of gewijzigd worden,
+is de verantwoordingsstructuur BRP Actie van toepassing. Bij deze verantwoordingsstructuur is
+iedere wijziging verantwoord door één of meer acties. Met behulp van deze actie is het ontstaan,
+vervallen of wijzigen van de gegevens te achterhalen.
+Een zeer beperkt aantal groepen hebben als verantwoordingsstructuur Dienst. Hierbij wordt
+uitsluitend vastgelegd welke dienst verantwoordelijk is geweest voor het ontstaan en/of vervallen
+van het gegeven.
+
+pagina 8 van 10
+
+Operatie BRP, Toelichting Gegevensmodellen
+
+4.3
+
+Viewindicator
+
+Van ieder gegevenselement is aangegeven voor welke ‘view’ het element van toepassing is.
+Indicator
+
+Omschrijving
+
+Gegevensset
+
+Het element is onderdeel van de formele gegevensset. Dit betreft de gegevens zoals
+gepubliceerd uit de wet, besluit en regeling BRP
+
+Database
+
+Het element wordt opgeslagen in de database. Afleidbare elementen of elementen specifiek
+voor XSD’s hebben geen Database markering
+
+Code
+
+Legacy markering ten behoeve van generatoren. Niet meer van toepassing.
+
+XSD's
+
+Het element wordt gecommuniceerd in het XSD. De XSD-generator gebruikt deze markering
+om te bepalen of het element opgenomen wordt of niet.
+
+4.4
+
+Soort inhoud
+
+Van ieder objecttype wordt de inhoud getypeerd.
+Soort inhoud
+
+Omschrijving
+
+Dynamisch
+
+Reguliere gegevens welke verbonden zijn aan de persoonsgegevens. Dit
+betreft alle objecttypen die direct of indirect gemuteerd worden door
+bijhouders en afnemers middels de BRP koppelvlakken.
+Voorbeelden; Persoon, Administratieve handeling, Persoon \ Afnemer
+indicatie.
+
+Stamgegeven / stuurgegeven
+
+Alle dynamische stamgegevens. Dit zijn de stuurtabellen waarvan de
+inhoud beheerd wordt door de beheerder. Mutaties van deze gegevens
+zijn onderdeel van het reguliere dagelijkse onderhoud. Voorbeelden;
+Autorisaties, Landen, Gemeente.
+
+Release stamgegeven
+
+Stamgegevens die sterk verweven zijn met de functionele werking van
+het systeem. Wijziging van de inhoud van deze gegevens gaan altijd
+samen met een programmatuur wijziging en worden middels een release
+gewijzigd.
+Voorbeelden; Soort actie, Soort persoon, Soort dienst.
+
+pagina 9 van 10
+
+Operatie BRP, Toelichting Gegevensmodellen
+
+5 Openstaande punten
+•
+
+•
+
+De indeling van de stamgegevens is niet altijd even logisch. Het logisch gegevensmodel heeft
+een aparte plaat met de stamgegevens. Het operationeel gegevensmodel bevat zowel op de A0
+overzichtsplaat een (niet volledig) overzicht met stamgegevens als twee (deels) overlappende
+platen A99 en H99.
+Een aantal platen van het operationeel gegevensmodel bevat objecttypen die niet logisch zijn
+op die locatie.
+
+pagina 10 van 10
+
+

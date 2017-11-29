@@ -1,0 +1,603 @@
+UCS BV.0.GD – Geef details persoon
+Versie
+
+1.0
+
+Datum
+
+12 juli 2017
+
+Status
+
+Definitief
+
+Locatie
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+04-04-2017
+
+0.1
+
+Eerste versie nav herstructurering use case
+
+oBRP
+
+12-07-2017
+
+1.0
+
+Definitief gemaakt. Hfd. openstaande punten toegevoegd.
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS BV.0.GD - Geef details persoon
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Invoer ....................................................................................................................... 5
+2.1
+2.2
+2.3
+2.4
+
+3
+
+Beschrijving .........................................................................................................................7
+Schematische weergave.........................................................................................................7
+Beschrijving activiteitendiagram .............................................................................................9
+Bedrijfsregels ..................................................................................................................... 11
+
+Uitvoer .................................................................................................................... 12
+4.1
+4.2
+4.3
+
+5
+
+Beschrijving .........................................................................................................................5
+Verzoekbericht .....................................................................................................................5
+Specifieke toelichting op het verzoekbericht .............................................................................5
+Bijzonderheden.....................................................................................................................5
+
+Verwerking ............................................................................................................... 7
+3.1
+3.2
+3.3
+3.4
+
+4
+
+Doel ....................................................................................................................................3
+Functionele context ...............................................................................................................3
+Referenties ..........................................................................................................................3
+Openstaande punten .............................................................................................................3
+
+Beschrijving ....................................................................................................................... 12
+Resultaatbericht.................................................................................................................. 12
+Toelichting op het resultaatbericht ........................................................................................ 12
+
+Ontwerpbeslissingen .............................................................................................. 13
+
+Status: Definitief, versie: 1.0
+
+Pagina 2 van 13
+
+UCS BV.0.GD - Geef details persoon
+
+1 Inleiding
+1.1
+
+Doel
+
+De dienst Geef details persoon levert van één persoon alle beschikbare gegevens voor de
+bevragende partij. Daarbij heeft de partij wel de mogelijkheid om de gegevens in te perken zowel
+qua geleverde attributen (scoping) als qua periode waarop de gegevens betrekking hebben
+(historiefilter).
+De dienst is zowel bedoeld voor afnemers als voor bijhouders. Afnemers gebruiken deze dienst om
+op elk gewenst moment de authentieke persoonsgegevens te verkrijgen, bijhouders zullen deze
+dienst ook gebruiken om een nieuw bijhoudingsvoorstel op te stellen (‘bevragen voor bijhouding’),
+ter ondersteuning van onderzoeken en om het inzagerecht van de burger mogelijk te maken. Om
+deze reden is het (mits geautoriseerd) ook mogelijk om (niet-geheime) afnemerindicaties op te
+vragen met deze dienst.
+
+1.2
+
+Functionele context
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitdiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving Generieke Berichtstructuur
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+4
+
+Aspectbeschrijving Historiefilter
+
+Operatie BRP
+
+-
+
+-
+
+1.4
+
+Openstaande punten
+•
+
+Loketverstrekkingen.
+Een gemeente (als bijhouder) moet kunnen aangegeven dat een bevraging namens een
+andere (in de BRP bekende) Partij gebeurt. Dergelijke verstrekkingen namens het College
+van B&W aan bestuursorganen en derden die niet bekend zijn in de centrale voorzieningen
+(bijvoorbeeld de deurwaarder of uitvoerder van een pensioenverzekering die zelf niet is
+geautoriseerd) worden loketverstrekkingen genoemd. Kenmerk van een loketverstrekking
+
+Status: Definitief, versie: 1.0
+
+Pagina 3 van 13
+
+UCS BV.0.GD - Geef details persoon
+
+is dat deze geprotocolleerd moet worden.
+Het openstaande punt is reeds uitgewerkt, zie WITROOD-90 Loketverstrekkingen. De
+berichtparameters krijgt een nieuwe parameter voor de opgave van de betreffende Partij.
+Deze Partij moet ook vastgelegd worden bij de Protocollering, dit betekent een uitbreiding
+op het datamodel van Protocollering. Verder is gesteld dat Scoping verplicht is zodat een
+beperkte set van gegevens geleverd kan worden als het College verstrekt.
+•
+
+Default waarden parameters historiefilter.
+Het historiefilter kent drie parameters: Peilmoment materieel resultaat, Peilmoment
+formeel resultaat en historievorm. Alle drie deze parameters kennen een default waarde.
+Voor de peilmomenten is dat ‘nu’ (systeemdatum dan wel systeemdatumtijd) voor
+historievorm is dat ‘Geen’. Je zou dan verwachten dat wanneer je alle drie de parameters
+leeg laat, je alleen de actuele gegevens krijgt.
+Dit werkt echter niet zo: als je alle paramaters leeg laat wordt juist de gehele persoonslijst
+(dus historievorm = MaterieelFormeel) geleverd. De reden hiervoor is dat de filtering op
+objecten nog niet werkt zoals beoogd en daardoor soms objecten worden weggefiltert waar
+dat niet altijd de bedoeling is. Als je nu alle drie de paramaters leeg laat wordt dat daarom
+geïnterpreteerd als ‘niet filteren op historie’ en wordt ook het objectenfilter op historie niet
+toegepast, zodat het mogelijk blijft om een ongefilterde PL te laten leveren.
+De bedoeling is om dit opnieuw te bekijken als het objectenfilter goed is gerealiseerd; als
+het mogelijk is om met historievorm ‘MaterieelFormeel’ de volledige PL te leveren zonder
+dat er lege objecten die wel in het bericht moeten blijven verdwijnen, dan is het mogelijk
+om ook bij drie lege paramaters de default waarden te hanteren.
+
+•
+
+Geldigheid van groepen met formele historie en materieel aspect.
+Het historiefilter onderkent nog niet hoe om te gaan met formele groepen die een materieel
+patroon kennen. Het openstaand punt is reeds uitgewerkt, zie WITROOD-39 Groepen met
+'formele historie met materieel aspect' alleen niet gerealiseerd. Een nieuwe bedrijfsregel
+R2786 is reeds opgevoerd en de bestaande bedrijfsregels (R2224, R2225 en R2226) zijn
+ook reeds aangepast.
+
+Status: Definitief, versie: 1.0
+
+Pagina 4 van 13
+
+UCS BV.0.GD - Geef details persoon
+
+2 Invoer
+2.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft het verzoekbericht waarmee aan de bevragende partij de details van een
+persoon kan worden verstrekt.
+
+2.2
+
+Verzoekbericht
+
+De structuur van het verzoekbericht staat beschreven in Aspectbeschrijving Generieke
+berichtstructuur [2].
+
+2.3
+
+Specifieke toelichting op het verzoekbericht
+
+Toelichting op het verzoekbericht van deze dienst.
+Stuurgegevens
+Van een ingevoerd bericht worden stuurgegevens Zendende partij, het Zendende systeem, een
+Referentienummer en het Tijdstip vastgelegd en meegeleverd als onderdeel van het
+verzoekbericht.
+Parameters
+Parameter Rol is bedoeld voor de routering van het verzoek (zonder dat het nodig is om de
+database te bevragen; rol is in principe afleidbaar). Bevragingen door Bijhouders worden bij
+voorkeur op de master uitgevoerd.
+In het bericht wordt de Leveringsautorisatie, waarbinnen een synchronisatieverzoek voor een
+persoon wordt gedaan, geïdentificeerd door de Leveringsautorisatieidentificatie voor de Dienst.
+Het historiefilter (dit zijn de parameters; Peilmoment materieel resultaat, Peilmoment formeel
+resultaat en Historievorm) geeft de mogelijkheid om het resultaat te beperken tot een beperkt deel
+van formele en materiële historie. De werking van het historiefilter is beschreven in
+Aspectbeschrijving Historiefilter [4].
+Met de parameter Verantwoording kan de bevragende partij de levering van
+verantwoordingsgegevens desgewenst onderdrukken door hier de waarde “Nee” mee te geven.
+Identificatiecriteria
+In het bericht wordt de persoon geïdentificeerd door het opgegeven Burgerservicenummer,
+Administratienummer of een Object sleutel. Hierbij geldt dat (precies) één van deze attributen
+moet worden opgenomen als Identificatiecriterium.
+Scoping
+Met ScopeElementen kan de bevragende partij aangeven welke attributen hij in het
+resultaatbericht wenst te ontvangen. Dit wordt ook wel aangeduid met ‘scoping’. De partij mag hier
+alleen maar attributen opnemen waarvoor hij geautoriseerd is. Bovendien worden attributen die
+wettelijk verplicht zijn (zoals ‘Bijhoudingsaard’) altijd geleverd, ongeacht de scoping. De attributen
+worden aangeduid met de waarden uit Element.Identifier. Als de partij geen gewenste attributen
+opgeeft, dan worden alle (geautoriseerde) attributen geleverd.
+
+2.4
+
+Bijzonderheden
+•
+
+Scoping
+Een afnemer zal niet in alle gevallen alle gegevens nodig hebben waar hij voor
+geautoriseerd is. Bijvoorbeeld; de Politie heeft in het kader van haar wettelijke taak een
+vrij ruime autorisatie. Maar als bijvoorbeeld een automobilist staande is gehouden en het
+rijbewijs wordt gecontroleerd, dan zijn waarschijnlijk alleen de gegevens die op het
+
+Status: Definitief, versie: 1.0
+
+Pagina 5 van 13
+
+UCS BV.0.GD - Geef details persoon
+
+rijbewijs staan genoemd relevant. Het toch verstrekken van alle gegevens heeft dan de
+volgende nadelen:
+o Het voldoet niet aan de ‘privacy bij design’ richtlijnen van de Nederlandse overheid.
+o Bij het opvragen van een protocolleringsoverzicht kan de burger ook zien dat er
+meer gegevens geleverd zijn dan noodzakelijk waren en zou daar (terecht) over
+kunnen klagen.
+Om dit te voorkomen geeft de dienst ‘Geef details persoon’ de mogelijkheid om de levering
+terug te brengen tot een kleinere set van gegevens dan de volledige autorisatie. Dit
+noemen we ‘scoping’.
+Een afnemer kan de scoping opgeven door het meegeven van een lijst van elementnamen
+bij het aanroepen van de dienst. Deze lijst kan vervolgens worden beschouwd als een
+vrijwillige inperking van de autorisatie. Er zijn wel een paar aandachtspunten:
+o Als een afnemer geen scoping opgeeft, dan geldt zijn normale autorisatie.
+o Een afnemer mag alleen attributen ter scoping opgeven waarvoor hij geautoriseerd
+is.
+o Attributen die op grond van art. 3.10 van de wet BRP geleverd moeten worden,
+leveren we altijd (ongeacht de opgegeven scoping).
+o De scoping wordt ook (mee-)geprotocolleerd.
+o Scoping is voor bijhouders in principe niet relevant, maar de functionaliteit is wel
+beschikbaar voor bijhouders.
+•
+
+Afnemer of Bijhouder
+Voor de werking van de dienst is het relevant met welke rol de bevragende partij de dienst
+benaderd. Deze wordt echter niet expliciet meegegeven maar afgeleid uit de Toegang
+leveringsautorisatie. Dat is altijd eenduidig: een partij kan wel meerdere rollen kennen
+(gemeentes kunnen als bijhouder maar ook als afnemer het systeem benaderen) maar
+leveringsautorisaties voor afnemersrollen zijn significant anders dan die voor
+bijhoudersrollen (er is sprake van een andere doelbinding). Het zal dus niet zo zijn dat een
+partij binnen één leveringsautorisatie beide rollen kan aannemen.
+
+Status: Definitief, versie: 1.0
+
+Pagina 6 van 13
+
+UCS BV.0.GD - Geef details persoon
+
+3 Verwerking
+3.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft de verwerking van het verzoekbericht Geef details persoon.
+
+3.2
+
+Schematische weergave
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitendiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+Activiteitendiagram met de verwerking van een verzoek tot levering van details van een persoon.
+In het diagram is alleen de happy flow weergegeven. Foutafhandeling is hier niet opgenomen maar
+de XSD-validatie en invoercontrole’s staan beschreven in de begeleidende tekst in de volgende
+paragraaf of in de aangeroepen Use Cases.
+
+Status: Definitief, versie: 1.0
+
+Pagina 7 van 13
+
+UCS BV.0.GD - Geef details persoon
+
+Status: Definitief, versie: 1.0
+
+Pagina 8 van 13
+
+UCS BV.0.GD - Geef details persoon
+
+3.3
+
+Beschrijving activiteitendiagram
+
+De verwerking van het ontvangen verzoekbericht bestaat uit een aantal volgordelijke stappen die
+uitgevoerd worden. In de onderstaande toelichtende tekst zijn de stappen onderverdeeld in ‘XSD
+controle’, ‘Controle invoer’, ‘Verwerking’ en ‘Uitvoer’. Elke toegelichte stap is terug te vinden in het
+activiteitendiagram in de vorige paragraaf.
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de aan de Use Cases gekoppelde regels in BMR.
+
+XSD controle
+•
+
+AL.1.XV – XSD validatie
+Het inkomende verzoek wordt gevalideerd door deze te controleren tegen het bij het
+verzoek behorende XSD-schema (XML Schema Definition). Als er een XSD fout wordt
+geconstateerd, dan wordt er direct een technische foutmelding teruggegeven aan de
+zendende applicatie.
+
+Controle invoer
+•
+
+LV.1.AB – Archiveer bericht
+Draagt zorg voor de archivering van het technisch verwerkbare inkomende verzoekbericht
+en van het uitgaande bericht (het resultaatbericht).
+
+•
+
+LV.1.AL – Autorisatie levering
+Het inkomende verzoek wordt gecontroleerd op geldigheid van leveringsautorisatie en
+dienst autorisatie.
+
+•
+
+BV.1.GD.CI – Controleer inhoud
+In het verzoekbericht moet precies één identificerend gegeven voor een persoon zijn
+opgegeven.
+Het in het bevragingsbericht opgenomen peilmoment formeel resultaat (indien ingevuld)
+moet liggen op of na het in de centrale voorzieningen geregistreerde tijdstip laatste
+wijziging GBA-systematiek omdat de formele historie over de periode van de GBA
+systematiek niet betrouwbaar is.
+Zijn scope elementen ingevuld dan moet gelden:
+o
+o
+o
+
+•
+
+De opgegeven scope elementen moeten onderdeel zijn van de dienstbundel die
+voor de gevraagde dienst geldt.
+De scope elementen mogen uitsluitend verwijzen naar attributen.
+De opgegeven scope elementen mogen niet verwijzen naar attributen binnen de
+onderzoeksgroep of de verantwoordingsgroep.
+
+LV.1.CPI – Controleer persoonsselectie identiteitsnummer
+Het in het bericht opgenomen identificatienummer (burgerservicenummer,
+administratienummer of persoonsobjectsleutel) mag maar één persoon opleveren.
+De persoon moet een ingeschrevene zijn en mag niet vervallen zijn. Het leveringsverzoek
+wordt niet verwerkt als de persoon een verstrekkingsbeperking heeft, geldend voor de
+verzoekende partij.
+
+Status: Definitief, versie: 1.0
+
+Pagina 9 van 13
+
+UCS BV.0.GD - Geef details persoon
+
+Verwerking
+Na het doorlopen van de controles wordt het resultaatbericht samengesteld en aan de verzoekende
+partij gestuurd.
+Uitvoer
+•
+
+LV.1.SPL - Samenstellen Persoonslijst
+Hier wordt de ongefilterde persoonslijst opgesteld voor de in het bericht te leveren persoon.
+In deze stap wordt ook gefilterd op de grens van deze persoonslijst.
+
+•
+
+BV.1.GD.AFD – Autorisatiefilter bericht details persoon
+Het autorisatiefilter voor details persoon is in vier stappen onderverdeeld die in genoemde
+volgorde doorlopen moeten worden.
+1. De dienst levert afnemerindicaties bij de Persoon. Hierbij gelden de volgende filters:
+o Alleen geautoriseerde attributen worden geleverd.
+o Alleen niet-geheime afnemerindicaties worden geleverd.
+2. Historiefilter toepassen. Afhankelijk van de gekozen parameter Historievorm (Mogelijke
+waarden zijn; “Geen”, “Materieel” en “MaterieelFormeel”) in het bericht wordt een
+specifiek historiefilter toegepast op groepen en objecten. De werking van het
+historiefilter is beschreven in Aspectbeschrijving Historiefilter [4].
+Het historiefilter wordt niet toegepast als de parameters Historievorm, Peilmoment
+materieel resultaat en Peilmoment formeel resultaat leeg zijn (of niet voorkomen in het
+bericht).
+3. Scoping toepassen. In onderstaande volgorde, het bericht mag alleen:
+o Verplichte attributen en attributen uit de scope bevatten.
+o Groepen bevatten die verplichte attributen of attributen uit de scope bevatten.
+o Relevante objecten bevatten.
+4. Verantwoordingsfilter toepassen. Dit leidt er toe dat er geen verantwoordingsinformatie
+in het bericht wordt opgenomen, tenzij dat wettelijk verplicht te leveren is.
+
+•
+
+LV.1.AFB – Autorisatiefilter bericht
+De in de vorige stap samengestelde persoonslijst wordt gefilterd op autorisatie op historie,
+verantwoording, onderzoek, inhoudelijke groepen en attributen.
+
+•
+
+LV.1.BO – Bericht opschonen
+Na het filteren in de voorgaande stappen kunnen er lege groepen of niet relevante
+verwijzingen in het bericht ontstaan. In deze stap wordt ook de sortering van groepen en
+objecten bepaald.
+
+•
+
+LV.1.MR – Maak resultaatbericht
+Het resultaat en de “geslaagd” melding of de eventuele foutmelding(en) worden in een
+(synchroon) resultaatbericht opgenomen.
+
+•
+
+LV.1.PB – Protocolleer bericht
+Alle leveringen waarin persoonsgegevens zijn opgenomen moeten worden geprotocolleerd
+alvorens de levering aan afnemers mag plaatsvinden.
+
+Status: Definitief, versie: 1.0
+
+Pagina 10 van 13
+
+UCS BV.0.GD - Geef details persoon
+
+Wanneer de dienst ten behoeve van bijhouders wordt uitgevoerd, dan is protocollering niet
+nodig.
+
+•
+
+LV.1.VR – Verzend resultaatbericht
+Vervolgens wordt het resultaatbericht afgeleverd aan de indiener van het verzoekbericht.
+Het resultaatbericht wordt gearchiveerd (LV.1.AB).
+Echter indien het niet mogelijk is om een levering te protocolleren dan mogen er geen
+gegevens geleverd worden.
+
+3.4
+
+Bedrijfsregels
+
+Voor een toelichting op de verschillende soorten bedrijfsregels, de meldingsniveaus, de toepassing
+en werking ervan in het bijhoudingsproces, wordt verwezen naar de daartoe opgestelde
+Aspectbeschrijving Controles [3].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels en definitieregels zijn opgenomen de bijlage: BV.0.GD – Bijlage Geef details
+persoon.doc.
+
+Status: Definitief, versie: 1.0
+
+Pagina 11 van 13
+
+UCS BV.0.GD - Geef details persoon
+
+4 Uitvoer
+4.1
+
+Beschrijving
+
+Dit proces levert altijd een resultaatbericht op. Deze bevat ofwel een foutmelding ofwel de detail
+gegevens van de persoon.
+
+4.2
+
+Resultaatbericht
+
+In antwoord op de aanroep van de dienst ontvangt de afnemer een synchroon resultaatbericht.
+Voor de volledige beschrijving en inhoud van het resultaatbericht wordt verwezen naar
+Aspectbeschrijving Generieke Berichtstructuur [2] en de bijlage: BV.0.GD – Bijlage Geef details
+persoon.doc.
+
+4.3
+
+Toelichting op het resultaatbericht
+
+Stuurgegevens
+Van het bericht worden stuurgegevens Zendende partij, het Zendende systeem, een
+Referentienummer, een Crossreferentienummer (Referentienummer uit de stuurgegevens van het
+Verzoekbericht) en het Tijdstip vastgelegd en meegeleverd als onderdeel van het resultaatbericht.
+Resultaat
+Het resultaat van de Verwerking kan de waarde ‘Geslaagd’ of ‘Foutief’ aannemen. Daarachter wordt
+aangegeven wat het Hoogste Meldingsniveau is, dat is aangetroffen tijdens de uitgevoerde
+controles. De ernst wordt uitgedrukt in het meldingsniveau en betreft in aflopende hoogte:
+Fout
+Deblokkeerbaar
+Waarschuwing
+Informatie1
+Meldingen
+In het bericht zijn de Regels opgenomen die gecontroleerd zijn, met daarbij aangegeven welke
+Soort melding (informatief, waarschuwing, deblokkeerbaar, fout) en de Melding zelf, die in tekst
+aangeeft wat er op basis van de gecontroleerde regel is geconstateerd.
+Persoon
+In het resultaatbericht wordt na correcte verwerking van maximaal één persoon de detailgegevens
+opgenomen.
+
+1
+
+Dit meldingsniveau wordt momenteel nog niet gehanteerd, maar is gereserveerd voor toekomstig gebruik.
+
+Status: Definitief, versie: 1.0
+
+Pagina 12 van 13
+
+UCS BV.0.GD - Geef details persoon
+
+5 Ontwerpbeslissingen
+•
+
+Het scopingsfilter heeft geen effect op verplicht te leveren attributen. Het heeft wel effect
+op identificerende gegevens. Dit betekent dat wanneer bijvoorbeeld alleen
+‘Huwelijk.DatumAanvang’ als scope wordt meegegeven het in het bericht niet meer
+zichtbaar is over welke persoon het gaat en welke huwelijk het betreft (omdat de gegevens
+over de partner ontbreken). Het zal immers in de praktijk niet zo zijn dat de afnemende
+partij de scope zelf samenstelt. In plaats daarvan zal het aanroepende systeem een aantal
+scope ‘patronen’ kennen waaruit de partij of de applicatie een scope kiest of samenstelt.
+Het is dus aan de beheerder van het aanroepende systeem om die scope ‘partronen’
+zodanig in te richten dat er zinvolle berichten ontstaan.
+
+Status: Definitief, versie: 1.0
+
+Pagina 13 van 13
+
+

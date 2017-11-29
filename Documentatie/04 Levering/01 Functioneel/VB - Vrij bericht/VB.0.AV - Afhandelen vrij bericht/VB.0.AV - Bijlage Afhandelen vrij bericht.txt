@@ -1,0 +1,1303 @@
+VB.0.AV - Bijlage Afhandelen vrij bericht
+Versie: Werk
+Gegenereerd op: 19 juli 2017
+Status: Definitief
+
+1 Bericht: Stuur vrij bericht
+Berichtspecificatie
+
+Stuur vrij bericht (vrb_vrbStuurVrijBericht)
+Stuurgegevens (communicatieID)
+
+Kardinaliteit
+1
+
+Zendende partij, Zendende systeem, Referentienummer, Datum/tijd verzending
+
+Parameters (communicatieID)
+
+1
+
+Zender vrij bericht, Ontvanger vrij bericht
+
+Vrij bericht (communicatieID)
+Soort vrij bericht, Inhoud vrij bericht
+
+1
+
+2 Bericht: Stuur vrij bericht (resultaat)
+Berichtspecificatie
+
+Stuur vrij bericht (resultaat) (vrb_vrbStuurVrijBericht_R)
+Stuurgegevens
+
+Kardinaliteit
+1
+
+Zendende partij, Zendende systeem, Referentienummer, Cross referentienummer, Datum/tijd verzending
+
+1
+
+Resultaat
+Verwerking, Hoogste meldingsniveau
+
+Meldingen
+Melding (objecttype="Melding", referentieID)
+Regel, Soort, Melding
+
+0..1
+1..n
+
+3 Bericht: Verwerk vrij bericht
+Berichtspecificatie
+
+Verwerk vrij bericht (vrb_vrbVerwerkVrijBericht)
+Stuurgegevens
+
+Kardinaliteit
+1
+
+Zendende partij, Zendende systeem, Ontvangende partij, Referentienummer, Datum/tijd verzending
+
+Parameters
+
+1
+
+Zender vrij bericht, Ontvanger vrij bericht
+
+Vrij bericht
+Soort vrij bericht, Inhoud vrij bericht
+
+1
+
+4 Regels voor usecase VB.1.AV.AB - Archiveer vrij bericht
+4.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2016
+
+1
+
+'Systeemdatum'
+
+R2129
+
+2
+
+Geldig
+
+4.2
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2499
+
+6
+
+Stel te registreren gegevens berichtarchivering vast voor vrij bericht
+
+5 Regels voor usecase VB.1.AV.CA - Controleer autorisatie vrij
+bericht
+5.1
+
+Autorisatieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2454
+
+1
+
+F
+
+Autorisatie voor het vrije bericht voor de verzendende partij moet bestaan
+
+R2456
+
+1
+
+F
+
+Autorisatie voor het vrije bericht voor de ontvangende partij moet bestaan
+
+R2457
+
+1
+
+F
+
+Autorisatie voor het vrije bericht voor de verzendende partij moet geldig zijn
+
+R2459
+
+1
+
+F
+
+Autorisatie voor het vrije bericht voor de ontvangende partij moet geldig zijn
+
+R2460
+
+4
+
+F
+
+De verzendende partij van het vrije bericht moet geldig zijn
+
+R2461
+
+3
+
+F
+
+De ontvangende partij van het vrije bericht moet geldig zijn
+
+R2462
+
+1
+
+F
+
+Autorisatie voor het vrije bericht voor de verzendende partij mag niet
+geblokkeerd zijn
+
+R2463
+
+1
+
+F
+
+Autorisatie voor het vrije bericht voor de ontvangende partij mag niet
+geblokkeerd zijn
+
+R2464
+
+2
+
+F
+
+Autorisatie voor het vrije bericht voor de ondertekenaar moet bestaan
+
+R2467
+
+2
+
+F
+
+Autorisatie voor het vrije bericht voor de transporteur moet bestaan
+
+R2468
+
+2
+
+F
+
+De ondertekenaar van het vrije bericht moet een geldige partij zijn
+
+R2469
+
+2
+
+F
+
+De transporteur van het vrije bericht moet een geldige partij zijn
+
+R2470
+
+2
+
+F
+
+De verzendende partij van het vrije bericht dient een afleverpunt te hebben
+
+R2519
+
+1
+
+F
+
+De ontvangende partij van het vrije bericht dient een afleverpunt te hebben
+
+5.2
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2343
+
+4
+
+5.3
+
+F
+
+Algemene foutmelding bij schending autorisatieregels
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2016
+
+1
+
+'Systeemdatum'
+
+R2129
+
+2
+
+Geldig
+
+R2452
+
+2
+
+De autorisatie voor het verzenden van een vrij bericht
+
+R2453
+
+2
+
+De autorisatie voor het ontvangen van een vrij bericht
+
+6 Regels voor usecase VB.1.AV.CI - Controleer inhoud vrij
+bericht
+6.1
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2472
+
+4
+
+F
+
+Het soort vrij bericht moet bestaan
+
+R2473
+
+4
+
+F
+
+Het soort vrij bericht moet geldig zijn
+
+6.2
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1273
+
+7
+
+Datum (deels) onbekend
+
+R1284
+
+7
+
+Geldig voorkomen stamgegeven op peildatum
+
+R2016
+
+1
+
+'Systeemdatum'
+
+6.3
+
+Invoervalidatieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2498
+
+2
+
+F
+
+De zendende partij en de zender van het vrije bericht moeten aan elkaar
+gelijk zijn
+
+7 Regels voor usecase LV.1.MR - Maak resultaatbericht
+7.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1266
+
+4
+
+Vulling stuurgegevens in uitgaand bericht bij synchroon resultaatbericht op
+een verzoek
+
+R1410
+
+6
+
+Een synchroon verzoek wordt beantwoord met een synchroon
+resultaatbericht
+
+8 Regels voor usecase LV.1.VR - Verzend resultaatbericht
+8.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1410
+
+6
+
+Een synchroon verzoek wordt beantwoord met een synchroon
+resultaatbericht
+
+9 Regels voor usecase VB.1.AV.NB - Maak notificatiebericht
+9.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2482
+
+3
+
+Vulling stuurgegevens voor het uitgaand vrij bericht
+
+10 Regels voor usecase VB.1.AV.VV - Verzend vrij bericht
+10.1 Verwerkingslogica
+Code
+
+Versie Niveau Omschrijving
+
+R2483
+
+2
+
+Stelsel bepaalt de wijze waarop BRP het vrije bericht verstuurd
+
+11 Uitwerking regels
+R1266
+Vulling stuurgegevens in uitgaand bericht bij synchroon resultaatbericht op een verzoek
+Definitie:
+
+Bij een synchroon antwoord op een verzoek moeten de stuurgegevens in het
+resultaatbericht als volgt worden gevuld:
+
+•
+•
+•
+•
+•
+
+Bericht.Zendende partij : '199903'
+Bericht.Zendende systeem : 'BRP'
+Bericht.Referentienummer : unieke ID genereren
+Bericht.Cross referentienummer : overnemen uit Bericht.Referentienummer
+van de stuurgegevens van het verzoek
+Bericht.Datum/tijd verzending: Datum\tijd systeem bij aanmaken van het
+bericht inclusief de tijdzone (bijvoorbeeld: '2012-04-18T15:32:03.234+01:00')
+
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+R1273
+Datum (deels) onbekend
+Definitie:
+
+Een Datum evt. (deels) onbekend heeft het formaat 'jjjj-mm-dd'. Als een datum
+deels onbekend is dan moet:
+• indien dag onbekend is voor dag ('dd') de waarde 00 zijn ingevuld;
+• indien maand onbekend is voor zowel dag ('dd') als maand ('mm') de waarde
+00 zijn ingevuld;
+• indien jaar onbekend is zowel dag ('dd') als maand ('mm') de waarde 00 zijn
+ingevuld en voor jaar ('jjjj') de waarde 0000.
+
+Versie:
+
+7
+
+Soort:
+
+Definitieregel
+
+R1284
+Geldig voorkomen stamgegeven op peildatum
+Definitie:
+
+Een Stamgegeven is geldig op een zekere peildatum, indien aan de volgende
+voorwaarden is voldaan:
+1.
+2.
+
+indien gevuld moet DatumAanvangGeldigheid van Stamgegeven <= peildatum;
+indien gevuld moet DatumEindeGeldigheid van Stamgegeven > peildatum.
+
+Als er sprake is van Datum (deels) onbekend (R1273) dan moet de R1283 Vergelijken (partiële) datums streng uitgevoerd worden.
+Toelichting
+• het Stamgegeven is geldig op elke peildatum indien DatumAanvangGeldigheid
+en DatumEindeGeldigheid leeg zijn.
+• Voor de stamtabel Partij geldt dat Partij.Datum ingang en Partij.Datum einde
+ipv respectievelijk DatumAanvangGeldigheid en DatumEindeGeldigheid gebruikt
+moeten worden.
+• Voor de stamtabel Partij \ Rol geldt dat Partij \ Rol.Datum ingang en Partij \
+Rol.Datum einde ipv respectievelijk DatumAanvangGeldigheid en
+DatumEindeGeldigheid gebruikt moeten worden.
+Versie:
+
+7
+
+Soort:
+
+Definitieregel
+
+R1410
+
+Een synchroon verzoek wordt beantwoord met een synchroon resultaatbericht
+Definitie:
+
+Een inkomend verzoek via een synchrone service, resulteert altijd in een antwoord
+via een synchroon resultaatbericht met de mededelingen over het resultaat van het
+verzoek (succesvol/niet succesvol en eventuele (fout-)meldingen).
+Dit antwoord wordt altijd synchroon verzonden aan de in het bericht opgenomen
+Bericht.Ontvangende partij.
+(Noot: Afhankelijk van de dienst kan het resultaat ook opgevraagde inhoud
+bevatten)
+
+Versie:
+
+6
+
+Soort:
+
+Verwerkingslogica
+
+R2016
+'Systeemdatum'
+Definitie:
+
+De systeemdatum is de actuele datum tijdens het evalueren van een regel van het
+BRP syteem en heeft het formaat 'jjjjmmdd'.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2129
+Geldig
+Definitie:
+
+Een object is geldig op een peildatum als:
+De Datum aanvang geldigheid op of voor de peildatum ligt en de Datum einde
+geldigheid na de peildatum ligt.
+of
+De Datum ingang op of voor de peildatum ligt en de Datum einde na de peildatum
+ligt.
+(dus: de geldigeheidsperiode is inclusief de ingangsdatum, maar exclusief de
+einddatum)
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2343
+Algemene foutmelding bij schending autorisatieregels
+Definitie:
+
+Bij schending van één of meer van de autorisatieregels die zijn gekoppeld aan Use
+Case BY.1.AA, Use Case LV.1.AL of Use Case VB.1.AV.CA wordt in plaats van de
+meldingstekst bij de geschonden regel, de in deze regel opgenomen meldingstekst
+opgenomen in het berichtonderdeel Meldingen van het resultaatbericht. Zodat niet
+precies blijkt wat er aan de hand is.
+
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Er is een autorisatiefout opgetreden.
+
+R2452
+De autorisatie voor het verzenden van een vrij bericht
+Definitie:
+
+Bij een vrij bericht kunnen we het voorkomen van Autorisatie voor verzenden vrij
+bericht aanwijzen dat overeenkomt met de inhoud van de stuurgegevens en de
+
+OIN's uit de gebruikte certificaten voor ondertekening en transport van het bericht.
+Dit noemen we 'de autorisatie voor verzenden vrij bericht'.
+
+Indien de zendende partij nog aangesloten is op het GBA-stelsel, Partij.Datum
+overgang naar BRP is leeg of is groter dan 'Systeemdatum' (R2016), dan zijn de
+onderstaande regels niet van toepassing:
+• Autorisatie voor 'Verzend Partij' bestaat (R2454 - Autorisatie voor het vrije
+bericht voor de verzendende partij moet bestaan), is geldig (R2457 Autorisatie voor het vrije bericht voor de verzendende partij moet geldig zijn)
+en is niet geblokkeerd (R2462 - Autorisatie voor het vrije bericht voor de
+verzendende partij mag niet geblokkeerd zijn)
+• De 'Ondertekenaar' klopt (R2464 - Autorisatie voor het vrije bericht voor de
+ondertekenaar moet bestaan) en is geldig (R2468 - De ondertekenaar van het
+vrije bericht moet een geldige partij zijn)
+• De 'Transporteur' klopt (R2467 - Autorisatie voor het vrije bericht voor de
+transporteur moet bestaan) en is geldig (R2469 - De transporteur van het vrije
+bericht moet een geldige partij zijn)
+• Het afleverpunt van de 'Verzend Partij' klopt (R2470 - De verzendende partij
+van het vrije bericht dient een afleverpunt te hebben)
+
+De context van deze definitie bestaat uit de volgende input:
+• De waarde van Bericht.Zendende partij uit de stuurgegevens van het
+inkomende bericht. Deze bevat een Partij.Code die de 'Verzend Partij' aanduidt.
+• De 'Verzend Partij' is een 'Geautoriseerde Verzend Partij' als deze een
+voorkomen heeft van Partij.Vrij bericht.
+• Het OIN van het PKI-overheidscertificaat waarmee het bericht was
+ondertekend. Dit OIN noemen we de 'Ondertekenaar'.
+• Het OIN van het PKI-overheidscertificaat waarmee de beveiligde verbinding
+was opgezet. Dit OIN noemen we de 'Transporteur'.
+• De 'Geautoriseerde Verzend Partij' heeft voor het vrije bericht een
+Partij.Afleverpunt vrij bericht.
+
+'De autorisatie voor verzenden vrij bericht' is het voorkomen van Partij waarvoor
+geldt dat:
+• Er is sprake van een 'Geautoriseerde Verzend Partij'.
+• 'De ondertekenaar klopt' indien:
+• Het OIN van de partij Partij.Ondertekenaar vrij bericht is gelijk aan de
+'Ondertekenaar' OF
+• Partij.Ondertekenaar vrij bericht is leeg en 'Ondertekenaar' is gelijk aan de
+OIN van de 'Geautoriseerde verzend partij'
+• 'De transporteur klopt' indien:
+• Het OIN van de partij Partij.Transporteur vrij bericht is gelijk aan de
+'Transporteur' OF
+• Partij.Transporteur vrij bericht is leeg is en 'Transporteur' is gelijk aan de
+OIN van de 'Geautoriseerde verzend partij'
+• 'Het afleverpunt klopt' indien 'Geautoriseerde Verzend Partij' een waarde heeft
+voor Partij.Afleverpunt vrij bericht.
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2453
+De autorisatie voor het ontvangen van een vrij bericht
+
+Definitie:
+
+Bij een vrij bericht kunnen we het voorkomen van Autorisatie voor ontvangen vrij
+bericht aanwijzen dat overeenkomt met de inhoud van de stuurparameters van het
+bericht. Dit noemen we 'de autorisatie voor ontvangen vrij bericht'.
+
+De context van deze definitie bestaat uit de volgende input:
+• De waarde van Bericht.Ontvanger vrij bericht uit de stuurparameters van het
+inkomende bericht. Deze bevat een Partij.Code die de 'Ontvangst Partij'
+aanduidt.
+• De 'Ontvangst Partij' is een 'Geautoriseerde Ontvangst Partij' als deze een
+voorkomen heeft van Partij.Vrij bericht.
+• De 'Geautoriseerde Ontvangst Partij' heeft voor het vrije bericht een
+Partij.Afleverpunt vrij bericht.
+
+Indien de ontvangende partij nog aangesloten is op het GBA-stelsel, Partij.Datum
+overgang naar BRP is leeg of is groter dan 'Systeemdatum' (R2016), dan zijn de
+onderstaande regels niet van toepassing:
+• Autorisatie voor de 'Ontvangst Partij' bestaat (R2456 - Autorisatie voor het
+vrije bericht voor de ontvangende partij moet bestaan), is geldig (R2459 Autorisatie voor het vrije bericht voor de ontvangende partij moet geldig zijn)
+en is niet geblokkeerd (R2463 - Autorisatie voor het vrije bericht voor de
+ontvangende partij mag niet geblokkeerd zijn)
+• Het afleverpunt van de 'Ontvangst Partij' klopt (R2519 - De ontvangende partij
+van het vrije bericht dient een afleverpunt te hebben )
+
+'De autorisatie voor ontvangst vrij bericht' is het voorkomen van Partij waarbij geldt
+dat:
+• Er is sprake van een 'Geautoriseerde Ontvangst Partij'.
+• 'Het afleverpunt klopt' indien: 'Geautoriseerde Ontvangst Partij' heeft een
+waarde voor Partij.Afleverpunt vrij bericht.
+
+Toelichting:
+Indien het vrije bericht bestemd is voor een partij die op het BRP-stelsel is
+aangesloten, hiervan is sprake als Datum overgang naar BRP gevuld en nu geldig, is
+controle op autorisatie voor het ontvangen van het vrije bericht van toepassing.
+Anders is de ontvangst partij nog op het GBA-stelsel aangesloten en zal er geen
+groep Vrij bericht zijn.
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2454
+Autorisatie voor het vrije bericht voor de verzendende partij moet bestaan
+Definitie:
+
+Er moet een 'Geautoriseerde Verzend Partij' zijn voor het vrije bericht. Hiervan is
+sprake als de groep Vrij Bericht aanwezig is voor de verzendende partij.
+Bij het in behandeling nemen van het vrije bericht geldt dat 'Geautoriseerde
+Verzend Partij' zoals gedefinieerd door De autorisatie voor het verzenden van een
+vrij bericht (R2452) dient te bestaan.
+
+Versie:
+
+1
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Autorisatie voor het vrije bericht bestaat niet voor de verzendende partij
+
+Loggingsniveau:
+
+Illegale poging
+
+R2456
+Autorisatie voor het vrije bericht voor de ontvangende partij moet bestaan
+Definitie:
+
+Er moet een 'Geautoriseerde Ontvangst Partij' zijn voor het vrije bericht. Hiervan is
+sprake als de groep Vrij Bericht aanwezig is voor de ontvangende partij.
+Bij het in behandeling nemen van het vrije bericht geldt dat 'Geautoriseerde
+Ontvangst Partij' zoals gedefinieerd door De autorisatie voor het ontvangen van een
+vrij bericht (R2453) dient te bestaan.
+
+Versie:
+
+1
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Autorisatie voor het vrije bericht bestaat niet voor de ontvangende partij
+
+Loggingsniveau:
+
+Illegale poging
+
+R2457
+Autorisatie voor het vrije bericht voor de verzendende partij moet geldig zijn
+Definitie:
+
+De groep Vrij Bericht die aanwezig is voor de verzendende partij moet nu geldig
+zijn.
+Bij het in behandeling nemen van het vrije bericht geldt dat 'Geautoriseerde
+Verzend Partij' zoals gedefinieerd door De autorisatie voor het verzenden van een
+vrij bericht (R2452) Geldig (R2129) is op de 'Systeemdatum' (R2016).
+
+Versie:
+
+1
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Autorisatie voor het vrije bericht is niet geldig voor de verzendende partij
+
+Loggingsniveau:
+
+Illegale poging
+
+R2459
+Autorisatie voor het vrije bericht voor de ontvangende partij moet geldig zijn
+Definitie:
+
+De groep Vrij Bericht die aanwezig is voor de ontvangende partij moet nu geldig
+zijn.
+Bij het in behandeling nemen van het vrije bericht geldt dat 'Geautoriseerde
+Ontvangst Partij' zoals gedefinieerd door De autorisatie voor het ontvangen van een
+vrij bericht (R2453) Geldig (R2129) is op de 'Systeemdatum' (R2016).
+
+Versie:
+
+1
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Autorisatie voor het vrije bericht is niet geldig voor de ontvangende partij
+
+Loggingsniveau:
+
+Illegale poging
+
+R2460
+De verzendende partij van het vrije bericht moet geldig zijn
+Definitie:
+
+Bij het in behandeling nemen van het vrije bericht geldt dat 'Verzend Partij' zoals
+gedefinieerd door De autorisatie voor het verzenden van een vrij bericht (R2452)
+moet verwijzen naar een Geldig (R2129) voorkomen op 'Systeemdatum' (R2016) in
+Partij.
+
+Versie:
+
+4
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De verzendende partij van het vrije bericht is niet geldig
+
+Loggingsniveau:
+
+Illegale poging
+
+R2461
+De ontvangende partij van het vrije bericht moet geldig zijn
+Definitie:
+
+Bij het in behandeling nemen van het vrije bericht geldt dat 'Ontvangst Partij' zoals
+gedefinieerd door De autorisatie voor het ontvangen van een vrij bericht (R2453)
+moet verwijzen naar een Geldig (R2129) voorkomen op 'Systeemdatum' (R2016) in
+Partij.
+
+Versie:
+
+3
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De ontvangende partij van het vrije bericht is niet geldig
+
+Loggingsniveau:
+
+Illegale poging
+
+R2462
+Autorisatie voor het vrije bericht voor de verzendende partij mag niet geblokkeerd zijn
+Definitie:
+
+Bij het in behandeling nemen van het vrije bericht geldt dat voor 'Geautoriseerde
+Verzend Partij' zoals gedefinieerd door De autorisatie voor het verzenden van een
+vrij bericht (R2452) waarde Partij.Geblokkeerd vrij bericht? ongelijk aan "Ja" is.
+
+Versie:
+
+1
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De verzendende partij van het vrije bericht is geblokkeerd door de beheerder
+
+Loggingsniveau:
+
+Illegale poging
+
+R2463
+Autorisatie voor het vrije bericht voor de ontvangende partij mag niet geblokkeerd zijn
+Definitie:
+
+Bij het in behandeling nemen van het vrije bericht geldt dat voor 'Geautoriseerde
+Ontvangst Partij' zoals gedefinieerd door De autorisatie voor het ontvangen van een
+vrij bericht (R2453) waarde Partij.Geblokkeerd vrij bericht? ongelijk aan "Ja" is.
+
+Versie:
+
+1
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De ontvangende partij van het vrije bericht is geblokkeerd door de beheerder
+
+Loggingsniveau:
+
+Illegale poging
+
+R2464
+Autorisatie voor het vrije bericht voor de ondertekenaar moet bestaan
+Definitie:
+
+Het OIN van het PKI overheidscertifictaat dat is gebruikt voor de digitale
+ondertekening van het bericht dient te bestaan.
+Bij het in behandeling nemen van het vrije bericht moet gelden dat 'De
+ondertekenaar klopt' zoals gedefinieerd door De autorisatie voor het verzenden van
+een vrij bericht (R2452).
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De ondertekenaar van het vrije bericht is onjuist
+
+Loggingsniveau:
+
+Illegale poging
+
+R2467
+Autorisatie voor het vrije bericht voor de transporteur moet bestaan
+Definitie:
+
+Het OIN van het PKI overheidscertifictaat dat is gebruikt voor het opzetten van de
+beveiligde verbinding dient te bestaan.
+Bij het in behandeling nemen van het vrije bericht moet gelden dat 'De transporteur
+klopt' zoals gedefinieerd door De autorisatie voor het verzenden van een vrij bericht
+(R2452).
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De transporteur van het vrije bericht is onjuist
+
+Loggingsniveau:
+
+Illegale poging
+
+R2468
+De ondertekenaar van het vrije bericht moet een geldige partij zijn
+Definitie:
+
+Het OIN van het PKI-overheidscertificaat waarmee het vrije bericht is ondertekend
+(De 'Ondertekenaar', zoals gedefinieerd door De autorisatie voor het verzenden van
+een vrij bericht (R2452)) moet verwijzen naar een Geldig (R2129) voorkomen op
+'Systeemdatum' (R2016) in Partij.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De ondertekenaar van het vrije bericht is geen geldige partij
+
+Loggingsniveau:
+
+Illegale poging
+
+R2469
+De transporteur van het vrije bericht moet een geldige partij zijn
+Definitie:
+
+Het OIN van het PKI-overheidscertificaat waarmee de beveiligde verbinding is
+opgezet (De 'Transporteur', zoals gedefinieerd door De autorisatie voor het
+verzenden van een vrij bericht (R2452)) moet verwijzen naar een Geldig (R2129)
+voorkomen op 'Systeemdatum' (R2016) in Partij.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De transporteur van het vrije bericht is geen geldige partij
+
+Loggingsniveau:
+
+Illegale poging
+
+R2470
+De verzendende partij van het vrije bericht dient een afleverpunt te hebben
+Definitie:
+
+Bij het in behandeling nemen van het vrije bericht moet gelden dat 'Het afleverpunt
+klopt' zoals gedefinieerd door De autorisatie voor het verzenden van een vrij bericht
+(R2452)
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De verzendende partij van het vrije bericht heeft geen afleverpunt
+
+Loggingsniveau:
+
+Illegale poging
+
+R2472
+Het soort vrij bericht moet bestaan
+Definitie:
+
+Bij het in behandeling nemen van het vrije bericht geldt dat Bericht.Soort vrij
+bericht moet verwijzen naar een stamgegeven in Soort vrij bericht.
+
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Soort vrij bericht bestaat niet
+
+Loggingsniveau:
+
+Illegale poging
+
+R2473
+Het soort vrij bericht moet geldig zijn
+Definitie:
+
+Bij het in behandeling nemen van het vrije bericht geldt dat Bericht.Soort vrij
+bericht moet verwijzen naar een Geldig voorkomen stamgegeven op peildatum
+(R1284) op 'Systeemdatum' (R2016) in Soort vrij bericht.
+
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Soort vrij bericht is niet geldig
+
+Loggingsniveau:
+
+Illegale poging
+
+R2482
+Vulling stuurgegevens voor het uitgaand vrij bericht
+Definitie:
+
+Bij het uitgaande (asynchroon) vrije bericht dienen de stuurgegevens in het bericht
+als volgt gevuld te worden:
+
+•
+•
+•
+•
+•
+
+Bericht.Zendende partij : '199903'
+Bericht.Zendende systeem : 'BRP'
+Bericht.Ontvangende partij : de waarde van Bericht.Ontvanger vrij bericht uit
+de stuurparameters van Stuur vrij bericht
+Bericht.Referentienummer : unieke ID genereren
+Bericht.Datum/tijd verzending : Datum\tijd systeem bij aanmaken van het
+bericht inclusief de tijdzone (bijvoorbeeld: '2012-04-18T15:32:03.234+01:00')
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R2483
+Stelsel bepaalt de wijze waarop BRP het vrije bericht verstuurd
+Definitie:
+
+Het Partij.Afleverpunt vrij bericht van de Bericht.Ontvanger vrij bericht bepaald hoe
+het vrije bericht verstuurd wordt.
+Indien Partij.Afleverpunt vrij bericht een waarde heeft, dan wordt het bericht via het
+BRP koppelvlak op dit endpoint afgeleverd. Anders wordt het bericht via het
+koppelvlak van de migratievoorziening verstuurd.
+
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R2498
+De zendende partij en de zender van het vrije bericht moeten aan elkaar gelijk zijn
+
+Definitie:
+
+Bij het in behandeling nemen van het vrije bericht geldt dat Bericht.Zendende partij
+uit stuurgegevens gelijk dient te zijn aan Bericht.Zender vrij bericht uit de
+parameters.
+
+Versie:
+
+2
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De zendende partij is niet gelijk aan de zender vrij bericht
+
+Loggingsniveau:
+
+Illegale poging
+
+R2499
+Stel te registreren gegevens berichtarchivering vast voor vrij bericht
+Definitie:
+
+Voor elk ingaand of uitgaand vrij bericht in de BRP wordt een voorkomen van
+Bericht gearchiveerd. Voor het vrije bericht zijn dit de volgende berichten (bericht
+naam begint met "vrb_vrb");
+• Verwerk vrij bericht,
+• Stuur vrij bericht en
+• Stuur vrij bericht (resultaat)
+
+De attributen worden als volgt gevuld (niet genoemde attributen zijn altijd 'leeg');
+Soort bericht.Naam;
+Voor het vrije bericht zijn de volgende soort bericht namen gereserveerd; Verwerk
+vrij bericht, Stuur vrij bericht en Stuur vrij bericht (resultaat).
+
+Bericht.Richting;
+Indien Stuur vrij bericht "Ingaand", anders "Uitgaand".
+
+Bericht.Data;
+De inhoud van het bericht zelf (inclusief protocol headers/envelope).
+
+Bericht.Zendende partij;
+Vullen met de Partij.ID van de Partij uit stuurgegeven Bericht.Zendende partij in
+bericht. Is bij uitgaande berichten dus de BRP zelf. Is leeg als Bericht.Zendende
+partij niet verwijst naar een Geldig (R2129) voorkomen op 'Systeemdatum'
+(R2016) in Partij.
+
+Bericht.Zendende systeem;
+Overnemen uit stuurgegeven Bericht.Zendende systeem in bericht. Is bij uitgaande
+berichten dus de BRP zelf.
+
+Bericht.Ontvangende partij;
+Indien Verwerk vrij bericht vullen met de Partij.ID van de Partij uit stuurgegeven
+Bericht.Ontvangende partij in bericht.
+Indien Stuur vrij bericht (resultaat) dan Bericht.Zendende partij zoals dat in de
+stuurgegevens van het corresponderende Stuur vrij bericht stond. Is leeg als
+Bericht.Zendende partij niet verwijst naar een Geldig (R2129) voorkomen op
+'Systeemdatum' (R2016) in Partij.
+In alle andere gevallen 'leeg'.
+
+Bericht.Referentienummer;
+Overnemen uit stuurgegeven Bericht.Referentienummer in bericht.
+
+Bericht.Cross referentienummer;
+Indien Stuur vrij bericht (resultaat) overnemen uit stuurgegeven Bericht.Cross
+referentienummer in bericht. In alle andere gevallen 'leeg'.
+
+Bericht.Datum/tijd verzending;
+Overnemen uit stuurgegeven Bericht.Datum/tijd verzending in bericht.
+
+Bericht.Datum/tijd ontvangst;
+Indien Stuur vrij bericht vullen met Datum\tijd systeem van binnenkomst bericht in
+de BRP service. In alle andere gevallen 'leeg'.
+
+Bericht.Verwerking;
+Indien Stuur vrij bericht (resultaat), overnemen uit resultaat Bericht.Verwerking in
+(antwoord) bericht; 'Geslaagd' indien verwerking van bericht zonder
+problemen/fouten verloopt (geen meldingen), anders 'Foutief'; foutief indien er
+meldingen optreden (van het niveau 'Deblokkeerbaar' of 'Fout') en/of er technische
+fouten optreden. Anders altijd 'leeg'.
+
+Bericht.Hoogste meldingsniveau;
+Indien Stuur vrij bericht (resultaat), overnemen uit resultaat Bericht.Hoogste
+meldingsniveau in (antwoord) bericht; 'Geen' indien er geen meldingen (uit
+bedrijfsregels) zijn opgetreden of anders het hoogste meldingsniveau van de
+opgetreden meldingen (afkomstig uit bedrijfsregels). Anders altijd 'leeg'.
+Versie:
+
+6
+
+Soort:
+
+Verwerkingslogica
+
+R2519
+De ontvangende partij van het vrije bericht dient een afleverpunt te hebben
+Definitie:
+
+Als de ontvangende partij voor het vrij bericht aangesloten is op het BRP-stelsel,
+dan dient de partij een afleverpunt te hebben.
+Bij het in behandeling nemen van het vrije bericht moet gelden dat 'Het afleverpunt
+klopt' zoals gedefinieerd door De autorisatie voor het ontvangen van een vrij bericht
+(R2453).
+
+Versie:
+
+1
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De ontvangende partij van het vrije bericht heeft geen afleverpunt
+
+Loggingsniveau:
+
+Illegale poging
+
+

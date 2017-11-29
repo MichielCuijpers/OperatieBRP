@@ -1,0 +1,359 @@
+UC808 Beoordelen onduidelijke synchronisatie
+migratievoorziening
+
+1.6
+
+Datum
+Status
+
+30-05-2017
+Definitief
+
+Definitief | 1.6 | UC808 Beoordelen onduidelijke synchronisatie migratievoorziening | 30-05-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................6
+2.1
+
+3
+
+REGULIER VERLOOP ..............................................................................................................................6
+
+AANVULLENDE SPECIFICATIES .................................................................................................7
+3.1
+3.2
+
+4
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................5
+PRECONDITIE ........................................................................................................................................5
+POSTCONDITIE......................................................................................................................................5
+
+PERSOONSLIJSTEN VERGELIJKEN ........................................................................................................7
+VERWERKING KIEZEN ...........................................................................................................................7
+
+OPMERKINGEN ....................................................................................................................................8
+
+Operatie BRP
+
+Pagina 2 van 8
+
+Definitief | 1.6 | UC808 Beoordelen onduidelijke synchronisatie migratievoorziening | 30-05-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+29-01-2014
+13-03-2014
+01-09-2014
+25-06-2015
+
+0.1
+1.0
+1.1
+1.2
+
+Operatie
+Operatie
+Operatie
+Operatie
+
+28-03-2016
+04-04-2016
+26-05-2017
+
+1.3
+1.4
+1.5
+
+30-05-2017
+
+1.6
+
+Initiële versie
+Aanpassingen n.a.v. review
+Definitief gemaakt voor release 2.2
+Definitief gemaakt ten behoeve van release
+3.1
+Aanpassingen beslisboom verwerkt
+Reviewcommentaar verwerkt
+Burgerservicenummer toegevoegd en
+controle op kandidaat persoonslijsten
+uitgebreid.
+Reviewcommentaar verwerkt
+
+BRP
+BRP
+BRP
+BRP
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+11-3-2014
+
+0.1
+
+Review initiële versie
+
+Operatie BRP
+
+01-04-2016
+
+1.3
+
+Review
+
+Operatie BRP
+
+30-05-2017
+
+1.5
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 8
+
+Definitief | 1.6 | UC808 Beoordelen onduidelijke synchronisatie migratievoorziening | 30-05-2017
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+In sommige gevallen kan een persoonslijst niet in de BRP verwerkt worden omdat er door het
+systeem een onduidelijke situatie is geconstateerd. Hier krijgt de beheerder melding van. De
+beheerder dient handmatig te bepalen op welke wijze de aangeboden persoonslijst verwerkt
+dient te worden. Voor bijna alle keuzes geldt dat het bericht opnieuw ter verwerking wordt
+aangeboden aan het systeem waarbij de keuze van de beheerder verwerkt wordt. De beheerder
+kan in sommige gevallen ook kiezen om het bericht helemaal niet meer te verwerken en de
+berichtcyclus af te breken.
+Deze use case beschrijft op basis waarvan en op welke wijze een beheerder kan beoordelen en
+aangeven hoe een persoonslijst in de BRP verwerkt dient te worden.
+
+uc UC808 Beoordelen onduidelij ke synchronisatie migratiev oorziening
+
+UC808 Beoordelen
+onduidelij ke synchronisatie
+migratiev oorziening
+
+«include»
+
+UC202 Verw erken
+synchronisatie-cyclus
+
+Beheerder
+
+Operatie BRP
+
+Pagina 4 van 8
+
+Definitief | 1.6 | UC808 Beoordelen onduidelijke synchronisatie migratievoorziening | 30-05-2017
+
+1.2
+
+1.3
+
+Referenties
+#
+[UC811]
+
+Document
+MV UC811 Verwerken
+synchronisatievraag-cyclus
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+[UC202]
+
+MV UC202 Verwerken synchronisatiecyclus
+
+Operatie BRP
+
+-
+
+-
+
+[UC220]
+
+MV UC220 Bepalen verwerking
+persoonslijst
+
+Operatie BRP
+
+-
+
+-
+
+Preconditie
+• Bij de verwerking van een aangeboden persoonslijst in de BRP is een onduidelijke situatie
+geconstateerd. Hierbij zijn geen of meer kandidaat persoonslijsten gevonden.
+
+1.4
+
+Postconditie
+Opnieuw ter verwerking aanbieden:
+•
+•
+•
+•
+•
+•
+
+Afkeuren zonder pf03
+Afkeuren met Pf03,
+Toevoegen
+Vervangen
+Opnieuw verwerken
+Automatisch opnieuw verwerken
+
+Niet opnieuw ter verwerking aanbieden:
+• Afbreken zonder Pf03
+• Afbreken met Pf03
+
+Operatie BRP
+
+Pagina 5 van 8
+
+Definitief | 1.6 | UC808 Beoordelen onduidelijke synchronisatie migratievoorziening | 30-05-2017
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+1. Het systeem meldt de beheerder dat er een onduidelijke situatie is geconstateerd
+2. Het systeem meldt de beheerder welke kandidaat persoonslijsten er zijn (AS: 3.1)
+3. De beheerder kiest op welke wijze het bericht verwerkt dient te worden
+4. De use case eindigt
+
+Operatie BRP
+
+Pagina 6 van 8
+
+Definitief | 1.6 | UC808 Beoordelen onduidelijke synchronisatie migratievoorziening | 30-05-2017
+
+3
+
+Aanvullende specificaties
+
+3.1
+
+Persoonslijsten vergelijken
+Het systeem meldt de beheerder dat er een onduidelijke situatie is geconstateerd. Het systeem
+toont de beheerder de inhoud van de aangeboden persoonslijst naast de inhoud van een of meer
+kandidaat persoonslijsten zodat de beheerder eenvoudig de persoonslijsten kan vergelijken.
+Hierbij markeert het systeem eventuele verschillen tussen de aangeboden persoonslijst en de
+kandidaat persoonslijst(en).
+Meer informatie over kandidaat persoonslijsten is te vinden in [UC220].
+
+3.2
+
+Verwerking kiezen
+In de onderstaande tabel is te vinden welke verwerkingen de beheerder kan kiezen.
+Verwerking
+Afkeuren zonder Pf03
+Afkeuren met Pf03
+Toevoegen
+
+Vervangen
+
+Opnieuw verwerken
+Automatisch opnieuw verwerken
+Afbreken zonder Pf03
+Afbreken met Pf03
+
+Toelichting
+Beheerder kiest geen kandidaat persoonslijst. Het bericht
+wordt opnieuw ter verwerking aangeboden.
+Beheerder kiest geen kandidaat persoonslijst. Het bericht
+wordt opnieuw ter verwerking aangeboden.
+Kan alleen geselecteerd worden als het a-nummer en
+burgerservicenummer van de aangeboden persoonslijst niet
+actueel gevonden kunnen worden in de BRP. Het bericht
+wordt opnieuw ter verwerking aangeboden.
+De beheerder moet verplicht een kandidaat persoonslijst
+selecteren. Een kandidaat persoonslijst kan geselecteerd
+worden als:
+• het a-nummer en het burgerservicenummer
+overeenkomen met die van de aangeboden persoonslijst,
+of
+• het a-nummer of het burgerservicenummer niet
+overeenkomt met die van de geselecteerde kandidaat
+persoonslijst en het a-nummer of het
+burgerservicenummer komen niet actueel voor op een
+andere persoonslijst in de BRP.
+Het bericht wordt opnieuw ter verwerking aangeboden.
+Beheerder kiest geen kandidaat persoonslijst. Het bericht
+wordt opnieuw ter verwerking aangeboden.
+Dit is geen keuze die de beheerder kan maken. Deze keuze
+kan alleen gedaan worden door het systeem.
+Beheerder kiest geen kandidaat persoonslijst. Het bericht
+wordt niet opnieuw ter verwerking aangeboden.
+Beheerder kiest geen kandidaat persoonslijst. Het bericht
+wordt niet opnieuw ter verwerking aangeboden.
+
+De gekozen verwerking is tevens het resultaat van deze use case.
+
+Operatie BRP
+
+Pagina 7 van 8
+
+Definitief | 1.6 | UC808 Beoordelen onduidelijke synchronisatie migratievoorziening | 30-05-2017
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 8 van 8
+
+

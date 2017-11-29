@@ -1,0 +1,2711 @@
+Aspectbeschrijving – Corrigeren
+Versie
+
+0.28
+
+Datum
+
+28 juni 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+03-11-2016
+
+0.1
+
+Initiële versie
+
+Operatie BRP
+
+09-11-2016
+
+0.2
+
+•
+
+Operatie BRP
+
+•
+•
+•
+•
+
+Uit par 3.4 (Correctiehandelingen) gestript wat ook al
+in UC’s komt
+H4 (Correctiepatronen) toegevoegd
+H5 (Openstaande punten) toegevoegd
+Review verwerkt
+Review verwerkt
+
+10-11-2016
+
+0.3
+
+•
+•
+•
+
+Par 3.5 (Controles) toegevoegd
+Review verwerkt
+Review verwerkt
+
+Operatie BRP
+
+14-11-2016
+
+0.4
+
+•
+•
+•
+
+Review op par 3.5 (Controles) verwerkt
+Par 3.6 (Levering) toegevoegd
+Ontwerpbeslissing m.b.t. samengestelde correctiefuncties verwerkt
+
+Operatie BRP
+
+15-11-2016
+
+0.5
+
+•
+•
+
+Naamgeving correctieacties aangepast
+Handelingen Correctie h/gp en Ongedaanmaking registratie h/gp gesplitst voor huwelijk en gereg.ps
+Aanwijzen voorkomens geüniformeerd
+Review verwerkt
+
+Operatie BRP
+
+•
+•
+17-11-2016
+
+0.6
+
+Review verwerkt
+
+Operatie BRP
+
+24-11-2016
+
+0.7
+
+Review verwerkt
+
+Operatie BRP
+
+29-11-2016
+
+0.8
+
+Par 5.2 (Potentiele gaten in materiële tijdlijn) uitgebreid
+met correctie geboortedatum
+
+Operatie BRP
+
+30-11-2016
+
+0.9
+
+Review verwerkt
+
+Operatie BRP
+
+30-11-2016
+
+0.10
+
+Par 4.9 (IST-gegevens) toegevoegd
+
+Operatie BRP
+
+01-12-2016
+
+0.11
+
+Review verwerkt
+
+Operatie BRP
+
+15-12-2016
+
+0.12
+
+Review verwerkt
+
+Operatie BRP
+
+15-12-2016
+
+0.13
+
+•
+•
+
+Operatie BRP
+
+16-12-2016
+
+0.14
+
+Review verwerkt
+
+Operatie BRP
+
+10-01-2017
+
+0.15
+
+Nadere toelichting aan ontwerpbeslissing van paragraaf 3.5
+(Controles) toegevoegd
+
+Operatie BRP
+
+19-01-2017
+
+0.16
+
+•
+•
+
+Operatie BRP
+
+Review verwerkt
+Naamgeving handelingen voor ongedaanmaking h/gp
+aangepast
+
+Paragraaf 4.10 toegevoegd “Correcties icm GBA”
+Ontwerpbeslissing controle op brondocumenten toegevoegd aan paragraaf 3.5
+
+Aspectbeschrijving – Corrigeren
+
+14-02-2017
+
+0.17
+
+Toegevoegd aan paragraaf 3.5:
+•
+Ontwerpbeslissing m.b.t. peildatum voor controles
+
+Operatie BRP
+
+22-02-2017
+
+0.18
+
+In paragraaf 3.2 de onderbouwing voor de gekozen correctiemethode uitgebreid
+
+Operatie BRP
+
+1-3-2017
+
+0.19
+
+Handeling ‘Correctie gegevens gerelateerde’ gesplitst in
+verschillende handelingen
+
+Operatie BRP
+
+30-3-2017
+
+0.20
+
+•
+
+Samengestelde naam en Naamgebruik worden niet
+meer afgeleid gecorrigeerd.
+
+Operatie BRP
+
+•
+
+Openstaande punten m.b.t. onderzoek bijgewerkt.
+Openstaande punten bijgewerkt
+
+3-4-2017
+
+0.21
+
+•
+
+17-05-2017
+
+0.22
+
+Toegevoegd aan paragraaf 2.2:
+•
+
+Operatie BRP
+Operatie BRP
+
+Ontwerpbeslissing omtrent geen controle uitvoeren
+t.b.v. misbruik correctie als actualisatie.
+
+29-05-2017
+
+0.23
+
+Corrigeren van groep Bijhouding (hoofdstuk 5) toegevoegd
+
+Operatie BRP
+
+06-06-2017
+
+0.24
+
+Review verwerkt
+
+Operatie BRP
+
+06-06-2017
+
+0.25
+
+In de ontwerpbeslissing m.b.t. het in principe opnemen
+van bronnen bij acties aangegeven dat hier expliciet acties
+van kunnen worden uitgezonderd.
+
+Operatie BRP
+
+20-06-2017
+
+0.26
+
+Advies aan bijhouders m.b.t. onderzoek aangescherpt.
+
+Operatie BRP
+
+28-06-2017
+
+0.27
+
+Hoofdstuk openstaande punten hernoemd naar Overige
+besluiten.
+
+Operatie BRP
+
+11-07-2017
+
+0.28
+
+Bijlage toegevoegd met overzicht van correctiehandelingen
+
+Operatie BRP
+
+Status: Definitief, versie: 0.28
+
+Pagina 2 van 37
+
+Aspectbeschrijving – Corrigeren
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Operatie BRP
+
+0.2
+
+Operatie BRP
+
+0.3
+
+Operatie BRP
+
+0.4
+
+Operatie BRP
+
+0.5
+
+Operatie BRP
+
+0.6
+
+Operatie BRP
+
+0.8
+
+Operatie BRP
+
+0.10
+
+Operatie BRP
+
+0.11
+
+Operatie BRP
+
+0.15
+
+Operatie BRP
+
+0.23
+
+Operatie BRP
+
+Status: Definitief, versie: 0.28
+
+Pagina 3 van 37
+
+Aspectbeschrijving – Corrigeren
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 5
+1.1
+1.2
+
+2
+
+Definitie en afbakening ............................................................................................. 6
+2.1
+2.2
+2.3
+
+3
+
+6
+
+Onderzochte methoden ..........................................................................................................8
+Streepjesmethode.............................................................................................................8
+Blokkenmethode ...............................................................................................................9
+Reeksmethode .................................................................................................................9
+Gekozen methode: blokkenmethode...................................................................................... 10
+Correctieacties.................................................................................................................... 11
+Soort actie: Correctie verval <…> ..................................................................................... 11
+Soort actie: Correctie registratie <…> ............................................................................... 12
+Soort actie: Verval <…> .................................................................................................. 12
+Voorbeeld: Correctie van DAG van actuele adres ................................................................ 12
+Correctiehandelingen ........................................................................................................... 13
+Controles ........................................................................................................................... 13
+
+Correctiepatronen ................................................................................................... 16
+4.1
+4.1.1
+4.2
+4.3
+4.3.1
+4.4
+4.4.1
+4.4.2
+4.4.3
+4.4.4
+4.4.5
+4.4.6
+4.5
+4.6
+4.7
+4.8
+4.9
+4.10
+
+5
+
+Wat houdt corrigeren in?........................................................................................................6
+Corrigeren vs actualiseren ......................................................................................................6
+Corrigeren versus verwijderen/overschrijven ............................................................................7
+
+Methode van corrigeren ............................................................................................ 8
+3.1
+3.1.1
+3.1.2
+3.1.3
+3.2
+3.3
+3.3.1
+3.3.2
+3.3.3
+3.3.4
+3.4
+3.5
+
+4
+
+Doel ....................................................................................................................................5
+Referenties ..........................................................................................................................5
+
+Corrigeren van formeel historische groepen............................................................................ 16
+Voorbeeld: Onjuiste locatiegegevens huwelijk .................................................................... 16
+Corrigeren van afgeleide gegevens ........................................................................................ 16
+Corrigeren van gegevens van een gerelateerde....................................................................... 17
+Corrigeren van samengestelde naam van gerelateerde ........................................................ 17
+Corrigeren van materieel historische groepen ......................................................................... 18
+Voorbeeld: Onjuiste geslachtsaanduiding ........................................................................... 18
+Voorbeeld: Onjuiste voornaam ......................................................................................... 18
+Ten onrechte opgenomen voorkomen ................................................................................ 19
+Ontbrekend voorkomen ................................................................................................... 19
+Corrigeren van identificatienummers ................................................................................. 20
+Opname brondocumenten bij corrigeren van (impliciete) materieel historische groepen ........... 20
+Groepen zonder historie ....................................................................................................... 21
+Laten vervallen van een volledige objectstructuur ................................................................... 21
+Corrigeren van betrokkenheden ............................................................................................ 22
+Corrigeren van bronnen ....................................................................................................... 22
+IST-gegevens ..................................................................................................................... 25
+Correcties met betrokken GBA-persoon ................................................................................. 29
+
+Groep Bijhouding .................................................................................................... 30
+Levering .................................................................................................................. 31
+6.1
+6.2
+6.3
+6.4
+6.5
+
+Impact van keuze voor elementaire correctiehandelingen op afnemers ...................................... 31
+Potentiele gaten in materiële tijdlijn ...................................................................................... 31
+Potentieel gat in volgnummers voornamen ............................................................................. 32
+Kring van afnemers die de correctie ontvangt ......................................................................... 32
+Voor bepaalde groepen geen actie-attributen leveren .............................................................. 32
+
+7
+
+Overige besluiten .................................................................................................... 33
+
+8
+
+Bijlage – Overzicht correctiehandelingen ................................................................ 34
+
+Status: Definitief, versie: 0.28
+
+Pagina 4 van 37
+
+Aspectbeschrijving – Corrigeren
+
+1 Inleiding
+1.1
+
+Doel
+
+Het doel van dit document is te beschrijven hoe gegevens in de BRP kunnen worden gecorrigeerd
+wanneer deze niet juist blijken te zijn. Eerst wordt beschreven wat we onder corrigeren verstaan
+en wat de scheidslijn is met andere onderwerpen, zoals het actualiseren, verwijderen en overschrijven van gegevens. Vervolgens wordt toegelicht welke correctiemethoden zijn onderzocht en
+voor welke methode is gekozen. Daarna wordt aan de hand van ‘correctiepatronen’ beschreven hoe
+gegevens in de BRP kunnen worden gecorrigeerd volgens de gekozen methode. Tenslotte worden
+enige aandachtspunten met betrekking tot het koppelvlak Levering benoemd.
+
+1.2
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Aspectbeschrijving – Verwijderen en overschrijven
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving – Formele en materiële historie
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Documentatie bidirectionele conversie
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 0.28
+
+Pagina 5 van 37
+
+Aspectbeschrijving – Corrigeren
+
+2 Definitie en afbakening
+In dit hoofdstuk wordt uiteengezet wat in de BRP precies onder corrigeren wordt verstaan en hoe
+het zich verhoudt tot andere begrippen die eraan zijn gerelateerd, zoals actualiseren, verwijderen
+en overschrijven.
+
+2.1
+
+Wat houdt corrigeren in?
+
+Corrigeren is het herstellen van fouten op een persoonslijst. Zo kunnen bijvoorbeeld de gegevens
+van een huwelijk of van de betrokken partners verkeerd zijn opgenomen of kan bij het registreren
+van een relatie de verkeerde persoon als betrokkene bij de relatie zijn opgenomen. Correcties kunnen betrekking hebben op alle gegevens van de persoonslijst, dus zowel op algemene gegevens als
+op administratieve gegevens.
+Niet alle gegevens kunnen op dezelfde wijze worden hersteld. Óf en hoe een gegeven kan worden
+gecorrigeerd hangt af van verschillende factoren, zoals van het soort gegeven en het soort fout. Zo
+kunnen bijvoorbeeld gegevensgroepen waarvan historie wordt bijgehouden, worden hersteld door
+de onjuiste gegevens naar de formele historie te laten vervallen 1. Er zijn ook gegevens waarvan
+geen historie wordt bijgehouden, zoals bijvoorbeeld verantwoordingsgegevens. Herstel van fouten
+in dergelijke gegevens moet dan op een andere manier plaatsvinden.
+In het volgende hoofdstuk wordt uitgebreid ingegaan op de specifieke correctiemethode(n) waarmee gegevens in de BRP kunnen worden gecorrigeerd.
+
+2.2
+
+Corrigeren vs actualiseren
+
+Vanuit de bijhouder gezien is het verschil tussen actualiseren en corrigeren duidelijk. Actualiseren
+is het registreren van nieuwe feiten. Zoals hiervoor al gesteld is het doel van corrigeren het herstellen van fouten op de persoonslijst. Op grond van de Wet BRP moeten de foutieve gegevens op
+de persoonslijst bovendien worden gemarkeerd als onjuist of strijdig met de openbare orde.
+Het perspectief van de centrale voorzieningen van de BRP loopt synchroon met het perspectief van
+de bijhouder. Actualiseringshandelingen (AH-categorie 'Actualisering') sluiten zo goed mogelijk aan
+op de bedrijfsprocessen. Het zijn op het bedrijfsproces gerichte handelingen die het mogelijk maken om meerdere gegevens tegelijkertijd te registreren, waar nodig gegevens af te leiden en diverse controles uit te voeren.
+Omdat alle gegevens op de persoonslijst gecorrigeerd moeten kunnen worden en er vele aanleidingen (bedrijfsprocessen) kunnen zijn voor een correctie is het ondoenlijk om alle potentiële correctiegebeurtenissen specifiek uit te werken in correctiehandelingen. Daarom is het volgende besluit
+genomen:
+Ontwerpbeslissing
+Bij correcties kiezen we voor elementaire, gegevensgerichte handelingen (AH-categorie 'Correctie')
+met beperktere controles. Samengestelde correctiefuncties zullen niet worden aangeboden.
+Dus bijvoorbeeld bij het corrigeren van een ten onrechte opgenomen overlijden, een correctie die
+niet vaak voor komt, worden het overlijden en het (door overlijden ontbonden) huwelijk met separate correcties hersteld.
+Een belangrijk verschil tussen actualiseren en corrigeren is ook dat het bij correcties van belang is
+om exact te weten hoe deze moet worden verwerkt in relatie tot eerder geregistreerde gegevens.
+Bij actualisering speelt dit niet, omdat het dan altijd gaat om het toevoegen van een nieuw voorkomen of het aanvullen van een actueel voorkomen met beëindigingsgegevens. Zo zijn bijvoorbeeld zowel de registratie van de voltrekking van een huwelijk als de registratie van de ontbinding
+ervan actualiseringen. Daarbij gelden wel aanvullende beperkingen. Zo mag de actualisering niet
+1
+
+Gegevens in de formele historie mogen niet gecorrigeerd worden zodat achteraf altijd terug te halen is hoe de administratie er voor de correctie uit heeft gezien.
+
+Status: Definitief, versie: 0.28
+
+Pagina 6 van 37
+
+Aspectbeschrijving – Corrigeren
+
+leiden tot ongeoorloofde overlap met de geldigheid van andere voorkomens. Een ontbrekend historisch adres kan bijvoorbeeld niet met een actualisering worden ingevoegd, omdat dan niet duidelijk
+is wat moet gebeuren met de bestaande adresvoorkomens waarmee het nieuwe voorkomen overlapt.
+In sommige gevallen kan dezelfde wijziging zowel via actualiseren als via corrigeren worden bereikt, met het enige verschil dat bij correctie de oude gegevens kunnen worden gemarkeerd als
+onjuist of strijdig met de openbare orde. Voorbeelden van dergelijke bijna identieke administratieve handelingen zijn Wijziging naamgebruik en Correctie naamgebruik. Het is dus niet aan de centrale voorzieningen om te bepalen of iets een actualisering of een correctie is. De bijhouder maakt
+die keuze.
+Ontwerpbeslissing
+Er worden geen controles uitgevoerd om uit te sluiten dat een correctie als actualisatie gebruikt
+wordt.
+
+2.3
+
+Corrigeren versus verwijderen/overschrijven
+
+De wet regelt een aantal situaties waarin gegevens van een persoonslijst worden verwijderd. Zo
+heeft bijvoorbeeld een geadopteerde het recht om op verzoek gegevens van vóór de adoptie van
+zijn persoonslijst te laten verwijderen. Een ander voorbeeld is het recht om na geslachtswijziging
+op verzoek de gegevens over het oorspronkelijke geslacht op de persoonslijst te overschrijven met
+de gegevens van het nieuwe geslacht. Het verschil met verwijderen is dat bij overschrijven er andere gegevens in de plaats komen. De verwijderde/overschreven gegevens mogen niet meer zichtbaar zijn voor afnemers en bijhouders.
+In beide gevallen gebruikt de wet (art. 2.57 Wet BRP) de term verwijderen. Om de verschillende
+vormen van verwijderen te duiden gebruiken we in de BRP de termen verwijderen (na adoptie) en
+overschrijven (na geslachtswijziging). In het verleden gebruikten we daarnaast nog de term wissen, maar omdat dit slechts tot verwarring leidt, is besloten om deze term niet meer te gebruiken.
+Vanuit het perspectief van de bijhouder verschilt verwijderen/overschrijven wezenlijk van corrigeren. Bij corrigeren gaat het namelijk om het herstellen van fouten op de persoonslijst, terwijl het
+bij verwijderen en overschrijven gaat om het definitief verwijderen van gegevens op verzoek van
+de betrokkene zonder dat daar een fout op de persoonslijst aan ten grondslag ligt.
+Toch is er voor de BRP een raakvlak tussen corrigeren enerzijds en verwijderen/overschrijven anderzijds. De overeenkomst zit hem erin dat in beide gevallen gedetailleerde informatie nodig is
+over hoe het moet worden verwerkt. Beide zijn dus een stuk minder standaard dan actualisering.
+Het onderwerp verwijderen en overschrijven wordt verder in deze aspectbeschrijving buiten beschouwing gelaten. Zie [1] voor meer info over verwijderen en overschrijven.
+
+Status: Definitief, versie: 0.28
+
+Pagina 7 van 37
+
+Aspectbeschrijving – Corrigeren
+
+3 Methode van corrigeren
+In dit hoofdstuk wordt het generieke mechanisme beschreven voor het corrigeren van gegevens in
+de BRP. Om de keuze voor deze methode inzichtelijk te maken worden ook de onderzochte alternatieven kort beschreven.
+Hoe het generieke mechanisme precies wordt toegepast op de verschillende soorten gegevens van
+de BRP staat centraal in het volgende hoofdstuk.
+
+3.1
+
+Onderzochte methoden
+
+Zoals in paragraaf 2.2 is aangegeven hebben we bij correcties te maken met (mogelijk) complexe
+inpassing van gegevens in een bestaande tijdslijn. Er zijn grofweg twee mogelijkheden waarop kan
+worden bepaald hoe de correctie precies moet worden ‘ingepast’:
+1. door in het bijhoudingsbericht exact aan te geven hoe dit moet gebeuren;
+2. door dit met impliciet gedrag automatisch af te leiden van het bijhoudingsbericht en de
+eerder geregistreerde gegevens.
+Een combinatie van bovenstaande is ook mogelijk. Hieronder wordt aan de hand van een voorbeeldcorrectie beschreven welke correctiemethoden zijn onderzocht.
+In dit voorbeeld is het adres ‘Lange Poten 29’ onjuist. Het juiste adres moet ‘Schoolstraat 13’ zijn
+en de DAG (datum aanvang geldigheid) ervan ligt ook vóór die van het onjuiste adres.
+
+3.1.1
+
+Streepjesmethode
+
+Met deze methode worden in het bijhoudingsbericht de onjuiste gegevens aangewezen en worden
+de nieuwe gegevens opgegeven met bijbehorende DAG.2 Hiervoor worden in het bijhoudingsbericht
+elementaire acties voor het laten vervallen van bestaande voorkomens en registreren van nieuwe
+voorkomens gebruikt.
+Het correctievoorbeeld zou dan met de volgende acties kunnen worden uitgevoerd:
+Actie
+
+Root3
+
+OS4
+
+VS5
+
+Correctie verval adres
+
+Pers1
+
+Adr1
+
+130
+
+Correctie registratie adres
+
+Pers1
+
+Adr1
+
+DAG
+
+T6
+
+DEG
+
+Inhoud
+
+Schoolstraat 13
+
+Bij de verwerking wordt het volgende impliciete gedrag toegepast:
+•
+
+Bij het laten vervallen van ‘Lange Poten 29’ wordt de DEG van de voorgaande bewering
+(‘Spui 2’) leeg gemaakt.
+
+•
+
+Bij het registreren van ‘Schoolstraat 13’ wordt de DEG van ‘Spui 2’ gelijk gemaakt aan de
+DAG van ‘Schoolstraat 13’.
+
+2
+
+‘Streepjes’ bij deze methode slaat op de DAG’s (‘streepjes op de tijdlijn’) waarop nieuwe gegeven ingaan.
+Verwijzing naar het rootobject waar de actie betrekking op heeft (bijv. een Persoon ID of Relatie ID)
+4 Objectsleutel van object waarop de actie werkt
+5 Voorkomensleutel van voorkomen (behorende bij object) waarop de actie werkt
+3
+
+Status: Definitief, versie: 0.28
+
+Pagina 8 van 37
+
+Aspectbeschrijving – Corrigeren
+
+3.1.2
+
+Blokkenmethode
+
+Deze methode houdt in dat in het bijhoudingsbericht de voorkomens worden aangewezen die door
+de correctie worden geraakt. Ook de nieuwe gegevens worden uiteraard doorgegeven, inclusief
+DAG’s en DEG’s.6
+Dit leidt tot de volgende acties:
+Actie
+
+Root
+
+OS
+
+VS
+
+DAG
+
+DEG
+
+Inhoud
+
+Correctie verval adres
+
+Pers1
+
+Adr1
+
+120
+
+Correctie verval adres
+
+Pers1
+
+Adr1
+
+130
+
+Correctie registratie adres
+
+Pers1
+
+Adr1
+
+T4
+
+T6
+
+Spui 2
+
+Correctie registratie adres
+
+Pers1
+
+Adr1
+
+T6
+
+Schoolstraat 13
+
+Het verschil met de streepjesmethode is dat hier geen impliciet gedrag wordt gebruikt om overlap
+tussen bestaande en nieuwe voorkomens ‘op te lossen’. Om de correctie toch goed te kunnen verwerken is dan meer informatie (in de vorm van acties) in het bijhoudingsbericht nodig.
+Een andere variant binnen de blokkenmethode die is onderzocht kent een extra actie ‘Correctie pas
+aan’ wat in feite een verkorte manier is om een voorkomen te laten vervallen en er een andere
+voor in de plaats te zetten. Dit zou het (in theorie) mogelijk maken om automatisch verantwoordingsgegevens over te nemen van het oude naar het nieuwe voorkomen en zo de traceability naar
+acties en bronnen behouden.
+Bij deze variant kan de correctie als volgt worden doorgegeven:
+Actie
+
+Root
+
+OS
+
+VS
+
+Correctie pas aan adres
+
+Pers1
+
+Adr1
+
+120
+
+Correctie verval adres
+
+Pers1
+
+Adr1
+
+130
+
+Correctie registratie adres
+
+Pers1
+
+Adr1
+
+3.1.3
+
+DAG
+
+DEG
+
+Inhoud
+
+T6
+
+T6
+
+Schoolstraat 13
+
+Reeksmethode
+
+Met de reeksmethode worden in het bijhoudingsbericht vanaf het oudste moment dat er iets in de
+materiële tijdlijn moet wijzigen alle gegevens doorgegeven die na dat moment in de plaats moeten
+komen van de huidige geregistreerde gegevens. Deze methode heeft als impliciet gedrag het laten
+vervallen van alle voorkomens vanaf het genoemde moment. Er hoeft dus niet zoals bij de blokkenmethode in het bericht te worden aangewezen welke voorkomens moeten vervallen. 7
+Actie
+
+Root
+
+OS
+
+DAG
+
+DEG
+
+Inhoud
+
+Correctie registratie adres
+
+Pers1
+
+Adr1
+
+T4
+
+T6
+
+Spui 2
+
+Correctie registratie adres
+
+Pers1
+
+Adr1
+
+T6
+
+Schoolstraat 13
+
+Vanaf de oudste DAG waarop een nieuw voorkomen wordt geregistreerd (in dit voorbeeld T4) vervallen, middels impliciet gedrag, de bestaande voorkomens.
+Een variant hierop is om bronnen van bestaande voorkomens automatisch over te nemen. In het
+bijhoudingsbericht zou dan bij het toevoegen de voorkomensleutel van het oude voorkomen vermeld moeten worden.
+
+6
+
+‘Blokken’ bij deze methode slaat op de delen van de materiële tijdlijn die door de correctie worden geraakt en waarover in
+het bijhoudingsbericht dus iets moet worden gezegd.
+7 ‘Reeks’ bij deze methode slaat op het feit dat de hele reeks beweringen (m.b.t. die groep) vanaf het genoemde moment
+tot nu (opnieuw) moet worden doorgegeven.
+
+Status: Definitief, versie: 0.28
+
+Pagina 9 van 37
+
+Aspectbeschrijving – Corrigeren
+
+Naast het feit dat bij de reeksmethode niet expliciet hoeft te worden opgegeven welke voorkomens
+moeten vervallen en bij de blokkenmethode wel, is een ander kenmerkend verschil dat bij de blokkenmethode in het bijhoudingsbericht alleen beweringen hoeven te worden opgenomen over voorkomens die door de correctie worden geraakt, terwijl bij de reeksmethode ook eventuele ongewijzigde beweringen opnieuw moeten worden doorgegeven die na het moment liggen waarop (een
+deel) van de correctie materieel ingaat.
+Ter illustratie, stel dat in het voorbeeld van paragraaf 3.1 het adresvoorkomen Lange Poten een
+DEG heeft van T10 en dat op T10 het adresvoorkomen Turfmarkt aanvangt. Stel ook dat het
+adresvoorkomen Turfmarkt geen correctie behoeft. In de reeksmethode zal deze toch opgegeven
+moeten worden, maar in de blokkenmethode is dat niet nodig.
+
+3.2
+
+Gekozen methode: blokkenmethode
+
+Van bovenstaande methoden zijn de voor- en nadelen in kaart gebracht. Daarbij zijn de volgende
+uitgangspunten gehanteerd:
+1. De werking voor de centrale voorzieningen en de koppelvlakken moet zo eenvoudig mogelijk zijn.
+2. Het is acceptabel dat de keten van handelingen (aan de hand van traceability van acties)
+wordt doorbroken, omdat deze altijd reproduceerbaar is door middel van inspectie van de
+formele historie en eventueel de bronnen.
+3. Het is acceptabel om ongewijzigde feiten opnieuw door te geven.
+Dit heeft als volgt uitgepakt. Allereerst is het zo dat alle onderzochte methoden de keten van handelingen doorbreken, maar volgens uitgangspunt 2 is dat niet zo’n probleem.
+De streepjesmethode viel al snel af, omdat het impliciete gedrag deze methode complex maakt
+voor de centrale voorzieningen. De keuze lag dan nog tussen de blokkenmethode en de reeksmethode. De argumentatie voor de blokkenmethode t.o.v. de reeksmethode is:
+•
+
+Nadere aanduiding verval (zie paragraaf 3.3.1) moet per vervallen voorkomen kunnen
+worden opgegeven. Dit is bij de reeksmethode lastiger dan bij de blokkenmethode.
+
+•
+
+Bij de blokkenmethode wordt meer verantwoording bijgehouden (via actie-attributen).
+
+•
+
+Alhoewel het volgens uitgangspunt 3 acceptabel is dat bij de reeksmethode ongewijzigde
+feiten opnieuw moeten worden doorgegeven, heeft de blokkenmethode (voor de bijhouder/BZM) als voordeel dat alleen voorkomens die daadwerkelijk geraakt worden hoeven te
+worden doorgegeven.
+
+•
+
+Er vindt geen onnodige levering aan afnemers plaats. Alleen de geraakte voorkomens worden geleverd.8
+
+De blokkenmethode heeft dus de beste kaarten. Van de twee varianten (met en zonder extra actie
+‘Correctie pas aan’) is de keuze gevallen op die zonder de extra actie, omdat dit eenvoudiger en
+toereikend is. De actie ‘Correctie pas aan’ kan namelijk worden vervangen door de combinatie van
+‘Correctie verval’ en ‘Correctie registratie’. De mogelijkheid om automatisch bronnen over te nemen ontbreekt dan weliswaar, maar dit is ook lang niet altijd wenselijk. De precieze bepaling ervan
+levert teveel extra complexiteit voor BZM en/of centrale voorzieningen op.
+Ontwerpbeslissing
+Er is gekozen voor de blokkenmethode, met elementaire acties voor het laten vervallen en registreren van voorkomens. Hierbij wordt de keten van handelingen doorbroken en worden de bronnen niet automatisch overgenomen. Bij de verwerking wordt geen impliciet gedrag gehanteerd
+
+8
+
+Dit argument is geen geldig argument meer zodra er een leveringsfilter geïmplementeerd is dat ongewijzigde gegevens
+niet langer toont.
+
+Status: Definitief, versie: 0.28
+
+Pagina 10 van 37
+
+Aspectbeschrijving – Corrigeren
+
+voor het aanpassen of laten vervallen van bestaande voorkomens van groepen op de persoonslijst.9
+In de paragrafen hierna wordt de methode verder toegelicht.
+
+3.3
+
+Correctieacties
+
+Zoals hiervoor ook is aangegeven worden bij de blokkenmethode elementaire acties gebruikt
+waarmee fijnmazig kan worden aangegeven welke bestaande voorkomens vervallen en welke
+nieuwe voorkomens worden geregistreerd. Iedere elementaire correctieactie gaat over precies één
+voorkomen.
+De namen van deze acties zijn zo gekozen dat er geen verwarring is met actualiseringsacties. De
+naam van de elementaire correctieactie is als volgt opgebouwd:
+•
+•
+•
+
+prefix 'Correctie'10, om onderscheid te maken met actualiseringsacties
+gevolgd door: 'registratie' dan wel 'verval'
+tot slot: de naam van het objecttype als het de groep Standaard betreft en anders de naam
+van de groep.
+
+Voorbeelden:
+•
+
+‘Correctie verval geslachtsaanduiding’, voor de correctieactie die een voorkomen van de
+groep Geslachtsaanduiding laat vervallen.11
+
+•
+
+‘Correctie registratie adres’, voor de correctieactie waarmee een nieuw voorkomen in de
+groep Standaard van Persoon \ Adres wordt geregistreerd.
+
+•
+
+‘Correctie registratie huwelijk’, voor de correctieactie waarmee een nieuw voorkomen van
+de groep Standaard van (sub)objecttype Huwelijk wordt geregistreerd.
+
+Naast bovengenoemde elementaire correctieacties kennen we ook een correctieactie die zich op
+een hoger niveau bevindt: de actie Verval. Deze maakt het mogelijk om in één keer een heel object (met onderliggende objecten) te laten vervallen.
+De verschillende correctieacties worden hierna verder besproken.
+3.3.1
+
+Soort actie: Correctie verval <…>
+
+Laat een bestaand voorkomen dat wordt aangewezen naar de formele historie vervallen. Optioneel
+kan een nadere aanduiding verval worden opgegeven om aan te geven dat het voorkomen ‘Onjuist’
+(O) of ‘Strijdig met de openbare orde’ (S) is. In geval van ‘S’ dient verplicht een rechtsgrond uit de
+tabel Rechtsgrond te worden opgegeven waarvoor geldt: Rechtsgrond.Leidt tot strijdigheid? = ‘J’.
+Ongeacht de nadere aanduiding verval is het bij correctieacties, net als bij actualiseringsacties,
+mogelijk om brondocumenten op te geven.
+Het te vervallen voorkomen wordt aangewezen door middel van de volgende combinatie:
+•
+
+Objectsleutel van het rootobject (dus van de persoon, het huwelijk of het geregistreerd
+partnerschap)
+
+•
+
+Objectsleutel van onderliggende object(en), als de correctie niet op een groep van het
+rootobject plaatsvindt (bijvoorbeeld correctie van iemands Nederlandse nationaliteit, van
+de eerste voornaam of van het woon/brief-adres)
+
+•
+
+Voorkomensleutel van het voorkomen in de groep van het rootobject of een onderliggend
+object
+
+9
+
+Uitzondering op 'geen impliciet gedrag' is dat ten behoeve van levering impliciet een voorkomen van de groep 'Afgeleid
+administratief' wordt geregistreerd bij personen op wiens persoonslijst de correctie effect heeft.
+10 In het berichtenmodel wordt prefix 'cor' gebruikt, maar omwille van de leesbaarheid wordt het in dit document voluit
+geschreven.
+11 In berichtenmodel: corVervalGeslachtsaanduiding.
+
+Status: Definitief, versie: 0.28
+
+Pagina 11 van 37
+
+Aspectbeschrijving – Corrigeren
+
+NB: De naam van de gegevensgroep staat niet in dit lijstje, omdat deze al in de naam van de actie
+is verwerkt.
+Ontwerpbeslissing
+Het object waarop de correctie betrekking heeft wordt aangeduid met de kunstmatige sleutel. Dus
+bijvoorbeeld een Persoon \ Voornaam wordt niet aangeduid met het volgnummer van de voornaam, maar met de objectsleutel.
+Door de kunstmatige sleutel te gebruiken kan ieder object op dezelfde (uniforme) wijze worden
+aangewezen. Het vereenvoudigt ook het controleren van het aanwijzen van voorkomens.
+Ontwerpbeslissing
+Functioneel gezien hoeft bij formeelhistorische groepen het voorkomen niet te worden aangewezen, omdat bij dat historiepatroon hooguit één niet vervallen voorkomen is. Om redenen van uniformiteit van berichten is er echter voor gekozen om, onafhankelijk van het historiepatroon van de
+groep, altijd het voorkomen aan te wijzen middels de objectsleutel.
+3.3.2
+
+Soort actie: Correctie registratie <…>
+
+Hiermee wordt een nieuw voorkomen van de groep vastgelegd. In het bijhoudingsbericht dient de
+hele groep te worden opgegeven, met in geval van een materieel historische groep ook de DAG en
+optioneel de DEG. Anders dan bij actualisering vinden er geen afleidingen plaats om het nieuwe
+voorkomen in te passen als deze in de materiële tijdlijn overlapt met bestaande voorkomens. Dat
+zou impliciet gedrag zijn waar uitdrukkelijk niet voor is gekozen (zie paragraaf 3.2).
+In de actie worden het rootobject en eventuele onderliggende object(en) door middel van objectsleutels aangewezen.
+3.3.3
+
+Soort actie: Verval <…>
+
+Deze actie werkt op het niveau van één of meerdere objecten. Dit in tegenstelling tot de elementaire correctieacties van paragraaf 3.3.1 en 3.3.2 die op individuele voorkomens werken. Met de
+actie 'Verval' is het mogelijk om in één keer alle voorkomens die bij het object (of de objecten)
+horen naar de formele historie te laten vervallen. Een voorbeeld van een toepassing is het laten
+vervallen van een huwelijk of geregistreerd partnerschap inclusief de partner-betrokkenheden en
+een eventuele gerelateerde pseudo-persoon.
+Optioneel kan een nadere aanduiding verval in de actie worden opgegeven. Deze wordt vervolgens
+bij alle vervallen voorkomens geregistreerd.
+De naam van de actie bestaat uit het woord 'Verval', gevolgd door het objecttype waar het op
+werkt. Bijvoorbeeld: 'Verval huwelijk'.
+3.3.4
+
+Voorbeeld: Correctie van DAG van actuele adres
+
+Hierna is een voorbeeld opgenomen van een correctie met elementaire correctieacties. Het actuele
+adres zou 'Schoolstraat 13' moeten zijn en de DAG moet worden verlaat. Het gevolg is dat de DEG
+van adres 'Spui 2' dan moet worden vervroegd.
+Om van elke correctieactie te illustreren wat het effect is zijn ook de actie-attributen opgenomen.12
+
+12
+
+Ai = Actie inhoud / Aag = Actie aanpassing geldigheid / Av = Actie verval
+
+Status: Definitief, versie: 0.28
+
+Pagina 12 van 37
+
+Aspectbeschrijving – Corrigeren
+
+ID
+
+Actie
+
+Root
+
+OS
+
+VS
+
+A5
+
+Correctie verval adres
+
+Pers1
+
+Adr1
+
+120
+
+A6
+
+Correctie verval adres
+
+Pers1
+
+Adr1
+
+130
+
+A7
+
+Correctie registratie adres
+
+Pers1
+
+A8
+
+Correctie registratie adres
+
+Pers1
+
+NAV
+
+DAG
+
+DEG
+
+Inhoud
+
+Adr1
+
+T4
+
+T8
+
+Spui 2
+
+Adr1
+
+T8
+
+O
+
+Schoolstraat 13
+
+Merk op dat de nadere aanduiding verval in de ene verval-actie wel is opgenomen en in de andere
+niet. De reden hiervoor is dat in dit voorbeeld Lange Poten echt onjuist was. Van Spui kan worden
+betoogd dat deze niet onjuist was. Net als vóór de correctie heeft de persoon namelijk ook na de
+correctie Spui als adres in het tijdvak T4 tot T7. Om deze reden is opgave van de nadere aanduiding verval niet verplicht bij het laten vervallen van een voorkomen.
+
+3.4
+
+Correctiehandelingen
+
+De elementaire correctieacties ‘Correctie verval’ (3.3.1) en ‘Correctie registratie’ (3.3.2) kunnen
+alleen voorkomen in correctiehandelingen, dat wil zeggen in administratieve handelingen van de
+categorie ‘Correctie’. Zoals beschreven in paragraaf 2.2 zijn correctiehandelingen zoveel mogelijk
+elementair en gegevensgericht, zodat het niet beperkt is tot specifieke bedrijfsprocessen. Voorbeelden van elementaire correctiehandelingen zijn:
+•
+
+Correctie naamgebruik: hiermee kunnen de gegevens van de groep Naamgebruik van een
+persoon worden gecorrigeerd.
+
+•
+
+Correctie verblijfsrecht: hiermee kunnen de gegevens van de groep Verblijfsrecht van een
+persoon worden gecorrigeerd.
+
+•
+
+Correctie huwelijk / Correctie geregistreerd partnerschap: hiermee kunnen de gegevens
+van de groep Standaard van een huwelijk of geregistreerd partnerschap worden gecorrigeerd. Vanwege de elementaire aard van correctiehandelingen is de scope van de handelingen 'Correctie huwelijk' en 'Correctie geregistreerd partnerschap' beperkt tot de gegevens van de relatie zelf. Gegevens van betrokken partners worden gecorrigeerd met separate handelingen.
+
+•
+
+Correctie gegevens gerelateerde:13 voor het corrigeren van de gegevens van een gerelateerde persoon op de persoonslijst van de hoofdpersoon. Hierbij worden aangewezen: de
+relatie (objectsleutel), de hoofdpersoon (objectsleutel) en de betrokkenheid (objectsleutel)
+van de te corrigeren gerelateerde. De gerelateerde kan zowel een pseudo-persoon als een
+ingeschrevene zijn.
+
+De niet-elementaire Verval-actie (3.3.3) komt voor in correctiehandelingen die de registratie van
+een heel object 'ongedaan maken'. Een voorbeeld daarvan is:
+•
+
+3.5
+
+Ongedaanmaking huwelijk / Ongedaanmaking geregistreerd partnerschap: voor de ongedaanmaking van de registratie van een huwelijk of geregistreerd partnerschap, bijvoorbeeld na doorhaling van de akte of onjuiste opname van de relatie.
+
+Controles
+
+Voor het controleren van correcties geldt het uitgangspunt dat dezelfde regels worden gebruikt als
+voor actualisering van de gegevens. Bijvoorbeeld: zowel bij het registreren van de groep Geboorte
+als bij het corrigeren ervan moet worden voldaan aan de locatieregels.
+
+13
+
+Deze naam wordt in dit document gebruikt als verzamelnaam voor de volgende administratieve handelingen: Correctie
+partnergegevens huwelijk, Correctie partnergegevens geregistreerd partnerschap, Correctie kindgegevens, Correctie oudergegevens.
+
+Status: Definitief, versie: 0.28
+
+Pagina 13 van 37
+
+Aspectbeschrijving – Corrigeren
+
+Echter, wanneer de controle meerdere voorkomens beslaat, volstaat het niet om (zoals bij actualisering vaak gebeurt) de controles na de verwerking van een actie uit te voeren. De correctieacties
+‘Correctie registratie’ en ‘Correctie verval’ werken namelijk op individuele voorkomens. Pas na verwerking van de gehele correctiehandeling is sprake van een consistente situatie binnen het object.14
+Voorbeeld: Bij de verwerking van een reguliere verhuizing wordt het beëindigen van het oude
+adres afgeleid, zodat het oude en het nieuwe adres materieel gezien precies op elkaar aansluiten.
+Bij actualisering wordt door middel van impliciet gedrag de integriteit van de materiële tijdlijn gewaarborgd. Om ook bij het corrigeren van (bijvoorbeeld) adressen de integriteit van de materiële
+tijdlijn te waarborgen, zijn extra controles nodig.
+Een ander voorbeeld is dat bij de actualiseringshandeling ‘Nietigverklaring huwelijk in Nederland’
+de waarde van datum einde van het huwelijk wordt afgeleid van de datum aanvang (vanwege terugwerkende kracht van de nietigverklaring). Wanneer middels de correctiehandeling ‘Correctie
+huwelijk’ een reguliere ontbinding zou worden gecorrigeerd in een nietigverklaring, dan wordt in
+dat geval niet de datum einde automatisch afgeleid. Er is dan ook een controle nodig om te waarborgen dat een nietig verklaard huwelijk of geregistreerde partnerschap, ook als de nietigverklaring
+middels een correctie is geregistreerd, een datum einde heeft die gelijk is aan de datum aanvang.
+Zoals uit deze voorbeelden blijkt zijn voor correcties in bepaalde gevallen aanvullende controles
+nodig om te compenseren voor het feit dat correctiehandelingen geen impliciet gedrag hebben.
+Ontwerpbeslissing
+Controles worden alleen uitgevoerd op de gecorrigeerde gegevensgroep(en). Hierbij wordt zo veel
+mogelijk gebruik gemaakt van de bestaande controles voor actualisering. Bij de verwerking van
+een correctie vinden geen samenhangcontroles plaats met andere, niet gecorrigeerde, gegevensgroepen.
+Het toepassen van controles bij correcties is dus puur bedoeld om de integriteit van de groep te
+handhaven en niet (zoals bij actualiseren) ter ondersteuning van het bedrijfsproces. Typische bedrijfsregels, zoals bijvoorbeeld controles op huwelijksbeletselen (leeftijd, bigamie, curatele e.d.)
+zullen bij correcties dan ook niet door de BRP worden uitgevoerd.
+Ontwerpbeslissing
+De BCM (Bestands Controle Module) vormt het vangnet voor de controle op inconsistenties tussen
+gegevensgroepen, zoals deze mogelijk als gevolg van correcties ontstaan. Zonodig kan het aantal
+controles in de BCM hierop worden uitgebreid.
+Specifiek ten aanzien van brondocumentcontroles zijn de volgende ontwerpbeslissingen genomen:
+Ontwerpbeslissing
+De controle of een brondocument geldig is voor de betreffende administratieve handeling/actie
+wordt bij een correctiehandeling niet uitgevoerd.
+De reden hiervoor is dat de verzameling toegestane brondocumenten bij correctie meer diffuus is
+dan bij actualisering. Bovendien betreft het een samenhangcontrole tussen verschillende gegevens,
+die conform een eerdere ontwerpbeslissing van deze paragraaf niet wordt uitgevoerd bij correcties.
+Ontwerpbeslissing
+Uitgangspunt is dat elke niet expliciet hiervan uitgezonderde correctieactie verantwoord zou moeten worden door een bron. In uitzonderlijke gevallen is dit niet mogelijk. In dat geval is een ontleningstoelichting bij de administratieve handeling verplicht.
+NB: Tijdens de duale periode kan het daardoor voorkomen dat in de BRP geen brondocument is
+vastgelegd, terwijl de conversie naar GBA-formaat dat wel vereist. In die gevallen worden bij de
+conversie naar GBA-formaat documentgegevens opgenomen met standaardwaarden en met als
+partij de gemeente die het bijhoudingsverzoek heeft ingediend.
+
+14
+
+Vanwege het elementaire karakter van correctiehandelingen geldt de consistentie niet noodzakelijkerwijs over de hele
+persoonslijst.
+
+Status: Definitief, versie: 0.28
+
+Pagina 14 van 37
+
+Aspectbeschrijving – Corrigeren
+
+Ontwerpbeslissing
+Bij corrigeren wordt daar waar in een regel de peildatum niet expliciet benoemd is de systeemdatum als peildatum genomen.
+De reden hiervoor is dat het te complex is om de feitdatum als peildatum bij correcties te hanteren. Deze kan namelijk per groep verschillen. Bovendien zullen in de meeste gevallen correcties
+kort na de actualisering plaatsvinden, waardoor de systeemdatum een acceptabele peildatum is.
+Daar waar bij uitzondering hier toch van afgeweken moet worden kan de regel gedeblokkeerd worden.
+
+Status: Definitief, versie: 0.28
+
+Pagina 15 van 37
+
+Aspectbeschrijving – Corrigeren
+
+4 Correctiepatronen
+In dit hoofdstuk wordt aan de hand van ‘correctiepatronen’ beschreven hoe de correctiemethode
+kan worden toegepast op de gegevens in de BRP. Hierbij worden gelijksoortige situaties in hetzelfde correctiepatroon gevat. Bepalend voor de correctiepatronen zijn het soort correctie en het historiepatroon van de gegevens.
+
+4.1
+
+Corrigeren van formeel historische groepen
+
+Het corrigeren van een gegeven in een formeel historische groep vindt plaats door het te corrigeren voorkomen met een actie ‘Correctie verval’ te laten vervallen en een nieuw actueel voorkomen
+met de actie ‘Correctie registratie’ te registreren.
+Bij de registratie van het nieuwe voorkomen dienen altijd alle attributen van de groep in het bijhoudingsbericht te worden opgegeven die een waarde moeten krijgen. De overige attributen van
+de groep zijn dan leeg. Correctie verschilt hierin van actualisering bijvoorbeeld bij de groep Standaard van Huwelijk en Geregistreerd partnerschap. Zo worden in de actualiseringshandeling 'Ontbinding huwelijk in Nederland' alleen de beëindigingsgegevens opgegeven en worden de aanvangsgegevens automatisch overgenomen van de eerdere registratie. Bij correctie van de groep zouden
+bij het opgeven van een deel van de attributen, de overige attributen leeg zijn.
+4.1.1
+
+Voorbeeld: Onjuiste locatiegegevens huwelijk
+
+Ter illustratie wordt in het voorbeeld hieronder weergegeven hoe de aanvangsgemeente van een
+huwelijk kan worden gecorrigeerd van Amsterdam naar Utrecht. Dit gebeurt met de administratieve handeling ‘Correctie huwelijk’.
+
+ID
+
+Actie
+
+Root
+
+VS
+
+NAV
+
+A2
+
+Correctie verval huwelijk
+
+Rel1
+
+100
+
+O
+
+A3
+
+Correctie registratie huwelijk
+
+Rel1
+
+Inhoud
+
+10-5-2000, Utrecht, Nederland
+
+Op deze wijze is het ook mogelijk om een ten onrechte beëindigd huwelijk of geregistreerd partnerschap te laten herleven (bijvoorbeeld na vernietiging van een ontbinding). Bij de registratie van
+het nieuwe voorkomen worden dan alleen de aanvangsgegevens opgegeven.
+
+4.2
+
+Corrigeren van afgeleide gegevens
+
+Het corrigeren van een gegeven kan er toe leiden dat andere gegevens die ermee samenhangen
+ook moeten worden gecorrigeerd. Neem bijvoorbeeld de datum aanvang van een huwelijk. Als bij
+het huwelijk een pseudo-persoon is betrokken, dan zijn bij de creatie van de pseudo-persoon de
+DAG’s van de groepen van die persoon afgeleid van de datum aanvang van het huwelijk. En als
+bijvoorbeeld door het aangaan van een huwelijk de geslachtsnaam van een persoon wijzigt, dan
+zijn de DAG van de geslachtsnaamcomponent en van de samengestelde naam eveneens van de
+datum aanvang van het huwelijk afgeleid.
+
+Status: Definitief, versie: 0.28
+
+Pagina 16 van 37
+
+Aspectbeschrijving – Corrigeren
+
+Ontwerpbeslissing
+Wanneer een gegeven wordt gecorrigeerd waarvan (bij opname of actualisering) andere gegevens
+samenhangen, dan worden de afgeleide gegevens niet automatisch meegecorrigeerd. Dit zou de
+verwerking van correcties extra complex maken. Bovendien willen we dit soort impliciete gedrag bij
+correcties zoveel mogelijk voorkomen. Tenslotte is het ook niet altijd mogelijk om automatisch af
+te leiden wat moet worden meegecorrigeerd. Zo mag bijvoorbeeld bij de correctie van de datum
+aanvang van een relatie niet automatisch worden aangenomen dat het naamgebruik dat bij aanvang van het huwelijk wijzigde na correctie ook op de nieuwe datum aanvang van de relatie is
+ingegaan.
+Deze ontwerpbeslissing leidt tot een aandachtspunt voor het leveringskoppelvlak. Het kan er namelijk toe leiden dat de DAG van de groepen van een pseudo-persoon kunnen afwijken van de
+datum aanvang van de relatie.
+
+4.3
+
+Corrigeren van gegevens van een gerelateerde
+
+Het corrigeren van de gegevens van een pseudo-persoon gebeurt met de administratieve handeling
+‘Correctie gegevens gerelateerde’. De handeling bevat de acties voor het laten vervallen van voorkomens en het registreren van nieuwe voorkomens.
+Ten aanzien van ingeschreven gerelateerden geldt het volgende:
+Ontwerpbeslissing
+Correcties van de gegevens van een ingeschrevene (uitgezonderd relaties waarin deze is betrokken) mogen alleen worden ingediend door de bijhoudingspartij van de persoon en de registergemeente van de eventuele Nederlandse akte waar de correctie aan wordt ontleend.
+Andere partijen dan de bijhoudingspartij van een ingeschrevene kunnen desgewenst een terugmelding doen aan de bijhoudingspartij, zodat deze de correctie kan doorvoeren. Wanneer deze besluit
+de correctie niet door te voeren, kunnen andere partijen het gegeven asymmetrisch corrigeren op
+de persoonslijst van een eigen ingezetene. Hiervoor kan de handeling ‘Correctie gegevens gerelateerde’ worden gebruikt. Dit leidt in dat geval automatisch tot het ontrelateren van de relatie.
+Kortom, de correctiehandeling 'Correctie gegevens gerelateerde' kan worden gebruikt voor correctie van de gegevens van pseudo-personen bij de ingeschreven hoofdpersoon en voor asymmetrische correctie van ingeschreven gerelateerden.
+4.3.1
+
+Corrigeren van samengestelde naam van gerelateerde
+
+Nu doet zich het volgende vraagstuk voor bij het corrigeren van de samengestelde naam van een
+gerelateerde. Normaliter worden naamsgegevens van een ingeschrevene gecorrigeerd door de
+betreffende groep te corrigeren, zoals de geslachtsnaamcomponent of de voornamen.
+Op persoonslijsten worden van gerelateerden wel de groep samengestelde naam opgenomen, maar
+niet (als aparte groepen) de geslachtsnaamcomponent en voornamen.
+Bovendien, wanneer de handeling ‘Correctie gegevens gerelateerde’ wordt uitgevoerd voor een
+gerelateerde ingeschrevene (dus niet voor een pseudo-persoon), dan leidt dat automatisch tot het
+ontrelateren van de relatie. De correctie wordt dan dus niet toegepast op de ingeschrevene, maar
+op de pseudo-persoon die door het ontrelateren is ontstaan. Dit betekent dat de correctie van de
+naamsgegevens moet worden verwerkt in de samengestelde naam van de pseudo-persoon. Echter,
+de samengestelde naam bevat meer gegevens dan wat in de correctiehandeling is opgegeven (geslachtsnaamcomponent of voornamen). Dat zou betekenen dat er bij de verwerking van de correctie gegevens moeten worden bijgelezen. Dit heeft geleid tot het volgende besluit.
+Ontwerpbeslissing
+Met de administratieve handeling ‘Correctie gegevens gerelateerde’ kan zowel voor gerelateerde
+pseudo-personen als voor gerelateerde ingeschrevenen de samengestelde naam worden gecorrigeerd door deze in het bijhoudingsbericht op te geven.
+
+Status: Definitief, versie: 0.28
+
+Pagina 17 van 37
+
+Aspectbeschrijving – Corrigeren
+
+De reden waarom dit mag is dat de correctie sowieso op een pseudo-persoon wordt doorgevoerd.
+Als het nog geen pseudo-persoon was, dan wordt het dit alsnog doordat deze handeling het ontrelateren van de relatie triggert als de gerelateerde een ingeschrevene is.
+Deze ontwerpbeslissing sluit aan op het begrip van wat een persoonslijst is. Het gaat namelijk om
+aanpassing van de gegevens van een gerelateerde op de persoonslijst van de hoofdpersoon.
+
+4.4
+
+Corrigeren van materieel historische groepen
+
+Het corrigeren van materieel historische groepen werkt analoog aan het corrigeren van formeel
+historische groepen, met het verschil dat bij het registreren van een nieuw voorkomen de DAG (en
+indien van toepassing de DEG) moet worden opgegeven.
+4.4.1
+
+Voorbeeld: Onjuiste geslachtsaanduiding
+
+Hieronder volgt een voorbeeld van een correctie van de groep Geslachtsaanduiding. Het betreft een
+materieel historische groep van de persoon (rootobject).
+
+ID
+
+Actie
+
+Root
+
+VS
+
+NAV
+
+A3
+
+Correctie verval geslachtsaanduiding
+
+Pers1
+
+110
+
+O
+
+A4
+
+Correctie registratie geslachtsaanduiding
+
+Pers1
+
+4.4.2
+
+DAG
+
+DEG
+
+T2
+
+Inhoud
+
+Vrouw
+
+Voorbeeld: Onjuiste voornaam
+
+Hieronder volgt een voorbeeld van een correctie van de groep Voornaam. Het betreft een materieel
+historische groep met als rootobject de persoon en een onderliggend object van het type Persoon \
+Voornaam.
+
+ID
+
+Actie
+
+Root
+
+OS
+
+VS
+
+NAV
+
+A2
+
+Correctie verval voornaam
+
+Pers1
+
+Vn1
+
+100
+
+O
+
+A3
+
+Correctie registratie voornaam
+
+Pers1
+
+Vn1
+
+DAG
+
+T0
+
+DEG
+
+Inhoud
+
+Pieter
+
+De eerste voornaam van de persoon is hier gecorrigeerd van Piet naar Pieter.
+
+Status: Definitief, versie: 0.28
+
+Pagina 18 van 37
+
+Aspectbeschrijving – Corrigeren
+
+NB: De correctie van een voorkomen van het ene object heeft geen effect op andere objecten. Dus
+wanneer iemand bijvoorbeeld drie voornamen heeft en de middelste komt te vervallen, dan blijven
+de eerste en derde voornaam ongewijzigd, inclusief de volgnummers.
+4.4.3
+
+Ten onrechte opgenomen voorkomen
+
+Wanneer een voorkomen van een groep ten onrechte is opgenomen, dan kan dat met dezelfde
+correctiehandeling worden hersteld als het corrigeren van onjuiste gegevens van de groep. Het
+verschil is dat bij correctie van een ten onrechte opgenomen voorkomen er meer voorkomens zullen vervallen dan er worden geregistreerd.
+Hieronder is een voorbeeld opgenomen van de correctie van een ten onrechte opgenomen geslachtsaanduiding. Deze persoon blijkt nooit vrouw te zijn geweest.
+
+ID
+
+Actie
+
+Root
+
+VS
+
+NAV
+
+A3
+
+Correctie verval geslachtsaanduiding
+
+Pers1
+
+100
+
+O
+
+A4
+
+Correctie verval geslachtsaanduiding
+
+Pers1
+
+110
+
+A5
+
+Correctie registratie geslachtsaanduiding
+
+Pers1
+
+DAG
+
+T0
+
+DEG
+
+Inhoud
+
+Man
+
+Een voorbeeld waarin meerdere correctiehandelingen nodig zijn is het herstellen van een ten onrechte opgenomen overlijden. Met de handeling 'Correctie overlijden' zal dan eerst het overlijden
+worden teruggedraaid door het actuele voorkomen van de groep Overlijden te laten vervallen. Vervolgens wordt het huwelijk of geregistreerd partnerschap met de handeling 'Correctie huwelijk' of
+'Correctie geregistreerd partnerschap' gecorrigeerd, zodat het herleeft.
+4.4.4
+
+Ontbrekend voorkomen
+
+Wanneer een voorkomen ten onrechte niet is opgenomen (wat dus wil zeggen dat het ontbreekt),
+dan is er in principe geen sprake van onjuiste of strijdige gegevens en kan het middels normale
+actualisering(en) worden hersteld.15 Dat geldt bijvoorbeeld voor het alsnog opnemen van een inmiddels beëindigd huwelijk of geregistreerd partnerschap dat geheel vóór het actuele huwelijk of
+geregistreerd partnerschap ligt. Een ontbrekend Nederlands huwelijk wordt dan in twee stappen
+geregistreerd, namelijk met de handeling 'Voltrekking huwelijk in Nederland',16 gevolgd door de
+handeling 'Ontbinding huwelijk in Nederland'.17
+Het ligt anders wanneer het voorkomen dat alsnog moet worden geregistreerd op de materiële
+tijdlijn zodanig overlapt met bestaande voorkomens dat het niet met een actualiseringshandeling
+kan worden geregistreerd. In dat geval moet het ontbrekende voorkomen wél met een correctiehandeling worden geregistreerd.
+15
+
+Volgens de Wet BRP heeft het aantekenen van de onjuistheid of strijdigheid van gegevens alleen betrekking op opgenomen gegevens.
+16 Hierbij zal de bijhouder wel de regel voor controle op bigamie moeten deblokkeren.
+17 Herstel van deze onjuiste situatie (namelijk het alsnog opnemen van een ontbrekende relatie) in twee stappen sluit aan
+bij de ontwerpbeslissing in paragraaf 2.2 om geen samengestelde correctiehandelingen te ontwerpen. Het sluit tevens aan
+bij het besluit van de gedelegeerd opdrachtgever (dat verder niet in deze aspectbeschrijving is opgenomen, omdat het geen
+correcties betreft) om de handelingen voor eerste inschrijving en voor hervestiging elementair te houden. Er wordt dan een
+minimale persoonslijst aangelegd, waarna middels de bestaande actualiseringshandelingen gegevens worden toegevoegd.
+
+Status: Definitief, versie: 0.28
+
+Pagina 19 van 37
+
+Aspectbeschrijving – Corrigeren
+
+Hieronder volgt een voorbeeld van de registratie van een ontbrekende geslachtsaanduiding die
+alleen met een correctie kan worden hersteld.
+
+ID
+
+Actie
+
+Root
+
+VS
+
+NAV
+
+A2
+
+Correctie verval geslachtsaanduiding
+
+Pers1
+
+100
+
+O
+
+A3
+
+Correctie registratie geslachtsaanduiding
+
+A4
+
+Correctie registratie geslachtsaanduiding
+
+4.4.5
+
+DAG
+
+DEG
+
+Inhoud
+
+Pers1
+
+T0
+
+T2
+
+Vrouw
+
+Pers1
+
+T2
+
+Man
+
+Corrigeren van identificatienummers
+
+Ondanks dat de groep Identificatienummers een materieel historische groep is, zijn deze niet corrigeerbaar, vanwege het volgende besluit:
+Ontwerpbeslissing
+De groep Identificatienummers kan van ingeschreven personen niet worden gecorrigeerd.
+De reden hiervoor is dat een eenmaal geleverd BSN of A-nummer niet met terugwerkende kracht
+mag komen te vervallen. Dat zou te grote consequenties hebben voor afnemers en de betrokken
+burger.
+Als iemand om welke reden dan ook een ander BSN of A-nummer moet krijgen, dan dient het
+nieuwe nummer een DAG te krijgen van het moment van toekenning van het nieuwe nummer (dus
+zonder terugwerkende kracht). Het oude nummer krijgt per zelfde datum een DEG. Er is dus altijd
+sprake van een actualisering en geen correctie.
+Bij de meeste materieelhistorische groepen (incl. Identificatienummers) is het niet toegestaan dat
+de DEG gelijk is aan de DAG. Dit heeft tot gevolg dat bij ontdekking van een fout in een identificatienummer op dezelfde dag dat het nummer is toegekend, het pas de volgende dag mogelijk om
+deze te herstellen.
+Uitzondering op het niet kunnen corrigeren van identificatienummers is het volgende:
+Ontwerpbeslissing
+De groep Identificatienummers kan van pseudo-personen wel worden gecorrigeerd.
+De reden hiervoor is dat het mogelijk moet zijn om na correctie van de datum aanvang van een
+relatie, de DAG van materieelhistorische groepen van betrokken pseudo-personen te kunnen ‘recht
+trekken’. Dus ook van de groep Identificatienummers. Het is daarbij niet voldoende om alleen de
+DAG te kunnen corrigeren. Er zou namelijk een gat in de tijdlijn kunnen ontstaan waarin de pseudo-persoon een ander identificatienummer had. Deze moet dus ook alsnog geregistreerd kunnen
+worden. Ook moet een foutieve ingave hersteld kunnen worden om bijvoorbeeld het ‘automatisch
+relateren’ mogelijk te maken.
+4.4.6
+
+Opname brondocumenten bij corrigeren van (impliciete) materieel historische
+groepen
+
+Voor alle groepen die een materiële geldigheidsperiode kennen geldt bij correcties een aandachtspunt ten aanzien van brondocumenten. Dat geldt niet alleen voor de materieelhistorische groepen,
+maar ook voor de formeelhistorische groepen met een materieel aspect. Bijvoorbeeld de groep
+Standaard van huwelijken en geregistreerde partnerschappen, omdat door de attributen ‘datum
+
+Status: Definitief, versie: 0.28
+
+Pagina 20 van 37
+
+Aspectbeschrijving – Corrigeren
+
+aanvang’ en ‘datum einde’ deze groep zich gedraagt als een materieelhistorische groep. Met andere woorden, de groep Standaard van Relatie heeft impliciet materiële historie. Dit geldt bijvoorbeeld ook voor de groep Standaard van Persoon \ Reisdocument en de gegevensgroepen Verblijfsrecht, Uitgesloten kiesrecht, Deelname EU Verkiezingen van Persoon.
+Bij het corrigeren van dergelijke groepen moet rekening worden gehouden met het volgende. Als
+bijvoorbeeld de correctie van de aanvang van een huwelijk of geregistreerd partnerschap plaatsvindt nadat deze al was beëindigd, dan is na de correctie het brondocument voor de beëindiging
+alleen nog aan een onjuist (of strijdig) voorkomen gekoppeld. Dit kan worden voorkomen door in
+dit voorbeeld bij de correctie van de aanvangsgegevens het brondocument dat de beëindiging verantwoordt nogmaals op te nemen.
+Het probleem zou zich ook kunnen voordoen bij formeelhistorische groepen, indien de gegevens bij
+correctie aan een andere bron worden ontleend dan waarmee ze oorspronkelijk waren opgenomen.
+In principe wordt bij correcties echter dezelfde bron opgenomen als bij actualisering.
+
+4.5
+
+Groepen zonder historie
+
+Als er fouten hersteld moeten worden in groepen zonder historie, dan kan dit niet met de correctieactie ‘Correctie verval’, omdat er geen verval naar de formele historie mogelijk is. Dit moet
+daarom op een andere wijze worden hersteld.
+Dit geldt voor de groep Identiteit van Relatie, waarin het attribuut Soort zit. Wanneer abusievelijk
+een geregistreerd partnerschap is opgenomen als een huwelijk, dan kan het voorkomen van de
+groep Identiteit niet gecorrigeerd worden. De fout kan alleen worden hersteld door de registratie
+van het huwelijk ongedaan te maken (paragraaf 4.6) en de relatie vervolgens opnieuw te registreren als een geregistreerd partnerschap.
+Het geldt ook voor de groep Identiteit van Betrokkenheid, waarin het attribuut Rol zit. Wanneer de
+rol van een betrokkene niet juist is vastgelegd kan dit alleen worden hersteld door de hele betrokkenheid-object te laten vervallen en een nieuwe op te nemen. Dit geldt alleen voor familierechtelijke betrekkingen, aangezien dit bij huwelijken en geregistreerde partnerschappen niet is toegestaan
+(paragraaf 4.7).
+Tot slot geldt ook voor de groepen van Actie \ Bron, waarmee de bronnenverantwoording wordt
+vastgelegd, dat fouten hierin op een andere manier moeten worden hersteld. Zie daarvoor paragraaf 4.8.
+
+4.6
+
+Laten vervallen van een volledige objectstructuur
+
+Voor het corrigeren van onjuiste of strijdige gegevens volstaat het niet altijd om een of meerdere
+voorkomens van een specifieke groep te laten vervallen. Wanneer bijvoorbeeld een huwelijk of
+geregistreerd partnerschap in zijn geheel ten onrechte is opgenomen of onjuist is (dan wel strijdig), dan dient er meer te vervallen dan alleen de groep Standaard van de relatie. Ook de partnerbetrokkenheden en de groepen van een eventuele betrokken pseudo-persoon dienen te vervallen.
+Het huwelijk of geregistreerd partnerschap kan met de handeling ‘Ongedaanmaking huwelijk' of
+'Ongedaanmaking geregistreerd partnerschap’ (die de Verval-actie van paragraaf 3.3.3 bevat) in
+zijn geheel (incl. de ondergeschikte objecten) worden laten vervallen.
+Hierbij geldt de volgende beperking:
+Ontwerpbeslissing
+Eventuele nevenacties voor wijziging van het naamgebruik of de geslachtsnaam, die onderdeel
+waren van de handeling waarmee de relatie oorspronkelijk was geregistreerd, worden niet automatisch ongedaan gemaakt. Deze dienen zonodig separaat te worden gecorrigeerd.
+De reden hiervoor is dat dit te complexe vragen oproept. Het is bijvoorbeeld niet eenduidig te bepalen wat het naamgebruik en/of de geslachtsnaam moet worden indien deze na registratie van de
+nevenactie nogmaals is gewijzigd.
+
+Status: Definitief, versie: 0.28
+
+Pagina 21 van 37
+
+Aspectbeschrijving – Corrigeren
+
+Een ander voorbeeld waarin sprake is van het ongedaan maken van de registratie van een relatie is
+wanneer een geregistreerd partnerschap ten onrechte is omgezet in een huwelijk. Deze situatie
+kan worden hersteld door de registratie van het (nieuwe) huwelijk ongedaan te maken en het (oude) geregistreerde partnerschap te laten herleven. Dit laatste kan door met een correctiehandeling
+de beëindigingsgegevens ‘weg te poetsen’ (zie paragraaf 4.1.1).
+
+4.7
+
+Corrigeren van betrokkenheden
+
+Ontwerpbeslissing
+Partner-betrokkenheden zijn niet corrigeerbaar, omdat in functionele zin het huwelijk of geregistreerd partnerschap mede wordt gedefinieerd door de partners die erin zijn betrokken. Het is om
+die reden onwenselijk om een partner te kunnen laten vervallen en een andere bij de relatie op te
+nemen. We vinden dat er dan sprake is van een ander huwelijk of geregistreerd partnerschap.
+Dit betekent dat als de verkeerde persoon als partner in een huwelijk of geregistreerd partnerschap
+is opgenomen, dit alleen kan worden hersteld door de registratie van de relatie ongedaan te maken
+(paragraaf 4.6) en de relatie opnieuw te registreren met de juiste betrokkenen.
+Voor familierechtelijke betrekkingen moet er wel de mogelijkheid zijn om door middel van specifieke correctiehandelingen ouders te laten vervallen en toe te voegen, omdat de familierechtelijke
+betrekking onlosmakelijk met het kind is verbonden en altijd moet blijven bestaan.
+
+4.8
+
+Corrigeren van bronnen
+
+Bij de bronnenverantwoording van opgenomen persoonsgegevens kan ook sprake zijn van onjuiste
+gegevens. Hierbij valt te denken aan:
+•
+•
+•
+•
+•
+
+Een fout in een aktenummer
+Een fout in een document- of rechtsgrondomschrijving
+De verkeerde partij is bij het brondocument opgenomen
+De documentsoort of rechtsgrondsoort klopt niet
+Een bron is ten onrechte opgenomen
+
+Daarbij moet onderscheid gemaakt worden naar de volgende situaties:
+1. De fout in de bronnen heeft geleid tot opname van onjuiste persoonsgegevens.
+2. Het heeft niet geleid tot opname van onjuiste persoonsgegevens.
+Situatie 1 dient hersteld te worden op dezelfde wijze als het corrigeren van persoonsgegevens, met
+daarbij de opname van de juiste bronnen.
+Situatie 2 ligt wat complexer, omdat meerdere oplossingsrichtingen denkbaar zijn. Hierna wordt
+beschreven welke oplossingsrichtingen zijn bestudeerd en voor welke uiteindelijk is gekozen.
+Oplossingsrichting 1: Alles opnieuw doorgeven
+Binnen deze oplossingsrichting worden de persoonsgegevens opnieuw doorgegeven, met daarbij de
+juiste bronnen. Bij deze oplossingsrichting is er geen onderscheid tussen het wel of niet juist zijn
+van persoonsgegevens. Om een fout in de bronnenverantwoording te herstellen worden ook altijd
+de ontleende gegevens opnieuw opgenomen.
+Het voordeel hiervan is dat de correctie- en actualiseringshandelingen volstaan die toch al nodig
+zijn voor correctie en/of actualisering van de inhoudelijke groepen.
+Ter illustratie, neem bijvoorbeeld een huwelijk dat is vastgelegd op basis van een verklaring onder
+ede, zoals in onderstaande figuur. De stippellijnen staan voor ‘actie inhoud’.
+
+Status: Definitief, versie: 0.28
+
+Pagina 22 van 37
+
+Aspectbeschrijving – Corrigeren
+
+Als we bij dit huwelijk de bron willen vervangen door een sterkere, in dit geval een buitenlandse
+akte, dan kan dat met een combinatie van de handelingen ‘Correctie huwelijk’ en ‘Correctie gegevens gerelateerde’. Het resultaat is zoals hieronder weergegeven. Vervallen groepen zijn hierbij
+doorgehaald en de stippellijnen geven opnieuw de ‘actie inhoud’ weer.
+
+Probleem hierbij is dat betrokkenheden niet corrigeerbaar zijn (paragraaf 4.7) en dat in dit voorbeeld de partner-betrokkenheden dus verantwoord blijven door de verklaring onder ede.
+Je kunt je wel afvragen hoe zinvol bronnenverantwoording op betrokkenheden sowieso is. De verantwoording zit namelijk ook nog op andere plaatsen, zoals in dit voorbeeld op de relatie. Als betrokkenheden geen bronnen zouden hebben, dan zou dit probleem zich ook niet voordoen. Echter,
+partner-betrokkenheden worden door dezelfde actie aangemaakt als het bijbehorende huwelijk of
+geregistreerd partnerschap en worden dus per definitie door dezelfde bronnen verantwoord.
+Om dit probleem te omzeilen is overwogen om de betrokkenheden aan te maken binnen een aparte systeemactie die geen bronnen heeft. Deze optie is afgevallen omdat dan wordt afgeweken van
+
+Status: Definitief, versie: 0.28
+
+Pagina 23 van 37
+
+Aspectbeschrijving – Corrigeren
+
+het vaste stramien van het aanmaken van objecten en groepen. Dit zou ook de nodige impact op
+conversie geven.
+Een gunstigere optie is om verantwoording (incl. bronnen) van de groep Identiteit van Betrokkenheid niet te leveren door levering van de actie-attributen van die groep te onderdrukken. Dit kan
+geconfigureerd worden binnen leveringsautorisatie.
+Hetzelfde probleem doet zich voor bij familierechtelijke betrekkingen. De groep Identiteit heeft
+weliswaar geen historie en daardoor ook geen actie-attributen en dus geen bronnenverantwoording. Maar de (lege) groep Standaard heeft wel historie en dus ook bronnenverantwoording. Familierechtelijke betrekkingen zijn echter niet separaat corrigeerbaar. Ook van de groep Standaard
+van familierechtelijke betrekkingen zouden dus de actie-attributen moeten worden onderdrukt bij
+levering.
+Een andere optie die binnen oplossingsrichting 1 is overwogen, is om het historiepatroon van de
+groep Identiteit van Betrokkenheid te wijzigen van formele bestaansperiode (zie [2]) naar formele
+historie. Wanneer dan een relatie wordt gecorrigeerd, zou als impliciet gedrag een nieuw voorkomen van elke betrokkenheid van die relatie kunnen worden aangemaakt. Omdat dit laatste niet
+altijd moet gebeuren en het niet goed te bepalen is wanneer het wel en niet gewenst is, is deze
+optie afgevallen.
+Oplossingsrichting 2: Corrigeren van Actie \ Bron
+Een alternatief voor oplossingsrichting 1 (‘Alles opnieuw doorgeven’) is om specifieke correctie van
+Actie \ Bron-objecten mogelijk te maken. Dit vereist wel formele historie op Actie \ Bron en aanvullende specifieke correctiehandelingen om onjuiste voorkomens van Actie \ Bron te laten vervallen
+en nieuwe voorkomens te registreren.
+In onderstaand voorbeeld wordt weergegeven hoe met een handeling ‘Correctie verantwoording’ de
+bron van een huwelijk kan worden gecorrigeerd van Verklaring onder ede naar Buitenlandse akte.
+
+Het grootste voordeel van deze oplossingsrichting is dat het corrigeren van bronnen tot minder en
+duidelijkere mutatieberichten aan afnemers leidt.
+
+Status: Definitief, versie: 0.28
+
+Pagina 24 van 37
+
+Aspectbeschrijving – Corrigeren
+
+De nadelen zijn echter groter. Een belangrijk nadeel is dat de persoonsgegevens gebonden blijven
+aan de bestaande acties. Wanneer een gecorrigeerd of sterker brondocument meer of minder gegevens verantwoord dan de oude bron, dan blijft het toch aan dezelfde persoonsgegevens gekoppeld. In gevallen waarin dat niet wenselijk is moet alsnog worden gegrepen naar oplossingsrichting
+1. Met andere woorden, oplossingsrichting 2 is niet voor alle gevallen voldoende fijnmazig.
+Besluit
+Ontwerpbeslissing
+Voor het corrigeren van bronnen dienen de persoonsgegevens die aan de onjuiste bron waren ontleend opnieuw te worden opgenomen, met de beschikbare actualisering- en correctiehandelingen
+en met de juiste bronnen.
+Om levering van eventuele verouderde (onjuiste) bronnen te voorkomen worden de actieattributen van de groep Identiteit van Betrokkenheid en van de groep Standaard van familierechtelijke betrekkingen niet geleverd.
+
+4.9
+
+IST-gegevens
+
+Bij de conversie van persoonslijsten van GBA naar BRP worden uitsluitend de actuele gegevens van
+de relatie en gerelateerde persoon geconverteerd naar BRP-formaat. De historische gegevens uit
+de GBA gaan echter niet verloren. Ten behoeve van levering en terugconversie worden alle gegevens van de GBA-persoonslijsten – dus zowel de actuele als de historische gegevens - die betrekking hebben op relaties en de bijbehorende gerelateerde in de BRP vastgelegd in een aparte structuur. Deze structuur wordt InterStelselTabellen (IST) genoemd en ziet er als volgt uit:18
+
+Als er bij een relatie IST-gegevens zijn, dan zijn deze gegevens via de koppeltabel Stapel \ Relatie
+aan de relatie gekoppeld. Een stapel is een GBA-categoriestapel van een GBA-persoonslijst. Van
+sommige categorieën (maar niet alle) kunnen meerdere stapels aanwezig zijn. De voorkomens
+binnen een stapel worden opgeslagen als objecten van het type 'Stapel voorkomen'. Deze objecten
+bevatten de daadwerkelijke persoonsgegevens, zoals deze zijn overgenomen uit de GBApersoonslijst.
+Een stapel heeft normaliter betrekking op één relatie. Uitzonderingen hierop is het omzetten van
+een huwelijk in een geregistreerd partnerschap (dat leidt tot twee relaties) en stapels met alleen
+onjuiste voorkomens (die leiden tot géén relaties).
+IST-gegevens kunnen alleen zijn gekoppeld aan asymmetrische relaties (dus relaties tussen een
+ingeschreven persoon en een pseudo-persoon), omdat deze zijn ontstaan bij conversie van de relatie vanuit GBA naar BRP en de GBA geen symmetrische relaties kent.
+Besluit
+In het kader van het corrigeren van relaties is overwogen hoe om te gaan met eventuele ISTgegevens die aan de betreffende relatie zijn gekoppeld. Daarbij is het volgende besloten:
+Ontwerpbeslissing
+Bij het corrigeren van relaties, betrokkenheden en pseudo-personen worden IST-gegevens verwijderd die aan de betreffende relatie zijn gekoppeld.
+De reden hiervoor is dat er door de uitgevoerde correctie geen zekerheid meer is omtrent de juistheid van de betreffende IST-gegevens.
+
+18
+
+Zie ook paragraaf 7.2.2 en 8.1.4 van [3].
+
+Status: Definitief, versie: 0.28
+
+Pagina 25 van 37
+
+Aspectbeschrijving – Corrigeren
+
+Om de bijhouder te waarschuwen dat een bijhoudingsvoorstel zal leiden tot het verwijderen van
+IST-gegevens, zal in dat geval bij de prevalidatie en bijhouding een melding worden gegeven.19
+Naast de IST-gegevens zijn bij conversie van GBA-persoonslijsten ook gegevens aangemaakt in het
+VerConv-schema van de BRP-database. Daarin wordt onder meer het LO3-bericht opgeslagen. Met
+betrekking tot deze gegevens is het volgende besluit genomen:
+Ontwerpbeslissing
+De gegevens van het schema VerConv worden bij bijhoudingen in de BRP ongewijzigd gelaten. Dit
+geldt voor alle bijhoudingen, dus actualiseringen, correcties en verwijderen/overschrijven.
+De reden hiervoor is dat de gegevens uit VerConv behoren tot logging. Deze gegevens zijn dan ook
+alleen binnen beheertaken raadpleegbaar.
+Aan de hand van enkele voorbeelden wordt hierna geïllustreerd wat het verwijderen van ISTgegevens bij het corrigeren van relaties precies betekent.
+Voorbeeld 1: Corrigeren gegevens huwelijk/geregistreerd partnerschap
+In dit voorbeeld wordt de datum aanvang van het huwelijk tussen ingeschrevene Josef en pseudopersoon Maria gecorrigeerd. Alle IST-gegevens die aan de relatie zijn gekoppeld worden automatisch verwijderd.
+
+Voorbeeld 2: Corrigeren gegevens omgezet geregistreerd partnerschap
+Bij conversie naar de BRP van de gegevens van een geregistreerd partnerschap dat is omgezet in
+een huwelijk, worden de betreffende IST-stapels aan beide relaties gekoppeld. Doordat beide relaties dezelfde IST-gegevens delen, heeft correctie van (één van) beide relaties tot gevolg dat de
+IST-gegevens van beide relaties worden verwijderd.
+
+19
+
+Feitelijk heeft de melding alleen bij prevalidatie nut, maar bij bijhouding zal de regel ook af gaan.
+
+Status: Definitief, versie: 0.28
+
+Pagina 26 van 37
+
+Aspectbeschrijving – Corrigeren
+
+Voorbeeld 3: Corrigeren gegevens partner
+De gegevens van de gerelateerde partner staan in dezelfde GBA-categorie als de gegevens van de
+relatie. Dit betekent dat bij correctie van de gegevens van een pseudo-persoon de IST-gegevens
+van de relatie moeten worden verwijderd.
+
+Voorbeeld 4: Corrigeren gegevens kind
+Het verwijderen van IST-gegevens bij het corrigeren van familierechtelijke betrekkingen verloopt
+volgens hetzelfde principe als bij het corrigeren van huwelijken en geregistreerde partnerschappen.
+In onderstaand voorbeeld wordt de naam van een kind van ingeschrevene Maria gecorrigeerd. Dit
+leidt tot het verwijderen van alle IST-gegevens die aan de relatie zijn gekoppeld.
+
+Status: Definitief, versie: 0.28
+
+Pagina 27 van 37
+
+Aspectbeschrijving – Corrigeren
+
+Voorbeeld 5: Corrigeren gegevens ouder
+Tot slot een voorbeeld van het corrigeren van de gegevens van een ouder-betrokkene. De ingeschreven persoon Pietje heeft drie ouders op zijn persoonslijst staan. Maria en Josef zijn door
+adoptie ouder geworden van Pietje en bij die adoptie is het ouderschap van Lie Ping beëindigd.
+De DAG van het ouderschap van Lie Ping was onjuist en wordt gecorrigeerd. Omdat niet expliciet is
+vastgelegd welke IST-stapels bij welke ouder in de BRP horen, worden (net als bij huwelijken en
+geregistreerde partnerschappen) alle IST-gegevens verwijderd die aan de relatie zijn gekoppeld.
+
+Status: Definitief, versie: 0.28
+
+Pagina 28 van 37
+
+Aspectbeschrijving – Corrigeren
+
+4.10 Correcties met betrokken GBA-persoon
+De GBA kent geen gestructureerde berichten voor correcties. Anders dan bij actualisering kan bij
+correctie een bijhoudingsnotificatie aan de migratievoorziening dus niet leiden tot correctie van
+GBA-personen. Dit zal buiten de centrale voorzieningen om moeten plaatsvinden.
+Voorbeeld:
+Het huwelijk van GBA-persoon Piet wordt gecorrigeerd door de BRPfeitgemeente/registergemeente. Dit leidt tot een bijhoudingsnotificatie die naar de migratievoorziening verstuurd wordt. De migratievoorziening kan de bijhoudingsnotificatie echter niet verwerken.
+Ontwerpbeslissing
+Een bijhoudingsnotificatie aan de migratievoorziening, naar aanleiding van een BRP-correctie waar
+een GBA-persoon bij is betrokken, wordt door de migratievoorziening terug gestuurd naar de BRPpartij die de correctie indiende.
+Dit is in lijn met de afhandeling van andere BRP-berichten die de migratievoorziening niet kan verwerken.
+
+Status: Definitief, versie: 0.28
+
+Pagina 29 van 37
+
+Aspectbeschrijving – Corrigeren
+
+5 Groep Bijhouding
+Er zijn tal van actualiseringshandelingen die leiden tot het afgeleid registreren van gegevens in de
+groep Bijhouding. In geval van een intergemeentelijke verhuizing wordt naast het nieuwe adres in
+de groep Bijhouding ook de Bijhoudingspartij aangepast, bij een overlijden wordt de Nadere bijhoudingsaard aangepast, enz. Om fouten die gemaakt zijn bij bijvoorbeeld intergemeentelijke verhuizingen te corrigeren zullen dus niet alleen de gegevens van het adres of bijvoorbeeld de datum
+van het overlijden gecorrigeerd moeten worden, maar moeten ook gegevens in de groep Bijhouding worden gecorrigeerd.
+Ondanks dat de gegevens in deze groep afgeleid geregistreerd worden, vormen ze de basis voor
+verschillende controles die altijd op een bijhoudingsvoorstel uitgevoerd worden:
+•
+
+welke partij gerechtigd is om de Persoon bij te houden;
+
+•
+
+of de Persoon actueel of (volledig) opgeschort is.
+
+Dit betekent dat als de gegevens in deze groep niet correct zijn, dat dit tot problemen leidt bij het
+doorvoeren van de correctie, bijvoorbeeld omdat de partij niet gerechtigd is om het bijhoudingsvoorstel in te dienen.
+Om deze problemen het hoofd te bieden, moeten correcties, waarbij ook de groep Bijhouding gecorrigeerd moet worden, in onderstaande volgorde doorgevoerd worden:
+Stap 1: Correctie van de groep Bijhouding
+Als eerste wordt de groep Bijhouding, door middel van een elementaire correctiehandeling, gecorrigeerd. Dit zorgt ervoor dat de bijhoudingspartij en (nadere) bijhoudingsaard weer de correcte
+waarde hebben. Om dit toe te staan is er specifiek voor het corrigeren van de groep Bijhouding een
+afwijkende controle nodig om na te gaan of de partij gerechtigd is. Deze controle bewaakt dat de
+partij die het bijhoudingsvoorstel indient, na de correctie de actuele Bijhoudingspartij is. Een partij
+maakt zich hiermee de bijhouder van een Persoon. Daarnaast voorkomt dit dat de partij een andere partij verantwoordelijk kan maken. Dit is analoog aan de intergemeentelijke verhuizing: een
+gemeente kan een persoon wel naar zich toe verhuizen, maar niet naar een andere gemeente verhuizen.
+Stap 2: Correctie van de overige groepen
+Nadat de groep Bijhouding gecorrigeerd is, zijn er voor het corrigeren van de andere groepen geen
+afwijkende controles nodig. De Bijhoudingspartij en de (nadere) bijhoudingsaard hebben immers
+inmiddels de correcte waarden.
+
+Duale periode
+Het corrigeren van een onterecht doorgevoerde immigratie, emigratie of intergemeentelijke verhuizing tussen een GBA- en een BRP-gemeente geeft gedurende de duale periode extra complexiteit
+om deze te herstellen. Bij het corrigeren van de Bijhoudingspartij, waarbij zowel de foutieve als de
+correcte partij een BRP-partij is, is het corrigeren van de groep Bijhouding afdoende om de persoon
+over te dragen aan een andere partij. Is er echter een GBA-partij betrokken dan is deze aanpak
+niet mogelijk. In geval van een GBA-partij is niet de centrale voorziening de bron van de persoonsgegevens, maar is het lokale systeem van de GBA-partij, het gemeentelijk GBA dan wel de RNI, de
+bron. Om te zorgen dat het juiste systeem de bron wordt, moet dezelfde aanpak gevolgd worden
+die ook tussen twee GBA-partijen gevolgd wordt. Door namelijk eerst een reguliere intergemeentelijke verhuizing (of emigratie/immigratie) uit te voeren wordt de persoon overgebracht naar het
+lokale systeem van de andere partij. Daarna worden door middel van correcties de (historisch)
+gegevens gecorrigeerd.
+
+Status: Definitief, versie: 0.28
+
+Pagina 30 van 37
+
+Aspectbeschrijving – Corrigeren
+
+6 Levering
+In dit hoofdstuk worden enkele aandachtspunten voor het koppelvlak Levering met betrekking tot
+correcties beschreven.
+
+6.1
+
+Impact van keuze voor elementaire correctiehandelingen op afnemers
+
+Vanwege de keuze voor elementaire correcties (zie ontwerpbeslissing in paragraaf 2.2) en het feit
+dat mutaties near real-time worden geleverd, krijgen afnemers complexere correcties stap voor
+stap geleverd. Na de verwerking van een administratieve handeling vindt immers mutatielevering
+plaats. Aangezien correctiehandelingen elementair van aard zijn, kunnen er meerdere handelingen
+nodig zijn om een fout op de persoonslijst te herstellen. In het voorbeeld in paragraaf 4.4.3, waarin een ten onrechte opgenomen overlijden werd gecorrigeerd, krijgen afnemers eerst de correctie
+van het overlijden geleverd en separaat daarna de correctie van het huwelijk of geregistreerd partnerschap.
+De afnemers moeten zich er dus van bewust zijn dat gedurende het correctieproces toestanden
+van de persoonslijst worden geleverd die (tijdelijk) niet consistent zijn.
+Bij de ontwerpbeslissing in paragraaf 2.2 om geen samengestelde correctiefuncties te ondersteunen is de complexiteit ervan afgewogen tegen de impact op de afnemers. Bij de weging van de
+impact op afnemers heeft het feit dat afnemers ook in de huidige GBA een mutatielevering per
+categorie ontvangen en dat dit soort correcties vaak over meerdere categorieën gaan, meegewogen. Verder speelt mee dat het onwaarschijnlijk is dat afnemers dit soort samengestelde correcties
+geautomatiseerd zouden kunnen verwerken. Vaak zijn er per organisatie maar enkele medewerkers die dit soort complexe correcties kunnen verwerken. Ook bij gemeenten zijn specialisten verantwoordelijk voor de verwerking van dergelijke bijzondere correcties.
+Om de impact op afnemers te beperken wordt in het mutatiebericht duidelijk aangegeven dat het
+een correctie betreft door de categorie van de administratieve handeling (actualisering/correctie) in
+het bericht te vermelden. Het advies aan de bijhoudingsverantwoordelijken is om, voordat een
+correctie start die meerdere handelingen beslaat, de gegevens separaat in onderzoek te nemen als
+waarschuwing voor de afnemers en na afloop van de correctie het onderzoek te beëindigen.
+
+6.2
+
+Potentiele gaten in materiële tijdlijn
+
+Het elementaire karakter van de correctieacties, gecombineerd met de ontwerpbeslissing in paragraaf 4.2 om (oorspronkelijk) afgeleide gegevens niet automatisch mee te corrigeren, leidt ertoe
+dat er gaten in de materiële tijdlijn kunnen ontstaan tussen verschillende gegevensgroepen.
+Dergelijke gaten kunnen onder meer ontstaan als met een correctie de geboortedatum wordt vervroegd van een persoon die bij geboorte is ingeschreven. Alle voorkomens van groepen met materiële historie die een DAG hebben die gelijk was aan de geboortedatum, moeten waarschijnlijk ook
+worden gecorrigeerd. Zolang die correcties niet hebben plaatsgevonden zit er een gat tussen de
+geboortedatum en de oudste DAG van de betreffende materieelhistorische groepen.
+Een analoge situatie kan zich voordoen bij correctie van de datum aanvang van een huwelijk of
+geregistreerd partnerschap. Als deze datum wordt vervroegd, dan ontstaat er een gat met de DAG
+van de groepen van een bij de relatie betrokken pseudo-persoon. Deze groepen zouden separaat
+gecorrigeerd moeten worden, maar dat wordt niet afgedwongen.
+In het leveringskoppelvlak moet er rekening mee worden gehouden dat dergelijke gaten kunnen
+optreden. Dit geldt met name wanneer bij een leveringsdienst met een peilmoment wordt ingeprikt
+op de plaats van een materiële tijdlijn waar een gat zit. Tevens is het raadzaam om bestandscontroleregels te definiëren om dergelijke gaten op te sporen.
+
+Status: Definitief, versie: 0.28
+
+Pagina 31 van 37
+
+Aspectbeschrijving – Corrigeren
+
+6.3
+
+Potentieel gat in volgnummers voornamen
+
+In paragraaf 4.4.2 is toegelicht dat de correctie van een voorkomen van het ene object geen effect
+heeft op andere objecten. Als voorbeeld werd genoemd dat als iemand drie voornamen heeft en de
+middelste komt door correctie te vervallen, de eerste en derde voornaam dan ongewijzigd blijven,
+inclusief de volgnummers. In het leveringskoppelvlak moet dus rekening worden gehouden met het
+bestaan van gaten in volgnummers van objecten zoals Persoon \ Voornaam.
+
+6.4
+
+Kring van afnemers die de correctie ontvangt
+
+Art. 3.23 lid 1 Wet BRP bepaalt dat op schriftelijk verzoek van betrokkene, afnemers waaraan (de
+afgelopen 20 jaren) de gecorrigeerde gegevens zijn verstrekt, op de hoogte worden gebracht van
+de correctie, tenzij dit onmogelijk blijkt of een onevenredige inspanning kost.
+Ontwerpbeslissing
+De BRP stuurt uitsluitend mutatieberichten voor zover dat op basis van de huidige autorisaties van
+afnemers mogelijk is. Het is aan het college van B&W om op verzoek, de afnemers en organisaties
+aan wie de gecorrigeerde gegevens zijn verstrekt handmatig te informeren.
+
+6.5
+
+Voor bepaalde groepen geen actie-attributen leveren
+
+Zoals uiteengezet in paragraaf 4.8 is het ter voorkoming van levering van eventuele verouderde
+(onjuiste) bronnen op betrokkenheden en familierechtelijke betrekkingen nodig om de leveringsautorisatie zo te configureren dat de actie-attributen van de groep Identiteit van Betrokkenheid en
+van de groep Standaard van familierechtelijke betrekkingen niet worden geleverd.
+
+Status: Definitief, versie: 0.28
+
+Pagina 32 van 37
+
+Aspectbeschrijving – Corrigeren
+
+7 Overige besluiten
+1. ‘PL in correctie’-signaal op basis van Onderzoek?
+We gaan er nu vanuit dat de afnemers via een apart hiervoor te starten onderzoek (advies aan
+bijhouders) geattendeerd worden op het feit dat een PL ‘in correctie’ is en er dus nog meer berichten voor betreffende persoon zullen volgen. Gebruik van het ‘Onderzoek’-construct hiervoor
+is relatief zwaar geschut en vervuilt het beeld van de reguliere ‘business’-onderzoeken; bijvoorbeeld naar aanleiding van een terugmelding.
+Bij de nadere uitwerking van Onderzoek beoordelen of een nadere typering van de Onderzoeken of het introduceren van een apart construct om de afnemers bij Leveringberichten (bevraging, synchronisatie, selectie) te attenderen op het feit dat betreffende PL ‘in correctie’ is en
+te attenderen als de correctie is afgerond.
+03-04-2017: Inmiddels is besloten dat we dit niet doen. Voorgelegd en besproken met juristen.
+Dit zou een wetswijziging betekenen en men heeft allerlei beleidsmatige bezwaren dus zou het
+maar de vraag zijn of zo’n wetswijziging het zou halen.
+
+Status: Definitief, versie: 0.28
+
+Pagina 33 van 37
+
+8 Bijlage – Overzicht correctiehandelingen
+Object/Groep
+
+Type
+
+Administratieve handeling
+
+Toelichting
+
+Persoon
+
+Object
+
+-
+
+Correctiehandeling niet van toepassing
+
+Afgeleid administratief
+
+Groep
+
+-
+
+Correctiehandeling niet van toepassing
+
+Identificatienummers
+
+Groep
+
+-
+
+Correctiehandeling niet van toepassing
+
+Samengestelde naam
+
+Groep
+
+Correctie naam
+
+Geboorte
+
+Groep
+
+Correctie geboorte
+
+Geslachtsaanduiding
+
+Groep
+
+Correctie geslachtsaanduiding
+
+Inschrijving
+
+Groep
+
+Correctie inschrijving
+
+Nummerverwijzing
+
+Groep
+
+Correctie nummerverwijzing
+
+Bijhouding
+
+Groep
+
+Correctie bijhouding
+
+Overlijden
+
+Groep
+
+Correctie overlijden
+
+PersoonVoornaam
+
+Object
+
+-
+
+Groep
+
+Correctie naam
+
+Object
+
+-
+
+Groep
+
+Correctie naam
+
+Naamgebruik
+
+Groep
+
+Correctie naamgebruik
+
+PersoonAdres
+
+Object
+
+-
+
+Groep
+
+Correctie adres
+
+Object
+
+-
+
+Groep
+
+Correctie nationaliteit
+
+Object
+
+-
+
+Groep
+
+Correctie buitenlands persoonsnummer Alleen verval-actie van toepassing
+
+Object
+
+-
+
+Derde heeft gezag
+
+Groep
+
+Correctie gezag
+
+Onder curatele
+
+Groep
+
+Correctie curatele
+
+Volledige verstrekkingsbeperking
+
+Groep
+
+Correctie verstrekkingsbeperking
+
+Voornaam
+PersoonGeslachtsnaamcomponent
+Geslachtsnaamcomponent
+
+Adres
+PersoonNationaliteit
+Nationaliteit
+PersoonBuitenlandsPersoonsnummer
+Buitenlands persoonsnummer
+PersoonIndicatie
+
+Alleen 'Datum inschrijving'
+
+Correctiehandeling niet van toepassing
+Correctiehandeling niet van toepassing
+
+Correctiehandeling niet van toepassing
+
+Correctiehandeling niet van toepassing
+Correctiehandeling niet van toepassing
+
+Aspectbeschrijving – Corrigeren
+
+Vastgesteld niet Nederlander
+
+Groep
+
+Correctie indicatie nationaliteit
+
+Behandeld als Nederlander
+
+Groep
+
+Correctie indicatie nationaliteit
+
+Groep
+
+Correctie reisdocument
+
+Groep
+
+Correctie indicatie nationaliteit
+
+Bijzondere verblijfsrechtelijke positie
+
+Groep
+
+Onverwerkt document aanwezig
+
+Groep
+
+Correctie bijzondere verblijfsrechtelijke
+positie
+Correctie documentindicatie
+
+PersoonVerstrekkingsbeperking
+
+Object
+
+-
+
+Groep
+
+Correctie verstrekkingsbeperking
+
+Object
+
+-
+
+Correctiehandeling niet van toepassing
+
+Object
+
+-
+
+Correctiehandeling niet van toepassing
+
+Relatie
+
+Groep
+
+-
+
+Correctiehandeling niet van toepassing
+
+Betrokkenheid-Ouder
+
+Object
+
+Correctie afstamming
+
+Verval ouder
+
+Object
+
+-
+
+Correctiehandeling niet van toepassing
+
+Identificatienummers
+
+Groep
+
+Correctie oudergegevens
+
+Samengestelde naam
+
+Groep
+
+Correctie oudergegevens
+
+Geboorte
+
+Groep
+
+Correctie oudergegevens
+
+Geslachtsaanduiding
+
+Signalering met betrekking tot verstrekking
+reisdocument
+Staatloos
+
+Verstrekkingsbeperking
+Betrokkenheid-Kind
+Familierechtelijke betrekking
+
+Persoon
+
+Correctiehandeling niet van toepassing
+
+Groep
+
+Correctie oudergegevens
+
+Ouderschap
+
+Groep
+
+Correctie afstamming
+
+Ouderlijk gezag
+
+Groep
+
+Correctie gezag
+
+Object
+
+Correctie afstamming
+
+Verval kind
+
+Object
+
+-
+
+Correctiehandeling niet van toepassing
+
+Relatie
+
+Groep
+
+-
+
+Correctiehandeling niet van toepassing
+
+Betrokkenheid-Kind
+
+Object
+
+-
+
+Correctiehandeling niet van toepassing
+
+Object
+
+-
+
+Correctiehandeling niet van toepassing
+
+Identificatienummers
+
+Groep
+
+Correctie kindgegevens
+
+Samengestelde naam
+
+Groep
+
+Correctie kindgegevens
+
+Geboorte
+
+Groep
+
+Correctie kindgegevens
+
+Groep
+
+Correctie afstamming
+
+Betrokkenheid-Ouder
+Familierechtelijke betrekking
+
+Persoon
+
+Ouderschap
+
+Status: Definitief, versie: 0.28
+
+Pagina 35 van 37
+
+Aspectbeschrijving – Corrigeren
+
+Betrokkenheid-Partner
+Huwelijk / Geregistreerd partnerschap
+
+Object
+
+-
+
+Correctiehandeling niet van toepassing
+
+Object
+
+Niet-elementaire correctiehandeling
+
+Correctiehandeling niet van toepassing
+
+Relatie
+
+Groep
+
+Betrokkenheid-Partner
+
+Object
+
+Ongedaanmaking huwelijk
+Ongedaanmaking geregistreerd partnerschap
+Correctie huwelijk
+Correctie geregistreerd partnerschap
+-
+
+Persoon
+
+Correctiehandeling niet van toepassing
+
+Object
+
+-
+
+Identificatienummers
+
+Groep
+
+Correctie partnergegevens huwelijk
+Correctie partnergegevens geregistreerd partnerschap
+
+Samengestelde naam
+
+Groep
+
+Correctie partnergegevens huwelijk
+Correctie partnergegevens geregistreerd partnerschap
+
+Geboorte
+
+Groep
+
+Correctie partnergegevens huwelijk
+Correctie partnergegevens geregistreerd partnerschap
+
+Geslachtsaanduiding
+
+Groep
+
+Correctie partnergegevens huwelijk
+Correctie partnergegevens geregistreerd partnerschap
+
+Migratie
+
+Groep
+
+Correctie migratie
+
+Verblijfsrecht
+
+Groep
+
+Correctie verblijfsrecht
+
+PersoonReisdocument
+
+Object
+
+-
+
+Reisdocument
+
+Groep
+
+Correctie reisdocument
+
+Uitsluiting kiesrecht
+
+Groep
+
+Correctie kiesrecht
+
+Deelname EU verkiezingen
+
+Groep
+
+Correctie kiesrecht
+
+Persoonskaart
+
+Groep
+
+Correctie persoonskaart
+
+PersoonAfnemerindicatie
+
+Object
+
+-
+
+Correctiehandeling niet van toepassing
+
+Groep
+
+-
+
+Correctiehandeling niet van toepassing
+
+Object
+
+-
+
+Correctiehandeling niet van toepassing
+
+Groep
+
+-
+
+Correctiehandeling buiten scope. Verificatie
+komt niet voor op een ingezetene-PL.
+
+Afnemerindicatie
+PersoonVerificatie
+Verificatie
+
+Status: Definitief, versie: 0.28
+
+Correctiehandeling niet van toepassing
+
+Pagina 36 van 37
+
+Aspectbeschrijving – Corrigeren
+
+Onderzoek
+
+Object
+
+-
+
+Onderzoek
+
+Groep
+
+Correctie onderzoek
+
+Gegeven in onderzoek
+
+Object
+
+-
+
+Correctiehandeling niet van toepassing
+
+Groep
+
+-
+
+Correctiehandeling niet van toepassing
+
+Administratieve handeling
+
+Object
+
+-
+
+Correctiehandeling niet van toepassing
+
+Administratieve handeling
+
+Groep
+
+-
+
+Correctiehandeling niet van toepassing
+
+Gedeblokkeerde melding
+
+Object
+
+-
+
+Correctiehandeling niet van toepassing
+
+Gedeblokkeerde melding
+
+Groep
+
+-
+
+Correctiehandeling niet van toepassing
+
+Gegeven in onderzoek
+
+Actie
+
+Correctiehandeling niet van toepassing
+
+Object
+
+-
+
+Correctiehandeling niet van toepassing
+
+Actie
+
+Groep
+
+-
+
+Correctiehandeling niet van toepassing
+
+ActieBron
+
+Object
+
+-
+
+Correctiehandeling niet van toepassing
+
+Groep
+
+-
+
+Correctiehandeling niet van toepassing
+
+ActieBron
+
+Status: Definitief, versie: 0.28
+
+Pagina 37 van 37
+
+

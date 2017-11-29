@@ -1,0 +1,1666 @@
+UCS BY.0.NnG - Naam en Geslacht
+Versie
+
+0.13
+
+Datum
+
+13 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+19-05-2017
+
+0.1
+
+Initiële versie.
+
+Operatie BRP
+
+24-05-2017
+
+0.2
+
+Volgende handelingen en bijbehorende acties toegevoegd:
+Wijziging Geslachtsaanduiding
+Wijziging Naamgebruik
+
+Operatie BRP
+
+31-05-2017
+
+0.3
+
+Wijziging Naam aangevuld.
+
+Operatie BRP
+
+06-06-2017
+
+0.4
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+09-06-2017
+
+0.5
+
+Volgende handelingen en bijbehorende acties toegevoegd:
+Correctie Naam
+Correctie Geslachtsaanduiding
+Correctie Naamgebruik
+
+Operatie BRP
+
+12-06-2017
+
+0.6
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+13-06-2017
+
+0.7
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+26-06-2017
+
+0.8
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+27-06-2017
+
+0.9
+
+Document aangepast m.b.t. documentatierichtlijnen.
+
+Operatie BRP
+
+28-06-2017
+
+0.10
+
+UCM toegevoegd
+
+Operatie BRP
+
+29-06-2017
+
+0.11
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+12-07-2017
+
+0.12
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+13-07-2017
+
+0.13
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+Reviewhistorie
+Versie Review
+0.3
+
+Operatie BRP
+
+0.4
+
+Operatie BRP
+
+0.6
+
+Operatie BRP (Correctie geslachtsaanduiding, Correctie naamgebruik)
+
+0.7
+
+Operatie BRP (Correctie naam, BZVU)
+
+0.8
+
+Operatie BRP
+
+0.11
+
+Operatie BRP
+
+UCS BY.0.NnG - Naam en Geslacht
+
+Inhoudsopgave
+
+1
+
+Inleiding ..................................................................................................................... 4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Doel ........................................................................................................................................4
+Leeswijzer ...............................................................................................................................4
+Referenties ..............................................................................................................................4
+Use case model ........................................................................................................................5
+
+Wijziging naam ........................................................................................................... 6
+2.1 Functionele context ...................................................................................................................6
+2.1.1 Brondocumenten ...............................................................................................................6
+2.1.2 Betrokken personen ...........................................................................................................6
+2.1.3 Proces ..............................................................................................................................6
+2.1.4 Bijhoudings(voorstel)partijen ..............................................................................................6
+2.1.5 Vastgelegde gegevens ........................................................................................................7
+2.2 Specifieke verwerking ...............................................................................................................7
+
+3
+
+Wijziging geslachtsaanduiding ................................................................................... 8
+3.1 Functionele context ...................................................................................................................8
+3.1.1 Brondocumenten ...............................................................................................................8
+3.1.2 Betrokken personen ...........................................................................................................8
+3.1.3 Proces ..............................................................................................................................8
+3.1.4 Bijhoudings(voorstel)partijen ..............................................................................................8
+3.1.5 Vastgelegde gegevens ........................................................................................................8
+3.2 Specifieke verwerking ...............................................................................................................9
+
+4
+
+Wijziging naamgebruik ............................................................................................. 10
+4.1 Functionele context ................................................................................................................. 10
+4.1.1 Brondocumenten ............................................................................................................. 10
+4.1.2 Betrokken personen ......................................................................................................... 10
+4.1.3 Proces ............................................................................................................................ 10
+4.1.4 Bijhoudingspartijen .......................................................................................................... 10
+4.1.5 Vastgelegde gegevens ...................................................................................................... 10
+4.2 Specifieke verwerking ............................................................................................................. 10
+
+5
+
+Correctie Naam ......................................................................................................... 11
+5.1 Functionele context ................................................................................................................. 11
+5.1.1 Brondocumenten ............................................................................................................. 11
+5.1.2 Betrokken personen ......................................................................................................... 11
+5.1.3 Proces ............................................................................................................................ 11
+5.1.4 Bijhoudings(voorstel)partijen ............................................................................................ 11
+5.1.5 Vastgelegde gegevens ...................................................................................................... 11
+5.2 Specifieke verwerking ............................................................................................................. 12
+
+6
+
+Correctie geslachtsaanduiding .................................................................................. 13
+6.1 Functionele context ................................................................................................................. 13
+6.1.1 Brondocumenten ............................................................................................................. 13
+6.1.2 Betrokken personen ......................................................................................................... 13
+6.1.3 Proces ............................................................................................................................ 13
+6.1.4 Bijhoudings(voorstel)partijen ............................................................................................ 13
+6.1.5 Vastgelegde gegevens ...................................................................................................... 13
+6.2 Specifieke verwerking ............................................................................................................. 13
+
+7
+
+Correctie Naamgebruik ............................................................................................. 14
+7.1 Functionele context ................................................................................................................. 14
+7.1.1 Brondocumenten ............................................................................................................. 14
+7.1.2 Betrokken personen ......................................................................................................... 14
+7.1.3 Proces ............................................................................................................................ 14
+
+Status: Definitief, versie: 0.13
+
+Pagina 2 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+7.1.4 Bijhoudings(voorstel)partijen ............................................................................................ 14
+7.1.5 Vastgelegde gegevens ...................................................................................................... 14
+7.2 Specifieke verwerking ............................................................................................................. 14
+
+8
+9
+
+Speciale handelingen t.b.v. de migratievoorziening .................................................. 15
+Acties ....................................................................................................................... 16
+9.1
+9.2
+9.3
+9.4
+9.5
+9.6
+9.7
+9.8
+9.9
+9.10
+9.11
+9.12
+9.13
+9.14
+
+Registratie geslachtsnaam voornaam ........................................................................................ 16
+Registratie Geslachtsaanduiding ............................................................................................... 17
+Registratie voornaam .............................................................................................................. 17
+Registratie naamgebruik .......................................................................................................... 18
+Correctieverval voornaam ........................................................................................................ 19
+Correctieregistratie voornaam .................................................................................................. 19
+Correctieverval geslachtsnaam ................................................................................................. 19
+Correctieregistratie geslachtsnaam ........................................................................................... 19
+Correctieverval samengestelde naam ........................................................................................ 19
+Correctieregistratie samengestelde naam ................................................................................. 19
+Correctieverval geslachtsaanduiding ........................................................................................ 20
+Correctieregistratie geslachtsaanduiding .................................................................................. 20
+Correctieverval naamgebruik .................................................................................................. 20
+Correctieregistratie naamgebruik ............................................................................................ 20
+
+Appendix A – BZVU en toegestane indienende partijen .................................................. 21
+
+Status: Definitief, versie: 0.13
+
+Pagina 3 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+1 Inleiding
+1.1
+
+Doel
+
+De module ‘Naam en Geslacht’ bevat handelingen en acties waarmee naamgegevens of de
+geslachtsaanduiding van personen kunnen worden geregistreerd en gecorrigeerd. Het doel van dit
+document is om de afhandeling van deze handelingen te beschrijven.
+
+1.2
+
+Leeswijzer
+
+Per administratieve handeling wordt de functionele context en specifieke verwerking beschreven.
+De functionele context beschrijft de situatie waarin de administratieve handeling van toepassing is.
+Verder wordt de ‘peildatum’ voor regels met een tijdsaspect gedefinieerd.
+In de specifieke verwerking wordt beschreven welke acties relevant zijn voor de administratieve
+handeling en wordt per actie eventuele specifieke functionaliteit binnen de context van de
+handeling benoemd.
+Voor de definitie van het invoerbericht en bedrijfsregels die bij een administratieve handeling horen
+wordt verwezen naar de relevante hoofdstukken in ‘UCS-BY.0.NnG - Bijlage Registreer naam en
+geslacht’ [1] en ‘UCS-BY.0.NnG - Bijlage Corrigeer naam en geslacht’ [6].
+De beschrijving van de generieke functionaliteit van de acties staat beschreven in hoofdstuk 8.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+UCS BY.0.NnG - Bijlage Registreer naam en geslacht
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving - Naamopbouw
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving - Formele en materiele historie
+
+Operatie BRP
+
+-
+
+4
+
+UCS BY.0.AV – Afhandeling verzoek
+
+Operatie BRP
+
+-
+
+-
+
+5
+
+Aspectbeschrijving – Corrigeren
+
+Operatie BRP
+
+-
+
+-
+
+6
+
+UCS BY.0.NnG - Bijlage Corrigeer naam en geslacht
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 0.13
+
+Pagina 4 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+1.4
+
+Use case model
+
+In onderstaand use case model staan alle administratieve handelingen voor de module Naam en
+Geslacht. Hierin is te zien dat alle administratieve handelingen subtype zijn van het supertype
+‘Afhandeling verzoek’. De laatste beschrijft de generieke afhandeling van een verzoek zoals
+relevant is voor de verwerking van alle handelingen.
+
+Status: Definitief, versie: 0.13
+
+Pagina 5 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+2 Wijziging naam
+2.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Wijziging naam’ is het registreren van de
+geslachtsnaam en/of voornaam en/of samengestelde naam van een ingezetene, indien één van de
+volgende situaties van toepassing is:
+•
+•
+•
+•
+•
+•
+•
+•
+
+een latere vermelding van het Koninklijk Besluit of de gerechtelijke uitspraak waarbij de
+geslachtsnaam is vastgesteld is toegevoegd aan de geboorteakte.
+een gerechtelijke uitspraak in kracht van gewijsde is gegaan maar (nog) geen geboorteakte is
+ingeschreven in de registers van de burgerlijke stand.
+de geslachtsnaam (en eventuele voornaam) is vastgesteld bij het Koninklijk Besluit verlening
+Nederlandse nationaliteit of verkrijging van de Nederlandse nationaliteit door optie.
+de geslachtsnaam is gewijzigd conform vreemd recht.
+de geslachtsnaam is gewijzigd als gevolg van een huwelijk, geregistreerd partnerschap of de
+ontbinding/beëindiging daarvan.
+de naam wordt vastgesteld en daarvan een bewijsstuk wordt overgelegd.
+een adellijke titel of predicaat moet worden opgenomen (hetgeen veelal een correctiehandeling
+zal zijn), bijvoorbeeld bij toekenning van een titel aan nieuwe leden van de Koninklijke familie.
+een wijziging in de namenreeks moet worden aangebracht.
+
+2.1.1
+
+Brondocumenten
+
+De basis voor de administratieve handeling is één van de volgende brondocumenten:
+•
+•
+•
+•
+•
+•
+
+een latere vermelding op de Nederlandse geboorteakte of een kennisgeving ervan,
+een Koninklijk Besluit (kan ook zijn het KB-naturalisatie tot Nederlander),
+een optieverklaring Nederlanderschap,
+een gerechtelijke uitspraak,
+een buitenlandse rechtelijke uitspraak of ander brondocument waaruit de
+geslachtsnaamswijziging blijkt,
+een Nederlandse of buitenlandse akte H/GP of ontbinding/beëindiging ervan.
+
+2.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon
+De ingezetene op wiens persoonslijst de naam wordt geactualiseerd.
+
+2.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS-BY.0.AV – Afhandeling verzoek [4].
+Indien de registergemeente van de gemeente waar de latere vermelding aan de geboorteakte is
+toegevoegd een andere gemeente is dan de bijhoudingspartij van de persoon maakt de
+registergemeente een bijhoudingsvoorstel en stuurt dit door aan de bijhoudingspartij van de
+persoon. Indien de bijhoudingspartij van de persoon gekozen heeft voor automatische fiattering
+dan wordt het bijhoudingsvoorstel direct door de BRP verwerkt. Indien de bijhoudingspartij van de
+persoon gekozen heeft voor handmatige fiattering dan dient deze het bijhoudingsvoorstel opnieuw
+in te dienen.
+2.1.4
+
+Bijhoudings(voorstel)partijen
+
+De geboortegemeente van de persoon of de woongemeente van de persoon dient een
+bijhoudingsvoorstel in.
+Een wijziging van een geslachtnaam kan ook tot gevolg hebben dat de geslachtsnaam van het kind
+wijzigt. Dit wordt echter niet door deze AH verwerkt, maar moet met een andere aanroep van deze
+AH plaatsvinden waarbij het kind de hoofdpersoon is.
+
+Status: Definitief, versie: 0.13
+
+Pagina 6 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+Tevens geldt, dat indien de ouder(s), kind(eren) en/of (ex-)partner(s) in een andere gemeente(n)
+woont/wonen dan de hoofdpersoon, dat deze gemeente(n) middels bijhoudingsnotificaties
+wordt/worden geïnformeerd. Indien de gerelateerde(n) dezelfde bijhoudingspartij als de
+hoofdpersoon heeft/hebben wordt de wijziging direct op de persoonslijst van de gerelateerde
+doorgevoerd.
+2.1.5
+•
+
+2.2
+
+Vastgelegde gegevens
+
+Naam (voornamen, geslachtsnaamcomponent, samengestelde naam en naamgebruik, waarbij
+naamgebruik wordt afgeleid)
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie geslachtsnaam voornaam
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de ‘Datum aanvang geldigheid’ van de actie ‘Registratie geslachtsnaam voornaam’.
+
+Status: Definitief, versie: 0.13
+
+Pagina 7 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+3 Wijziging geslachtsaanduiding
+3.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Wijziging geslachtsaanduiding’ is de registratie van de
+wijziging van het geslacht en optioneel de gewijzigde voornaam van een transgender.
+De transgender doet aangifte bij de ambtenaar van de burgerlijke stand van de geboortegemeente.
+De ABS voegt een latere vermelding aan de geboorteakte toe.
+De keuze is daarbij beperkt tot man of vrouw. Een derde optie, bijvoorbeeld ‘geslacht onbekend’, is
+niet mogelijk.
+Wanneer de persoon in het buitenland geboren is dan moet aangifte worden gedaan bij de
+ambtenaar van de burgerlijke stand van de gemeente Den Haag.
+Iedere Nederlander van 16 jaar of ouder kan aangifte doen. Vreemdelingen van 16 jaar en ouder
+kunnen dat alleen als zij ten minste één jaar, onmiddellijk voorafgaande aan de aangifte, in
+Nederland wonen en beschikken over een geldige verblijfstitel. Deze controle wordt niet door het
+systeem ondersteund en zal door de ambtenaar van de burgerlijke stand zelf moeten worden
+uitgevoerd.
+3.1.1
+
+Brondocumenten
+
+De basis voor de administratieve handeling is een latere vermelding op de Nederlandse
+geboorteakte of een kennisgeving ervan.
+
+3.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon
+De ingezetene op wiens persoonslijst de geslachtswijziging wordt geactualiseerd.
+
+3.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+Indien de registergemeente van de gemeente waar de latere vermelding aan de geboorteakte is
+toegevoegd een andere gemeente is dan de bijhoudingspartij van de persoon maakt de
+registergemeente een bijhoudingsvoorstel en stuurt dit door aan de bijhoudingspartij van de
+persoon. Indien de bijhoudingspartij van de persoon gekozen heeft voor automatische fiattering
+dan wordt het bijhoudingsvoorstel direct door de BRP verwerkt. Indien de bijhoudingspartij van de
+persoon gekozen heeft voor handmatige fiattering dan dient deze het bijhoudingsvoorstel opnieuw
+in te dienen.
+3.1.4
+
+Bijhoudings(voorstel)partijen
+
+De geboortegemeente van de persoon of de woongemeente van de persoon dient een
+bijhoudingsvoorstel in o.b.v. de geboorteakte met latere vermelding.
+Tevens geldt, dat indien de ouder(s) (uitsluitend bij wijziging voornaam), kind(eren) en/of (ex)partner(s) in een andere gemeente(n) woont/wonen dan de hoofdpersoon, dat deze gemeente(n)
+middels bijhoudingsnotificaties wordt/worden geïnformeerd. Indien de gerelateerde(n) dezelfde
+bijhoudingspartij als de hoofdpersoon heeft/hebben wordt de wijziging direct op de persoonslijst
+van de gerelateerde doorgevoerd.
+3.1.5
+•
+•
+
+Vastgelegde gegevens
+
+Geslachtsaanduiding
+Voornamen
+
+Status: Definitief, versie: 0.13
+
+Pagina 8 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+•
+
+3.2
+
+Samengestelde naam en naamgebruik worden, afhankelijk of de afleiding aan staat en de
+voornamen gewijzigd worden, opnieuw afgeleid
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie geslachtsaanduiding
+Geen bijzonderheden voor deze actie.
+
+•
+
+Nevenactie Registratie voornaam (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de ‘Datum aanvang geldigheid’ van de actie ‘Registratie geslachtsaanduiding’.
+
+Status: Definitief, versie: 0.13
+
+Pagina 9 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+4 Wijziging naamgebruik
+4.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Wijziging naamgebruik’ is de registratie van de
+gewenste wijze van aanschrijving van de persoon met uitsluitend de eigen naam, de naam van de
+partner of een combinatie daarvan.
+Het naamgebruik kan resulteren in de aanschrijving met de:
+•
+•
+•
+
+•
+
+Eigen geslachtsnaam
+De geslachtsnaam van de (vorige)partner
+De geslachtsnaam van de (vorige) partner gevolgd door de eigen geslachtnaam
+De eigen geslachtsnaam gevolgd door de geslachtsnaam van de (vorige) partner .
+
+Normaal gesproken wordt de aanschrijving afgeleid uit de Samengestelde naam en Naamgebruik
+(code naamgebruik). Deze handeling biedt ook de mogelijkheid om hiervan af te wijken. Hierdoor
+kunnen m.b.t. de aanschrijving alle onderdelen van de naam gewijzigd worden. Andersom is het
+ook mogelijk om de afleiding weer aan te zetten waardoor de aanschrijving weer afgeleid wordt
+conform het in Aspectbeschrijving - Naamopbouw [2] beschreven algoritme.
+4.1.1
+
+Brondocumenten
+
+De basis voor de administratieve handeling is een verzoek.
+4.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon
+De ingezetene op wiens persoonslijst het naamgebruik geactualiseerd wordt.
+
+4.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+4.1.4
+
+Bijhoudingspartijen
+
+De bijhoudingsgemeente van de hoofdpersoon
+4.1.5
+•
+•
+•
+•
+•
+•
+•
+•
+
+4.2
+
+Vastgelegde gegevens
+
+Naamgebruik
+Naamgebruik afgeleid?
+Predicaat naamgebruik
+Voornamen naamgebruik
+Adellijke titel naamgebruik
+Voorvoegsel naamgebruik
+Scheidingsteken naamgebruik
+Geslachtsnaamstam naamgebruik
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande actie.
+•
+
+Hoofdactie Registratie naamgebruik
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de ‘Datum aanvang geldigheid’ van de actie ‘Registratie naamgebruik’.
+
+Status: Definitief, versie: 0.13
+
+Pagina 10 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+5 Correctie Naam
+5.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Correctie naam’ is het corrigeren van een fout in de
+voornaam, geslachtsnaam, titel/predicaat of samengestelde naam van een persoon.
+De correctie kan alle attributen van de naam betreffen.
+De ingangsdatum geldigheid van het oorspronkelijke gegeven blijft meestal dezelfde datum maar
+ook die datum kan foutief zijn en hersteld moeten worden.
+Een correctie van de ‘Voornaam’ en/of ‘Geslachtsnaamcomponent’ leidt nooit tot een afgeleide
+‘Samengestelde naam’ en een afgeleid ‘Naamgebruik’. De ‘Samengestelde naam’ zal apart
+gecorrigeerd moeten worden met deze administratieve handeling. Zelfde geldt voor ‘Naamgebruik’,
+deze kan d.m.v. de administratieve handeling ‘Correctie naamgebruik’ gecorrigeerd worden.
+Ook een correctie van/naar ‘Namenreeks?‘ (wel geslachtsnaam, geen voornamen) binnen de groep
+‘Samengestelde naam” werkt niet afgeleid door naar ‘Naamgebruik’, ‘Voornaam’ en
+‘Geslachtsnaamcomponent’. Deze groepen zullen ook allemaal apart gecorrigeerd moeten worden.
+Zie voor meer informatie de ontwerpbeslissing in paragraaf 4.2 van Aspectbeschrijving –
+Corrigeren [5].
+5.1.1
+
+Brondocumenten
+
+Een fout wordt hersteld op basis van het brondocument waaraan de gegevens zijn ontleend en
+foutief zijn opgenomen of op basis van een ‘sterker’ brondocument.
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [5].
+5.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon
+De ingezetene op wiens persoonslijst de voornaam, geslachtsnaam, titel/predicaat of
+samengestelde naam gecorrigeerd wordt.
+
+5.1.3
+•
+5.1.4
+
+Proces
+Geen bijzonderheden
+Bijhoudings(voorstel)partijen
+
+De bijhoudingspartij van de hoofdpersoon
+5.1.5
+
+Vastgelegde gegevens
+
+Indien de ‘Voornaam’ gecorrigeerd wordt, door middel van de acties ‘Correctieverval voornaam’ en
+‘Correctieregistratie voornaam’, vervalt respectievelijk een bestaand voorkomen van de
+aangewezen groep naar de formele historie en wordt er een nieuw voorkomen van deze groep
+geregistreerd. Het betreft hier de groep:
+•
+
+Persoon \ Voornaam.Standaard
+
+Indien de ‘Geslachtsnaam’ gecorrigeerd wordt, door middel van de acties ‘Correctieverval
+geslachtsnaam’ en ‘Correctieregistratie geslachtsnaam’, vervalt respectievelijk een bestaand
+voorkomen van de aangewezen groep naar de formele historie en wordt er een nieuw voorkomen
+van deze groep geregistreerd. Het betreft hier de groep:
+•
+
+Persoon \ Geslachtsnaamcomponent.Standaard
+
+Indien de ‘Samengestelde naam’ gecorrigeerd wordt, door middel van de acties ‘Correctieverval
+samengestelde naam’ en ‘Correctieregistratie samengestelde naam’, vervalt respectievelijk een
+bestaand voorkomen van de aangewezen groep naar de formele historie en wordt er een nieuw
+voorkomen van deze groep geregistreerd. Het betreft hier de groep:
+
+Status: Definitief, versie: 0.13
+
+Pagina 11 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+•
+
+Persoon.Samengestelde naam
+
+Optioneel kan bij het laten vervallen van een voorkomen een ‘Nadere aanduiding verval’ worden
+vastgelegd. Indien de ‘Nadere aanduiding verval’ gelijk is aan ‘S’ (Strijdig met de openbare orde),
+moet ter verantwoording hiervan als bron een rechtsgrond worden opgenomen waarvoor geldt dat
+deze leidt tot strijdigheid.
+
+5.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+•
+
+•
+•
+
+•
+•
+
+Correctieverval voornaam
+Geen bijzonderheden voor deze actie
+Correctieregistratie voornaam
+Geen bijzonderheden voor deze actie
+Correctieverval geslachtsnaamcomponent
+Geen bijzonderheden voor deze actie
+Correctieregistratie geslachtsnaamcomponent
+Geen bijzonderheden voor deze actie
+Correctieverval samengestelde naam
+Geen bijzonderheden voor deze actie
+Correctieregistratie samengestelde naam
+Geen bijzonderheden voor deze actie
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+Status: Definitief, versie: 0.13
+
+Pagina 12 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+6 Correctie geslachtsaanduiding
+6.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Correctie geslachtsaanduiding’ is het corrigeren van het
+foutief geregistreerde geslacht van een persoon.
+6.1.1
+
+Brondocumenten
+
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [5].
+6.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon
+De ingezetene op wiens persoonslijst de ‘Geslachtsaanduiding’ gecorrigeerd wordt.
+
+6.1.3
+•
+6.1.4
+
+Proces
+Geen bijzonderheden
+Bijhoudings(voorstel)partijen
+
+De bijhoudingspartij van de hoofdpersoon
+6.1.5
+
+Vastgelegde gegevens
+
+Indien de ‘Geslachtsaanduiding’ gecorrigeerd wordt, door middel van de acties ‘Correctieverval
+geslachtsaanduiding’ en ‘Correctieregistratie geslachtsaanduiding’, vervalt respectievelijk een
+bestaand voorkomen van de aangewezen groep naar de formele historie en wordt er een nieuw
+voorkomen van deze groep geregistreerd. Het betreft hier de groep:
+•
+
+Persoon.Geslachtsaanduiding
+
+Optioneel kan bij het laten vervallen van een voorkomen een ‘Nadere aanduiding verval’ worden
+vastgelegd. Indien de ‘Nadere aanduiding verval’ gelijk is aan ‘S’ (Strijdig met de openbare orde),
+moet ter verantwoording hiervan als bron een rechtsgrond worden opgenomen waarvoor geldt dat
+deze leidt tot strijdigheid.
+
+6.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+•
+
+Correctieverval geslachtsaanduiding
+Geen bijzonderheden voor deze actie
+Correctieregistratie geslachtsaanduiding
+Geen bijzonderheden voor deze actie
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+Status: Definitief, versie: 0.13
+
+Pagina 13 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+7 Correctie Naamgebruik
+7.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Correctie naamgebruik’ is het corrigeren van de
+gewenste geregistreerde wijze van aanschrijving van de persoon.
+De geregistreerde aanschrijving kan betrekking hebben op de foutief opgenomen waarde van de
+‘Naamgebruikcode” leidend tot wijziging van één van de 4 andere.:
+•
+•
+•
+•
+
+De
+De
+De
+De
+
+eigen geslachtsnaam
+geslachtsnaam van de (vorige) partner
+geslachtsnaam van de (vorige) partner gevolgd door de eigen geslachtnaam
+eigen geslachtsnaam gevolgd door de geslachtsnaam van de (vorige) partner.
+
+Ook is het mogelijk om de overige attributen binnen ‘Naamgebruik’ te corrigeren.
+7.1.1
+
+Brondocumenten
+
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [5].
+7.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon
+De ingezetene op wiens persoonslijst het ‘Naamgebruik’ gecorrigeerd wordt.
+
+7.1.3
+
+Proces
+
+Geen bijzonderheden
+7.1.4
+
+Bijhoudings(voorstel)partijen
+
+De bijhoudingspartij van de hoofdpersoon
+7.1.5
+
+Vastgelegde gegevens
+
+Indien het ‘Naamgebruik’ gecorrigeerd wordt, door middel van de acties ‘Correctieverval
+naamgebruik’ en ‘Correctieregistratie naamgebruik’, vervalt respectievelijk een bestaand
+voorkomen van de aangewezen groep naar de formele historie en wordt er een nieuw voorkomen
+van deze groep geregistreerd. Het betreft hier de groep:
+•
+
+Persoon.Naamgebruik
+
+Optioneel kan bij het laten vervallen van een voorkomen een ‘Nadere aanduiding verval’ worden
+vastgelegd. Indien de ‘Nadere aanduiding verval’ gelijk is aan ‘S’ (Strijdig met de openbare orde),
+moet ter verantwoording hiervan als bron een rechtsgrond worden opgenomen waarvoor geldt dat
+deze leidt tot strijdigheid.
+
+7.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+•
+
+Correctieverval naamgebruik
+Geen bijzonderheden voor deze actie
+Correctieregistratie naamgebruik
+Geen bijzonderheden voor deze actie
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+Status: Definitief, versie: 0.13
+
+Pagina 14 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+8 Speciale handelingen t.b.v. de migratievoorziening
+Deze module kent de volgende handelingen die specifiek voor aanroep vanuit de
+migratievoorziening bedoeld zijn:
+•
+•
+•
+
+GBA - Wijziging geslachtsnaam
+GBA - Wijziging voornaam
+GBA - Wijziging geslachtsaanduiding
+
+GBA-handelingen worden door de migratievoorziening geleverd en komen van de GBA Toevallige
+gebeurtenissenberichten (Tb02). Deze worden gedurende de duale periode ontvangen van
+gemeenten die vallen onder het GBA regime.
+Voor deze bijhoudingsberichten geldt dat de verwerkingswijze uitsluitend ‘Bijhouding’ kan zijn.
+‘Prevalidatie’ is niet van toepassing op bijhoudingsberichten die worden ontvangen via de
+migratievoorziening.
+Het betreft altijd asymmetrische bijhoudingen waarbij één hoofdpersoon betrokken is. Dit komt
+omdat de scope van verwerking van een administratieve handeling bij de GBA de persoonslijst van
+één persoon is. Een handeling op een relatie, zoals bijvoorbeeld een familierechtelijke betrekking,
+wordt per persoonslijst van de betrokken personen verwerkt. Per gewijzigde persoonslijst zal dus
+een GBA toevallige gebeurtenissenbericht (Tb01 / Tb02) worden verstuurd.
+Naast deze interactie tussen GBA en BRP vindt ook nog de reguliere GBA-synchronisatie (Lg01)
+plaats, waarbij persoonslijsten tussen GBA en BRP wordt gesynchroniseerd.
+
+Status: Definitief, versie: 0.13
+
+Pagina 15 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+9 Acties
+De generieke functionaliteit van de relevante acties binnen de context van deze module is in dit
+hoofdstuk per actie beschreven.
+Per actie worden de gegevensgroepen en attributen beschreven die bijgehouden worden. Dit
+betreft niet alleen de gegevensgroepen zoals deze in het bijhoudingsbericht zijn opgenomen, maar
+ook de afgeleide verwerkingen door de BRP zelf.
+Alleen de attributen waarvan de waarden worden afgeleid zijn expliciet benoemd. De attributen
+zoals die in het bericht per actie en per gegevensgroep zijn opgenomen worden niet expliciet in dit
+hoofdstuk herhaald.
+Daarnaast wordt de werking van de formele en materiële historie niet expliciet benoemd. Voor
+meer informatie hierover zie Aspectbeschrijving - Formele en materiele historie [3].
+
+9.1
+
+Registratie geslachtsnaam voornaam
+
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+Persoon \ Voornaam.Identiteit
+Deze groep wordt bij het kind geregistreerd. Let op: Nieuwe voornamen worden altijd
+in zijn totaliteit meegegeven in het bericht. De oude voornamen worden allemaal
+materieel beëindigd.
+
+•
+
+Persoon \ Voornaam.Standaard
+Voor deze groep zijn er twee mogelijkheden:
+o
+
+o
+
+•
+
+•
+
+Als de groep aanwezig is in het bericht moet deze worden geregistreerd.
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Als de Namenreeks uit Persoon.Samengestelde naam wordt gewijzigd in ‘Ja’
+worden alle voornamen afgeleid beëindigd.
+Element
+
+Afleiding
+
+Datum einde geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon \ Geslachtsnaamcomponent.Standaard
+De volgende elementen worden afgeleid geregistreerd:
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon.Samengestelde naam
+Deze groep wordt als volgt geregistreerd:
+Element
+
+Afleiding
+Indien ‘Afgeleid? gelijk is aan ‘Nee’ dan overnemen uit bericht
+
+Voornamen
+
+Indien ‘Afgeleid?’gelijk ia aan ‘Ja’ dan conform Algoritme, zie
+Aspectbeschrijving - Naamopbouw [2]
+
+Voorvoegsel
+
+Idem
+
+Scheidingsteken
+
+Idem
+
+Status: Definitief, versie: 0.13
+
+Pagina 16 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+•
+
+9.2
+
+Geslachtsnaamstam
+
+Idem
+
+Predicaat
+
+Idem
+
+Adellijke titel
+
+Idem
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon.Naamgebruik
+Deze groep wordt afgeleid geregistreerd.
+Element
+
+Afleiding
+
+Voornamen naamgebruik
+
+Algoritme, zie Aspectbeschrijving - Naamopbouw [2]
+
+Voorvoegsel naamgebruik
+
+Idem
+
+Scheidingsteken
+naamgebruik
+
+Idem
+
+Geslachtsnaamstam
+naamgebruik
+
+Idem
+
+Predicaat naamgebruik
+
+Idem
+
+Adellijke titel naamgebruik
+
+Idem
+
+Naamgebruik Afgeleid?
+
+‘Ja’
+
+Registratie Geslachtsaanduiding
+
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+9.3
+
+Persoon.Geslachtsaanduiding
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Registratie voornaam
+
+Nieuwe voornamen worden altijd in zijn totaliteit meegegeven in het bericht. De oude voornamen
+worden allemaal materieel beëindigd. Met de actie worden gegevens van de volgende groepen
+geregistreerd:
+•
+•
+
+•
+
+Persoon \ Voornaam.Identiteit
+Persoon \ Voornaam.Standaard
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon.Samengestelde naam
+Indien ‘Persoon.Samengestelde naam.Afgeleid?’ gelijk is aan ‘Nee’ dan wordt er niets
+afgeleid en wijzigt Persoon.Samengestelde naam niet.
+Indien ‘Persoon.Samengestelde naam.Afgeleid?’ gelijk is aan ‘Ja’ dan worden de
+volgende elementen afgeleid geregistreerd:
+Element
+
+Afleiding
+
+Namenreeks?
+
+Van vorig voorkomen
+
+Voornamen
+
+Algoritme, zie Aspectbeschrijving - Naamopbouw [2]
+
+Voorvoegsel
+
+Algoritme, zie Aspectbeschrijving - Naamopbouw [2]
+
+Status: Definitief, versie: 0.13
+
+Pagina 17 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+•
+
+9.4
+
+Scheidingsteken
+
+Algoritme, zie Aspectbeschrijving - Naamopbouw [2]
+
+Geslachtsnaamstam
+
+Algoritme, zie Aspectbeschrijving - Naamopbouw [2]
+
+Predicaat
+
+Algoritme, zie Aspectbeschrijving - Naamopbouw [2]
+
+Adellijke titel
+
+Algoritme, zie Aspectbeschrijving - Naamopbouw [2]
+
+Naamgebruik Afgeleid?
+
+Van vorig voorkomen
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon.Naamgebruik
+Indien ‘Persoon.Naamgebruik afgeleid?’ gelijk is aan ‘Nee’ dan wordt er niets afgeleid
+en wijzigt Persoon.Naamgebruik niet.
+Indien ‘Persoon.Naamgebruik afgeleid?’ gelijk is aan ‘Ja’ dan worden de volgende
+elementen afgeleid geregistreerd:
+Element
+
+Afleiding
+
+Naamgebruik
+
+Van vorig voorkomen
+
+Naamgebruik Afgeleid?
+
+Van vorig voorkomen
+
+Voornamen naamgebruik
+
+Algoritme, zie Aspectbeschrijving - Naamopbouw [2]
+
+Voorvoegsel naamgebruik
+
+Algoritme, zie Aspectbeschrijving - Naamopbouw [2]
+
+Scheidingsteken
+naamgebruik
+
+Algoritme, zie Aspectbeschrijving - Naamopbouw [2]
+
+Geslachtsnaamstam
+naamgebruik
+
+Algoritme, zie Aspectbeschrijving - Naamopbouw [2]
+
+Predicaat naamgebruik
+
+Algoritme, zie Aspectbeschrijving - Naamopbouw [2]
+
+Adellijke titel naamgebruik
+
+Algoritme, zie Aspectbeschrijving - Naamopbouw [2]
+
+Registratie naamgebruik
+
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+Persoon.Naamgebruik
+Element
+
+Afleiding
+
+Naamgebruik
+
+Waarde wordt overgenomen uit het bericht
+
+Naamgebruik afgeleid?
+
+Waarde wordt overgenomen uit het bericht
+Indien ‘Afgeleid? gelijk is aan ‘Nee’ dan overnemen uit bericht
+
+Voornamen naamgebruik
+
+Indien ‘Afgeleid?’gelijk ia aan ‘Ja’ dan conform Algoritme, zie
+Aspectbeschrijving - Naamopbouw [2]
+
+Voorvoegsel naamgebruik
+
+Idem
+
+Scheidingsteken
+naamgebruik
+
+Idem
+
+Geslachtsnaamstam
+naamgebruik
+
+Idem
+
+Predicaat naamgebruik
+
+Idem
+
+Adellijke titel naamgebruik
+
+Idem
+
+Status: Definitief, versie: 0.13
+
+Pagina 18 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+9.5
+
+Correctieverval voornaam
+
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep:
+•
+
+9.6
+
+Persoon \ Voornaam.Standaard
+
+Correctieregistratie voornaam
+
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+
+9.7
+
+Persoon \ Voornaam.Standaard
+
+Correctieverval geslachtsnaam
+
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep:
+•
+
+9.8
+
+Persoon \ Geslachtsnaam component.Standaard
+
+Correctieregistratie geslachtsnaam
+
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+
+9.9
+
+Persoon \ Geslachtsnaamcomponent.Standaard
+
+Correctieverval samengestelde naam
+
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep:
+•
+
+Persoon.Samengestelde naam
+
+9.10 Correctieregistratie samengestelde naam
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+
+Persoon.Samengestelde naam
+Element
+
+Afleiding
+Indien ‘Afgeleid? gelijk is aan ‘Nee’ dan overnemen uit bericht
+
+Voornamen
+
+Indien ‘Afgeleid?’gelijk ia aan ‘Ja’ dan conform Algoritme, zie
+Aspectbeschrijving - Naamopbouw [2]
+
+Voorvoegsel
+
+Idem
+
+Scheidingsteken
+
+Idem
+
+Geslachtsnaamstam
+
+Idem
+
+Predicaat
+
+Idem
+
+Adellijke titel
+
+Idem
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Status: Definitief, versie: 0.13
+
+Pagina 19 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+9.11 Correctieverval geslachtsaanduiding
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep:
+•
+
+Persoon.Geslachtsaanduiding
+
+9.12 Correctieregistratie geslachtsaanduiding
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+
+Persoon.Geslachtsaanduiding
+
+9.13 Correctieverval naamgebruik
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep:
+•
+
+Persoon.Naamgebruik
+
+9.14 Correctieregistratie naamgebruik
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+
+Persoon.Naamgebruik
+Element
+
+Afleiding
+
+Naamgebruik
+
+Waarde wordt overgenomen uit het bericht
+
+Naamgebruik afgeleid?
+
+Waarde wordt overgenomen uit het bericht
+Indien ‘Afgeleid? gelijk is aan ‘Nee’ dan overnemen uit bericht
+
+Voornamen naamgebruik
+
+Indien ‘Afgeleid?’gelijk ia aan ‘Ja’ dan conform Algoritme, zie
+Aspectbeschrijving - Naamopbouw [2]
+
+Voorvoegsel naamgebruik
+
+Idem
+
+Scheidingsteken
+naamgebruik
+
+Idem
+
+Geslachtsnaamstam
+naamgebruik
+
+Idem
+
+Predicaat naamgebruik
+
+Idem
+
+Adellijke titel naamgebruik
+
+Idem
+
+Status: Definitief, versie: 0.13
+
+Pagina 20 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+Appendix A – BZVU en toegestane indienende partijen
+In onderstaande tabel staat per handeling aangegeven of het berichtelement BZVU (Bezien vanuit
+persoon) van toepassing is – inclusief motivatie – en de toegestane indienende partijen – ook
+inclusief motivatie.
+Wanneer BZVU niet van toepassing is zal het berichtelement niet aanwezig zijn in het bericht. Voor
+meer informatie over BZVU zie [4].
+Bij toegestane indienende partijen wordt vermeld of het bijhoudingsvoorstel (ook) door andere dan
+de eigen gemeente mag worden ingestuurd. In onderstaande tabel kan deze kolom de volgende
+waarden aannemen:
+•
+•
+•
+
+A(lle): het bijhoudingsvoorstel mag door elke bijhoudingspartij worden ingediend;
+H(uidige): het bijhoudingsvoorstel mag alleen door de huidige bijhoudingspartij worden
+ingediend;
+B(eperkt): het bijhoudingsvoorstel mag door een beperkt aantal bijhoudingspartijen
+worden ingediend. In de motivatie staat vermeld welke partijen dat zijn.
+
+Administratieve
+Handeling
+
+BZVU?
+
+Wijziging naam
+
+N
+
+Motivatie
+
+Er zijn andere administratieve
+handelingen waarmee, op de
+persoonslijst van de gerelateerde,
+hetzelfde doel bereikt kan
+worden.
+Namelijk:
+
+Toegestane
+indienende
+partij(en)
+
+Motivatie
+
+B
+
+Geboortegemeente en
+huidige bijhoudingspartij.
+
+- AH Wijziging partnergegevens
+huwelijk
+- AH Wijziging partnergegevens
+geregistreerd partnerschap
+- AH Wijziging oudergegevens
+- AH Wijziging kindgegevens
+Wijziging
+geslachtsaanduiding
+
+N
+
+Idem
+M.u.v. AH Wijziging kindgegevens
+
+B
+
+Geboortegemeente en
+huidige bijhoudingspartij.
+
+Wijziging
+naamgebruik
+
+N
+
+Heeft betrekking op slechts 1
+persoonslijst.
+
+H
+
+Huidige
+bijhoudingspartij.
+
+Correctie naam
+
+N
+
+Er zijn andere administratieve
+handelingen waarmee, op de
+persoonslijst van de gerelateerde,
+hetzelfde doel bereikt kan
+worden. Namelijk:
+
+H
+
+Huidige
+bijhoudingspartij.
+
+- AH Correctie partnergegevens
+huwelijk
+- AH Correctie partnergegevens
+geregistreerd partnerschap
+- AH Correctie oudergegevens
+- AH Correctie kindgegevens
+Correctie
+geslachtsaanduiding
+
+N
+
+Idem
+M.u.v. AH Correctie kindgegevens
+
+H
+
+Huidige
+bijhoudingspartij.
+
+Correctie
+naamgebruik
+
+N
+
+Heeft betrekking op slechts 1
+persoonslijst.
+
+H
+
+Huidige
+bijhoudingspartij.
+
+Status: Definitief, versie: 0.13
+
+Pagina 21 van 22
+
+UCS BY.0.NnG - Naam en Geslacht
+
+10 Openstaande punten
+•
+
+In hoofdstuk 8 zijn de volgende GBA-handelingen nog niet uitgewerkt:
+o GBA - Wijziging geslachtsnaam
+o GBA - Wijziging voornaam
+o GBA - Wijziging geslachtsaanduiding
+
+Status: Definitief, versie: 0.13
+
+Pagina 22 van 22
+
+

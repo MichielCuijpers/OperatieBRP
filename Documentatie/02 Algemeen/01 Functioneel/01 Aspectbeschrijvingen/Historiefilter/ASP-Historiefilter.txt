@@ -1,0 +1,352 @@
+Aspectbeschrijving – Historiefilter
+Versie
+
+1.0
+
+Datum
+
+15 juni 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+29-03-2017
+
+0.1
+
+Beschrijving van historiefilter uit BV.0.GD-Geef details
+persoon overgezet naar aspectbeschrijving vanwege
+herbruikbaarheid voor selecties
+
+Operatie BRP
+
+31-03-2017
+
+0.2
+
+Reviewcommentaar verwerkt
+
+Operatie BRP
+
+18-04-2017
+
+0.3
+
+Geef medebewoner en R2279 toegevoegd aan de inleiding
+
+Operatie BRP
+
+01-05-2017
+
+0.4
+
+Opmerkingen operatie BRP verwerkt
+
+Operatie BRP
+
+02-05-2017
+
+0.5
+
+Gedrag verduidelijkt als historievorm leeg gelaten wordt
+
+Operatie BRP
+
+15-06-2017
+
+1.0
+
+Gedrag voor groepen met 'formele historie met materieel
+aspect' toegevoegd aan de inleiding.
+
+Operatie BRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Operatie BRP
+
+0.3
+
+Operatie BRP
+
+0.4
+
+Operatie BRP
+
+Aspectbeschrijving – Historiefilter
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+
+2
+
+Doel ....................................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Historiefilter ............................................................................................................. 4
+2.1
+2.2
+2.3
+2.4
+
+Inleiding ..............................................................................................................................4
+Historievorm “Geen” ..............................................................................................................6
+Historievorm “Materieel” ........................................................................................................8
+Historievorm “MaterieelFormeel” ........................................................................................... 10
+
+Status: Definitief, versie: 1.0
+
+Pagina 2 van 11
+
+Aspectbeschrijving – Historiefilter
+
+1 Inleiding
+1.1
+
+Doel
+
+Het historiefilter geeft de mogelijkheid om het resultaat van de dienst ‘Geef Details persoon’, ‘Geef
+Medebewoner’ of het resultaat van de dienst ‘Selectie’ te beperken tot een beperkt deel van
+formele en materiele historie.
+Doel van dit document om tot in detail te beschrijven hoe het historiefilter werkt.
+
+1.2
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Aspectbeschrijving – Formele en Materiele Historie
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 1.0
+
+Pagina 3 van 11
+
+Aspectbeschrijving – Historiefilter
+
+2 Historiefilter
+2.1
+
+Inleiding
+
+Op grond van zijn autorisatie krijgt de afnemer per groep alleen actuele gegevens of de complete
+materiële historie. Ook alle inmiddels vervallen gegevens (waarmee inzichtelijk gemaakt kan
+worden wat er op een bepaald moment in de centrale voorzieningen bekend was) zijn beschikbaar
+als de afnemer geautoriseerd is voor de formele historie. De aanvrager zal niet altijd
+geïnteresseerd zijn in al die gegevens. Vaak zullen de actuele gegevens of de op dit moment
+geregistreerde materiële historie voldoende zijn. In andere gevallen kan de aanvrager een
+specifieke vraag hebben over de formele historie, bijvoorbeeld wat op 23 maart 2013 volgens de
+toen in de centrale voorzieningen bekende gegevens het actuele adres van de persoon was. Het
+historiefilter kan helpen om in dit soort gevallen alleen de relevante gegevens in het
+bevragingsresultaatbericht op te nemen.
+De werking van het historiefilter wordt uitgelegd aan de hand van onderstaande voorbeeldsituatie.
+We beperken ons daarbij tot de groep Adres; in werkelijkheid zullen alle groepen op soortgelijke
+wijze worden gefilterd.
+
+In deze voorbeeldsituatie zijn er vier administratieve handelingen geweest:
+•
+Handeling ‘W’ is geregistreerd op 1-1-2000 om 14:03. Hierbij is vastgelegd dat de persoon
+per 1-1-2000 op Neude 11 te Utrecht woont [A].
+•
+Handeling ‘X’ betreft een verhuizing (Verhuizing 1) die is geregistreerd op 1-1-2010,
+10:12. Per 1-1-2010 komt de persoon op Spui 43 te Den Haag te wonen. Het oude adres
+[A’] krijgt een datum einde geldigheid gelijk aan de datum aanvang geldigheid van het
+nieuwe adres; 1-1-2010. Het oude adres zonder datum einde geldigheid [A] komt op
+hetzelfde tijdstip te vervallen als het nieuwe adres [B] is geregistreerd.
+•
+Handeling ‘Y’ betreft een doorgevoerde correctie op het adres Spui 43 te Den Haag. Bij
+aangifte van een nieuwe verhuizing (zie handeling ‘Z’) bleek dat voor het bestaande adres
+de huisletter ‘B’ ontbrak. Deze is daarom alsnog toegevoegd aan het adres [C]. Deze
+
+Status: Definitief, versie: 1.0
+
+Pagina 4 van 11
+
+Aspectbeschrijving – Historiefilter
+
+•
+
+correctie vond plaats op 1-1-2015, 11:07. Daarmee kwam het oude adres [B] zonder
+huisletter en zonder datum einde geldigheid op hetzelfde tijdstip te vervallen.
+Handeling ‘Z’ betreft een verhuizing per 1-1-2015 naar Uithoorn (Verhuizing 2). Dit is
+vastgelegd per 1-1-2015, 11:12. Het oude adres krijgt een datum einde geldigheid [C’]
+gelijk aan de datum aanvang geldigheid van het nieuwe adres; 1-1-2015. Het oude adres
+zonder datum einde geldigheid [C] komt op hetzelfde tijdstip te vervallen als het nieuwe
+adres [D] is geregistreerd.
+
+De drie verschillende vormen van historiefilters “Geen”, “Materieel” en “MaterieelFormeel” filteren
+op groepen. Mocht na het toepassen van het historiefilter een object, inclusief de onderliggende
+objecten in het bericht, geen enkele groep meer bevatten of alleen nog een groep Identiteit met
+historiepatroon 'geen', dan moeten deze objecten ook gefilterd worden.
+Bij formele groepen die een materieel patroon kennen zoals huwelijk of overlijden gebruiken we
+alleen de DAG om te filteren en niet de DEG. Dus datum aanvang huwelijk en datum overlijden.
+Indien materieel wordt geprikt op een moment voordat het huwelijk is aangevangen, wordt het
+huwelijk niet geleverd. Prikken we materieel op een willekeurig ander moment na aanvang dan
+leveren we het wel. Daarbij negeren we dus de DEG.
+Als Historievorm leeg wordt gelaten dan is het historiefilter niet van toepassing tenzij minstens een
+van de peilmomenten gevuld is, dan wordt het historiefilter conform Historievorm “Geen” gevolgd.
+Indien één of beide peilmomenten leeg zijn, dan wordt de systeemdatum als peilmoment(en)
+gebruikt.
+
+Status: Definitief, versie: 1.0
+
+Pagina 5 van 11
+
+Aspectbeschrijving – Historiefilter
+
+2.2
+
+Historievorm “Geen”
+
+Als Historievorm de waarde “Geen” heeft, dan worden alleen de gegevens die geldig waren op
+opgegeven Peilmoment materieel resultaat zoals bekend in de centrale voorzieningen op
+Peilmoment formeel resultaat geleverd (dus maar één voorkomen van elke groep). Als beide
+peilmomenten leeg zijn, dan worden alleen de actuele gegevens geleverd.
+Indien er onzekerheid bestaat over de geldigheid van een voorkomen, door bijvoorbeeld een deels
+onbekende datum, dan worden beide voorkomens waar de onzekerheid over bestaat geleverd. Het
+gevolg hiervan is dat er soms twee voorkomens geleverd worden waar er op voorhand 1
+voorkomen verwacht wordt.
+Voorbeeld 1: Historievorm = “Geen”, Peilmomenten leeg.
+
+Voorbeeld 1
+
+De gestelde vraag is daarmee feitelijk: waar woont de persoon nu, met de kennis van dit moment?
+Het antwoord is dan ‘Bertram 157, Uithoorn’.
+
+Status: Definitief, versie: 1.0
+
+Pagina 6 van 11
+
+Aspectbeschrijving – Historiefilter
+
+Voorbeeld 2: Historievorm = “Geen” (of leeg), Peilmomenten gevuld.
+Door wel een waarde mee te geven in de peilmomenten, kan de afnemer een ander voorkomen
+selecteren. In het voorbeeld Peilmoment formeel = 21-1-2106 en Peilmoment materieel = 17-32008.
+De gestelde vraag is dan: waar woonde de persoon op 17-3-2008, met de kennis van de centrale
+voorzieningen op 21-1-2016? Het antwoord is dan ‘Neude 11, Utrecht’. Door de aanwezigheid van
+een datum einde geldigheid (aangeduid als DEG) is zichtbaar dat de persoon daar inmiddels niet
+meer woont. Door de afwezigheid van een tijdstip verval (aangeduid als tsVerval) is bovendien af
+te leiden dat deze gegevens ook nu nog geldig zijn.
+
+Voorbeeld 2
+
+Status: Definitief, versie: 1.0
+
+Pagina 7 van 11
+
+Aspectbeschrijving – Historiefilter
+
+2.3
+
+Historievorm “Materieel”
+
+Als Historievorm de waarde “Materieel” heeft, dan wordt de materiële tijdslijn geleverd tot en met
+Peilmoment materieel resultaat zoals bekend in de centrale voorzieningen op Peilmoment formeel
+resultaat. Als de peilmomenten leeg zijn, dan wordt de complete materiële historie van de persoon
+geleverd zoals die nu in de centrale voorzieningen bekend is.
+Voorbeeld 3: Historievorm = “Materieel”, Peilmomenten leeg.
+De vraag is dan: wat is de adreshistorie van de persoon volgens de actuele kennis van de centrale
+voorzieningen? Dit levert drie adressen op:
+•
+Neude 11, Utrecht, vanaf 1-1-2000 tot 1-1-2010
+•
+Spui 43 B, Den Haag, vanaf 1-1-2010 tot 1-1-2015
+•
+Bertram 157, Uithoorn, vanaf 1-1-2015
+
+Voorbeeld 3
+
+Status: Definitief, versie: 1.0
+
+Pagina 8 van 11
+
+Aspectbeschrijving – Historiefilter
+
+Voorbeeld 4: Historievorm = “Materieel”, Peilmomenten gevuld.
+Ook hier is het mogelijk afwijkende peilmomenten te kiezen. Bijvoorbeeld: hoe zag de historie tot
+2014 er volgens de centrale voorzieningen uit op 1-1-2014? Opgaaf van de peilmomenten is dan:
+Peilmoment materieel resultaat = 01-01-2014 en Peilmoment formeel = 01-01-2014.
+
+Voorbeeld 4
+
+In dit geval wordt Neude 11, Utrecht en Spui 43, Den Haag (zonder huisletter) gevonden. Het
+laatste voorkomen heeft bovendien een ‘nadere indicatie verval’ met de waarde “onjuist”, hieruit
+blijkt dat dit adres is gecorrigeerd is en daarmee de vervallen waarden foutief zijn bevonden.
+
+Status: Definitief, versie: 1.0
+
+Pagina 9 van 11
+
+Aspectbeschrijving – Historiefilter
+
+2.4
+
+Historievorm “MaterieelFormeel”
+
+Zonder peilmomenten levert dit feitelijk alle informatie op die de centrale voorzieningen
+beschikbaar hebben: alle voorkomens die enige overlap hebben met het ‘rode vlak’ worden
+geleverd. Het vlak buiten het rood gearceerde gebied stelt de toekomst voor en valt derhalve
+buiten de registraties van de centrale voorzieningen (moeten nog plaatsvinden).
+Deze invulling van deze Historievorm kan handig zijn om alle beschikbare adresgegevens over te
+halen naar de lokale administratie van de aanvrager.
+Voorbeeld 5: Historievorm = “MaterieelFormeel”, Peilmomenten leeg.
+
+Voorbeeld 5
+
+Door de peilmomenten te wijzigen kan de ‘rode punt’ worden verlegd. Hiermee kan de bevraging
+van de historie worden beperkt tot een kleiner gebied.
+Als de Historievorm de waarde “MaterieelFormeel” heeft dan worden alle voorkomens geleverd die
+in de centrale voorzieningen geregistreerd zijn tot en met Peilmoment formeel resultaat met een
+geldigheid die betrekking heeft op enige periode tot en met het Peilmoment materieel resultaat. Als
+beide peilmomenten leeg zijn dan worden alle geregistreerde voorkomens geleverd.
+
+Status: Definitief, versie: 1.0
+
+Pagina 10 van 11
+
+Aspectbeschrijving – Historiefilter
+
+Voorbeeld 6: Historievorm = “MaterieelFormeel”, Peilmomenten gevuld.
+In het onderstaande voorbeeld vallen de ‘grijze’ voorkomens compleet buiten de geselecteerde
+range en zullen dus niet worden geleverd.
+Hierbij zijn de peilmomenten bijvoorbeeld als volgt opgegeven: Peilmoment materieel resultaat =
+01-03-2012 en Peilmoment formeel = 01-06-2014.
+
+Voorbeeld 6
+
+Status: Definitief, versie: 1.0
+
+Pagina 11 van 11
+
+

@@ -1,0 +1,908 @@
+UC104 Vul protocollering BRP initieel
+
+1.2
+
+Datum
+Status
+
+06-07-2017
+Definitief
+
+Definitief | 1.2 | UC104 Vul protocollering BRP initieel | 06-07-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................4
+PRECONDITIE ........................................................................................................................................4
+POSTCONDITIE......................................................................................................................................4
+
+VERLOOP .................................................................................................................................................5
+2.1
+2.2
+2.3
+2.4
+
+REGULIER VERLOOP ..............................................................................................................................5
+ALTERNATIEF VERLOOP: TOEGANG LEVERINGSAUTORISATIE KAN NIET GEVONDEN WORDEN .......5
+ALTERNATIEF VERLOOP: ER WORDEN MEERDERE TOEGANG LEVERINGSAUTORISATIE GEVONDEN 5
+ALTERNATIEF VERLOOP: ER KAN GEEN DIENST GEVONDEN WORDEN WAAR DE ACTIVITEIT BIJ
+HOORT ..............................................................................................................................................................5
+2.5 ALTERNATIEF VERLOOP: PERSOON KAN NIET GEVONDEN WORDEN ..................................................5
+2.6 ALTERNATIEF VERLOOP: GEGEVENS KUNNEN NIET IN DE BRP VASTGELEGD WORDEN ..................5
+2.7 ALTERNATIEF VERLOOP: PERSOON IS OPGESCHORT MET REDEN ‘F’ ................................................6
+3
+
+SPECIAL REQUIREMENTS ..............................................................................................................7
+3.1 MODEL BRP ..........................................................................................................................................7
+3.1.1 Leveringsaantekening \ Persoon ........................................................................................7
+3.1.2 Leveringsaantekening ............................................................................................................7
+3.2 DE BRON VAN DE INITIËLE VULLING ...................................................................................................7
+3.3 MODEL GBA-V.....................................................................................................................................8
+3.3.1 Activiteit ......................................................................................................................................8
+3.4 RELEVANTE TYPES EN SUBTYPES .........................................................................................................8
+3.5 ACTIVITEITEN VINDEN..........................................................................................................................9
+3.5.1 Berichtactiviteiten van selecties .........................................................................................9
+3.5.2 Overige berichtactiviteiten ...................................................................................................9
+3.6 JUISTE TOEGANG LEVERINGSAUTORISATIE, LEVERINGSAUTORISATIE, DIENSTBUNDEL EN
+DIENST BEPALEN .............................................................................................................................................9
+3.6.1 Toegang leveringsautorisatie bepalen .............................................................................9
+3.6.2 Geldigheid van Toegang leveringsautorisatie bepalen ..............................................9
+3.6.3 Dienst bepalen ........................................................................................................................10
+3.7 JUISTE PERSOON IN DE BRP BEPALEN..............................................................................................11
+3.8 GEGEVENS VASTLEGGEN IN DE BRP ................................................................................................12
+3.9 PERSOON IS OPGESCHORT MET REDEN ‘F’ .......................................................................................12
+3.10 PERSOON IS OPGESCHORT MET REDEN ‘W’ ..................................................................................12
+3.11 FOUTEN VASTLEGGEN .....................................................................................................................12
+3.12 AANVULLENDE INITIËLE VULLING OP PRODUCTIE .........................................................................12
+
+4
+
+OPMERKINGEN ..................................................................................................................................13
+4.1
+
+GELEVERDE GEGEVENS NA INITIËLE VULLING NIET ALTIJD AF TE LEIDEN ......................................13
+
+Operatie BRP
+
+Pagina 2 van 13
+
+Definitief | 1.2 | UC104 Vul protocollering BRP initieel | 06-07-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+22-05-2014
+25-05-2014
+16-06-2014
+
+0.1
+0.2
+0.3
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+29-07-2016
+03-08-2016
+
+0.4
+0.5
+
+22-08-2016
+
+0.6
+
+29-08-2016
+
+0.7
+
+08-03-2017
+
+0.8
+
+10-04-2017
+
+0.9
+
+13-04-2017
+18-05-2017
+
+1.0
+1.1
+
+06-07-2017
+
+1.2
+
+Initiële versie
+Reviewcommentaar verwerkt
+Reviewcommentaar verwerkt: wijziging bmr
+ten aanzien van peilmoment formeel
+resultaat dat nu een periode is
+Bijgewerkt met BMR 47
+Reviewcommentaar verwerkt, extra
+requirements opgenomen t.b.v.
+herhaalbaarheid en requirements voor
+berichten met meerdere personen
+opgenomen
+Database bron toegevoegd/aangepast,
+uitzondering opschorting reden ‘F’
+aangepast.
+Opmerking opgenomen over het kunnen
+herleiden van de geleverde gegevens.
+Van personen opgeschort die met reden ‘F’
+zijn opgeschort, worden definitief geen
+protocolleringsgegevens gevuld.
+Verduidelijking opgenomen over het vinden
+van het actuele a_nr in lo3_pl_persoon.
+Selectie van berichtactiviteiten aangepast
+naar aanleiding bevinding PDT.
+Opgeschort reden ‘W’ apart melden, bug
+gefixt bij bepalen geldige
+leveringsautorisatie
+Tekstuele aanpassingen
+Ontbrekende activiteiten van Ng01 en
+beheerder toegevoegd
+Voor activiteiten met moeder_id <> 106
+geldt ook als moeder is null
+
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+25-05-2014
+
+0.1
+
+Review
+
+Operatie BRP
+
+16-06-2014
+
+0.2
+
+Review
+
+Operatie BRP
+
+29-07-2016
+
+0.4
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 13
+
+Definitief | 1.2 | UC104 Vul protocollering BRP initieel | 06-07-2017
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+In dit document wordt beschreven op welke wijze de gegevens van de protocollering van GBA-V
+worden overgezet naar de protocollering in de BRP. Door de protocollering over te zetten kan bij
+het maken van protocolleringsoverzichten gebruik gemaakt worden van de functionaliteit van de
+BRP.
+In GBA-V is de protocollering vastgelegd middels de activiteitenregistratie.
+
+1.2
+
+Referenties
+#
+[AUT]
+
+1.3
+
+Document
+UC102 Vul autorisatietabelregels in
+BRP initieel.doc
+
+Organisatie
+-
+
+Versie
+-
+
+Datum
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 4 van 13
+
+Definitief | 1.2 | UC104 Vul protocollering BRP initieel | 06-07-2017
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+1. Het systeem zoekt in GBA-V alle activiteiten die aan de voorwaarden voldoen om als
+protocollering overgezet te worden naar de BRP (par. 3.5)
+2. Het systeem voert voor elke gevonden activiteit de volgende controles en acties uit
+a. Het systeem stelt vast dat er een Toegang leveringsautorisatie bestaat waarvan de
+geldigheid overeenkomt met die van de laatste actie datum van de activiteit (par.
+3.6.1, 3.6.2) (AF: 2.2, 2.3)
+b. Het systeem bepaalt bij welke Dienst de GBA-V-activiteit hoort (par. 3.6.3) (AF: 2.4)
+c. Het systeem bepaalt welke persoon in de BRP bij de activiteit hoort (par. 3.7) (AF: 2.5)
+d. Het systeem stelt vast dat de persoon niet is opgeschort met reden ‘F’ (par. 3.9) (AF:
+2.7)
+e. Het systeem legt de juiste gegevens vast BRP (par. 3.8, 3.11) (AF: 2.6)
+3. De use case eindigt.
+
+2.2
+
+Alternatief verloop: Toegang leveringsautorisatie kan niet gevonden worden
+1. Het systeem kan geen geldig Toegang leveringsautorisatie vinden.
+2. Het systeem legt vast dat er geen geldig Toegang leveringsautorisatie gevonden kon worden
+(par. 3.11)
+3. Het systeem gaat verder bij stap 2.a van het regulier verloop (volgende gevonden activiteit)
+
+2.3
+
+Alternatief verloop: er worden meerdere Toegang leveringsautorisatie gevonden
+1. Het systeem stelt vast dat er meerdere Toegang leveringsautorisatie geldig zijn
+2. Het systeem legt vast dat er meerdere Toegang leveringsautorisatie gevonden zijn (par. 3.11)
+3. Het systeem gaat verder bij stap 2.a van het regulier verloop (volgende gevonden activiteit)
+
+2.4
+
+Alternatief verloop: er kan geen Dienst gevonden worden waar de activiteit bij hoort
+1. Het systeem stelt vast dat er geen Dienst gevonden kan worden waar de activiteit bij hoort
+2. Het systeem legt vast dat er geen Dienst gevonden kon worden (par. 3.11)
+3. Het systeem gaat verder bij stap 2.a van het regulier verloop (volgende gevonden activiteit)
+
+2.5
+
+Alternatief verloop: persoon kan niet gevonden worden
+1. Het systeem kan de persoon uit de GBA-V-activiteit niet in de BRP vinden
+2. Het systeem legt vast dat de persoon niet gevonden kon worden (par. 3.11)
+3. Het systeem gaat verder bij stap 2.a van het regulier verloop (volgende gevonden activiteit)
+
+2.6
+
+Alternatief verloop: gegevens kunnen niet in de BRP vastgelegd worden
+1. Het systeem kan de gegevens niet in de BRP vastleggen
+2. Het systeem legt vast dat de gegevens niet in de BRP vastgelegd kunnen worden (par. 3.11)
+3. Het systeem gaat verder bij stap 2.a van het regulier verloop (volgende gevonden activiteit)
+
+Operatie BRP
+
+Pagina 5 van 13
+
+Definitief | 1.2 | UC104 Vul protocollering BRP initieel | 06-07-2017
+
+2.7
+
+Alternatief verloop: persoon is opgeschort met reden ‘F’
+1. Het systeem stelt vast dat de persoon is opgeschort met reden ‘F’
+2. Het systeem legt vast dat de gegevens niet in de BRP vastgelegd kunnen worden (par. 3.11)
+3. Het systeem gaat verder bij stap 2.a van het regulier verloop (volgende gevonden activiteit)
+
+Operatie BRP
+
+Pagina 6 van 13
+
+Definitief | 1.2 | UC104 Vul protocollering BRP initieel | 06-07-2017
+
+3
+
+Special requirements
+
+3.1
+
+Model BRP
+Attributen die gemarkeerd zijn met een ster (*) zijn verplicht.
+
+3.1.1
+
+Leveringsaantekening \ Persoon
+Attribuut
+ID *
+Leveringsaantekening *
+Persoon *
+Tijdstip laatste wijziging persoon
+
+3.1.2
+
+Toelichting
+Technische sleutel die automatisch wordt
+gevuld.
+Verwijst naar de leveringsaantekening (zie
+par. 3.1.2).
+Verwijst naar de persoon waarover geleverd
+is.
+De datum waarop de gegevens van de persoon
+voor het laatst gewijzigd zijn.
+
+Leveringsaantekening
+Attribuut
+ID *
+Toegang leveringsautorisatie *
+Dienst *
+Datum/tijd klaarzetten levering *
+Datum materieel selectie
+Datum aanvang materiële periode resultaat
+Datum einde materiële periode resultaat
+Datum/tijd aanvang formele periode resultaat
+Datum/tijd einde formele periode resultaat *
+Administratieve handeling
+Soort synchronisatie
+Scope patroon
+
+Toelichting
+Technische sleutel die automatisch wordt
+gevuld.
+De Toegang leveringsautorisatie waarvoor
+verstrekt is.
+De dienst van de leveringsautorisatie waarvoor
+verstrekt is.
+Het moment waarop de levering is klaargezet.
+Niet van toepassing
+Niet van toepassing.
+Niet van toepassing
+Het begin van de periode waarover formele
+historie is geleverd
+Het einde van de periode waarover formele
+historie is geleverd
+Niet van toepassing.
+Niet van toepassing.
+Niet van toepassing.
+
+De attributen die niet van toepassing zijn worden niet gebruikt bij het initieel vullen van de
+protocollering maar zijn voor de volledigheid opgenomen.
+
+3.2
+
+De bron van de initiële vulling
+De bron voor het initieel vullen van de protocollering is de archiefdatabase van GBA-V. Deze
+database wordt door RvIG periodiek gevuld met gegevens uit de productiedatabase. Voordat de
+initiële vulling plaats vindt zal deze nog een laatste keer door RvIG gevuld worden. Hierbij zal
+geregistreerd worden tot welke datum is gearchiveerd (archiefdatum).
+In de archiefdatabase is Activiteit.activiteit_id uniek. Deze uniciteit geeft voldoende zekerheid
+dat er geen leveringen dubbel geprotocolleerd zijn. Mocht het toch voorkomen dat dezelfde
+levering dubbel voorkomt met een ander activiteit_id dan is dit een geaccepteerde
+onnauwkeurigheid die ook in de BRP wordt overgenomen.
+
+Operatie BRP
+
+Pagina 7 van 13
+
+Definitief | 1.2 | UC104 Vul protocollering BRP initieel | 06-07-2017
+
+3.3
+
+Model GBA-V
+
+3.3.1
+
+Activiteit
+Attribuut
+Activiteit_id
+Activiteit_type
+Activiteit_subtype
+Toestand
+PL_id
+Laatste_actie_dt
+Start_dt
+Communicatie_partner
+Moeder_id
+
+Toelichting
+Het unique ID van de aciviteit.
+Type van de activiteit.
+Subtype van de activiteit.
+Toestand waarin de activiteit verkeert.
+Verwijst naar de persoonslijst waar de
+activiteit betrekking op heeft.
+De datum/tijd waarop de activiteit voor het
+laatst is gewijzigd.
+De datum/tijd waarop de activiteit is
+aangemaakt.
+De afnemercode van de afnemer waar mee
+gecommuniceerd is.
+Verwijst naar een andere activiteit
+(activiteit_id) waar deze activiteit bij hoort.
+
+Alleen de attributen die voor de initiële vulling van de protocollering nodig zijn worden genoemd.
+3.4
+
+Relevante types en subtypes
+In de onderstaande tabel zijn de subtypes van de activiteiten opgenomen die van belang zijn
+voor de initiële vulling van de protocollering.
+Activiteit_type
+101
+
+Activiteit_subtype
+1226
+
+Bericht
+Vb01
+
+101
+101
+
+1207
+1210
+
+Sv01
+Ag01
+
+101
+
+1211
+
+Ag11
+
+101
+
+1212
+
+Ag21
+
+101
+101
+101
+
+1213
+1221
+1222
+
+Ag31
+Gv01
+Gv02
+
+101
+
+1223
+
+Wa11
+
+101
+
+1224
+
+Ng01
+
+102
+102
+202
+202
+202
+
+1321
+1307
+1214
+1216
+1750
+
+202
+
+1751
+
+Ag31
+Vb01
+Ha01
+Xa01
+Ad hoc
+(webservice)
+Ad hoc adres
+(webservice)
+
+Operatie BRP
+
+Toelichting
+Kan om allerlei redenen
+gestuurd worden, ook bij
+selecties.
+Selectie zonder plaatsen AI
+Als een AI handmatig (Ap01)
+geplaatst wordt.
+Overige gevallen dat een AI
+geplaatst wordt
+(sleutelrubriek, selectie).
+Geleverd naar aanleiding van
+sleutelrubriek (geen AI)
+Als er iets fout gegaan is.
+Als er al een AI is
+Als er al een AI is en infra
+wijziging
+Als er al een AI en Anummer wijziging
+Als er een persoonslijst
+wordt afgevoerd
+Door de beheerder gestuurd
+Door de beheerder gestuurd
+Ad hoc
+Ad hoc adres
+Ad hoc
+Ad hoc adres
+
+Pagina 8 van 13
+
+Definitief | 1.2 | UC104 Vul protocollering BRP initieel | 06-07-2017
+
+3.5
+
+Activiteiten vinden
+
+3.5.1
+
+Berichtactiviteiten van selecties
+Berichtactiviteiten van selecties die geprotocolleerd dienen te worden hebben de volgende
+kenmerken:
+•
+•
+•
+•
+•
+•
+
+Activiteit.activiteit_type = 101
+Activiteit.toestand = 8000 – 8999 (correct afgerond : CA)
+Activiteit.pl_id <> null
+Activiteit.communicatie_partner <> null
+Activiteit.moeder_id = Moeder activiteit.activiteit_id
+Moeder activiteit.activiteit_type = 106
+
+Activiteit.activiteit_subtype is bewust geen kenmerk omdat voor selecties verschillende
+activiteit_subtypen (berichtsoorten) gebruikt kunnen worden. Let op: Activiteit.activiteit_subtype
+dient wel voor te komen in de lijst van types en subtypes zoals beschreven in par. 3.4
+3.5.2
+
+Overige berichtactiviteiten
+Alle overige berichtactiviteiten die geprotocolleerd dienen te worden, kenmerken zich doordat ze
+een moederactiviteit hebben dat een subtype heeft dat ongelijk is aan 106. Voor relevant type
+en subtype zie par. 3.4.
+•
+•
+•
+•
+•
+•
+•
+
+Activiteit.activiteit_type = <relevant type>
+Activiteit.activiteit_subtype = <relevante subtype>
+Activiteit.toestand = 8000 – 8999 (correct afgerond : CA)
+Activiteit.pl_id <> null
+Activiteit.communicatie_partner <> null
+Activiteit.moeder_id = Moeder activiteit.activiteit_id
+Moeder activiteit.activiteit_type <> 106
+
+In tegenstelling tot selecties is hier wel een Activiteit.activiteit_subtype van belang.
+Let op: <> 106 betekent dat de activiteit geen moeder_id hoeft te hebben of het moeder_id
+hoeft niet te bestaan.
+
+3.6
+
+Juiste Toegang leveringsautorisatie, Leveringsautorisatie, Dienstbundel en Dienst
+bepalen
+
+3.6.1
+
+Toegang leveringsautorisatie bepalen
+Het Toegang leveringsautorisatie kan gevonden worden aan de hand van
+Activiteit.Communicatie_partner in GBA-V, welke overeenkomt met Toegang
+leveringsautorisatie.Geautoriseerde.Partij.Code in de BRP.
+Een partij kan echter meerdere Toegang leveringsautorisatie, Leveringsautorisatie, Dienstbundel
+en Dienst bevatten. Welke de juiste is hangt af van het subtype van de activiteit (zie par. 3.6.3)
+en de datum waarop een abonnement en dienst geldig was/is (zie par. 3.6.2).
+
+3.6.2
+
+Geldigheid van Toegang leveringsautorisatie bepalen
+
+Operatie BRP
+
+Pagina 9 van 13
+
+Definitief | 1.2 | UC104 Vul protocollering BRP initieel | 06-07-2017
+
+Een gevonden Toegang leveringsautorisatie dient geldig te zijn. Een Toegang leveringsautorisatie
+is geldig als:
+Toegang leveringsautorisatie.Datum ingang <= Activiteit.Laatste_actie_dt, en
+(
+Toegang leveringsautorisatie.Datum einde = <leeg>, of
+Toegang leveringsautorisatie.Datum einde > Activiteit.Laatste_actie_dt
+)
+Leveringsautorisatie, Dienstbundel en Dienst hebben dezelfde Datum aanvang en Datum einde
+als die van de Toegang leveringsautorisatie waar ze bij horen. Dat is de wijze waarop
+autorisatietabelregels initieel gevuld worden. Deze hoeven daarom niet gecontroleerd te worden.
+In [AUT] is meer informatie te vinden over de wijze waarop autorisatietabelregels naar
+leveringsautorisaties in de BRP zijn gemigreerd.
+
+3.6.3
+
+Dienst bepalen
+In de onderstaande tabel is te vinden hoe bepaald wordt bij welke Dienstbundel en Dienst een
+activiteit_subtype hoort. De volgorde in deze tabel is ook de volgorde die in de verwerking
+gehanteerd dient te worden.
+BRP
+Dienstbundel
+Naam =
+‘Selectie’
+
+BRP Dienst
+
+GBA-V Activiteit_subtype
+
+Soort = ‘Selectie’
+
+Alle activiteiten die een moeder activiteit
+hebben waarvan activiteit_type =
+106 (Selectie), of
+Activiteiten met activiteit_type =
+1207 (Sv01)
+
+Naam = ‘Ad
+hoc’
+
+Soort = ‘Geef details persoon’
+
+Zie ook par. 3.5.1
+Alle activiteiten die een moeder activiteit
+hebben waarvan activiteit_type <>
+106 (Selectie)
+1216
+1214
+1750
+1751
+1321
+1307
+1226
+
+Naam =
+‘Spontaan’
+
+Soort = ‘Mutatielevering op
+basis van afnemersindicatie’
+
+Zie ook par. 3.5.2
+Alle activiteiten die een moeder activiteit
+hebben waarvan activiteit_type <>
+106 (Selectie)
+1221
+1222
+1223
+1213
+1224
+1321
+1307
+1226
+
+Operatie BRP
+
+(Xa01) of
+(Ha01) of
+(ad hoc) of
+(ad hoc adres) of
+(Ag31 beheerder) of
+(Vb01 beheerder)
+(Vb01)
+
+(Gv01) of
+(Gv02) of
+(Wa11) of
+(Ag31) of
+(Ng01) of
+(Ag31 beheerder) of
+(Vb01 beheerder)
+(Vb01)
+
+Pagina 10 van 13
+
+Definitief | 1.2 | UC104 Vul protocollering BRP initieel | 06-07-2017
+
+Naam =
+‘Spontaan’
+
+Soort = ‘Attendering’
+
+Zie ook par. 3.5.2
+Alle activiteiten die een moeder activiteit
+hebben waarvan activiteit_type <>
+106 (Selectie)
+1211
+1212
+1213
+1321
+1307
+1226
+
+Naam = ‘Ad
+hoc’
+
+Soort = ‘Plaatsen
+afnemerindicatie’
+
+(Ag11) of
+(Ag21) of
+(Ag31) of
+(Ag31 beheerder) of
+(Vb01 beheerder)
+(Vb01)
+
+Zie ook par. 3.5.2
+Alle activiteiten die een moeder activiteit
+hebben waarvan activiteit_type <>
+106 (Selectie)
+1210
+1213
+1321
+1307
+1226
+
+(Ag01) of
+(Ag31) of
+(Ag31 beheerder) of
+(Vb01 beheerder)
+(Vb01)
+
+Zie ook par. 3.5.2
+Pas als geen van bovenstaande regels voldoet dient gelogd te worden dat er geen Dienst
+gevonden kon worden voor de betreffende activiteit.
+
+3.7
+
+Juiste persoon in de BRP bepalen
+De persoon in de BRP kan gevonden worden door eerst op basis van Activiteit.PL_id de persoon
+GBA-V te vinden. Vervolgens kan op basis van lo3_pl_persoon.a_nr van de gevonden persoon in
+GBA-V, de persoon (actuele Persoon.administratienummer) in de BRP gevonden worden.
+Let op: gebruik alleen lo3_pl_persoon.a_nr van de regels waarbij (actueel):
+• lo3_pl_persoon.persoon_type = ‘P’
+• lo3_pl_persoon.stapel_nr = 0
+• lo3_pl_persoon.volg_nr = 0
+
+Operatie BRP
+
+Pagina 11 van 13
+
+Definitief | 1.2 | UC104 Vul protocollering BRP initieel | 06-07-2017
+
+3.8
+
+Gegevens vastleggen in de BRP
+In de onderstaande tabel staat op welke wijze de gegevens uit GBA-V in de BRP vastgelegd
+dienen te worden.
+
+3.9
+
+Leveringsaantekening
+Attribuut
+Toegang leveringsautorisatie
+Dienst
+Datum/tijd klaarzetten levering
+Datum/tijd aanvang formele periode resultaat
+Datum/tijd einde formele periode resultaat
+
+Waarde
+De gevonden Toegang leveringsautorisatie
+De gevonden Dienst
+Activiteit.Laatste_actie_dt
+Activiteit.Start_dt
+Activiteit.Start_dt
+
+Leveringsaantekening / Persoon
+Attribuut
+Leveringsaantekening
+Persoon
+Tijdstip laatste wijziging persoon
+
+Waarde
+De leveringsaantekening die is aangemaakt
+De gevonden persoon in de BRP
+Activiteit.Laatste_actie_dt
+
+Persoon is opgeschort met reden ‘F’
+Activiteiten die een persoon betreffen die opgeschort is met reden ‘F’ (foutief), worden niet
+initieel gevuld. Deze situatie dient wel gelogd te worden.
+
+3.10
+
+Persoon is opgeschort met reden ‘W’
+Activiteiten die een persoon betreffen die opgeschort is met reden ‘W’ (Wissen), worden niet
+initieel gevuld. Deze situatie dient wel gelogd te worden.
+
+3.11
+
+Fouten vastleggen
+Indien er voor een activiteit geen protocollering vastgelegd kon worden in de BRP, dient dit
+gelogd te worden. De volgende gegevens dienen vastgelegd te worden:
+• activiteit.activiteit_id
+• de reden waarom de vastlegging niet mogelijk was
+
+3.12
+
+Aanvullende initiële vulling op productie
+In verband met de gekozen strategie om de BRP in productie te nemen, dient het mogelijk te
+zijn om nog een aanvullende initiële vulling uit te voeren wanneer de BRP in productie is
+genomen. Hierbij dienen alleen de nieuwe nog niet reeds gevulde activiteiten geselecteerd te
+worden uit de productiedatabase (let op: dit is een andere bron, zie ook par. 3.2) van GBA-V:
+Activiteit.Laatste_actie_dt > <archiefdatum>
+
+Operatie BRP
+
+Pagina 12 van 13
+
+Definitief | 1.2 | UC104 Vul protocollering BRP initieel | 06-07-2017
+
+4
+
+Opmerkingen
+
+4.1
+
+Geleverde gegevens na initiële vulling niet altijd af te leiden
+In GBA-V worden ten behoeve van de protocollering gegevens omtrent de levering inclusief het
+geleverde bericht vastgelegd. Hierdoor is altijd te herleiden wat precies geleverd is over een
+persoon aan een afnemer.
+De BRP hanteert het principe dat de gegevens ten behoeve van protocollering afgeleid worden.
+De berichten die geleverd zijn worden om die reden niet langdurig bewaard en worden ook niet
+van GBA-V in de BRP gevuld.
+De formele historie van persoonslijsten in GBA-V is echter niet in alle gevallen compleet. Dit kan
+ertoe leiden dat protocolverzoeken over een periode dat een persoonslijst nog in GBA-V zat, niet
+in de BRP afgeleid kan worden welke gegevens precies zijn geleverd. Wel kan bepaald worden
+over welke persoon en aan welke afnemer geleverd is.
+In de gevallen dat de beheerder de informatie van de geleverde gegevens toch nodig heeft zal
+deze zich moeten beroepen op het archief van GBA-V.
+
+Operatie BRP
+
+Pagina 13 van 13
+
+

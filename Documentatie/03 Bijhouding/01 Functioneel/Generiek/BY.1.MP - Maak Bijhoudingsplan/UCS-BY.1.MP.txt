@@ -1,0 +1,1063 @@
+UCS BY.1.MP – Maak bijhoudingsplan
+Versie
+
+2.30
+
+Datum
+
+12 juni 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+11-07-2016
+
+2.0
+
+Nieuwe opzet
+
+Operatie BRP
+
+12-07-2016
+
+2.1
+
+Reviewcommentaar Operatie BRP toegevoegd:
+
+Operatie BRP
+
+-
+
+Bijhoudingssituatie “Opgeschort” is wel afhankelijk van
+de datum rechtsfeit
+Stap toegevoegd die alle bijhoudingsplannen per
+persoon samenvoegt tot 1 bijhoudingsplan
+
+13-07-2016
+
+2.2
+
+Reviewcommentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+14-07-2016
+
+2.3
+
+2e reviewcommentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+25-07-2016
+
+2.4
+
+Reviewcommentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+25-07-2016
+
+2.5
+
+Opmerkingen Operatie BRP verwerkt
+
+Operatie BRP
+
+27-07-2016
+
+2.6
+
+Enkele tekstuele wijzigingen n.a.v. grooming
+
+Operatie BRP
+
+12-08-2016
+
+2.7
+
+Stap 10 m.b.t. wat met gerelateerde gegevens bedoeld
+wordt verduidelijkt.
+
+Operatie BRP
+
+05-09-2016
+
+2.8
+
+“Uitgesloten gerelateerde” vervangen door “Uitgesloten
+persoon”
+
+Operatie BRP
+
+20-09-2016
+
+2.9
+
+Uitzonderingsituatie toegevoegd m.b.t. intergemeentelijke
+verhuizingen.
+
+Operatie BRP
+
+23-09-2016
+
+2.10
+
+Review commentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+27-09-2016
+
+2.11
+
+Tabel met reviewhistorie bijgewerkt.
+Referenties bijgewerkt.
+
+Operatie BRP
+
+28-09-2016
+
+2.12
+
+Naam “ISC Verhuizing intergemeentelijk” vervangen door
+“Verhuizing intergemeentelijk GBA naar BRP”
+
+Operatie BRP
+
+29-09-2016
+
+2.13
+
+Verklarende tekst m.b.t. het bijhouden van overleden
+personen toegevoegd aan stap 70.
+
+Operatie BRP
+
+03-10-2016
+
+2.14
+
+Tekst m.b.t. fiatteringsuitzonderingen aangepast.
+
+Operatie BRP
+
+25-10-2016
+
+2.15
+
+Stap 73 aangepast om rekening te houden met AH
+Verhuizen naar buitenland.
+
+Operatie BRP
+
+01-11-2016
+
+2.16
+
+Reviewcommentaar Operatie BRP verwerkt
+Wijziging gemeente infrastructureel ondersteunt geen GBA
+gemeenten.
+
+Operatie BRP
+
+07-11-2016
+
+2.17
+
+Hoofdstuk Ontwerpbeslissingen toegevoegd. Komt uit FO
+Bijhouding.
+
+Operatie BRP
+
+25-11-2016
+
+2.18
+
+Term ISC vervangen door migratievoorziening
+Tevens regel R2097 toegevoegd als definitie van eerste
+
+Operatie BRP
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+inschrijving.
+29-11-2016
+
+2.19
+
+Aanpassingen doorgevoerd voor Geboorte. Stap 10 en 30
+aangepast in paragraaf 2.2.
+
+Operatie BRP
+
+05-12-2016
+
+2.20
+
+Aanpassing doorgevoerd voor AH Wijziging gemeente
+infrastructureel: Stap 30 + 2 voetnoten in stap 23 en 73 +
+NB geplaatst in stap 50.
+Definitie eerste inschrijving (R2097) opgenomen in deze
+UC.
+
+Operatie BRP
+
+13-12-2016
+
+2.21
+
+Attribuut ‘Partij GBA geboorte’ toegevoegd + afleiding
+(stap 21 en 22).
+
+Operatie BRP
+
+16-12-2016
+
+2.22
+
+Reviewcommentaar Operatie BRP
+
+Operatie BRP
+
+20-01-2016
+
+2.23
+
+Stap 65: Controleer of AH =”Corrigeren gerelateerde”
+(Correctie gegevens partner, Corectie gegevens kind,
+Correctie gegevens ouder) Toegevoegd
+
+Operatie BRP
+
+02-02-2017
+
+2.24
+
+Activity Diagram aangepast omdat oude versie van het
+Activity Diagram per abuis was gebruikt. Tevens voetnoot
+in Stap 73 toegevoegd ter verduidelijking van de
+Verhuizing van GBA naar BRP.
+
+Operatie BRP
+
+24-03-2017
+
+2.25
+
+Stap 10 aangepast, alle geboorte handelingen en
+erkenning en adoptie opgenomen. In paragraaf 2.2 ook de
+AH Wijziging gemeente infrastructureel bij overledene
+opgenomen.
+
+Operatie BRP
+
+27-03-2017
+
+2.26
+
+Overige stappen ook aangepast, waar nodig, m.b.t.
+geboortehandelingen. Tevens in stap 50 “Vestiging nietingeschrevene” verwijderd. Opmerking in stap 180
+toegevoegd m.b.t. de waarden van de attributen in het
+geval dat een persoonslijst voor het eerst wordt
+aangemaakt.
+
+Operatie BRP
+
+20-04-2017
+
+2.27
+
+Voetnoot 5 m.b.t. verhuizing OUWKIG na geboorte
+verduidelijkt.
+
+Operatie BRP
+
+18-05-2017
+
+2.28
+
+Controle 65 uitgebreid met meer AH-en.
+
+Operatie BRP
+
+07-06-2017
+
+2.29
+
+Bij opschorting PL worden alle gerelateerden opgenomen in
+het bijhoudingsplan
+
+Operatie BRP
+
+12-06-2017
+
+2.30
+
+Reviewcommentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+Status: Definitief, versie: 2.30
+
+Pagina 2 van 18
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+Reviewhistorie
+Versie Reviewer
+2.0
+
+Operatie BRP
+
+2.3
+
+Operatie BRP
+
+2.8
+
+Operatie BRP
+
+2.9
+
+Operatie BRP
+
+2.19
+
+Operatie BRP
+
+2.21
+
+Operatie BRP
+
+2.28
+
+Operatie BRP
+
+2.29
+
+Operatie BRP
+
+Status: Definitief, versie: 2.30
+
+Pagina 3 van 18
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 5
+1.1
+1.2
+1.3
+
+2
+
+Doel ....................................................................................................................................5
+Leeswijzer ............................................................................................................................5
+Referenties ..........................................................................................................................6
+
+Bepalen bijhoudingsplan ........................................................................................... 7
+2.1
+2.2
+
+Activity Diagram ...................................................................................................................8
+Beschrijving van de stappen ...................................................................................................9
+
+3
+
+Voorbeeld ............................................................................................................... 16
+
+4
+
+Ontwerpbeslissingen .............................................................................................. 18
+
+Status: Definitief, versie: 2.30
+
+Pagina 4 van 18
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+1 Inleiding
+1.1
+
+Doel
+
+Het doel van dit document is te beschrijven hoe een bijhoudingsplan tot stand komt.
+Het bijhoudingsplan wordt voorafgaand aan de verwerking van een administratieve handeling
+opgemaakt. Het geeft aan op welke wijze het bijhoudingsvoorstel of prevalidatieverzoek verwerkt
+moeten worden en welke bijhoudingspartijen daarbij geïnformeerd moeten worden.
+Zo gebruikt het verwerkingsproces (UCS BY.1.VB - Verwerk Bijhoudingsvoorstel) de informatie uit
+het bijhoudingsplan om te bepalen welke personen direct bijgewerkt kunnen worden, gebruikt het
+Ontrelateerproces (UCS BY.1.ON) deze informatie om te bepalen welke relaties ontrelateerd
+moeten worden en gebruikt UCS BY.1.MN (Maak Bijhoudingsnotificatie) deze informatie om te
+bepalen naar welke bijhoudingspartijen een bijhoudingsnotificatie gestuurd moet worden.
+Het bijhoudingsplan wordt op basis van een bijhoudingsvoorstel of prevalidatieverzoek opgesteld.
+In feite bestaat het bijhoudingsplan uit twee delen:
+Bijhoudingsplan van de AH
+Bijhoudingsplan van de betrokken personen
+Het bijhoudingsplan van de AH bestaat uit slechts 1 gegeven:
+Code van de indienende partij van het bijhoudingsvoorstel
+Daarnaast bevat het voor alle ingeschreven personen die betrokken zijn bij de administratieve
+handeling (de zgn. bijhoudingsplanpersonen in termen van BMR en Berichtenmodel) de volgende
+gegevens:
+-
+
+Tijdstip laatste wijziging
+Burgerservicenummer
+Code van de bijhoudingspartij (van de persoon)
+Bijhoudingssituatie (geeft aan op welke wijze de persoon door deze administratieve
+handeling bijgehouden moet worden)
+
+De eerste 3 gegevens betreffen persoonsgegevens zoals opgenomen in de BRP. Het laatste
+gegeven is een afgeleid gegeven en wordt gebruikt in de verwerking van het bijhoudingsvoorstel of
+prevalidatieverzoek.
+N.B.:
+De centrale voorzieningen slaan het bijhoudingsplan niet op. Het bijhoudingskoppelvlak is stateless
+ten aanzien van procesinformatie. Dit voorkomt complexiteit die anders zou ontstaan bij het
+bijhouden van een fiatteringsadministratie.1
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft het algoritme voor het vaststellen van het bijhoudingsplan. In hoofdstuk 3 is
+een voorbeeld uitgewerkt van een praktijksituatie.
+
+1
+
+Volgens de BMR en het berichtenmodel bevat het bijhoudingsplan ook het bijhoudingsvoorstelbericht en het
+bijhoudingsvoorstelresultaatbericht. Deze worden echter alleen gebruikt in berichten en vallen buiten de scope van deze
+UCS. Voor meer details of deze berichten wordt verwezen naar UCS BY.1.MR – Maak Resultaatbericht en UCS BY.1.MN –
+Maak Bijhoudingsnotificatie.
+
+Status: Definitief, versie: 2.30
+
+Pagina 5 van 18
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+UCS BY.0.VnA – Verblijf en Adres
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+UCS BY.0.AFS – Afstamming
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 2.30
+
+Pagina 6 van 18
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+2 Bepalen bijhoudingsplan
+Om het bijhoudingsplan op te kunnen stellen moeten de betrokken personen en de in de Inleiding
+genoemde gegevens per persoon worden bepaald. Hoe dit in zijn werk gaat is gevisualiseerd
+middels een Activity Diagram.
+In de paragraaf daarna worden de processtappen stuk voor stuk beschreven.
+
+Status: Definitief, versie: 2.30
+
+Pagina 7 van 18
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+2.1
+
+Activity Diagram
+
+De eerste stappen in het diagram hebben betrekking op het bepalen en controleren van de
+betrokken personen. Vervolgens wordt per persoon de stappen in het zwarte kader uitgevoerd.
+
+Status: Definitief, versie: 2.30
+
+Pagina 8 van 18
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+2.2
+
+Beschrijving van de stappen
+
+In deze paragraaf worden de stappen in het Activity Diagram beschreven.
+In onderstaande beschrijving wordt geen onderscheid gemaakt tussen een bijhoudingsvoorstel en
+een prevalidatieverzoek. Waar bijhoudingsvoorstel vermeld staat kan ook prevalidatieverzoek
+gelezen worden.
+
+10. Bepaal de personen die bij de administratieve handeling betrokken zijn
+Een betrokken (bijhoudingsplan)persoon bij een AH is iedere Persoon die:
+-
+
+-
+
+-
+
+‘Hoofdpersoon’ (R1287) is voor de AH OF
+‘Gerelateerde persoon’ (R2124) is van een Hoofdpersoon als er ‘Gerelateerden gegevens’
+(R2123) worden gewijzigd bij deze Hoofdpersoon als gevolg van de AH. Dit betreffen dus
+gegevens van de Hoofdpersoon op de persoonslijst van de Gerelateerde persoon.
+‘Gerelateerde persoon’ (R2124) wordt van een Hoofdpersoon als gevolg van een van
+onderstaande AH. De gerelateerde is uitsluitend bij de handeling betrokken als de
+Identificatienummers voor de hoofdpersoon hierin aanwezig zijn2.
+o Geboorte in Nederland
+o Geboorte in Nederland met erkenning op geboortedatum
+o Geboorte in Nederland met erkenning na geboortedatum
+o Erkenning
+o Adoptie
+o GBA – Geboorte in Nederland
+o GBA – Geboorte in Nederland met erkenning op geboortedatum
+o GBA – Geboorte in Nederland met erkenning na geboortedatum
+o GBA – Erkenning
+o GBA – Adoptie
+‘Gerelateerde persoon’ (R2124) is van de Hoofdpersoon en de persoonslijst van de
+Hoofdpersoon wordt opgeschort met reden “F” (AH “Opschorting bijhouding
+persoonsgegevens met reden foutief”).
+De achterliggende reden is dat de bijhoudingspartij(en) van de gerelateerden een
+notificatie moeten ontvangen, zodat zij, indien nodig, een andere persoon kunnen opnemen
+op de persoonslijst van deze gerelateerden. Dit speelt bijvoorbeeld een rol wanneer twee
+persoonslijsten ontdubbeld worden waarbij één persoonslijst opgeschort wordt en de ander
+blijft bestaan.
+
+N.B.:
+-
+
+-
+
+Alleen ingeschreven personen (Persoon.Soort = “Ingeschrevene” (I)) worden in het resultaat
+opgenomen, omdat ‘pseudo personen’ (Persoon.Soort = “Pseudo persoon” (P)) geen
+zelfstandig bestaansrecht hebben. Deze hebben namelijk geen eigen juridische PL maar
+behoren tot de juridische PL van de bijbehorende ingeschrevene;
+Een persoon kan maar één keer betrokken zijn bij een AH. Dus ook als een persoon meerdere
+keren wordt geïdentificeerd door deze stap is deze maar één keer een betrokken persoon;
+Welke AH-en gerelateerden gegevens wijzigen wordt in de betreffende UC module beschreven.
+
+20. Controleer BZVU-personen
+In het berichtdeel Bezien Vanuit Persoon (BZVU) kan de verzendende partij aangeven tot welke
+personen de bijhouding moet worden beperkt. In dit berichtdeel worden de objectsleutels van die
+personen opgenomen.
+2
+
+Als de AH “(GBA - )Geboorte in Nederland” of “(GBA - )Geboorte in Nederland met erkenning op/na geboortedatum” door
+een feitgemeente (waar de geboorte heeft plaatsgevonden en de akte is opgemaakt) die niet de bijhoudingsgemeente van
+de OUWKIG is ter verwerking wordt aangeboden zijn de Identificatienummers nog niet beschikbaar. Deze mogen namelijk
+alleen door de gemeente die bijhoudingsgemeente van het kind wordt worden uitgegeven. Het kind kan dan dus nog niet
+geregistreerd worden en de persoonslijsten van gerelateerde ouders moet dus ook nog niet bijgewerkt worden.
+
+Status: Definitief, versie: 2.30
+
+Pagina 9 van 18
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+Als berichtdeel BZVU leeg is, dan geldt de AH voor alle personen die bepaald zijn in de vorige stap.
+Wanneer BZVU gevuld is, dan wordt in deze stap gecontroleerd of er geen personen in voor komen
+die niet in de vorige stap zijn bepaald (R2214). Als er een of meer personen zijn die wel in het
+berichtdeel BZVU voor komen maar niet in het resultaat van de vorige stap staan, dan levert dit
+een foutmelding op en eindigt het proces. Anders wordt doorgegaan naar stap 21.
+De ratio achter deze controle is dat in het berichtdeel BZVU alleen personen mogen worden
+opgegeven die daadwerkelijk bij de administratieve handeling zijn betrokken.
+
+21. Controleer of AH = "Geboorte in Nederland met erkenning op/na geboortedatum"
+Bij de AH’s “Geboorte in Nederland”, “Geboorte in Nederland met erkenning op geboortedatum” en
+“Geboorte in Nederland met erkenning na geboortedatum” moet worden bepaald of de
+geboortegemeente tot het GBA-stelsel behoort. Alléén dan moet ook een notificatie naar de
+geboortegemeente worden gestuurd. Zie het hoofdstuk “GBA – Geboorte in Nederland” in [2] voor
+de uitwerking van deze casus.
+Als de AH inderdaad een “Geboorte in Nederland” of een “Geboorte in Nederland met erkenning op
+geboortedatum” of een “Geboorte in Nederland met erkenning na geboortedatum” betreft, wordt
+vervolgd met stap 22, anders met stap 23.
+
+22. Bepaal stelsel geboortegemeente
+Op basis van de partijcode van de geboortegemeente wordt bepaald tot welk stelsel deze behoort.
+Het stelsel van een Partij is:
+-
+
+"BRP" als het attribuut “Partij.Datum overgang naar BRP” van de geboortegemeente gevuld
+is en deze gelijk is aan of voor de 'Systeemdatum' (R2016) ligt;
+"GBA" in de overige gevallen.
+
+Er wordt vervolgd met stap 23.
+
+Stap 23 tot en met 180 wordt voor elke bijhoudingspersoon uit stap 10 uitgevoerd
+23. Controleer of AH = "Verhuizing intergemeentelijk"3
+Een verhuizing van een GBA gemeente naar een BRP gemeente is een complex proces. Dit proces
+is gedetailleerd beschreven in het hoofdstuk “Speciale handeling t.b.v. migratievoorziening” van
+[1]. Om dit proces in goede banen te kunnen leiden is een uitzonderingssituatie van toepassing bij
+het bepalen van de bijhoudingssituatie van de persoon. Deze wordt in stap 73 beschreven.
+Daarvoor is het stelsel nodig van de huidige bijhoudingspartij van de persoon.
+Als de AH een “Verhuizing intergemeentelijk" betreft wordt vervolgd met stap 26, anders met stap
+30.
+
+26. Bepaal stelsel van huidige bijhoudingspartij van de persoon
+Op basis van de huidige bijhoudingspartij wordt bepaald tot welk stelsel de persoon behoort. Het
+stelsel van een Partij is:
+-
+
+"BRP" als het attribuut “Partij.Datum overgang naar BRP” van de huidige bijhoudingspartij
+van de persoon gevuld is en deze gelijk is aan of voor de 'Systeemdatum' (R2016) ligt;
+"GBA" in de overige gevallen.
+
+Er wordt vervolgd met stap 30.
+
+3
+
+Deze uitzondering is niet van toepassing voor de AH “Wijziging gemeente infrastructureel” en AH “Wijziging gemeente
+infrastructureel voor overledene” omdat deze AH niet ingediend mag worden voor personen in het GBA stelsel.
+
+Status: Definitief, versie: 2.30
+
+Pagina 10 van 18
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+30. Bepaal onderhavige bijhoudingspartij van de persoon
+Alhoewel aan elke persoon in de BRP een bijhoudingspartij gekoppeld is, kan afhankelijk van de
+Hoofdactie (R1278) toch een andere bijhoudingspartij van belang zijn voor het bijhoudingsplan. De
+(onderhavige) bijhoudingspartij van een persoon wordt als volgt bepaald:
+-
+
+-
+
+-
+
+De nieuwe woongemeente in het bericht, indien:
+o AH is “Verhuizing intergemeentelijk GBA naar BRP”4
+o AH is “Wijziging gemeente infrastructureel”
+o AH is “Wijziging gemeente infrastructureel bij overledene”
+De Bijhoudingspartij van de OUWKIG op de geboorte datum5 indien het een kind betreft in:
+o AH is “Geboorte in Nederland”
+o AH is “Geboorte in Nederland met erkenning op geboortedatum”
+o AH is “Geboorte in Nederland met erkenning na geboortedatum”
+o AH is “GBA - Geboorte in Nederland”
+o AH is “GBA - Geboorte in Nederland met erkenning op geboortedatum”
+o AH is “GBA - Geboorte in Nederland met erkenning na geboortedatum”
+“Minister” indien de Persoon als gevolg van de AH overgaat naar het RNI (emigratie);
+In alle overige situaties: de huidige bijhoudingspartij van de persoon.
+
+N.B.:
+•
+
+Bovenstaande afleiding is een momentopname. Telkens wanneer een nieuwe AH wordt
+gespecificeerd moet deze stap opnieuw bekeken worden of de afleiding van de nieuwe
+bijhoudingspartij nog voldoet of moet worden aangepast.
+Er is ook nog de volgende afleidingsregel: Stel, dat een bijhoudingsvoorstel wordt
+ingediend voor een inmiddels geëmigreerd persoon, die nu dus in de RNI zit, waarbij de
+feitdatum vóór datum emigratie ligt. De laatste gemeente waar die persoon woonde zou de
+bijhouding moeten indienen en dus de bijhoudingspartij zijn. De RNI is echter nog niet op
+de BRP aangesloten. De persoon is dus ook nog niet in de BRP aanwezig. Hierdoor kan de
+emeente de bijhouding niet indienen.Er is besloten deze afleidingsregel pas te
+implementeren wanneer de RNI over is naar de BRP.
+
+50. Controleer aanwezigheid BSN en A-nr voor eerste inschrijving
+Het BSN en het A-nr zijn verplicht voor geboorte-handelingen. Dit betreft de volgende AH’s:
+-
+
+Geboorte in Nederland
+Geboorte in Nederland met erkenning op geboortedatum
+Geboorte in Nederland met erkenning na geboortedatum
+GBA - Geboorte in Nederland
+GBA - Geboorte in Nederland met erkenning op geboortedatum
+GBA - Geboorte in Nederland met erkenning na geboortedatum
+
+Wanneer de AH een eerste inschrijving betreft en beide identificatienummers zijn niet aanwezig in
+het bericht dan wordt de bijhoudingssituatie “Aanvullen en opnieuw indienen” (stap 110). Dit is
+bijvoorbeeld het geval bij geboorte in een andere gemeente dan de woongemeente van de ouder
+uit wie het kind geboren is (toevallige geboorte). Deze gemeente is verantwoordelijk voor de
+bijhouding en het toekennen van het A-nr en BSN.
+N.B.:
+De elementen “Tijdstip laatste wijziging” en “Burgerservicenummer” in het bijhoudingsplan hebben
+in dit geval geen waarde omdat deze niet bekend zijn voor het kind (zie stap 180).
+4
+
+Deze uitzondering zal er voor zorgen dat een notificatie naar de nieuwe gemeente wordt gestuurd. Immers, het betreft
+hier een voortzetting van een eerder “Deels verwerkt” bijhoudingsvoorstel, zijnde een “Verhuizing intergemeentelijk”. Bij
+alle andere soorten adreswijzigingen wordt de notificatie naar de oude gemeente gestuurd.
+5 Door de bijhoudingspartij van de OUWKIG te nemen op de geboortedatum krijgt, als de OUWKIG is verhuist na de
+geboorte, deze nieuwe bijhoudingspartij van de OUWKIG een notificatie bij een geboorte die plaatsvond in haar oude
+woongemeente. De nieuwe bijhoudingspartij van de OUWKIG is vervolgens verantwoordelijk voor het eventueel daarna
+registeren van een verhuizing voor het kind.
+
+Status: Definitief, versie: 2.30
+
+Pagina 11 van 18
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+60. BZVU-personen gevuld en persoon komt NIET voor in BZVU-personen?
+Als de lijst BZVU-personen gevuld is en de betreffende persoon komt NIET voor in deze lijst dan
+betekent dit dat voor die persoon de AH niet van toepassing is. De bijhoudingssituatie wordt voor
+die persoon “Uitgesloten persoon” (stap 120).
+
+65. Controleer of AH altijd asymmetrisch is:
+Dit betreffen de volgende handelingen:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Correctie partnergegevens huwelijk
+Correctie partnergegevens geregistreerd partnerschap
+Wijzigen partnergegevens huwelijk
+Wijzigen partnergegevens geregistreerd partnerschap
+Correctie oudergegevens
+Correctie kindgegevens
+Verwijdering gegevens na adoptie
+Verwijdering kindgegevens na adoptie
+Overschrijving geslacht en naam na geslachtswijziging
+Overschrijving oudergegevens na geslachtswijziging
+Overschrijving kindgegevens na geslachtswijziging
+Overschrijving partnergegevens na geslachtswijziging
+
+Indien het bijhoudingsvoorstel één van deze administratieve handelingen betreft en de
+gerelateerde persoon is een ingeschrevene dan leidt dit tot de bijhoudingssituatie ‘Uitgesloten
+persoon’ voor de gerelateerde persoon.
+Dit komt doordat deze handelingen in het geval van een gerelateerde ingeschrevene leidt tot
+ontrelateren. De bijhoudingspartij van de gerelateerde wordt dan niet geïnformeerd over de
+bijhouding, Alleen de PL van de hoofdpersoon wijzigt.
+Deze controle is nodig omdat de BZVU niet meegegeven wordt in het bericht, maar in de AH
+impliciet besloten ligt dat de BZVU de hoofdpersoon is.
+
+70. Persoon is overleden EN feitdatum ligt na of op datum overlijden EN geen Hoofdpersoon?
+Wanneer de persoon is opgeschort door ‘Overlijden’ (Persoon.Nadere Bijhoudingsaard = “O”)) EN
+de overledene is geen Hoofdpersoon in het bericht EN de feitdatum ligt NA of OP de datum van
+overlijden, dan wordt de bijhoudingssituatie voor die persoon “Opgeschort” (stap 130).
+In het andere geval wordt vervolgd met stap 75.
+Toelichting:
+De persoonslijst van een gerelateerde overleden persoon mag niet meer worden bijgehouden met
+nieuwe gegevens als de feitdatum (rechtsgeldigheid) na of op de overlijdensdatum ligt. Alleen
+gegevens met een feitdatum vóór de overlijdensdatum zijn toegestaan.
+Indien de bijhoudende gemeente van de overleden persoon toch een bijhouding wilt uitvoeren op
+de PL van de overleden persoon dan moet die bijhouder een afzonderlijke bericht insturen met de
+overleden persoon als Hoofdpersoon. De BRP zal dan een deblokkeerbare melding teruggeven als
+de feitdatum na de datum van overlijden ligt. Het is dan de verantwoordelijkheid van de ABS of de
+bijhouding toch uitgevoerd moet worden. De bijhouder kan echter ook besluiten de regel niet te
+deblokkeren en een asymmetrisch bijhoudingsvoorstel in te dienen om de PL van de opgeschorte
+persoon ongewijzigd te laten.
+
+73. Controleer adreswijziging
+Indien:
+
+Status: Definitief, versie: 2.30
+
+Pagina 12 van 18
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+-
+
+AH is “Verhuizing intergemeentelijk” en het stelsel van de huidige bijhoudingspartij is
+“BRP”6
+AH is “Verhuizing intergemeentelijk GBA naar BRP”7
+AH is “Verhuizing naar buitenland”
+
+dan wordt de bijhoudingssituatie van de persoon “Mededeling” (stap 135), anders wordt vervolgd
+met stap 75.
+
+75. Controleer partij van de persoon
+De onderhavige bijhoudingspartij is bepaald in stap 30. Wanneer deze gelijk is aan de partij die de
+AH indient (= zendende partij in het bericht), betekent dit dat fiattering niet van toepassing is en
+wordt de bijhoudingssituatie voor de persoon “Indiener is bijhoudingspartij” (stap 140), anders
+wordt vervolgd met stap 80.
+
+80. Bepaal stelsel onderhavige bijhoudingspartij van persoon
+Op basis van de onderhavige bijhoudingspartij uit stap 30 wordt bepaald tot welk stelsel de
+persoon behoort. Het stelsel van een Partij is:
+-
+
+-
+
+"BRP" als het attribuut “Partij.Datum overgang naar BRP” voor de onderhavige
+bijhoudingspartij van de persoon gevuld is en deze gelijk is aan of voor de 'Systeemdatum'
+(R2016) ligt;
+"GBA" in de overige gevallen.
+
+Als het stelsel “GBA” is dan is de bijhoudingssituatie “GBA” (stap 150), anders wordt vervolgd met
+stap 90.
+
+90. Controleer automatische fiat instelling
+Als de onderhavige bijhoudingspartij van de betreffende persoon de “Automatische fiat”-instelling”
+op “Nee” (Partij.Automatisch fiatteren? <> “Ja”) heeft staan dan wordt de bijhoudingssituatie van
+de persoon “Opnieuw indienen” (stap 170), anders wordt vervolgd met stap 100.
+
+100. Controleer fiatteringsuitzondering
+Fiatteringsuitzonderingen kunnen betrekking hebben op de volgende criteria:
+-
+
+Bijhoudingspartij
+Soort document
+Soort AH
+
+Voor de AH is een fiatteringsuitzondering van toepassing indien aan de volgende voorwaarden
+voldaan is:
+-
+
+Er is een fiatteringsuitzondering vastgelegd door de bijhoudingspartij van de betreffende
+persoon (Bijhouder \ Fiatteringsuitzondering.Bijhouder)
+
+EN voor die fiatteringsuitzondering bovendien geldt dat:
+-
+
+deze vastgelegd is voor de bijhoudingspartij die de AH indient (Bijhouder \
+Fiatteringsuitzondering.Bijhouder bijhoudingsvoorstel);
+deze vastgelegd is voor het soort document dat voorkomt als (één van de)
+brondocument(en) van deze AH (Bijhouder \ Fiatteringsuitzondering.Soort document);
+
+6
+
+De AH “Wijziging gemeente infrastructureel” en AH “Wijziging gemeente infrastructureel voor overledene” staat bewust
+niet in dit rijtje. Alhoewel deze handeling alleen door de nieuwe gemeente ingediend mag worden, krijgt de oude gemeente
+geen notificatie. De bijhoudingssituatie wordt in dit geval “Indiener is bijhoudsingspartij”.
+7 Het betreft hier de AH die alléén door de migratievoorziening wordt aangeroepen. Deze AH is de voortzetting van een
+eerder “Deels verwerkt” bijhoudingsvoorstel, zijnde een “Verhuizing intergemeentelijk”.
+
+Status: Definitief, versie: 2.30
+
+Pagina 13 van 18
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+-
+
+deze vastgelegd is voor de AH (Bijhouder \ Fiatteringsuitzondering.Soort administratieve
+handeling)
+
+N.B.:
+-
+
+-
+
+Wanneer een fiatteringsuitzondering een lege categorie bevat dan wordt het als ‘wildcard’
+geïnterpreteerd, dus indien bijv. geen soort document wordt ingevuld dan geldt de
+fiatteringsuitzondering voor alle soorten documenten;
+Wanneer voor een fiatteringsuitzondering meerdere categorieën zijn vastgelegd dan is de
+combinatie van die categorieën van toepassing, dus bijv. bijhoudingspartij EN soort
+document.
+
+Als bovendien voor tenminste één van fiatteringsuitzondering geldt dat het gevonden vookomen
+Bijhouder \ Fiatteringsuitzondering:
+-
+
+niet geblokkeerd is (Bijhouder \ Fiatteringsuitzondering.Geblokkeerd? <> “Ja”) EN
+de ‘Systeemdatum’ (R2016) is groter dan of gelijk aan de datum ingang van de
+fiatteringsuitzondering (Bijhouder \ Fiatteringsuitzondering.Datum ingang) EN
+de systeemdatum is kleiner dan de datum einde van de fiatteringsuitzondering (Bijhouder \
+Fiatteringsuitzondering.Datum einde) of datum einde is leeg
+
+dan is de bijhoudingssituatie van de persoon “Opnieuw indienen” (stap 170), anders is de
+bijhoudingssituatie “Automatische fiat” (stap 160).
+
+110 tot en met 170. Bijhoudingssituatie = “…”
+In deze stappen wordt de bijhoudingssituatie gezet.
+
+180. Stel bijhoudingsplan persoon samen
+De attributen van het bijhoudingsplan voor de betreffende persoon worden als volgt gevuld:
+Bij
+Tijdstip laatste wijziging
+Burgerservicenummer
+Bijhoudingspartij
+Bijhoudingssituatie
+
+Waarde
+Persoon.AfgeleidAdministratief.Tijdstip laatste wijziging
+Persoon.Identificatienummers.Burgerservicenummer
+Partij.Bijhouding.Partij.Code van de onderhavige bijhoudingspartij
+zoals bepaald in stap 30.
+Bijhoudingssituatie zoals bepaald in bovenstaande algoritme.
+
+N.B.:
+Wanneer een AH betrekking heeft op het aanmaken van een persoonslijst en het
+Burgerservicenummer is aanwezig in het bericht, zoals “Geboorte in Nederland” en “Vestiging nietingeschrevene” wordt het Burgerservicenummer uit het bericht overgenomen. Het attribuut
+“Tijdstip laatste wijziging” blijft in dat geval leeg. Zie stap 50 voor het geval dat het
+Burgerservicenummer niet aanwezig is in het bericht.
+
+190. Stel bijhoudingsplan AH samen
+Het bijhoudingsplan voor de AH omvat de bijhoudingsplannen van alle betrokken
+(bijhoudingsplan)personen.
+Daartoe wordt het volgende attribuut gevuld:
+Attribuut
+Partij bijhoudingsvoorstel
+Partij GBA geboorte
+
+Status: Definitief, versie: 2.30
+
+Waarde
+Partijcode van de partij die de AH heeft ingediend.
+Partijcode van de partij waar de geboorte heeft plaatsgevonden.
+D.w.z. de geboortegemeente van de hoofdpersoon.
+Wordt alleen gevuld bij de AH’s Geboorte in Nederland en Geboorte
+in Nederland met erkenning op geboortedatum en Geboorte in
+Nederland met erkenning na geboortedatum EN bovendien de
+geboortegemeente zich in het GBA-stelsel bevindt.
+
+Pagina 14 van 18
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+Zie stap 21 en 22.
+Het proces eindigt hier.
+
+Status: Definitief, versie: 2.30
+
+Pagina 15 van 18
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+3 Voorbeeld
+In onderstaand voorbeeld wordt de theorie uit het vorige hoofdstuk toegelicht.
+
+Administratieve handeling “Voltrekking Huwelijk in Nederland” tussen Deniz en Suna
+Deniz Buzkurt en Suna Yildiz treden met elkaar in het Huwelijk, Suna heeft een zoon Ali Bulut uit
+een vorige relatie. Suna is ‘ingeschrevene’ (I) met de Turkse nationaliteit en is woonachtig in Den
+Haag, Deniz is een ‘pseudo persoon’ (P), ook met de Turkse nationaliteit en woonachtig in
+Rotterdam. Ali is een uitwonende student en woonachtig in Groningen.
+Als gevolg van het huwelijk verandert de geslachtsnaam (stam) van Suna van “Yildiz” naar
+“Buzkurt”.
+Schematische weergave van de situatie in de database vóór indienen administratieve handeling:
+
+Schematische weergave van de administratieve handeling (bericht):
+
+Legenda:
+Blauw - personen bijgehouden door gemeente Den Haag
+Oranje - personen bijgehouden door gemeente Groningen (autofiat uit)
+(I)
+- Ingeschrevene
+(P)
+- Pseudo persoon
+In dit bericht voor deze administratieve handeling is Suna de “hoofdpersoon” en Deniz niet (omdat
+hij een pseudo persoon is). Stel dat Deniz een Ingeschrevene was geweest, dan was er sprake
+geweest van twee “hoofdpersonen” in dit bericht.
+Suna is tevens de moeder van Ali. Gezien vanuit de persoonslijst van Ali is er sprake van een
+familierechtelijke betrekking waarin de moeder Suna in de relatie met soort betrokkenheid “Ouder”
+voorkomt.
+Vanwege de Geslachtsnaamwijziging van Suna in de familierechtelijke betrekking met Ali moet de
+persoonslijst (en daarmee ook de bijhoudingsgemeente) van Ali ook betrokken worden in het
+bijhoudingsplan, want deze geslachtsnaamwijziging maakt indirect onderdeel uit van de
+persoonslijst van Ali. Zijn moeder komt immers als Ouder in zijn Familierechtelijke betrekking voor
+met de geslachtsnaam Yildiz, waarvoor nu een bijhouding wordt doorgevoerd naar “Buzkurt”. Deze
+bijhouding moet door de bijhoudingsgemeente van Ali worden goedgekeurd.
+In dit bijhouding-voorbeeld zijn dus de volgende personen betrokken:
+-
+
+Hoofdpersoon
+Gerelateerde
+
+Status: Definitief, versie: 2.30
+
+Suna Yildiz
+Ali Bulut
+
+Pagina 16 van 18
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+Het bijhoudingsplan ziet er dan bijvoorbeeld als volgt uit, ervan uitgaande dat beide personen in
+een BRP-gemeente wonen, niet zijn overleden, het huwelijk van Suna en Deniz in Den Haag wordt
+voltrokken en de gemeente Groningen de “automatische fiat” uit heeft staan of een
+fiatteringsuitzondering heeft ingesteld:
+Bijhoudingsplan
+
+Attribuut
+Partij bijhoudingsvoorstel
+
+Waarde
+051801
+
+Nr.
+
+Bijhoudingsplan per persoon
+
+1
+
+(Suna Yildiz)
+Attribuut
+Tijdstip laatste wijziging
+Burgerservicenummer
+Bijhoudingspartij
+Bijhoudingssituatie
+
+2
+
+Waarde
+01-02-2016
+103962438
+051801 (Den Haag)
+“Indiener is bijhoudingspartij”
+
+(Ali Bulut)
+Attribuut
+Tijdstip laatste wijziging
+Burgerservicenummer
+Bijhoudingspartij
+Bijhoudingssituatie
+
+Status: Definitief, versie: 2.30
+
+Waarde
+03-04-2016
+238651974
+001401 (Groningen)
+“Opnieuw indienen”
+
+Pagina 17 van 18
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+4 Ontwerpbeslissingen
+1. Opnieuw indienen bijhoudingsvoorstel indien aan partij niet automatisch fiatteert.
+Als een partij een bijhoudingsvoorstel van een andere partij niet automatisch fiatteert, dan
+moet hij die bijhouding zelf opnieuw indienen. In de bijhoudingsnotificatie hiervan krijgt hij als
+hulpmiddel het volledige bijhoudingsplan meegeleverd. Een bijhoudingspartij in het BRP-stelsel
+dient een nieuw bijhoudingsvoorstel in te dienen. Voor de bijhoudingspartijen in het GBAstelsel zullen de migratievoorzieningen op basis van de bijhoudingsnotificatie de correcte GBA
+“Toevallige gebeurtenis”-berichten aanmaken.
+
+Status: Definitief, versie: 2.30
+
+Pagina 18 van 18
+
+

@@ -1,0 +1,843 @@
+ConvAandInhingVermissingReis
+ConvID
+
+ID
+
+ConvRNIDeelnemer
+
+SG
+*i
+
+AandInhingVermissingReisdoc >
+
+AandInhingVermissingReisdoc
+
+ConvAangifteAdresh
+ConvID
+
+ID
+
+ConvID
+
+ID
+
+Rubr3570AandInhingDanWelVerm LO3AandInhingDanWelVermissin * l
+
+LO3Ber
+
+SG
+*i
+
+* u1
+
+Partij
+
+LO3BerID
+
+ID
+
+Rubr8811CodeRNIDeelnemer LO3RNIDeelnemer * l
+
+Release 59 17-7-2017
+
+*i
+
+IndBersrtOnderdeelLO3Stelsel JaNee
+
+* u1
+
+OGM M01 Migratie
+
+Dyn
+
+*
+
+Referentie
+
+LO3Referentie
+
+*
+
+Bron >
+
+LO3BerBron
+
+*
+
+LO3Voorkomen
+
+SG
+
+ANr
+
+ANr
+
+. s1
+
+ID
+
+LO3VoorkomenID
+
+*i
+
+Pers >
+
+Pers
+
+.
+
+LO3Ber >
+
+LO3Ber
+
+* u1
+
+Berdata
+
+Byteaopslag
+
+*
+
+LO3Categorie
+
+LO3Categorie
+
+* u1
+
+LO3Stapelvolgnr
+
+Volgnr
+
+. u1
+
+LO3Voorkomenvolgnr Volgnr
+
+. u1
+
+Partij >
+
+Rubr7210OmsVanDeAangifteAdre LO3OmsVanDeAangifteAdresh * l
+Aang >
+
+Aang
+
+. u1
+
+Checksum
+
+Checksum
+
+*
+
+LO3BerBron
+
+Rel
+
+RdnWijzVerblijf >
+
+RdnWijzVerblijf
+
+. u1
+
+TsConversie
+
+Ts
+
+*
+
+ID
+
+ConvID
+
+*i
+
+Foutcode
+
+LO3Foutcode
+
+.
+
+Naam NaamEnumeratiewaarde * l
+
+Verwerkingsmelding
+
+LO3Verwerkingsmelding .
+
+ConvSrtNLReisdoc
+ConvAdellijkeTitelPredikaat
+
+SG
+
+ConvID
+
+ID
+
+ID
+
+*i
+
+SG
+ConvID
+
+*i
+
+SrtNLReisdoc >
+
+Geslachtsaand >
+
+Geslachtsaand
+
+* u1 l
+
+AdellijkeTitel >
+
+AdellijkeTitel
+
+. u1
+
+ConvVoorvoegsel
+
+Predicaat >
+
+Predicaat
+
+. u1
+
+ID
+
+SrtNLReisdoc
+
+SG
+
+ConvLO3RubriekID
+
+. ua1
+
+LO3ConversieSortering Sorteervolgorde
+
+.
+
+* u1
+
+SG
+ConvID
+
+Rubr0231Voorvoegsel LO3Voorvoegsel
+
+ID
+
+Actie
+
+Actie >
+
+Rubr3511NLReisdoc LO3NLReisdoc * l
+
+Rubr0221AdellijkeTitelPredik LO3AdellijkeTitelPredikaat * l
+
+ConvLO3Rubriek
+
+Dyn
+*i
+
+*i
+
+*i
+*l
+
+Voorvoegsel
+
+NaamEnumeratiewaarde
+
+* u1
+
+Scheidingsteken
+
+Scheidingsteken
+
+* u1
+
+LO3Severity
+
+Rel
+
+ConvID
+
+*i
+
+ID
+
+Naam NaamEnumeratiewaarde * l
+
+Naam ConvLO3RubriekNaam * l
+
+LO3CategorieMelding
+ConvRdnOntbindingHuwelijkGer
+
+SG
+
+ConvID
+
+ID
+
+*i
+
+LO3Melding
+
+Rubr0741RdnOntbindingHuwelij LO3RdnOntbindingNietigverkla * l
+RdnEindeRelatie
+
+RdnEindeRelatie >
+
+ID
+
+* u1
+
+ConvRdnOpschorting
+
+SG
+ConvID
+
+ID
+
+*i
+
+Rubr6720OmsRdnOpschortingBij LO3OmsRdnOpschortingBijhoudi * l
+NadereBijhaard
+
+NadereBijhaard >
+
+* u1
+
+ConvRdnBeeindigenNation
+
+*i
+
+LO3Voorkomen > LO3Voorkomen
+
+* ua1
+
+Srt >
+
+LO3SrtMelding
+
+* ua1
+
+LogSeverity >
+
+LO3Severity
+
+*
+
+Groep
+
+LO3Groep
+
+. ua1
+
+Rubr
+
+LO3RubriekExclCategorieEnGro
+
+. ua1
+
+LO3SrtMelding
+
+SG
+ConvID
+
+ID
+
+*i
+
+Naam NaamEnumeratiewaarde *
+
+Dyn
+LO3MeldingID
+
+Rel
+
+ConvID
+
+ID
+
+Rel
+
+ID
+
+ConvID
+
+*i
+
+Code
+
+LO3Meldingcode
+
+*
+
+Oms
+
+OnbeperkteOms
+
+*
+
+CategorieMelding > LO3CategorieMelding *
+
+*i
+
+Rubr6410RdnBeeindigenNation LO3RdnBeeindigenNation * l
+RdnVerliesNLNation
+
+RdnVerlies >
+
+LO3SrtAandOuder
+
+. ua1
+
+ID
+
+ConvRdnOpnameNation
+ConvID
+
+ID
+
+LO3AandOuder
+
+SG
+
+ID
+
+*i
+
+Rubr6310RdnOpnameNation LO3RdnOpnameNation * l
+RdnVerkNLNation
+
+RdnVerk >
+
+Autorisatietabel
+
+. ua1
+
+AutorisatietabelID
+
+*i
+
+Partijcode
+
+PartijCode
+
+*l
+
+DatIngangTabelregel Dat
+
+StapelVoorkomen
+
+Stapel
+
+Dyn
+
+Dyn
+
+LO3Selsrt
+
+.
+
+Stapel
+
+*l
+
+Beraand
+
+LO3Beraand
+
+.
+
+Volgnr
+
+*l
+
+Afnemersverstr
+
+LO3Afnemersverstr
+
+.
+
+*
+.
+
+Stapel >
+Volgnr
+
+ID
+
+StapelID
+
+*i
+
+AdmHnd >
+
+AdmHnd
+
+Pers >
+
+Pers
+
+*l
+
+SrtDoc >
+
+SrtDoc
+
+Partij >
+
+Partij
+
+.
+
+Rubr8220DatDoc
+
+DatEvtDeelsOnbekend
+
+.
+
+DocOms
+
+DocOms
+
+.
+
+Categorie LO3Categorie * l
+Volgnr
+
+Volgnr
+
+*l
+
+Rubr8310AandGegevensInOnderz LO3RubriekInclCategorieEnGro .
+
+StapelRelatie
+ID
+
+Dyn
+
+StapelRelatieID * i
+
+Stapel > Stapel
+
+*l
+
+Relatie > Relatie
+
+*l
+
+Rubr8320DatIngangOnderzoek
+
+DatEvtDeelsOnbekend
+
+Rubr8330DatEindeOnderzoek
+
+DatEvtDeelsOnbekend
+
+.
+
+Rubr8410OnjuistStrijdigOpenb
+
+LO3CoderingOnjuist
+
+.
+
+Rubr8510IngangsdatGel
+
+DatEvtDeelsOnbekend
+
+.
+
+Rubr8610DatVanOpneming
+
+DatEvtDeelsOnbekend
+
+.
+
+Rubr6210DatIngangFamilierech
+
+DatEvtDeelsOnbekend
+
+.
+
+Aktenr
+
+Aktenr
+
+.
+
+ANr
+
+ANr
+
+.
+
+BSN
+
+BSN
+
+.
+
+Voornamen
+
+Voornamen
+
+.
+
+Predicaat >
+
+Predicaat
+
+.
+
+AdellijkeTitel >
+GeslachtBijAdellijkeTitelPre >
+
+.
+
+Blokkering
+AdellijkeTitel
+Geslachtsaand
+
+BlokkeringID
+
+ANr
+
+ANr
+
+*i
+* u1
+
+RdnBlokkering >
+
+RdnBlokkering
+
+.
+
+.
+.
+
+Voorvoegsel
+
+Voorvoegsel
+
+.
+
+Scheidingsteken
+
+Scheidingsteken
+
+.
+
+Geslnaamstam
+
+Geslnaamstam
+
+.
+
+DatGeboorte
+
+Dyn
+
+ID
+
+ProcessInstantieID ProcessInstantieID .
+LO3GemVestiging LO3GemCode
+DatEvtDeelsOnbekend
+
+.
+
+LO3GemReg
+
+LO3GemCode
+
+.
+
+TsReg
+
+Ts
+
+*
+
+.
+
+GemGeboorte >
+
+Gem
+
+.
+
+BLPlaatsGeboorte
+
+BLPlaats
+
+.
+
+OmsLocGeboorte
+
+Locoms
+
+.
+
+LandGebiedGeboorte >
+
+LandGebied
+
+.
+
+Geslachtsaand >
+
+Geslachtsaand
+
+.
+
+SrtRelatie >
+
+SrtRelatie
+
+.
+
+DatAanv
+
+DatEvtDeelsOnbekend
+
+.
+
+GemAanv >
+
+Gem
+
+.
+
+BLPlaatsAanv
+
+BLPlaats
+
+.
+
+OmsLocAanv
+
+Locoms
+
+.
+
+LandGebiedAanv >
+
+LandGebied
+
+.
+
+RdnEinde >
+
+RdnEindeRelatie
+
+.
+
+DatEinde
+
+DatEvtDeelsOnbekend
+
+.
+
+GemEinde >
+
+Gem
+
+.
+
+BLPlaatsEinde
+
+BLPlaats
+
+.
+
+OmsLocEinde
+
+Locoms
+
+.
+
+LandGebiedEinde >
+
+LandGebied
+
+.
+
+IndOuder1HeeftGezag
+
+Ja
+
+.
+
+IndOuder2HeeftGezag
+
+Ja
+
+.
+
+IndDerdeHeeftGezag
+
+Ja
+
+.
+
+IndOnderCuratele
+
+Ja
+
+.
+
+RdnBlokkering
+ID
+
+RdnBlokkeringID
+
+*i
+* u1
+
+LO3SrtAandOuder
+
+.l
+
+Selectiesrt
+
+StapelVoorkomenID
+
+Srt >
+
+*l
+
+DatEindeTabelregel Dat
+
+*i
+
+ID
+
+LO3AandOuderID
+
+Ouder > Betr
+
+SG
+
+ID
+
+Dyn
+
+Rel
+*i
+
+Naam NaamEnumeratiewaarde *
+
+* u1
+
+LO3SrtAandOuderID
+
+Rel
+*i
+
+Naam NaamEnumeratiewaarde * l
+
+

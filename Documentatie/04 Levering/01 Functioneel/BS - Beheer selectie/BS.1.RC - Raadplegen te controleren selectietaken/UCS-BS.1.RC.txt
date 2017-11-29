@@ -1,0 +1,455 @@
+UCS BS.1.RC – Raadplegen te controleren
+selectietaken
+Versie
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Datum
+
+17 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+05-07-2017
+
+0.1
+
+Eerste opzet
+
+oBRP
+
+17-07-2017
+
+1.0
+
+Definitief gemaakt. Hfd openstaande punten toegevoegd
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+
+UCS BS.1.RC – Raadplegen te controleren selectietaken
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Gebruikersinteractie ................................................................................................. 4
+2.1
+2.2
+2.3
+2.4
+2.4.1
+2.4.2
+
+3
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+Openstaande punten .............................................................................................................3
+
+Preconditie ...........................................................................................................................4
+Postconditie .........................................................................................................................4
+Regulier verloop....................................................................................................................4
+Alternatief verloop ................................................................................................................4
+Ingevoerde gegevens onjuist..............................................................................................5
+Geen te controleren selecties gevonden ...............................................................................5
+
+Schermonderdelen .................................................................................................... 6
+3.1
+3.2
+3.3
+3.4
+3.5
+
+Overzicht te controleren selectietaken .....................................................................................6
+Zoekcriteria..........................................................................................................................6
+Sorteren ..............................................................................................................................6
+Selecteren............................................................................................................................6
+Overige functionaliteiten ........................................................................................................6
+
+4
+
+Bedrijfsregels ........................................................................................................... 7
+
+5
+
+Ontwerpbeslissingen ................................................................................................ 8
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 2 van 8
+
+UCS BS.1.RC – Raadplegen te controleren selectietaken
+
+1 Inleiding
+1.1
+
+Doel
+
+Deze Use Case beschrijft de wijze waarop de gebruiker een overzicht krijgt van de te controleren
+selectietaken.
+Vanuit dit overzicht kunnen de Use Cases met betrekking tot het raadplegen van de detailgegevens
+van de selectietaak of het raadplegen van de detailgegevens van de selectiedienst aangeroepen
+worden.
+Bij het openen van het scherm toont het overzicht alle te controleren selectietaken waarvoor geldt
+dat de status van de selectietaak ‘Controleren’ is.
+De gebruiker heeft de mogelijkheid om één selectietaak te selecteren om vervolgens het
+controlebestand in te zien.
+Ook kan de gebruiker het overzicht op verscheidene gegevens sorteren.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de gebruikersinteractie. In hoofdstuk 3 staan de schermonderdelen
+beschreven. In hoofdstuk 4 staan de Use Case specifieke ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+1.4
+
+Openstaande punten
+•
+•
+
+Deze Use Case is nog niet gebouwd. De specificaties zijn niet gereviewd en er zijn nog
+geen bedrijfsregels in BMR gemaakt.
+Het verwacht aantal personen wordt op scherm getoond. Dit is een nieuw gegeven dat nog
+in BMR bij de Dienst moet worden toegevoegd.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 3 van 8
+
+UCS BS.1.RC – Raadplegen te controleren selectietaken
+
+2 Gebruikersinteractie
+2.1
+
+Preconditie
+
+De gebruiker heeft de functie ‘Controleren selectietaken” aangeroepen.
+Er zijn één of meerdere selectietaken uitgevoerd, deze hebben de status ‘Controleren’.
+
+2.2
+
+Postconditie
+
+De gebruiker heeft een overzicht van te controleren selecties gekregen.
+
+2.3
+
+Regulier verloop
+
+In het regulier verloop wordt de interactie van de actor met het systeem beknopt beschreven.
+
+Stap
+
+Actor
+
+Actie
+
+1.
+
+Gebruiker
+
+Vraagt een overzicht op van te controleren
+selectietaken.
+
+2.
+
+Systeem
+
+Toont een overzicht van te controleren
+selectietaken.
+De selectietaken worden oplopend gesorteerd
+op ‘Datum uitvoer’ en vervolgens op ‘Partij’.
+
+Alternatief
+
+Geen te controleren
+selecties gevonden
+(2.4.2)
+
+Voor de gegevens in het overzicht zie
+paragraaf (3.1).
+De gebruiker heeft de mogelijkheid om de
+gegevens in het overzicht te sorteren (zie
+paragraaf 3.3).
+3.
+
+Systeem
+
+Geeft de gebruiker de mogelijkheid om een
+zoekvraag samen te stellen.
+
+4.
+
+Gebruiker
+
+Stelt een zoekvraag samen.
+De gebruiker kan een zoekcriterium invullen
+(zie paragraaf 3.2).
+
+5.
+
+Systeem
+
+Stelt vast dat de ingevoerde gegevens juist
+zijn.
+
+Ingevoerde gegevens
+onjuist (2.4.1)
+
+6.
+
+Systeem
+
+Toont een overzicht van te controleren
+selecties op basis van de ingevoerde
+zoekvraag.
+
+Geen te controleren
+selecties gevonden
+(2.4.2)
+
+2.4
+
+Alternatief verloop
+
+In het alternatief verloop wordt de interactie van de actor met het systeem beschreven wanneer
+deze interactie afwijkt van het regulier verloop.
+(Afkortingen: S = Stap, C = Conditie, A = Actie, V = Vervolg)
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 4 van 8
+
+UCS BS.1.RC – Raadplegen te controleren selectietaken
+
+2.4.1
+
+Ingevoerde gegevens onjuist
+
+S
+
+Stap 5 uit het regulier verloop
+
+C
+
+Het systeem stelt vast dat er één of meerdere ingevoerde gegevens onjuist zijn.
+
+A
+
+Het systeem geeft een melding dat één of meer gegevens onjuist zijn ingevoerd.
+
+V
+
+Stap 3 uit het regulier verloop
+
+2.4.2
+
+Geen te controleren selecties gevonden
+
+S
+
+Stap 2 en stap 6 uit het regulier verloop
+
+C
+
+Er worden geen vrij te geven selecties gevonden
+
+A
+
+Systeem geeft een melding: ‘Er zijn geen te controleren selecties gevonden’.
+
+V
+
+Stap 3 uit het regulier verloop
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 5 van 8
+
+UCS BS.1.RC – Raadplegen te controleren selectietaken
+
+3 Schermonderdelen
+3.1
+
+Overzicht te controleren selectietaken
+
+Het overzicht toont alle te controleren selecties.
+In de onderstaande tabel is een overzicht te vinden van de gegevens die getoond worden van de te
+controleren selectietaken.
+Naam
+
+BRP Attribuut
+
+Dienst ID
+
+Selectietaak.Dienst
+
+Selectietaak ID
+
+Selectietaak.SelectietaakID
+
+Toegang
+leveringsautorisatie
+
+Selectietaak.Toegang leveringsautorisatie
+
+Partij
+
+Toegang Leveringsautorisatie.Geautoriseerde.Partij.Naam
+
+Datum uitvoer
+
+Selectietaak. Datum uitvoer
+
+Verwacht aantal personen
+
+<nieuw gegeven in BMR bij de Dienst>
+
+Aantal resultaten selectie
+
+Aantal personen van het totale selectieresultaat
+
+3.2
+
+Zoekcriteria
+•
+•
+
+3.3
+
+Elk gegeven op het overzicht kan als aanvullend zoekcriterium toegevoegd worden door de
+gebruiker.
+In het overzicht staan de te controleren selectietaken (status selectietaak is gelijk aan
+‘Controleren’).
+
+Sorteren
+
+De selectietaken in het overzicht worden standaard oplopend gesorteerd op de uitgevoerde
+selectiedatum.
+De gebruiker heeft de mogelijkheid om ook de sortering aan te passen. De sortering kan aangepast
+worden naar elk gegeven dat getoond wordt van de selectietaak in het overzicht.
+
+3.4
+
+Selecteren
+
+Na het selecteren van een selectietaak kan de gebruiker één van de volgende acties uitvoeren:
+•
+•
+•
+
+3.5
+
+Controleren bestand van de selectietaak
+Tonen detailoverzicht van de selectietaak
+Wijzigen status selectietaak
+
+Overige functionaliteiten
+•
+•
+
+Het totaal aantal resultaten in het overzicht selectietaken wordt als getal getoond.
+De gebruiker krijgt de mogelijkheid om door de resultaten te ‘bladeren’ op de volgende
+manieren:
+o Vooruit/achteruit bladeren per pagina
+o Eerste/laatste pagina te selecteren
+o Een blad nummer te kunnen kiezen
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 6 van 8
+
+UCS BS.1.RC – Raadplegen te controleren selectietaken
+
+4 Bedrijfsregels
+Voor een toelichting op de verschillende soorten bedrijfsregels wordt verwezen naar de daartoe
+opgestelde aspectbeschrijving Controles [2].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels, verwerkingslogica en definitieregels zijn opgenomen de bijlage: BS.1.RC – Bijlage
+Raadplegen te controleren selectietaken.doc
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 7 van 8
+
+UCS BS.1.RC – Raadplegen te controleren selectietaken
+
+5 Ontwerpbeslissingen
+Er zijn geen Use Case specifieke ontwerpbeslissingen.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 8 van 8
+
+

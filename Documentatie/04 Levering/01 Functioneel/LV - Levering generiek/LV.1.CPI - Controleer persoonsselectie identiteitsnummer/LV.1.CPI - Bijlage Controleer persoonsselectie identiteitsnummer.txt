@@ -1,0 +1,356 @@
+LV.1.CPI - Bijlage Controleer persoonsselectie
+identiteitsnummer
+Versie: Werk
+Gegenereerd op: 13 juli 2017
+Status: Definitief
+
+1 Regels voor usecase LV.1.CPI.CKS - Controleer kunstmatige
+sleutel
+1.1
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1833
+
+7
+
+1.2
+
+F
+
+De objectsleutel waarmee een persoon in het bericht wordt aangewezen
+moet geldig zijn
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1834
+
+8
+
+'Gemaskeerde objectsleutel'
+
+2 Regels voor usecase LV.1.CPI.CSP - Controleer selectie
+persoon
+2.1
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1403
+
+7
+
+2.2
+
+F
+
+Het leveringsverzoek moet minimaal één te leveren persoon bevatten
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2059
+
+2
+
+Totale populatiebeperking
+
+R2191
+
+1
+
+Identiteitsnummer
+
+2.3
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1538
+
+5
+
+Alleen persoonslijsten van ingeschreven personen kunnen geleverd worden.
+
+R1539
+
+8
+
+Alleen niet-vervallen personen kunnen geleverd worden
+
+3 Regels voor usecase LV.1.CPI.GV - Geen
+verstrekkingsbeperking
+3.1
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1339
+
+6
+
+3.2
+
+F
+
+Dienst alleen mogelijk indien geen verstrekkingsbeperking voor de
+verzoekende partij aanwezig is
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1342
+
+2
+
+'Persoon heeft een verstrekkingsbeperking voor Partij'
+
+4 Uitwerking regels
+R1339
+Dienst alleen mogelijk indien geen verstrekkingsbeperking voor de verzoekende partij
+aanwezig is
+Definitie:
+
+Indien een Partij vraagt om gegevens van een Persoon
+OF
+verzoekt om bij een persoon een Persoon \ Afnemerindicatie te plaatsen
+
+dan mag er bij die Persoon geen verstrekkingsbeperking voor de verzoekende partij
+zijn. (zie 'Persoon heeft een verstrekkingsbeperking voor Partij' (R1342))
+
+Toelichting
+Bij de Dienst Verwijdering afnemerindicatie is er geen sprake van gegevenslevering
+en daar is deze regel dan ook niet van toepassing.
+Versie:
+
+6
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Bij deze persoon geldt een verstrekkingsbeperking waardoor deze dienst niet
+geleverd kan worden.
+
+Loggingsniveau:
+
+Fout
+
+R1342
+'Persoon heeft een verstrekkingsbeperking voor Partij'
+Definitie:
+
+Een Persoon 'heeft een verstrekkingsbeperking voor een Partij' als een
+verstrekkingsbeperking voor die Partij mogelijk is en (er sprake is van een volledige
+verstrekkingsbeperking of een specifieke verstrekkingsbeperking voor die Partij):
+Partij.Verstrekkingsbeperking mogelijk? = 'Ja'
+EN
+(
+Persoon.Volledige verstrekkingsbeperking? = 'Ja'
+OF
+er bestaat bij de Persoon een voorkomen van Persoon \ Verstrekkingsbeperking
+met Partij gelijk aan de betreffende Partij
+)
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1403
+Het leveringsverzoek moet minimaal één te leveren persoon bevatten
+Definitie:
+
+In het Bericht moet het opgegeven Identiteitsnummer (R2191) minstens één te
+leveren persoon identificeren binnen de Totale populatiebeperking (R2059)
+(rekening houdend met R1538 - Alleen persoonslijsten van ingeschreven personen
+kunnen geleverd worden. en R1539 - Alleen niet-vervallen personen kunnen
+geleverd worden).
+
+Versie:
+
+7
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Met het opgegeven identificerend gegeven is geen persoon gevonden binnen uw
+autorisatie.
+
+Loggingsniveau:
+
+Fout
+
+R1538
+Alleen persoonslijsten van ingeschreven personen kunnen geleverd worden.
+Definitie:
+
+Het systeem levert alleen persoonslijsten van ingeschreven personen
+(Persoon.Soort = 'Ingeschrevene' (I)).
+De overige personen ('pseudo personen') komen slechts voor als gerelateerde van
+een ingeschreven persoon en worden alleen geleverd als onderdeel van de
+persoonslijst van een ingeschreven persoon.
+
+Versie:
+
+5
+
+Soort:
+
+Verwerkingslogica
+
+R1539
+Alleen niet-vervallen personen kunnen geleverd worden
+Definitie:
+
+Het systeem levert alleen niet vervallen personen (eis: Persoon.Soort =
+'Ingeschrevene' (I) en Persoon.Nadere bijhoudingsaard <> 'Fout' (F) of 'Onbekend'
+(?) of 'Gewist' (W))
+Vanuit het perspectief van een gebruiker (afnemer of bijhouder) bezien bestaan
+deze personen dus niet. Ontsluiting is slechts mogelijk via de beheerder.
+
+Versie:
+
+8
+
+Soort:
+
+Verwerkingslogica
+
+R1833
+De objectsleutel waarmee een persoon in het bericht wordt aangewezen moet geldig zijn
+Definitie:
+
+De 'Gemaskeerde objectsleutel' (R1834) waarmee een Persoon in het Bericht wordt
+aangewezen moet geldig zijn.
+
+Versie:
+
+7
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De objectsleutel waarmee de persoon in het bericht wordt aangewezen is niet
+geldig.
+
+R1834
+'Gemaskeerde objectsleutel'
+Definitie:
+
+De 'Gemaskeerde objectsleutel' (R1834) wijst een Persoon aan en maskeert de
+interne objectsleutel. Deze 'Gemaskeerde objectsleutel' (R1834) moet een beperkte
+tijd geldig zijn. De objectsleutel verliest z'n geldigheid, zodra zich een wijziging in
+de persoonsgegevens heeft voorgedaan nadat de gemaskeerde sleutel aan een
+partij is verstrekt
+Toelichting:
+• Er moet voorkomen worden dat de objectsleutel een sterkere sleutel wordt dan
+het BSN en afnemers deze sleutel gaan gebruiken i.p.v. het BSN. Dit houdt in
+dat voorkomen moet worden dat de objectsleutel 'as-is' wordt
+gecommuniceerd. Er zal een vorm van maskering toegepast worden met een
+
+beperkte geldigheid. De concrete invulling hiervan is een technisch
+implementatie en wordt dus niet verder (functioneel) beschreven.
+Versie:
+
+8
+
+Soort:
+
+Definitieregel
+
+R2059
+Totale populatiebeperking
+Definitie:
+
+Voor elke levering is een 'Totale populatiebeperking' vast te stellen. Hiervoor zijn de
+volgende voorkomens nodig:
+• De Toegang leveringsautorisatie waarvoor geleverd wordt
+• De Leveringsautorisatie die daar bij hoort
+• De Dienst die geleverd wordt
+• De Dienstbundel die daarbij hoort
+De 'Totale populatiebeperking' is dan een expressie die bestaat uit de logische EN
+van:
+• Leveringsautorisatie.Populatiebeperking
+• Toegang leveringsautorisatie.Nadere populatiebeperking
+• Dienstbundel.Nadere populatiebeperking
+Hierbij geldt dat elk van de drie attributen leeg kan zijn. In dat geval worden ze niet
+meegenomen in de logische EN (of worden ze vervangen door de constante
+expressie 'WAAR').
+Als alle drie de attributen leeg zijn dan geldt dat ook als 'WAAR' (er is dan geen
+beperking).
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2191
+Identiteitsnummer
+Definitie:
+
+Een identiteitsnummer bestaat uit:
+Persoon.Burgerservicenummer
+OF
+Persoon.Administratienummer
+OF
+Persoonsobjectsleutel
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+

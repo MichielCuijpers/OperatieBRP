@@ -1,0 +1,441 @@
+UC841 Beheren bijhoudingsautorisatie
+
+0.3
+
+Datum
+Status
+
+02-11-2016
+Definitief
+
+Definitief | 0.3 | UC841 Beheren bijhoudingsautorisatie | 02-11-2016
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................5
+2.1
+2.2
+2.3
+2.4
+2.5
+
+3
+
+REGULIER VERLOOP: ZOEKEN BIJHOUDINGSAUTORISATIE ...............................................................5
+ALTERNATIEF VERLOOP: TOEVOEGEN BIJHOUDINGSAUTORISATIE ...................................................5
+ALTERNATIEF VERLOOP: WIJZIGEN BIJHOUDINGSAUTORISATIE .......................................................5
+ALTERNATIEF VERLOOP: TOEVOEGEN TOEGANG BIJHOUDINGSAUTORISATIE ..................................5
+ALTERNATIEF VERLOOP: WIJZIGEN TOEGANG BIJHOUDINGSAUTORISATIE ......................................5
+
+AANVULLENDE SPECIFICATIES .................................................................................................6
+3.1
+3.2
+3.3
+3.4
+3.5
+3.6
+3.7
+
+4
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................4
+PRECONDITIE ........................................................................................................................................4
+POSTCONDITIE......................................................................................................................................4
+
+ZOEKEN BIJHOUDINGSAUTORISATIE ...................................................................................................6
+TONEN ZOEKRESULTATEN BIJHOUDINGSAUTORISATIE ......................................................................6
+TOEVOEGEN BIJHOUDINGSAUTORISATIE ............................................................................................6
+WIJZIGEN BIJHOUDINGSAUTORISATIE................................................................................................6
+LIJST VAN TOEGANG BIJHOUDINGSAUTORISATIE...............................................................................7
+TOEVOEGEN TOEGANG BIJHOUDINGSAUTORISATIE ...........................................................................7
+WIJZIGEN TOEGANG BIJHOUDINGSAUTORISATIE...............................................................................7
+
+OPMERKINGEN ....................................................................................................................................9
+
+Operatie BRP
+
+Pagina 2 van 9
+
+Definitief | 0.3 | UC841 Beheren bijhoudingsautorisatie | 02-11-2016
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+11-08-2016
+19-08-2016
+02-11-2016
+
+0.1
+0.2
+0.3
+
+Initiële versie
+Reviewcommentaar verwerkt
+Bedrijfsregels datum ingang en einde
+toegevoegd
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+18-08-2016
+
+0.1
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 9
+
+Definitief | 0.3 | UC841 Beheren bijhoudingsautorisatie | 02-11-2016
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Een overeenkomst tussen Partijen enerzijds, en de eigenaar van de BRP anderzijds, op basis
+waarvan Partijen persoonsgegevens mogen bijhouden. (Bron: [BMR]).
+Bijhoudingsautorisatie is een dynamisch stamgegeven en wordt beschreven in het [BMR]:
+AutAut.Bijhoudingsautorisatie.
+In dit document wordt beschreven op welke wijze bijhoudingsautorisaties beheerd worden
+(zoeken, toevoegen en wijzigen).
+
+1.2
+
+Referenties
+#
+[BMR]
+
+1.3
+
+Document
+https://www.modernodam.nl/bmr
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 4 van 9
+
+Definitief | 0.3 | UC841 Beheren bijhoudingsautorisatie | 02-11-2016
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop: zoeken bijhoudingsautorisatie
+1. De beheerder meldt het systeem een bijhoudingsautorisatie te zoeken (AV: 2.2)
+2. Het systeem toont de beheerder zoekcriteria waarmee bijhoudingsautorisaties gezocht kunnen
+worden (AS: 3.1)
+3. De beheerder voert een of meer zoekcriteria in
+4. Het systeem zoekt op basis van de zoekcriteria naar bijhoudingsautorisaties
+5. Het systeem toont de gevonden bijhoudingsautorisaties (AS: 3.2)
+6. De use case eindigt. (AV: 2.3)
+
+2.2
+
+Alternatief verloop: toevoegen bijhoudingsautorisatie
+1. De beheerder meldt het systeem een bijhoudingsautorisatie toe te voegen
+2. Het systeem toont de in te vullen details van de bijhoudingsautorisatie (AS: 3.3)
+3. De beheerder voert de details in
+4. Het systeem controleert de details
+5. Het systeem legt de details vast
+6. De use case gaat verder bij stap 2 van 2.3
+
+2.3
+
+Alternatief verloop: wijzigen bijhoudingsautorisatie
+1. De beheerder selecteert een bijhoudingsautorisatie
+2. Het systeem toont de details van de geselecteerde bijhoudingsautorisatie (AS: 3.4)
+3. Het systeem toont een lijst van toegang bijhoudingsautorisatie van de geselecteerde
+bijhoudingsautorisatie (AS: 3.5)
+4. De beheerder wijzigt de details van de bijhoudingsautorisatie (AV: 2.4, 2.5)
+5. Het systeem controleert de details van de bijhoudingsautorisatie
+6. Het systeem legt de details vast
+7. Het systeem toont de eerdere lijst van gevonden bijhoudingsautorisaties
+8. De use case eindigt.
+
+2.4
+
+Alternatief verloop: toevoegen toegang bijhoudingsautorisatie
+1. De beheerder meldt het systeem om een toegang bijhoudingsautorisatie toe te voegen
+2. Het systeem toont de details van de toegang bijhoudingsautorisatie (AS: 3.6)
+3. De beheerder voert de details in
+4. Het systeem controleert de details
+5. Het systeem legt de details vast
+6. De use case gaat verder bij stap 2 van 2.3
+
+2.5
+
+Alternatief verloop: wijzigen toegang bijhoudingsautorisatie
+1. De beheerder selecteert een toegang bijhoudingsautorisatie
+2. Het systeem toont de details van de geselecteerde toegang bijhoudingsautorisatie (AS: 3.7)
+3. De beheerder wijzigt de details van de toegang bijhoudingsautorisatie
+4. Het systeem controleert de details
+5. Het systeem legt de details vast
+6. De use case gaat verder bij stap 2 van 2.3
+
+Operatie BRP
+
+Pagina 5 van 9
+
+Definitief | 0.3 | UC841 Beheren bijhoudingsautorisatie | 02-11-2016
+
+3
+
+Aanvullende specificaties
+
+3.1
+
+Zoeken bijhoudingsautorisatie
+Op de basis van de onderstaande gegevens kunnen Bijhoudingsautorisaties gevonden worden.
+Naam
+Modelautorisatie?
+Naam
+Datum
+Geblokkeerd?
+Geautoriseerde
+Ondertekenaar
+Transporteur
+
+3.2
+
+Toelichting
+Bijhoudingsautorisatie.Modelautorisatie?
+Bijhoudingsautorisatie.Naam
+>= Bijhoudingsautorisatie.Datum ingang en
+<= Bijhoudingsautorisatie.Datum einde
+Bijhoudingsautorisatie.Geblokkeerd?
+Toegang bijhoudingsautorisatie.Geautoriseerde.Partij.Naam of
+Toegang bijhoudingsautorisatie.Geautoriseerde.Partij.Code
+Toegang bijhoudingsautorisatie.Ondertekenaar.Naam of
+Toegang bijhoudingsautorisatie.Ondertekenaar.Code
+Toegang bijhoudingsautorisatie.Transporteur.Naam of
+Toegang bijhoudingsautorisatie.Transporteur.Code
+
+Tonen zoekresultaten bijhoudingsautorisatie
+De onderstaande gegevens worden in het zoekresultaat van Bijhoudingsautorisatie getoond.
+Naam
+ID
+Modelautorisatie?
+Naam
+Datum ingang
+Datum einde
+Geblokkeerd?
+
+3.3
+
+Toelichting
+Bijhoudingsautorisatie.ID
+Bijhoudingsautorisatie.Modelautorisatie?
+Bijhoudingsautorisatie.Naam
+Bijhoudingsautorisatie.Datum ingang
+Bijhoudingsautorisatie.Datum einde
+Bijhoudingsautorisatie.Geblokkeerd?
+
+Toevoegen bijhoudingsautorisatie
+In de onderstaande tabel is te vinden welke gegevens van Bijhoudingsautorisatie getoond
+worden.
+Naam
+Modelautorisatie?
+Naam
+Datum ingang
+Datum einde
+Geblokkeerd?
+
+3.4
+
+Toelichting
+Bijhoudingsautorisatie.Modelautorisatie?
+Bijhoudingsautorisatie.Naam
+Bijhoudingsautorisatie.Datum ingang, dient voor Datum einde te
+liggen indien aanwezig
+Bijhoudingsautorisatie.Datum einde, dient na Datum ingang te
+liggen indien aanwezig
+Bijhoudingsautorisatie.Geblokkeerd?
+
+Wijzigen bijhoudingsautorisatie
+In de onderstaande tabel is te vinden welke gegevens van Bijhoudingsautorisatie getoond
+worden.
+Naam
+
+Operatie BRP
+
+Toelichting
+
+Pagina 6 van 9
+
+Definitief | 0.3 | UC841 Beheren bijhoudingsautorisatie | 02-11-2016
+
+ID
+Modelautorisatie?
+Naam
+Datum ingang
+Datum einde
+Geblokkeerd?
+Soort administratieve
+handeling
+
+3.5
+
+Bijhoudingsautorisatie.ID alleen tonen, niet te wijzigen
+Bijhoudingsautorisatie.Modelautorisatie?
+Bijhoudingsautorisatie.Naam
+Bijhoudingsautorisatie.Datum ingang, dient voor Datum einde te
+liggen indien aanwezig
+Bijhoudingsautorisatie.Datum einde, dient na Datum ingang te
+liggen indien aanwezig
+Bijhoudingsautorisatie.Geblokkeerd?
+Bijhoudingsautorisatie \ Soort administratieve handeling.Naam,
+een lijst van alle te selecteren soorten administratieve handeling.
+Het is mogelijk om in een keer alle soorten administratieve
+handeling te selecteren of juist niet.
+
+Lijst van toegang bijhoudingsautorisatie
+In de onderstaande tabel is te vinden welke gegevens in de lijst van Toegang
+bijhoudingsautorisatie getoond worden.
+Naam
+ID
+Geautoriseerde
+Ondertekenaar
+Transporteur
+Datum ingang
+Datum einde
+Geblokkeerd?
+
+Toelichting
+Toegang bijhoudingsautorisatie.ID
+Toegang bijhoudingsautorisatie.Geautoriseerde.Partij.Naam
+Toegang bijhoudingsautorisatie.Ondertekenaar.Naam
+Toegang bijhoudingsautorisatie.Transporteur.Naam
+Toegang bijhoudingsautorisatie.Datum ingang
+Toegang bijhoudingsautorisatie.Datum einde
+Toegang bijhoudingsautorisatie.Geblokkeerd
+
+De lijst is standaard gesorteerd op Datum ingang en Datum einde van nieuw naar oud.
+3.6
+
+Toevoegen toegang bijhoudingsautorisatie
+In de onderstaande tabel is te vinden welke gegevens van Toegang bijhoudingsautorisatie
+getoond worden.
+Naam
+Geautoriseerde
+Ondertekenaar
+Transporteur
+Datum ingang
+Datum einde
+Afleverpunt
+Geblokkeerd?
+
+3.7
+
+Toelichting
+Toegang bijhoudingsautorisatie.Geautoriseerde.Partij.Naam
+Toegang bijhoudingsautorisatie.Ondertekenaar.Naam
+Toegang bijhoudingsautorisatie.Transporteur.Naam
+Toegang bijhoudingsautorisatie.Datum ingang, dient voor Datum
+einde te liggen indien aanwezig
+Toegang bijhoudingsautorisatie.Datum einde, dient na Datum
+ingang te liggen indien aanwezig
+Toegang bijhoudingsautorisatie.Afleverpunt
+Toegang bijhoudingsautorisatie.Geblokkeerd?
+
+Wijzigen toegang bijhoudingsautorisatie
+In de onderstaande tabel is te vinden welke gegevens van Toegang bijhoudingsautorisatie
+getoond worden.
+Naam
+ID
+Geautoriseerde
+Ondertekenaar
+Transporteur
+
+Operatie BRP
+
+Toelichting
+Toegang bijhoudingsautorisatie.ID alleen tonen, niet te wijzigen
+Toegang bijhoudingsautorisatie.Geautoriseerde.Partij.Naam
+Toegang bijhoudingsautorisatie.Ondertekenaar.Naam
+Toegang bijhoudingsautorisatie.Transporteur.Naam
+
+Pagina 7 van 9
+
+Definitief | 0.3 | UC841 Beheren bijhoudingsautorisatie | 02-11-2016
+
+Datum ingang
+Datum einde
+Afleverpunt
+Geblokkeerd?
+
+Operatie BRP
+
+Toegang bijhoudingsautorisatie.Datum ingang, dient voor Datum
+einde te liggen indien aanwezig
+Toegang bijhoudingsautorisatie.Datum einde, dient na Datum
+ingang te liggen indien aanwezig
+Toegang bijhoudingsautorisatie.Afleverpunt
+Toegang bijhoudingsautorisatie.Geblokkeerd?
+
+Pagina 8 van 9
+
+Definitief | 0.3 | UC841 Beheren bijhoudingsautorisatie | 02-11-2016
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 9 van 9
+
+

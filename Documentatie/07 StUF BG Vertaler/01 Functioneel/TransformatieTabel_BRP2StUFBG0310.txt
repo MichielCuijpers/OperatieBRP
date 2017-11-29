@@ -1,0 +1,8268 @@
+A
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+
+B
+
+C
+
+D
+
+E
+
+F
+
+G
+
+H
+
+I
+
+J
+
+K
+
+L
+
+M
+
+Bijhoudings
+gegeven
+-
+
+XML-attributes
+Objecttype
+-
+
+Objectsleutel
+-
+
+Voorkomensleutel
+-
+
+CommunicatieID
+-
+
+ReferentieID
+-
+
+Verwerkingssoort
+-
+
+Objectsleutel
+-
+
+Voorkomensleutel
+-
+
+CommunicatieID
+-
+
+ReferentieID
+-
+
+Verwerkingssoort
+-
+
+StUF Attribuut
+
+-
+
+XML-attributes
+Objecttype
+-
+
+Objectsleutel
+-
+
+Voorkomensleutel
+-
+
+CommunicatieID
+-
+
+ReferentieID
+X
+-
+
+Verwerkingssoort
+-
+
+StUF Attribuut
+
+Toelichting
+
+-
+
+XML-attributes
+Objecttype
+Melding
+-
+
+XML-attributes
+Objecttype
+AdministratieveHandeling
+
+Objectsleutel
+O
+
+Voorkomensleutel
+-
+
+CommunicatieID
+O
+
+ReferentieID
+-
+
+Verwerkingssoort
+X
+
+StUF Attribuut
+
+Toelichting
+
+Persoon
+
+-
+
+-
+
+O
+
+-
+
+X
+
+Nadere uitwerking in werkblad
+VerwerkPersoon_DetailsPersoon
+
+BRP Mutatie- en Volledigberichten Persoon - lvg_synVerwerkPersoon
+Stuurgegevens
+Berichtelement
+Stuurgegevens
+Zendende partij
+Zendende systeem
+Ontvangende partij
+Referentienummer
+Tijdstip verzending
+
+Igv Mutatie
+Type
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+Kardinaliteit
+1
+1
+1
+1
+1
+1
+
+Attribuuttype
+PartijCode
+SysteemNaam
+PartijCode
+Referentienummer
+DatumTijd
+
+StUF Attribuut
+zenderOrganisatie
+zenderApplicatie
+ontvangerOrganisatie
+referentienummer
+tijdstipBericht
+
+Toelichting
+
+Lengte passend?
+
+Parameters
+Berichtelement
+Parameters
+Soort synchronisatie
+Leveringsautorisatie identificatie
+Dienst identificatie
+
+Type
+Groep
+Attribuut
+Attribuut
+Attribuut
+
+1
+1
+1
+1
+
+Attribuuttype
+NaamEnumeratiewaarde
+LeveringsautorisatieID
+DienstID
+
+Toelichting
+Mogelijk BRP-inhoud: Volledigbericht of Mutatiebericht
+
+Meldingen
+Berichtelement
+Meldingen
+Melding
+Regel code
+Soort naam
+Melding
+
+Type
+Container
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+
+0..1
+1..n
+1
+1
+1
+
+Attribuuttype
+RegelCode
+SoortmeldingNaam
+Meldingtekst
+
+Synchronisatie
+Berichtelement
+Synchronisatie
+Code
+Naam
+Categorie
+Partij code
+Tijdstip registratie
+Bijgehouden personen
+Persoon
+
+Type
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Container
+Object
+
+Attribuuttype
+1
+1
+1
+1
+1
+1
+1
+1..n
+
+AdministratieveHandelingCode
+NaamEnumeratiewaarde
+CategorieAdministratieveHandelingNaam
+PartijCode
+DatumTijd
+-
+
+-
+
+A
+1
+2
+
+B
+
+C
+
+D
+
+E
+
+F
+
+M
+
+N
+
+BRP Mutatie- en Volledigberichten Persoon - lvg_synVerwerkPersoon (UNDER CONSTRUCTION)
+
+3 Details persoon
+4
+5 Berichtelement
+6 Persoon
+7
+Soort persoon
+8
+9
+Afgeleid administratief
+10
+Tijdstip registratie
+11
+Actie inhoud
+12
+Tijdstip verval
+13
+Actie verval
+14
+Nadere aanduiding verval
+15
+Tijdstp laatste wijziging
+16
+Tijdstp laatste wijziging GBA-systematiek
+17
+18 Identificatienummers
+19
+Tijdstip registratie
+20
+Actie inhoud
+21
+Tijdstip verval
+22
+Actie verval
+23
+Nadere aanduiding verval
+24
+Datum aanvang geldigheid
+25
+Datum einde geldigheid
+26
+Actie aanpassing geldigheid
+27
+Burgerservicenummer
+28
+Administratienummer
+29
+30 Samengestelde naam
+31
+Tijdstip registratie
+32
+Actie inhoud
+33
+Tijdstip verval
+34
+Actie verval
+35
+Nadere aanduiding verval
+36
+Datum aanvang geldigheid
+37
+Datum einde geldigheid
+38
+Actie aanpassing geldigheid
+39
+Indicatie afgeleid
+40
+Indicatie namenreeks
+41
+Predicaat code
+42
+Voornamen
+43
+Adellijke titel code
+44
+Voorvoegsel
+45
+Scheidingsteken
+46
+Geslachtsnaamstam
+47
+48 Geboorte
+49
+Tijdstip registratie
+50
+Actie inhoud
+51
+Tijdstip verval
+52
+Actie verval
+53
+Nadere aanduiding verval
+54
+Datum
+55
+Gemeente code
+56
+Woonplaatsnaam
+57
+Buitenlandse plaats
+58
+Buitenlandse regio
+59
+Omschrijving locatie
+60
+Land gebied code
+61
+62 Geslachtsaanduiding
+63
+Tijdstip registratie
+64
+Actie inhoud
+65
+Tijdstip verval
+66
+Actie verval
+67
+Nadere aanduiding verval
+68
+Datum aanvang geldigheid
+69
+Datum einde geldigheid
+70
+Actie aanpassing geldigheid
+71
+Code
+72
+73 Inschrijving
+74
+Tijdstip registratie
+75
+Actie inhoud
+76
+Tijdstip verval
+77
+Actie verval
+
+Kardinaliteit Attribuuttype
+
+Bijhoudings
+gegeven
+
+Type
+
+Historievorm
+
+Object
+Attribuut
+
+G
+-
+
+1..n
+1
+
+Soort persoon
+
+-
+
+StUF Attribuut
+
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+-
+
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumTijd
+DatumTijd
+
+-
+
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+M/F
+-
+
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+Burgerservicenummer
+Administratienummer
+
+-
+
+inp.bsn
+inp.a-nummer
+
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+M/F
+-
+
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+JaNee
+JaNee
+PredicaatCode
+Voornamen
+AdellijkeTitelCode
+Voorvoegsel
+Scheidingsteken
+Geslachtsnaamstam
+
+X
+-
+
+adellijkeTitelPredicaat
+voornamen
+adellijkeTitelPredicaat
+voorvoegselGeslachtsnaam
+voorvoegselGeslachtsnaam
+geslachtsnaam
+
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+-
+
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+GemeenteCode
+NaamEnumeratiewaarde
+BuitenlandsePlaats
+BuitenlandseRegio
+LocatieOmschrijving
+LandGebiedCode
+
+-
+
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+M/F
+-
+
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+GeslachtsaanduidingCode
+
+-
+
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+-
+
+0..n
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+
+-
+
+Toelichting
+
+In BRP vulling vanuit verschillende elementen mogelijk.
+In BRP vulling vanuit verschillende elementen mogelijk.
+Indien scheidingsteken BRP ongelijk spatie, dan scheidingsteken toevoegen aan Voorvoegsel
+
+geboortedatum
+inp.geboorteplaats
+
+In BRP vulling vanuit verschillende elementen mogelijk.
+
+inp.geboorteplaats
+
+In BRP vulling vanuit verschillende elementen mogelijk.
+
+inp.geboorteplaats
+inp.geboorteland
+
+In BRP vulling vanuit verschillende elementen mogelijk.
+
+geslachtsaanduiding
+
+A
+1
+2
+
+B
+
+C
+
+D
+
+E
+
+F
+
+N
+
+BRP Mutatie- en Volledigberichten Persoon - lvg_synVerwerkPersoon (UNDER CONSTRUCTION)
+
+3 Details persoon
+4
+5 Berichtelement
+78
+Nadere aanduiding verval
+6
+79
+Datum
+80
+81 Nummerverwijzing
+82
+Tijdstip registratie
+83
+Actie inhoud
+84
+Tijdstip verval
+85
+Actie verval
+86
+Nadere aanduiding verval
+87
+Datum aanvang geldigheid
+88
+Datum einde geldigheid
+89
+Actie aanpassing geldigheid
+90
+Vorige burgerservicenummer
+91
+Volgende burgerservicenummer
+92
+Vorige administratienummer
+93
+Volgende administratienummer
+94
+95 Bijhouding
+96
+Tijdstip registratie
+97
+Actie inhoud
+98
+Tijdstip verval
+99
+Actie verval
+100
+Nadere aanduiding verval
+Datum aanvang geldigheid
+101
+102
+Datum einde geldigheid
+103
+Actie aanpassing geldigheid
+104
+Partij code
+105
+Bijhoudingsaard code
+Nadere bijhoudingsaard code
+
+Historievorm
+
+Attribuut
+Attribuut
+
+-
+
+0..1
+0..1
+
+NadereAanduidingVerval
+DatumMetOnzekerheid
+
+-
+
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+M/F
+-
+
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+Burgerservicenummer
+Burgerservicenummer
+Administratienummer
+Administratienummer
+
+-
+
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+M/F
+-
+
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+
+-
+
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+-
+
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumMetOnzekerheid
+Sleutelwaarde
+PartijCode
+BijhoudingsaardCode
+NadereBijhudingsaardCode
+
+-
+
+Attribuut
+
+-
+
+0..1
+
+JaNee
+
+-
+
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+-
+
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+GemeenteCode
+NaamEnumeratiewaarde
+BuitenlandsePlaats
+BuitenlandseRegio
+LocatieOmschrijving
+LandGebiedCode
+
+-
+
+Voornamen
+Voornaam
+Tijdstip registratie
+Actie inhoud
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Datum aanvang geldigheid
+Datum einde geldigheid
+Actie aanpassing geldigheid
+Volgnummer
+Voornaam
+
+Container
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+0..1
+M/F
+-
+
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+Volgnummer
+Voornaam
+
+-
+
+136
+
+Geslachtsnaamcomponenten
+
+Container
+
+-
+
+0..1
+
+-
+
+-
+
+137
+
+Geslachtsnaamcomponent
+
+Object/Groep
+
+M/F
+
+0..n
+
+-
+
+-
+
+Indicatie onverwerkt document
+Overlijden
+Tijdstip registratie
+Actie inhoud
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Datum
+Gemeente code
+Woonplaatsnaam
+Buitenlandse plaats
+Buitenlandse regio
+Omschrijving locatie
+Land gebied code
+
+Kardinaliteit Attribuuttype
+
+Bijhoudings
+gegeven
+
+Type
+
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+
+M
+
+135
+
+StUF Attribuut
+
+Toelichting
+
+inp.datumInschrijving
+inp.datumOpschortingBijhouding
+
+inp.gemeenteVanInschrijving
+inp.redenOpschortingBijhouding
+
+Wat verstaat StUF BG onder 'opgeschort'? Mogelijke waarden in BRP zijn:
+- A = Actueel
+- R = rechtstreekd niet-ingezetene
+- E = Emigratie
+- O = Overleden
+- V = Vertrokken onbekend waarheen
+- M = Ministerieel besluit
+- F = Fout
+Afhankelijk interpretatie StUF BG te vullen; de bijbehorende DAG is dan 'datumOpschorting'.
+
+overlijdendatum
+inp.overlijdenplaats
+
+In BRP vulling vanuit verschillende elementen mogelijk.
+
+inp.overlijdenplaats
+
+In BRP vulling vanuit verschillende elementen mogelijk.
+
+inp.overlijdenplaats
+inp.overlijdenland
+
+In BRP vulling vanuit verschillende elementen mogelijk.
+
+A
+1
+2
+
+C
+
+D
+
+E
+
+F
+
+M
+
+N
+
+BRP Mutatie- en Volledigberichten Persoon - lvg_synVerwerkPersoon (UNDER CONSTRUCTION)
+
+3 Details persoon
+4
+5 Berichtelement
+Tijdstip registratie
+6
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+
+B
+
+Historievorm
+
+Attribuut
+
+-
+
+0..1
+
+DatumTijd
+
+-
+
+Actie inhoud
+
+Attribuut
+
+-
+
+0..1
+
+Sleutelwaarde
+
+-
+
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Datum aanvang geldigheid
+Datum einde geldigheid
+Actie aanpassing geldigheid
+Volgnummer
+Predicaat code
+Adelljke titel code
+Voorvoegsel
+Scheidingsteken
+Stam
+
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+-
+
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+Volgnummer
+PredicaatCode
+AdellijkeTitelCode
+Voorvoegsel
+Scheidingsteken
+Geslachtsnaamstam
+
+-
+
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+-
+
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+Naamgerbuik
+Ja/Nee
+PredicaatCode
+AdellijkeTitelCode
+Voornaam
+Voorvoegsel
+Scheidingsteken
+Geslachtsnaamstam
+
+X
+-
+
+Adressen
+Adres
+Tijdstip registratie
+Actie inhoud
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Datum aanvang geldigheid
+Datum einde geldigheid
+Actie aanpassing geldigheid
+Soort code
+Reden wijziging code
+Aangever adrreshouding code
+Datum aanvang adreshouding
+Identificatiecode adresseerbaar object
+Identificatiecode nummeraanduiding
+Gemeente code
+Naam openbare ruimte
+Afgekorte naam openbare ruimte
+Gemeentedeel
+Huisnummer
+Huisletter
+Huisnummertoevoeging
+Postcode
+Woonplaatsnaam
+Locatie ten opzichte van adres
+Locatieomschrijving
+Buitenlandse adresregel1
+Buitenlandse adresregel2
+Buitenlandse adresregel3
+Buitenlandse adresregel4
+Buitenlandse adresregel5
+Buitenlandse adresregel6
+Land gebied code
+Indicatie persoon aangetroffen op adres
+
+Container
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+0..1
+M/F
+-
+
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+SoortAdresCode
+RedenWijzigingVerblijfCode
+AangeverCode
+DatumMetOnzekerheid
+IdentificatiecodeAdresseerbaarObject
+IdentificatiecodeNummeraanduiding
+GemeenteCode
+NaamOpenbareRuimte
+AfgekorteNaamOpenbareRuimte
+Gemeentedeel
+Huisnummer
+Huisletter
+Huisnummertoevoeging
+Postcode
+NaamEnumeratiewaarde
+LocatieTenOpzichteVanAdres
+Locatieomschrijving
+Adresregel
+Adresregel
+Adresregel
+Adresregel
+Adresregel
+Adresregel
+LandGebiedCode
+Nee
+
+-
+
+Nationaliteiten
+Nationaliteit
+Tijdstip registratie
+Actie inhoud
+Tijdstip verval
+
+Container
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+
+0..1
+M/F
+-
+
+0..1
+0..n
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+
+-
+
+Naamgebruik
+Tijdstip registratie
+Actie inhoud
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Code
+Indicatie afgeleid
+Predicaat code
+Adellijke titel code
+Voornamen
+Voorvoegsel
+Scheidingsteken
+Geslachtsnaamstam
+
+Kardinaliteit Attribuuttype
+
+Bijhoudings
+gegeven
+
+Type
+
+StUF Attribuut
+
+Toelichting
+
+AanduidingNaamgebruik
+
+VoornamenAanschrijving
+NaamAanschrijving
+NaamAanschrijving
+NaamAanschrijving
+
+Als invulling van naamgebruik bedoel in StUF BG0310?
+Als invulling van naamgebruik bedoel in StUF BG0310?
+Als invulling van naamgebruik bedoel in StUF BG0310?
+Als invulling van naamgebruik bedoel in StUF BG0310?
+
+A
+1
+2
+
+C
+
+D
+
+E
+
+F
+
+M
+
+N
+
+BRP Mutatie- en Volledigberichten Persoon - lvg_synVerwerkPersoon (UNDER CONSTRUCTION)
+
+3 Details persoon
+4
+5 Berichtelement
+209
+Actie verval
+6
+210
+Nadere aanduiding verval
+211
+Datum aanvang geldigheid
+212
+Datum einde geldigheid
+213
+Actie aanpassing geldigheid
+214
+Nationaliteit code
+215
+Reden verkrijging code
+216
+Reden verlies code
+217
+Indicatie bijhouding beeindigd
+218
+219 Indicaties
+Derde heeft gezag
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+
+B
+
+Kardinaliteit Attribuuttype
+
+Bijhoudings
+gegeven
+
+Type
+
+Historievorm
+
+StUF Attribuut
+
+Toelichting
+
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+-
+
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+Nationaliteitcode
+RedenVerkrijgingCode
+RedenVerliesCode
+Ja
+
+-
+
+Container
+Object/Groep
+
+0..1
+M/F
+
+0..1
+0..1
+
+-
+
+-
+
+Tijdstip registratie
+
+Attribuut
+
+-
+
+0..1
+
+DatumTijd
+
+-
+
+Actie inhoud
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Datum aanvang geldigheid
+Datum einde geldigheid
+Actie aanpassing geldigheid
+Waarde
+
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+-
+
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+Ja
+
+-
+
+ing.indicatieGezagMinderjarige
+
+Welke enumeratiewaarden StUF; J/N?
+
+Onder curatele
+Tijdstip registratie
+Actie inhoud
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Datum aanvang geldigheid
+Datum einde geldigheid
+Actie aanpassing geldigheid
+Waarde
+
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+M/F
+-
+
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+Ja
+
+-
+
+ing.indicatieCurateleRegister
+
+Welke enumeratiewaarden StUF; J/N?
+
+Volledige verstrekkingsbeperking
+Tijdstip registratie
+Actie inhoud
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Waarde
+
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+-
+
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+Ja
+
+-
+
+inp.indicatieGeheim
+
+Welke enumeratiewaarden StUF; J/N?
+
+Vastgesteld niet Nederlander
+Tijdstip registratie
+Actie inhoud
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Datum aanvang geldigheid
+Datum einde geldigheid
+Actie aanpassing geldigheid
+Waarde
+
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+M/F
+-
+
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+Ja
+
+-
+
+Behandeld als Nederlander
+Tijdstip registratie
+Actie inhoud
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Datum aanvang geldigheid
+Datum einde geldigheid
+Actie aanpassing geldigheid
+Waarde
+
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+M/F
+-
+
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+Ja
+
+-
+
+Signalering met betrekking tot verstrekking reisdocument
+Tijdstip registratie
+Actie inhoud
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Waarde
+
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+-
+
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+Ja
+
+-
+
+inp.signaleringReisdocument
+
+Welke enumeratiewaarden StUF; J/N?
+
+A
+1
+2
+
+B
+
+C
+
+D
+
+E
+
+F
+
+M
+
+N
+
+BRP Mutatie- en Volledigberichten Persoon - lvg_synVerwerkPersoon (UNDER CONSTRUCTION)
+
+3 Details persoon
+4
+5 Berichtelement
+280
+Staatloos
+6
+281
+Tijdstip registratie
+282
+Actie inhoud
+283
+Tijdstip verval
+284
+Actie verval
+285
+Nadere aanduiding verval
+286
+Datum aanvang geldigheid
+287
+Datum einde geldigheid
+288
+Actie aanpassing geldigheid
+289
+Waarde
+290
+291
+Bijzondere verblijfsrechtelijke positie
+292
+Tijdstip registratie
+293
+Actie inhoud
+294
+Tijdstip verval
+295
+Actie verval
+296
+Nadere aanduiding verval
+297
+Waarde
+298
+Verstrekkingsbeperkingen
+299
+300
+Verstrekkingsbeperking
+301
+Tijdstip registratie
+302
+Actie inhoud
+303
+Tijdstip verval
+304
+Actie verval
+305
+Nadere aanduiding verval
+306
+Partij code
+307
+Omschrijving derde
+308
+Gemeente verordening partij code
+309
+310 Betrokkenheden
+311
+Kind
+312
+Tijdstip registratie
+313
+Actie inhoud
+314
+Tijdstip verval
+315
+Actie verval
+316
+Nadere aanduiding verval
+317
+Familierechtelijke betrekking
+318
+Relatie
+319
+Tijdstip registratie
+320
+Actie inhoud
+321
+Tijdstip verval
+322
+Actie verval
+323
+Nadere aanduiding verval
+324
+Betrokkenheden
+325
+Ouder
+326
+Tijdstip registratie
+327
+Actie inhoud
+328
+Tijdstip verval
+329
+Actie verval
+330
+Nadere aanduiding verval
+331
+Persoon
+332
+Soort persoon
+333
+Identificatienummers
+334
+Tijdstip registratie
+335
+Actie inhoud
+336
+Tijdstip verval
+337
+Actie verval
+338
+Nadere aanduiding verval
+339
+Datum aanvang geldigheid
+340
+Datum einde geldigheid
+341
+Actie aanpassing geldigheid
+342
+Burgerservicenummer
+343
+Administratienummer
+344
+Samengestelde naam
+345
+Tijdstip registratie
+346
+Actie inhoud
+347
+Tijdstip verval
+348
+Actie verval
+349
+Nadere aanduiding verval
+350
+Datum aanvang geldigheid
+
+Kardinaliteit Attribuuttype
+
+Bijhoudings
+gegeven
+
+Type
+
+Historievorm
+
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+M/F
+-
+
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+Ja
+
+-
+
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+-
+
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+Ja
+
+-
+
+Container
+
+0..1
+
+0..1
+
+-
+
+-
+
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+-
+
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+PartijCode
+OmschrijvingEnumeratiewaarde
+PartijCode
+
+-
+
+Container
+ObjectGroep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Object
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Container
+ObjectGroep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Object
+Attribuut
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+0..1
+F
+1
+F
+F
+M/F
+M/F
+-
+
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+
+-
+
+StUF Attribuut
+
+Toelichting
+In StUF BG vertalen naar specifieke NationaliteitCode
+
+In StUF BG vertalen naar specifieke NationaliteitCode?
+
+Soort persoon
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+Burgerservicenummer
+Administratienummer
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+
+In BRP partiële verstrekkingsbeperking mogelijk; dit naast de
+VolledigeVerstrekkingsbeperking. Hoe in StUF BG?
+
+<gerelateerdeOuder>inp.bsn
+<gerelateerdeOuder>inp.a-nummer
+
+A
+1
+2
+
+B
+
+C
+
+D
+
+E
+
+F
+
+M
+
+N
+
+BRP Mutatie- en Volledigberichten Persoon - lvg_synVerwerkPersoon (UNDER CONSTRUCTION)
+
+3 Details persoon
+4
+5 Berichtelement
+351
+Datum einde geldigheid
+6
+352
+Actie aanpassing geldigheid
+353
+Indicatie afgeleid
+354
+Indicatie namenreeks
+355
+Predicaat code
+356
+Voornamen
+357
+Adellijke titel code
+358
+Voorvoegsel
+359
+Scheidingsteken
+360
+Geslachtsnaamstam
+361
+Geboorte
+362
+Tijdstip registratie
+363
+Actie inhoud
+364
+Tijdstip verval
+365
+Actie verval
+366
+Nadere aanduiding verval
+367
+Datum
+368
+Gemeente code
+369
+Woonplaatsnaam
+370
+Buitenlandse plaats
+371
+Buitenlandse regio
+372
+Omschrijving locatie
+373
+Land gebied code
+374
+Geslachtsaanduiding
+375
+Tijdstip registratie
+376
+Actie inhoud
+377
+Tijdstip verval
+378
+Actie verval
+379
+Nadere aanduiding verval
+380
+Datum aanvang geldigheid
+381
+Datum einde geldigheid
+382
+Actie aanpassing geldigheid
+383
+Code
+384
+Ouderschap
+385
+Tijdstip registratie
+386
+Actie inhoud
+387
+Tijdstip verval
+388
+Actie verval
+389
+Nadere aanduiding verval
+390
+Datum aanvang geldigheid
+391
+Datum einde geldigheid
+392
+Actie aanpassing geldigheid
+393
+Indicatie ouder uit wie kind is geboren
+394
+Ouderlijk gezag
+395
+Tijdstip registratie
+396
+Actie inhoud
+397
+Tijdstip verval
+398
+Actie verval
+399
+Nadere aanduiding verval
+400
+Datum aanvang geldigheid
+401
+Datum einde geldigheid
+402
+Actie aanpassing geldigheid
+403
+Indicatie ouder heeft gezag
+404
+405
+Ouder
+406
+Tijdstip registratie
+407
+Actie inhoud
+408
+Tijdstip verval
+409
+Actie verval
+410
+Nadere aanduiding verval
+411
+Familierechtelijke betrekking
+412
+Relatie
+413
+Tijdstip registratie
+414
+Actie inhoud
+415
+Tijdstip verval
+416
+Actie verval
+417
+Nadere aanduiding verval
+418
+Betrokkenheden
+419
+Kind
+420
+Tijdstip registratie
+421
+Actie inhoud
+422
+Tijdstip verval
+
+Kardinaliteit Attribuuttype
+
+Bijhoudings
+gegeven
+
+Type
+
+Historievorm
+
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+M/F
+M/F
+M/F
+-
+
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumMetOnzekerheid
+Sleutelwaarde
+JaNee
+JaNee
+PredicaatCode
+Voornamen
+AdellijkeTitelCode
+Voorvoegsel
+Scheidingsteken
+Geslachtsnaamstam
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+GemeenteCode
+NaamEnumeratiewaarde
+BuitenlandsePlaats
+BuitenlandseRegio
+LocatieOmschrijving
+LandGebiedCode
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+GeslachtsaanduidingCode
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+JaNee
+
+X
+X
+-
+
+ObjectGroep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Object
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Container
+ObjectGroep
+Attribuut
+Attribuut
+Attribuut
+
+F
+F
+F
+-
+
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumTijd
+Sleutelwaarde
+DatumTijd
+
+-
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+JaNee
+
+StUF Attribuut
+
+Toelichting
+
+<gerelateerdeOuder>adellijkeTitelPredicaat
+In BRP vulling vanuit verschillende elementen mogelijk.
+<gerelateerdeOuder>voornamen
+<gerelateerdeOuder>adellijkeTitelPredicaat
+In BRP vulling vanuit verschillende elementen mogelijk.
+<gerelateerdeOuder>voorvoegselGeslachtsnaam
+<gerelateerdeOuder>voorvoegselGeslachtsnaam Indien scheidingsteken BRP ongelijk spatie, dan scheidingsteken toevoegen aan Voorvoegsel
+<gerelateerdeOuder>geslachtsnaam
+
+<gerelateerdeOuder>geboortedatum
+<gerelateerdeOuder>inp.geboorteplaats
+
+In BRP vulling vanuit verschillende elementen mogelijk.
+
+<gerelateerdeOuder>inp.geboorteplaats
+
+In BRP vulling vanuit verschillende elementen mogelijk.
+
+<gerelateerdeOuder>inp.geboorteplaats
+<gerelateerdeOuder>inp.geboorteland
+
+In BRP vulling vanuit verschillende elementen mogelijk.
+
+<gerelateerdeOuder>geslachtsaanduiding
+
+A
+1
+2
+
+B
+
+C
+
+D
+
+E
+
+F
+
+M
+
+N
+
+BRP Mutatie- en Volledigberichten Persoon - lvg_synVerwerkPersoon (UNDER CONSTRUCTION)
+
+3 Details persoon
+4
+5 Berichtelement
+423
+Actie verval
+6
+424
+Nadere aanduiding verval
+425
+Persoon
+426
+Soort persoon
+427
+Identificatienummers
+428
+Tijdstip registratie
+429
+Actie inhoud
+430
+Tijdstip verval
+431
+Actie verval
+432
+Nadere aanduiding verval
+433
+Datum aanvang geldigheid
+434
+Datum einde geldigheid
+435
+Actie aanpassing geldigheid
+436
+Burgerservicenummer
+437
+Administratienummer
+438
+Samengestelde naam
+439
+Tijdstip registratie
+440
+Actie inhoud
+441
+Tijdstip verval
+442
+Actie verval
+443
+Nadere aanduiding verval
+444
+Datum aanvang geldigheid
+445
+Datum einde geldigheid
+446
+Actie aanpassing geldigheid
+447
+Indicatie afgeleid
+448
+Indicatie namenreeks
+449
+Predicaat code
+450
+Voornamen
+451
+Adellijke titel code
+452
+Voorvoegsel
+453
+Scheidingsteken
+454
+Geslachtsnaamstam
+455
+Geboorte
+456
+Tijdstip registratie
+457
+Actie inhoud
+458
+Tijdstip verval
+459
+Actie verval
+460
+Nadere aanduiding verval
+461
+Datum
+462
+Gemeente code
+463
+Woonplaatsnaam
+464
+Buitenlandse plaats
+465
+Buitenlandse regio
+466
+Omschrijving locatie
+467
+Land gebied code
+468
+Ouderschap
+469
+Tijdstip registratie
+470
+Actie inhoud
+471
+Tijdstip verval
+472
+Actie verval
+473
+Nadere aanduiding verval
+474
+Datum aanvang geldigheid
+475
+Datum einde geldigheid
+476
+Actie aanpassing geldigheid
+477
+Indicatie ouder uit wie kind is geboren
+478
+479
+Partner
+480
+Tijdstip registratie
+481
+Actie inhoud
+482
+Tijdstip verval
+483
+Actie verval
+484
+Nadere aanduiding verval
+485
+Huwelijk (of Geregistreerd partnerschap)
+486
+Relatie
+487
+Tijdstip registratie
+488
+Actie inhoud
+489
+Tijdstip verval
+490
+Actie verval
+491
+Nadere aanduiding verval
+492
+Datum aanvang
+493
+Gemeente aanvang code
+494
+Woonplaatsnaam aanvang
+
+Kardinaliteit Attribuuttype
+
+Bijhoudings
+gegeven
+
+Type
+
+Historievorm
+
+Attribuut
+Attribuut
+Object
+Attribuut
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+M/F
+M/F
+F
+M/F
+-
+
+0..1
+0..1
+0..1
+1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+Sleutelwaarde
+NadereAanduidingVerval
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+JaNee
+
+X
+X
+
+ObjectGroep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Object
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+F
+-
+
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..n
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+GemeenteCode
+NaamEnumeratiewaarde
+
+-
+
+Soort persoon
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+Burgerservicenummer
+Administratienummer
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+JaNee
+JaNee
+PredicaatCode
+Voornamen
+AdellijkeTitelCode
+Voorvoegsel
+Scheidingsteken
+Geslachtsnaamstam
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+GemeenteCode
+NaamEnumeratiewaarde
+BuitenlandsePlaats
+BuitenlandseRegio
+LocatieOmschrijving
+LandGebiedCode
+
+StUF Attribuut
+
+Toelichting
+
+<gerelateerdeKind>inp.bsn
+<gerelateerdeKind>inp.a-nummer
+
+<gerelateerdeKind>adellijkeTitelPredicaat
+In BRP vulling vanuit verschillende elementen mogelijk.
+<gerelateerdeKind>voornamen
+<gerelateerdeKind>adellijkeTitelPredicaat
+In BRP vulling vanuit verschillende elementen mogelijk.
+<gerelateerdeKind>voorvoegselGeslachtsnaam
+<gerelateerdeKind>voorvoegselGeslachtsnaam Indien scheidingsteken BRP ongelijk spatie, dan scheidingsteken toevoegen aan Voorvoegsel
+<gerelateerdeKind>geslachtsnaam
+
+<gerelateerdeKind>geboortedatum
+<gerelateerdeKind>inp.geboorteplaats
+
+In BRP vulling vanuit verschillende elementen mogelijk.
+
+<gerelateerdeKind>inp.geboorteplaats
+
+In BRP vulling vanuit verschillende elementen mogelijk.
+
+<gerelateerdeKind>inp.geboorteplaats
+<gerelateerdeKind>inp.geboorteland
+
+In BRP vulling vanuit verschillende elementen mogelijk.
+
+soortVerbintenis
+
+Afleiden via tagnaam in bericht
+
+tijdstipRegistratie
+
+tijdvakRelatie/beginRelatie
+plaatsSluiting
+
+Afhankelijk vulling in BRP
+
+A
+1
+2
+
+B
+
+C
+
+D
+
+E
+
+F
+
+M
+
+N
+
+BRP Mutatie- en Volledigberichten Persoon - lvg_synVerwerkPersoon (UNDER CONSTRUCTION)
+
+3 Details persoon
+4
+5 Berichtelement
+495
+Buitenlandse plaats aanvang
+6
+496
+Buitenlandse regio aanavng
+497
+Omschrijving locatie aanvang
+498
+Land gebied code aanvang
+499
+Reden einde code
+500
+Datum einde
+501
+Gemeente einde code
+502
+Woonplaatsnaam einde
+503
+Buitenlandse plaats einde
+504
+Buitenlandse regio einde
+505
+Omschrijving locatie einde
+506
+Land gebied code einde
+507
+Betrokkenheden
+508
+Partner
+509
+Tijdstip registratie
+510
+Actie inhoud
+511
+Tijdstip verval
+512
+Actie verval
+513
+Nadere aanduiding verval
+514
+Persoon
+515
+Soort persoon
+516
+Identificatienummers
+517
+Tijdstip registratie
+518
+Actie inhoud
+519
+Tijdstip verval
+520
+Actie verval
+521
+Nadere aanduiding verval
+522
+Datum aanvang geldigheid
+523
+Datum einde geldigheid
+524
+Actie aanpassing geldigheid
+525
+Burgerservicenummer
+526
+Administratienummer
+527
+Samengestelde naam
+528
+Tijdstip registratie
+529
+Actie inhoud
+530
+Tijdstip verval
+531
+Actie verval
+532
+Nadere aanduiding verval
+533
+Datum aanvang geldigheid
+534
+Datum einde geldigheid
+535
+Actie aanpassing geldigheid
+536
+Indicatie afgeleid
+537
+Indicatie namenreeks
+538
+Predicaat code
+539
+Voornamen
+540
+Adellijke titel code
+541
+Voorvoegsel
+542
+Scheidingsteken
+543
+Geslachtsnaamstam
+544
+Geboorte
+545
+Tijdstip registratie
+546
+Actie inhoud
+547
+Tijdstip verval
+548
+Actie verval
+549
+Nadere aanduiding verval
+550
+Datum
+551
+Gemeente code
+552
+Woonplaatsnaam
+553
+Buitenlandse plaats
+554
+Buitenlandse regio
+555
+Omschrijving locatie
+556
+Land gebied code
+557
+Geslachtsaanduiding
+558
+Tijdstip registratie
+559
+Actie inhoud
+560
+Tijdstip verval
+561
+Actie verval
+562
+Nadere aanduiding verval
+563
+Datum aanvang geldigheid
+564
+Datum einde geldigheid
+565
+Actie aanpassing geldigheid
+566
+Code
+
+Type
+
+Historievorm
+
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Container
+ObjectGroep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Object
+Attribuut
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+M/F
+M/F
+F
+M/F
+-
+
+Kardinaliteit Attribuuttype
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+BuitenlandsePlaats
+BuitenlandseRegio
+LocatieOmschrijving
+LandGebiedCode
+RedenEindeRelatieCode
+DatumMetOnzekerheid
+GemeenteCode
+NaamEnumeratiewaarde
+BuitenlandsePlaats
+BuitenlandseRegio
+LocatieOmschrijving
+LandGebiedCode
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+Soort persoon
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+Burgerservicenummer
+Administratienummer
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+JaNee
+JaNee
+PredicaatCode
+Voornamen
+AdellijkeTitelCode
+Voorvoegsel
+Scheidingsteken
+Geslachtsnaamstam
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+GemeenteCode
+NaamEnumeratiewaarde
+BuitenlandsePlaats
+BuitenlandseRegio
+LocatieOmschrijving
+LandGebiedCode
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+GeslachtsaanduidingCode
+
+Bijhoudings
+gegeven
+X
+-
+
+StUF Attribuut
+
+Toelichting
+
+plaatsSluiting
+
+Afhankelijk vulling in BRP
+
+plaatsSluiting
+landSluiting
+redenOntbinding
+tijdvakRelatie/eindRelatie
+plaatsOntbinding
+
+Afhankelijk vulling in BRP
+
+plaatsOntbinding
+
+Afhankelijk vulling in BRP
+
+plaatsOntbinding
+landOntbinding
+
+Afhankelijk vulling in BRP
+
+Afhankelijk vulling in BRP
+
+<gerelateerdePartner>inp.bsn
+<gerelateerdePartner>inp.a-nummer
+
+<gerelateerdePartner>adellijkeTitelPredicaat
+In BRP vulling vanuit verschillende elementen mogelijk.
+<gerelateerdePartner>voornamen
+<gerelateerdePartner>adellijkeTitelPredicaat
+In BRP vulling vanuit verschillende elementen mogelijk.
+<gerelateerdePartner>voorvoegselGeslachtsnaam
+<gerelateerdePartner>voorvoegselGeslachtsnaam Indien scheidingsteken BRP ongelijk spatie, dan scheidingsteken toevoegen aan Voorvoegsel
+<gerelateerdePartner>geslachtsnaam
+
+<gerelateerdePartner>geboortedatum
+<gerelateerdePartner>inp.geboorteplaats
+
+In BRP vulling vanuit verschillende elementen mogelijk.
+
+<gerelateerdePartner>inp.geboorteplaats
+
+In BRP vulling vanuit verschillende elementen mogelijk.
+
+<gerelateerdePartner>inp.geboorteplaats
+<gerelateerdePartner>inp.geboorteland
+
+In BRP vulling vanuit verschillende elementen mogelijk.
+
+<gerelateerdePartner>geslachtsaanduiding
+
+A
+1
+2
+
+B
+
+C
+
+D
+
+E
+
+F
+
+N
+
+BRP Mutatie- en Volledigberichten Persoon - lvg_synVerwerkPersoon (UNDER CONSTRUCTION)
+
+3 Details persoon
+4
+5 Berichtelement
+567
+6
+568 Migratie
+569
+Tijdstip registratie
+570
+Actie inhoud
+Tijdstip verval
+571
+572
+Actie verval
+573
+Nadere aanduiding verval
+574
+Datum aanvang geldigheid
+575
+Datum einde geldigheid
+576
+Actie aanpassing geldigheid
+577
+Soort code
+578
+Reden wijziging code
+579
+Aangever code
+580
+Land gebied code
+581
+Buitenlandse adresregel1
+582
+Buitenlandse adresregel2
+583
+Buitenlandse adresregel3
+584
+Buitenlandse adresregel4
+585
+Buitenlandse adresregel5
+586
+Buitenlandse adresregel6
+587
+588 Verblijfsrecht
+
+Kardinaliteit Attribuuttype
+
+Bijhoudings
+gegeven
+
+Type
+
+Historievorm
+
+Groep
+Attribuut
+Attribuut
+Attribuut
+
+M/F
+-
+
+0..n
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+
+-
+
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+-
+
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+Sleutelwaarde
+SoortMigratieCode
+RedenWijizgingVerblijfCode
+AangeverCode
+LandGebiedCode
+Adresregel
+Adresregel
+Adresregel
+Adresregel
+Adresregel
+Adresregel
+
+-
+
+Groep
+
+F
+
+0..n
+
+-
+
+-
+
+589
+
+Tijdstip registratie
+
+Attribuut
+
+-
+
+0..1
+
+DatumTijd
+
+-
+
+590
+591
+592
+593
+
+Actie inhoud
+
+Attribuut
+
+-
+
+0..1
+
+Sleutelwaarde
+
+-
+
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Aanduiding code
+
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+-
+
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+AanduidingVerblijfsrechtCode
+
+-
+
+Datum aanvang
+Datum mededeling
+Datum voorzien einde
+
+Attribuut
+Attribuut
+Attribuut
+
+-
+
+0..1
+0..1
+0..1
+
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+
+-
+
+Container
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+-
+
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+SoortNederlandsReisdocumentCode
+Reisdocumentnummer
+AutoriteitVanAfgifteReisdocument
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+AanduidingInhoudingVermissing
+
+-
+
+Uitsluiting kiesrecht
+Tijdstip registratie
+Actie inhoud
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Indicatie
+Datum voorzien einde
+
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+-
+
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+Ja
+DatumMetOnzekerheid
+
+-
+
+Deelname EU verkiezingen
+Tijdstip registratie
+Actie inhoud
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Indicatie deelname
+Datum aanleiding aanpassing
+Datum voorzien einde uitsluiting
+
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+-
+
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+JaNee
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+
+-
+
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+
+M
+
+Reisdocumenten
+Reisdocument
+Tijdstip registratie
+Actie inhoud
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Soort code
+Nummer
+Autoriteit van afgifte
+Datum ingang document
+Datum einde document
+Datum uitgifte
+Datum inhouding vermissing
+Aanduiding inhouding vermissing
+
+StUF Attribuut
+
+Toelichting
+
+inp.datumVestigingInNederland
+inp.datumVertrekUitNederland
+
+Afhankelijk van inhoud Soort code: I(mmigratie) of E(migratie)
+
+inp.immigratieLand
+
+Afhankelijk van inhoud Soort code: I(mmigratie) of E(migratie)
+
+ing.aanduidingVerblijfstitel
+ing.datumVerkrijgingVerblijfstitel
+ing.datumVerliesVerblijfstitel?
+
+Definitie BRP-element: De einddatum verblijfsrecht voor bepaalde duur in de mededeling van
+de Minister van Veiligheid en Justitie. Wordt in conversie gevuld met GBA-element 39.20
+Datum einde verblijfstitel'.
+Wat is betekenis in StUF van 'datumVerliesVerblijfstitel'?
+
+ing.aanduidingUitgeslotenKiesrecht
+
+Controle op mogelijke waarden BRp vs. StUF BG
+
+ing.aanduidingEuropeesKiesrecht
+
+Controle op mogelijke waarden BRp vs. StUF BG
+
+A
+1
+2
+
+C
+
+D
+
+E
+
+F
+
+M
+
+N
+
+BRP Mutatie- en Volledigberichten Persoon - lvg_synVerwerkPersoon (UNDER CONSTRUCTION)
+
+3 Details persoon
+4
+5 Berichtelement
+634
+Persoonskaart
+6
+635
+Tijdstip registratie
+636
+Actie inhoud
+637
+Tijdstip verval
+638
+Actie verval
+639
+Nadere aanduiding verval
+640
+Partij code
+641
+Indicatie volledig geconverteerd
+642
+643 Afnemerindicaties
+644
+Afnemerindicatie
+645
+Tijdstip registratie
+646
+Tijdstip verval
+647
+Leveringsautorisatie identificatie
+648
+Datum aanvang materiele periode
+649
+Datum einde volgen
+650
+651 Verificaties
+652
+Verificatie
+653
+Tijdstip registratie
+654
+Actie inhoud
+655
+Tijdstip verval
+656
+Actie verval
+657
+Nadere aanduiding verval
+658
+Partij code
+659
+Soort
+660
+Datum
+661
+662 Onderzoeken
+663
+Onderzoek
+664
+Onderzoek
+665
+Tijdstip registratie
+666
+Actie inhoud
+667
+Tijdstip verval
+668
+Actie verval
+669
+Nadere aanduiding verval
+Datum aanvang
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681
+682
+683
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693
+694
+695
+696
+697
+698
+699
+700
+701
+702
+703
+
+B
+
+Kardinaliteit Attribuuttype
+
+Bijhoudings
+gegeven
+
+Type
+
+Historievorm
+
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+-
+
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+PartijCode
+Ja/Nee
+
+-
+
+Container
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+-
+
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+DatumTijd
+LeveringsautorisatieIdentificatie
+Datum
+Datum
+
+X
+X
+X
+X
+X
+X
+X
+
+Container
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+-
+
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+PartijCode
+NaamEnumeratiewaarde
+DatumMetOnzekerheid
+
+-
+
+Container
+Object
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+F
+-
+
+0..1
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+DatumTijd
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+DatumMetOnzekerheid
+
+-
+
+Datum einde
+Omschrijving
+Status naam
+Gegevens in onderzoek
+Gegeven in onderzoek
+Element naam
+Object sleutel gegeven
+Voorkomen sleutel gegeven
+
+Attribuut
+Attribuut
+Attribuut
+Container
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+
+G
+-
+
+0..1
+0..1
+0..1
+0..1
+0..n
+0..1
+0..1
+0..1
+
+DatumMetOnzekerheid
+OnderzoekOmschrijving
+StatusOnderzoekNaam
+NameEnumeratiewaardeLang
+Sleutelwaardetekst
+Sleutelwaardetekst
+
+X
+X
+-
+
+Administratieve handelingen
+Administratieve handeling
+Naam
+Categorie
+Partij code
+Toelichting ontlening
+Tijdstip registratie
+Gedeblokkeerde meldingen
+Gedeblokkeerde melding
+Regel code
+Melding
+Bronnen
+Bron
+Document
+Tijdstip registratie
+Actie inhoud
+Tijdstip verval
+Actie verval
+Nadere aanduiding verval
+Soort naam
+Aktenummer
+Omschrijving
+Partij code
+Rechtsgrond code
+
+Container
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Container
+ObjectGroep
+Attribuut
+Attribuut
+Container
+Object
+ObjectGroep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+G
+G
+G
+F
+-
+
+0..1
+1..n
+1
+1
+1
+1
+1
+0..1
+1..n
+1
+1
+0..1
+1..n
+0..n
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+0..1
+
+NaamEnumeratiewaarde
+CategorieAdministratieveHandelingNaam
+PartijCode
+Onleningstoelichting
+DatumTijd
+-
+
+X
+X
+X
+X
+X
+-
+
+RegelCode
+Meldingtekst
+DatumTijd
+Sleutelwaarde
+DatumTijd
+Sleutelwaarde
+NadereAanduidingVerval
+NaamEnumeratiewaarde
+Aktenummer
+DocumentOmschrijving
+PartijCode
+RechtsgrondCode
+
+StUF Attribuut
+
+inOnderzoek
+
+Toelichting
+
+Voor verschillende StUF-gegevens afleiden via Onderzoeksconstructie BRP; welke
+onderzoeksgegevens bij afleiding nodig zijn hangt af van StUF-regels met betrekking tot
+'inOnderzoek'.
+
+inOnderzoek
+inOnderzoek
+
+inOnderzoek
+inOnderzoek
+inOnderzoek
+
+brondocument
+
+Voor verschillende StUF-gegevens afleiden via Verantwoordingsconstructie BRP
+
+A
+1
+2
+
+B
+
+C
+
+D
+
+E
+
+F
+
+M
+
+N
+
+BRP Mutatie- en Volledigberichten Persoon - lvg_synVerwerkPersoon (UNDER CONSTRUCTION)
+
+3 Details persoon
+4
+5 Berichtelement
+704
+Rechtsgrondomschrijving
+6
+705
+Bijgehouden acties
+706
+Actie
+707
+Soort naam
+708
+Datum ontlening
+709
+Bronnen
+710
+Bron
+711
+712
+
+Type
+
+Historievorm
+
+Attribuut
+Container
+ObjectGroep
+Attribuut
+Attribuut
+Container
+Object
+
+G
+-
+
+Kardinaliteit Attribuuttype
+0..1
+0..1
+1..n
+1
+0..1
+0..1
+1..n
+
+Omschrijvingenumeratiewaarde
+NaamEnumeratiewaarde
+DatumMetOnzekerheid
+-
+
+Bijhoudings
+gegeven
+X
+-
+
+StUF Attribuut
+
+Toelichting
+
+A
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+
+B
+
+C
+
+D
+
+E
+
+F
+
+G
+
+H
+
+I
+
+J
+
+K
+
+L
+
+M
+
+Bijhoudings
+gegeven
+-
+
+XML-attributes
+Objecttype
+-
+
+Objectsleutel
+-
+
+Voorkomensleutel
+-
+
+CommunicatieID
+-
+
+ReferentieID
+-
+
+Verwerkingssoort
+-
+
+Objectsleutel
+-
+
+Voorkomensleutel
+-
+
+CommunicatieID
+-
+
+ReferentieID
+-
+
+Verwerkingssoort
+-
+
+StUF Attribuut
+
+-
+
+XML-attributes
+Objecttype
+-
+
+Objectsleutel
+-
+
+Voorkomensleutel
+-
+
+CommunicatieID
+-
+
+ReferentieID
+X
+-
+
+Verwerkingssoort
+-
+
+StUF Attribuut
+
+Toelichting
+
+-
+
+XML-attributes
+Objecttype
+Melding
+-
+
+XML-attributes
+Objecttype
+<Tabelnaam>
+
+Objectsleutel
+-
+
+Voorkomensleutel
+-
+
+CommunicatieID
+X
+
+ReferentieID
+-
+
+Verwerkingssoort
+-
+
+StUF Attribuut
+Nadere uitwerking in werkblad
+VerwerkStamgegeven_DetailsTabel
+
+Toelichting
+
+BRP Volledigberichten Stamgegeven - lvg_synVerwerkStamgegeven
+Stuurgegevens
+Berichtelement
+Stuurgegevens
+Zendende partij
+Zendende systeem
+Ontvangende partij
+Referentienummer
+Tijdstip verzending
+
+Igv Mutatie
+Type
+Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+Kardinaliteit
+1
+1
+1
+1
+1
+1
+
+Attribuuttype
+PartijCode
+SysteemNaam
+PartijCode
+Referentienummer
+DatumTijd
+
+StUF Attribuut
+
+Toelichting
+
+zenderOrganisatie
+zenderApplicatie
+ontvangerOrganisatie
+referentienummer
+tijdstipBericht
+
+Parameters
+Berichtelement
+Parameters
+Soort synchronisatie
+Leveringsautorisatie identificatie
+Dienst identificatie
+
+Type
+Groep
+Attribuut
+Attribuut
+Attribuut
+
+1
+1
+1
+1
+
+Attribuuttype
+NaamEnumeratiewaarde
+LeveringsautorisatieID
+DienstID
+
+Toelichting
+Mogelijk BRP-inhoud: Volledigbericht
+
+Meldingen
+Berichtelement
+Meldingen
+Melding
+Regel code
+Soort naam
+Melding
+
+Type
+Container
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+
+0..1
+1..n
+1
+1
+1
+
+Attribuuttype
+RegelCode
+SoortmeldingNaam
+Meldingtekst
+
+Stamgegevens
+Berichtelement
+<Tabelnaam>
+
+Type
+Object/Groep
+
+Attribuuttype
+1
+
+A
+
+B
+
+C
+
+D
+
+E
+
+F
+
+L
+
+M
+
+BRP Mutatie- en Volledigberichten Stamgegeven - lvg_synVerwerkStamgegeven (UNDER CONSTRUCTION)
+
+1
+2
+3 Details stamgegevens
+4
+5 Stamgegeven/element
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+
+Historievorm
+
+Object/Groep
+Attribuut
+Attribuut
+
+Geen
+-
+
+1..n
+1
+1
+
+AanduidingInhoudingVermissingReisdocuemntCode
+NaamEnumeratiewaarde
+
+-
+
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+Gperiode
+-
+
+1..n
+1
+1
+1
+0..1
+
+AanduidingVerblijfsrechtCode
+OmschrijvingEnumeratiewaarde
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+
+-
+
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+
+Geen
+-
+
+1..n
+1
+1
+1
+
+AangeverCode
+NaamEnumeratiewaarde
+OmschrijvingEnumeratiewaarde
+
+-
+
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+
+Geen
+-
+
+1..n
+1
+1
+1
+
+AdellijkeTitelCode
+NaamEnumeratiewaarde
+NaamEnumeratiewaarde
+
+-
+
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+Gperiode
+-
+
+1..n
+1
+1
+1
+1
+
+NaamEnumeratiewaarde
+GemeenteCode
+PartijCode
+GemeenteCode
+
+-
+
+Datum aanvang geldigheid
+
+Attribuut
+
+-
+
+1
+
+DatumMetOnzekerheid
+
+Datum einde geldigheid
+
+Attribuut
+
+-
+
+0..1
+
+DatumMetOnzekerheid
+
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+Gperiode
+-
+
+1..n
+1
+1
+1
+1
+0..1
+
+LandCode
+NaamEnumeratiewaarde
+ISO31661Alpha2
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+
+-
+
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+Gperiode
+-
+
+1..n
+1
+1
+1
+0..1
+
+NationaliteitCode
+NaamEnumeratiewaarde
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+
+-
+
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+Gperiode
+-
+
+1..n
+1
+1
+1
+0..1
+
+WoonplaatsCode
+NaamEnumeratiewaarde
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+
+-
+
+Object/Groep
+Attribuut
+Attribuut
+Attribuut
+Attribuut
+
+Gperiode
+-
+
+1..n
+1
+1
+1
+0..1
+
+SoortNederlandsReisdocumentCode
+OmschrijvingEnumeratiewaarde
+DatumMetOnzekerheid
+DatumMetOnzekerheid
+
+-
+
+AanduidingInhoudingVermissingReisdocument
+Code
+Naam
+
+AanduidingVerblijfsrecht
+Code
+Omschrijving
+Datum aanvang geldigheid
+Datum einde geldigheid
+
+Aangever
+Code
+Naam
+Omschrijving
+
+AdellijkeTitel
+Code
+Naam mannelijk
+Naam vrouwelijk
+
+Gemeente
+Naam
+Code
+Partij code
+Voortzettende gemeente code
+
+LandGebied
+Code
+Naam
+iso31661Alpha2Code
+Datum aanvang geldigheid
+Datum einde geldigheid
+
+Nationaliteit
+Code
+Naam
+Datum aanvang geldigheid
+Datum einde geldigheid
+
+Plaats
+Code
+Naam
+Datum aanvang geldigheid
+Datum einde geldigheid
+
+Soort Nederlands Reisdocument
+Code
+Naam
+Datum aanvang geldigheid
+Datum einde geldigheid
+<Nader uitwerken voor alle BRP-tabellen>
+
+Kardinaliteit Attribuuttype
+
+Bijhoudings
+gegeven
+
+Type
+
+StUF Attribuut
+
+GEM.gemeenteNaam
+GEM.gemeenteCode
+GEM.gemeenteWaarinIsOvergegaan
+GEM.ingangsdatumObject en
+GEM.tijdvakGeldigheid/beginGeldigheid?
+GEM.einddatumObject en
+GEM.tijdvakGeldigheid/eindGeldigheid?
+
+LND.code
+LND.naam
+LND.codeIso
+LND.tijdvakObject/beginObject
+LND.tijdvakObject/eindObject
+
+Toelichting
+
+Attribuuttypen BRP-elementen - Zie ook meegeleverde LO BRP v1.06 Bijlage A en Inhoud Stamtabellen Nr.
+
+Type
+
+Base
+string
+string
+string
+string
+
+Min
+Length
+1
+2
+1
+1
+
+Max
+Length
+1
+2
+1
+1
+
+Pattern/
+Mogelijke waarde
+Zie stamtabel
+Zie stamtabel
+Zie stamtabel
+Zie stamtabel
+
+1
+2
+3
+4
+
+AanduidingInhoudingVermissingReisdocumentCode
+AanduidingVerblijfsrechtCode
+AangeverCode
+AdellijkTitelCode
+
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+
+Administratienummer
+AdministratieveHandelingCode
+Adresregel
+AfgekorteNaamOpenbareRuimte
+Aktenummer
+AutoriteitVanAfgifteReisdocument
+AutoriteittypeVanAfgifteReisdocument
+BijhoudingsaardCode
+BuitenlandsePlaats
+BuitenlandseRegio
+Burgerservicenummer
+CategorieAdministratieveHandelingNaam
+Datum
+
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+
+10
+5
+1
+1
+7
+2
+1
+1
+1
+1
+9
+1
+10
+
+10
+5
+40
+24
+7
+6
+2
+1
+40
+35
+9
+80
+10
+
+18
+
+DatumMetOnzekerheid
+
+string
+
+4
+
+10
+
+Zie stamtabel
+Zie stamtabel
+Zie stamtabel
+Zie stamtabel
+[0-9]{4}(-(0[1-9]{1}|1[0-2]{1})(-(0[19]{1}|[1-2]{1}[0-9]{1}|3[0-1]{1})))
+[0-9]{4}(-(0[1-9]{1}|1[0-2]{1})(-(0[19]{1}|[1-2]{1}[0-9]{1}|3[0-1]{1}))?)?
+
+19
+
+DatumTijd
+
+string
+
+29
+
+29
+
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+
+DienstID
+DocumentIdentificatie
+DocumentOmschrijving
+GemeenteCode
+Gemeentedeel
+GeslachtsaanduidingCode
+Geslachtsnaamstam
+Huisletter
+Huisnummer
+Huisnummertoevoeging
+IdentificatiecodeAdresseerbaarObject
+IdentificatiecodeNummeraanduiding
+Ja
+JaNee
+LandGebiedCode
+LeveringsautorisatieID
+LocatieTenOpzichteVanAdres
+Locateomschrijving
+Meldingtekst
+NaamEnumeratiewaarde
+NaamEnumeratiewaardeLang
+NaamOpenbareRuimte
+Naamgebruik
+NadereAanduidingVerval
+NadereBijhoudingsaardCode
+Nationaliteitcode
+Nee
+OmschrijvingEnumeratiewaarde
+OnderzoekOmschrijving
+Ontleningstoelichting
+PartijCode
+Postcode
+PredicaatCode
+RechtgrondCode
+RedenEindeRelatieCode
+RedenVerkrijgingCode
+RedenVerliesCode
+RedenWijzigingVerblijfCode
+Referentienummer
+
+nonNegativeInteger
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+
+1
+1
+4
+1
+1
+1
+1
+1
+1
+16
+16
+1
+1
+4
+
+20
+40
+4
+24
+1
+200
+1
+5
+4
+16
+16
+1
+1
+4
+
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+
+RegelCode
+Reisdocumentnummer
+RolNaam
+Scheidingsteken
+Sleutelwaarde
+Sleutelwaardetekst
+SoortAdresCode
+SoortMeldingNaam
+SoortMigratieCode
+SoortNederlandsReisdocumentCode
+SoortPersoonCode
+StatusOnderzoekNaam
+SysteemNaam
+Verwerkingssoort
+
+string
+string
+string
+string
+nonNegativeInteger
+string
+string
+string
+string
+string
+string
+string
+string
+string
+
+73
+74
+75
+76
+
+Volgnummer
+Voornaam
+Voornamen
+Voorvoegsel
+
+nonNegativeInteger
+string
+string
+string
+
+nonNegativeInteger
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+string
+
+2
+1
+1
+1
+1
+1
+1
+1
+1
+4
+1
+1
+1
+1
+6
+6
+1
+3
+1
+3
+3
+1
+36
+
+2
+40
+200
+80
+200
+80
+1
+1
+1
+4
+1
+250
+2048
+400
+6
+6
+1
+3
+1
+3
+3
+1
+36
+
+5
+1
+1
+1
+
+10
+9
+80
+1
+
+1
+1
+1
+1
+1
+1
+1
+1
+1
+
+80
+1
+80
+1
+2
+1
+80
+50
+50
+
+1
+1
+1
+
+200
+200
+10
+
+Stamtabel
+AanduidingInhoudingVermissingReisdocumentTabel
+AanduidingVerblijfsrechtTabel
+AangeverTabel
+AdellijkeTitelCodeTabel
+
+by, to
+Zie stamtabel
+Zie stamtabel
+Zie stamtabel
+Zie stamtabel
+N
+
+AutoriteittypeVanAfgifteTabel
+BijhoudingsaardTabel
+CategorieAdministratieveHandelingTabel
+
+Zie stamtabel
+
+Bv: 2016-06-26
+Bv: 2016-06-26 (volledig)
+Bv: 2016-06 (dag onbekend)
+Bv: 2016 (maand en dag onbekend)
+Bv. 0000 (jaar, maand en dag onbekend)
+Bv. 2016-06-26T15:32:03.234+02:00
+
+GemeenteTabel
+GeslachtsaanduidingTabel
+
+LandGebiedTabel
+NaamgebruikTabel
+NadereAanduidingVervalTabel
+NadereBijhoudingsaardTabel
+NationaliteitTabel
+
+Zie stamtabel
+PartijTabel
+[1-9]{1}[0-9]{3}[A-Z]{2}
+Zie stamtabel
+PredicaatTabel
+Zie stamtabel
+RechtsgrondTabel
+Zie stamtabel
+RedenEindeRelatieTabel
+Zie stamtabel
+RedenVerkrijgingNLNationaliteitTabel
+Zie stamtabel
+RedenVerliesNLNationaliteitTabel
+Zie stamtabel
+RedenWijzigingVerblijfTabel
+[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fAF]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}
+Zie stamtabel
+Zie stamtabel
+Zie stamtabel
+Zie stamtabel
+Zie stamtabel
+Zie stamtabel
+Zie stamtabel
+Identificatie
+Referentie
+Toevoeging
+Wijziging
+Verval
+Verwijdering
+
+In combinatie met geslacht de mannelijke of
+vrouwelijke vorm te bepalen.
+
+SoortAdministratieveHandelingTabel
+
+[0-9]{4}(-(0[1-9]{1}|1[0-2]{1})(-(0[19]{1}|[1-2]{1}[0-9]{1}|3[01]{1})))(T((([0-1]{1}[0-9]{1}|[2]{1}[03]{1})(:[0-5]{1}[0-9]{1}(:[0-5]{1}[09]{1}\.[0-9]{3}))))(\+|\-)([0-1]{1}[09]{1}|[2]{1}[0-3]{1}):[0-5]{1}[0-9]{1})"
+Zie stamtabel
+Zie stamtabel
+[a-zA-Z]
+J
+J, N
+
+Toelichting
+
+RolTabel
+FunctieAdresTabel
+SoortMeldingTabel
+SoortMigratieTabel
+SoortNederlandsReisdocumentTabel
+SoortPersoonTabel
+StatusOnderzoektabel
+-
+
+VoorvoegselTabel
+
+A
+1 Metagegevens
+2
+3 Orthogonaal
+4 Historie
+Formeel
+
+B
+
+Attribuut
+
+C
+
+D
+
+E
+
+F
+
+Bijhouding
+gegeven
+
+Historievorm
+
+G
+
+Toelichting
+
+F
+
+Bij alle voorkoms van groepen met formele
+historie (His = F) moeten bij autorisatie voor
+Formele historie de volgende gegevens worden
+meegenomen.
+
+B
+
+9
+10
+Datum aanvang geldigheid
+11
+Datum einde geldigheid
+12
+13 VerantwoordingPerGroep
+Verantwoording
+
+Bij alle voorkoms van groepen met materiele
+historie (His = M of B) moeten bij autorisatie voor
+Materiële historie de volgende gegevens worden
+meegenomen.
+
+G
+
+14
+15
+Actie inhoud
+16
+Actie aanpassing geldigheid
+17
+Actie verval
+18
+19 Bericht
+XML-attributen
+
+Bij alle voorkoms van groepen moeten bij
+autorisatie voor Verantwoording de volgende
+gegevens worden meegenomen.
+
+G
+
+Op het niveau van groepen of combiantie
+object/groep (bv. PersoonAdres) komen enkele
+XML-attributen voor die altijd worden geleverd.
+Alleen in geval van Meldingen
+Idem
+
+5
+6
+7
+8
+
+Tijdstip registratie
+Tijdstip verval
+Nadere aanduding verval
+Materieel
+
+20
+21
+22
+23
+24
+25
+26
+27
+
+communicatie ID
+referentie ID
+Object sleutel
+Voorkomen sleutel
+Verwerkingssoort
+
+Alleen igv Mutatie berichten
+
+A
+
+B
+
+C
+
+D
+
+E
+
+Mapping StUF BG 0310-elementen op BRP (afgestemd Opdrachtnemer op 26 augustus 2016)
+1
+2
+3
+4
+5
+6
+7
+8
+
+NPS-elementnamen StUF BG0310
+inp.bsn
+authentiek
+anp.identificatie
+sub.typering
+inp.a-nummer
+geslachtsnaam
+voorvoegselGeslachtsnaam
+
+Mapping BRP
+J
+A
+J
+J
+J
+J
+
+9
+10
+11
+12
+
+BRP-element
+Persoon.identificatienummers.Burgerservicenummer
+Persoon.Bijhouding.Bijhoudingsaard
+Persoon.identificatienummers.Administratienummer
+Persoon.SamengesteldeNaam.Geslachtsnaamstam
+Persoon.SamengesteldeNaam.Voorvoegsels
+Persoon.SamengesteldeNaam.Scheidingsteken
+Persoon.SamengesteldeNaam.Voornamen
+Persoon.SamengesteldeNaam.Voornamen
+Persoon.Naamgebruik.Code
+GerelateerdePartner.SamengesteldeNaam.Geslachtsnaamstam
+
+voorletters
+voornamen
+aanduidingNaamgebruik
+geslachtsnaamPartner
+
+A
+J
+J
+A
+
+voorvoegselGeslachtsnaamPartner
+
+A
+
+aanhefAanschrijving
+voornamenAanschrijving
+geslachtsnaamAanschrijving
+adellijkeTitelPredikaat
+
+N
+A
+A
+J
+
+geslachtsaanduiding
+geboortedatum
+inp.geboorteplaats
+
+J
+J
+J
+
+inp.geboorteland
+overlijdensdatum
+inp.overlijdenplaats
+
+J
+J
+J
+
+inp.overlijdenLand
+inp.verblijftIn
+identificatie
+authentiek
+
+J
+J
+N
+A
+
+GerelateerdePartner.SamengesteldeNaam.Voorvoegsels
+GerelateerdePartner.SamengesteldeNaam.Scheidingsteken
+PersoonNaamgebruik.Voornamen
+PersoonNaamgebruik. …
+Persoon.SamengesteldeNaam.AdellijkeTitelCode
+Persoon.SamengesteldeNaam.PredicaatCode
+Persoon.Geslachtsaanduiding.Code
+Persoon.Geboorte.Datum
+Persoon.Geboorte.Gemeentecode
+Persoon.Geboorte.BuitenlandsePlaats
+Persoon.Geboorte.BuitenlandseRegio
+Persoon.Geboorte.Locatieomschrijving
+Persoon.Geboorte.LandGebiedCode
+Persoon.Overlijden.Datum
+Persoon.Overlijden.Gemeentecode
+Persoon.Overlijden.BuitenlandsePlaats
+Persoon.Overlijden.BuitenlandseRegio
+Persoon.Overlijden.Locatieomschrijving
+Persoon.Overlijden.LandGebiedCode
+-
+
+typering
+adresaanduiding
+num.identificatie
+authentiek
+
+N
+
+-
+
+J
+J
+
+Persoon.Adres.IdentificatiecodeNummeraanduding
+
+wpl.woonplaatsnaam
+gor.openbareRuimteNaam
+aoa.postcode
+aoa.huisnummer
+aoa.huisletter
+aoa.huisnummertoevoeging
+ogo.locatieaanduiding
+inOnderzoek
+
+J
+J
+J
+J
+J
+J
+N
+J
+
+Persoon.Adres.Woonplaatsnaam
+Persoon.Adres.NaamOpenbareRuimte
+Persoon.Adres.Postcode
+Persoon.Adres.Huisnummer
+Persoon.Adres.Huisletter
+Persoon.Adres.Huisnummertoevoeging
+
+brondocument
+
+J
+
+Persoon.AdministratieveHandeling.BijgehoudenActies.ActieBron.Bron
+
+tijdvakRelatie/beginRealtie
+
+?
+
+tijdvakRelatie/eindRelatie
+tijdvakGeldigheid/beginGeldigheid
+
+?
+J
+
+tijdvakGeldigheid/eindGeldigheid
+
+J
+
+tijdstipRegistratie
+extraElementen
+
+J
+N
+
+gerelateerde: verblijfsadres
+aoa.identificatie
+authentiek
+
+J
+N
+J
+
+Persoon.Adres.IdentificatiecodeVerblijfsobject
+
+N
+J
+N
+N
+N
+
+Persoon.Adres.Woonplaatsnaam
+-
+
+13
+14
+15
+16
+17
+18
+19
+20
+
+21
+22
+23
+
+24
+25
+26
+27
+28
+29
+30
+31
+
+34
+35
+36
+37
+38
+39
+
+Persoon.Onderzoek.GegevenInOnderzoek.Elementnaam
+
+40
+41
+42
+43
+44
+45
+46
+47
+
+Opmerkingen
+Vaste waarde "J"?
+'Ander Natuurlijk Persoon'-identificatie niet van toepassing
+
+Afleiden kan
+
+Alleen indien (toevallig) in bericht; BRP heeft volledige Naamgebruik in aparte
+groep. Op basis hiervan mogelijk afleidbaar. Beter is aanpassing StUF
+BG0310.
+Idem
+
+Naamgebruik als bron gebruiken; hoe in StUF geïmplementeerd
+Naamgebruik als bron gebruiken; hoe in StUF geïmplementeerd
+Titel en predicaat zijn afzonderlijke elementen in BRP; voor één persoon
+kunnen beide voorkomen. Hoe gaat StUF BG hiermee om?
+
+Vaste waarde "J"; interpretatie hier is dat het ingeschrijivngsadres wordt
+bedoeld en niet het adres als apart object.
+
+Vaste waarde "J"; interpretatie hier is dat het ingeschrijivngsadres wordt
+bedoeld en niet het adres als apart object.
+
+32
+33
+
+Afleiding/vertaalregel
+
+Persoon.Adres.DatumAanvangGeldigheid
+Persoon.Migratie.DatumAanvangGeldigheid
+Persoon.Adres.DatumEindeGeldigheid
+Persoon.Migratie.DatumEindeGeldigheid
+Persoon.Adres.TijdstipRegistratie
+
+Afleiden via Onderzoek-construct BRP; te bepalen welke 'in onderzoek'staande gegevens deze indicatie binnen StUF afdekt?
+Afleiden via Verantwoording-construct BRP; te bepalen welke bron(nen) voor
+welke gegevens hier worden bedoeld.
+Hiervoor geen elmenten binnen BRP; nader te bepalen hoe deze te vullen in
+StUF BG.
+Idem
+Afhankelijk situtai ede DAG/DEG van PersoonAdres of Persoo.Migratie nemen.
+Idem
+Idem
+Op deze plaats in StUF BG niet van toepassing.
+
+48
+49
+50
+
+Vaste waarde "J"; interpretatie hier is dat het ingeschrijivngsadres wordt
+bedoeld en niet het adres als apart object.
+
+51
+52
+53
+54
+55
+56
+
+wpl.identificatie
+wpl.woonplaatsnaam
+aoa.woonplaatsWaarinGelegen
+gor.identificatie
+opr.identificatie
+
+A
+
+B
+
+C
+
+D
+
+E
+
+Mapping StUF BG 0310-elementen op BRP (afgestemd Opdrachtnemer op 26 augustus 2016)
+1
+2
+3
+57
+58
+59
+60
+61
+62
+63
+64
+
+NPS-elementnamen StUF BG0310
+gor.openbareRuimteNaam
+gor.straatnaam
+aoa.postcode
+aoa.huisnummer
+aoa.huisletter
+aoa.huisnummertoevoeging
+inp.locatiebeschrijving
+begindatumVerblijf
+
+Mapping BRP
+J
+J
+J
+J
+J
+J
+J
+J
+
+BRP-element
+Persoon.Adres.NaamOpenbareRuimte
+Persoon.Adres.AfgekorteNaamOpenbareRuimte
+Persoon.Adres.Postcode
+Persoon.Adres.Huisnummer
+Persoon.Adres.Huisletter
+Persoon.Adres.Huisnummertoevoeging
+Persoon.Adres.Locatiebeschrijving
+Persoon.Adres.DatumAanvangAdreshouding
+
+Afleiding/vertaalregel
+
+Opmerkingen
+
+65
+66
+67
+68
+
+gerelateerde: sub.verblijfbuitenland
+sub.verblijfBuitenland/sub.adresBuitenland1
+sub.verblijfBuitenland/sub.adresBuitenland2
+sub.verblijfBuitenland/sub.adresBuitenland3
+
+J
+J
+J
+J
+
+69
+
+Persoon.Migratie.SoortCode = "E"
+Persoon.Migratie.BuitenlandseRegel1
+Persoon.Migratie.BuitenlandseRegel2
+Persoon.Migratie.BuitenlandseRegel3
+Persoon.Migratie.BuitenlandseRegel4
+Persoon.Migratie.BuitenlandseRegel5
+Persoon.Migratie.BuitenlandseRegel6
+Persoon.Migratie.LandGebiedCode
+
+In BRP 6 adresregels van 40 lang.
+
+sub.verblijfBuitenland/lnd.landcode
+
+J
+
+inp.adresHerkomst
+73 sub.correspondentieAdres
+74 sub.telefoonnummer
+75 sub.faxnummer
+76 sub.emailadres
+77 sub.url
+78 sub.rekeningnummerBankGiro
+79 acd.code
+80 inp.burgerlijkeStaat
+81 inp.gemeenteVanInschrijving
+82 inp.datumInschrijving
+83 vbt.aanduidingVerblijfstitel
+84 ing.datumVerkrijgingVerblijfstitel
+85 ing.datumVerliesVerblijfstitel
+86 inp.datumVestigingInNederland
+87 inp.immigratieLand
+88 inp.datumVertrekUitNederland
+89 inp.emigratieLand
+90 inp.signaleringReisdocument
+91 inp.aanduidingBijzonderNederlanderschap
+92 inp.buitenlandsReisdocument
+93 ing.aanduidingEuropeesKiesrecht
+94 ing.aanduidingUitgeslotenKiesrecht
+95 ing.indicatieGezagMinderjarige
+96 ing.indicatieCurateleRegister
+97 inp.datumOpschortingBijhouding
+98 inp.redenOpschortingBijhouding
+99 inp.indicatieGeheim
+100 ing.indicatieBlokkering
+inOnderzoek
+
+J
+N
+N
+N
+N
+N
+N
+N
+A
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
+N
+J
+J
+J
+J
+J
+J
+J
+?
+J
+
+Persoon.Adres.SoortCode
+Persoon.Bijhouding.Bijhoudingspartij
+Persoon.Bijhouding.DatumAanvangGeldigheid
+Persoon.Verblijfsrecht.Code
+Persoon.Verblijfsrecht.DatumAanvang
+Persoon.Verblijfsrecht.DatumVoorzienEinde
+Persoon.Migratie.SoortCode = "I"/PersoonMigratie.DatumAanvangGeldigheid
+Persoon.Migratie.SoortCode = "I"/PersoonMigratie.LandGebiedCode
+Persoon.Migratie.SoortCode = "E"/PersoonMigratie.DatumAanvangGeldigheid
+Persoon.Migratie.SoortCode = "E"/PersoonMigratie.LandGebiedCode
+Persoon.Indicaties.SignaleringMetBetrekkingTotVerstrekkingReisdocument
+Persoon.Indicaties.BehandeldAlsNederlander
+Persoon.DeelnameEUVerkiezingen.IndicatieDeelname
+Persoon.UitsluitingKiesrecht.Indicatie
+Persoon.IndicatiesDerdeHeeftGezag
+Persoon.Indicaties.OnderCuratele
+Persoon.Bijhouding.DatumAanvangGeldigheid
+Persoon.Bijhouding.NadereBijhoudingsaard
+Persoon.Indicaties.VolledigeVerstrekkingsbeperking
+
+aanduidingStrijdigheidNietigheid
+
+?
+
+Persoon.<Gegevensgroep>.NadereAanduidingVerval
+
+brondocument
+
+J
+
+Persoon.AdministratieveHandeling.BijgehoudenActies.ActieBron.Bron
+
+tijdvakGeldigheid/beginGeldigheid
+
+J
+
+Persoon.<Gegevensgroep>.DatumAanvangGeldigheid
+
+J
+J
+
+Persoon.<Gegevensgroep>.DatumEindeGeldigheid
+Persoon.<Gegevensgroep>.TijdstipRegistratie
+
+Idem
+Idem
+
+Persoon.UitsluitingKiesrecht.DatumVoorzienEinde
+Persoon.DeelnameEUVerkieziengen.DatumUitsluitingVoorzienEinde
+
+Op basis van opgave Procura; te controleren door VNG/KING
+Idem
+Idem
+
+70
+71
+72
+
+Persoon.Onderzoek.GegevenInOnderzoek.Elementnaam
+
+101
+
+102
+103
+
+Wat wordt hieronder in StUF BG verstaan?
+
+Indien voldoende gegevens in bericht afleidbaar, anders niet
+
+Welke waarden relevant voor StUF nader te bepalen.
+Uitzoeken oBRP
+Afleiden via Onderzoek-construct BRP; te bepalen welke 'in onderzoek'staande gegevens deze indicatie binnen StUF afdekt?
+Binnen BRP element 'nadereAanduidingVerval' opgenomen. Komt in
+verschillende gegevensgroepen voor. Hoe wordt dit element binnen StUF BG
+gebruikt? Per groep of per entiteit of …?
+Afleiden via Verantwoording-construct BRP; te bepalen welke bron(nen) voor
+welke gegevens hier worden bedoeld.
+Afleiden via MH-construct BRP; Persoon in BRP heeft meerdere MH-groepen;
+te bepalen welke waarde hier binnen StUF moet worden gevuld. Keuze kan zijn
+laatste te verwerken en te beschouwen als DAG/DEG voor geheel. In geval van
+FH-groepen ontbreekt DAG/DEG in gegevens. In die situaties afleiden op basis
+van tsReg/tsVerval? Hoe binnen StUF bedoeld?
+
+104
+
+tijdvakGeldigheid/eindGeldigheid
+106 tijdstipRegistratie
+105
+
+107
+
+extraElementen
+109 tijdvakGeldigheid/eindGeldigheid
+110 tijdstipRegistratie
+108
+
+Deels
+J
+J
+
+111
+
+inp.heeftAlsEchtgenootPartner
+gerelateerde: Partner
+113
+114
+inp.bsn
+authentiek
+115
+inp.a-nummer
+116
+112
+
+J
+J
+J
+A
+J
+
+GerelateerdePartner.Identificatienummers.Burgerservicenummer
+GerelateerdePartner.identificatienummers.Administratienummer
+
+Afleiden
+
+A
+
+B
+
+C
+
+D
+
+E
+
+Mapping StUF BG 0310-elementen op BRP (afgestemd Opdrachtnemer op 26 augustus 2016)
+1
+
+NPS-elementnamen StUF BG0310
+geslachtsnaam
+3
+117
+voorvoegselGeslachtsnaam
+118
+voorletters
+119
+voornamen
+120
+adellijkeTitelPredikaat
+121
+geslachtsaanduiding
+122
+geboortedatum
+123
+geboorteplaats
+geboorteland
+verblijfsadres
+verblijfBuitenland
+soortVerbintenis
+datumSluiting
+plaatsSluiting
+
+J
+N
+N
+A
+J
+J
+
+landSluiting
+datumOntbinding
+plaatsOntbinding
+
+J
+J
+J
+
+landOntbinding
+redenOntbinding
+inOnderzoek
+
+J
+J
+J
+
+BRP-element
+GerelateerdePartner.SamengesteldeNaam.Geslachtsnaamstam
+GerelateerdePartner.SamengesteldeNaam.Voorvoegsels
+GerelateerdePartner.SamengesteldeNaam.Scheidingsteken
+GerelateerdePartner.SamengesteldeNaam.Voornamen
+GerelateerdePartner.SamengesteldeNaam.Voornamen
+GerelateerdePartner.SamengesteldeNaam.AdelijkeTitelCode
+GerelateerdePartner.SamengesteldeNaam.PredicaatCode
+GerelateerdePartner.Geslachtsaanduiding.Code
+GerelateerdePartner.Geboorte.Datum
+GerelateerdePartner.Geboorte.Gemeentecode
+GerelateerdePartner.Geboorte.BuitenlandsePlaats
+GerelateerdePartner.Geboorte.Locatieomschrijving
+GerelateerdePartner.Geboorte.LandGebiedCode
+Huwelijk/GeregistreerdPartnerschap.Relatie.DatumAanvang
+Huwelijk/GeregistreerdPartnerschap.Relatie.GemeenteCodeAanvang
+Huwelijk/GeregistreerdPartnerschap.Relatie.BuitenlandsePlaatsAanvang
+Huwelijk/GeregistreerdPartnerschap.Relatie.LocatieomschrijvingAanvang
+Huwelijk/GeregistreerdPartnerschap.Relatie.LandGebiedCodeAanvang
+Huwelijk/GeregistreerdPartnerschap.Relatie.DatumEinde
+Huwelijk/GeregistreerdPartnerschap.Relatie.GemeenteCodeEinde
+Huwelijk/GeregistreerdPartnerschap.Relatie.BuitenlandsePlaatsEinde
+Huwelijk/GeregistreerdPartnerschap.Relatie.LocatieomschrijvingEinde
+Huwelijk/GeregistreerdPartnerschap.Relatie.LandGebiedCodeAanvang
+Huwelijk/GeregistreerdPartnerschap.Relatie.RedenEindeCode
+Persoon.Onderzoek.GegevenInOnderzoek.Elementnaam
+
+aanduidingStrijdigheidNietigheid
+brondocument
+
+J
+J
+
+Huwelijk/GeregistreerdPartnerschap.Relatie.NadereAanduidingVerval
+Persoon.AdministratieveHandeling.BijgehoudenActies.ActieBron.Bron
+
+tijdvakGeldigheid/beginGeldigheid
+tijdvakGeldigheid/eindGeldigheid
+tijdstipRegistratie
+extraElementen
+
+A
+A
+J
+N
+
+Huwelijk/GeregistreerdPartnerschap.Relatie.DatumAanvang
+Huwelijk/GeregistreerdPartnerschap.Relatie.DatumEinde
+Huwelijk/GeregistreerdPartnerschap.Relatie.TijdstipRegistratie
+-
+
+inp.heeftAlsKinderen
+gerelateerde: Kind
+145
+146
+inp.bsn
+authentiek
+147
+inp.a-nummer
+148
+geslachtsnaam
+149
+voorvoegselGeslachtsnaam
+150
+voorletters
+151
+voornamen
+152
+adellijkeTitelPredikaat
+153
+geslachtsaanduiding
+154
+geboortedatum
+155
+geboorteplaats
+156
+geboorteland
+157
+verblijfsadres
+158
+verblijfBuitenland
+159
+160
+ouderAanduiding
+datumIngangFamilierechtelijkeBetrekking
+161
+datumEindeFamilierechtelijkeBetrekking
+162
+inOnderzoek
+
+J
+J
+J
+A
+J
+J
+J
+A
+J
+J
+N
+J
+J
+J
+N
+N
+A
+J
+J
+A
+
+GerelateerdeKind.Identificatienummers.Burgerservicenummer
+.GerelateerdeKind.identificatienummers.Administratienummer
+GerelateerdeKind.SamengesteldeNaam.Geslachtsnaamstam
+GerelateerdeKind.SamengesteldeNaam.Voorvoegsels
+GerelateerdeKind.SamengesteldeNaam.Scheidingsteken
+GerelateerdeKind.SamengesteldeNaam.Voornamen
+GerelateerdeKind.SamengesteldeNaam.Voornamen
+GerelateerdeKind.SamengesteldeNaam.AdelijkeTitelCode
+-GerelateerdeKind.SamengesteldeNaam.PredicaatCode
+GerelateerdeKind.Geboorte.Datum
+GerelateerdeKind.Geboorte.Gemeentecode
+GerelateerdeKind.Geboorte.BuitenlandsePlaats
+GerelateerdeKind.Geboorte.LandGebiedCode
+GerelateerdeKind.Ouderschap.DatumAanvangGeldigheid
+GerelateerdeKind.Ouderschap.DatumEindeGeldigheid
+Persoon.Onderzoek.GegevenInOnderzoek.Elementnaam
+
+aanduidingStrijdigheidNietigheid
+brondocument
+
+J
+J
+
+GerelateerdeKind.Ouderschap.NadereAanduidingVerval
+Persoon.AdministratieveHandeling.BijgehoudenActies.ActieBron.Bron
+
+tijdvakGeldigheid/beginGeldigheid
+tijdvakGeldigheid/eindGeldigheid
+tijdstipRegistratie
+extraElementen
+
+J
+J
+J
+N
+
+GerelateerdeKind.Ouderschap.DatumAanvangGeldigheid
+GerelateerdeKind.Ouderschap.DatumEindeGeldigheid
+GerelateerdeKind.Ouderschap.Tijdstipregistratie
+-
+
+J
+J
+J
+A
+J
+J
+J
+
+GerelateerdeOuder.Identificatienummers.Burgerservicenummer
+.GerelateerdeOuder.identificatienummers.Administratienummer
+GerelateerdeOuder.SamengesteldeNaam.Geslachtsnaamstam
+GerelateerdeOuder.SamengesteldeNaam.Voorvoegsels
+GerelateerdeOuder.SamengesteldeNaam.Scheidingsteken
+
+2
+
+Mapping BRP
+J
+J
+A
+J
+J
+J
+J
+J
+
+124
+125
+126
+127
+128
+129
+
+130
+131
+132
+
+133
+134
+135
+136
+137
+
+Afleiding/vertaalregel
+
+Opmerkingen
+
+Afleiden
+
+Afleiden van 'tagnaam' in bericht
+
+Afleiden via Onderzoek-construct BRP; te bepalen welke 'in onderzoek'staande gegevens deze indicatie binnen StUF afdekt?
+Afleiden via Verantwoording-construct BRP; te bepalen welke bron(nen) voor
+welke gegevens hier worden bedoeld.
+
+138
+139
+140
+141
+142
+
+Afleiden van Relatie.DatumAanvang
+Afleiden van Relatie.DatumEinde
+Op basis van opgave Procura; te controleren door VNG/KING
+
+143
+144
+
+163
+164
+165
+166
+167
+168
+169
+
+Afleiden
+
+Afleiden
+
+Afleiden van aantal actuele voorkomens Ouder (BRP max 4)
+
+Afleiden via Onderzoek-construct BRP; te bepalen welke 'in onderzoek'staande gegevens deze indicatie binnen StUF afdekt?
+Afleiden via Verantwoording-construct BRP; te bepalen welke bron(nen) voor
+welke gegevens hier worden bedoeld.
+Welke geldigheid wordt hier bedoeld binnen StUF
+Idem
+Op basis van opgave Procura; te controleren door VNG/KING
+
+170
+
+inp.heeftAlsOuders
+gerelateerde: Ouder
+172
+173
+inp.bsn
+authentiek
+174
+inp.a-nummer
+175
+geslachtsnaam
+176
+voorvoegselGeslachtsnaam
+177
+171
+
+Afleiden
+
+A
+
+B
+
+C
+
+D
+
+E
+
+Mapping StUF BG 0310-elementen op BRP (afgestemd Opdrachtnemer op 26 augustus 2016)
+1
+
+NPS-elementnamen StUF BG0310
+voorletters
+3
+178
+voornamen
+179
+adellijkeTitelPredikaat
+180
+geslachtsaanduiding
+181
+geboortedatum
+182
+geboorteplaats
+183
+geboorteland
+184
+verblijfsadres
+185
+verblijfBuitenland
+186
+ouderAanduiding
+187
+datumIngangFamilierechtelijkeBetrekking
+188
+datumEindeFamilierechtelijkeBetrekking
+189
+inOnderzoek
+2
+
+Mapping BRP
+A
+J
+J
+J
+J
+J
+J
+N
+N
+A
+J
+J
+A
+
+BRP-element
+GerelateerdeOuder.SamengesteldeNaam.Voornamen
+GerelateerdeOuder.SamengesteldeNaam.Voornamen
+GerelateerdeOuder.SamengesteldeNaam.AdelijkeTitelCode
+GerelateerdeOuder.SamengesteldeNaam.PredicaatCode
+GerelateerdeOuder.Geboorte.Datum
+GerelateerdeOuder.Geboorte.Gemeentecode
+GerelateerdeOuder.Geboorte.BuitenlandsePlaats
+GerelateerdeOuder.Geboorte.LandGebiedCode
+GerelateerdeOuder.Ouderschap.DatumAanvangGeldigheid
+GerelateerdeOuder.Ouderschap.DatumEindeGeldigheid
+PersoonOnderzoek.GegevenInOnderzoek.Elementnaam
+
+190
+191
+
+aanduidingStrijdigheidNietigheid
+brondocument
+
+J
+J
+
+GerelateerdeOuder.Ouderschap.NadereAanduidingVerval
+Persoon.AdministratieveHandeling.BijgehoudenActies.ActieBron.Bron
+
+tijdvakGeldigheid/beginGeldigheid
+tijdvakGeldigheid/eindGeldigheid
+tijdstipRegistratie
+extraElementen
+
+J
+J
+J
+N
+
+GerelateerdeOuder.Ouderschap.DatumAanvangGeldigheid
+GerelateerdeOuder.Ouderschap.DatumEindeGeldigheid
+GerelateerdeOuder.Ouderschap.Tijdstipregistratie
+-
+
+J
+J
+J
+J
+J
+J
+J
+A
+
+Persoon.Nationaliteit.Code
+Persoon.Nationaliteit.RedenVerkrijgingCode
+Persoon.Nationaliteit.DatumAanvangGeldigheid
+Persoon.Nationaliteit.RedenVerliesCode
+Persoon.Nationaliteit.DatumAanvangGeldigheid
+Persoon.Onderzoek.GegevenInOnderzoek.Elementnaam
+
+aanduidingStrijdigheidNietigheid
+brondocument
+
+J
+J
+
+Persoon.Nationaliteit.NadereAanduidingVerval
+Persoon.AdministratieveHandeling.BijgehoudenActies.ActieBron.Bron
+
+tijdvakRelatie/beginRelatie
+tijdvakRelatie/eindRelatie
+tijdvakGeldigheid/beginGeldigheid
+
+J
+J
+?
+
+Persoon.Nationaliteit.DatumAanvangGeldigheid
+Persoon.Nationaliteit.DatumEindeGeldigheid
+Persoon.Nationaliteit.DatumAanvangGeldigheid
+
+tijdvakGeldigheid/eindGeldigheid
+tijdstipRegistratie
+extraElementen
+
+?
+J
+N
+
+Persoon.Nationaliteit.DatumEindeGeldigheid
+Persoon.Nationaliteit.TijdstipRegistratie
+-
+
+J
+
+-
+
+J
+J
+J
+J
+J
+J
+A
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
+N
+N
+J
+J
+J
+J
+J
+N
+A
+
+Persoon.Reisdocument.SoortCode
+Persoon.Reisdocument.Nummer
+
+192
+193
+194
+195
+196
+
+Afleiding/vertaalregel
+
+Opmerkingen
+Afleiden
+
+Afleiden
+
+Afleiden via Onderzoek-construct BRP; te bepalen welke 'in onderzoek'staande gegevens deze indicatie binnen StUF afdekt?
+Afleiden via Verantwoording-construct BRP; te bepalen welke bron(nen) voor
+welke gegevens hier worden bedoeld.
+Welke geldigheid wordt hier bedoeld binnen StUF
+Idem
+Op basis van opgave Procura; te controleren door VNG/KING
+
+197
+
+inp.heeftAlsNationaliteit
+gerelateerde: Nationaliteit
+199
+code
+200
+inp.redenVerkrijging
+201
+inp.datumVerkrijging
+202
+inp.redenVerlies
+203
+inp.datumVerlies
+204
+inOnderzoek
+198
+
+205
+206
+207
+208
+209
+210
+211
+212
+213
+
+Nieuw in BRP is 'Indicatie bijhouding beeindigd'; ook in StUFBG opgenomen?
+
+Afleiden via Onderzoek-construct BRP; te bepalen welke 'in onderzoek'staande gegevens deze indicatie binnen StUF afdekt?
+Afleiden via Verantwoording-construct BRP; te bepalen welke bron(nen) voor
+welke gegevens hier worden bedoeld.
+
+Mogelijk zelfde waarde aanhouden als TijvakRelatie; dit nakijken in StUFdocumentatie
+Idem
+Op basis van opgave Procura; te controleren door VNG/KING
+
+214
+
+ing.isHouderVan
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+
+gerelateerde: reisdocument
+rds.code
+nummer
+isVan
+gerelateerde: Houder reisdocument
+inp.bsn
+authentiek
+inp.a-nummer
+geslachtsnaam
+voorvoegselGeslachtsnaam
+voorletters
+voornamen
+adellijkeTitelPredikaat
+geslachtsaanduiding
+geboortedatum
+geboorteplaats
+geboorteland
+verblijfsadres
+verblijfBuitenland
+datumUitgifte
+autoriteitUitgifte
+einddatumGeldigheid
+datumInhoudingVermissing
+aanduidingInhoudingVermissing
+lengteHouder
+inOnderzoek
+
+Niet in bg0310_ent_mutatie.xsd aangetroffen. In plaats hiervan een RSD-Lk01bericht aanmaken.
+
+Is deze nodig?
+Persoon.Identificatienummers.Burgerservicenummer
+Persoon.identificatienummers.Administratienummer
+Persoon.SamengesteldeNaam.Geslachtsnaamstam
+Persoon.SamengesteldeNaam.Voorvoegsels
+Persoon.SamengesteldeNaam.Scheidingsteken
+Persoon.SamengesteldeNaam.Voornamen
+Persoon.SamengesteldeNaam.Voornamen
+Persoon.SamengesteldeNaam.AdelijkeTitelCode
+Persoon.SamengesteldeNaam.PredicaatCode
+Persoon.Geslachtsaanduiding.Code
+Persoon.Geboorte.Datum
+Persoon.Geboorte.Gemeentecode
+Persoon.Geboorte.BuitenlandsePlaats
+Persoon.Geboorte.LandGebiedCode
+Persoon.Reisdocument.DatumUitgifte
+Persoon.Reisdocument.AutoriteitVanUitgifteDatumUitgifte
+Persoon.Reisdocument.DatumEindeDocument
+Persoon.Reisdocument.DatumInhoudingVermissing
+Persoon.Reisdocument.AanduidingInhoudingVermissing
+Persoon.Onderzoek.GegevenInOnderzoek.Elementnaam
+
+Afleiden
+
+Afleiden
+
+Vervallen in BRP
+Afleiden via Onderzoek-construct BRP; te bepalen welke 'in onderzoek'staande gegevens deze indicatie binnen StUF afdekt?
+
+A
+
+B
+
+C
+
+D
+
+E
+
+Mapping StUF BG 0310-elementen op BRP (afgestemd Opdrachtnemer op 26 augustus 2016)
+1
+2
+3
+242
+243
+244
+245
+246
+247
+
+NPS-elementnamen StUF BG0310
+brondocument
+tijdvakGeldigheid/beginGeldigheid
+tijdvakGeldigheid/eindGeldigheid
+tijdstipRegistratie
+extraElementen
+heeftEropBijgeschreven
+
+Mapping BRP BRP-element
+J
+Persoon.AdministratieveHandeling.BijgehoudenActies.ActieBron.Bron
+A
+A
+J
+N
+N
+
+Persoon.Reisdocument.DatumIngangDocument
+Persoon.Reisdocument.DatumEindeDocument
+Persoon.Reisdocument.TijdstipRegistratie
+-
+
+N
+
+-
+
+Afleiding/vertaalregel
+
+Opmerkingen
+Afleiden via Verantwoording-construct BRP; te bepalen welke bron(nen) voor
+welke gegevens hier worden bedoeld.
+Welke geldigheid wordt hier bedoeld binnen StUF
+Idem
+Op basis van opgave Procura; te controleren door VNG/KING
+
+248
+249
+250
+251
+
+ing.isBijgeschrevenOp
+
+Wel in bg0310_ent_mutatie.xsd
+
+Status
+
+ID1
+
+Standaard Elementnaam
+
+Entiteittype Formaat
+
+Scope
+
+Definitie Herkomst Datum
+Organisatie
+Voorbeeld
+aanvraag
+jjjmmdd
+(vb
+De code voor
+BAG
+een gebeurtenis
+zoals
+EGEM
+gedefinieerd in koppelingen
+BAG-GBA met
+koppeling
+de BAG
+
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+In gebruik
+
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+184
+
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+bg0310
+
+codeGebeurtenis
+codeGebeurtenis
+gor.codeGebeurtenis
+codeGebeurtenis
+bic
+iban
+bic
+iban
+bic
+iban
+codeGebeurtenis
+codeGebeurtenis
+codeGebeurtenis
+begindatumTijdvakGeldigheidBAG
+begindatumTijdvakGeldigheidBAG
+begindatumTijdvakGeldigheidBAG
+begindatumTijdvakGeldigheidBAG
+begindatumTijdvakGeldigheidBAG
+begindatumTijdvakGeldigheidBAG
+einddatumTijdvakGeldigheidBAG
+einddatumTijdvakGeldigheidBAG
+einddatumTijdvakGeldigheidBAG
+einddatumTijdvakGeldigheidBAG
+einddatumTijdvakGeldigheidBAG
+einddatumTijdvakGeldigheidBAG
+locatiebeschrijvingCorrespondentieadres
+einddatumUitsluitingEuropeesKiesrecht
+einddatumUitsluitingKiesrecht
+straatnaam
+
+AOA
+GOR
+OPR
+WPL
+NPS
+NPS
+NNP
+NNP
+VES
+VES
+GEM
+PND
+TGO
+AOA
+GEM
+OPR
+PND
+TGO
+WPL
+AOA
+GEM
+OPR
+PND
+TGO
+WPL
+NPS
+NPS
+NPS
+AOA
+
+AN..16
+AN..16
+AN..16
+AN..16
+AN..11
+AN..34
+AN..11
+AN..34
+AN..11
+AN..34
+AN..16
+AN..16
+AN..16
+N..17
+N..17
+N..17
+N..17
+N..17
+N..17
+N..17
+N..17
+N..17
+N..17
+N..17
+N..17
+AN..35
+N..17
+N..17
+AN..24
+
+De code voor
+BAG
+een gebeurtenis zoals
+EGEM
+gedefinieerd in koppelingen
+BAG-GBA met
+koppeling
+de BAG
+De code voor
+BAG
+een gebeurtenis zoals
+EGEM
+gedefinieerd in koppelingen
+BAG-GBA met
+koppeling
+de BAG
+De code voor
+BAG
+een gebeurtenis zoals
+EGEM
+gedefinieerd in koppelingen
+BAG-GBA met
+koppeling
+de BAG
+NPS/bic RSGB
+20110509 KING
+NPS/iban RSGB
+20110509 KING
+NNP/bic RSGB
+20110509 KING
+NNP/iban RSGB
+20110509 KING
+VES/bic RSGB
+20110509 KING
+VES/iban RSGB
+20110509 KING
+De code voor
+catalogus
+een gebeurtenis
+berichten
+20100901
+zoals
+BAG
+Waarderingskamer
+gebeurtenissen
+gedefinieerd in koppeling
+BAG-WOZ
+BAG-WOZ
+koppeling
+De code voor
+catalogus
+een gebeurtenis
+berichten
+20100901
+zoals
+BAG
+Waarderingskamer
+gebeurtenissen
+gedefinieerd in koppeling
+BAG-WOZ
+BAG-WOZ
+koppeling
+De code voor
+catalogus
+een gebeurtenis
+berichten
+20100901
+zoals
+BAG
+Waarderingskamer
+gebeurtenissen
+gedefinieerd in koppeling
+BAG-WOZ
+BAG-WOZ
+koppeling
+De begindatum
+catalogus
+van een
+berichten
+20100901
+periodeBAG
+waarin
+Waarderingskamer
+gebeurtenissen
+een of meer gegevens
+BAG-WOZ
+diekoppeling
+worden bijgehouden over één van
+De begindatum
+catalogus
+van een
+berichten
+20100901
+periodeBAG
+waarin
+Waarderingskamer
+gebeurtenissen
+een of meer gegevens
+BAG-WOZ
+diekoppeling
+worden bijgehouden over één van
+De begindatum
+catalogus
+van een
+berichten
+20100901
+periodeBAG
+waarin
+Waarderingskamer
+gebeurtenissen
+een of meer gegevens
+BAG-WOZ
+diekoppeling
+worden bijgehouden over één van
+De begindatum
+catalogus
+van een
+berichten
+20100901
+periodeBAG
+waarin
+Waarderingskamer
+gebeurtenissen
+een of meer gegevens
+BAG-WOZ
+diekoppeling
+worden bijgehouden over één van
+De begindatum
+catalogus
+van een
+berichten
+20100901
+periodeBAG
+waarin
+Waarderingskamer
+gebeurtenissen
+een of meer gegevens
+BAG-WOZ
+diekoppeling
+worden bijgehouden over één van
+De begindatum
+catalogus
+van een
+berichten
+20100901
+periodeBAG
+waarin
+Waarderingskamer
+gebeurtenissen
+een of meer gegevens
+BAG-WOZ
+diekoppeling
+worden bijgehouden over één van
+De einddatum
+catalogus
+van een
+berichten
+20100901
+periode BAG
+waarin
+Waarderingskamer
+gebeurtenissen
+een of meer gegevens
+BAG-WOZ
+die worden
+koppeling
+bijgehouden over één van
+De einddatum
+catalogus
+van een
+berichten
+20100901
+periode BAG
+waarin
+Waarderingskamer
+gebeurtenissen
+een of meer gegevens
+BAG-WOZ
+die worden
+koppeling
+bijgehouden over één van
+De einddatum
+catalogus
+van een
+berichten
+20100901
+periode BAG
+waarin
+Waarderingskamer
+gebeurtenissen
+een of meer gegevens
+BAG-WOZ
+die worden
+koppeling
+bijgehouden over één van
+De einddatum
+catalogus
+van een
+berichten
+20100901
+periode BAG
+waarin
+Waarderingskamer
+gebeurtenissen
+een of meer gegevens
+BAG-WOZ
+die worden
+koppeling
+bijgehouden over één van
+De einddatum
+catalogus
+van een
+berichten
+20100901
+periode BAG
+waarin
+Waarderingskamer
+gebeurtenissen
+een of meer gegevens
+BAG-WOZ
+die worden
+koppeling
+bijgehouden over één van
+De einddatum
+catalogus
+van een
+berichten
+20100901
+periode BAG
+waarin
+Waarderingskamer
+gebeurtenissen
+een of meer gegevens
+BAG-WOZ
+die worden
+koppeling
+bijgehouden over één van
+De locatiebeschrijving
+LO 3.7
+20110727
+in de GBA Centric
+bij een adres met functieadres is Briefadres
+De einddatum
+RSBG
+uitsluiting
+20110727
+europeesCentric
+kiesrecht
+De einddatum
+RSGB
+uitsluiting
+20110727
+kiesrechtCentric
+bg0310/bag ADR/straa bg0204
+20130604 PinkRoccade
+BAG-GBA koppeling
+
+In gebruik 185
+
+bg0310
+
+identificatieTGO
+
+AOA
+
+AN..16
+
+bg0310/bag ADR/extr bg0204
+
+tnaam
+20130604 PinkRoccade
+
+BAG-GBA koppeling
+
+aElement
+='identific
+atieTGO'
+In gebruik 186
+
+bg0310
+
+straatcode
+
+AOA
+
+N..5
+
+In gebruik 187
+
+bg0310
+
+status
+
+AOA
+
+AN..80
+
+In gebruik 188
+
+bg0310
+
+gemeentecode
+
+AOA
+
+N..4
+
+In gebruik 189
+
+bg0310
+
+straatcode
+
+OPR
+
+N..5
+
+In gebruik 190
+
+bg0310
+
+woonplaatscode
+
+OPR
+
+N..2
+
+In gebruik 191
+
+bg0310
+
+gemeentecode
+
+OPR
+
+N..4
+
+In gebruik 192
+
+bg0310
+
+woonplaatscode
+
+WPL
+
+N..2
+
+In gebruik 200
+
+bg0310
+
+aardOmschrijving
+
+KZA
+
+AN..200
+
+In gebruik 201
+
+bg0310
+
+aardOmschrijving
+
+ZRA
+
+AN--200
+
+bg0310/bag ADR/stra bg0204
+atcode
+bg0310/bag ADR/extr bg0204
+
+aElement
+= 'status'
+
+bg0310/bag ADR/gem
+eentecod
+e
+bg0310/bag R02/straa
+tcode
+bg0310/bag R02/woon
+plaatscod
+e
+bg0310/bag R02/gem
+eentecod
+e
+bg0310/bag R03/woon
+plaatscod
+e
+bg0310
+De
+waarde
+(niet de
+code)
+voor de
+aard uit
+de BRK
+Levering.
+bg0310
+De
+waarde
+(niet de
+code)
+voor de
+aard uit
+de BRK
+Levering.
+
+20130604 PinkRoccade
+20131121 PinkRoccade
+
+BAG-GBA koppeling
+
+bg0204
+
+20130604 PinkRoccade
+
+BAG-GBA koppeling
+
+bg0204
+
+20130604 PinkRoccade
+
+BAG-GBA koppeling
+
+bg0204
+
+20130604 PinkRoccade
+
+BAG-GBA koppeling
+
+bg0204
+
+20130604 PinkRoccade
+
+BAG-GBA koppeling
+
+bg0204
+
+20130604 PinkRoccade
+
+BAG-GBA koppeling
+
+BRK
+
+20150124 KING
+
+BRK
+
+20150124 KING
+
+A
+
+B
+
+C
+
+D
+
+E
+
+Mapping StUF BG 0310-elementen Tabellen op BRP
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+
+GEM-elementnamen StUF BG0310
+gemeenteCode
+gemeenteNaam
+gemeenteNaamNen
+geometrie
+gemeenteWaarinIsOvergegaan
+inOnderzoek
+ingangsdatumObject
+einddatumObject
+tijdvakGeldigheid/beginGeldigheid
+tijdvakGeldigheid/eindGeldigheid
+tijdstipRegistratie
+
+Mapping BRP
+J
+J
+N
+N
+J
+N
+J
+J
+?
+?
+N
+
+BRP-element
+Gemeente.Code
+Gemeente.Naam
+Gemeente.VoortzettendeGemeenteCode
+Gemeente.DatumAanvangGeldigheid
+Gemeente.DatumEindeGeldigheid
+?
+?
+-
+
+Afleiding/vertaalregel
+
+Opmerkingen
+
+LND-elementnamen StUF BG0310
+code
+codeIso
+naam
+tijdvakObject/beginObject
+tijdvakObject/eindObject
+
+Mapping BRP
+J
+J
+J
+J
+J
+
+BRP-element
+LandGebied.Code
+LandGebied.iso31661Alpha2Code
+LandGebied.Naam
+LandGebied.DatumAanvangGeldigheid
+LandGebied.DatumEindeGeldigheid
+
+Afleiding/vertaalregel
+
+Opmerkingen
+
+NAT-elementnamen StUF BG0310
+code
+omschrijving
+tijdvakObject/beginObject
+tijdvakObject/eindObject
+
+Mapping BRP
+J
+J
+J
+J
+
+BRP-element
+Nationaliteit.Code
+Nationaliteit.Naam
+Nationaliteit.DatumAanvangGeldigheid
+Nationaliteit.DatumEindeGeldigheid
+
+Afleiding/vertaalregel
+
+Opmerkingen
+
+RDS-elementnamen StUF BG0310
+code
+omschrijving
+
+Mapping BRP BRP-element
+J
+SoortNederlandsReisdocument.Code
+J
+SoortNederlandsReisdocument.Naam
+
+Afleiding/vertaalregel
+
+Opmerkingen
+
+WPL-elementnamen StUF BG0310
+identificatie
+authentiek
+woonplaatsNaam
+woonplaatsNaamNen
+gem.gemeenteCode
+gem.gemeenteNaam
+geometrie
+status
+geconstateerd
+inOnderzoek
+bronDocument
+ingangsdatumObject
+einddatumObject
+tijdvakGeldigheid/beginGeldigheid
+tijdvakGeldigheid/eindGeldigheid
+tijdstipRegistratie
+
+Mapping BRP
+J
+N
+J
+N
+N
+N
+N
+N
+N
+N
+N
+J
+J
+?
+?
+N
+
+Afleiding/vertaalregel
+
+Opmerkingen
+
+Wat wordt hier exact mee bedoeld?
+Wat wordt hier exact mee bedoeld?
+
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+
+BRP-element
+Plaats.Code
+Plaats.Naam
+Plaats.DatumAanvangGeldigheid
+Plaats.DatumEindeGeldigheid
+?
+?
+-
+
+Wat wordt hier exact mee bedoeld?
+Wat wordt hier exact mee bedoeld?
+
+Versiehistorie
+Versie
+0.1
+0.2
+
+Datum
+26-8-2016
+14-11-2016
+
+Auteur
+Operatie BRP
+Operatie BRP
+
+0.3
+
+Juli 2017
+
+Operatie BRP
+
+Wijziging
+Werkblad StUF BG 0310-elementen afgestemd met Henry
+- Extra elementen aangevuld op werkblad 'StUF BG 0310 elementen'
+- Werkblad 'StUF BG0310 Tabellen' opgenomen
+- Mapping stuurgegevens aangemaakt
+Consolidatie na stopzetting Operatie BRP
+
+Afgestemd
+Opdrachtnemer
+26-8-2016
+14-11-2016
+
+-
+
+Afgestemd VNG
+-
+
+

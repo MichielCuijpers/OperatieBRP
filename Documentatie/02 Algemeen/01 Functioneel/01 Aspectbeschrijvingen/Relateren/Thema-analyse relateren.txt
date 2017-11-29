@@ -1,0 +1,446 @@
+Thema-analyse Relateren
+5-7-2017
+
+Overzicht
+
+Aanleiding
+
+Potentieel te
+relateren relaties
+
+Te relateren
+relaties
+
+Te leveren
+relateer-AH
+
+Bepalen potent.
+te relateren rels
+
+Matchen relaties
+
+Relateren
+
+Leveren
+relateer-AH
+
+2
+
+Aanleiding
+• Verwerking relevante AH
+– Overgang bijhouding naar BRP door AH
+– Bijhouding relaties, betrokkenheden of de groepen
+Identificatienrs, Geslacht, Geboorte, Samengestelde naam
+• Aanname: automatische procedures worden met bestaande
+actualiseringshandelingen uitgevoerd en vallen hier dus ook onder
+
+– Eventueel ook: relateer-AH door BZM
+
+• Overgang gemeente
+– Hele gemeente gaat over van GBA naar BRP
+– Niet via AH’s
+3
+
+Bepalen potentieel te relateren
+relaties
+• Afhankelijk van aanleiding:
+– Overdracht bijhouding naar BRP (hele gemeente of persoon):
+relevante (zie onder) relaties van betrokken personen
+– Bijhouding relatie/betrokkenheid: betreffende relatie, mits relevant
+– Bijhouding ‘4 groepen’: relevante relaties van bijgehouden personen
+– Relateer-AH door BZM: afhankelijk van insteek bericht (personen,
+relaties, …)
+
+• Een relatie is relevant als hieraan wordt voldaan:
+–
+–
+–
+–
+
+de relatie is niet vervallen
+het mag geen relatie van een GBA-persoon zijn
+bij de relatie is minimaal één pseudo-persoon betrokken
+tenminste één betrokken pseudo-persoon heeft A-nr en BSN
+
+4
+
+Potentieel te relateren relaties
+• Verzameling potentieel te relateren relaties, n.a.v. een aanleiding om
+mogelijk te relateren
+• Bij een frb kunnen meerdere pseudo-personen betrokken zijn
+– Mogelijk moeten dan meer dan 2 relaties met elkaar worden gerelateerd
+– We gaan er hier vanuit dat relateren per 2 relaties plaatsvindt, wat zonodig
+wordt herhaald
+
+• Voorkeur vorm van de verzameling: reconstrueerbaar uit de
+persoonsgegevens
+– Liefst reconstrueerbaar a.d.h.v. bestaande kenmerken
+NB: TsLaatsteWijz wijzigt niet bij overgang gemeente (tenzij geraakt door
+autom.proc)
+– Evt. nieuw kenmerk op relatie of persoon dat wordt gezet zodra zich een
+relevante aanleiding voordoet
+
+• Niet gewenst: persistente queue/lijst die niet reconstrueerbaar is uit
+persgegevens
+– Nadeel: extra artifact in architectuur en extra inspanning nodig voor
+consistentiebewaking
+
+• Of is er geen lijst nodig, bijv. als het relateren direct gebeurt in de context
+van de verwerking van een aanleiding?
+5
+
+Matchen relaties
+• Input: te relateren relatie
+• Output: tupel van relaties die met elkaar
+gerelateerd kunnen worden
+• Spiegelbeeld van de te relateren relatie
+zoeken a.d.h.v. criteria “wat vergelijken” (zie
+hierna)
+
+6
+
+Matchen relaties: wat vergelijken H/GP
+Persoon 1
+(ingeschrevene)
+
+nhoudelijke. gegevens
+van mat.historie
+zijn gelijk voor de
+periode van de relatie
+
+Groepen
+Identificatienrs
+Samengestelde naam
+Geslacht
+Geboorte
+
+Persoon 1
+(pseudo)
+
+Betrokkenheid
+(partner)
+
+Relatie
+(H / P)
+
+Inhoudelijke. gegevens
+van actuele his-rec
+is gelijk
+
+Betrokkenheid
+(partner)
+
+Groepen
+Standaard
+
+Relatie
+(H / P)
+
+Betrokkenheid
+(partner)
+
+Persoon 2
+(pseudo)
+
+Inhoudelijke. gegevens
+van mat.historie
+zijn gelijk voor de
+periode van de relatie
+
+Betrokkenheid
+(partner)
+
+Groepen
+Identificatienrs
+Samengestelde naam
+Geslacht
+Geboorte
+
+Persoon 2
+(ingeschrevene)
+
+Er moet sprake zijn van twee gelijksoortige relaties en betrokkenheden tussen de
+personen. Bij de ene relatie is Persoon X een ingeschrevene en Persoon Y een
+gerelateerde. Bij de andere relatie is dit precies andersom.
+
+Bronnen:
+1. Relateren - concept uitwerking.docx
+2. Slides Relateren en ontrelateren.pptx
+
+7
+
+Matchen relaties: wat vergelijken FRB
+Persoon 1
+(ingeschrevene)
+
+Groepen
+Identificatienrs
+Samengestelde naam
+Geslacht
+Geboorte
+
+Betrokkenheid
+(ouder)
+
+Relatie
+(FRB)
+
+Groepen
+Ouderschap
+
+Inhoudelijke. gegevens
+van actuele his-rec
+is gelijk
+
+Ouderschap.DEG van
+actuele his-rec is gelijk
+
+Persoon 1
+(pseudo)
+
+Betrokkenheid
+(ouder)
+
+Persoon 3
+(i of p)
+
+Betrokkenheid
+(ouder)
+
+Betrokkenheid
+(kind)
+
+Relatie
+(FRB)
+
+Betrokkenheid
+(kind)
+
+Persoon 2
+(pseudo)
+
+Groepen
+Identificatienrs
+Samengestelde naam
+Geslacht
+Geboorte
+
+Persoon 2
+(ingeschrevene)
+
+Er moet sprake zijn van twee gelijksoortige relaties en betrokkenheden tussen de
+personen. Bij de ene relatie is Persoon X een ingeschrevene en Persoon Y een
+gerelateerde. Bij de andere relatie is dit precies andersom.
+
+Bronnen:
+1. Relateren - concept uitwerking.docx
+2. Slides Relateren en ontrelateren.pptx
+
+8
+
+Te relateren relaties
+• Verzameling tupels van matchende relaties
+
+9
+
+Relateren H/GP
+
+• Alleen actuele gegevens overnemen naar nieuwe relatie
+NB: Alle andere gegevens zijn vervallen.
+
+Josef
+(i)
+BSN
+
+P
+
+HUW
+
+P
+
+Maria
+(p)
+BSN
+
+Josef
+(p)
+BSN
+
+P
+
+HUW
+
+P
+
+Maria
+(i)
+BSN
+
+Josef
+(i)
+BSN
+
+P
+
+HUW
+
+P
+
+Maria
+(p)
+BSN
+
+P
+
+HUW
+
+P
+
+P
+
+HUW
+
+P
+
+• Blobs opnieuw aanmaken
+• IST gegevens blijven aan oude relatie hangen
+
+Josef
+(p)
+BSN
+
+Bron: Slide 13 van Slides Relateren en ontrelateren.pptx
+
+Maria
+(i)
+BSN
+
+10
+
+Relateren FRB
+Peter
+(i)
+
+FRB
+
+K
+
+Maria
+(o)
+
+O
+Ouderschap
+Oud. gezag
+
+• Familierechtelijke betrekking van ingezeten kind behouden
+
+Peter
+(o)
+
+FRB
+
+K
+
+Maria
+(i)
+
+O
+
+• Van ouderschap de hele mat.historie overnemen naar de nieuwe
+Ouder-betrokkenheid, vanwege mogelijke onderbreking bij
+terugadoptie.
+• Actuele voorkomens van Ouderlijk gezag kopiëren naar nieuwe
+Ouder-betrokkenheid
+
+Peter
+(i)
+
+K
+
+FRB
+
+O
+
+Maria
+(o)
+
+Ouderschap
+Oud. gezag
+
+• Als Peter (i) nog een andere ouder zou hebben binnen zijn frb,
+dan blijft deze gewoon eraan hangen bij het relateren
+
+O
+Ouderschap
+Oud. gezag
+
+Peter
+(o)
+
+Bron: Slide 14 van Slides Relateren en ontrelateren.pptx
+
+K
+
+FRB
+
+O
+
+Maria
+(i)
+
+11
+
+Implementatievoorstel
+• Per aanleiding relateren en een “stapelaar” in beheerapplicatie voor
+overgang hele gemeente
+• Expliciet relateer-bericht dat vanuit stapelaar wordt ingeschoten namens
+centrale BRP-beheerder (= partij) of door gemeente voor een individueel
+relateerverzoek
+• Inhoud bericht: 2 te relateren relaties (als paden vanuit hoofdpersonen,
+zodat je optimistic locking via obj.sleutels hoofdpersonen kado krijgt)
+• Verwerking zoals elke andere bijhouding, middels Afhandeling verzoek
+– Dus responsebericht naar indiener (centrale beheerder, dan wel gemeente)
+– Overige betrokken gemeenten ontvangen bijhoudingsnotificatie
+– Meldingen van BR’s geven aan waarom er niet gerelateerd kan worden
+
+• Als een andere AH de aanleiding is, dan à la ontrelateren impliciete
+verwerking met als verantwoording AH-relateren als systeemhandeling
+
+12
+
+Relateer-AH
+• Categorie: actualisering
+• Eén actie die alles verantwoordt
+• Bronnen:
+– Eerdere ontwerpbeslissing: geen bronnen
+– Via actie-attributen kom je bij oorspronkelijke bron
+– Evt. alleen bron opnemen als bronnen bij beide relaties hetzelfde zijn
+
+• Partij van AH:
+– Bij overgang hele gemeente: de centrale beheerder
+– Overige situaties: de partij van de triggerende AH
+
+• Fiattering van AH:
+– Bij relateren via zelfstandig bijhoudingsbericht: lift mee op
+fiatteringsmechanisme van Afhandeling verzoek
+• Strikt genomen niet nodig, want PL wijzigt niet. Weliswaar wijzigt ‘soort persoon’, maar
+de pseudo-persoon kan juist gerelateerd worden omdat het een technische kopie van
+een ingeschrevene is. Eigenlijk was en blijft het dus een ingeschrevene.
+
+– Bij relateren via systeemhandeling bij andere AH: lift mee op fiattering van de
+andere AH
+13
+
+Aandachtspunten
+• Rekening houden met onderzoeken?
+– Bij matchen relaties geen rekening houden met
+onderzoeken
+– Bij relateren onderzoeken overnemen naar de
+nieuwe relatie/betrokkenheid (nieuw gegeven in
+onderzoek) voor de persoon waar het onderzoek
+op stond
+– Voordeel: als een correctie volgt wordt die gelijk
+symmetrisch doorgevoerd
+14
+
+

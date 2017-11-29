@@ -1,0 +1,875 @@
+His_Partij
+
+His_Dienst
+
+SG
+His_PartijID
+
+*i
+
+ID
+
+His_DienstID
+
+*i
+
+Partij >
+
+Partij
+
+* u1
+
+Dienst >
+
+Dienst
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsVerval
+
+Ts
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+Naam
+
+NaamEnumeratiewaarde
+
+*
+
+DatIngang Dat
+
+*
+
+DatIngang
+
+Dat
+
+*
+
+DatEinde Dat
+
+.
+
+DatEinde
+
+Dat
+
+.
+
+IndBlok
+
+OIN
+
+OIN
+
+.
+
+Srt >
+
+SrtPartij
+
+.
+
+IndVerstrbeperkingMogelijk JaNee
+
+Ja
+
+Release 59
+
+.
+
+His_DienstAttendering
+
+.
+
+His_PartijVrijBer
+
+SG
+
+ID
+
+His_DienstAttenderingID
+
+*i
+
+Dienst >
+
+Dienst
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+His_PersVerstrbeperking
+
+TsVerval
+
+Ts
+
+.
+
+ID
+
+His_PersVerstrbeperkingID * i
+
+.
+
+PersVerstrbeperking >
+
+PersVerstrbeperking
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+ActieInh >
+
+Actie
+
+TsVerval
+
+His_BijhouderFiatuitz
+
+SG
+
+ID
+
+His_PartijVrijBerID * i
+
+Partij >
+
+Partij
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsVerval
+
+Ts
+
+.
+
+Attenderingscriterium Attenderingscriterium
+
+OndertekenaarVrijBer > Partij
+
+.
+
+His_DienstSel
+
+Partij
+
+.
+
+ID
+
+His_DienstSelID
+
+TransporteurVrijBer >
+
+*
+
+Dienst >
+
+Dienst
+
+* u1
+
+DatEindeVrijBer
+
+Dat
+
+.
+
+TsReg
+
+Ts
+
+* u1
+
+Uri
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+IndBlokVrijBer
+
+Ja
+
+.
+
+SrtSel >
+
+SrtSel
+
+*
+
+EersteSeldat
+
+Dat
+
+.
+
+Selinterval
+
+Selinterval
+
+.
+
+EenheidSelinterval >
+
+EenheidSelinterval
+
+.
+
+Selcriterium
+
+Populatiebeperking
+
+.
+
+SG
+
+His_ToegangLevsautorisatieID
+
+ToegangLevsautorisatie > ToegangLevsautorisatie
+
+*i
+
+*i
+
+BijhouderFiatuitz >
+
+BijhouderFiatuitz
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsVerval
+
+Ts
+
+.
+
+DatIngang
+
+Dat
+
+*
+
+*
+
+DatEinde
+
+Dat
+
+Ts
+
+.
+
+BijhouderBijhvoorstel > PartijRol
+
+ActieVerval >
+
+Actie
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+Dyn
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+AfleverpuntVrijBer
+
+His_ToegangLevsautorisatie
+
+His_BijhouderFiatuitzID
+
+*i
+
+Dat
+
+SG
+
+ID
+
+SG
+
+DatIngangVrijBer
+
+ID
+
+17-7-2017
+
+*
+
+Dat
+
+DatOvergangNaarBRP
+
+OGM H05 Partij Authenticatie Autorisatie
+
+SG
+
+ID
+
+.
+.
+
+SrtDoc >
+
+SrtDoc
+
+.
+
+SrtAdmHnd >
+
+SrtAdmHnd
+
+.
+
+IndBlok
+
+Ja
+
+.
+
+.
+
+His_PartijBijhouding
+
+SG
+
+ID
+
+His_PartijBijhoudingID * i
+
+Partij >
+
+Partij
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsVerval
+
+Ts
+
+.
+
+His_ToegangBijhautorisatie
+
+SG
+
+* u1
+
+SelPeilmomMaterieelResultaat Dat
+
+.
+
+TsReg
+
+Ts
+
+* u1
+
+SelPeilmomFormeelResultaat Ts
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+HistorievormSel >
+
+Historievorm
+
+*
+
+ToegangBijhautorisatie > ToegangBijhautorisatie
+
+DatIngang
+
+Dat
+
+*
+
+IndSelresultaatControleren
+
+JaNee
+
+*
+
+TsReg
+
+Ts
+
+* u1
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+.
+
+DatIngang
+
+Dat
+
+*
+
+.
+
+DatEinde
+
+Dat
+
+.
+
+Afleverpunt
+
+Uri
+
+.
+
+IndBlok
+
+Ja
+
+.
+
+DatEinde
+
+Dat
+
+NaderePopulatiebeperking Populatiebeperking
+
+.
+
+MaxAantalPersPerSelbestand AantalResultaten
+
+.
+
+MaxGrootteSelbestand
+
+AantalKilobytes
+
+Afleverpunt
+
+Uri
+
+.
+
+IndVerzVolBerBijWijzAfniNaSe JaNee
+
+IndBlok
+
+Ja
+
+.
+
+LeverwijzeSel >
+
+LeverwijzeSel
+
+IndAutoFiat JaNee
+
+His_PartijRol
+
+.
+
+ID
+
+SG
+
+His_PartijRolID * i
+
+PartijRol > PartijRol
+
+His_Levsautorisatie
+
+*
+
+His_ToegangBijhautorisatieID
+
+ID
+
+Ts
+
+* u1
+
+TsVerval
+
+Ts
+
+.
+
+SG
+His_LevsautorisatieID
+
+Levsautorisatie >
+
+Levsautorisatie
+
+TsReg
+
+Ts
+
+* u1
+
+ID
+
+His_DienstZoekenID * i
+
+ID
+
+TsVerval
+
+Ts
+
+.
+
+Dienst >
+
+Dienst
+
+* u1
+
+Bijhautorisatie > Bijhautorisatie
+
+Naam
+
+NaamEnumeratiewaarde
+
+*
+
+TsReg
+
+Ts
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+Protocolleringsniveau >
+
+Protocolleringsniveau
+
+*
+
+TsVerval
+
+Ts
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+*
+
+MaxAantalZoekresultaten AantalResultaten
+
+*
+
+Naam
+
+NaamEnumeratiewaarde
+
+*
+
+DatIngang
+
+Dat
+
+*
+
+DatEinde
+
+Dat
+
+.
+
+IndBlok
+
+Ja
+
+.
+
+IndAliasSrtAdmHndLeveren JaNee
+
+*i
+* u1
+
+DatIngang
+
+Dat
+
+DatEinde
+
+Dat
+
+.
+
+Populatiebeperking
+
+Populatiebeperking
+
+.
+
+IndBlok
+
+* u1
+
+* u1
+
+TsReg
+ID
+
+Toelichting
+
+*i
+
+His_DienstZoeken
+
+SG
+
+*
+
+OnbeperkteOms
+Ja
+
+His_PersAfnemerindicatie
+
+.
+.
+
+His_Dienstbundel
+
+SG
+
+ID
+
+His_DienstbundelID
+
+*i
+
+Dienstbundel >
+
+Dienstbundel
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsVerval
+
+Ts
+
+.
+
+Naam
+
+NaamEnumeratiewaarde
+
+*
+
+DatIngang
+
+Dat
+
+*
+
+DatEinde
+
+Dat
+
+.
+
+NaderePopulatiebeperking
+
+Populatiebeperking
+
+.
+
+IndNaderePopbeperkingVolConv Nee
+
+.
+
+Toelichting
+
+OnbeperkteOms
+
+.
+
+IndBlok
+
+Ja
+
+.
+
+Dyn
+
+ID
+
+His_PersAfnemerindicatieID * i
+
+PersAfnemerindicatie >
+
+PersAfnemerindicatie
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsVerval
+
+Ts
+
+.
+
+DienstInh >
+
+Dienst
+
+.
+
+DienstVerval >
+
+Dienst
+
+*
+
+DatEinde Dat
+
+.
+
+His_Bijhautorisatie
+
+SG
+
+His_BijhautorisatieID
+
+*i
+* u1
+
+His_BijhautorisatieSrtAdmHnd
+ID
+
+His_BijhautorisatieSrtAdmHnd
+
+SG
+*i
+
+.
+
+BijhautorisatieSrtAdmHnd > BijhautorisatieSrtAdmHnd
+
+DatAanvMaterielePeriode Dat
+
+.
+
+Dat
+
+.
+
+DatEindeVolgen
+
+DatIngang Dat
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+TsVerval
+
+Ts
+
+.
+
+

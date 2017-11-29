@@ -1,0 +1,185 @@
+Persoon
+
+LGM 04 Onderzoek, Verificatie
+
+Dyn
+
+Release 59
+
+......
+
+Partij
+
+SG
+
+......
+
+Persoon \ Verificatie
+Onderzoek
+
+Dyn
+
+Identiteit
+
+-
+
+Identiteit
+
+-
+
+ID
+
+Dyn
+-
+
+D
+
+-
+
+Persoon \ Verificatie ID
+
+*i
+
+Persoon
+
+*
+
+ID
+
+D
+
+Onderzoek ID
+
+*i
+
+Persoon > D
+
+Persoon >
+
+D
+
+Persoon
+
+*
+
+Partij >
+
+SDX
+
+Partij
+
+*
+
+Partij >
+
+DX
+
+Partij
+
+*
+
+Soort
+
+SDX
+
+Naam enumeratiewaarde
+
+*
+
+F
+
+Standaard
+SDX
+
+Datum evt. (deels) onbekend
+
+Standaard
+
+A
+
+Datum aanvang SDX Datum evt. (deels) onbekend *
+Datum einde
+
+SDX
+
+Datum evt. (deels) onbekend
+
+.
+
+Omschrijving
+
+SDX
+
+Onderzoek omschrijving
+
+.
+
+Status onderzoek
+
+*
+
+DX
+
+Status >
+
+Datum
+
+Gegeven in onderzoek
+
+Dyn
+
+Identiteit
+
+A
+
+F1
+
+ID
+
+D
+
+Gegeven in onderzoek ID
+
+*i
+
+Onderzoek >
+
+D
+
+Onderzoek
+
+*
+
+Element >
+
+DX
+
+Element
+
+*
+
+Object sleutel gegeven
+
+DX
+
+Sleutelwaarde
+
+.
+
+Voorkomen sleutel gegeven DX Sleutelwaarde
+
+.
+
+Element
+......
+
+Rel
+
+A
+
+F
+*
+
+17-7-2017
+
+

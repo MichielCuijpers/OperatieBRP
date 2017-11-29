@@ -1,0 +1,919 @@
+Partij
+Identiteit
+
+-
+
+Identiteit
+
+-
+
+Partij ID
+
+*i
+
+DX
+
+Partij code
+
+*l
+
+Naam
+
+DX
+
+Naam enumeratiewaarde
+
+*
+
+Datum ingang
+
+DX
+
+Datum
+
+*
+
+SG
+
+Datum einde
+
+DX
+
+Datum
+
+.
+
+-
+
+OIN
+
+D
+
+OIN
+
+. s1
+
+D
+
+Soort partij
+
+.
+
+Partij \ Rol ID
+
+*i
+
+Partij >
+
+D
+
+Partij
+
+*l
+
+Verstrekkingsbeperking mogelijk? DX Ja/Nee
+
+Rol >
+
+D
+
+Rol
+
+*l
+
+Datum overgang naar BRP
+
+F
+
+Bijhouding
+
+*
+
+Automatisch fiatteren?
+
+Datum einde
+
+DX
+
+Datum
+
+-
+
+-
+
+ID
+
+D
+
+Toegang leveringsautorisatie ID * i
+
+Geautoriseerde >
+
+D
+
+Partij \ Rol
+
+* u1
+
+Leveringsautorisatie >
+
+D
+
+Leveringsautorisatie
+
+* u1
+
+Ondertekenaar >
+
+D
+
+Partij
+
+. u1
+
+Transporteur >
+
+D
+
+Partij
+
+. u1
+
+Standaard
+
+G
+DX
+DX
+
+Datum einde
+
+Datum
+
+Nadere populatiebeperking DX Populatiebeperking
+
+D
+
+Ja/Nee
+
+Persoon
+
+A
+D
+
+ID
+
+D
+
+Persoon
+
+* u1
+
+SDX
+
+Partij
+
+. u1
+
+Omschrijving derde
+
+SDX
+
+Omschrijving enumeratiewaarde
+
+Gemeente verordening > SDX Partij
+
+*
+G
+
+Ondertekenaar vrij bericht >
+
+D
+
+Partij
+
+.
+
+Transporteur vrij bericht >
+
+D
+
+Partij
+
+.
+
+Datum ingang vrij bericht
+
+DX
+
+Datum
+
+*
+
+Datum einde vrij bericht
+
+DX
+
+Datum
+
+.
+
+Afleverpunt vrij bericht
+
+D
+
+Uri
+
+.
+
+Geblokkeerd vrij bericht?
+
+D
+
+Ja
+
+.
+
+Identiteit
+
+D
+
+ID
+
+Leveringsautorisatie ID
+
+Persoon \ Afnemerindicatie ID
+
+*i
+
+Identiteit
+
+D
+
+Persoon
+
+* u1
+
+ID
+
+D
+
+Dienst ID
+
+*il
+
+-
+
+Partij >
+
+DX
+
+Partij
+
+* u1
+
+Dienstbundel >
+
+D
+
+Dienstbundel
+
+*
+
+Leveringsautorisatie >
+
+DX
+
+Leveringsautorisatie
+
+* u1
+
+Soort >
+
+D
+
+Soort dienst
+
+*
+
+Effect afnemerindicaties >
+
+D
+
+Effect afnemerindicaties
+
+.
+
+*il
+
+Modelautorisatie?
+
+D
+
+Ja/Nee
+
+*
+
+Datum aanvang materiële periode DX Datum
+
+Standaard
+
+DX
+
+Protocolleringsniveau >
+
+Naam enumeratiewaarde
+Protocolleringsniveau
+
+Alias soort administratieve handeling leveren? DX Ja/Nee
+
+D
+
+Datum ingang
+
+DX
+
+Datum
+
+*
+
+* u1
+
+Datum einde
+
+DX
+
+Datum
+
+.
+
+*
+
+Geblokkeerd?
+
+DX
+
+Ja
+
+.
+
+DX
+
+Attenderingscriterium
+
+DX
+
+Aantal resultaten
+
+F
+
+Datum
+
+*
+
+Attendering
+
+Datum ingang
+
+DX
+
+Datum
+
+*
+
+Attenderingscriterium
+
+Datum einde
+
+DX
+
+Datum
+
+.
+
+Populatiebeperking
+
+DX
+
+Populatiebeperking
+
+.
+
+Dienstbundel
+
+SG
+
+F
+*
+
+Onbeperkte omschrijving
+
+.
+
+Identiteit
+
+Ja
+
+.
+
+ID
+
+D
+
+Dienstbundel ID
+
+*i
+
+Selectie
+
+Leveringsautorisatie >
+
+D
+
+Leveringsautorisatie
+
+*
+
+Soort selectie >
+
+DX
+
+Soort selectie
+
+*
+
+Eerste selectiedatum
+
+DX
+
+Datum
+
+.
+
+Selectieinterval
+
+DX
+
+Selectieinterval
+
+.
+
+Eenheid selectieinterval >
+
+DX
+
+Eenheid selectieinterval
+
+.
+
+Selectiecriterium
+
+DX
+
+Populatiebeperking
+
+.
+
+Selectie peilmoment materieel resultaat
+
+DX
+
+Datum
+
+.
+
+Selectie peilmoment formeel resultaat
+
+DX
+
+Datum/Tijd
+
+.
+
+Historievorm selectie >
+
+DX
+
+Historievorm
+
+*
+
+Selectieresultaat controleren?
+
+DX
+
+Ja/Nee
+
+*
+
+Maximaal aantal personen per selectiebestand
+
+DX
+
+Aantal resultaten
+
+.
+
+Maximale grootte selectiebestand
+
+DX
+
+Aantal kilobytes
+
+.
+
+SG
+-
+
+-
+
+ID
+
+D
+
+Dienstbundel \ Groep ID
+
+*i
+
+Dienstbundel >
+
+D
+
+Dienstbundel
+
+*l
+
+Formele historie?
+
+-
+
+G
+DX
+
+D
+
+Element
+
+*l
+-
+
+DX
+
+Ja/Nee
+
+Datum
+
+*
+
+Datum einde
+
+Datum
+
+.
+
+DX
+
+Verantwoording?
+
+DX
+
+Nadere populatiebeperking volledig geconverteerd? DX Nee
+Onbeperkte omschrijving
+
+.
+
+Geblokkeerd?
+
+DX
+
+Ja
+
+.
+
+Verzend volledig bericht bij wijziging afnemerindicatie na selectie? DX Ja/Nee
+Leverwijze selectie >
+
+Dienstbundel \ LO3 Rubriek
+
+SG
+
+-
+
+Identiteit
+
+Dienstbundel \ Groep \ Attribuut ID * i
+
+ID
+
+D
+
+Dienstbundel > D
+Rubriek >
+
+Element
+......
+
+Rel
+
+.
+
+DX
+
+-
+
+*
+
+.
+
+Toelichting
+
+*
+
+Ja/Nee
+
+Populatiebeperking
+
+D
+
+-
+
+Dienstbundel \ LO3 Rubriek ID
+
+*i
+
+Dienstbundel
+
+*l
+
+Conversie LO3 Rubriek
+
+*l
+
+F
+
+*
+
+DX
+
+Nadere populatiebeperking
+
+G
+
+F
+
+DX
+
+*
+
+Materiële historie? DX Ja/Nee
+
+Naam enumeratiewaarde
+
+-
+
+Datum ingang
+
+SG
+
+* u1
+
+G
+
+DX
+
+Standaard
+
+* u1
+
+F
+.
+
+DX
+
+Groep >
+
+Element
+
+G
+
+Zoeken
+Maximaal aantal zoekresultaten
+
+F
+
+Geblokkeerd?
+
+Identiteit
+
+Dienstbundel \ Groep
+
+G
+
+Toelichting
+
+Dienstbundel \ Groep
+
+D
+
+F
+
+Standaard
+
+DX
+
+Naam
+
+Attribuut >
+
+-
+
+.
+
+Datum einde volgen
+
+Standaard
+
+Dienstbundel \ Groep > D
+
+-
+
+.
+
+G
+DX
+
+SG
+
+D
+
+.
+
+.
+
+Dienst
+
+-
+
+Persoon >
+
+Standaard
+
+Ja
+
+*i
+
+ID
+
+*
+
+DX
+
+Soort dienst ID
+
+SG
+
+Stelsel
+
+Geblokkeerd?
+
+D
+
+Dyn
+
+D
+
+.
+
+-
+
+Rel
+
+Naam DX Naam enumeratiewaarde * l
+
+Stelsel >
+
+Uri
+
+D
+
+Soort dienst
+
+ID
+
+Leveringsautorisatie
+
+Naam
+
+ID
+
+. u1
+. u1
+
+F
+
+.
+
+DX
+
+Identiteit
+
+F
+*i
+
+Partij >
+
+Persoon >
+
+F
+
+Persoon \ Verstrekkingsbeperking ID
+
+Identiteit
+
+F
+
+Afleverpunt
+
+Dienstbundel \ Groep \ Attribuut
+
+Dyn
+
+Identiteit
+
+.
+G
+
+Dyn
+
+......
+Persoon \ Verstrekkingsbeperking
+
+Persoon \ Afnemerindicatie
+
+*
+
+Datum
+
+Datum
+
+F
+
+*
+
+Vrij bericht
+
+SG
+
+Identiteit
+
+D
+
+17-7-2017
+
+Identiteit
+
+.
+
+Toegang leveringsautorisatie
+
+Datum ingang
+
+G
+
+D
+
+Datum ingang DX Datum
+
+Release 59
+
+D
+
+ID
+
+G
+
+-
+
+Code
+
+Soort >
+
+Standaard
+
+LGM 05 Partij, Authenticatie, Autorisatie
+
+ID
+
+Standaard
+
+Partij \ Rol
+
+SG
+
+DX
+
+Leverwijze selectie
+
+.
+.
+
+

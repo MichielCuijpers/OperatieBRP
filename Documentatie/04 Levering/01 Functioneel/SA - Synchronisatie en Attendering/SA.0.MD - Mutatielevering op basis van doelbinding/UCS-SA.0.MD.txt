@@ -1,0 +1,539 @@
+UCS SA.0.MD – Mutatielevering op basis van
+doelbinding
+Versie
+
+1.0
+
+Datum
+
+11 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+03-03-2017
+
+0.1
+
+Eerste opzet ‘nieuwe stijl’
+
+oBRP
+
+10-03-2017
+
+0.2
+
+Review verwerkt
+
+oBRP
+
+01-06-2017
+
+0.3
+
+Ontwerpbeslissing verstrekkingsbeperking toegevoegd
+
+oBRP
+
+11-07-2017
+
+1.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS SA.0.MD – Mutatielevering op basis van doelbinding
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Invoer ....................................................................................................................... 4
+2.1
+2.2
+2.3
+2.4
+
+3
+
+Beschrijving .........................................................................................................................5
+Schematische weergave.........................................................................................................5
+Beschrijving activiteitendiagram .............................................................................................7
+Bedrijfsregels .......................................................................................................................9
+
+Uitvoer .................................................................................................................... 10
+4.1
+4.2
+4.3
+
+5
+
+Beschrijving .........................................................................................................................4
+Verzoekbericht .....................................................................................................................4
+Specifieke toelichting op het verzoekbericht .............................................................................4
+Bijzonderheden.....................................................................................................................4
+
+Verwerking ............................................................................................................... 5
+3.1
+3.2
+3.3
+3.4
+
+4
+
+Doel ....................................................................................................................................3
+Functionele context ...............................................................................................................3
+Referenties ..........................................................................................................................3
+
+Beschrijving ....................................................................................................................... 10
+Mutatiebericht .................................................................................................................... 10
+Volledig bericht ................................................................................................................... 10
+
+Ontwerpbeslissingen .............................................................................................. 11
+
+Status: Definitief, versie: 1.0
+
+Pagina 2 van 11
+
+UCS SA.0.MD – Mutatielevering op basis van doelbinding
+
+1 Inleiding
+1.1
+
+Doel
+
+Deze dienst levert een mutatiebericht of volledig bericht aan de afnemer als er een bijhouding
+heeft plaatsgevonden bij een persoon die op basis van de set met voorwaarden (beschreven door
+de 'Totale populatiebeperking') tot de doelgroep van een leveringsautorisatie behoort of behoorde.
+Indien door de bijhouding de persoon niet meer tot de doelgroep van de leveringsautorisatie
+behoort, dan wordt daarover een waarschuwing in het mutatiebericht opgenomen zodat de
+afnemer weet dat de mutatielevering voor deze persoonslijst is gestopt.
+Wanneer de centrale voorzieningen niet in staat zijn (of het kost buitenproportioneel veel
+inspanning) om een correct mutatiebericht aan te maken, wordt een volledig bericht geleverd.
+
+1.2
+
+Functionele context
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitdiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving Generieke Berichtstructuur
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 1.0
+
+Pagina 3 van 11
+
+UCS SA.0.MD – Mutatielevering op basis van doelbinding
+
+2 Invoer
+2.1
+
+Beschrijving
+
+De dienst mutatielevering op basis van doelbinding kent geen verzoekbericht, maar wordt
+automatisch door de centrale voorzieningen geïnitieerd als er een bijhouding heeft plaatsgevonden
+op persoonsgegevens.
+
+2.2
+
+Verzoekbericht
+
+Niet van toepassing.
+
+2.3
+
+Specifieke toelichting op het verzoekbericht
+
+Niet van toepassing.
+
+2.4
+
+Bijzonderheden
+
+Niet van toepassing.
+
+Status: Definitief, versie: 1.0
+
+Pagina 4 van 11
+
+UCS SA.0.MD – Mutatielevering op basis van doelbinding
+
+3 Verwerking
+3.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft de verwerking van een administratieve handeling door de centrale
+voorzieningen voor de dienst mutatielevering op basis van doelbinding.
+
+3.2
+
+Schematische weergave
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitendiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+Activiteitendiagram met de verwerking van de dienst mutatielevering op basis van doelbinding. In
+het diagram is alleen de happy flow weergegeven.
+
+Status: Definitief, versie: 1.0
+
+Pagina 5 van 11
+
+UCS SA.0.MD – Mutatielevering op basis van doelbinding
+
+Status: Definitief, versie: 1.0
+
+Pagina 6 van 11
+
+UCS SA.0.MD – Mutatielevering op basis van doelbinding
+
+3.3
+
+Beschrijving activiteitendiagram
+
+De verwerking van de administratieve handeling bestaat uit een aantal volgordelijke stappen die
+uitgevoerd worden. In de onderstaande toelichtende tekst zijn de stappen onderverdeeld in
+‘Verwerking’ en ‘Uitvoer’. Elke toegelichte stap is terug te vinden in het activiteitendiagram in de
+vorige paragraaf.
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de aan de Use Case gekoppelde regels in BMR.
+
+Verwerking
+
+•
+
+SA.1.ASA – Autorisatie synchronisatie en attendering
+Voor de te leveren administratieve handeling moet bepaald worden welke
+leveringsautorisaties en toegang leveringsautorisaties met afleverpunt voor de dienst
+mutatielevering op basis van afnemerindicatie bestaan waarbinnen de persoonslijst
+potentieel geleverd zou moeten worden. ’Potentieel’ omdat het mogelijk is dat door de
+aanwezigheid van autorisatieprofielen er uiteindelijk toch geen bericht moet worden
+aangemaakt.
+Deze stap is persoonsonafhankelijk en kan in principe eenmalig worden afgeleid (en die
+afleiding blijft geldig totdat een beheerhandeling op de autorisatie plaatsvindt of tot een
+nieuwe systeemdatum wordt bereikt waardoor de geldigheid van de autorisatieprofielen
+kan wijzigen).
+
+•
+
+SA.1.CH – Controleer handeling op nu te leveren
+Gecontroleerd wordt of de administratieve handeling de juiste status heeft zodat wordt
+voorkomen dat een parallel proces dezelfde handeling opnieuw probeert op te pakken.
+Tevens moet de administratieve handeling in dezelfde volgorde worden geleverd als waarin
+ze bijgehouden is. Dit betekent dat er geen enkel bijgehouden persoon mag zijn waarvoor
+nog eerdere bijhoudingen zijn die niet geleverd zijn.
+Indien aan beide voorwaarden voldaan wordt, wordt de status levering gemuteerd naar “In
+levering”.
+
+•
+
+SA.1.BPB – Bepaal persoonsbeeld voor expressie-evaluatie
+Om te bepalen of er geleverd moet gaan worden is het van belang om van elke potentieel
+te leveren persoon te bepalen hoe de persoonslijst er voor en na de betreffende handeling
+uit zag. Dit gebeurt in essentie door alle voorkomens die door latere handelingen zijn
+opgevoerd buiten beschouwing te laten en alle voorkomens die in latere handelingen zijn
+vervallen juist nog wel mee te nemen. Deze stap resulteert in, voor elke potentieel te
+leveren persoon, een persoonsbeeld vóór het doorvoeren van de handeling (die eventueel
+bij eerste inschrijving helemaal kan ontbreken) en een persoonsbeeld ná het doorvoeren
+van de handeling.
+
+•
+
+SA.1.MD.BL – Bepaal mutatielevering op basis van doelbinding
+Aan de hand van de in de vorige stap bepaalde persoonsbeelden voor/na handeling, moet
+nu voor elke combinatie van persoon en toegang leveringsautorisatie bepaald worden of er
+een volledig bericht of mutatiebericht aangemaakt moet worden en welke personen in dat
+bericht opgenomen moeten worden. Om het soort bericht te bepalen wordt gekeken naar
+het resultaat van de expressie van de totale populatiebeperking op het persoonsbeeld voor
+en na de handeling, zie onderstaand overzicht;
+
+Status: Definitief, versie: 1.0
+
+Pagina 7 van 11
+
+UCS SA.0.MD – Mutatielevering op basis van doelbinding
+
+Conditie 1
+
+Conditie 2
+
+Soort bericht
+
+1A. Persoon is nieuw in doelbinding; alleen
+persoonsbeeld na de handeling voldoet aan
+de totale populatiebeperking
+
+-
+
+Volledig bericht
+
+1B. Persoon is gewijzigd in doelbinding;
+persoonsbeeld voor en na de handeling
+voldoen aan de populatiebeperking
+
+2A. Geen handeling
+met soort ‘GBA –
+overig’
+
+Mutatiebericht
+
+1B. Persoon is gewijzigd in doelbinding;
+persoonsbeeld voor en na de handeling
+voldoen aan de populatiebeperking
+
+2B. Handeling met
+soort ‘GBA – overig’
+
+Volledig bericht
+
+1C. Persoon uit doelbinding; alleen
+persoonsbeeld voor de handeling voldoet aan
+de totale populatiebeperking
+
+2A. Geen handeling
+met soort ‘GBA –
+overig’
+
+Mutatiebericht
+(eventueel door
+SA.1.EMB
+aangevuld met
+een melding)
+
+1C. Persoon uit doelbinding; alleen
+persoonsbeeld voor de handeling voldoet aan
+de totale populatiebeperking
+
+2B. Handeling met
+soort ‘GBA – overig’
+
+Volledig bericht
+(eventueel door
+SA.1.EMB
+aangevuld met
+een melding)
+
+Als de expressie voor de totale populatiebeperking niet geëvalueerd kan worden, wordt dit
+gelogd.
+
+Uitvoer
+
+•
+
+LV.1.SPL - Samenstellen Persoonslijst
+Voor het in SA.1.MD.BL bepaald soort bericht worden hier de ongefilterde persoonslijsten
+opgesteld voor de in het bericht te leveren personen. Per bericht meestal één persoon,
+maar het kunnen er ook meer dan één zijn. In deze stap wordt ook gefilterd op de grens
+van deze persoonslijst.
+
+•
+
+LV.1.AFB – Autorisatiefilter bericht
+De in de vorige stap samengestelde persoonslijst wordt gefilterd op autorisatie op historie,
+verantwoording, onderzoek, inhoudelijke groepen en attributen.
+
+•
+
+SA.1.MMB – Maak mutatiebericht
+Deze stap is van toepassing indien een mutatiebericht geleverd moet worden. Voor een
+mutatiebericht wordt per object en per groep de verwerkingssoort bepaald. Met de
+verwerkingssoort wordt de afnemer geïnformeerd wat er in de BRP is gemuteerd door de
+onderhanden handeling. Tevens wordt het handelingenfilter toegepast zodat alleen de door
+handeling geraakte groepen geleverd worden
+
+•
+
+LV.1.VPB - Verwerk persoon bericht
+Er wordt vervolgens een volledig bericht of mutatiebericht gemaakt. In deze stap worden
+ook de stuurgegevens van het asynchrone bericht gevuld, de volgorde van de
+hoofdpersonen in het bericht bepaald en het aantal hoofdpersonen gelogd.
+
+Status: Definitief, versie: 1.0
+
+Pagina 8 van 11
+
+UCS SA.0.MD – Mutatielevering op basis van doelbinding
+
+•
+
+LV.1.BO – Bericht opschonen
+Na het filteren in de voorgaande stappen kunnen er lege groepen of niet relevante
+verwijzingen in het bericht ontstaan. In deze stap wordt ook de sortering van groepen en
+objecten bepaald.
+
+•
+
+SA.1.EMB – Eindcontrole mutatiebericht
+In deze stap wordt het mutatiebericht consistent gemaakt door elementen die niet (meer)
+relevant zijn, door vorige filterstappen, te verwijderen. Als hierdoor geen personen meer
+resteren voor opname in een mutatiebericht, dan wordt er geen mutatiebericht
+aangemaakt en geleverd.
+Indien een persoon na de bijhouding niet meer tot de doelgroep van de leveringsautorisatie
+behoort, dan wordt daarover een waarschuwing in het mutatiebericht opgenomen zodat de
+afnemer weet dat de mutatielevering voor deze persoonslijst is gestopt.
+
+•
+
+SA.1.MAG – Markeer als geleverd
+Wanneer alle berichten zijn aangemaakt (ofwel de uiteindelijke verzending en
+protocollering zijn gegarandeerd) dan krijgt de betreffende administratieve handeling de
+status “Geleverd”.
+
+•
+
+LV.1.PB - Protocolleer bericht
+Voor elk te verzenden bericht moet de protocollering (aantekening van verstrekken)
+worden vastgelegd. Het (uiteindelijk) vastleggen van de protocollering dient gegarandeerd
+te zijn voordat het bericht mag worden verzonden. Er mag echter niet geprotocolleerd
+worden wanneer de toegang leveringsautorisatie een bijhouder betreft of wanneer de
+betreffende Leveringsautorisatie protocolleringsniveau “geheim” heeft.
+
+•
+
+LV.1.VE – Verzend bericht
+Deze stap verzorgt de uiteindelijke verzending van het aangemaakte bericht naar het
+afleverpunt dat is aangegeven in de toegang leveringsautorisatie. Indien het niet mogelijk
+is om een bericht te protocolleren dan mag het bericht niet verzonden worden.
+
+•
+
+LV.1.AB - Archiveer bericht
+Deze stap verzorgt de archivering van het verzonden bericht (ten behoeve van de
+beheerorganisatie).
+
+3.4
+
+Bedrijfsregels
+
+Voor een toelichting op de verschillende soorten bedrijfsregels, de meldingsniveaus, de toepassing
+en werking ervan in het bijhoudingsproces, wordt verwezen naar de daartoe opgestelde
+Aspectbeschrijving Controles [3].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels en definitieregels zijn opgenomen de bijlage: SA.0.MA – Bijlage Mutatielevering op
+basis van doelbinding.doc
+
+Status: Definitief, versie: 1.0
+
+Pagina 9 van 11
+
+UCS SA.0.MD – Mutatielevering op basis van doelbinding
+
+4 Uitvoer
+4.1
+
+Beschrijving
+
+De centrale voorzieningen leveren na het verwerken van een administratieve handeling asynchroon
+een mutatiebericht of volledig bericht voor één of meerdere persoon aan één of meerdere
+afnemers.
+
+4.2
+
+Mutatiebericht
+
+Voor de volledige beschrijving en inhoud van het mutatiebericht wordt verwezen naar
+Aspectbeschrijving Generieke Berichtstructuur [2] en de bijlage: SA.0.MA – Bijlage Mutatielevering
+op basis van doelbinding.doc.
+
+4.3
+
+Volledig bericht
+
+Voor de volledige beschrijving en inhoud van het volledig bericht wordt verwezen naar
+Aspectbeschrijving Generieke Berichtstructuur [2] en de bijlage: SA.0.MA – Bijlage Mutatielevering
+op basis van doelbinding.doc.
+
+Status: Definitief, versie: 1.0
+
+Pagina 10 van 11
+
+UCS SA.0.MD – Mutatielevering op basis van doelbinding
+
+5 Ontwerpbeslissingen
+•
+
+De centrale voorzieningen ondersteunt niet dat voor die afnemers waar een
+verstrekkingsbeperking over kan worden ingesteld dat deze afnemers de dienst
+mutatielevering op basis van doelbinding kan gebruiken. Een burger kan bijvoorbeeld laten
+instellen dat zijn of haar gegevens niet aan de SILA (Stichting Interkerkelijke
+Ledenadministratie) verstrekt mogen worden. De SILA kan de dienst mutatielevering op
+doelbinding dus niet afnemen. De redenen voor deze ontwerpbeslissing zijn:
+o dat de correcte afhandeling van de dienst mutatielevering op basis van doelbinding
+in combinatie met een afnemer waar de burger een verstrekkingsbeperking voor in
+kan laten stellen complex is;
+o het ondersteunen van de combinatie geen ‘must have’ is, want het LO3 koppelvlak
+biedt de mogelijkheid ook niet (de dienst mutatielevering op basis van doelbinding
+is nieuw);
+o het niet voor de hand ligt dat een dergelijke afnemer die dienst zou willen
+gebruiken.
+
+Status: Definitief, versie: 1.0
+
+Pagina 11 van 11
+
+

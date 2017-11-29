@@ -1,0 +1,574 @@
+Bijlage B Berichtafhandeling
+
+B.1
+
+Inleiding
+De berichtafhandeling is de werkwijze waarop de berichten die door de centrale
+voorziening worden ontvangen, worden verwerkt. Beide koppelvlakken koppelvlak Bijhouding en koppelvlak Levering kennen een eigen
+berichtafhandeling. Zie hiervoor paragraaf B.3 respectievelijk paragraaf B.4
+
+B.2
+
+Toelichting op het gebruik van tabellen
+In de beschrijving van de berichtafhandeling, maar ook in bijlagen C en D zijn
+de van toepassing zijnde controleregels in een vast formaat weergegeven.
+Controleregels zijn weergegeven in een tabel, met een “Code”, een “Niveau” en
+een korte “Omschrijving”.
+Code Niveau Omschrijving
+R2413 F
+
+Ontleningstoelichting verplicht bij deblokkeren melding
+
+De codes zijn van het formaat “R1111” waarbij R een generieke aanduiding is
+voor een regel en “1111” het identificerend nummer is van de regel. Het Niveau
+geeft aan welk niveau de melding heeft [Fout, Deblokkeerbaar, Waarschuwing
+en Informatie; zie paragraaf 4.4.4 en 8.3.4.4]. In de omschrijving van een
+controleregel is de werking van de regel kort uitgedrukt. Elke controleregel is
+uitgewerkt in Bijlage F – Controleregels.
+
+1
+
+B.3
+
+Berichtafhandeling koppelvlak Bijhouding
+Onderstaande figuur geeft in een vereenvoudigde weergave de stappen weer die
+een bijhoudingsvoorstel moet doorlopen om te kunnen worden verwerkt.
+
+2
+
+De verwerking zal leiden tot een resultaatbericht, indien van toepassing
+bijhoudingsnotificatieberichten aan betrokken bijhouders en uiteindelijk de
+leveringsberichten (via stap 6 in bovenstaande figuur) ten behoeve van de
+afnemers via het koppelvlak Levering (zie paragraaf B.4)
+Per stap wordt een korte toelichting gegeven en is indien van toepassing een
+overzicht opgenomen van de in die stap betrokken controleregels.
+Naast de verwerking van een bijhoudingsvoorstel is de verwerking van een
+prevalidatieverzoek relevant. Een prevalidatieverzoek zal nooit leiden tot het
+verwerken van de bijhouding en het vervaardigen van bijhoudingsnotificatieberichten. Hoe het proces van prevalidatieverzoek ten opzichte van een
+bijhoudingsvoorstel werkt en wat de rol daarin is van de blokkerende en
+deblokkeerbare meldingen, wordt beschreven in paragraaf 4.4.5.
+Stap 1:
+
+XSD-validatie
+Op ieder inkomend bericht wordt een ‘XSD validatie’ uitgevoerd. Dit is een
+technische controle op de verwerkbaarheid van het inkomend bericht. Het
+inkomende bericht wordt tegen het bijbehorende XSD-schema gecontroleerd.
+Als het bericht niet technisch verwerkbaar is, volgt er een algemene foutmelding
+m.b.t. het berichtschema. Er wordt voor deze foutsituaties geen resultaatbericht
+vervaardigd.
+@@ TODO: verwerken specificaties XSD-validaties
+Input:
+Op ieder inkomend bericht worden ‘XSD validaties’ uitgevoerd, waarmee de
+technische verwerkbaarheid van het bericht wordt gecontroleerd. Als het bericht
+niet technisch verwerkbaar is, volgt er een algemene foutmelding m.b.t. het
+berichtschema. Er wordt voor deze foutsituaties geen resultaatbericht
+vervaardigd.
+XSD-validaties zijn van toepassing op diverse aspecten en eigenschappen van
+het bericht. Daarom komen XSD-validaties in verschillende onderdelen van het
+LO aan bod:
+1. Bijlage A.1:
+a. Toelichting op XSD-validaties op verplichte waarden van
+elementen in berichten
+b. Toelichting op XSD-validaties op voorgeschreven waarden van
+elementen in berichten
+c. XSD-validaties voor specifieke type elementen (zoals Datum,
+DatumTijd, Postcode)
+2. Bijlage C: XSD-validaties die alleen gelden voor specifieke
+bijhoudingsberichten
+3. Bijlage <…>: opsomming van XSD-validaties, hierboven genoemd bij 1c
+en 2.
+
+Stap 2:
+
+Archiveer bericht
+‘Archiveer bericht’ draagt zorg voor de archivering van het technisch
+verwerkbare inkomende bericht.
+Voor de verwerking wordt eerst vastgesteld welke berichtgegevens gearchiveerd
+moeten worden, vervolgens worden de berichten gearchiveerd en wordt voor de
+in de berichten betrokken personen een koppeling gelegd met de in de centrale
+voorzieningen gearchiveerde berichten.
+
+Stap 3:
+
+Autorisatie Administratieve handeling
+‘Autorisatie Adm. Handeling’ draagt zorg voor de generieke controle op
+autorisatie van de ingediende bijhouding.
+
+3
+
+Er bestaan verschillende generieke autorisatieregels, maar deze zullen bij
+overtreding altijd resulteren in één en dezelfde foutmelding in het op te leveren
+resultaatbericht. Het regelnummer van die melding is R2343. De daarbij
+behorende meldingstekst is: “Er is een autorisatiefout opgetreden.” Voor meer
+informatie zie bijlage F.1.
+Specifieke autorisatieregels:
+De specifieke autorisatieregels op administratieve handelingen zijn opgenomen
+in bijlage C.
+Stap 4:
+
+Controleer inhoud
+‘Controleer inhoud’ draagt zorg voor de inhoudelijke controle op de ingediende
+bijhoudingsberichten.
+Generieke controleregels:
+Code
+
+Niveau Omschrijving
+
+R1579
+
+D
+
+Van een overleden persoon mag uitsluitend een beperkte set van gegevens
+worden bijgehouden
+
+R1580
+
+F
+
+Een persoon mag niet worden bijgehouden als de nadere bijhoudingsaard
+'Fout' of "Gewist" is
+
+R1833
+
+F
+
+De 'Gemaskeerde objectsleutel' waarmee een persoon in het bericht wordt
+aangewezen moet geldig zijn
+
+R1835
+
+F
+
+Objectsleutel in bijhouding moet verwijzen naar bestaand object in BRP van
+juiste type
+
+R1838
+
+F
+
+In een bijhouding moet ReferentieID verwijzen naar CommunicatieID in
+berichtelement van het juiste type.
+
+R1839
+
+F
+
+Gedeblokkeerde meldingen moeten in verwerking daadwerkelijk optreden
+
+R1845
+
+F
+
+In het bijhoudingsbericht gerelateerde objectsleutels en voorkomensleutels
+moeten verwijzen naar gerelateerde objecten en voorkomens in de BRP
+
+R2098
+
+F
+
+Bijhouding geblokkeerd wegens verhuizing
+
+R2334
+
+F
+
+Alleen een niet-vervallen voorkomen kan vervallen
+
+R2348
+
+F
+
+Partij van de Administratieve handeling moet gelijk zijn aan de Zendende
+partij
+
+R2413
+
+F
+
+Een toelichting ontlening is verplicht bij het deblokkeren van een melding
+
+R2431
+
+D
+
+Rechtsgrond moet geldig zijn op systeemdatum
+
+R2432
+
+D
+
+Rechtsgrond verplicht bij nadere aanduiding verval 'S'
+
+R2448
+
+D
+
+Elke actie heeft minimaal één bron
+
+R2493
+
+D
+
+Melding indien er een feitdatum op de persoonslijst staat die recenter dan of
+gelijk is aan de Peildatum, DAG en DEG van de Administratieve handeling.
+
+R2511
+
+F
+
+Objectsleutel die verwijst naar relatie moet verwijzen naar relatie van juiste
+soort
+
+R2512
+
+F
+
+Objectsleutel die verwijst naar betrokkenheid moet verwijzen naar
+betrokkenheid met de juiste rol
+
+R2626
+
+W
+
+Waarschuwing bij bijhouding indien gegevens van een hoofdpersoon in
+onderzoek staan
+
+R2668
+
+F
+
+Bron moet een Document of een rechtsgrond bevatten
+
+Specifieke controleregels:
+De specifieke controles van toepassing op een administratieve handeling of actie
+zijn opgenomen in bijlage C.
+Gegevensregels:
+De regels die betrekking hebben op de gegevensset zijn opgenomen in bijlage A.
+
+4
+
+Stappen 3 en 4: een nadere toelichting
+Als een blokkerende fout op een bijhoudingsvoorstel of prevalidatieverzoek
+wordt aangetroffen, dan wordt de verdere verwerking gestaakt en worden de
+meldingen doorgegeven aan Stap 7 ‘Maak resultaatbericht’ en wordt vanaf daar
+verder gegaan met de vervolgstappen 9 en 10.
+Stap 5:
+
+Maak bijhoudingsplan
+‘Maak bijhoudingsplan’ vervaardigt een bijhoudingsplan waarin is opgenomen
+welke personen betrokken zijn bij de bijhouding. Per persoon kan worden
+afgeleid of de bijhouding voor die persoon verwerkt kan worden. Voor uitleg
+over de toepassing van het bijhoudingsplan, zie paragraaf 4.4.4.
+
+Stap 6:
+
+Verwerken administratieve handeling
+Deze stap wordt alleen uitgevoerd voor bijhoudingsvoorstellen en dus niet voor
+prevalidatieverzoeken. De stap kent tevens het optioneel verwerken van de
+systeemhandeling Ontrelateren, zoals vastgesteld in het bijhoudingsplan (zie
+stap 5). Zie voor meer informatie paragraaf 4.9.2.
+Het verwerken van een ontvangen bijhoudingsverzoek wordt beschreven in
+bijlage C – Administratieve handelingenboek. Hierin is per bijhoudingsverzoek
+het invoerbericht, de verwerking en het uitvoerbericht beschreven.
+Zodra alle leveringsberichten die uit een administratieve handeling voortvloeien
+zijn aangemaakt, wordt de administratieve handeling als ‘verwerkt’ gekenmerkt.
+
+Stap 7:
+
+Maak resultaatbericht
+Voor ieder in behandeling te nemen binnenkomend bericht wordt een
+resultaatbericht gemaakt. De inhoud van deze resultaatberichten is beschreven
+in bijlagen C en is daarbinnen per verzoek terug te vinden onder de kop
+“UITVOER”.
+
+Stap 8:
+
+Maak bijhoudingsnotificatiebericht
+Op basis van het bijhoudingsplan (stap 5), de daadwerkelijke verwerking van
+het bijhoudingsvoorstel worden (indien van toepassing)
+bijhoudingsnotificatieberichten aangemaakt ten behoeve van de overige bij het
+bijhoudingsvoorstel betrokken bijhoudingspartijen. Zie voor meer informatie
+paragraaf 4.4.
+
+Stap 8:
+
+Verzend bericht
+Het resultaatbericht - als antwoord van de centrale voorzieningen op het
+bijhoudingsbericht - wordt altijd direct naar de indiener gestuurd. De
+vervaardigde bijhoudingsnotificatieberichten worden aan de betrokken
+bijhoudingspartijen gezonden.
+Nadat de verzending van de berichten heeft plaatsgevonden kan archivering
+plaatsvinden.
+
+Stap 9:
+
+Archiveer bericht
+Ieder verzonden resultaatbericht en bijhoudingsnotificatiebericht wordt
+gearchiveerd.
+
+5
+
+B.4
+
+Berichtafhandeling koppelvlak Levering
+
+6
+
+Bovenstaande figuur geeft in een vereenvoudigde weergave de stappen weer die
+een afnemerverzoek (via stap 1 in bovenstaande figuur) moet doorlopen om te
+kunnen worden verwerkt. Deze verwerking zal dan leiden tot een
+resultaatbericht en indien van toepassing ook leveringsberichten.
+Naast een afnemerverzoek kan een bijhoudingsvoorstel ook leiden tot het
+verzenden van leveringsberichten aan afnemers (via stap 6 in bovenstaande
+figuur). De aanleiding hiervoor is het verwerken van een bijhoudingsvoorstel in
+stap 6 van de berichtafhandeling van het koppelvlak Bijhouding (zie paragraaf
+B.3).
+Per stap wordt een korte toelichting gegeven en is indien van toepassing een
+overzicht opgenomen van de in die stap betrokken controleregels.
+Stap 1:
+
+XSD-validatie
+Op ieder inkomend bericht wordt een ‘XSD validatie’ uitgevoerd. Dit is een
+technische controle op de verwerkbaarheid van het inkomend bericht. Het
+inkomende bericht wordt tegen het bijbehorende XSD-schema gecontroleerd.
+Als het bericht niet technisch verwerkbaar is, volgt er een algemene foutmelding
+m.b.t. het berichtschema. Er wordt voor deze foutsituaties geen resultaatbericht
+vervaardigd.
+@@ TODO: verwerken specificaties XSD-validaties
+Input:
+Op ieder inkomend bericht worden ‘XSD validaties’ uitgevoerd, waarmee de
+technische verwerkbaarheid van het bericht wordt gecontroleerd. Als het bericht
+niet technisch verwerkbaar is, volgt er een algemene foutmelding m.b.t. het
+berichtschema. Er wordt voor deze foutsituaties geen resultaatbericht
+vervaardigd.
+XSD-validaties zijn van toepassing op diverse aspecten en eigenschappen van
+het bericht. Daarom komen XSD-validaties in verschillende onderdelen van het
+LO aan bod:
+1. Bijlage A.1:
+a. Toelichting op XSD-validaties op verplichte waarden van
+elementen in berichten
+b. Toelichting op XSD-validaties op voorgeschreven waarden van
+elementen in berichten
+c. XSD-validaties voor specifieke type elementen (zoals Datum,
+DatumTijd, Postcode)
+2. Bijlage C: XSD-validaties die alleen gelden voor specifieke
+bijhoudingsberichten
+3. Bijlage <…>: opsomming van XSD-validaties, hierboven genoemd bij 1c
+en 2.
+
+Stap 2:
+
+Archiveer bericht
+‘Archiveer bericht’ draagt zorg voor de archivering van het technisch
+verwerkbare inkomende bericht.
+Voor de verwerking wordt eerst vastgesteld welke berichtgegevens gearchiveerd
+moeten worden, vervolgens worden de berichten gearchiveerd en wordt voor de
+in de berichten betrokken personen een koppeling gelegd met de in de centrale
+voorzieningen gearchiveerde berichten.
+
+Stap 3:
+
+Autorisatie levering
+‘Autorisatie levering’ draagt zorg voor de generieke controles op autorisatie van
+de ingediende leveringsverzoek.
+
+7
+
+Naast de controles op leveringsautorisaties voor afnemers kennen we ook de
+leveringsautorisatiecontroles voor bijhouders, die bijvoorbeeld
+bevragingsdiensten aanroepen. Voor een bijhouder gelden echter andere
+uitgangspunten bij de autorisatie. Voor bijhouders geldt dat ze – in tegenstelling
+tot afnemers – zijn geautoriseerd voor1:
+•
+alle autoriseerbare gegevens;
+•
+materiële en formele historie en verantwoordingsinformatie;
+•
+alle onderzoeksgegevens (inclusief onderzoek op ontbrekende gegevens);
+•
+alle gegevens van personen, zonder additionele filtering op aanvang relatie
+of opschorting.
+Er bestaan verschillende generieke autorisatieregels, maar deze zullen bij
+overtreding altijd resulteren in één en dezelfde foutmelding in het op te leveren
+resultaatbericht. Het regelnummer van die melding is R2343. De daarbij
+behorende meldingstekst is: “Er is een autorisatiefout opgetreden.” Voor meer
+informatie zie bijlage F.1.
+Specifieke autorisatieregels:
+De specifieke autorisatieregels op leveringsverzoeken zijn opgenomen in bijlage
+D.
+Stap 4:
+
+Controleer inhoud
+‘Controleer inhoud’ draagt zorg voor de inhoudelijke controle op de ingediende
+leveringsverzoeken.
+Generieke controleregels:
+Code
+
+Niveau Omschrijving
+
+R1339
+
+F
+
+Dienst alleen mogelijk indien geen verstrekkingsbeperking voor de
+verzoekende partij aanwezig is
+
+R1401
+
+F
+
+Afnemerindicatie bij opgegeven persoon moet bestaan
+
+R1403
+
+F
+
+Het leveringsverzoek moet minimaal één te leveren persoon bevatten
+
+R1833
+
+F
+
+De 'Gemaskeerde objectsleutel' waarmee een persoon in het bericht wordt
+aangewezen moet geldig zijn
+
+Specifieke controleregels:
+De specifieke controles van toepassing op een leveringsverzoek zijn opgenomen
+in bijlage D.
+Stappen 3 en 4: een nadere toelichting
+Als een blokkerende fout op een leveringsverzoek wordt aangetroffen, dan wordt
+de verdere verwerking gestaakt en worden de meldingen doorgegeven aan Stap
+8 ‘Maak resultaatbericht’ en wordt vanaf daar verder gegaan met de
+vervolgstappen 9, 10 en 11.
+Stap 5:
+
+Verwerk verzoek
+Het verwerken van een ontvangen leveringsverzoek wordt beschreven in bijlage
+D – Dienstenboek. Hierin is per leveringsverzoek het invoerbericht, de
+verwerking en het uitvoerbericht beschreven.
+
+Stap 6:
+
+Bepaal leveringen
+Na het verwerken van de administratieve handelingen (zie stap 6 van de
+berichtafhandeling bij het koppelvlak Bijhouding, paragraaf B.3), worden deze
+1
+
+Voor de IND en ABO’s zijn op dit moment nog geen aparte leveringsautorisaties ingericht voor hun rol als
+bijhouder. De centrale voorzieningen zijn echter wel voorbereid op het vastleggen van een beperktere
+leveringsautorisatie, die aansluit op de wettelijke taken van die partijen.
+
+8
+
+klaargezet voor verwerking door het koppelvlak Levering. Op basis van de
+verwerkingsresultaten wordt bepaald welke afnemers op welke wijze en over
+welke gegevens moeten worden geïnformeerd. Zie voor meer informatie
+hoofdstuk 5.
+In bepaal leveringen wordt een aantal verwerkingstappen gevolgd voordat wordt
+overgaan tot het vervaardigen van de te leveren berichten.
+Bepaal leveringen stelt vast of er een levering moet plaatsvinden en gaat daarbij
+na of voldaan wordt aan alle voorwaarden voor levering:
+•
+in geval van de dienst mutatielevering op basis van een afnemerindicatie
+moet er sprake zijn van een nog niet bereikte datum einde volgen voor een;
+•
+de te leveren personen moeten binnen de doelgroep van de
+leveringsautorisatie vallen;
+•
+de te leveren persoonsgegevens moeten betrekking hebben op een
+ingeschrevene;
+•
+de te leveren persoonsgegevens mogen niet als fout zijn aangemerkt;
+•
+er mag geen sprake zijn van een verstrekkingsbeperking;
+•
+er moet sprake zijn van een geldige autorisatie.
+Bepaal
+•
+als
+•
+als
+•
+als
+
+leveringen stelt vast of er een volledig bericht moet worden vervaardigd:
+er sprake is van de dienst attendering;
+er sprake is van een persoon nieuw in doelbinding;
+er aangegeven is dat er geen mutatiebericht kan worden vervaardigd.
+
+Bepaal leveringen stelt vast of er een mutatiebericht moet worden vervaardigd:
+•
+als er sprake is van een levering op basis van een nog geldige
+afnemerindicatie;
+•
+als er sprake is van een vervolglevering van een persoon in doelbinding.
+Bepaal levering stelt vast dat er geen levering hoeft of kan plaatsvinden:
+•
+als er reeds een afnemerindicatie aanwezig is en de dienst attendering met
+plaatsen afnemerindicatie een afnemerindicatie wil plaatsen;
+•
+als de technische bepaling van de doelgroep van de leveringsautorisatie
+resulteert in een fout (kan niet worden geëvalueerd).
+Bepaal leveringen plaatst indien van toepassing een afnemerindicatie.
+Stap 7:
+
+Maak leveringsbericht
+Naar aanleiding van de verwerking van een leveringsverzoek (stap 5) is het
+mogelijk, dat een volledig bericht aangemaakt moet worden. Zie voor meer
+informatie hierover de beschrijving in bijlage D.4.7.
+Uit de verwerking van ‘Bepaal leveringen’ (stap 6), waarin is bepaald welke
+levering aan welke afnemer moet plaatsvinden, is vastgesteld welke inhoud
+moet worden geleverd en welk soort bericht moet worden samengesteld:
+volledig bericht of mutatiebericht. Bij het samenstellen van de inhoud van het
+bericht spelen de dienst-, doelgroep- en gegevensautorisatie een filterende rol.
+Zie voor meer informatie hierover in D.4.7 en D.4.8.
+Mogelijke inconsequenties bij het aanmaken van leveringsberichten – zoals een
+door filtering resulterend leeg bericht zodat het niet wordt verstuurd – en
+technische fouten worden door de centrale voorzieningen weggeschreven in een
+logbestand. Het logbestand kan door de beheerder worden gebruikt om
+problemen te adressen en eventueel acties te ondernemen.
+
+9
+
+Specifieke verwerkingsregels:
+De specifieke verwerkingsregels van toepassing op een volledig bericht en een
+mutatiebericht zijn opgenomen in bijlage D.
+Stap 8:
+
+Maak resultaatbericht
+Voor ieder in behandeling te nemen binnenkomend bericht wordt een
+resultaatbericht gemaakt. De inhoud van deze resultaatberichten is beschreven
+in bijlagen D en is daarbinnen per verzoek terug te vinden onder de kop
+“UITVOER”.
+
+Stap 9:
+
+Protocolleer bericht
+Het is wettelijk verplicht om alle leveringen van persoonsgegevens aan
+overheidsorganen en zogenaamde derden te protocolleren. Leveringen aan
+bijhouders worden niet geprotocolleerd. Zie paragraaf 5.9 voor meer informatie
+over protocollering.
+
+Stap 10:
+
+Verzend bericht
+Een te verzenden resultaatbericht kan pas worden verzonden als er geen
+protocollering op van toepassing is of als er protocollering heeft plaatsgevonden.
+Een te verzenden asynchroon volledig bericht of mutatiebericht kan pas worden
+verzonden als er geen protocollering op van toepassing is of als de protocollering
+heeft plaatsgevonden. Er wordt rekening gehouden met het op chronologische
+volgorde verwerken van de verzending.
+Het opgegeven stelsel bepaalt op welke wijze het bericht door de centrale
+voorzieningen moet worden verzonden.
+Nadat de verzending van de berichten heeft plaatsgevonden kan archivering
+plaatsvinden.
+
+Stap 11:
+
+Archiveer bericht
+Ieder verzonden resultaatbericht, mutatiebericht of volledig bericht wordt
+gearchiveerd.
+
+10
+
+

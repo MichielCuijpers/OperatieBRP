@@ -1,0 +1,4153 @@
+UCS BY.0.HGP - Huwelijk en Geregistreerd
+partnerschap
+Versie
+
+0.38
+
+Datum
+
+26 juni 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+20-07-2016
+
+0.1
+
+Initiële opzet nieuwe structuur
+
+Operatie BRP
+
+22-07-2016
+
+0.2
+
+Introductie pseudo-persoon verwerkt
+
+Operatie BRP
+
+16-08-2016
+
+0.3
+
+Controle op Datum aanvang geldigheid verwijderd bij de
+actie Registratie naamgebruik
+
+Operatie BRP
+
+19-08-2016
+
+0.4
+
+R1887 opgenomen in paragraaf 6.2 en 22.2
+
+Operatie BRP
+
+21-09-2016
+
+0.5
+
+In paragraaf 23.3 en 23.4 toegevoegd dat bij Registratie
+einde HG/P de aanvangsgegevens automatisch worden
+overgenomen
+
+Operatie BRP
+
+27-09-2016
+
+0.6
+
+Titel van document gewijzigd.
+Tabel met reviewhistorie opgenomen.
+Referenties bijgewerkt
+
+Operatie BRP
+
+28-09-2016
+
+0.7
+
+Niet meer valide verwijzingen in paragraaf 17.1 aangepast
+vanwege vervallen van FO Bijhouding.
+
+Operatie BRP
+
+28-10-2016
+
+0.8
+
+Review Operatie BRP verwerkt.
+
+Operatie BRP
+
+31-10-2016
+
+0.9
+
+Review Operatie BRP verwerkt.
+
+Operatie BRP
+
+07-10-2016
+
+0.10
+
+Review Operatie BRP verwerkt:
+Peilmoment vervangen door peildatum.
+ABS vervangen door ambtenaar
+
+Operatie BRP
+
+25-11-2016
+
+0.11
+
+Tabel met BZVU en plaatsonafhankelijke bijhouding
+toegevoegd.
+Term ISC vervangen door migratievoorziening.
+
+Operatie BRP
+
+29-11-2016
+
+0.12
+
+Reviewcommentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+06-12-2016
+
+0.13
+
+Duale aspect verduidelijkt m.b.v. sequence-diagrammen.
+Tevens sequence diagram toegevoegd bij Voltrekking
+huwelijk in Nederland.
+
+Operatie BRP
+
+07-12-2016
+
+0.14
+
+Reviewcommentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+17-01-2017
+
+0.15
+
+Wijzigingen n.a.v. de volgende ontwerpbeslissingen:
+Soort persoon van niet-ingeschreven gerelateerde
+staat niet meer in bericht, dus afleiden
+DAG van actie toegevoegd in bericht bij acties die
+potentieel een groep met materiële historie raken.
+
+Operatie BRP
+
+17-01-2017
+
+0.16
+
+Referenties verbeterd.
+
+Operatie BRP
+
+24-01-2017
+
+0.17
+
+Handelingen Ongedaanmaken Huwelijk en Corrigeren
+Huwelijk uitgewerkt.
+
+Operatie BRP
+
+01-02-2017
+
+0.18
+
+Terminologie en afkortingen rond plaatsonafhankelijke
+bijhouding aangepast. Plaatsonafhankelijke bijhouding is in
+
+Operatie BRP
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+strijd met de wet.
+01-02-2017
+
+0.19
+
+Opgenomen dat de ambtenaar verantwoordelijk is voor de
+juiste registratie van het naamgebruik bij Nietigverklaring
+H/GP.
+
+Operatie BRP
+
+08-02-2017
+
+0.20
+
+Uitwerking correctiehandelingen en correctieacties herzien.
+
+Operatie BRP
+Operatie BRP
+
+09-02-2017
+
+0.21
+
+Verwerking reviewcommentaar afkomstig vanuit de externe
+review op het LO
+
+Operatie BRP
+
+13-02-2017
+
+0.22
+
+Verwerking reviewcommentaar Operatie BRP op de
+correctiehandelingen. Usecases “Ongedaan maken
+geregistreerd partnerschap” en “Corrigeren geregistreerd
+partnerschap” toegevoegd.
+
+Operatie BRP
+
+14-02-2017
+
+0.23
+
+Peildatums bij Correctiehandelingen benoemd
+(systeemdatum)
+
+Operatie BRP
+
+20-02-2017
+
+0.24
+
+Reviewcommentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+27-02-2017
+
+0.25
+
+Reviewcommentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+28-02-2017
+
+0.26
+
+UC Correctie partnergegevens gesplitst in Correctie
+partnergegevens huwelijk en Correctie partnergegevens
+geregistreerd partnerschap
+
+Operatie BRP
+
+20-03-2017
+
+0.27
+
+Reviewcommentaar LO team verwerkt
+
+Operatie BRP
+
+30-03-2017
+
+0.28
+
+De actienamen van de AH Correctie partnergegeven
+aangepast
+
+Operatie BRP
+
+05-04-2017
+
+0.29
+
+Bij correctiehandelingen is Bijhoudingsnotificatie met
+bijhoudingssituatie “GBA – Mededeling” vervangen door
+Bijhoudingsnotificatie met toelichting.
+
+Operatie BRP
+
+24-04-2017
+
+0.30
+
+De AH Wijzigen partnergegevens huwelijk en AH Wijzigen
+partnergegevens geregistreerd partnerschap opgenomen.
+
+Operatie BRP
+
+28-04-2017
+
+0.31
+
+Appendix A bijgewerkt
+
+Operatie BRP
+
+01-05-2017
+
+0.32
+
+Review Operatie BRP en Operatie BRP verwerkt
+
+Operatie BRP
+
+08-05-2017
+
+0.33
+
+Nav Review op Correctie ouder/kindgegevens door Operatie Operatie BRP
+BRP en Operatie BRP, Correctie partnergegevens H/GP
+bijgewerkt
+
+18-05-2017
+
+0.34
+
+Reviewcommentaar team Oranje op correctiehandelingen
+verwerkt.
+
+Operatie BRP
+
+07-06-2017
+
+0.35
+
+Modulecode aangepast van HG naar HGP
+
+Operatie BRP
+
+08-06-2017
+
+0.36
+
+Resterende handelingen omgezet in nieuw formaat
+
+Operatie BRP
+
+14-06-2017
+
+0.37
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+26-06-2017
+
+0.38
+
+Document aangepast m.b.t. documentatierichtlijnen.
+
+Operatie BRP
+
+Status: Definitief, versie: 0.38
+
+Pagina 2 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Operatie BRP
+
+0.7
+
+Operatie BRP
+
+0.11
+
+Operatie BRP
+
+0.13
+
+Operatie BRP (alleen Duale aspecten van de AH Voltrekking huwelijk in Nederland).
+
+0.17
+
+Operatie BRP
+
+0.23
+
+Operatie BRP
+
+0.24
+
+Operatie BRP
+
+0.26
+
+LO team (alleen corrigeren deel)
+
+0.30
+
+Operatie BRP (alleen Wijzigen partnergegevens huwelijk en Wijzigen partnergegevens
+geregistreerd partnerschap)
+
+0.33
+
+Operatie BRP (correctiehandelingen)
+
+0.36
+
+Operatie BRP (Handelingen die zijn omgezet naar het nieuwe formaat)
+
+Status: Definitief, versie: 0.38
+
+Pagina 3 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 9
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Doel ....................................................................................................................................9
+Leeswijzer ............................................................................................................................9
+Referenties ..........................................................................................................................9
+Use case model .................................................................................................................. 11
+
+Voltrekking huwelijk in Nederland .......................................................................... 12
+2.1
+Functionele context ............................................................................................................. 12
+2.1.1
+Brondocumenten ............................................................................................................ 12
+2.1.2
+Betrokken personen ........................................................................................................ 12
+2.1.3
+Proces ........................................................................................................................... 12
+2.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 12
+2.1.5
+Vastgelegde gegevens ..................................................................................................... 13
+2.2
+Specifieke verwerking.......................................................................................................... 13
+
+3
+
+Voltrekking huwelijk in buitenland ......................................................................... 14
+3.1
+Functionele context ............................................................................................................. 14
+3.1.1
+Brondocumenten ............................................................................................................ 14
+3.1.2
+Betrokken personen ........................................................................................................ 14
+3.1.3
+Proces ........................................................................................................................... 14
+3.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 14
+3.1.5
+Vastgelegde gegevens ..................................................................................................... 14
+3.2
+Specifieke verwerking.......................................................................................................... 14
+
+4
+
+Aangaan geregistreerd partnerschap in Nederland ................................................. 15
+4.1
+Functionele context ............................................................................................................. 15
+4.1.1
+Brondocumenten ............................................................................................................ 15
+4.1.2
+Betrokken personen ........................................................................................................ 15
+4.1.3
+Proces ........................................................................................................................... 15
+4.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 15
+4.1.5
+Vastgelegde gegevens ..................................................................................................... 15
+4.2
+Specifieke verwerking.......................................................................................................... 15
+
+5
+
+Aangaan geregistreerd partnerschap in buitenland ................................................ 16
+5.1
+Functionele context ............................................................................................................. 16
+5.1.1
+Brondocumenten ............................................................................................................ 16
+5.1.2
+Betrokken personen ........................................................................................................ 16
+5.1.3
+Proces ........................................................................................................................... 16
+5.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 16
+5.1.5
+Vastgelegde gegevens ..................................................................................................... 16
+5.2
+Specifieke verwerking.......................................................................................................... 16
+
+6
+
+Omzetting geregistreerd partnerschap in huwelijk ................................................. 17
+6.1
+Functionele context ............................................................................................................. 17
+6.1.1
+Brondocumenten ............................................................................................................ 17
+6.1.2
+Betrokken personen ........................................................................................................ 17
+6.1.3
+Proces ........................................................................................................................... 17
+6.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 17
+6.1.5
+Vastgelegde gegevens ..................................................................................................... 17
+6.2
+Specifieke verwerking.......................................................................................................... 17
+
+7
+
+Ontbinding huwelijk in Nederland ........................................................................... 19
+7.1
+Functionele context ............................................................................................................. 19
+7.1.1
+Brondocumenten ............................................................................................................ 19
+7.1.2
+Betrokken personen ........................................................................................................ 19
+7.1.3
+Proces ........................................................................................................................... 19
+
+Status: Definitief, versie: 0.38
+
+Pagina 4 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+7.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 19
+7.1.5
+Vastgelegde gegevens ..................................................................................................... 19
+7.2
+Specifieke verwerking.......................................................................................................... 19
+
+8
+
+Ontbinding huwelijk in buitenland .......................................................................... 21
+8.1
+Functionele context ............................................................................................................. 21
+8.1.1
+Brondocumenten ............................................................................................................ 21
+8.1.2
+Betrokken personen ........................................................................................................ 21
+8.1.3
+Proces ........................................................................................................................... 21
+8.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 21
+8.1.5
+Vastgelegde gegevens ..................................................................................................... 21
+8.2
+Specifieke verwerking.......................................................................................................... 21
+
+9
+
+Beëindiging geregistreerd partnerschap in Nederland ............................................ 23
+9.1
+Functionele context ............................................................................................................. 23
+9.1.1
+Brondocumenten ............................................................................................................ 23
+9.1.2
+Betrokken personen ........................................................................................................ 23
+9.1.3
+Proces ........................................................................................................................... 23
+9.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 23
+9.1.5
+Vastgelegde gegevens ..................................................................................................... 23
+9.2
+Specifieke verwerking.......................................................................................................... 23
+
+10
+
+Beëindiging geregistreerd partnerschap in buitenland............................................ 25
+
+10.1
+Functionele context ............................................................................................................. 25
+10.1.1
+Brondocumenten ........................................................................................................ 25
+10.1.2
+Betrokken personen .................................................................................................... 25
+10.1.3
+Proces ....................................................................................................................... 25
+10.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 25
+10.1.5
+Vastgelegde gegevens ................................................................................................. 25
+10.2
+Specifieke verwerking.......................................................................................................... 25
+
+11
+
+Nietigverklaring huwelijk in Nederland ................................................................... 27
+
+11.1
+Functionele context ............................................................................................................. 27
+11.1.1
+Brondocumenten ........................................................................................................ 27
+11.1.2
+Betrokken personen .................................................................................................... 27
+11.1.3
+Proces ....................................................................................................................... 27
+11.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 27
+11.1.5
+Vastgelegde gegevens ................................................................................................. 27
+11.2
+Specifieke verwerking.......................................................................................................... 27
+
+12
+
+Nietigverklaring geregistreerd partnerschap in Nederland ..................................... 29
+
+12.1
+Functionele context ............................................................................................................. 29
+12.1.1
+Brondocumenten ........................................................................................................ 29
+12.1.2
+Betrokken personen .................................................................................................... 29
+12.1.3
+Proces ....................................................................................................................... 29
+12.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 29
+12.1.5
+Vastgelegde gegevens ................................................................................................. 29
+12.2
+Specifieke verwerking.......................................................................................................... 29
+
+13
+
+Ongedaanmaking huwelijk ...................................................................................... 31
+
+13.1
+Functionele context ............................................................................................................. 31
+13.1.1
+Brondocumenten ........................................................................................................ 31
+13.1.2
+Betrokken personen .................................................................................................... 31
+13.1.3
+Proces ....................................................................................................................... 31
+13.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 31
+13.1.5
+Vastgelegde gegevens ................................................................................................. 31
+13.2
+Specifieke verwerking.......................................................................................................... 31
+
+14
+
+Ongedaanmaking geregistreerd partnerschap ........................................................ 33
+
+14.1
+Functionele context ............................................................................................................. 33
+14.1.1
+Brondocumenten ........................................................................................................ 33
+
+Status: Definitief, versie: 0.38
+
+Pagina 5 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+14.1.2
+Betrokken personen .................................................................................................... 33
+14.1.3
+Proces ....................................................................................................................... 33
+14.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 33
+14.1.5
+Vastgelegde gegevens ................................................................................................. 33
+14.2
+Specifieke verwerking.......................................................................................................... 33
+
+15
+
+Wijziging partnergegevens huwelijk ....................................................................... 35
+
+15.1
+15.2
+15.3
+15.4
+15.5
+15.6
+15.7
+
+Functionele context ............................................................................................................. 35
+Brondocumenten ................................................................................................................ 35
+Betrokken personen ............................................................................................................ 36
+Proces ............................................................................................................................... 36
+Bijhoudings(voorstel)partijen................................................................................................ 36
+Vastgelegde gegevens ......................................................................................................... 36
+Specifieke verwerking.......................................................................................................... 36
+
+16
+
+Wijziging partnergegevens geregistreerd partnerschap ......................................... 37
+
+17
+
+Correctie huwelijk ................................................................................................... 38
+
+17.1
+Functionele context ............................................................................................................. 38
+17.1.1
+Brondocumenten ........................................................................................................ 38
+17.1.2
+Betrokken personen .................................................................................................... 38
+17.1.3
+Proces ....................................................................................................................... 38
+17.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 38
+17.1.5
+Vastgelegde gegevens ................................................................................................. 38
+17.2
+Specifieke verwerking.......................................................................................................... 38
+
+18
+
+Correctie geregistreerd partnerschap ..................................................................... 40
+
+18.1
+Functionele context ............................................................................................................. 40
+18.1.1
+Brondocumenten ........................................................................................................ 40
+18.1.2
+Betrokken personen .................................................................................................... 40
+18.1.3
+Proces ....................................................................................................................... 40
+18.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 40
+18.1.5
+Vastgelegde gegevens ................................................................................................. 40
+18.2
+Specifieke verwerking.......................................................................................................... 40
+
+19
+
+Correctie partnergegevens huwelijk ....................................................................... 42
+
+19.1
+Functionele context ............................................................................................................. 42
+19.1.1
+Brondocumenten ........................................................................................................ 42
+19.1.2
+Betrokken personen .................................................................................................... 42
+19.1.3
+Proces ....................................................................................................................... 42
+19.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 42
+19.1.5
+Vastgelegde gegevens ................................................................................................. 42
+19.2
+Specifieke verwerking.......................................................................................................... 43
+
+20
+
+Correctie partnergegevens geregistreerd partnerschap .......................................... 44
+
+20.1
+Functionele context ............................................................................................................. 44
+20.1.1
+Brondocumenten ........................................................................................................ 44
+20.1.2
+Betrokken personen .................................................................................................... 44
+20.1.3
+Proces ....................................................................................................................... 44
+20.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 44
+20.1.5
+Vastgelegde gegevens ................................................................................................. 44
+20.2
+Specifieke verwerking.......................................................................................................... 45
+
+21
+
+GBA handelingen..................................................................................................... 46
+
+22
+
+GBA - Voltrekking Huwelijk in Nederland ................................................................ 47
+
+22.1.1
+Brondocumenten ........................................................................................................ 47
+22.1.2
+Betrokken personen .................................................................................................... 47
+22.1.3
+Proces ....................................................................................................................... 47
+22.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 49
+22.1.5
+Vastgelegde gegevens ................................................................................................. 49
+22.2
+Specifieke verwerking.......................................................................................................... 49
+
+Status: Definitief, versie: 0.38
+
+Pagina 6 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+23
+
+GBA - Aangaan geregistreerd partnerschap in Nederland ....................................... 50
+
+23.1
+Functionele context ............................................................................................................. 50
+23.1.1
+Brondocumenten ........................................................................................................ 50
+23.1.2
+Betrokken personen .................................................................................................... 50
+23.1.3
+Proces ....................................................................................................................... 50
+23.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 50
+23.1.5
+Vastgelegde gegevens ................................................................................................. 50
+23.2
+Specifieke verwerking.......................................................................................................... 50
+
+24
+
+GBA - Ontbinding huwelijk in Nederland ................................................................. 51
+
+24.1
+Functionele context ............................................................................................................. 51
+24.1.1
+Brondocumenten ........................................................................................................ 51
+24.1.2
+Betrokken personen .................................................................................................... 51
+24.1.3
+Proces ....................................................................................................................... 51
+24.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 51
+24.1.5
+Vastgelegde gegevens ................................................................................................. 51
+24.2
+Specifieke verwerking.......................................................................................................... 51
+
+25
+
+GBA - Beëindiging geregistreerd partnerschap in Nederland .................................. 52
+
+25.1
+Functionele context ............................................................................................................. 52
+25.1.1
+Brondocumenten ........................................................................................................ 52
+25.1.2
+Betrokken personen .................................................................................................... 52
+25.1.3
+Proces ....................................................................................................................... 52
+25.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 52
+25.1.5
+Vastgelegde gegevens ................................................................................................. 52
+25.2
+Specifieke verwerking.......................................................................................................... 52
+
+26
+
+GBA - Omzetting geregistreerd partnerschap in huwelijk ....................................... 53
+
+26.1
+Functionele context ............................................................................................................. 53
+26.1.1
+Brondocumenten ........................................................................................................ 53
+26.1.2
+Betrokken personen .................................................................................................... 53
+26.1.3
+Proces ....................................................................................................................... 53
+26.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 53
+26.1.5
+Vastgelegde gegevens ................................................................................................. 53
+26.2
+Specifieke verwerking.......................................................................................................... 53
+
+27
+
+Acties ...................................................................................................................... 54
+
+27.1
+27.2
+27.3
+27.4
+27.5
+27.6
+27.7
+27.8
+27.9
+27.10
+27.11
+27.12
+27.13
+27.14
+27.15
+27.16
+27.17
+27.18
+27.19
+27.20
+27.21
+27.22
+
+Registratie aanvang huwelijk ................................................................................................ 54
+Registratie aanvang geregistreerd partnerschap ..................................................................... 54
+Registratie einde huwelijk .................................................................................................... 55
+Registratie einde geregistreerd partnerschap .......................................................................... 55
+Registratie geslachtsnaam ................................................................................................... 56
+Registratie naamgebruik ...................................................................................................... 56
+Registratie identificatienummers gerelateerde ........................................................................ 56
+Registratie samengestelde naam gerelateerde ........................................................................ 56
+Registratie geboorte gerelateerde ......................................................................................... 57
+Registratie geslachtsaanduiding gerelateerde ......................................................................... 57
+Verval huwelijk ................................................................................................................... 57
+Verval geregistreerd partnerschap ........................................................................................ 57
+Correctieverval relatie ......................................................................................................... 58
+Correctieregistratie relatie .................................................................................................... 58
+Correctieverval identificatienummers gerelateerde .................................................................. 58
+Correctieregistratie identificatienummers gerelateerde............................................................. 58
+Correctieverval geslachtsaanduiding gerelateerde ................................................................... 58
+Correctieregistratie geslachtsaanduiding gerelateerde.............................................................. 58
+Correctieverval geboorte gerelateerde ................................................................................... 59
+Correctieregistratie geboorte gerelateerde ............................................................................. 59
+Correctieverval samengestelde naam gerelateerde .................................................................. 59
+Correctieregistratie samengestelde naam gerelateerde ............................................................ 59
+
+Status: Definitief, versie: 0.38
+
+Pagina 7 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+28
+
+Appendix A – BZVU en toegestane indienende partijen ........................................... 60
+
+Status: Definitief, versie: 0.38
+
+Pagina 8 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+1 Inleiding
+1.1
+
+Doel
+
+De module ‘Huwelijk en Geregistreerd partnerschap’ bevat administratieve handelingen om een
+huwelijk of geregistreerd partnerschap te registreren, te beëindigen, ongedaan te maken of te
+corrigeren. Het doel van dit document is om de afhandeling van deze handelingen te beschrijven.
+
+1.2
+
+Leeswijzer
+
+Per administratieve handeling wordt de functionele context en specifieke verwerking beschreven.
+De functionele context beschrijft de situatie waarin de administratieve handeling van toepassing is.
+In de specifieke verwerking wordt beschreven welke acties relevant zijn voor de administratieve
+handeling en wordt per actie eventuele specifieke functionaliteit binnen de context van de
+handeling benoemd. Voor de definitie van het invoerbericht en bedrijfsregels die bij een
+administratieve handeling horen wordt voor actualiseringshandelingen verwezen naar het relevante
+hoofdstuk in ‘UCS-BY.0.HGP - Bijlage Registreer huwelijk en geregistreerd partnerschap’ [1] en
+‘UCS-BY.0.HGP - Bijlage Actualiseer huwelijk en geregistreerd partnerschap’ [9] en voor
+correctiehandelingen naar het relevante hoofdstuk in ‘UCS-BY.0.HGP - Bijlage Corrigeer huwelijk en
+geregistreerd partnerschap’ [2]. Verder wordt de ‘peildatum’ voor regels met een tijdsaspect
+gedefinieerd.
+Gedurende de duale periode kunnen zogenaamde toevallige gebeurtenissen plaatsvinden in een
+gemeente die nog in het GBA-stelsel werkzaam is terwijl één van de of beide betrokken partners in
+een gemeente zijn ingeschreven die werkzaam is in het BRP-stelsel. Voor deze gevallen zijn aparte
+administratieve handelingen onderkend die zijn beschreven in hoofdstuk 22 t/m 26. Voor de
+definitie van het invoerbericht en bedrijfsregels die bij deze administratieve handeling horen wordt
+verwezen naar het relevante hoofdstuk in ‘UCS-BY.0.HGP - Bijlage Registreer huwelijk en
+geregistreerd partnerschap (ISC)’ [3]. Hoofdstuk 20 beschrijft aandachtspunten die specifiek bij de
+verwerking van deze handelingen relevant zijn.
+De beschrijving van de generieke functionaliteit van de acties staat beschreven in hoofdstuk 27.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+UCS BY.0.HGP – Bijlage Registreer huwelijk en geregistreerd
+partnerschap
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+UCS BY.0.HGP – Bijlage Corrigeer huwelijk en geregistreerd
+partnerschap
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+UCS BY.0.HGP – Bijlage Registreer huwelijk en geregistreerd
+partnerschap (ISC)
+
+Operatie BRP
+
+-
+
+-
+
+4
+
+UCS BY.0.AV – Afhandeling verzoek
+
+Operatie BRP
+
+-
+
+-
+
+5
+
+Aspectbeschrijving – Corrigeren
+
+Operatie BRP
+
+-
+
+-
+
+6
+
+Aspectbeschrijving – Formele en materiële historie
+
+Operatie BRP
+
+-
+
+-
+
+7
+
+UCS BY.1.MP – Maak Bijhoudingsplan
+
+Operatie BRP
+
+-
+
+-
+
+8
+
+UCS BY.1.ON – Ontrelateren
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 0.38
+
+Pagina 9 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+9
+
+UCS BY.0.HGP – Bijlage Actualiseer huwelijk en geregistreerd
+partnerschap
+
+Status: Definitief, versie: 0.38
+
+Operatie BRP
+
+-
+
+-
+
+Pagina 10 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+1.4
+
+Use case model
+
+In onderstaand use case model staan alle administratieve handelingen voor de module Huwelijk en
+geregistreerd partnerschap. Hierin is te zien dat alle administratieve handelingen subtype zijn van
+het supertype BY.0.AV – Afhandeling verzoek. De laatste beschrijft de generieke afhandeling van
+een verzoek wat relevant is voor de verwerking van alle handelingen.
+
+Status: Definitief, versie: 0.38
+
+Pagina 11 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+2 Voltrekking huwelijk in Nederland
+2.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Voltrekking huwelijk in Nederland’ is het registreren van
+een in Nederland voltrokken huwelijk. Ook een huwelijk dat is voltrokken op een consulaat in
+Nederland wordt met deze handeling geregistreerd.
+Voor een ingezetene niet-Nederlander kan, afhankelijk van het toe te passen vreemd recht, een
+geslachtsnaamswijziging worden geregistreerd.
+Voor beide partners, voor zover het een ingezetene betreft, kan het naamgebruik worden
+geregistreerd.
+2.1.1
+•
+•
+•
+
+Huwelijksakte
+Een consulaire akte of uittreksel daarvan
+Verklaring of kennisgeving naamgebruik
+
+2.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+De twee personen die als partner bij het huwelijk betrokken zijn. Minimaal een van deze
+personen moet een ingezetene zijn de andere partner kan zowel ingeschrevene als pseudopersoon.
+
+2.1.3
+
+Proces
+
+Onderstaande sequence-diagram geeft een voorbeeld van hoe op berichtniveau een Voltrekking
+huwelijk in Nederland kan verlopen. Hierbij zijn de feitgemeente en de beide gemeenten van de
+partners alle verschillend. Er zijn 2 alternatieve flows weergegeven. Een waarbij de gemeente van
+de partners hebben aangegeven huwelijken in Nederland die gemeld worden door de feitgemeente
+automatisch te fiatteren en een waarbij ze dit beide niet doen.
+
+2.1.4
+•
+•
+
+Bijhoudings(voorstel)partijen
+
+Registergemeente van het huwelijk
+Bijhoudingspartij van één of van beide partners
+
+Status: Definitief, versie: 0.38
+
+Pagina 12 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+2.1.5
+•
+•
+•
+
+2.2
+
+Vastgelegde gegevens
+
+Huwelijk
+Geslachtsnaam en samengestelde naam
+Naamgebruik
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+•
+
+•
+
+Hoofdactie Registratie aanvang huwelijk
+‘Relatie.Land/Gebied aanvang’ wordt bij op basis van de administratieve handeling afgeleid
+geregistreerd met de waarde ‘Nederland’.
+Nevenactie Registratie geslachtsnaam (optioneel)
+De ‘Datum aanvang geldigheid’ van de actie moet gelijk zijn aan de datum waarop het huwelijk
+is voltrokken (zie ‘Relatie.datum aanvang’).
+Nevenactie Registratie naamgebruik (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Relatie.datum aanvang’.
+
+Status: Definitief, versie: 0.38
+
+Pagina 13 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+3 Voltrekking huwelijk in buitenland
+3.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Voltrekking huwelijk in buitenland’ is het registreren
+van een in het buitenland voltrokken huwelijk.
+Voor een ingezetene niet-Nederlander kan, afhankelijk van het toe te passen vreemd recht, een
+geslachtsnaamswijziging worden geregistreerd.
+Voor beide partners, voor zover het een ingezetene betreft, kan het naamgebruik worden
+geregistreerd.
+3.1.1
+
+Brondocumenten
+
+Huwelijksakte1
+Nederlandse rechterlijke uitspraak
+Buitenlandse akte
+Buitenlandse rechterlijke uitspraak
+Buitenlands geschrift
+Verklaring onder eed of belofte
+Overig
+Verklaring of kennisgeving naamgebruik
+
+•
+•
+•
+•
+•
+•
+•
+•
+
+3.1.2
+•
+
+Betrokken personen
+
+De twee personen die als partner bij het huwelijk betrokken zijn. Minimaal een van deze
+personen moet een ingezetene zijn de andere partner kan zowel ingeschrevene als pseudopersoon.
+
+3.1.3
+
+Proces
+
+Analoog aan paragraaf 2.1.3.
+3.1.4
+•
+
+Bijhoudings(voorstel)partijen
+
+Bijhoudingspartij van één of van beide partners
+
+3.1.5
+•
+•
+•
+
+Vastgelegde gegevens
+
+Huwelijk
+Geslachtsnaam en samengestelde naam
+Naamgebruik
+
+3.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+•
+
+•
+
+Hoofdactie Registratie aanvang huwelijk
+Geen bijzonderheden voor deze actie.
+Nevenactie Registratie geslachtsnaam (optioneel)
+De ‘Datum aanvang geldigheid’ van de actie moet gelijk zijn aan de datum waarop het huwelijk
+is voltrokken (zie ‘Relatie.datum aanvang’).
+Nevenactie Registratie naamgebruik (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Relatie.datum aanvang’.
+
+1
+
+Ook een buitenlandse huwelijksakte inschrijven in de registers van de burgerlijke stand van de gemeente Den Haag.
+
+Status: Definitief, versie: 0.38
+
+Pagina 14 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+4 Aangaan geregistreerd partnerschap in Nederland
+4.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Aangaan geregistreerd partnerschap in Nederland’ is
+het registreren van een in Nederland aangegaan geregistreerd partnerschap.
+Voor een ingezetene niet-Nederlander kan, afhankelijk van het toe te passen vreemd recht, een
+geslachtsnaamswijziging worden geregistreerd.
+Voor beide partners, voor zover het een ingezetene betreft, kan het naamgebruik worden
+geregistreerd.
+4.1.1
+•
+•
+
+Akte van partnerschapsregistratie
+Verklaring of kennisgeving naamgebruik
+
+4.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+De twee personen die als partner bij het geregistreerd partnerschap betrokken zijn. Minimaal
+een van deze personen moet een ingezetene zijn de andere partner kan zowel ingeschrevene
+als pseudo-persoon.
+
+4.1.3
+
+Proces
+
+Analoog aan paragraaf 2.1.3.
+4.1.4
+•
+•
+
+Registergemeente van het geregistreerd partnerschap
+Bijhoudingspartij van één of van beide partners
+
+4.1.5
+•
+•
+•
+
+4.2
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Geregistreerd partnerschap
+Geslachtsnaam en samengestelde naam
+Naamgebruik
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+•
+
+•
+
+Hoofdactie Registratie aanvang geregistreerd partnerschap
+‘Relatie.Land/Gebied aanvang’ wordt bij op basis van de administratieve handeling afgeleid
+geregistreerd met de waarde ‘Nederland’.
+Nevenactie Registratie geslachtsnaam (optioneel)
+De ‘Datum aanvang geldigheid’ van de actie moet gelijk zijn aan de datum waarop het
+geregistreerd partnerschap is aangegaan (zie ‘Relatie.datum aanvang’).
+Nevenactie Registratie naamgebruik (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Relatie.datum aanvang’.
+
+Status: Definitief, versie: 0.38
+
+Pagina 15 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+5 Aangaan geregistreerd partnerschap in buitenland
+5.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Aangaan geregistreerd partnerschap in buitenland’ is
+het registreren van een in Nederland aangegaan geregistreerd partnerschap.
+Voor een ingezetene niet-Nederlander kan, afhankelijk van het toe te passen vreemd recht, een
+geslachtsnaamswijziging worden geregistreerd.
+Voor beide partners, voor zover het een ingezetene betreft, kan het naamgebruik worden
+geregistreerd.
+5.1.1
+•
+•
+•
+•
+•
+•
+•
+•
+
+Akte van partnerschapsregistratie
+Nederlandse rechterlijke uitspraak
+Buitenlandse akte
+Buitenlandse rechterlijke uitspraak
+Buitenlands geschrift
+Verklaring onder eed of belofte
+Overig
+Verklaring of kennisgeving naamgebruik
+
+5.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+De twee personen die als partner bij het geregistreerd partnerschap betrokken zijn. Minimaal
+een van deze personen moet een ingezetene zijn de andere partner kan zowel ingeschrevene
+als pseudo-persoon.
+
+5.1.3
+
+Proces
+
+Analoog aan paragraaf 2.1.3.
+5.1.4
+•
+
+Bijhoudingspartij van één of van beide partners
+
+5.1.5
+•
+•
+•
+
+5.2
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Geregistreerd partnerschap
+Geslachtsnaam en samengestelde naam
+Naamgebruik
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+•
+
+•
+
+Hoofdactie Registratie aanvang geregistreerd partnerschap
+Geen bijzonderheden voor deze actie.
+Nevenactie Registratie geslachtsnaam (optioneel)
+De ‘Datum aanvang geldigheid’ van de actie moet gelijk zijn aan de datum waarop het
+geregistreerd partnerschap is aangegaan (zie ‘Relatie.datum aanvang’).
+Nevenactie Registratie naamgebruik (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Relatie.datum aanvang’.
+
+Status: Definitief, versie: 0.38
+
+Pagina 16 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+6 Omzetting geregistreerd partnerschap in huwelijk
+6.1
+
+Functionele context
+
+Het doel van de administratieve Handeling ‘Omzetting geregistreerd partnerschap in huwelijk’ is de
+beëindiging van een geregistreerd partnerschap te registreren en tegelijkertijd een Nederlands
+huwelijk te registreren tussen dezelfde partners.
+Voor een ingezetene niet-Nederlander kan, afhankelijk van het toe te passen vreemd recht, een
+geslachtsnaamswijziging worden geregistreerd.
+Voor beide partners, voor zover het een ingezetene betreft, kan het naamgebruik worden
+geregistreerd.
+6.1.1
+•
+•
+
+Huwelijksakte
+Verklaring of kennisgeving naamgebruik
+
+6.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+De twee personen die als partner bij het huwelijk betrokken zijn. Minimaal een van deze
+personen moet een ingezetene zijn de andere partner kan zowel ingeschrevene als pseudopersoon.
+
+6.1.3
+
+Proces
+
+Analoog aan paragraaf 2.1.3.
+6.1.4
+•
+•
+
+Feitgemeente (waar de omzetting plaatsvond)
+Bijhoudingspartij van één of van beide partners
+
+6.1.5
+•
+•
+•
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Huwelijk
+Geslachtsnaam en samengestelde naam
+Naamgebruik
+
+6.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de volgende acties:
+•
+
+•
+
+•
+
+Hoofdactie Registratie einde geregistreerd partnerschap
+‘Relatie.Land/Gebied einde’ wordt bij op basis van de administratieve handeling afgeleid
+geregistreerd met de waarde ‘Nederland’.
+Nevenactie Registratie geslachtsnaam (optioneel)
+‘Datum aanvang geldigheid’ van de actie moet gelijk zijn aan de datum waarop het
+geregistreerd partnerschap is beëindigd (zie ‘Relatie.datum einde’).
+Nevenactie Registratie naamgebruik (optioneel)
+Geen bijzonderheden voor deze actie.
+
+Met deze administratieve handeling wordt een nieuw Huwelijk afgeleid van het om te zetten
+Geregistreerd partnerschap. Voor het Huwelijk worden nieuwe betrokken Partners aangemaakt die
+verwijzen naar 'dezelfde' Persoon-en als betrokken bij het Geregistreerd partnerschap. De
+aanvangsgegevens van het nieuwe Huwelijk worden als volgt afgeleid van de
+beëindigingsgegevens van het Geregistreerd partnerschap:
+•
+
+‘Relatie.Datum aanvang’ van het Huwelijk wordt gelijk aan ‘Relatie.Datum einde’ van het
+Geregistreerd partnerschap
+
+Status: Definitief, versie: 0.38
+
+Pagina 17 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+•
+•
+•
+
+‘Relatie.Gemeente aanvang’ van het Huwelijk wordt gelijk aan ‘Relatie.Gemeente einde’
+van het Geregistreerd partnerschap
+‘Relatie.Woonplaatsnaam aanvang’ van het Huwelijk wordt gelijk aan
+‘Relatie.Woonplaatsnaam einde’ van het Geregistreerd partnerschap
+‘Relatie.Land/gebied aanvang’ wordt 'Nederland'
+
+Indien een Partner een ‘Pseudo-persoon’ (P) betreft, moet onder 'dezelfde' Persoon worden
+verstaan, een exacte 'kopie' van die Persoon.
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Relatie.datum einde’.
+Aan de hoofdactie kunnen, naast de gegevens van het einde van de relatie, ook gegevens van één
+van de partners meegegeven worden. Dit is uitsluitend bedoeld voor het wijzigen van de
+geslachtsnaam van een pseudo-persoon. Als de geslachtsnaam van een ingezeten partner wijzigt,
+dan moet dit met de nevenactie Registratie geslachtsnaam gebruikt worden. NB Het is niet
+toegestaan om de geslachtsnaam van een ingeschreven, niet ingezeten partner te wijzigen.
+
+Status: Definitief, versie: 0.38
+
+Pagina 18 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+7 Ontbinding huwelijk in Nederland
+7.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Ontbinding huwelijk in Nederland’ is het registreren van
+de ontbinding van een huwelijk in Nederland.
+De gemeente waarin het huwelijk werd gesloten - de feitgemeente - stelt een latere vermelding
+huwelijksakte op welke wordt ingeschreven in de registers van de Burgerlijke Stand.
+Voor een ingezetene niet-Nederlander kan, afhankelijk van het toe te passen vreemd recht, een
+geslachtsnaamswijziging worden geregistreerd.
+Voor beide partners, voor zover het een ingezetene betreft, kan het naamgebruik worden
+geregistreerd.
+Deze administratieve handeling wordt ook gebruikt voor de registratie van de ontbinding van het
+huwelijk in geval van vermissing (rechtsvermoeden van overlijden).
+7.1.1
+•
+•
+•
+•
+•
+•
+
+Overlijdensakte
+Huwelijksakte (met later vermelding)
+Akte van echtscheiding
+Nederlandse rechterlijke uitspraak
+Consulaire akte van een rechtsfeit in Nederland
+Verklaring of kennisgeving naamgebruik
+
+7.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+De twee personen die als partner bij het huwelijk betrokken zijn. Minimaal een van deze
+personen moet een ingezetene zijn de andere partner kan zowel ingeschrevene als pseudopersoon.
+
+7.1.3
+
+Proces
+
+Analoog aan paragraaf 2.1.3.
+7.1.4
+•
+•
+
+Gemeente waar het huwelijk is ontbonden
+Bijhoudingspartij van één of van beide partners
+
+7.1.5
+•
+•
+•
+
+7.2
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Huwelijk
+Geslachtsnaam en samengestelde naam
+Naamgebruik
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de volgende acties:
+•
+
+•
+
+•
+
+Hoofdactie Registratie einde huwelijk
+‘Relatie.Land/Gebied einde’ wordt bij op basis van de administratieve handeling afgeleid
+geregistreerd met de waarde ‘Nederland’.
+Nevenactie Registratie geslachtsnaam (optioneel)
+De ‘Datum aanvang geldigheid’ van de actie moet gelijk zijn aan de datum waarop het huwelijk
+is ontbonden (zie ‘Relatie.datum einde’).
+Nevenactie Registratie naamgebruik (optioneel)
+Geen bijzonderheden voor deze actie.
+
+Status: Definitief, versie: 0.38
+
+Pagina 19 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Relatie.datum einde’.
+Aan de hoofdactie kunnen, naast de gegevens van het einde van de relatie, ook gegevens van één
+van de partners meegegeven worden. Dit is uitsluitend bedoeld voor het wijzigen van de
+geslachtsnaam van een pseudo-persoon. Als de geslachtsnaam van een ingezeten partner wijzigt,
+dan moet dit met de nevenactie ‘Registratie geslachtsnaam’ gebruikt worden. NB Het is niet
+toegestaan om de geslachtsnaam van een ingeschreven, niet ingezeten partner te wijzigen.
+
+Status: Definitief, versie: 0.38
+
+Pagina 20 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+8 Ontbinding huwelijk in buitenland
+8.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Ontbinding huwelijk in buitenland’ is de registratie van
+de ontbinding in het buitenland van een huwelijk.
+Voor een ingezetene niet-Nederlander kan, afhankelijk van het toe te passen vreemd recht, een
+geslachtsnaamswijziging worden geregistreerd.
+Voor beide partners, voor zover het een ingezetene betreft, kan het naamgebruik worden
+geregistreerd.
+8.1.1
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Overlijdensakte
+Huwelijksakte (met latere vermelding)
+Nederlandse rechterlijke uitspraak
+Buitenlandse akte
+Buitenlandse rechterlijke uitspraak
+Buitenlands geschrift
+Verklaring onder eed of belofte
+Verklaring of kennisgeving naamgebruik
+Overig
+
+8.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+De twee personen die als partner bij het huwelijk betrokken zijn. Minimaal een van deze
+personen moet een ingezetene zijn de andere partner kan zowel ingeschrevene als pseudopersoon.
+
+8.1.3
+
+Proces
+
+Analoog aan paragraaf 2.1.3.
+8.1.4
+•
+
+De bijhoudingspartij van een huwelijkspartner
+
+8.1.5
+•
+•
+•
+
+8.2
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Huwelijk
+Geslachtsnaam en samengestelde naam
+Naamgebruik
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de volgende acties:
+•
+•
+
+•
+
+Hoofdactie Registratie einde huwelijk
+Geen bijzonderheden voor deze actie.
+Nevenactie Registratie geslachtsnaam (optioneel)
+De ‘Datum aanvang geldigheid’ van de actie moet gelijk zijn aan de datum waarop het huwelijk
+is ontbonden (zie ‘Relatie.datum einde’).
+Nevenactie Registratie naamgebruik (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Relatie.datum einde’.
+Aan de hoofdactie kunnen, naast de gegevens van het einde van de relatie, ook gegevens van één
+van de partners meegegeven worden. Dit is uitsluitend bedoeld voor het wijzigen van de
+
+Status: Definitief, versie: 0.38
+
+Pagina 21 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+geslachtsnaam van een pseudo-persoon. Als de geslachtsnaam van een ingezeten partner wijzigt,
+dan moet dit met de nevenactie Registratie geslachtsnaam gebruikt worden. NB Het is niet
+toegestaan om de geslachtsnaam van een ingeschreven, niet ingezeten partner te wijzigen.
+
+Status: Definitief, versie: 0.38
+
+Pagina 22 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+9 Beëindiging geregistreerd partnerschap in Nederland
+9.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Beëindiging geregistreerd partnerschap in Nederland’ is
+de beëindiging in Nederland van een geregistreerd partnerschap registreren.
+Voor een ingezetene niet-Nederlander kan, afhankelijk van het toe te passen vreemd recht, een
+geslachtsnaamswijziging worden geregistreerd.
+Voor beide partners, voor zover het een ingezetene betreft, kan het naamgebruik worden
+geregistreerd.
+9.1.1
+•
+•
+•
+•
+•
+
+Overlijdensakte
+Akte van partnerschapsregistratie (met latere vermelding)
+Akte van beëindiging partnerschapsregistratie
+Nederlandse rechterlijke uitspraak
+Verklaring of kennisgeving naamgebruik
+
+9.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+De twee personen die als partner bij het geregistreerd partnerschap betrokken zijn. Minimaal
+een van deze personen moet een ingezetene zijn de andere partner kan zowel ingeschrevene
+als pseudo-persoon.
+
+9.1.3
+
+Proces
+
+Analoog aan paragraaf 2.1.3.
+9.1.4
+•
+•
+
+Gemeente waar het geregistreerd partnerschap is beëindigd
+Bijhoudingspartij van één of van beide partners
+
+9.1.5
+•
+•
+•
+
+9.2
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Huwelijk
+Geslachtsnaam en samengestelde naam
+Naamgebruik
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de volgende acties:
+•
+
+•
+
+•
+
+Hoofdactie Registratie einde geregistreerd partnerschap
+‘Relatie.Land/Gebied einde’ wordt bij op basis van de administratieve handeling afgeleid
+geregistreerd met de waarde ‘Nederland’.
+Nevenactie Registratie geslachtsnaam (optioneel)
+De ‘Datum aanvang geldigheid’ van de actie moet gelijk zijn aan de datum waarop het
+geregistreerd partnerschap is beëindigd (zie ‘Relatie.datum einde’).
+Nevenactie Registratie naamgebruik (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Relatie.datum einde’.
+Aan de hoofdactie kunnen, naast de gegevens van het einde van de relatie, ook gegevens van één
+van de partners meegegeven worden. Dit is uitsluitend bedoeld voor het wijzigen van de
+geslachtsnaam van een pseudo-persoon. Als de geslachtsnaam van een ingezeten partner wijzigt,
+
+Status: Definitief, versie: 0.38
+
+Pagina 23 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+dan moet dit met de nevenactie ‘Registratie geslachtsnaam’ gebruikt worden. NB Het is niet
+toegestaan om de geslachtsnaam van een ingeschreven, niet ingezeten partner te wijzigen.
+
+Status: Definitief, versie: 0.38
+
+Pagina 24 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+10 Beëindiging geregistreerd partnerschap in buitenland
+10.1 Functionele context
+Het doel van de administratieve handeling ‘Beëindiging geregistreerd partnerschap in buitenland’ is
+het registreren van beëindiging in het buitenland van een geregistreerd partnerschap.
+Voor een ingezetene niet-Nederlander kan, afhankelijk van het toe te passen vreemd recht, een
+geslachtsnaamswijziging worden geregistreerd.
+Voor beide partners, voor zover het een ingezetene betreft, kan het naamgebruik worden
+geregistreerd.
+10.1.1 Brondocumenten
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Overlijdensakte
+Akte van partnerschapsregistratie
+Akte van beëindiging partnerschapsregistratie
+Nederlandse rechterlijke uitspraak
+Buitenlandse rechterlijke uitspraak
+Buitenlandse akte
+Buitenlands geschrift
+Verklaring onder eed of belofte
+Verklaring of kennisgeving naamgebruik
+Overig
+
+10.1.2 Betrokken personen
+•
+
+De twee personen die als partner bij het huwelijk betrokken zijn. Minimaal een van deze
+personen moet een ingezetene zijn de andere partner kan zowel ingeschrevene als pseudopersoon.
+
+10.1.3 Proces
+Analoog aan paragraaf 2.1.3.
+10.1.4 Bijhoudings(voorstel)partijen
+•
+
+Bijhoudingspartij van één of van beide partners
+
+10.1.5 Vastgelegde gegevens
+•
+•
+•
+
+Huwelijk
+Geslachtsnaam en samengestelde naam
+Naamgebruik
+
+10.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de volgende acties:
+•
+•
+
+•
+
+Hoofdactie Registratie einde geregistreerd partnerschap
+Geen bijzonderheden voor deze actie.
+Nevenactie Registratie geslachtsnaam (optioneel)
+De ‘Datum aanvang geldigheid’ van de actie moet gelijk zijn aan de datum waarop het
+geregistreerd partnerschap is beëindigd (zie ‘Relatie.datum einde’).
+Nevenactie Registratie naamgebruik (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Relatie.datum einde’.
+
+Status: Definitief, versie: 0.38
+
+Pagina 25 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+Aan de hoofdactie kunnen, naast de gegevens van het einde van de relatie, ook gegevens van één
+van de partners meegegeven worden. Dit is uitsluitend bedoeld voor het wijzigen van de
+geslachtsnaam van een pseudo-persoon. Als de geslachtsnaam van een ingezeten partner wijzigt,
+dan moet dit met de nevenactie ‘Registratie geslachtsnaam’ gebruikt worden. NB Het is niet
+toegestaan om de geslachtsnaam van een ingeschreven, niet ingezeten partner te wijzigen.
+
+Status: Definitief, versie: 0.38
+
+Pagina 26 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+11 Nietigverklaring huwelijk in Nederland
+11.1 Functionele context
+Het doel van de administratieve handeling ‘Nietigverklaring huwelijk in Nederland’ is het
+registreren van een huwelijk in Nederland dat ontbonden is vanwege een nietigverklaring.
+Het nietig verklaren houdt in dat het huwelijk officieel nooit voltrokken is geweest. De
+nietigverklaring werkt hierdoor terug tot het aanvangstijdstip van het huwelijk.
+Voor een partner die 'te goeder trouw' betrokken was bij het aangaan van de relatie heeft de
+nietigverklaring voor de registratie in de BRP helzelfde rechtsgevolg. Er wordt dus geen
+uitzonderingssituatie gecreëerd. Eventuele gevolgen van een nietigverklaring voor bijvoorbeeld de
+kinderen, gemeenschappelijke boedel en dergelijke worden door de rechter uitgesproken, en gaan
+buiten de registratie in de centrale voorzieningen om.
+De nietigverklaring werkt niet terug ten aanzien van kinderen die geboren zijn uit het huwelijk en
+heeft geen gevolgen voor de familierechtelijke betrekking.
+Omdat een nietigverklaring terugwerkende kracht heeft is de datum van nietigverklaring gelijk aan
+de datum van voltrekking van het huwelijk. Deze ‘Datum einde’ wordt afgeleid geregistreerd en is
+gelijk aan de ‘Datum aanvang’ van het huwelijk. Het huwelijk heeft hierdoor dus in feite niet
+bestaan.
+Voor een ingezetene niet-Nederlander kan, afhankelijk van het toe te passen vreemd recht, een
+geslachtsnaamswijziging worden geregistreerd.
+Voor beide partners, voor zover het een ingezetene betreft, kan het naamgebruik worden
+geregistreerd.
+11.1.1 Brondocumenten
+•
+•
+•
+
+Huwelijksakte (met latere vermelding)
+Nederlandse rechterlijke uitspraak
+Verklaring of kennisgeving naamgebruik
+
+11.1.2 Betrokken personen
+•
+
+De twee personen die als partner bij het huwelijk betrokken zijn. Minimaal een van deze
+personen moet een ingezetene zijn de andere partner kan zowel ingeschrevene als pseudopersoon.
+
+11.1.3 Proces
+Analoog aan paragraaf 2.1.3.
+11.1.4 Bijhoudings(voorstel)partijen
+•
+•
+
+Registergemeente van het huwelijk
+Bijhoudingspartij van één of van beide partners
+
+11.1.5 Vastgelegde gegevens
+•
+•
+•
+
+Huwelijk
+Geslachtsnaam en samengestelde naam
+Naamgebruik
+
+11.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de volgende acties:
+
+Status: Definitief, versie: 0.38
+
+Pagina 27 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+•
+
+•
+
+•
+
+Hoofdactie Registratie einde huwelijk
+‘Relatie.Land/Gebied einde’ wordt bij op basis van de administratieve handeling afgeleid
+geregistreerd met de waarde ‘Nederland’.
+Nevenactie Registratie geslachtsnaam (optioneel)
+De ‘Datum aanvang geldigheid’ van de actie moet gelijk zijn aan de datum waarop het huwelijk
+is aangegaan (zie ‘Relatie.datum aanvang’).
+Nevenactie Registratie naamgebruik (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Relatie.datum aanvang’.
+Aan de hoofdactie kunnen, naast de gegevens van het einde van de relatie, ook gegevens van één
+van de partners meegegeven worden. Dit is uitsluitend bedoeld voor het wijzigen van de
+geslachtsnaam van een pseudo-persoon. Als de geslachtsnaam van een ingezeten partner wijzigt,
+dan moet dit met de nevenactie ‘Registratie geslachtsnaam’ gebruikt worden. NB Het is niet
+toegestaan om de geslachtsnaam van een ingeschreven, niet ingezeten partner te wijzigen.
+
+Status: Definitief, versie: 0.38
+
+Pagina 28 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+12 Nietigverklaring geregistreerd partnerschap in Nederland
+12.1 Functionele context
+Het doel van de administratieve handeling ‘Nietigverklaring geregistreerd partnerschap in
+Nederland’ is registreren dat een geregistreerd partnerschap in Nederland is ontbonden vanwege
+een nietigverklaring.
+Het nietig verklaren houdt in dat het geregistreerd partnerschap officieel nooit voltrokken is
+geweest. De nietigverklaring werkt hierdoor terug tot het tijdstip van het geregistreerd
+partnerschap.
+Voor een partner die 'te goeder trouw' betrokken was bij het aangaan van de relatie heeft de
+nietigverklaring voor de registratie in de BRP hetzelfde rechtsgevolg. Eventuele gevolgen van een
+nietigverklaring voor bijvoorbeeld de kinderen, gemeenschappelijke boedel en dergelijke worden
+door de rechter uitgesproken en gaan buiten de registratie in de centrale voorzieningen om.
+De nietigverklaring werkt niet terug ten aanzien van kinderen die geboren zijn uit het geregistreerd
+partnerschap.
+Omdat een nietigverklaring terugwerkende kracht heeft is de datum van nietigverklaring gelijk aan
+de datum aanvang van het Geregistreerd partnerschap. Deze ‘Datum einde’ wordt geautomatiseerd
+geregistreerd en is gelijk aan de ‘Datum aanvang’ van het Geregistreerd partnerschap. Het
+Geregistreerd partnerschap heeft hierdoor dus in feite niet bestaan.
+12.1.1 Brondocumenten
+•
+•
+•
+•
+
+Akte van partnerschapsregistratie
+Akte van beëindiging partnerschapsregistratie
+Nederlandse rechterlijke uitspraak
+Verklaring of kennisgeving naamgebruik
+
+12.1.2 Betrokken personen
+•
+
+De twee personen die als partner bij het huwelijk betrokken zijn. Minimaal een van deze
+personen moet een ingezetene zijn de andere partner kan zowel ingeschrevene als pseudopersoon.
+
+12.1.3 Proces
+Analoog aan paragraaf 2.1.3.
+12.1.4 Bijhoudings(voorstel)partijen
+•
+•
+
+Registergemeente van het geregistreerd partnerschap
+Bijhoudingspartij van één of van beide partners
+
+12.1.5 Vastgelegde gegevens
+•
+•
+•
+
+Huwelijk
+Geslachtsnaam en samengestelde naam
+Naamgebruik
+
+12.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de volgende acties:
+•
+
+Hoofdactie Registratie einde geregistreerd partnerschap
+Het ‘Relatie.Land/Gebied einde’ wordt bij op basis van de administratieve handeling afgeleid
+geregistreerd met de waarde ‘Nederland’.
+
+Status: Definitief, versie: 0.38
+
+Pagina 29 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+•
+
+•
+
+Nevenactie Registratie geslachtsnaam (optioneel)
+De ‘Datum aanvang geldigheid’ van de actie moet gelijk zijn aan de datum waarop het
+geregistreerd partnerschap is aangegaan (zie ‘Relatie.datum aanvang’).
+Nevenactie Registratie naamgebruik (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Relatie.datum aanvang’.
+Aan de hoofdactie kunnen, naast de gegevens van het einde van de relatie, ook gegevens van één
+van de partners meegegeven worden. Dit is uitsluitend bedoeld voor het wijzigen van de
+geslachtsnaam van een pseudo-persoon. Als de geslachtsnaam van een ingezeten partner wijzigt,
+dan moet dit met de nevenactie ‘Registratie geslachtsnaam’ gebruikt worden. NB Het is niet
+toegestaan om de geslachtsnaam van een ingeschreven, niet ingezeten partner te wijzigen.
+
+Status: Definitief, versie: 0.38
+
+Pagina 30 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+13 Ongedaanmaking huwelijk
+13.1 Functionele context
+Het doel van de correctiehandeling ‘Ongedaanmaking huwelijk’ is het laten vervallen van een
+huwelijk, inclusief de bijbehorende partner-betrokkenheden en groepen van een eventueel
+betrokken pseudo-persoon.
+Voorbeelden van situaties waarin deze handeling kan worden toegepast:
+•
+•
+•
+•
+
+het huwelijk is ten onrechte opgenomen
+de verkeerde persoon is als partner bij het huwelijk opgenomen
+de huwelijksakte is doorgehaald
+een geregistreerd partnerschap is ten onrechte als een huwelijk opgenomen
+
+De eventuele geslachtsnaam die is gewijzigd als gevolg van het huwelijk blijft door deze handeling
+ongewijzigd. Deze moet zo nodig met een andere administratieve handeling gecorrigeerd worden.
+13.1.1 Brondocumenten
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [5].
+13.1.2 Betrokken personen
+•
+
+Partners
+
+13.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+Wanneer de correctie een GBA-persoon betreft wordt door de migratievoorziening een
+bijhoudingsnotificatie met toelichting teruggestuurd (‘gebounced’) naar de indienende partij van
+het bijhoudingsvoorstel. De reden hiervoor is dat het GBA-stelsel geen correctieberichten kent. Zie
+ontwerpbeslissing in paragraaf 4.10 van Aspectbeschrijving – Corrigeren [5].
+13.1.4 Bijhoudings(voorstel)partijen
+•
+•
+
+Registergemeente van het huwelijk
+Bijhoudingsgemeente van één of van beide partners
+
+13.1.5 Vastgelegde gegevens
+Door de ongedaanmaking vervallen de volgende gegevens naar de formele historie:
+•
+•
+•
+
+de relatie
+de bij de relatie behorende betrokkenheden
+de bij de relatie behorende pseudo-persoon (indien aanwezig)
+
+Het opgeven van een ‘Nadere aanduiding verval’ is optioneel. Als deze is opgegeven wordt deze
+vastgelegd bij alle voorkomens (van groepen) die door deze administratieve handeling vervallen.
+Indien de ‘Nadere aanduiding verval’ gelijk is aan ‘S’ (Strijdig met de openbare orde), moet ter
+verantwoording hiervan als bron een rechtsgrond worden opgenomen.
+
+13.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande actie.
+•
+
+Hoofdactie Verval huwelijk
+Geen bijzonderheden voor deze actie.
+
+Status: Definitief, versie: 0.38
+
+Pagina 31 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+De volgende bij de relatie behorende IST-gegevens worden (indien aanwezig) verwijderd:
+•
+•
+•
+
+Stapel \ Relatie
+Stapel
+Stapel voorkomen
+
+Voor meer informatie over het verwijderen van IST-gegevens bij het verwerken van correcties, zie
+paragraaf 4.9 van Aspectbeschrijving – Corrigeren [5].
+
+Status: Definitief, versie: 0.38
+
+Pagina 32 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+14 Ongedaanmaking geregistreerd partnerschap
+14.1 Functionele context
+Het doel van de correctiehandeling ‘Ongedaanmaking geregistreerd partnerschap’ is het laten
+vervallen van een geregistreerd partnerschap, inclusief de bijbehorende partner-betrokkenheden
+en groepen van een eventueel betrokken pseudo-persoon.
+Voorbeelden van situaties waarin deze handeling kan worden toegepast:
+•
+•
+•
+•
+
+het geregistreerd partnerschap is ten onrechte opgenomen
+de verkeerde persoon is als partner bij het geregistreerd partnerschap opgenomen
+de akte van het geregistreerd partnerschap is doorgehaald
+een huwelijk is ten onrechte als een geregistreerd partnerschap opgenomen
+
+De eventuele geslachtsnaam die is gewijzigd als gevolg van het geregistreerd partnerschap blijft
+door deze handeling ongewijzigd. Deze moet zo nodig met een andere administratieve handeling
+gecorrigeerd worden.
+14.1.1 Brondocumenten
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [5].
+14.1.2 Betrokken personen
+•
+
+Partners
+
+14.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+Wanneer de correctie een GBA-persoon betreft wordt door de migratievoorziening een
+bijhoudingsnotificatie met toelichting teruggestuurd (‘gebounced’) naar de indienende partij van
+het bijhoudingsvoorstel. De reden hiervoor is dat het GBA-stelsel geen correctieberichten kent. Zie
+ontwerpbeslissing in paragraaf 4.10 van Aspectbeschrijving – Corrigeren [5].
+14.1.4 Bijhoudings(voorstel)partijen
+
+•
+•
+
+Registergemeente van het geregistreerd partnerschap
+De gemeente waar het geregistreerd partnerschap is aangegaan en de akte is opgemaakt.
+Bijhoudingsgemeente van één of van beide partners
+
+14.1.5 Vastgelegde gegevens
+Door de ongedaanmaking vervallen de volgende gegevens naar de formele historie:
+•
+•
+•
+
+de relatie
+de bij de relatie behorende betrokkenheden
+de bij de relatie behorende pseudo-persoon (indien aanwezig)
+
+Het opgeven van een ‘Nadere aanduiding verval’ is optioneel. Als deze is opgegeven wordt deze
+vastgelegd bij alle voorkomens (van groepen) die door deze administratieve handeling vervallen.
+Indien de ‘Nadere aanduiding verval’ gelijk is aan ‘S’ (Strijdig met de openbare orde), moet ter
+verantwoording hiervan als bron een rechtsgrond worden opgenomen.
+
+14.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande actie.
+•
+
+Hoofdactie Verval geregistreerd partnerschap
+Geen bijzonderheden voor deze actie.
+
+Status: Definitief, versie: 0.38
+
+Pagina 33 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+De volgende bij de relatie behorende IST-gegevens worden (indien aanwezig) verwijderd:
+•
+•
+•
+
+Stapel \ Relatie
+Stapel
+Stapel voorkomen
+
+Voor meer informatie over het verwijderen van IST-gegevens bij het verwerken van correcties, zie
+paragraaf 4.9 van Aspectbeschrijving – Corrigeren [5].
+
+Status: Definitief, versie: 0.38
+
+Pagina 34 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+15 Wijziging partnergegevens huwelijk
+15.1 Functionele context
+Het doel van de administratieve handeling ‘Wijzigen partnergegevens huwelijk’ is de registratie van
+de gegevens van de huwelijkspartner van een partner uitsluitend op de persoonslijst van de
+ingezetene (hoofdpersoon). Het gaat om registratie van gegevens die niet volledig zijn opgenomen
+of het wijzigen van de gegevens van de partner omdat die niet langer actueel zijn. Het kan
+bijvoorbeeld gaan om het opnemen van identificatienummers of om het wijzigen van
+samengestelde naam-, geboorte- of geslachtsaanduiding gegevens van de partner.
+Deze administratieve handeling is per definitie asymmetrisch van aard. De partner is als
+pseudopersoon opgenomen bij de hoofdpersoon of wordt dat door deze administratieve handeling.
+Dit laatste kan betekenen dat een bestaand symmetrisch huwelijk tussen de hoofdpersoon en
+partner wordt ontrelateerd.
+De administratieve handeling kan worden gebruikt de situaties dat de ingezetene (hoofdpersoon) is
+gehuwd en gegevens van de partner moeten worden gewijzigd. Hierbij zijn de volgende varianten
+mogelijk:
+1. de partner is een ingeschrevene,
+2. de partner is een pseudo-persoon en niet in de BRP bekend,
+3. de partner is een pseudo-persoon en ook als ingeschrevene in de BRP bekend.
+
+1. Als de gegevens van de partner moeten worden opgenomen of gewijzigd dan gebeurt dit
+asymmetrisch en dus zal de huwelijksrelatie eerst ontrelateerd worden alvorens de gegevens
+van de partner gewijzigd worden. Hiermee kunnen gegevens van een partner dus worden
+gewijzigd of opgenomen op de persoonslijst van de hoofdpersoon voordat deze op de partners
+eigen persoonslijst zijn gewijzigd of opgenomen. Bijvoorbeeld omdat de partner geëmigreerd is
+en registratie van de naamswijziging van de partner nog niet op voorstel van een ABO of door
+de Minister is gerealiseerd. Ook kunnen de gegevens van een partner op de persoonslijst van
+de hoofdpersoon bewust anders worden opgenomen dan zoals deze op de persoonslijst van
+partner staan. Bijvoorbeeld omdat een brondocument gegevens bevat die afwijken van de
+gegevens zoals deze op de persoonslijst van partner staan2.
+2. De partner is als pseudo-persoon opgenomen omdat deze niet bekend is in de BRP. Deze is
+alleen opgenomen in de context van het huwelijk van de hoofdpersoon. De gegevens van de
+partner kunnen alleen met deze handeling gewijzigd worden omdat de partner geen
+ingeschrevene is.
+3. De pseudo-persoon is ontstaan door een huwelijk te ontrelateren of bij het asymmetrisch
+vastleggen van een huwelijk. Bijvoorbeeld omdat er een wijziging heeft plaatsgevonden op de
+persoonslijst van de partner die niet automatisch gefiatteerd is door de bijhoudingspartij van
+de hoofdpersoon. In dit geval is deze pseudo-persoon dus ook als ingezetene of nietingezetene bekend. Met deze handeling kan er dan handmatig gefiatteerd worden door de
+wijziging van de partnergegevens ook bij de hoofdpersoon op te nemen. Hierna kan de relatie
+weer symmetrisch3 worden.
+
+15.2 Brondocumenten
+De basis voor de administratieve handeling is een brondocument waaruit blijkt dat de gegevens
+van de partner zijn gewijzigd.
+
+2
+
+Als het duidelijk is dat het om een fout in het brondocument gaat is het wenselijker om deze fout eventueel te herstellen
+en niet over te nemen in de BRP.
+3 Als bij twee asymmetrische relaties dezelfde personen zijn betrokken en ook de gegevens overeen komen kan de relatie
+weer symmetrisch worden gemaakt door te relateren.
+
+Status: Definitief, versie: 0.38
+
+Pagina 35 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+15.3 Betrokken personen
+•
+
+De ingezetene
+
+15.4 Proces
+Als de gerelateerde partner een ingeschrevene is (en het dus een symmetrisch huwelijk betreft
+tussen de partners), dan leidt deze administratieve handeling automatisch tot het ontrelateren van
+de relatie. Zie UCS-BY.1.ON – Ontrelateren [8]. De administratieve handeling wordt verwerkt alsof
+deze wordt bezien vanuit de hoofdpersoon. Dit wordt bewerkstelligd doordat in UCS-BY.1.MP –
+Maak Bijhoudingsplan [7] de gerelateerde partner bijhoudingssituatie ‘Uitgesloten persoon’ krijgt in
+het bijhoudingsplan.
+
+15.5 Bijhoudings(voorstel)partijen
+De bijhoudingspartij van de ingezetene.
+
+15.6 Vastgelegde gegevens
+•
+•
+•
+•
+
+Identificatienummers van de partner
+Samengestelde naam van de partner
+Geboorte van de partner
+Geslachtsaanduiding van de partner
+
+Als voor de vastlegging van bovenstaande gegevens ontrelateerd moet worden, worden er twee
+asymmetrische relaties vastgelegd zoals beschreven in UCS-BY.1.ON – Ontrelateren [8].
+
+15.7 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande actie.
+•
+•
+•
+•
+
+Registratie identificatienummers gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+Registratie samengestelde naam gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+Registratie geboorte gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+Registratie geslachtsaanduiding gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor identificatienummers,
+samengestelde naam en Geslachtsaanduiding ‘Datum aanvang geldigheid’.
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor geboorte ‘Datum
+geboorte’.
+
+Status: Definitief, versie: 0.38
+
+Pagina 36 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+16 Wijziging partnergegevens geregistreerd partnerschap
+Deze handeling is, op het feit dat het om een geregistreerd partnerschap i.p.v. een huwelijk gaat
+na, gelijk aan de administratieve handeling ‘Wijzigen partnergegevens huwelijk’.
+
+Status: Definitief, versie: 0.38
+
+Pagina 37 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+17 Correctie huwelijk
+17.1 Functionele context
+Het doel van de administratieve handeling ‘Correctie huwelijk’ is het corrigeren van de gegevens
+van een huwelijk.
+Voorbeelden van situaties waarin deze handeling kan worden toegepast:
+•
+•
+
+De aanvangs- en/of beëindigingsgegevens zijn niet correct.
+Het laten herleven van een ontbonden huwelijk na (bijvoorbeeld) een vernietiging van een
+nietigverklaring of vernietiging van een ontbinding.
+
+Het volgende kan met deze administratieve handeling niet worden gecorrigeerd: soort relatie,
+betrokkenheden en persoonsgegevens van betrokken personen. Als door het huwelijk de naam is
+gewijzigd dan moet dit met een of meerdere andere administratieve handelingen gecorrigeerd te
+worden. Een ongedaan gemaakt huwelijk kan ook niet worden gecorrigeerd.
+17.1.1 Brondocumenten
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [5].
+17.1.2 Betrokken personen
+•
+
+Partners
+
+17.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+Wanneer de correctie een GBA-persoon betreft wordt door de migratievoorziening een
+bijhoudingsnotificatie met toelichting teruggestuurd (‘gebounced’) naar de indienende partij van
+het bijhoudingsvoorstel. De reden hiervoor is dat het GBA-stelsel geen correctieberichten kent. Zie
+ontwerpbeslissing in paragraaf 4.10 van Aspectbeschrijving – Corrigeren [5].
+17.1.4 Bijhoudings(voorstel)partijen
+
+•
+•
+
+Registergemeente van het huwelijk
+De gemeente waar het huwelijk is voltrokken en de akte is opgemaakt.
+Bijhoudingsgemeente van één of van beide partners
+
+17.1.5 Vastgelegde gegevens
+Met deze administratieve handeling vervalt een bestaand voorkomen van de volgende groep naar
+de formele historie en wordt er een nieuw voorkomen van deze groep geregistreerd:
+•
+
+Relatie.Standaard
+
+Optioneel kan bij het laten vervallen van een voorkomen een ‘Nadere aanduiding verval’ worden
+vastgelegd. Indien de ‘Nadere aanduiding verval’ gelijk is aan ‘S’ (Strijdig met de openbare orde),
+moet ter verantwoording hiervan als bron een rechtsgrond worden opgenomen.
+
+17.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties:
+•
+•
+
+Correctieverval relatie
+Geen bijzonderheden voor deze actie.
+Correctieregistratie relatie
+Geen bijzonderheden voor deze actie.
+
+Status: Definitief, versie: 0.38
+
+Pagina 38 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+De volgende bij de relatie behorende IST-gegevens worden (indien aanwezig) verwijderd:
+•
+•
+•
+
+Stapel \ Relatie
+Stapel
+Stapel voorkomen
+
+Voor meer informatie over het verwijderen van IST-gegevens bij het verwerken van correcties, zie
+paragraaf 4.9 van Aspectbeschrijving – Corrigeren [5].
+
+Status: Definitief, versie: 0.38
+
+Pagina 39 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+18 Correctie geregistreerd partnerschap
+18.1 Functionele context
+Het doel van de administratieve handeling ‘Correctie geregistreerd partnerschap’ is het corrigeren
+van de gegevens van een geregistreerd partnerschap.
+Voorbeelden van situaties waarin deze handeling kan worden toegepast:
+•
+•
+
+De aanvangs- en/of beëindigingsgegevens zijn niet correct.
+Het laten herleven van een beëindigd geregistreerd partnerschap na (bijvoorbeeld) een
+vernietiging van een nietigverklaring of vernietiging van een beëindiging.
+
+Het volgende kan met deze administratieve handeling niet worden gecorrigeerd: soort relatie,
+betrokkenheden en persoonsgegevens van betrokken personen. Als door het geregistreerd
+partnerschap de naam is gewijzigd dan moet dit met een of meerdere andere administratieve
+handelingen gecorrigeerd worden. Een ongedaan gemaakt geregistreerd partnerschap kan ook niet
+worden gecorrigeerd.
+18.1.1 Brondocumenten
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [5].
+18.1.2 Betrokken personen
+•
+
+Partners
+
+18.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+Wanneer de correctie een GBA-persoon betreft wordt door de migratievoorziening een
+bijhoudingsnotificatie met toelichting (‘gebounced’) naar de indienende partij van het
+bijhoudingsvoorstel. De reden hiervoor is dat het GBA-stelsel geen correctieberichten kent. Zie
+ontwerpbeslissing in paragraaf 4.10 van Aspectbeschrijving – Corrigeren [5].
+18.1.4 Bijhoudings(voorstel)partijen
+•
+•
+
+Registergemeente van het geregistreerd partnerschap
+Bijhoudingsgemeente van één of van beide partners
+
+18.1.5 Vastgelegde gegevens
+Met deze administratieve handeling vervalt een bestaand voorkomen van de volgende groep naar
+de formele historie en wordt er een nieuw voorkomen van deze groep geregistreerd:
+•
+
+Relatie.Standaard
+
+Optioneel kan bij het laten vervallen van een voorkomen een ‘Nadere aanduiding verval’ worden
+vastgelegd. Indien de ‘Nadere aanduiding verval’ gelijk is aan ‘S’ (Strijdig met de openbare orde),
+moet ter verantwoording hiervan als bron een rechtsgrond worden opgenomen.
+
+18.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties:
+•
+•
+
+Correctieverval relatie
+Geen bijzonderheden voor deze actie.
+Correctieregistratie relatie
+Geen bijzonderheden voor deze actie.
+
+Status: Definitief, versie: 0.38
+
+Pagina 40 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+De volgende bij de relatie behorende IST-gegevens worden (indien aanwezig) verwijderd:
+•
+•
+•
+
+Stapel \ Relatie
+Stapel
+Stapel voorkomen
+
+Voor meer informatie over het verwijderen van IST-gegevens bij het verwerken van correcties, zie
+paragraaf 4.9 van Aspectbeschrijving – Corrigeren [5].
+
+Status: Definitief, versie: 0.38
+
+Pagina 41 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+19 Correctie partnergegevens huwelijk
+19.1 Functionele context
+Het doel van de administratieve handeling ‘Correctie partnergegevens huwelijk’ is het corrigeren
+van de gegevens van een gerelateerde partner op de persoonslijst van de hoofdpersoon. De
+gerelateerde partner kan een ingeschrevene of pseudo-persoon zijn.
+De bijhouding naar aanleiding van deze administratieve handeling is asymmetrisch. Alleen de
+persoonslijst van de hoofdpersoon wijzigt.
+19.1.1 Brondocumenten
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [5].
+19.1.2 Betrokken personen
+•
+
+•
+
+Hoofdpersoon (partner)
+De ingezetene op wiens persoonslijst de gegevens van de gerelateerde partner worden
+gecorrigeerd.
+Gerelateerde (partner)
+De ingezetene of pseudo-persoon waarvan de gegevens worden gecorrigeerd op de
+persoonslijst van de hoofdpersoon.
+
+19.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+Als de gerelateerde partner een ingeschrevene is (en het dus een symmetrisch huwelijk betreft
+tussen de partners), dan leidt deze administratieve handeling automatisch tot het ontrelateren van
+de relatie. Zie UCS-BY.1.ON – Ontrelateren [8]. De administratieve handeling wordt verwerkt alsof
+deze wordt bezien vanuit de hoofdpersoon. Dit wordt bewerkstelligd doordat in UCS-BY.1.MP –
+Maak Bijhoudingsplan [7] de gerelateerde partner bijhoudingssituatie ‘Uitgesloten persoon’ krijgt in
+het bijhoudingsplan.
+19.1.4 Bijhoudings(voorstel)partijen
+
+•
+
+Bijhoudingspartij van de hoofdpersoon
+
+19.1.5 Vastgelegde gegevens
+Met deze administratieve handeling kunnen bestaande voorkomens van de volgende groepen van
+de gerelateerde persoon naar de formele historie vervallen en kunnen nieuwe voorkomens worden
+geregistreerd:
+•
+•
+•
+•
+
+Identificatienummers
+Geslachtsaanduiding
+Geboorte
+Samengestelde naam4
+
+Optioneel kan bij het laten vervallen van een voorkomen een ‘Nadere aanduiding verval’ worden
+vastgelegd. Indien de ‘Nadere aanduiding verval’ gelijk is aan ‘S’ (Strijdig met de openbare orde),
+moet ter verantwoording hiervan als bron een rechtsgrond worden opgenomen.
+
+4
+
+Zie paragraaf 4.3.1 van Aspectbeschrijving – Corrigeren [5] voor een toelichting op het feit dat bij deze administratieve
+handeling ook voor een ingeschreven gerelateerde de samengestelde naam in het bericht kan worden opgenomen.
+
+Status: Definitief, versie: 0.38
+
+Pagina 42 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+19.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met minimaal één van de onderstaande
+acties:
+•
+•
+•
+•
+•
+•
+•
+•
+
+Correctieverval identificatienummers gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieregistratie identificatienummers gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieverval geslachtsaanduiding gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieregistratie geslachtsaanduiding gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieverval geboorte gerelateerde(optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieregistratie geboorte gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieverval samengestelde naam gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieregistratie samengestelde naam gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+De volgende bij de relatie behorende IST-gegevens worden (indien aanwezig) verwijderd:
+•
+•
+•
+
+Stapel \ Relatie
+Stapel
+Stapel voorkomen
+
+Voor meer informatie over het verwijderen van IST-gegevens bij het verwerken van correcties, zie
+paragraaf 4.9 van Aspectbeschrijving – Corrigeren [5].
+
+Status: Definitief, versie: 0.38
+
+Pagina 43 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+20 Correctie partnergegevens geregistreerd partnerschap
+20.1 Functionele context
+Het doel van de administratieve handeling ‘Correctie partnergegevens geregistreerd partnerschap’
+is het corrigeren van de gegevens van een gerelateerde partner op de persoonslijst van de
+hoofdpersoon. De gerelateerde partner kan een ingeschrevene of pseudo-persoon zijn.
+De bijhouding naar aanleiding van deze administratieve handeling is asymmetrisch. Alleen de
+persoonslijst van de hoofdpersoon wijzigt.
+20.1.1 Brondocumenten
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [5].
+20.1.2 Betrokken personen
+•
+
+•
+
+Hoofdpersoon (partner)
+De ingezetene op wiens persoonslijst de gegevens van de gerelateerde partner worden
+gecorrigeerd.
+Gerelateerde (partner)
+De ingezetene of pseudo-persoon waarvan de gegevens worden gecorrigeerd op de
+persoonslijst van de hoofdpersoon.
+
+20.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [4].
+Als de gerelateerde partner een ingeschrevene is (en het dus een symmetrisch geregistreerd
+partnerschap betreft tussen de partners), dan leidt deze administratieve handeling automatisch tot
+het ontrelateren van de relatie. Zie UCS BY.1.ON – Ontrelateren [8]. De administratieve handeling
+wordt verwerkt alsof deze wordt bezien vanuit de hoofdpersoon. Dit wordt bewerkstelligd doordat
+in UCS-BY.1.MP – Maak Bijhoudingsplan [7] de gerelateerde partner bijhoudingssituatie
+‘Uitgesloten persoon’ krijgt in het bijhoudingsplan.
+20.1.4 Bijhoudings(voorstel)partijen
+
+•
+
+Bijhoudingspartij van de hoofdpersoon
+
+20.1.5 Vastgelegde gegevens
+Met deze administratieve handeling kunnen bestaande voorkomens van de volgende groepen van
+de gerelateerde persoon naar de formele historie vervallen en kunnen nieuwe voorkomens worden
+geregistreerd:
+•
+•
+•
+•
+
+Identificatienummers
+Geslachtsaanduiding
+Geboorte
+Samengestelde naam5
+
+Optioneel kan bij het laten vervallen van een voorkomen een ‘Nadere aanduiding verval’ worden
+vastgelegd. Indien de ‘Nadere aanduiding verval’ gelijk is aan ‘S’ (Strijdig met de openbare orde),
+moet ter verantwoording hiervan als bron een rechtsgrond worden opgenomen.
+
+5
+
+Zie paragraaf 4.3.1 van Aspectbeschrijving – Corrigeren [5] voor een toelichting op het feit dat bij deze administratieve
+handeling ook voor een ingeschreven gerelateerde de samengestelde naam in het bericht kan worden opgenomen.
+
+Status: Definitief, versie: 0.38
+
+Pagina 44 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+20.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met minimaal één van de onderstaande
+acties:
+•
+•
+•
+•
+•
+•
+•
+•
+
+Correctieverval identificatienummers gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieregistratie identificatienummers gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieverval geslachtsaanduiding gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieregistratie geslachtsaanduiding gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieverval geboorte gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieregistratie geboorte gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieverval samengestelde naam gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieregistratie samengestelde naam gerelateerde (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+De volgende bij de relatie behorende IST-gegevens worden (indien aanwezig) verwijderd:
+•
+•
+•
+
+Stapel \ Relatie
+Stapel
+Stapel voorkomen
+
+Voor meer informatie over het verwijderen van IST-gegevens bij het verwerken van correcties, zie
+paragraaf 4.9 van Aspectbeschrijving – Corrigeren [5].
+
+Status: Definitief, versie: 0.38
+
+Pagina 45 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+21 GBA handelingen
+Deze module kent de volgende GBA handelingen:
+•
+•
+•
+•
+•
+
+GBA
+GBA
+GBA
+GBA
+GBA
+
+-
+
+Voltrekking huwelijk in Nederland
+Aangaan geregistreerd partnerschap in Nederland
+Ontbinding huwelijk in Nederland
+Beëindiging geregistreerd partnerschap in Nederland
+Omzetting geregistreerd partnerschap in huwelijk
+
+GBA handelingen worden door de migratievoorziening geleverd en komen van de GBA Toevallige
+gebeurtenissenberichten (Tb02). Deze worden gedurende de duale periode ontvangen van
+gemeenten die vallen onder het GBA regime.
+Voor deze bijhoudingsberichten geldt dat de verwerkingswijze uitsluitend ‘Bijhouding’ kan zijn.
+‘Prevalidatie’ is niet van toepassing op bijhoudingsberichten die worden ontvangen via de
+migratievoorziening.
+Het betreft altijd een asymmetrische bijhoudingen waarbij één hoofdpersoon betrokken is. Dit komt
+omdat de scope van verwerking van een administratieve handeling bij de GBA de persoonslijst is.
+Een handeling op een relatie, zoals bijvoorbeeld een huwelijk, wordt per persoonslijst van de
+betrokken personen verwerkt. Per gewijzigde persoonslijst zal dus een GBA toevallige
+gebeurtenissenbericht (Tb02) worden verstuurd.
+
+Status: Definitief, versie: 0.38
+
+Pagina 46 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+22 GBA - Voltrekking Huwelijk in Nederland
+Het doel van de administratieve handeling ‘GBA - Voltrekking huwelijk in Nederland’ is het
+registreren van een in Nederland voltrokken huwelijk. Ook een huwelijk dat is voltrokken op een
+consulaat in Nederland wordt met deze handeling geregistreerd.
+Het gaat in dit geval om een huwelijk waarbij de feitgemeente valt onder het GBA regime en
+waarbij de rechtsgemeente van minimaal één betrokken partner valt onder het BRP regime.
+22.1.1 Brondocumenten
+•
+•
+
+Huwelijksakte
+Een consulaire akte of uittreksel daarvan
+
+22.1.2 Betrokken personen
+•
+
+De twee personen die als partner bij het huwelijk betrokken zijn. Minimaal een van deze
+personen moet een ingezetene zijn.
+
+22.1.3 Proces
+Bij de AH ‘GBA - Voltrekking huwelijk in Nederland’ spelen de volgende partijen een rol:
+-
+
+Feitgemeente, zijnde de gemeente waar het huwelijk voltrokken wordt
+Bijhoudingspartij(en) van de partners
+
+Vaak zullen beide partners dezelfde gemeente wonen. De feitgemeente kan anders zijn in het geval
+van een toevallig huwelijk. Het kan echter ook voorkomen dat feitgemeente en beide
+bijhoudingspartijen verschillend zijn.
+22.1.3.1 Feitgemeente in BRP, bijhoudingspartijen in GBA
+
+In deze situatie vindt het huwelijk plaats in een BRP-gemeente en zijn de bijhoudingspartijen van
+de partners GBA-gemeenten:
+
+Het proces verloopt als volgt:
+•
+•
+
+•
+
+Het proces start als de BRP-feitgemeente het huwelijk gaat registreren met de AH ‘Voltrekking
+huwelijk in Nederland’;
+De BRP Centrale Voorzieningen constateert dat de bijhoudingspartij van de partners een GBAgemeente is en stuurt een bijhoudingsnotificatie met bijhoudingssituatie ‘GBA’ naar de
+migratievoorziening die op zijn beurt een Tb02-bericht stuurt naar de bijhoudingspartijen van
+de partners;
+In het schema zijn nu twee mogelijke situaties geschetst. De gemeente van partner 1 kan het
+Tb02-bericht verwerken en stuurt ter bevestiging een null-bericht terug naar de
+migratievoorziening. De gemeente van partner 2 constateert een fout en stuurt daarom een
+Tf21-bericht naar de migratievoorziening. Deze stuurt op haar beurt een notificatie naar de
+BRP-feitgemeente ter indicatie dat een fout opgetreden is.
+
+Status: Definitief, versie: 0.38
+
+Pagina 47 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+Opmerking: In bovenstaande situatie zijn beide bijhoudingspartijen van de partners GBAgemeenten. Als één van beide een BRP-gemeente zou zijn, dan vindt de afhandeling voor deze
+partij (uiteraard) in de BRP plaats. Hiervoor wordt verwezen naar paragraaf Fout!
+Verwijzingsbron niet gevonden..
+22.1.3.2 Feitgemeente in GBA, bijhoudingspartijen in BRP
+
+In deze situatie vindt het huwelijk plaats in een GBA-gemeente en zijn de bijhoudingspartijen van
+de partners BRP-gemeenten:
+
+Het proces verloopt als volgt:
+•
+•
+
+•
+
+Het proces start op het moment dat de GBA-feitgemeente het huwelijk gaat registreren.
+Het stuurt daartoe voor elk van de partners een Tb02-bericht in;
+Voor elk van de partners / Tb02-bericht worden de volgende stappen, onafhankelijk van
+elkaar, doorlopen:
+o Wanneer de migratievoorziening een fout constateert in het Tb02-bericht, zal deze
+een Tf21-bericht terugsturen naar de GBA-feitgemeente voor de betreffende
+partner. Wanneer de migratievoorziening geen fout constateert, wordt het proces
+vervolgd;
+o Omdat de gemeente van de partner zich niet in het GBA-stelsel bevindt, stuurt de
+migratievoorziening een bijhoudingsbericht met de AH ‘GBA-Voltrekking huwelijk in
+Nederland’ naar de BRP Centrale Voorzieningen;
+o De BRP Centrale Voorzieningen zal de administratieve handeling direct verwerken
+als de bijhoudingspartij van de een partner automatisch fiat aan heeft staan. Bij
+handmatige fiat zal de bijhoudingspartij van de partner zelf een bijhoudingsvoorstel
+moeten indienen met de AH ‘Voltrekking huwelijk in Nederland’;
+Het proces eindigt hier.
+
+Status: Definitief, versie: 0.38
+
+Pagina 48 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+Opmerking: In bovenstaande situatie zijn beide bijhoudingspartijen van de partners BRPgemeenten. Als één van beide een GBA-gemeente zou zijn dan vindt de afhandeling voor deze
+partij (uiteraard) in de GBA plaats en valt daarmee buiten de scope van deze use case.
+22.1.3.3 Aandachtspunten bij verwerking van GBA handelingen
+
+Bij deze handelingen kunnen er regels redundant zijn ten opzichte van de migratievoorziening. De
+volgende regels zijn redundant:
+•
+•
+
+R1849: Aktenummer verplicht bij Nederlandse registerakten en leeg bij andere
+documentsoorten
+R1850: Uitsluitend indien een document geen Nederlandse registerakte is mag de
+Omschrijving gevuld zijn
+
+Daarnaast worden de deblokkeerbare regels voor deze handelingen anders verwerkt.
+Deblokkeerbare regels zijn voor GBA handelingen niet relevant en moeten niet gecontroleerd
+worden. De deblokkeerbare regels zijn te herkennen aan de ‘D’ in de kolom ‘Niveau’
+(meldingsniveau).
+22.1.4 Bijhoudings(voorstel)partijen
+•
+•
+
+Registergemeente van het huwelijk
+Bijhoudingspartij van één of van beide partners
+
+22.1.5 Vastgelegde gegevens
+•
+
+Huwelijk
+
+22.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie aanvang huwelijk
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Relatie.datum aanvang’.
+
+Status: Definitief, versie: 0.38
+
+Pagina 49 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+23 GBA - Aangaan geregistreerd partnerschap in Nederland
+23.1 Functionele context
+Het doel van de administratieve handeling ‘GBA - Aangaan geregistreerd partnerschap in
+Nederland’ is het registreren van een in Nederland aangegaan geregistreerd partnerschap.
+Het gaat in dit geval om een geregistreerd partnerschap waarbij de feitgemeente valt onder het
+GBA regime en waarbij de rechtsgemeente van minimaal één betrokken partner valt onder het BRP
+regime.
+23.1.1 Brondocumenten
+•
+
+Akte van partnerschapsregistratie
+
+23.1.2 Betrokken personen
+•
+
+De twee personen die als partner bij het geregistreerd partnerschap betrokken zijn. Minimaal
+een van deze personen moet een ingezetene zijn.
+
+23.1.3 Proces
+Analoog aan paragraaf 22.1.3.
+23.1.4 Bijhoudings(voorstel)partijen
+•
+•
+
+Registergemeente van het geregistreerd partnerschap
+Bijhoudingspartij van één of van beide partners
+
+23.1.5 Vastgelegde gegevens
+•
+
+Geregistreerd partnerschap
+
+23.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie aanvang geregistreerd partnerschap
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Relatie.datum aanvang’.
+
+Status: Definitief, versie: 0.38
+
+Pagina 50 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+24 GBA - Ontbinding huwelijk in Nederland
+24.1 Functionele context
+Het doel van de administratieve handeling ‘GBA - Ontbinding huwelijk in Nederland’ is het
+registreren van de ontbinding van een huwelijk in Nederland.
+Deze administratieve handeling wordt ook gebruikt voor de registratie van de ontbinding van het
+huwelijk in geval van vermissing (rechtsvermoeden van overlijden).
+24.1.1 Brondocumenten
+•
+•
+•
+
+Overlijdensakte
+Huwelijksakte (met later vermelding)
+Akte van echtscheiding
+
+24.1.2 Betrokken personen
+•
+
+De twee personen die als partner bij het huwelijk betrokken zijn. Minimaal een van deze
+personen moet een ingezetene zijn.
+
+24.1.3 Proces
+Analoog aan paragraaf 22.1.3.
+24.1.4 Bijhoudings(voorstel)partijen
+•
+•
+
+Gemeente waar het huwelijk is ontbonden
+Bijhoudingspartij van één of van beide partners
+
+24.1.5 Vastgelegde gegevens
+•
+
+Huwelijk
+
+24.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de volgende acties:
+•
+
+Hoofdactie Registratie einde huwelijk
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Relatie.datum einde’.
+
+Status: Definitief, versie: 0.38
+
+Pagina 51 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+25 GBA - Beëindiging geregistreerd partnerschap in Nederland
+25.1 Functionele context
+Het doel van de administratieve handeling ‘GBA - Beëindiging geregistreerd partnerschap in
+Nederland’ wordt gebruikt om de beëindiging in Nederland van een geregistreerd partnerschap te
+registreren.
+25.1.1 Brondocumenten
+•
+•
+•
+
+Overlijdensakte
+Akte van partnerschapsregistratie
+Akte van beëindiging partnerschapsregistratie
+
+25.1.2 Betrokken personen
+•
+
+De twee personen die als partner bij het geregistreerd partnerschap betrokken zijn. Minimaal
+een van deze personen moet een ingezetene zijn.
+
+25.1.3 Proces
+Analoog aan paragraaf 22.1.3.
+25.1.4 Bijhoudings(voorstel)partijen
+•
+•
+
+Gemeente waar het geregistreerd partnerschap is beëindigd
+Bijhoudingspartij van één of van beide partners
+
+25.1.5 Vastgelegde gegevens
+•
+
+Huwelijk
+
+25.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de volgende acties:
+•
+
+Hoofdactie Registratie einde geregistreerd partnerschap
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Relatie.datum einde’.
+
+Status: Definitief, versie: 0.38
+
+Pagina 52 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+26 GBA - Omzetting geregistreerd partnerschap in huwelijk
+26.1 Functionele context
+Het doel van de administratieve Handeling ‘GBA - Omzetting geregistreerd partnerschap in
+huwelijk’ is de beëindiging van een geregistreerd partnerschap te registreren en tegelijkertijd een
+Nederlands huwelijk te registreren tussen dezelfde partners.
+26.1.1 Brondocumenten
+•
+
+Huwelijksakte
+
+26.1.2 Betrokken personen
+•
+
+De twee personen die als partner bij het huwelijk betrokken zijn. Minimaal een van deze
+personen moet een ingezetene zijn.
+
+26.1.3 Proces
+Analoog aan paragraaf 22.1.3.
+26.1.4 Bijhoudings(voorstel)partijen
+•
+•
+
+Feitgemeente
+Bijhoudingspartij van één of van beide partners
+
+26.1.5 Vastgelegde gegevens
+•
+
+Huwelijk
+
+26.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de volgende acties:
+•
+
+Hoofdactie Registratie einde geregistreerd partnerschap
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Relatie.datum einde’.
+Met deze administratieve handeling wordt een nieuw Huwelijk afgeleid van het om te zetten
+Geregistreerd partnerschap. Voor het Huwelijk worden nieuwe betrokken Partners aangemaakt die
+verwijzen naar 'dezelfde' Persoon-en als betrokken bij het Geregistreerd partnerschap. De
+aanvangsgegevens van het nieuwe Huwelijk worden als volgt afgeleid van de
+beëindigingsgegevens van het Geregistreerd partnerschap:
+•
+•
+•
+•
+
+‘Relatie.Datum aanvang’ van het Huwelijk wordt gelijk aan ‘Relatie.Datum einde’ van het
+Geregistreerd partnerschap
+‘Relatie.Gemeente aanvang’ van het Huwelijk wordt gelijk aan ‘Relatie.Gemeente einde’
+van het Geregistreerd partnerschap
+‘Relatie.Woonplaatsnaam aanvang’ van het Huwelijk wordt gelijk aan
+‘Relatie.Woonplaatsnaam einde’ van het Geregistreerd partnerschap
+‘Relatie.Land/gebied aanvang’ wordt gelijk aan 'Nederland'
+
+Indien een Partner een ‘Pseudo-persoon’ (P) betreft, moet onder 'dezelfde' Persoon worden
+verstaan, een exacte 'kopie' van die Persoon.
+
+Status: Definitief, versie: 0.38
+
+Pagina 53 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+27 Acties
+De generiek functionaliteit van de relevante acties binnen de context van deze module is in dit
+hoofdstuk per actie beschreven.
+
+27.1 Registratie aanvang huwelijk
+In de actie ‘Registratie aanvang huwelijk’ worden de gegevens van het huwelijk opgenomen en
+beide partners geïdentificeerd. Ingeschreven Partners worden met een objectsleutel aangewezen.
+Als een partner een pseudo-persoon is, dan worden de naam-, geslacht- en geboortegegevens van
+deze persoon opgenomen.
+Van een pseudo-persoon kan ook het Administratienummer of Burgerservicenummer bekend zijn,
+zodat ook de gedeeltelijke vulling van de groep Identificatienummers van toepassing kan zijn.
+De Bron voor deze actie is verplicht en betreft altijd een document.
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+•
+•
+
+•
+•
+•
+
+•
+•
+
+Relatie.Identiteit
+Deze groep wordt afgeleid geregistreerd. ‘Relatie.Soort’ wordt op basis van de actie afgeleid
+geregistreerd als ‘Huwelijk’.
+Relatie.Standaard
+Persoon.Identiteit
+Deze groep wordt afgeleid geregistreerd voor pseudo-personen (dus als één of meer van de
+groepen Geboorte, Geslachtsaanduiding, Samengestelde naam of Identificatienummers) van
+die persoon in de actie is opgenomen. ‘Persoon.Soort’ wordt dan geregistreerd met de waarde
+‘P’.
+Persoon.Geboorte
+Alleen van toepassing voor een pseudo-persoon.
+Persoon.Geslachtsaanduiding
+Alleen van toepassing voor een pseudo-persoon.
+Persoon.Samengestelde naam
+Alleen van toepassing voor een pseudo-persoon. ‘Samengestelde naam.Afgeleid?’ wordt
+geregistreerd met de waarde ‘Nee’.
+Persoon.Identificatienummers
+Allen van toepassing voor een pseudo-persoon.
+Betrokkenheid.identiteit
+Deze groep wordt afgeleid geregistreerd. ‘Betrokkenheid.rol’ wordt op basis van de actie
+afgeleid geregistreerd als ‘Partner’.
+
+Van de groepen met materiële historie (dus ‘Geslachtsaanduiding’, ‘Samengestelde naam’ en
+‘Identificatienummers’) wordt de ‘Datum aanvang geldigheid’ afgeleid van de ‘Datum aanvang
+geldigheid’ van de actie uit het bericht.
+
+27.2 Registratie aanvang geregistreerd partnerschap
+In de actie ‘Registratie aanvang geregistreerd partnerschap’ worden de gegevens van het
+geregistreerd partnerschap opgenomen en beide partners geïdentificeerd. Ingeschreven Partners
+worden met een objectsleutel aangewezen. Als een partner een pseudo-persoon is, dan worden de
+naam-, geslacht- en geboortegegevens van deze persoon opgenomen.
+Van een pseudo-persoon kan ook het Administratienummer of Burgerservicenummer bekend zijn,
+zodat ook de gedeeltelijke vulling van de groep Identificatienummers van toepassing kan zijn.
+De ‘Bron’ voor deze actie is verplicht en betreft altijd een document.
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+
+Status: Definitief, versie: 0.38
+
+Pagina 54 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+•
+
+•
+•
+
+•
+•
+•
+
+•
+
+Relatie.Identiteit
+Deze groep wordt afgeleid geregistreerd. ‘Relatie.Soort’ wordt op basis van de actie afgeleid
+geregistreerd als ‘Geregistreerd partnerschap’.
+Relatie.Standaard
+Persoon.Identiteit
+Deze groep wordt afgeleid geregistreerd voor pseudo-personen (dus als één of meer van de
+groepen ‘Geboorte’, ‘Geslachtsaanduiding’, ‘Samengestelde naam’ of ‘Identificatienummers’)
+van die persoon in de actie is opgenomen. ‘Persoon.Soort’ wordt dan geregistreerd met de
+waarde ‘P’.
+Persoon.Geboorte
+Alleen van toepassing voor een pseudo-persoon.
+Persoon.Geslachtsaanduiding
+Alleen van toepassing voor een pseudo-persoon.
+Persoon.Samengestelde naam
+Alleen van toepassing voor een pseudo-persoon. ‘Samengestelde naam.Afgeleid?’ wordt
+geregistreerd met de waarde ‘Nee’.
+Betrokkenheid.identiteit
+Deze groep wordt afgeleid geregistreerd. ‘Betrokkenheid.rol’ wordt op basis van de actie
+afgeleid geregistreerd als ‘Partner’.
+
+Van de groepen met materiële historie (dus ‘Geslachtsaanduiding’, ‘Samengestelde naam’ en
+‘Identificatienummers’) wordt de ‘Datum aanvang geldigheid’ afgeleid van de ‘Datum aanvang
+geldigheid’ van de actie uit het bericht.
+
+27.3 Registratie einde huwelijk
+In de actie ‘Registratie einde huwelijk’ wordt het huwelijk geïdentificeerd en worden de gegevens
+opgenomen met betrekking tot de ontbinding van het huwelijk opgenomen.
+Van een eventuele pseudo-persoon partner worden mogelijk een wijziging van de samengestelde
+naam opgenomen.
+De ‘Bron’ betreft altijd een document.
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+•
+
+Relatie.Standaard
+De beëindigingsgegevens worden uit het bijhoudingsbericht overgenomen. De
+aanvangsgegevens worden overgenomen van het (vóór verwerking) actuele voorkomen van de
+groep.
+Persoon.Samengestelde naam
+Alleen van toepassing voor een pseudo-persoon. ‘Samengestelde naam.Afgeleid?’ wordt
+geregistreerd met de waarde ‘Nee’. De ‘Datum aanvang geldigheid’ van deze groep wordt
+afgeleid van de ‘Datum aanvang geldigheid’ van de actie uit het bericht.
+
+27.4 Registratie einde geregistreerd partnerschap
+In de actie ‘Registratie einde geregistreerd partnerschap’ wordt de geregistreerd partnerschap
+relatie geïdentificeerd en worden de gegevens m.b.t. de beëindiging van het geregistreerd
+partnerschap opgenomen.
+Van een eventuele pseudo-persoon partner worden mogelijk een wijziging van de samengestelde
+naam en/of een wijziging van de geslachtsnaam opgenomen.
+De ‘Bron’ betreft altijd een document.
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+Relatie.Standaard
+De beëindigingsgegevens worden uit het bijhoudingsbericht overgenomen. De
+aanvangsgegevens worden overgenomen van het (vóór verwerking) actuele voorkomen van de
+groep.
+
+Status: Definitief, versie: 0.38
+
+Pagina 55 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+•
+
+Persoon.Samengestelde naam
+Alleen van toepassing voor een pseudo-persoon. ‘Samengestelde naam.Afgeleid?’ wordt
+geregistreerd met de waarde ‘Nee’. De ‘Datum aanvang geldigheid’ van deze groep wordt
+afgeleid van de ‘Datum aanvang geldigheid’ van de actie uit het bericht.
+
+27.5 Registratie geslachtsnaam
+De actie ‘Registratie geslachtsnaam’ mag uitsluitend worden opgegeven voor een ingeschreven
+niet-Nederlandse partner.
+Bij een wijziging van de geslachtsnaam wordt indien van toepassing de Samengestelde naam
+opnieuw bepaald en afgeleid geregistreerd. Omdat de Samengestelde naam is opgenomen op de
+persoonslijst van eventueel gerelateerden - zoals kinderen, ouders, partners e.d. – zijn deze
+eventueel gerelateerden betrokken bij de administratieve handeling waarin deze actie is
+opgenomen en moeten ze in het bijhoudingsplan worden opgenomen.
+De ‘Bron’ voor deze actie is nagenoeg altijd gelijk aan de bron van de hoofdactie. In uitzonderlijke
+gevallen kan er op basis van buitenlandse wetgeving een andere een afwijkende bron ‘Overig’
+worden opgegeven.
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+•
+
+Persoon \ Geslachtsnaamcomponent.Identiteit
+Persoon \ Geslachtsnaamcomponent.Standaard
+
+De ‘Datum aanvang geldigheid’ van ‘Geslachtsnaamcomponent.Standaard’ en van de eventuele
+afgeleid geregistreerde ‘Samengestelde naam’ worden afgeleid van de ‘Datum aanvang geldigheid’
+van de actie uit het bericht.
+
+27.6 Registratie naamgebruik
+De actie ‘Registratie naamgebruik’ mag op basis van een verklaring/verzoek daartoe, voor beide
+partners worden opgegeven, voor zover het een ingeschreven Partner betreft.
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+Persoon.Naamgebruik
+
+27.7 Registratie identificatienummers gerelateerde
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+Persoon.Identificatienummers
+
+Deze gegevens worden geregistreerd bij de pseudo-persoon die als gerelateerde (partner, ouder of
+kind) bij de hoofdpersoon is betrokken.
+De gerelateerde waarbij de gegevens moeten worden gewijzigd wordt in het bericht aangewezen.
+Indien dit een ingeschrevene betreft, en de relatie dus symmetrisch is, moet de relatie eerst
+ontrelateerd worden voordat de groep wordt geregistreerd.
+
+27.8 Registratie samengestelde naam gerelateerde
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+Persoon.Samengestelde naam
+
+Deze gegevens worden geregistreerd bij de pseudo-persoon die als gerelateerde (partner, ouder of
+kind) bij de hoofdpersoon is betrokken.
+De gerelateerde waarbij de gegevens moeten worden gewijzigd wordt in het bericht aangewezen.
+Indien dit een ingeschrevene betreft, en de relatie dus symmetrisch is, moet de relatie eerst
+ontrelateerd worden voordat de groep wordt geregistreerd.
+
+Status: Definitief, versie: 0.38
+
+Pagina 56 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+27.9 Registratie geboorte gerelateerde
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+Persoon.Geboorte
+
+Deze gegevens worden geregistreerd bij de pseudo-persoon die als gerelateerde (partner, ouder of
+kind) bij de hoofdpersoon is betrokken.
+De gerelateerde waarbij de gegevens moeten worden gewijzigd wordt in het bericht aangewezen.
+Indien dit een ingeschrevene betreft, en de relatie dus symmetrisch is, moet de relatie eerst
+ontrelateerd worden voordat de groep wordt geregistreerd.
+
+27.10 Registratie geslachtsaanduiding gerelateerde
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+Persoon.Geslachtsaanduiding
+
+Deze gegevens worden geregistreerd bij de pseudo-persoon die als gerelateerde (partner of ouder)
+bij de hoofdpersoon is betrokken.
+De gerelateerde waarbij de gegevens moeten worden gewijzigd wordt in het bericht aangewezen.
+Indien dit een ingeschrevene betreft, en de relatie dus symmetrisch is, moet de relatie eerst
+ontrelateerd worden voordat de groep wordt geregistreerd.
+
+27.11 Verval huwelijk
+De actie ‘Verval huwelijk’ wordt gebruikt om een huwelijk in zijn geheel (inclusief de
+ondergeschikte objecten) te laten vervallen. Hierdoor vervallen alle voorkomens van de volgende
+groepen naar de formele historie:
+•
+•
+•
+•
+•
+•
+
+Relatie.Standaard
+Betrokkenheid.Identiteit
+Van de partners die bij het huwelijk betrokken zijn.
+Persoon.Identificatienummers
+Alleen van toepassing voor een bij het huwelijk betrokken
+Persoon.Geboorte
+Alleen van toepassing voor een bij het huwelijk betrokken
+Persoon.Geslachtsaanduiding
+Alleen van toepassing voor een bij het huwelijk betrokken
+Persoon.Samengestelde naam
+Alleen van toepassing voor een bij het huwelijk betrokken
+
+pseudo-persoon.
+pseudo-persoon.
+pseudo-persoon.
+pseudo-persoon.
+
+27.12 Verval geregistreerd partnerschap
+De actie ‘Verval geregistreerd partnerschap’ wordt gebruikt om een geregistreerd partnerschap in
+zijn geheel (inclusief de ondergeschikte objecten) te laten vervallen. Hierdoor vervallen alle
+voorkomens van de volgende groepen naar de formele historie:
+•
+•
+•
+
+•
+
+Relatie.Standaard
+Betrokkenheid.Identiteit
+Van de partners die bij het geregistreerd partnerschap betrokken zijn.
+Persoon.Identificatienummers
+Alleen van toepassing voor een bij het geregistreerd partnerschap betrokken pseudopersoon.
+Persoon.Geboorte
+Alleen van toepassing voor een bij het geregistreerd partnerschap betrokken pseudopersoon.
+
+Status: Definitief, versie: 0.38
+
+Pagina 57 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+•
+
+•
+
+Persoon.Geslachtsaanduiding
+Alleen van toepassing voor een bij het geregistreerd partnerschap betrokken pseudopersoon.
+Persoon.Samengestelde naam
+Alleen van toepassing voor een bij het geregistreerd partnerschap betrokken pseudopersoon.
+
+27.13 Correctieverval relatie
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep:
+•
+
+Relatie.Standaard
+
+27.14 Correctieregistratie relatie
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+
+Relatie.Standaard
+
+De gegevens met betrekking tot de aanvang en het eventuele einde van de relatie worden in één
+keer vastgelegd.
+
+27.15 Correctieverval identificatienummers gerelateerde
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep van de gerelateerde persoon:
+•
+
+Persoon.Identificatienummers
+
+27.16 Correctieregistratie identificatienummers gerelateerde
+Met de actie wordt een nieuw voorkomen van de volgende groep van de gerelateerde persoon
+geregistreerd:
+•
+
+Persoon.Identificatienummers
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Datum einde geldigheid
+
+Actie.Datum einde geldigheid (indien aanwezig)
+
+27.17 Correctieverval geslachtsaanduiding gerelateerde
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep van de gerelateerde persoon:
+•
+
+Persoon.Geslachtsaanduiding
+
+27.18 Correctieregistratie geslachtsaanduiding gerelateerde
+Met de actie wordt een nieuw voorkomen van de volgende groep van de gerelateerde persoon
+geregistreerd:
+•
+
+Persoon.Geslachtsaanduiding
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Status: Definitief, versie: 0.38
+
+Pagina 58 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+Datum einde geldigheid
+
+Actie.Datum einde geldigheid (indien aanwezig)
+
+27.19 Correctieverval geboorte gerelateerde
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep van de gerelateerde persoon:
+•
+
+Persoon.Geboorte
+
+27.20 Correctieregistratie geboorte gerelateerde
+Met de actie wordt een nieuw voorkomen van de volgende groep van de gerelateerde persoon
+geregistreerd:
+•
+
+Persoon.Geboorte
+
+27.21 Correctieverval samengestelde naam gerelateerde
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep van de gerelateerde persoon:
+•
+
+Persoon.Samengestelde naam
+
+27.22 Correctieregistratie samengestelde naam gerelateerde
+Met de actie wordt een nieuw voorkomen van de volgende groep van de gerelateerde persoon
+geregistreerd:
+•
+
+Persoon.Samengestelde naam
+Element
+
+Afleiding
+
+Afgeleid?
+
+‘Nee’
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Datum einde geldigheid
+
+Actie.Datum einde geldigheid (indien aanwezig)
+
+Status: Definitief, versie: 0.38
+
+Pagina 59 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+28 Appendix A – BZVU en toegestane indienende partijen
+In onderstaande tabel staat per handeling aangegeven of het berichtelement BZVU (Bezien vanuit
+persoon) van toepassing is – inclusief motivatie – en de toegestane indienende partijen – ook
+inclusief motivatie.
+Wanneer BZVU niet van toepassing is zal het berichtelement niet aanwezig zijn in het bericht. Voor
+meer informatie over BZVU zie UCS-BY.1.ON – Ontrelateren [8].
+Bij toegestane indienende partijen wordt vermeld of het bijhoudingsvoorstel (ook) door andere dan
+de eigen gemeente mag worden ingestuurd. In onderstaande tabel kan deze kolom de volgende
+waarden aannemen:
+•
+•
+•
+
+A(lle): het bijhoudingsvoorstel mag door elke bijhoudingspartij worden ingediend;
+H(uidige): het bijhoudingsvoorstel mag alleen door de huidige bijhoudingspartij worden
+ingediend;
+B(eperkt): het bijhoudingsvoorstel mag door een beperkt aantal bijhoudingspartijen
+worden ingediend. In de motivatie staat vermeld welke partijen dat zijn.
+
+Administratieve
+Handeling
+
+BZVU?
+
+Motivatie
+
+Toegestane
+indienende
+partijen
+
+Motivatie
+
+Voltrekking huwelijk in
+Nederland
+
+N
+
+Het beoogde resultaat
+(asymmetrische relatie)
+kan ook bereikt worden
+door het opgeven van een
+pseudo-persoon in het
+bericht.
+
+B
+
+Registergemeente en
+huidige bijhoudingspartij(en)
+van de partners
+
+Voltrekking huwelijk in
+buitenland
+
+N
+
+Idem
+
+H
+
+Registergemeente (Den
+Haag) en huidige
+bijhoudingspartij(en) van de
+partners
+
+Aangaan geregistreerd
+partnerschap in
+Nederland
+
+N
+
+Idem
+
+B
+
+Registergemeente en
+huidige bijhoudingspartij(en)
+van de partners
+
+Aangaan geregistreerd
+partnerschap in
+buitenland
+
+N
+
+Idem
+
+H
+
+Registergemeente (Den
+Haag) en huidige
+bijhoudingspartij(en) van de
+partners
+
+Omzetting
+geregistreerd
+partnerschap in
+huwelijk
+
+J (*)
+
+Het beoogde resultaat
+(asymmetrische relatie)
+kan niet op een andere
+manier bereikt worden
+(****)
+.
+
+B
+
+Registergemeente en
+huidige bijhoudingspartij(en)
+van de partners
+
+Ontbinding huwelijk in
+Nederland
+
+J (**)
+
+Idem
+
+B
+
+Registergemeente en
+huidige bijhoudingspartij(en)
+van de partners
+
+Ontbinding huwelijk in
+buitenland
+
+J
+
+Idem
+
+H
+
+Registergemeente (Den
+Haag) en huidige
+bijhoudingspartij(en) van de
+partners
+
+Beëindiging
+geregistreerd
+partnerschap in
+
+J
+
+Idem
+
+B
+
+Registergemeente en
+huidige bijhoudingspartij(en)
+van de partners
+
+Status: Definitief, versie: 0.38
+
+Pagina 60 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+Administratieve
+Handeling
+
+BZVU?
+
+Motivatie
+
+Toegestane
+indienende
+partijen
+
+Motivatie
+
+Nederland
+Beëindiging
+geregistreerd
+partnerschap in
+buitenland
+
+J
+
+Idem
+
+H
+
+Registergemeente (Den
+Haag) en huidige
+bijhoudingspartij(en) van de
+partners
+
+Nietigverklaring
+huwelijk in Nederland
+
+J
+
+Idem
+
+B
+
+Registergemeente en
+huidige bijhoudingspartij(en)
+van de partners
+
+Nietigverklaring
+geregistreerd
+partnerschap in
+Nederland
+
+J
+
+Idem
+
+B
+
+Registergemeente en
+huidige bijhoudingspartij(en)
+van de partners
+
+Ongedaanmaking
+huwelijk
+
+J
+
+Als de relatie voor één van
+de partners ongedaan moet
+worden gemaakt.
+
+B
+
+Registergemeente en
+huidige bijhoudingspartij(en)
+van de partners
+
+Ongedaanmaking
+geregistreerd
+partnerschap
+
+J
+
+Idem
+
+B
+
+Registergemeente en
+huidige bijhoudingspartij(en)
+van de partners
+
+Wijzigen
+partnergegevens
+huwelijk
+
+N
+
+De administratieve
+handeling is impliciet
+asymmetrisch
+
+H
+
+Huidige bijhoudingspartij van
+de hoofdpersoon
+
+Wijzigen
+partnergegevens
+geregistreerd
+partnerschap
+
+N
+
+De administratieve
+handeling is impliciet
+asymmetrisch
+
+H
+
+Huidige bijhoudingspartij van
+de hoofdpersoon
+
+Correctie huwelijk
+
+J
+
+Het kan zijn dat de
+correctie van de relatie
+maar voor één van de
+partners van toepassing is.
+
+B
+
+Registergemeente en
+huidige bijhoudingspartij(en)
+van de partners
+
+Correctie geregistreerd
+partnerschap
+
+J
+
+Idem
+
+B
+
+Registergemeente en
+huidige bijhoudingspartij(en)
+van de partners
+
+Correctie
+partnergegevens
+huwelijk
+
+N
+
+De administratieve
+handeling is impliciet
+asymmetrisch
+
+H
+
+Huidige bijhoudingspartij van
+de hoofdpersoon
+
+Correctie
+partnergegevens
+geregistreerd
+partnerschap
+
+N
+
+De administratieve
+handeling is impliciet
+asymmetrisch
+
+H
+
+Huidige bijhoudingspartij van
+de hoofdpersoon
+
+GBA – Voltrekking
+huwelijk in Nederland
+
+N
+
+GBA kent alleen
+asymmetrische relaties en
+stuurt twee afzonderlijke
+berichten met elk een
+ingezetene en een pseudopersoon naar de BRP.
+
+B
+
+Feitgemeente (***)
+
+GBA – Aangaan
+geregistreerd
+
+N
+
+Idem
+
+B
+
+Feitgemeente (***)
+
+Status: Definitief, versie: 0.38
+
+Pagina 61 van 62
+
+UCS BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+Administratieve
+Handeling
+
+BZVU?
+
+Motivatie
+
+Toegestane
+indienende
+partijen
+
+Motivatie
+
+partnerschap in
+Nederland
+GBA – Ontbinding
+huwelijk in Nederland
+
+N
+
+GBA kent alleen
+asymmetrische relaties en
+stuurt twee afzonderlijke
+berichten met elk een
+identificatie van een
+(asymmetrische) relatie.
+
+B
+
+Feitgemeente (***)
+
+GBA – Beëindiging
+geregistreerd
+partnerschap in
+Nederland
+
+N
+
+Idem
+
+B
+
+Feitgemeente (***)
+
+GBA – Omzetting
+geregistreerd
+partnerschap in
+huwelijk
+
+N
+
+Idem
+
+B
+
+Feitgemeente (***)
+
+Resultaat van het gebruik van de BZVU zal zijn dat de ene bijhoudingspartij een huwelijk ziet
+tussen de betreffende partners en de ander bijhoudingspartij een geregistreerd partnerschap
+tussen dezelfde partners.
+(*)
+
+Resultaat van het gebruik van de BZVU zal zijn dat de ene bijhoudingspartij een ontbonden
+huwelijk ziet en de andere bijhoudingspartij een niet-ontbonden huwelijk.
+(**)
+
+Kan niet de GBA-woongemeente(n) van de partner(s) zijn want deze zal altijd alleen een
+asymmetrische relatie in GBA aanmaken. Feitgemeente is verplicht de woongemeentes (GBA en
+BRP) van de partners te informeren over het huwelijk / geregistreerd partnerschap.
+(***)
+
+Eventueel zouden twee afzonderlijke asymmetrische handelingen aangeboden kunnen worden
+door de betreffende gemeente: één voor het ontbinden van het geregistreerd partnerschap en één
+voor het aangaan van het huwelijk. Dit leidt dan wel tot twee leveringsberichten. Omdat dit teveel
+gaat afwijken van het beoogde resultaat - één atomaire actie – is van deze mogelijkheid afgezien.
+(****)
+
+Status: Definitief, versie: 0.38
+
+Pagina 62 van 62
+
+

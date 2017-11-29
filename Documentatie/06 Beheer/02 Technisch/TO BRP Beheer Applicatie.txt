@@ -1,0 +1,1741 @@
+Technisch ontwerp BRP Beheer Applicatie
+
+1.3
+
+Datum
+Status
+
+05-12-2016
+Definitief
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+Inhoudsopgave
+
+INHOUDSOPGAVE .....................................................................................................................................2
+VERSIEHISTORIE ......................................................................................................................................4
+REVIEWHISTORIE.....................................................................................................................................4
+1
+
+INLEIDING .............................................................................................................................................5
+1.1 BEKNOPTE OMSCHRIJVING ...................................................................................................................5
+1.2 TECHNISCHE KEUZE .............................................................................................................................5
+1.2.1 REST .............................................................................................................................................5
+1.2.2 AngularJS ....................................................................................................................................5
+1.3 COMPONENTEN .....................................................................................................................................6
+
+2
+
+API ..............................................................................................................................................................7
+2.1 WEBAPP .................................................................................................................................................7
+2.2 CONFIGURATIE......................................................................................................................................7
+2.2.1 Algemeen ....................................................................................................................................7
+2.2.2 jpa .................................................................................................................................................7
+2.2.3 json ...............................................................................................................................................7
+2.3 CONTROLLERS.......................................................................................................................................8
+2.4 REPOSITORY..........................................................................................................................................8
+2.5 UTIL .......................................................................................................................................................9
+2.6 VALIDATIE .............................................................................................................................................9
+2.7 VIEW......................................................................................................................................................9
+
+3
+
+UI...............................................................................................................................................................10
+3.1 UITGANGSPUNTEN ..............................................................................................................................10
+3.2 FOLDERSTRUCTUUR ............................................................................................................................10
+3.3 OPBOUW..............................................................................................................................................10
+3.3.1 Configuratie .............................................................................................................................10
+3.3.2 Controllers ................................................................................................................................13
+3.3.3 Directives ..................................................................................................................................13
+3.3.4 Services .....................................................................................................................................14
+3.3.5 Utils .............................................................................................................................................14
+
+4
+
+STANDAARD COMPONENT WEERGAVE ................................................................................15
+4.1 LIJST SCHERMEN.................................................................................................................................15
+4.1.1 Zoekvelden ...............................................................................................................................15
+4.1.2 Lijst .............................................................................................................................................16
+4.2 DETAIL SCHERMEN .............................................................................................................................16
+4.3 MELDINGEN.........................................................................................................................................17
+4.3.1 Succes meldingen ..................................................................................................................17
+4.3.2 Fout meldingen .......................................................................................................................18
+4.4 ELEMENTEN .........................................................................................................................................18
+4.4.1 Checkbox ..................................................................................................................................18
+4.4.2 Datumveld ................................................................................................................................18
+4.4.3 Datumveld datum (deels)onbekend ...............................................................................19
+4.4.4 Dropdown .................................................................................................................................19
+4.4.5 Invoerveld ................................................................................................................................19
+4.4.6 Ja/Nee dropdown ...................................................................................................................20
+4.4.7 Lijst .............................................................................................................................................20
+4.4.8 Lijst (inline) ..............................................................................................................................21
+4.4.9 Lijst (inline kruisjeslijst) ......................................................................................................21
+4.4.10 Textarea.................................................................................................................................22
+
+Pagina 2 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+5
+
+BIJLAGE A: AUTHENTICATIE EN AUTORISATIE .............................................................23
+5.1
+
+ROLLEN................................................................................................................................................23
+
+Pagina 3 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+16-06-2015
+19-06-2015
+07-07-2015
+12-10-2015
+
+0.1
+0.2
+1.0
+1.1
+
+Operatie
+Operatie
+Operatie
+Operatie
+
+04-08-2016
+
+1.2
+
+18-11-2016
+
+1.3
+
+05-12-2016
+
+1.3
+
+Initiële versie
+review commentaar verwerkt
+Release versie aangemaakt
+Bijlage over authenticatie en autorisatie
+toegevoegd
+Wijzigingen n.a.v. refactor Java-model
+verwerkt
+UI elementen en schermbeschrijvingen
+opgenomen
+Aanpassingen n.a.v. review
+
+BRP
+BRP
+BRP
+BRP
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+17-06-2015
+
+0.1
+
+Review
+
+Operatie BRP
+
+17-06-2015
+
+0.1
+
+Review
+
+Operatie BRP
+
+05-08-2016
+
+1.2
+
+Review
+
+Operatie BRP
+
+25-11-2016
+
+1.3
+
+Review
+
+Operatie BRP
+
+Pagina 4 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+1
+
+1.1
+
+Inleiding
+
+Beknopte omschrijving
+De BRP Beheer Applicatie bestaat uit een REST API laag en een voorkant welke gebouwd is met
+Angular, die in de browser van de gebruiker draait. Deze twee delen van de applicatie kunnen
+zowel los als gezamenlijk worden geïnstalleerd.
+
+1.2
+
+Technische keuze
+
+1.2.1
+
+REST
+Voor de realisatie van de beheerapplicatie is gekozen voor een Representational State Transfer
+(REST) architectuur voor het ontsluiten en beheren van de BRP. Kenmerken van deze
+architectuur zijn scheiding van verantwoordelijkheden, stateless zijn van de applicatie, uniforme
+interface en gelaagdheid.
+
+1.2.1.1
+
+Scheiding van verantwoordelijkheden
+Deze architectuur houdt een strikte scheiding in van het servercomponent, welke
+verantwoordelijk is voor de opslag en consistentie van de gegevens en clientcomponent welke
+verantwoordelijk is voor het tonen van de gegevens.
+
+1.2.1.2
+
+Stateless
+Het stateless zijn van de applicatie houdt in dat bij elk verzoek alle informatie aanwezig is in het
+verzoek om het verzoek te verwerken en een response te kunnen geven. Binnen een stateful
+applicatie kan een verzoek vertrouwen op informatie welke reeds in de servercomponent
+geplaatst is door eerdere verzoeken. Stateless maakt dat de applicatie meer eenduidig reageert
+op verzoeken.
+
+1.2.1.3
+
+Uniforme interface
+REST staat een uniforme interface voor. Dit houdt in dat een verzoek door de tijd heen steeds
+een zelfde antwoord geeft en zich steeds eenduidig gedraagt
+
+1.2.1.4
+
+Gelaagdheid
+Meerdere architectuurstijlen kennen een gelaagdheid en REST is daar geen uitzondering op.
+Door te kiezen voor REST architectuur kan de servercomponent ontdaan worden van logica voor
+het tonen van gegevens en kan daardoor de applicatie eenvoudiger worden van opzet, wat de
+onderhoudbaarheid ten goede komt, maar ook de snelheid van ontwikkeling.
+
+1.2.2
+
+AngularJS
+Voor het ontwikkelen van de front-end is gekozen voor het gebruiken van het javascript
+framework AngularJS. AngularJS kent een Model-View-Controller (MVC) architectuur en is zeer
+geschikt om een clientcomponent mee te ontwikkelen welke communiceert met een REST server.
+De gehele clientcomponent draait in de browser van de gebruiker. Dit betekent dan niet bij elk
+verzoek de pagina die getoond wordt door de servercomponent moet worden opgebouwd en
+naar de client moet worden verstuurd, maar dat dit kan plaatsvinden in de browser. Hierdoor
+krijgt de clientcomponent meer het gevoel van een normale applicatie. Dit komt de
+gebruikerservaring ten goede.
+Voor de clientcomponent heeft AngularJS veel standaard functionaliteit die het eenvoudig maken
+om functionaliteit te ontwikkelen. Door het gebruikte MVC architectuur is de clientcomponent
+onderhoudbaar.
+
+Pagina 5 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+1.3
+
+Componenten
+De BRP Beheer Applicatie bestaat uit 2 componenten. De API is de implementatie van Rest Api
+laag. De API maakt gebruik van het algemene Entiteiten model. De UI is de tweede component.
+Deze 2 componenten zijn terug te vinden in de 2 maven modules te weten:
+•
+•
+
+beheer-api
+beheer-ui
+
+Pagina 6 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+2
+
+2.1
+
+API
+
+Webapp
+Package
+nl.bzk.brp.beheer.webapp
+Class
+ApplicationConstants
+BeheerInitializer
+
+MDCConstants
+
+Omschrijving
+Hoofdpackage van de applicatie.
+Omschrijving
+Contanten van de applicatie. Nu bevat deze alleen de naam van
+de applicatie
+Initialiseert de BRP Beheer Applicatie. Deze class voegt de
+AnnotationConfigWebApplicationContext als servlet toe aan de
+webapplicatie. Daarnaast worden zowel het LogFilter en de
+CorsFilter aan de webapplicatie toegevoegd.
+Constanten die gebruikt worden door het LogFilter om correct
+te kunnen loggen
+
+2.2
+
+Configuratie
+
+2.2.1
+
+Algemeen
+Package
+nl.bzk.brp.beheer.webapp.configuratie
+Class
+BlobifierConfiguratie
+ControllerConstants
+CorsFilter
+CorsInterceptor
+LogFilter
+RepositoryConfiguratie
+SecurityConfiguratie
+SecurtiyConstants
+WebConfiguratie
+
+2.2.2
+
+2.2.3
+
+Omschrijving
+Algemene configuratie van de applicatie
+
+Omschrijving
+Configuratie voor overzicht van personen
+Constanten in gebruik bij controllers
+Afhandeling van Cross-Origin Resource Sharing (CORS)
+verzoeken. Dit is alleen van belang indien API en UI op
+verschillende servers draaien.
+Voegt een CORS header toe aan het antwoord
+Verzorgt de logging voor de applicatie
+Configureert de database toegang voor de repositories
+Beveiligingsgerelateerde configuratie
+Constanten in gebruik voor beveiliging
+Configureert de webapplicatie
+
+jpa
+Package
+nl.bzk.brp.beheer.webapp.configuratie.jpa
+
+json
+Package
+nl.bzk.brp.beheer.webapp.configuratie.
+json
+nl.bzk.brp.beheer.webapp.configuratie.
+json.spring
+nl.bzk.brp.beheer.webapp.configuratie.
+json.stamgegevens
+nl.bzk.brp.beheer.webapp.configuratie.
+json.modules
+
+nl.bzk.brp.beheer.webapp.configuratie.
+json.converter
+
+omschrijving
+Eigen uitbreiding op repository classes voor
+de BRP Beheer Applicatie.
+
+Omschrijving
+Configuratie van de java naar JSON conversie en
+vice versa.
+MixIns* voor weergave van webpagina
+MixIns* voor de stamgegevens
+In dit package zijn een aantal Module classen te
+vinden die een of meerdere serializers en
+deserializers definiëren. Deze modules zijn
+opgenomen in de BrpJsonObjectMapper welke in het
+parent package staat.
+Bevat generieke converters voor het makkelijk om
+zetten van bepaalde typen binnen MixIns*
+
+Pagina 7 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+nl.bzk.brp.beheer.webapp.configuratie.
+json.serializer
+
+Bevat specifieke vertalingen om object om te zetten
+van en naar JSON
+
+*) MixIns zijn interfaces welke over het object heen worden geplaats, zodat aangegeven kan
+worden hoe de vertaling plaats moet vinden
+
+2.3
+
+Controllers
+De controllers zijn de eigenlijke ingangen van de REST API. Doordat deze zijn geannoteerd als
+@RestController worden ze door de AnnotationConfigWebApplicationContext opgepakt en
+beschikbaar gemaakt in de webapplicatie.
+Alle controllers stammen af van de AbstractReadonlyController of de
+AbstractReadWriteController, die basisfunctionaliteit bevatten voor de interactie met de
+gegevens. De controller heeft op zijn beurt een ReadonlyRepository dan wel
+ReadWriteRepository nodig om te functioneren.
+De AbstractReadWriteController biedt een hook wijzigObjectVoorOpslag(item) om een object
+welke opgeslagen moet worden te bewerken voor opslag. Voor het protocolleren van wijzigingen
+kunnen HistorieVerwerkers worden gedefinieerd. Indien deze zijn gedefinieerd worden deze voor
+opslag van een object uitgevoerd. Daarnaast wordt d.m.v. de @Valid annotatie in de methode
+save de validatie voor het op te bewaren object getriggerd. (zie 3.7)
+De AbstractReadonlyController biedt twee hooks converteerNaarView(item) en
+converteerNaarView(List<item>) om bij ophalen van gegevens deze aan te passen voor tonen
+van de gegevens. (zie 3.8)
+Package
+nl.bzk.brp.beheer.webapp.controllers
+nl.bzk.brp.beheer.webapp.controllers.quer
+y
+nl.bzk.brp.beheer.webapp.controllers.sta
+mgegevens
+
+2.4
+
+Omschrijving
+Algemene controllers van de niet-stamgegevens
+Classen voor het samenstellen van complexe
+zoekopdrachten op basis van meegegeven
+parameters in het request.
+Bevat controllers van de stamgegevens.
+
+Repository
+De repository classen zijn gebaseerd op de org.springframework.data.repository.Repository
+marker interface. Door deze marker wordt door Spring de implementatie van de Repository
+interface gegenereerd. Zie hiervoor ook het Spring Data JPA project op
+http://projects.spring.io/spring-data-jpa. De repositories zijn afgeleid van de ReadonlyRepository
+of de ReadWriteRepository, afhankelijk of ze wel of niet moeten kunnen schrijven.
+Package
+nl.bzk.brp.beheer.webapp.repository
+nl.bzk.brp.beheer.webapp.repository.
+ber
+nl.bzk.brp.beheer.webapp.repository.
+kern
+nl.bzk.brp.beheer.webapp.repository.
+stamgegevens
+nl.bzk.brp.beheer.webapp.repository.
+stamgegevens.autaut
+nl.bzk.brp.beheer.webapp.repository.
+stamgegevens.ber
+nl.bzk.brp.beheer.webapp.repository.
+stamgegevens.conv
+nl.bzk.brp.beheer.webapp.repository.
+stamgegevens.ist
+nl.bzk.brp.beheer.webapp.repository.
+stamgegevens.kern
+
+Omschrijving
+Interfaces waar de repositories van afstammen
+Repositories van niet-stamgegevens uit het ber
+schema
+Repositories van de niet-stamgegevens uit het kern
+schema
+Bevat een algemene EnumReadonlyRepository die kan
+worden uitgebreid voor Enum classes
+Repositories voor stamgegevens uit het autaut
+schema
+Repositories voor stamgegevens uit het ber schema
+Repositories voor stamgegevens uit het conv schema
+Repositories voor stamgegevens uit het ist schema
+Repositories voor stamgegevens uit het kern schema
+
+Pagina 8 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+nl.bzk.brp.beheer.webapp.repository.
+stamgegevens.lev
+nl.bzk.brp.beheer.webapp.repository.
+stamgegevens.migblok
+nl.bzk.brp.beheer.webapp.repository.
+stamgegevens.verconv
+
+2.5
+
+2.6
+
+Repositories voor stamgegevens uit het lev schema
+Repositories voor stamgegevens uit het migblok
+schema
+Repositories voor stamgegevens uit het verconv
+schema
+
+Util
+Package
+nl.bzk.brp.beheer.webapp.repository.util
+
+Validatie
+Een object validator moet de org.springframework.validation.Validator interface implementeren.
+De validator componenten worden via Autowiring in de
+nl.bzk.brp.beheer.webapp.configuratie.WebConfiguratie toegevoegd aan de GlobalValidator. De
+validatie zelf wordt getriggerd door de @Valid annotatie bij de saven methode in de
+nl.bzk.brp.beheer.webapp.controllers.AbstractReadWriteController.
+Package
+nl.bzk.brp.beheer.webapp.repository.validatie
+
+2.7
+
+Omschrijving
+Bevat utilities om om te gaan met Enums en
+Attributen
+
+Omschrijving
+Validator classes
+
+View
+Indien objecten anders moeten worden weergegeven dan dat zij in het model voorkomen en het
+object in de lijstweergave verschillen van de objecten in de detailweergave, kan er een interface
+worden gemaakt die door verschillende classes kan worden geïmplementeerd, zodat deze door
+de serializers naar de uiteindelijke json formaat kan worden geschreven.
+Package
+nl.bzk.brp.beheer.webapp.view
+
+Omschrijving
+View classes en implementatie voor
+verwerking van de BLOB van een persoon
+
+Pagina 9 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+3
+
+UI
+
+Voor de gebruikersinterface in gebruik gemaakt van AngularJJ, css en html. Om het project te
+kunnen bouwen wordt gebruik van NodeJS (https://nodejs.org) en Gulp (http://gulpjs.com).
+3.1
+
+Uitgangspunten
+Aangezien de beheerapplicatie zeer veel gegevens moet ontsluiten, is er voor gekozen om de
+gebruikers interface zo generiek mogelijk op te zetten.
+
+3.2
+
+Folderstructuur
+De eigenlijke applicatie staat in de folder app. Hierin staan de volgende folders
+Folder
+conf
+css
+fields
+fonts
+img
+js
+views
+
+Omschrijving
+configuratie van de UI
+stylesheets
+html fragmenten van veld definities
+de gebruikte fonts
+gebruikte afbeeldingen
+javascript
+html fragmenten van de views
+
+3.3
+
+Opbouw
+De applicatie is opgebouwd uit een aantal modulen. Sommige zijn externe modulen en andere
+zijn eigen modulen. Eigen modulen zijn verdeelt in controllers, directives, services en utilities. In
+de beheer-applicatie.js worden de modules allemaal aan de BeheerApp gekoppeld.
+
+3.3.1
+
+Configuratie
+Elke ingang wordt geconfigureerd. Deze configuratie, welke te vinden zijn in beheer-configuratie<schema>.js worden opgeslagen als value in de beheer applicatie en vervolgens wordt deze
+gebruikt om de setup methode aan te roepen in beheer-configuratie.js. Deze laatste bevat ook
+een aantal configuraties voor het raadplegen van berichten en administratieve handelingen.
+De setup methode in de beheer-configuratie.js leest een configuratie en configureert voor een
+ingang de url, de gebruikte resources, de layout van de tonen gegevens en de gerelateerde
+gegevens. Voor het tonen van de gerelateerde gegevens worden de configuraties gebruikt welke
+eerder zijn opgeslagen.
+
+Pagina 10 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+3.3.1.1
+
+Configuratie
+var AdministratieveHandelingen = {
+titel: 'Administratieve Handelingen',
+resourceNaam: 'AdministratieveHandelingen',
+resourceUrl: 'administratievehandelingen/:id',
+loaderNaam: 'AdministratieveHandelingenLoader',
+listUri: '/administratievehandelingen',
+listTemplateUrl: 'views/generic/list.html',
+contextParam: 'administratieveHandeling',
+kolommen: [
+{ name:'id', display:'iD', readonly: true},
+{ name:'Soort', display:'soort', sort:'soort', filter:'soort',
+type: 'select', bron: 'SoortAdministratieveHandeling',
+readonly: true},
+{ name:'Partij', display:'partij', sort:'partij', filter: 'partij',
+type: 'selectRef', bron: 'Partij', readonly: true},
+{ name:'Partijcode', display:'partijCode', filter: 'partijCode',
+type: 'text', readonly: true },
+{ name:'Toelichting ontlening', display:'toelichtingOntlening',
+sort:'toelichtingOntlening', readonly: true, toonOpLijst: false},
+{ name:'Tijdstip registratie', display:'tijdstipRegistratie',
+sort:'tijdstipRegistratie', readonly: true},
+{ name:'Bericht', display:'iD', type: 'link', linkDoel: 'Bericht',
+linkParameter: 'filterAdministratieveHandeling', linkVeld: 'iD',
+toonOpLijst: false},
+{
+name: 'Acties',
+display: 'actie',
+type: 'inlinelijst',
+bron: 'Actie',
+velden: [
+{ name:'ID', display:'iD', sort:'ID', filter:'id'},
+{ name:'Soort', display:'soort', sort:'soort',
+bron: 'SoortActie', type: 'select', readonly: true},
+{ name:'Datum ontlening', display:'actiedatumOntlening',
+readonly: true},
+{ name: 'Tijdstip registratie',
+display: 'tijdstipRegistratie', readonly: true},
+],
+relatie: 'administratieveHandeling',
+toonOpLijst: false
+}
+],
+geenNieuw: true,
+geenEdit: true,
+};
+beheerApp.value("AdministratieveHandelingenConfig",
+AdministratieveHandelingen);
+beheerConfiguratie.setup(AdministratieveHandelingen);
+
+Parameter
+titel
+resourceNaam
+resourceUrl
+loaderNaam
+listUri
+listTemplateUrl
+contextParam
+kolommen
+geenNieuw
+geenEdit
+lijstBevatGeenDetail
+
+Omschrijving
+titel die op de pagina wordt getoond
+naam van de resource gebruikt in de BeheerApp
+de url van de resource op de API server
+loader naam om de data in te laden
+ingang url van het geconfigureerde item
+plaats van de te gebruiken html
+veldnaam in een gerelateerd item dat verwijst naar dit item
+definities van kolommen welke getoond gaan worden (zie 4.3.1.1.1)
+als gegevens niet kunnen worden toegevoegd kan hiermee de nieuw
+knop worden verborgen
+als gegevens niet mogen worden gewijzigd kan dat met deze
+property worden uitgezet
+als dit op true staat wordt voor tonen van detail het gegeven
+opgehaald op de server
+
+Pagina 11 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+toonJsonOpDetail
+
+3.3.1.1.1
+
+het ruwe json object wordt getoond d.m.v. directive json-toon en
+niet via de kolomdefinities (zie 4.3.5)
+
+kolommen
+
+Algemene parameters
+Parameter
+name
+display
+sort
+filter
+type
+required
+readonly
+
+Omschrijving
+label van het te tonen veld
+veld uit het json object welke getoond wordt
+hibernate veld waarop dit veld gesorteerd wordt
+parameternaam waarmee dit veld gefilterd wordt
+type veld (zie type velden)
+geeft aan of veld verplicht is
+geeft aan of veld alleen lezen is
+
+Parameters voor tekst velden
+Parameter
+pattern
+maxlength
+minlength
+
+Omschrijving
+de regex waaraan de invoer moet voldoen
+de maximale lengte van de invoer
+de minimale lengte van de invoer
+
+Parameters voor de velden inlinelijst, inlineLijstArea, select en selectRef
+Parameter
+bron
+
+Omschrijving
+de bron waaruit de gerelateerde gegevens komen
+
+Parameters voor de velden inlinelijst en inlineLijstArea
+Parameter
+relatie
+
+Omschrijving
+het veld uit de gerelateerde json object waarop gekoppeld wordt
+
+Parameter voor het inlinelijst veld
+Parameter
+velden
+
+Omschrijving
+de velden die in de lijstweergave worden getoond
+
+Parameter voor het link veld
+Parameter
+linkDoel
+linkVeld
+linkParameter
+
+Omschrijving
+Ingang waarnaar gelinkt wordt
+JSON veld welke in de link gebruikt wordt
+Indien naar een zoekopdracht wordt gelinkt de filter welke gebruikt
+wordt
+
+Parameter voor het filteren op een eerder geselecteerde waarde
+Parameter
+resourceFilter
+
+Omschrijving
+het context element waarop filtering wordt toegepast (bijvoorbeeld op
+stelsel)
+
+Parameter voor het aanzetten van verwijderen
+Parameter
+verwijderen
+
+Omschrijving
+indicator voor het kunnen verwijderen van het betreffende element
+LET OP: in principe worden gegevens nooit verwijderd, behalve
+waarvoor dit expliciet is toegestaan
+
+Pagina 12 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+3.3.1.1.2
+
+type velden
+
+Velden detailschermen
+Veld
+checkbox
+checkboxJaNee
+checkboxWaarOnwaar
+datumonbekend
+
+text
+
+Gebruik
+standaard checkbox
+checkbox met Ja en Nee waarden
+checkbox met Waar en Onwaar waarden
+datumveld waarbij een onbekende datum kan worden
+weergegeven
+geeft gerelateerde gegevens weer als een lijst met kolommen
+geeft gerelateerde gegevens als een tekstblok weer
+geeft gerelateerde gegevens als een kruis lijst weer
+maakt een link naar een gerelateerd gegeven
+een nummerveld
+een combobox met waarden van een enum
+een combobox met waarden van een gerelateerd object
+een combobox met waarden van een gerelateerd object, hierin
+kunnen meerdere geselecteerd worden
+een tekstveld
+
+Velden zoekschermen
+Veld
+checkboxJaNee
+datum
+datumonbekend
+datumtijd
+select
+selectRef
+text
+
+Gebruik
+standaard checkbox
+datumveld welke niet onbekend kan zijn
+datumveld welke een onbekend waarde kan bevatten
+datum en tijd veld
+een combobox met waarden van een enum
+een combobox met waarden van een gerelateerd object
+een tekstveld
+
+inlinelijst
+inlineLijstArea
+inlinekruislijst
+link
+nummer
+select
+selectRef
+selectLijst
+
+3.3.2
+
+Controllers
+InfoController.js: is verantwoordelijk voor het beheren van de informatie berichten die door de
+applicatie worden getoond. Deze controller zorgt er ook voor dat de berichten na zekere tijd
+weer verdwijnen.
+ItemController.js: zorgt voor functionaliteit bij het tonen van een detailscherm. Deze controller
+kan ook wijzigingen van een getoond detail opslaan in de backend.
+ItemInstanceController.js: toont detail informatie in een modal popup scherm. Wordt gebruikt
+om details van een gerelateerd gegeven te tonen.
+ItemJsonController.js: toont detail informatie door middel van de json-toon module.
+ListController.js: is de hoofdcontroller van een ingang van de Brp Beheer Applicatie. Handelt het
+zoeken naar en tonen van items af. Heeft ook functionaliteit om het detailscherm of de json-toon
+te tonen of te verbergen.
+Lo3FilterRubriekInstanceController.js: speciale controller om Lo3FilterRubrieken te tonen en te
+bewerken.
+SecurityController.js: verantwoordelijk voor de security van de BRP Beheer Applicatie
+
+3.3.3
+
+Directives
+Directives zijn AngularJS html elementen die functionaliteit omvatten.
+Directive
+BrpLijstveld
+BrpVeld
+BrpZoekveld
+
+Omschrijving
+directive die gebruikt wordt om gegevens in een lijst te tonen.
+directive die een veld plaatst op een detailscherm
+directive die een veld plaatst op het zoekscherm
+
+Pagina 13 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+DatumFormats
+3.3.4
+
+Services
+Service
+AuthenticationService
+Base64Service
+
+3.3.5
+
+directive voor het correct tonen van de data (datums)
+
+Omschrijving
+handelt het authentiseren af met de backend en indien geslaagd
+plaatst de autorisatiegegevens in scope.
+service voor het base64 encrypten
+
+Utils
+Algemene directives die niet specifiek voor de BRP Beheer Applicatie zijn
+Directive
+json-toon
+
+Omschrijving
+directive voor het tonen van willekeurige JSON objecten op
+scherm
+
+Pagina 14 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+4
+
+Standaard component weergave
+
+Binnen de applicatie worden velden, lijsten en andere grafische componenten op een bepaalde
+manier weergegeven. De volgende paragrafen beschrijven hoe deze componenten worden
+weergegeven binnen de applicatie. Eerst beschrijven we de schermsoorten en welke elementen
+op zo’n scherm voorkomen, vervolgens de verschillende soorten meldingen die kunnen worden
+getoond en tenslotte beschrijven we in detail de verschillende elementen die op de schermen
+voor kunnen komen.
+4.1
+
+Lijst schermen
+Lijst schermen zijn schermen waarop een lijst wordt getoond van het betreffende gegeven.
+Tevens is het, indien er zoekvelden zijn gedefinieerd, mogelijk om op dit scherm te zoeken
+binnen de betreffende gegevens. Een lijstscherm ziet er als volgt uit:
+
+4.1.1
+
+Zoekvelden
+Zoekvelden staan altijd bovenaan de pagina boven de lijst met gegevens. Welke zoekvelden er
+getoond worden is configureerbaar, maar de opmaak van het scherm is altijd hetzelfde. De
+onderstaande afbeelding toont de zoekvelden op een lijstscherm.
+
+De zoekvelden kunnen bestaan uit de volgende elementen:
+
+•
+•
+•
+•
+•
+
+Datumveld
+Datum (deels)onbekend veld
+Dropdownbox
+Invoerveld
+Ja/Nee dropdown
+
+Pagina 15 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+Indien er een bepaalde formattering vereist is, toont het systeem het format waarin de gegevens
+ingevoerd dienen te worden. Een voorbeeld hiervan is een datumveld dat de format ‘jjjjmmdd’
+wenst.
+4.1.2
+
+Lijst
+Lijsten zijn altijd op dezelfde wijze opgemaakt zie paragraaf 4.4.7.
+
+4.2
+
+Detail schermen
+Detail schermen tonen de details van een gegeven. Omdat er onderdelen van een gegeven
+kunnen zijn die niet meer wijzigbaar zijn, hoeft niet alles per definitie wijzigbaar te zijn. Het
+technische ID van een gegeven is hier een voorbeeld van. Dit wordt wel getoond op het
+detailscherm, maar is niet wijzigbaar.
+Een detailscherm ziet er als volgt uit:
+
+Detailschermen kunnen genest zijn doordat de details van een item uit een inlinelijst worden
+opgevraagd. Het detailscherm ziet er in zo’n geval als volgt uit:
+
+Pagina 16 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+Detailschermen kunnen bestaan uit de volgende elementen:
+
+•
+•
+•
+•
+•
+•
+•
+•
+
+Checkbox
+Datumveld
+Datum (deels)onbekend veld
+Dropdownbox
+InlineKruislijst
+Inlinelijst
+Invoerveld
+Textarea
+
+Indien de gebruiker op de knop ‘Opslaan’ klikt, dan zal het systeem de wijzigingen/ingevoerde
+gegevens verwerken en in de database opslaan. Klikt een gebruiker daarentegen op ‘Annuleren’
+of ‘Sluiten’, dan zal het systeem geen wijzigingen van de betreffende gegevens doorvoeren of
+nieuwe gegevens toevoegen.
+4.3
+
+Meldingen
+Binnen het systeem wordt door middel van meldingen feedback gegeven aan de gebruiker. Het
+systeem geeft twee soorten meldingen terug:
+
+•
+•
+
+Succes meldingen
+Fout meldingen
+
+Voor sommige elementen worden invoercontroles uitgevoerd op formattering en/of geldigheid.
+Meldingen met betrekking tot een element worden bij het betreffende element getoond. Dit
+wordt dan ook vermeld bij de beschrijving van het betreffende element.
+
+4.3.1
+
+Succes meldingen
+Succes meldingen worden getoond bij het toevoegen/verwijderen van entiteiten indien het
+opslaan goed verloopt. Een succes melding wordt getoond boven alle andere elementen op de
+pagina en ziet er als volgt uit.
+
+Pagina 17 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+4.3.2
+
+Fout meldingen
+Foutmeldingen worden getoond indien er iets mis is gegaan in de back-end of indien er een
+bedrijfsregel afgaat. Deze meldingen zijn niet beperkt tot het toevoegen/verwijderen van
+entiteiten, maar kunnen altijd en overal voorkomen. Een fout melding wordt net als de succes
+melding getoond boven alle andere elementen op de pagina en ziet er als volgt uit.
+
+4.4
+
+Elementen
+De hieronder beschreven elementen kunnen op een scherm voorkomen.
+
+4.4.1
+
+Checkbox
+Voor het selecteren van Ja/Nee waarbij leeglaten geen optie is, gebruiken we de checkbox.
+
+De checkbox gebruiken we voornamelijk voor de detailschermen waarop de waarden van een
+gegeven worden ingevoerd/gewijzigd. De serialisatie in de backend zorgt ervoor dat de juiste
+waarde naar de database wordt gestuurd.
+4.4.2
+
+Datumveld
+Voor het invoeren van een datum kan gebruik worden gemaakt van het datumveld.
+
+Hierbij toont het systeem een kalender indien de gebruiker klikt op het kalender icoontje:
+
+Op het datumveld zit een validatie dat de datum niet (deels)onbekend mag zijn, dat de lengte 8 is
+en alleen uit cijfers bestaat. Indien er niet aan deze validaties wordt voldaan toont het systeem
+een rode rond om het datumveld en een melding. Dit ziet er als volgt uit:
+
+Pagina 18 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+4.4.3
+
+Datumveld datum (deels)onbekend
+Voor het invoeren van een (deels)onbekende datum wordt het datumveld (deels)onbekend gebruikt.
+
+Op dit veld zit de validatie dat de lengte óf 1 is en de waarde 0 bevat of dat de lengte 8 is en alleen
+uit cijfers bestaat. Indien niet aan de validaties wordt voldaan toont het scherm een rode rand
+om het datum (deels)onbekend veld. Dit ziet er als volgt uit:
+
+4.4.4
+
+Dropdown
+Voor het koppelen van een veld aan een ander stamgegeven gebruiken we een dropdown.
+
+Deze drop down bevat op alfabetische volgorde de mogelijke records uit een andere stamtabel
+en toont de per record code (indien aanwezig) en de naam/waarde. Door op de dropdown te
+klikken kan de gebruiker tekst invoeren waarmee er gezocht kan worden binnen de te selecteren
+records. Het systeem toont dan de overgebleven records die voldoen aan de ingetypte tekst.
+
+Indien er een waarde (eerder) is geselecteerd, dan kan door op het kruisje te klikken de
+dropdownbox weer gereset worden.
+
+Indien het veld verplicht is, maar de gebruiker het leeg laat, toont het systeem een melding. Dit
+ziet er als volgt uit:
+
+4.4.5
+
+Invoerveld
+Voor het invoeren van alfanumerieke waarden kan een invoerveld gebruikt worden.
+
+Op het invoerveld kan de verplichting zitten dat deze een waarde moet bevatten. Bevat deze
+geen waarde en verlaat de gebruiker het veld, dan toont het systeem een rode rand om het
+invoerveld en een melding. Dit ziet er als volgt uit:
+
+Pagina 19 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+4.4.6
+
+Ja/Nee dropdown
+Voor het selecteren van Ja/Nee waarbij leeglaten is toegestaan, gebruiken we de Ja/Nee dropdown.
+
+Deze dropdown bevat de volgende waarden op alfabetische volgorde:
+
+•
+•
+•
+
+Leeg
+Ja
+Nee
+
+Deze dropdown gebruiken we alleen voor zoekvelden aangezien voor zoekvelden expliciet
+onderscheid gemaakt moet worden tussen ‘Nee’ en ‘Leeg’.
+4.4.7
+
+Lijst
+Lijsten bevatten geselecteerde informatie van records met betrekking tot het gegevens. Lijsten
+bevatten altijd de volgende onderdelen:
+
+•
+•
+•
+•
+
+•
+
+Het totaal aantal items van de lijst
+Een paginering met bijbehorende navigatie en huidige pagina indicatie (zowel boven als
+onder de lijst)
+Een wijzigbaar veld met daarin het aantal te tonen records per pagina (zowel boven als
+onder de lijst)
+Een rij met headers; indien de header blauw gekleurd is, dan kan er op die kolom gesorteerd
+worden. Door op de header te klikken sorteert het systeem de records op basis van de
+waarde in de betreffende kolom
+0 of meer rijen met daarin de gegevens uit de records
+
+Om te voorkomen dat toegevoegde/gewijzigde records niet direct teruggevonden kunnen worden
+(lees: zonder dat er specifiek naar wordt gezocht of zonder dat de lijst wordt doorlopen), worden
+lijsten niet dynamisch bijwerkt wanneer er records worden toegevoegd of gewijzigd.
+
+Pagina 20 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+Dit houdt in dat indien een gebruiker gegevens:
+
+•
+•
+
+4.4.8
+
+toevoegt, het systeem dan het nieuw toegevoegde record onderaan de lijst toont. Let op:
+de lijst bevat dan N+1 items waarbij N het geselecteerde aantal records per pagina is.
+wijzigt, het systeem dan de gewijzigde waarden van het record in de lijst toont, maar de lijst
+niet hersorteerd.
+
+Lijst (inline)
+Op een detailscherm kunnen, in het geval van geneste gegevens, ook lijsten voorkomen. Deze
+lijsten lijken erg op de standaard lijst met als belangrijkste verschillen dat:
+
+•
+•
+•
+•
+•
+
+Er een label links naast staat
+Er een ‘Nieuw’ knop is
+Het totale aantal items niet wordt getoond
+De paginering pas actief/zichtbaar is indien er meer dan de standaard paginagrootte aan
+records zijn
+Het is mogelijk om een verwijder icoontje te tonen voor het verwijderen van een item
+
+Inline lijsten bevatten altijd de volgende onderdelen:
+
+•
+•
+
+Een rij met headers
+0 of meer rijen met daarin de gegevens uit de records
+
+Zoals aangegeven kunnen inline lijsten ook een verwijdericoontje bevatten voor het verwijderen
+van een item, dit kan door de parameter ‘Verwijderen’ in de configuratie te zetten. Het element
+ziet er dan als volgt uit:
+
+Let op: Standaard verwijderen we geen gegevens; voor bepaalde gegevens is er echter besloten
+dit wel toe te staan, dit zijn dan ook de enige gegevens waarvoor dit aangezet mag worden.
+4.4.9
+
+Lijst (inline kruisjeslijst)
+Op een detailscherm kunnen, in het geval van geneste gegevens, ook lijsten voorkomen waarbij
+de gebruiker een aantal selecties moet kunnen aan-/uitzetten. Deze lijsten lijken erg op de
+standaard lijst met als belangrijkste verschillen dat:
+
+•
+•
+•
+
+Er een label links naast staat
+Het totale aantal element niet wordt getoond
+De paginering pas actief/zichtbaar is indien er meer dan de standaard paginagrootte aan
+records zijn
+
+Pagina 21 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+Indien van toepassing kan het systeem ook een ‘Selecteer alles’ en een ‘Deselecteer alles’ knop
+tonen. Hiermee is het mogelijk om alle records met één klik aan of uit te vinken.
+
+Inline kruisjeslijsten bevatten altijd de volgende onderdelen:
+
+•
+•
+•
+4.4.10
+
+Een rij met headers
+0 of meer rijen met daarin de gegevens uit de records
+De linker kolom bevat alleen checkboxen om het item te selecteren danwel te deselecteren
+
+Textarea
+Soms is het nodig om grotere hoeveelheden tekst in te voeren. Hiervoor wordt de textarea
+gebruikt. De waarde die een gebruiker in de textarea kan invoeren is in principe ongelimiteerd.
+
+Pagina 22 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+5
+
+Bijlage A: Authenticatie en autorisatie
+
+Authenticatie en autorisatie ligt buiten de applicatie maar is wel gekoppeld aan de applicatie.
+Wanneer de gebruiker wil inloggen op de applicatie dan moet een gebruikersnaam en
+wachtwoord worden opgegeven. Deze gebruikersnaam en wachtwoord worden door de applicatie
+gebruik om een zogenaamde ‘bind’ te doen op een geconfigureerde LDAP directory (er wordt
+verbinding gemaakt met het LDAPS protocol). De LDAP directory is dus verantwoordelijk voor de
+uiteindelijke authenticatie. Indien deze LDAP ‘bind’ succesvol uitgevoerd kan worden, wordt een
+nader te configureren LDAP query uitgevoerd om de rollen te bepalen die de gebruiker
+(geïdentificeerd door de LDAP ‘bind’) heeft voor de applicatie. Deze lijst aan rollen wordt
+vervolgens door de applicatie gebruikt om te bepalen welke functionaliteit door de gebruiker
+uitgevoerd mag worden.
+
+5.1
+
+Rollen
+De volgende rollen zijn onderkend:
+Rol
+
+Omschrijving
+
+raadplegen_personen
+
+Raadplegen persoonsgegevens
+
+raadplegen_administratieve_handeling
+
+Raadplegen administratieve handelingen
+
+raadplegen_berichten
+
+Raadplegen berichten
+
+raadplegen_partijen
+
+Raadplegen partijen
+
+bewerken_ partijen
+
+Bewerken partijen
+
+raadplegen_leveringsautorisaties
+
+Raadplegen leveringsautorisaties
+
+bewerken_leveringsautorisaties
+
+Bewerken leveringsautorisaties
+
+raadplegen_aut_attribuut
+
+Raadplegen attribuut
+
+bewerken_aut_attribuut
+
+Bewerken attribuut
+
+raadplegen_ aut_dienst
+
+Raadplegen dienst
+
+bewerken_aut_dienst
+
+Bewerken dienst
+
+raadplegen_ aut_ dienstbundel
+
+Raadplegen dienstbundel
+
+bewerken_aut_dienstbundel
+
+Bewerken dienstbundel
+
+raadplegen_ aut_dienstbundelgroep
+
+Raadplegen dienstbundelgroep
+
+bewerken_aut_dienstbundelgroep
+
+Bewerken dienstbundelgroep
+
+Raadplegen_aut_effect_afnemersindicaties
+
+Raadplegen effect afnemersindicaties
+
+raadplegen_ aut_groep
+
+Raadplegen groep
+
+raadplegen_ aut_lo3_filterrubriek
+
+Raadplegen LO3 filterrubriek
+
+bewerken_aut_lo3_filterrubriek
+
+Bewerken LO3 filterrubriek
+
+raadplegen_aut_protocolleringsniveau
+
+Raadplegen protocolleringsniveau
+
+raadplegen_aut_soort_dienst
+
+Raadplegen soort dienst
+
+raadplegen_ aut_toegangleveringsautorisatie
+
+Raadplegen toegangleveringsautorisatie
+
+bewerken_aut_toegangleveringsautorisatie
+
+Bewerken toegangleveringsautorisatie
+
+raadplegen_ber_bijhoudingsresultaat
+
+Raadplegen bijhoudinsresultaat
+
+Raadplegen_ber_bijhoudingssituatye
+
+Raadplegen bijhoudingssituatie
+
+raadplegen_ ber_historievorm
+
+Raadplegen historievorm
+
+raadplegen_ ber_richting
+
+Raadplegen richting
+
+raadplegen_ ber_soort_bericht
+
+Raadplegen soort bericht
+
+raadplegen_ ber_soort_synchronisatie
+
+Raadplegen soort synchronisatie
+
+raadplegen_ ber_verantwoording
+
+Raadplegen verantwoording
+
+Raadplegen_ber_verantwoordingcategorie
+
+Raadplegen verantwoording categorie
+
+raadplegen_ ber_verwerkingsresultaat
+
+Raadplegen verwerkingsresultaat
+
+raadplegen_ ber_verwerkingswijze
+
+Raadplegen verwerkingswijze
+
+raadplegen_conv_aanduiding_inhouding_vermissing_rei
+
+Raadplegen conversietabel aanduiding
+
+sdocument
+
+inhouding/vermissing reisdocument
+
+Pagina 23 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+bewerken_conv_aanduiding_inhouding_vermissing_reisd
+
+Bewerken conversietabel aanduiding
+
+ocument
+
+inhouding/vermissing reisdocument
+
+raadplegen_conv_aangifte_adreshouding
+
+Raadplegen conversietabel aangifte adreshouding
+
+bewerken_conv_aangifte_adreshouding
+
+Bewerken conversietabel aangifte adreshouding
+
+raadplegen_ conv_adellijke_titel_predicaat
+
+Raadplegen conversietabel adellijke titel/predicaat
+
+bewerken_ conv_adellijke_titel_predicaat
+
+Bewerken conversietabel adellijke titel/predicaat
+
+raadplegen_ conv_lo3_rubriek
+
+Raadplegen conversietabel lo3 rubriek
+
+bewerken_ conv_lo3_rubriek
+
+Bewerken conversietabel lo3 rubriek
+
+raadplegen_conv_reden_ontbinding_huwelijke_geregist
+
+Raadplegen conversietabel reden ontbinding
+
+reerd_partnerschap
+
+huwelijk/geregistreerd partnerschap
+
+bewerken_conv_reden_ontbinding_huwelijke_geregistre
+
+Bewerken conversietabel reden ontbinding
+
+erd_partnerschap
+
+huwelijk/geregistreerd partnerschap
+
+raadplegen_conv_reden_opname_nationaliteit
+
+Raadplegen conversietabel reden opname nationaliteit
+
+bewerken conv_reden_opname_nationaliteit
+
+Bewerken conversietabel reden opname nationaliteit
+
+raadplegen_ conv_reden_opschorting
+
+Raadplegen conversietabel reden opschorting
+
+bewerken_ conv_reden_opschorting
+
+Bewerken conversietabel reden opschorting
+
+raadplegen_ conv_rni_deelnemer
+
+Raadplegen conversietabel RNI deelnemer
+
+bewerken_ conv_rni_deelnemer
+
+Bewerken conversietabel RNI deelnemer
+
+raadplegen_ conv_soort_nl_reisdocument
+
+Raadplegen conversietabel soort NL reisdocument
+
+bewerken_ conv_soort_nl_reisdocument
+
+Bewerken conversietabel soort NL reisdocument
+
+raadplegen_ conv_voorvoegsel
+
+Raadplegen conversietabel voorvoegsel
+
+bewerken_conv_voorvoegsel
+
+Bewerken conversietabel voorvoegsel
+
+raadplegen_kern_aanduiding_inhouding_vermissing_rei
+
+Raadplegen aanduiding inhouding/vermissing
+
+sdocument
+
+reisdocument
+
+bewerken_kern_aanduiding_inhouding_vermissing_reisd
+
+Bewerken aanduiding inhouding/vermissing reisdocument
+
+ocument
+raadplegen_kern_aanduiding_verblijfsrecht
+
+Raadplegen aanduiding verblijfsrecht
+
+bewerken_kern_aanduiding_verblijfsrecht
+
+Bewerken aanduiding verblijfsrecht
+
+raadplegen_kern_aangever
+
+Raadplegen aangever
+
+bewerken_kern_aangever
+
+Bewerker aangever
+
+raadplegen_kern_adellijke_titel
+
+Raadplegen adellijke titel
+
+raadplegen_kern_autoriteittype_van_afgifte_reisdocu
+
+Raadplegen autoriteittype van afgifte reisdocument
+
+ment
+bewerken_kern_autoriteittype_van_afgifte_reisdocume
+
+Bewerken autoriteittype van afgifte reisdocument
+
+nt
+raadplegen_kern_bijhoudingsaard
+
+Raadplegen bijhoudingsaard
+
+raadplegen_kern_burgerzaken_module
+
+Raadplegen burgerzaken module
+
+raadplegen_kern_categorie_administratieve_handeling
+
+Raadplegen categorie administratieve handeling
+
+raadplegen_kern_element
+
+Raadplegen element
+
+raadplegen_kern_functie_adres
+
+Raadplegen functie adres
+
+raadplegen_kern_gemeente
+
+Raadplegen gemeente
+
+bewerken_kern_gemeente
+
+Bewerken gemeente
+
+raadplegen_kern_geslachtsaanduiding
+
+Raadplegen geslachtsaanduiding
+
+raadplegen_kern_land_gebied
+
+Raadplegen land/gebied
+
+bewerken_kern_land_gebied
+
+Bewerken land/gebied
+
+raadplegen_kern_naamgebruik
+
+Raadplegen naamgebruik
+
+raadplegen_kern_nadere_bijhoudingsaard
+
+Raadplegen nadere bijhoudingsaard
+
+raadplegen_kern_nationaliteit
+
+Raadplegen nationaliteit
+
+bewerken_kern_nationaliteit
+
+Bewerken nationaliteit
+
+raadplegen_kern_plaats
+
+Raadplegen plaats
+
+bewerken_kern_plaats
+
+Bewerken plaats
+
+raadplegen_kern_predikaat
+
+Raadplegen predicaat
+
+raadplegen_kern_reden_einde_relatie
+
+Raadplegen reden einde relatie
+
+bewerken_kern_reden_einde_relatie
+
+Bewerken reden einde relatie
+
+raadplegen_kern_reden_opschorting
+
+Raadplegen reden opschorting
+
+raadplegen_kern_reden_verkrijging_nl_nationaliteit
+
+Raadplegen reden verkrijging NL nationaliteit
+
+Pagina 24 van 25
+
+Definitief | 1.3 | Technisch ontwerp BRP Beheer Applicatie | 05-12-2016
+
+bewerken_kern_reden_verkrijging_nl_nationaliteit
+
+Bewerken reden verkrijging NL nationaliteit
+
+raadplegen_kern_reden_verlies_nl_nationaliteit
+
+Raadplegen reden verlies NL nationaliteit
+
+bewerken_kern_reden_verlies_nl_nationaliteit
+
+Bewerken reden verlies NL nationaliteit
+
+raadplegen_kern_reden_wijziging_verblijf
+
+Raadplegen reden wijziging verblijf
+
+bewerken_kern_reden_wijziging_verblijf
+
+Bewerken reden wijziging verblijf
+
+Raadplegen_kern_regel
+
+Raadplegen regel
+
+raadplegen_kern_rol
+
+Raadplegen rol
+
+raadplegen_kern_soort_actie
+
+Raadplegen soort actie
+
+raadplegen_kern_soort_actie_bron_gebruik
+
+Raadplegen soort actie bron gebruik
+
+bewerken_kern_soort_actie_bron_gebruik
+
+Bewerken soort actie bron gebruik
+
+raadplegen_kern_soort_administratieve_handeling
+
+Raadplegen soort administratieve handeling
+
+raadplegen_kern_soort_betrokkenheid
+
+Raadplegen soort betrokkenheid
+
+raadplegen_kern_soort_document
+
+Raadplegen soort document
+
+bewerken_kern_soort_document
+
+Bewerken soort document
+
+raadplegen_kern_soort_element
+
+Raadplegen soort element
+
+raadplegen_kern_soort_element_autorisatie
+
+Raadplegen soort element autorisatie
+
+raadplegen_kern_soort_indicatie
+
+Raadplegen soort indicatie
+
+raadplegen_kern_soort_migratie
+
+Raadplegen soort migratie
+
+raadplegen_kern_soort_nederlands_reisdocument
+
+Raadplegen soort Nederlands reisdocument
+
+bewerken_kern_soort_nederlands_reisdocument
+
+Bewerken soort Nederlands reisdocument
+
+raadplegen_kern_soort_partij
+
+Raadplegen soort partij
+
+bewerken_kern_soort_partij
+
+Bewerken soort partij
+
+raadplegen_kern_soort_partij_onderzoek
+
+Raadplegen soort partij onderzoek
+
+raadplegen_kern_soort_persoon
+
+Raadplegen soort persoon
+
+raadplegen_kern_soort_persoon_onderzoek
+
+Raadplegen soort persoon onderzoek
+
+raadplegen_kern_soort_relatie
+
+Raadplegen soort relatie
+
+raadplegen_kern_status_onderzoek
+
+Raadplegen status onderzoek
+
+raadplegen_kern_stelsel
+
+Raadplegen stelsel
+
+raadplegen_kern_voorvoegsel
+
+Raadplegen voorvoegsel
+
+bewerken_kern_voorvoegsel
+
+Bewerken voorvoegsel
+
+raadplegen_migblok_reden_blokkering
+
+Raadplegen reden blokkering
+
+raadplegen_verconv_lo3_berichten_bron
+
+Raadplegen LO3 berichten bron
+
+raadplegen_verconv_lo3_categorie_melding
+
+Raadplegen LO3 categorie melding
+
+raadplegen_verconv_lo3_severity
+
+Raadplegen LO3 severity
+
+raadplegen_verconv_lo3_soort_aanduiding_ouder
+
+Raadplegen LO3 soort aanduiding ouder
+
+raadplegen_verconv_lo3_soort_melding
+
+Raadplegen LO3 soort melding
+
+Pagina 25 van 25
+
+

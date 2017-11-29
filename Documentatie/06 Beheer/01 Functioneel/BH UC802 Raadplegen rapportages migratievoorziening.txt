@@ -1,0 +1,516 @@
+UC802 Raadplegen rapportages
+migratievoorziening
+
+1.2
+
+Datum
+Status
+
+25-06-2015
+Definitief
+
+Definitief | 1.2 | UC802 Raadplegen rapportages migratievoorziening | 25-06-2015
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................6
+2.1
+
+3
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................5
+PRECONDITIE ........................................................................................................................................5
+POSTCONDITIE......................................................................................................................................5
+REGULIER VERLOOP ..............................................................................................................................6
+
+SPECIAL REQUIREMENTS ..............................................................................................................7
+3.1 FOUTEN .................................................................................................................................................7
+3.1.1 Zoeken .........................................................................................................................................7
+3.1.2 Fouten per gemeentecode en type proces .....................................................................7
+3.1.3 Fouten bij een gemeentecode per type proces ............................................................7
+3.1.4 Fouten bij gemeentecode en type proces per foutcode ............................................8
+3.1.5 Fouten bij gemeentecode en type proces en foutcode per fout ............................8
+3.2 LOPENDE PROCESSEN ...........................................................................................................................9
+3.2.1 Zoeken .........................................................................................................................................9
+3.2.2 Lopende processen per type proces en versie .............................................................9
+3.2.3 Lopende processen voor een type proces over een bepaalde periode ...............9
+3.3 AFHANDELING PROCESSEN ................................................................................................................10
+3.3.1 Zoeken .......................................................................................................................................10
+3.3.2 Afhandeling processen voor een bepaald type proces ............................................10
+3.4 NAVIGEREN NAAR ANDERE OVERZICHTEN ........................................................................................10
+
+4
+
+OPMERKINGEN ..................................................................................................................................11
+
+Operatie BRP
+
+Pagina 2 van 11
+
+Definitief | 1.2 | UC802 Raadplegen rapportages migratievoorziening | 25-06-2015
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+20-02-2014
+17-03-2014
+27-06-2014
+01-09-2014
+25-06-2015
+
+0.1
+1.0
+1.0
+1.1
+1.2
+
+Initiële versie
+Aanpassingen n.a.v. review
+Tekstuele aanpassingen
+Definitief gemaakt voor release 2.2
+Definitief gemaakt ten behoeve van release
+3.1
+
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+16-03-2014
+
+0.1
+
+Review initiële versie
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 11
+
+Definitief | 1.2 | UC802 Raadplegen rapportages migratievoorziening | 25-06-2015
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+De migratievoorziening is een complex systeem dat een veelheid van activiteiten uitvoert. Het is
+daarom belangrijk dat het systeem goed beheerd kan worden. Hierbij hoort ook dat de
+beheerder inzicht heeft in het gedrag en status van het systeem.
+Deze use case beschrijft welke rapporten over het gedrag en status van het systeem de
+beheerder kan opvragen. Om deze rapporten te kunnen maken wordt gebruik gemaakt van de
+processen die het systeem registreert voor alle activiteiten die uitgevoerd worden.
+
+Operatie BRP
+
+Pagina 4 van 11
+
+Definitief | 1.2 | UC802 Raadplegen rapportages migratievoorziening | 25-06-2015
+
+1.2
+
+1.3
+
+Referenties
+#
+[UC801]
+
+Document
+MV UC801 Beheren processen
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+[UC814]
+
+MV UC814 Beheren berichten
+
+Operatie BRP
+
+-
+
+-
+
+[UC815]
+
+MV UC815 Beheren taken
+
+Operatie BRP
+
+-
+
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 5 van 11
+
+Definitief | 1.2 | UC802 Raadplegen rapportages migratievoorziening | 25-06-2015
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+Het verloop dat in deze paragraaf beschreven wordt is van toepassing op alle rapporten.
+1. De beheerder selecteert een type rapport
+2. De beheerder voert indien nodig de rapportcriteria in
+3. Het systeem maakt het rapport op basis van de ingevoerde criteria
+4. Het systeem toont de beheerder het resultaat
+5. De use case eindigt
+
+Operatie BRP
+
+Pagina 6 van 11
+
+Definitief | 1.2 | UC802 Raadplegen rapportages migratievoorziening | 25-06-2015
+
+3
+
+Special requirements
+
+In de volgende paragrafen worden de diverse rapporten beschreven. Voor elke rapport is indien
+van toepassing beschreven aan de hand van welke criteria het rapport opgesteld kan worden
+(criteria) en welke informatie een rapport bevat.
+
+3.1
+
+Fouten
+Met behulp van deze rapporten kan inzicht verkregen worden in het soort fouten dat is
+opgetreden.
+
+3.1.1
+
+Zoeken
+Naam
+Datum van
+Datum tot
+
+Toelichting
+De startdatum van de periode van het rapport
+Standaard waarde: een maand geleden
+De einddatum van de periode van het rapport
+Standaard waarde: vandaag
+
+Het resultaat van de zoekactie is beschreven in par. 3.1.2.
+3.1.2
+
+Fouten per gemeentecode en type proces
+Naam
+Datum van
+Datum tot
+Aanmaakdatum
+Lijst van resultaten
+Gemeentecode
+
+Type proces
+
+Toelichting
+De startdatum van de periode van het rapport
+De einddatum van de periode van het rapport
+De datum waarop het rapport is aangemaakt
+De gemeentecode van de gemeente waar een
+fout is opgetreden in een proces gedurende de
+opgegeven periode
+Aantal fouten dat gedurende de opgegeven
+periode is opgetreden bij een bepaald type
+proces
+
+Vanuit dit rapport kan het rapport in par. 3.1.3 opgevraagd worden.
+3.1.3
+
+Fouten bij een gemeentecode per type proces
+Naam
+Datum van
+Datum tot
+Gemeente
+Aanmaakdatum
+Lijst van resultaten
+Type proces
+Aantal
+
+Toelichting
+De startdatum van de periode van het rapport
+De einddatum van de periode van het rapport
+De gemeentecode
+De datum waarop het rapport is aangemaakt
+Het type proces waar een fout is opgetreden
+Het aantal fouten dat bij dit type proces is
+opgetreden
+
+Vanuit dit rapport kan het rapport in par. 3.1.4 opgevraagd worden.
+
+Operatie BRP
+
+Pagina 7 van 11
+
+Definitief | 1.2 | UC802 Raadplegen rapportages migratievoorziening | 25-06-2015
+
+3.1.4
+
+Fouten bij gemeentecode en type proces per foutcode
+Naam
+Datum van
+Datum tot
+Gemeente
+Proces
+Aanmaakdatum
+Lijst van resultaten
+Foutcode
+Aantal
+
+Toelichting
+De startdatum van de periode van het rapport
+De einddatum van de periode van het rapport
+De gemeentecode
+Het type proces
+De datum waarop het rapport is aangemaakt
+Het soort fout dat is opgetreden
+Het aantal fouten dat bij dit type proces is
+opgetreden
+
+Vanuit dit rapport kan het rapport in par. 3.1.5 opgevraagd worden.
+
+3.1.5
+
+Fouten bij gemeentecode en type proces en foutcode per fout
+Naam
+Datum van
+Datum tot
+Gemeente
+Proces
+Foutcode
+Aanmaakdatum
+Lijst van resultaten
+Tijdstip
+Procesinstantie
+Doel gemeente
+Resolutie
+Detail melding
+
+Operatie BRP
+
+Toelichting
+De startdatum van de periode van het rapport
+De einddatum van de periode van het rapport
+De gemeentecode
+Het type proces
+Het soort fout
+De datum waarop het rapport is aangemaakt
+Het tijdstip waarop de fout is opgetreden
+Het nummer van het proces waarin de fout is
+opgetreden
+Indien van toepassing de doel gemeente
+Hoe de fout is opgelost
+Detailomschrijving van de fout
+
+Pagina 8 van 11
+
+Definitief | 1.2 | UC802 Raadplegen rapportages migratievoorziening | 25-06-2015
+
+3.2
+
+Lopende processen
+Dit rapport toont het aantal lopende processen op het moment dat het rapport opgevraagd
+wordt. Het geheel is geaggregeerd per type proces.
+
+3.2.1
+
+Zoeken
+Niet van toepassing.
+
+3.2.2
+
+Lopende processen per type proces en versie
+Naam
+Aanmaakdatum
+Lijst van resultaten
+Type proces
+Versie
+In uitvoering twee dagen of korter
+In uitvoering langer dan twee dagen
+Wacht één dag of minder op een actie van de
+beheerder
+Wacht langer dan één dag op een actie van de
+beheerder
+
+3.2.3
+
+Toelichting
+De datum waarop het rapport is aangemaakt
+De naam van het type proces
+De versie van het type proces
+Aantal processen dat twee dagen of korter
+loopt
+Aantal processen dat langer dan twee dagen
+loopt
+Aantal processen dat één dag of korter op een
+actie van de beheerder wacht
+Aantal processen dat langer dan één dag
+wacht op een actie van de beheerder
+
+Lopende processen voor een type proces over een bepaalde periode
+Naam
+Proces
+Tonen
+Aanmaakdatum
+Lijst van resultaten
+#
+Proces
+Subproces
+Taak
+Stap
+Startdatum uitvoering
+Startdatum beheerder
+
+Toelichting
+Het type proces
+De periode waarover gerapporteerd wordt
+De datum waarop het rapport is aangemaakt
+Het ID van het proces
+Het type proces
+Het subproces indien van toepassing
+De taak van het subproces indien van
+toepassing
+De stap uit het (sub)proces
+Datum en tijd wanneer het proces is gestart
+Datum en tijd wanneer de beheerder het
+proces heeft opgepakt
+
+De mogelijke perioden komen overeen met de perioden zoals die in par. 3.2.2 genoemd worden.
+Ook een combinatie van alle perioden is mogelijk waarmee alle voor het type proces lopende
+processen getoond worden.
+
+Operatie BRP
+
+Pagina 9 van 11
+
+Definitief | 1.2 | UC802 Raadplegen rapportages migratievoorziening | 25-06-2015
+
+3.3
+
+Afhandeling processen
+Dit rapport toont het aantal gestarte, lopende en beëindigen processen van een bepaald type
+proces. De aantallen zijn geaggregeerd per dag.
+
+3.3.1
+
+Zoeken
+Naam
+Datum van
+Datum tot
+
+Type proces
+
+Toelichting
+De startdatum van de periode van het rapport
+Standaard waarde: een maand geleden
+De einddatum van de periode van het rapport
+Standaard waarde: vandaag
+Let op: dit is niet t/m
+Het type proces
+
+Het resultaat van de zoekactie is beschreven in par. 3.3.2.
+
+3.3.2
+
+Afhandeling processen voor een bepaald type proces
+Naam
+Datum van
+Datum tot
+Type proces
+Aanmaakdatum
+Lijst van resultaten
+Datum
+Gestart
+Lopend
+Beëindigd
+
+3.4
+
+Toelichting
+De startdatum van de periode van het rapport
+De einddatum van de periode van het rapport
+De naam van het type proces waarvoor het
+rapport is aangemaakt
+De datum waarop het rapport aangemaakt
+De datum
+Aantal processen dat gestart is op datum
+Aantal processen dat aan het van de periode
+nog liep
+Aantal processen dat gedurende de periode is
+beëindigd
+
+Navigeren naar andere overzichten
+Daar waar van toepassing kan genavigeerd worden naar overzichten die beschreven zijn in
+andere use cases (zie [UC801], [UC814] en [UC815]).
+
+Operatie BRP
+
+Pagina 10 van 11
+
+Definitief | 1.2 | UC802 Raadplegen rapportages migratievoorziening | 25-06-2015
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 11 van 11
+
+

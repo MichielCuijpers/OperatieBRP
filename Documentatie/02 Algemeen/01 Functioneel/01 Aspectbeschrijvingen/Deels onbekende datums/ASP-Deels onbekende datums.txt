@@ -1,0 +1,241 @@
+Vergelijking: 1965-01-00 >= 1965-01-10
+
+1965-01-00
+1964-11-01
+
+1964-12-01
+
+1965-01-01
+
+1965-02-01
+
+1965-0
+
+1964-12-01
+
+1965-01-01
+
+1965-02-01
+
+1965-0
+
+1965-01-10
+1964-11-01
+
+1965-01-01 - 1965-01-09
+Een Strenge vergelijking
+levert false omdat in deze
+periode geen overlap is
+
+1965-01-10 - 1965-01-31
+Een Soepele vergelijking
+levert true op omdat
+In deze periode overlap is
+
+Vergelijking: 1965-01-00 <= 1965-01-10
+
+1965-01-00
+1964-11-01
+
+1964-12-01
+
+1965-01-01
+
+1965-02-01
+
+1965-0
+
+1964-12-01
+
+1965-01-01
+
+1965-02-01
+
+1965-0
+
+1965-01-10
+1964-11-01
+
+1965-01-01 - 1965-01-10
+Een Soepele vergelijking
+Levert true op omdat
+In deze periode overlap is
+
+1965-01-11 - 1965-01-31
+Een Strenge vergelijking
+levert false omdat in deze
+periode geen overlap is
+
+Vergelijking: 1965-01-00 = 1965-01-10
+
+1965-01-00
+1964-11-01
+
+1964-12-01
+
+1965-01-01
+
+1965-02-01
+
+1965-0
+
+1964-12-01
+
+1965-01-01
+
+1965-02-01
+
+1965-0
+
+1965-01-10
+1964-11-01
+
+1965-01-01 - 1965-01-09
+Een Strenge vergelijking
+levert false omdat in deze
+periode geen overlap is
+
+- - –
+- Een Strenge vergelijking
+levert false omdat in deze
+periode geen overlap is
+
+1965-01-10
+Een Soepele vergelijking
+Levert true op omdat
+op deze ene dag toch
+overlap is.
+
+Vergelijking: 1980-05-00 = 1980-05-17
+
+1980-05-17
+1980-05-01
+
+1980-05-00
+1980-01-01
+
+1980-05-01 1980-05-31
+
+1980-02-01 1980-03-01 1980-04-01 1980-05-01 1980-06-01 1980-07-01 1980-08-01 1980-09-01 1980-10-01 1
+1980-05-17
+
+1980-05-17
+1980-01-01
+
+1980-02-01 1980-03-01 1980-04-01 1980-05-01 1980-06-01 1980-07-01 1980-08-01 1980-09-01 1980-10-01 1
+
+1980-05-17
+
+17 mei 1980
+
+Een Soepele vergelijking levert true op
+omdat er een datumcombinatie bestaat
+waarop de vergelijking waar is: nl.
+1980-05-17 = 1980-05-17 is waar.
+
+Een Strenge vergelijking levert false op
+omdat er een datumcombinatie bestaat
+waarop de vergelijking onwaar is: bijv.
+1980-05-01 = 1980-05-17 is onwaar.
+
+Vergelijking: 1980-00-00 = 1980-05-00
+
+1980-00-00
+1980-01-01
+
+1980-02-01 1980-03-01 1980-04-01 1980-05-01 1980-06-01 1980-07-01 1980-08-01 1980-09-01 1980-10-01 1
+
+1980-05-00
+1980-01-01
+
+1980-02-01 1980-03-01 1980-04-01 1980-05-01 1980-06-01 1980-07-01 1980-08-01 1980-09-01 1980-10-01 1
+
+1980-01-01 - 1980-04-30
+Een Strenge vergelijking levert
+false op omdat er periodes zijn
+waarop er geen overlap is
+
+1980-05-01 - 1980-05-31
+Een Soepele vergelijking
+levert true op omdat
+er een overlappende periode is.
+
+1980-06-01 - 1980-12-31
+Ook vanwege deze niet overlappend
+levert een Strenge vergelijking "fa
+
+Vergelijking: 1980-00-00 <> 1980-05-00
+
+1980-00-00
+1980-01-01
+
+1980-02-01 1980-03-01 1980-04-01 1980-05-01 1980-06-01 1980-07-01 1980-08-01 1980-09-01 1980-10-01 1
+
+1980-05-00
+1980-01-01
+
+1980-02-01 1980-03-01 1980-04-01 1980-05-01 1980-06-01 1980-07-01 1980-08-01 1980-09-01 1980-10-01 1
+
+Een Soepele vergelijking
+levert true op omdat
+er overlappende periodes zijn.
+
+Een Strenge vergelijking
+levert false op omdat
+er ook een niet-overlappende
+periode is.
+
+Ook vanwege deze overlappende
+levert een Soepele vergelijking "t
+
+Vergelijking: 1980-06-00 >= 1980-05-00
+
+1980-06-00
+1980-01-01
+
+1980-02-01 1980-03-01 1980-04-01 1980-05-01 1980-06-01 1980-07-01 1980-08-01 1980-09-01 1980-10-01 1
+
+1980-05-00
+1980-01-01
+
+1980-02-01 1980-03-01 1980-04-01 1980-05-01 1980-06-01 1980-07-01 1980-08-01 1980-09-01 1980-10-01 1
+
+1980-06-01 - 1980-07-01
+
+Een Soepele vergelijking
+levert true op omdat
+er een overlappende periode is.
+Een Strenge vergelijking levert
+ook true op omdat voor alle
+datumcombinaties geldt dat de
+vergelijking waar is. Immers, er
+zijn geen niet-overlappende
+
+Vergelijking: 1980-05-00 >= 1980-05-00
+1980-05-01
+1980-05-31
+
+1980-05-00
+1980-01-01
+
+1980-05-00
+1980-01-01
+
+1980-05-01 1980-05-31
+
+1980-02-01 1980-03-01 1980-04-01 1980-05-01 1980-06-01 1980-07-01 1980-08-01 1980-09-01 1980-10-01 1
+1980-05-01 1980-05-31
+1980-05-01 1980-05-31
+
+1980-02-01 1980-03-01 1980-04-01 1980-05-01 1980-06-01 1980-07-01 1980-08-01 1980-09-01 1980-10-01 1
+
+Een Soepele vergelijking levert true op
+omdat er een datumcombinatie bestaat
+waarop de vergelijking waar is: bijv.
+1980-05-31 >= 1980-05-01 is waar
+Een Strenge vergelijking levert false op
+omdat er een datumcombinatie bestaat
+waarop de vergelijking onwaar is: bijv.
+1980-05-01 >= 1980-05-31 is onwaar
+
+

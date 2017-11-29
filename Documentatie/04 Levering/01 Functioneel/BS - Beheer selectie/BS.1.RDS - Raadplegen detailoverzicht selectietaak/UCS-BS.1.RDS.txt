@@ -1,0 +1,511 @@
+UCS BS.1.RDS – Raadplegen detailgegevens
+selectietaak
+Versie
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Datum
+
+17 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+13-06-2017
+
+0.1
+
+Eerste opzet
+
+oBRP
+
+20-06-2017
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+27-06-2017
+
+0.3
+
+Aanvullende gegevens t.b.v. beheer verwijderd
+
+oBRP
+
+17-07-2017
+
+1.0
+
+Definitief gemaakt. Hfd openstaande punten toegevoegd
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS BS.1.RDS – Raadplegen detailgegevens selectietaak
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Gebruikersinteractie ................................................................................................. 4
+2.1
+2.2
+2.3
+
+3
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+Openstaande punten .............................................................................................................3
+
+Preconditie ...........................................................................................................................4
+Postconditie .........................................................................................................................4
+Regulier verloop....................................................................................................................4
+
+Schermonderdelen .................................................................................................... 5
+3.1
+3.2
+
+Gegevens detailoverzicht selectietaak ......................................................................................5
+Initiële vulling peilmomenten selectietaak ................................................................................6
+
+4
+
+Bedrijfsregels ........................................................................................................... 7
+
+5
+
+Ontwerpbeslissingen ................................................................................................ 8
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 2 van 8
+
+UCS BS.1.RDS – Raadplegen detailgegevens selectietaak
+
+1 Inleiding
+1.1
+
+Doel
+
+Deze Use Case beschrijft de wijze waarop de gebruiker een detailoverzicht krijgt van een
+geselecteerde selectietaak.
+Vanuit dit detailoverzicht kunnen bepaalde gegevens van de selectietaak of de selectiedienst
+gewijzigd worden.
+Welke gegevens er gewijzigd kunnen worden is afhankelijk van de status van de selectietaak.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de gebruikersinteractie. In hoofdstuk 3 worden de schermonderdelen
+beschreven en hoofdstuk 4 bevat een verwijzing naar de bedrijfsregels. In hoofdstuk 5 staan de
+Use Case specifieke ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+1.4
+
+Openstaande punten
+
+De Use Case heeft bij een aantal velden de opmerking <nieuw gegeven nog niet in BMR>. Deze
+velden zijn nog niet toegevoegd aan het BMR datamodel.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 3 van 8
+
+UCS BS.1.RDS – Raadplegen detailgegevens selectietaak
+
+2 Gebruikersinteractie
+2.1
+
+Preconditie
+
+De gebruiker heeft een selectietaak geselecteerd.
+
+2.2
+
+Postconditie
+
+De gebruiker heeft een detailoverzicht van de geselecteerde selectietaak gekregen.
+
+2.3
+
+Regulier verloop
+
+In het regulier verloop wordt de interactie van de actor met het systeem beknopt beschreven.
+
+Stap
+
+Actor
+
+Actie
+
+Alternatief
+
+1.
+
+Gebruiker
+
+Vraagt een detailoverzicht op van een
+selectietaak
+
+2.
+
+Systeem
+
+Toont een overzicht van in te plannen en reeds
+geplande selectietaken. Afhankelijk van waar
+de gebruiker in het proces de detailgegevens
+van een selectietaak opvraagt en afhankelijk
+van de status van de selectietaak kan de
+gebruiker gegevens wel of niet wijzigen.
+De detailgegevens van een selectietaak
+bestaan uit:
+•
+•
+•
+
+Gegevens m.b.t. de selectiedienst
+Gegevens m.b.t. de selectietaak
+Historische gegevens m.b.t. de status
+van de selectietaak
+
+Voor de beschrijving van de gegevens in het
+overzicht zie paragraaf (3.1)
+Voor een beschrijving van de
+wijzigingsmogelijkheden van de gegevens op
+het detailoverzicht wordt verwezen naar de
+aanroepende level 0 Use Case.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 4 van 8
+
+UCS BS.1.RDS – Raadplegen detailgegevens selectietaak
+
+3 Schermonderdelen
+3.1
+
+Gegevens detailoverzicht selectietaak
+
+Het overzicht toont alle gegevens met betrekking tot de geselecteerde selectietaak.
+In de onderstaande tabel is per gegevensgroep een overzicht te vinden van de gegevens die
+getoond worden van de selectietaak.
+Selectiedienst
+Naam
+
+BRP Attribuut
+
+Dienst ID
+
+Selectietaak.Dienst
+
+Partijcode
+
+Toegang Leveringsautorisatie.Geautoriseerde.Partij.Code
+
+Partij
+
+Toegang Leveringsautorisatie.Geautoriseerde.Partij.Naam
+
+Stelsel
+
+Leveringsautorisatie.Stelsel
+
+Selectiesoort
+
+Dienst.Soort selectie
+
+Eerste selectiedatum
+
+Dienst.Eerste selectiedatum
+
+Selectie interval
+
+Dienst.Selectieinterval
+
+Eenheid selectie interval
+
+Dienst.Eenheid selectieinterval
+
+Selectiecriterium
+
+Dienst.Selectiecriterium
+
+Dienst peilmoment materieel
+resultaat
+
+Dienst.Selectie peilmoment materieel resultaat
+
+Dienst peilmoment formeel resultaat
+
+Dienst.Selectie peilmoment formeel resultaat
+
+Historievorm selectie
+
+Dienst.Historievorm selectie
+
+Selectieresultaat controleren?
+
+Dienst.Selectieresultaat controleren?
+
+Maximaal aantal personen per
+selectiebestand
+
+Dienst.Maximaal aantal personen per selectiebestand
+
+Maximale grootte selectiebestand
+
+Dienst.Maximale grootte selectiebestand
+
+Verzend volledig bericht bij wijziging
+afnemerindicatie na selectie?
+
+Dienst.Verzend volledig bericht bij wijziging
+afnemerindicatie na selectie?
+
+Leverwijze selectie
+
+Dienst.Leverwijze selectie
+
+Aanvullende gegevens selectiedienst ten behoeve van beheer
+Naam
+
+BRP Attribuut
+
+Medium selectie
+
+<nieuw gegeven nog niet in BMR> Digikoppeling/CD-DVD/Ftps
+
+Verwacht aantal personen
+
+<nieuw gegeven nog niet in BMR>
+
+Certificaat selectie
+
+<nieuw gegeven nog niet in BMR> Eigen / Bewerker
+
+Bewerker selectie
+
+<nieuw gegeven nog niet in BMR> <bestaande partij>
+
+E-mail contactpersoon
+selectie
+
+<nieuw gegeven nog niet in BMR>
+
+Selectietaak
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 5 van 8
+
+UCS BS.1.RDS – Raadplegen detailgegevens selectietaak
+
+Naam
+
+BRP Attribuut
+
+Selectietaak ID
+
+Selectietaak.ID
+
+Toegang
+leveringsautorisatie
+
+Selectietaak.Toegang leveringsautorisatie
+
+Selectiesoort taak
+
+<nieuw gegeven nog niet in BMR>
+
+Berekende selectiedatum
+
+<berekende waarde>
+
+Datum planning
+
+Selectietaak.Datum planning
+
+Datum uitvoer
+
+Selectietaak.Datum uitvoer
+
+Peilmoment formeel
+resultaat selectietaak
+
+Selectietaak.Peilmoment formeel resultaat of <berekende waarde>
+
+Peilmoment materieel
+resultaat selectietaak
+
+Selectietaak.Peilmoment materieel resultaat of <berekende
+waarde>
+
+Selectielijst gebruiken?
+
+Selectietaak.Selectielijst gebruiken?
+
+Bestandsnaam selectielijst
+
+<nieuw gegeven nog niet in BMR>
+<wordt gevuld na selectie van het bestand door de beheerder>
+
+Selectierun
+
+Selectietaak.Uitgevoerd in
+
+Selectierun start
+
+Selectierun.Tijdstip start
+
+Selectierun eind
+
+Selectierun.Tijdstip gereed
+
+Status
+
+Selectietaak.Status
+
+Status gewijzigd door
+
+Selectietaak.Statusgewijzigd door
+
+Status toelichting
+
+Selectietaak.Statustoelichting
+
+Historie Status selectietaak
+Weergegeven in een tabel de historie van de statussen van de selectietaak met daarin opgenomen
+de volgende gegevens:
+Naam
+
+Omschrijving
+
+Status
+
+Status naam
+
+Start
+
+Begin datum/tijd van deze status
+
+Eind
+
+Eind datum/tijd van deze status
+
+Gewijzigd door
+
+Gebruikersnaam of <systeem>
+
+Toelichting
+
+3.2
+
+Initiële vulling peilmomenten selectietaak
+
+Peilmoment formeel resultaat en peilmoment materieel resultaat van de selectietaak worden
+initieel gevuld vanuit de selectiedienst indien bij de dienst de peilmomenten aanwezig zijn.
+Indien het een periodieke selectie betreft en de peilmomenten vanuit de selectiedienst worden
+overgenomen in de selectietaak dan worden de peilmomenten berekend zoals de berekende
+selectiedatum.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 6 van 8
+
+UCS BS.1.RDS – Raadplegen detailgegevens selectietaak
+
+4 Bedrijfsregels
+Voor een toelichting op de verschillende soorten bedrijfsregels wordt verwezen naar de daartoe
+opgestelde aspectbeschrijving Controles [2].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels, verwerkingslogica en definitieregels zijn opgenomen de bijlage: BS.1.RDS – Bijlage
+Raadplegen detailoverzicht selectietaak.doc
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 7 van 8
+
+UCS BS.1.RDS – Raadplegen detailgegevens selectietaak
+
+5 Ontwerpbeslissingen
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 8 van 8
+
+

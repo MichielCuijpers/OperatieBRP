@@ -1,0 +1,2623 @@
+Functioneel ontwerp Deltabepaling
+
+1.7
+
+Datum
+Status
+
+03-05-2017
+Definitief
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+INHOUD .................................................................................................................................................4
+DOEL VAN DIT DOCUMENT ...................................................................................................................4
+LEESWIJZER ..........................................................................................................................................4
+REFERENTIES ........................................................................................................................................4
+
+2
+
+BASISOPZET DELTABEPALING ...................................................................................................5
+
+3
+
+BIJWERKEN VAN DE PERSOONSLIJST ...................................................................................7
+3.1 STAPEL MATCHEN .................................................................................................................................7
+3.1.1 Nationaliteit ................................................................................................................................7
+3.1.2 Reisdocument ............................................................................................................................7
+3.1.3 Buitenlands persoonsnummer ............................................................................................7
+3.1.4 Kind ...............................................................................................................................................8
+3.1.5 Huwelijk / geregistreerd partnerschap ............................................................................8
+3.1.6 Ouder............................................................................................................................................8
+3.1.7 Onderzoek ..................................................................................................................................9
+3.2 MUTATIES BINNEN EEN STAPEL ...........................................................................................................9
+3.3 HERKENNEN VAN SPECIFIEKE SOORTEN MUTATIES BINNEN EEN STAPEL .......................................13
+3.3.1 Gegevens afkomstig uit GBA-categorie zonder historie .........................................13
+3.3.2 BRP-Groep met F-historie afkomstig uit GBA-categorie met historie................14
+3.3.3 BRP-Groep met M+F-historie afkomstig uit GBA-categorie met historie .........15
+3.3.4 Groep Bijhouding ...................................................................................................................16
+3.3.5 Groep Nationaliteit ................................................................................................................17
+3.3.6 Algemeen ..................................................................................................................................18
+3.3.7 Algemene richtlijnen .............................................................................................................18
+3.4 CONSEQUENTIES ................................................................................................................................20
+
+4
+
+BEPALING SOORT ADMINISTRATIEVE HANDELING ....................................................22
+4.1 GBA - INFRASTRUCTURELE WIJZIGING ............................................................................................22
+4.2 GBA - AFVOEREN PL .........................................................................................................................23
+4.3 GBA - BIJHOUDING ACTUEEL VS GBA - BIJHOUDING OVERIG .....................................................23
+4.3.1 Actualisering van actuele gegevens ...............................................................................23
+4.3.2 Correctie van actuele gegevens .......................................................................................25
+4.3.3 Groepen waarvan GBA-herkomst geen historie heeft .............................................26
+4.3.4 Onderzoek ................................................................................................................................26
+4.3.5 Groep Voornaam en Geslachtsnaamcomponent ........................................................27
+4.3.6 Groep Bijhouding ...................................................................................................................27
+4.3.7 Groep Nationaliteit ................................................................................................................27
+4.3.8 Relatie, Betrokkenheid en gerelateerde persoon ......................................................28
+
+Operatie BRP
+
+Pagina 2 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+29-06-2015
+07-07-2015
+30-07-2015
+
+0.1
+1.0
+1.1
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+18-09-2015
+
+1.1.1
+
+09-11-2015
+
+1.2
+
+05-02-2016
+
+1.3
+
+02-06-2016
+11-01-2017
+
+1.4
+1.5
+
+Initiële versie
+Reviewcommentaar verwerkt
+Titel aangepast van ‘Deltabepaling’ in
+‘Functioneel ontwerp Deltabepaling'
+INTEST-780: Bij DW-012 de tekst verwijderd
+dat actie verval/tijdstip verval gelijk moet
+zijn aan actie inhoud/tijdstip registratie
+INTEST-733: In paragraaf 4.1 is de
+verwijzende paragraaf uit UC220 aangepast
+Wijzigingen als gevolg van LO GBA 3.9.
+Deltabepaling voor onderzoeksgegevens
+opgenomen.
+Paragraaf 3.3.1: Verblijfsrecht moet
+behandeld worden als een groep die in GBA
+geen historie heeft
+Hoofdstuk 4: In inleiding toegelicht dat bij
+ieder soort administratieve handeling de
+groep Inschrijving ook wijzigt.
+Paragraaf 4.1: verfijning a-nummer wijziging
+Paragraaf 4.4.4: verfijning aangebracht voor
+onderzoek op relaties en betrokkenheden
+Paragraaf 1.4: Referenties bijgewerkt
+A-nummerwijziging verwijderd
+Paragraaf 3.1.2: attribuut Lengte houder
+verwijderd.
+Correctie conversie bijhoudingsaard
+(WV2016011) doorgevoerd
+Buitenlands persoonsnummer (WV201468)
+toegevoegd
+
+Operatie BRP
+
+Operatie BRP
+
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+29-06-2015
+
+0.1
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+1
+
+Inleiding
+
+1.1
+
+Inhoud
+Dit document beschrijft op welke wijze de persoonslijst in de BRP wordt aangepast nadat een
+synchronisatiebericht vanuit GBA is ontvangen. Het bepalen van wat er in de persoonslijst
+gewijzigd is, en het vervolgens doorvoeren van deze wijzigingen wordt de deltabepaling
+genoemd.
+Het doel van deltabepaling is dat aan de BRP kenbaar wordt gemaakt welke delen van de
+persoonslijst gewijzigd zijn. Hierdoor is het bijvoorbeeld mogelijk om te bepalen aan welke
+afnemers de persoonslijst geleverd moet worden en welk deel van de persoonslijst geleverd
+moet worden. De deltabepaling vindt plaats na het uitvoeren van de conversie naar BRPformaat. Dit betekent dat de basis van de deltabepaling een GBA persoonslijst is die reeds
+geconverteerd is naar het BRP-formaat.
+
+1.2
+
+Doel van dit document
+Dit document maakt op verschillende niveaus duidelijk hoe persoonslijsten naar aanleiding van
+een synchronisatie van het GBA bijgewerkt worden in de BRP. Kennis van de terminologie en
+gegevens uit de GBA en BRP is vereist. Daarnaast is ook basiskennis van de gegevensconversie
+tussen GBA en BRP vereist. De betekenis van termen als stapel en IST-tabel worden
+verondersteld bekend te zijn bij de lezer.
+Het document is bedoeld voor het ontwikkel- en testteam. Daarnaast kan dit document door
+applicatiebeheerders ter naslag gebruikt worden, bijvoorbeeld om na te gaan waarom een
+persoonslijst op een bepaalde wijze is bijgewerkt of waarom bepaalde gegevens wel of niet
+geleverd zijn aan afnemers.
+
+1.3
+
+Leeswijzer
+Deze paragraaf beschrijft de hoofdstukken om de lezer te ondersteunen bij het vinden van de
+juist informatie.
+•
+Hoofdstuk 1 (Inleiding) beschrijft het doel en scope van het document.
+•
+Hoofdstuk 2 (Basisopzet deltabepaling) positioneert de deltabepaling binnen het proces
+van synchroniseren van GBA naar de BRP. Daarnaast wordt ingegaan op waarom de
+deltabepaling nodig is en wordt deltabepaling op hoofdlijnen beschreven.
+•
+Hoofdstuk 3 (Bijwerken van de persoonslijst) beschrijft in detail hoe de persoonslijst als
+onderdeel van deltabepaling bijgewerkt wordt.
+•
+Hoofdstuk 4 (Bepaling soort administratieve handeling) beschrijft welke soorten
+administratieve handelingen kunnen voorkomen als gevolg van deltabepaling.
+
+1.4
+
+Referenties
+#
+[CONV-DOC]
+
+Document
+Documentatie bidirectionele conversie
+
+Organisatie
+oBRP
+
+[GO-LEVDP]
+
+Globaal ontwerp levering in de duale
+periode
+
+oBRP
+
+[UC220]
+
+MV UC220 Bepalen verwerking
+persoonslijst
+
+oBRP
+
+[LO-GBA]
+
+Logisch Ontwerp GBA
+
+[LO-RNI]
+[GWB-BRP]
+
+Operatie BRP
+
+Versie
+
+Datum
+
+RvIG
+
+3.10
+
+08-102016
+
+Logisch ontwerp RNI
+
+RvIG
+
+2.12
+
+08-102016
+
+Gegevenswoordenboek BRP
+
+oBRP
+
+Pagina 4 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+2
+
+Basisopzet deltabepaling
+
+Tijdens de gegevensconversie, die beschreven staat in Documentatie bidirectionele conversie
+[CONV-DOC], wordt geen rekening gehouden met deltabepaling. Dat wil zeggen dat de
+persoonslijst volledig geconverteerd wordt alsof deze nog niet bestaat in de BRP. Op het moment
+dat de Persoonslijst daadwerkelijk opgeslagen wordt in de BRP vindt de deltabepaling plaats.
+Uitgangspunt: Tijdens synchronisatie mag geen afbreuk worden gedaan aan de
+‘juridische pl’.
+Als de volledige persoonslijst in de BRP opgevraagd wordt, moet dit een correcte afspiegeling zijn
+van de juridische persoonslijst zoals deze in GBA is vastgelegd. Het mag hierbij niet uitmaken of
+de laatste versie van persoonslijst in z’n geheel eenmalig geconverteerd is, of dat deze
+persoonslijst als gevolg van meerdere synchronisatieberichten bijgewerkt is tot deze laatste
+versie.
+In principe GO-LEVDP-001 (zie Globaal ontwerp levering in de duale periode [GO-LEVDP]) staat
+beschreven dat de levering van gegevens voor zowel GBA als BRP-leveringen plaatsvindt aan de
+hand van het gegevensformaat van de BRP. Voor de GBA-levering worden de gegevens
+terugvertaald naar het GBA-formaat. Dit impliceert dat in het BRP gegevensformaat ook
+herkenbaar moet zijn wat er aan de persoonslijst veranderd is als gevolg van een synchronisatie
+vanuit GBA.
+Bij iedere nieuwe synchronisatie van een persoonslijst1 wordt een nieuwe administratieve
+handeling vastgelegd. Aan deze administratieve handeling worden de gegevens gekoppeld die
+door de wijziging geraakt worden. Daarnaast wordt met het soort administratieve handeling
+aangegeven of er sprake is van bijhouding op uitsluitend actuele gegevens (GBA - Bijhouding
+actueel) of dat er (tevens) ander bijhoudingen hebben plaatsgevonden (GBA - Bijhouding
+overig). Dit soort is een hint voor de leveringsmodule van de BRP om de juiste mutatieberichten
+naar afnemers te kunnen sturen. De verschillende soorten administratieve handelingen hebben
+betrekking op het vastgestelde inhoudelijke verschil in de persoonslijst ten opzichte van wat al
+vastgelegd was in de BRP. Het slaat dus niet op het type bericht dat vanuit een gemeente
+verstuurd is of door welke use case dit bericht verwerkt wordt.
+Om het soort administratieve handeling te bepalen en daarmee ook het juiste berichttype naar
+afnemers te kunnen versturen, moet eerst vastgesteld worden wat er als gevolg van het
+synchronisatiebericht aan de persoonslijst verandert. Aan de hand daarvan wordt vervolgens
+bepaald welk soort administratieve handeling het betreft.
+GBA - Bijhouding actueel
+Er is sprake van een GBA - Bijhouding actueel als op de persoonslijst nieuwe actuele gegevens
+vastgelegd worden. Er is dan sprake van een actualisering of een correctie van uitsluitend de
+actuele gegevens. In paragraaf 4.3 wordt nadere toegelicht welke situaties dit betreft en hoe
+deze te herkennen zijn.
+In deze situatie worden mutatieberichten naar de afnemers gestuurd. Ondanks dat de GBA en
+BRP berichten een andere opbouw hebben, geldt voor beiden dat aan de persoonslijst herkent
+moet kunnen wat de exacte wijziging is. Kortom, uit de opgeslagen gegevens moet terug te
+lezen zijn hoe de persoonslijst er voor en na de mutatie uitziet.
+
+1
+
+Als de PL gewijzigd is ten opzichte van hetgeen reeds vastgelegd is in de BRP
+
+Operatie BRP
+
+Pagina 5 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+Voorbeeld
+De persoonslijst van Jan is opgenomen in de BRP
+
+BRP
+
+Jan Jansen
+Ingeschrevene
+
+Voor
+verwerking
+
+Geboorte
+1-1-1920,...
+
+Samengestelde
+naam
+Jan Jansen, ...
+
+Bijhouding
+
+Overlijden
+
+Actueel, ...
+
+Adres
+
+...
+
+Plein 1, ...
+
+...
+
+Admin. handeling
+1-1-2014, initiele vulling
+
++
+
+Op de PL is het overlijden van de persoon geregistreerd. Als gevolg hiervan heeft de gemeente synchornisatiebericht (Lg01) verstuurd.
+Na conversie van GBA naar BRP formaat ziet deze er als volgt uit.
+
+Jan Jansen
+
+Nieuwe PL
+
+Ingeschrevene
+
+Geboorte
+1-1-1920,...
+
+Samengestelde
+naam
+Jan Jansen, ...
+
+Bijhouding
+
+Overlijden
+
+Adres
+
+...
+
+Overleden, ...
+
+5-5-2014, ...
+
+Plein 1, ...
+
+...
+
+=
+Het overlijden wordt aan de PL toegevoegd en de bijhouding wordt vervangen.
+
+Jan Jansen
+
+BRP
+Na Delta
+bepaling
+
+Ingeschrevene
+
+Geboorte
+1-1-1920,...
+
+Samengestelde
+naam
+Jan Jansen, ...
+
+Bijhouding
+
+Overlijden
+
+Adres
+
+...
+
+Overleden, ...
+
+5-5-2014, ...
+
+Plein 1, ...
+
+...
+
+Admin. handeling
+6-5-2014, Synchronisatie
+1-1-2014, initiele vulling
+
+GBA - Bijhouding overig
+Als de wijziging(en) op de persoonslijst geen actualisering of correctie van actuele gegevens
+betreft, met andere woorden het betreft geen GBA - Bijhouding actueel, dan wordt het
+vastgelegd als GBA - Bijhouding overig. Voorbeelden hiervan zijn actualiseringen in de historie of
+WALG2.
+Als er sprake is van GBA - Bijhouding overig, dan zal er naar de afnemers een zogenaamde
+vulbericht gestuurd worden3. Dit houdt in dat voor de vulling van het bericht niet gekeken wordt
+welke gegevens gewijzigd zijn. Gegevens waarvoor de afnemer is geautoriseerd worden
+gestuurd. Desondanks moet aan de persoonslijst alsnog te herkennen zijn welke gegevens zijn
+gewijzigd, dit om te kunnen bepalen aan welke afnemers een bericht gestuurd moet worden. Dit
+betekent dat net als bij GBA - Bijhouding actueel geldt dat uit de opgeslagen gegevens terug te
+lezen moet zijn hoe de persoonslijst er voor en na de mutatie uitzag.
+
+2
+3
+
+WALG: Wijziging ALGemeen
+Dit geldt voor zowel de BRP-afnemers als de GBA-afnemers. Vulbericht is een term die binnen de GBA gehanteerd wordt. In de BRP
+wordt di teen volledig bericht genoemd.
+
+Operatie BRP
+
+Pagina 6 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+3
+
+Bijwerken van de persoonslijst
+
+Zoals uit het vorige hoofdstuk blijkt is het van belang dat voor alle soorten mutaties aan de
+gegevens in BRP-formaat is te herkennen wat er aan de persoonslijst veranderd is. Dit betekent
+dat er een beeld opgebouwd moet kunnen worden hoe de persoonslijst er voor en na de mutatie
+uitziet.
+Om dit te bereiken wordt per afzonderlijke stapel bepaald wat de verschillen zijn tussen de oude
+versie, hetgeen dat staat opgeslagen in de BRP, en de nieuwe versie, hetgeen wat de conversie
+van het synchronisatiebericht heeft opgeleverd. Uitsluitend datgene wat daadwerkelijk veranderd
+is, wordt aangepast in de BRP gegevensverzameling en ook uitsluitend deze aangepaste
+gegevens worden gekoppeld aan een nieuwe administratieve handeling. Hierdoor worden, net als
+bij een BRP bijhouding, alle wijzigingen die het gevolg zijn van de bijhouding (lees synchronisatie
+vanuit GBA), gebundeld in een Administratieve handeling.
+3.1
+
+Stapel matchen
+Er wordt per afzonderlijke stapel bepaald wat er gewijzigd is. Door bijvoorbeeld de oude en de
+nieuwe stapel van de groep Samengestelde naam met elkaar te vergelijken worden de
+verschillen inzichtelijk. Voor alle groepen waarvan slechts één stapel mag voorkomen4, is er geen
+onduidelijkheid dat de oude stapel en de nieuwe stapel bij elkaar horen. Voor een aantal
+gegevensgroepen geldt echter dat er meerdere stapels kunnen voorkomen, denk bijvoorbeeld
+aan nationaliteit. Om deze stapels inhoudelijk te kunnen vergelijken, zal eerst vastgesteld
+moeten worden welke stapel uit de oude versie en welke uit de nieuwe versie bij elkaar horen, of
+dat er een stapel toegevoegd en/of verwijderd is. Dit wordt stapel matchen genoemd. Voor de
+volgende gegevens is dit van toepassing:
+•
+Nationaliteit
+•
+Reisdocument
+•
+Kind
+•
+Huwelijk / geregistreerd partnerschap
+•
+Ouder
+In de volgende paragraaf zal per gegevensgroep uitgelegd worden hoe het stapel matchen
+plaatsvindt. In deze en volgende paragrafen wordt gesproken over ‘oud’ en ‘nieuw’, bijvoorbeeld
+oude stapel en nieuwe rij. Met nieuw worden de converteerde gegevens uit het
+synchronisatiebericht aangeduid. Met oud worden de gegevens aangeduid die in de BRP
+database staan, voordat de synchronisatie is doorgevoerd.
+
+3.1.1
+
+Nationaliteit
+Het matchen van de stapels vindt plaatst op basis van attribuut nationaliteit. Als deze
+overeenkomt tussen een oude en een nieuwe stapel, dan is dat een match.
+
+3.1.2
+
+Reisdocument
+Het matchen van de stapels vindt plaatst op basis van onderstaande attributen. Als deze
+overeenkomt tussen een oude en een nieuwe stapel, dan is dat een match.
+•
+Soort
+•
+Nummer
+•
+Autoriteit van afgifte
+•
+Datum einde document
+•
+Datum uitgifte
+
+3.1.3
+
+Buitenlands persoonsnummer
+Het matchen van de stapels vindt plaatst op basis van onderstaande attributen. Als deze
+overeenkomt tussen een oude en een nieuwe stapel, dan is dat een match.
+•
+Autoriteit van afgifte
+•
+Nummer
+4
+
+zie Gegevenswoordenboek BRP [GWB-BRP] voor welke groepen dit zijn.
+
+Operatie BRP
+
+Pagina 7 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+3.1.4
+
+Kind
+Het vastleggen van kinderen in de BRP vindt plaatst door de aaneenschakeling van meerdere
+objecttypen, te weten betrokkenheden (ouder en kind), relatie (familierechtelijke betrekking) en
+de gerelateerde persoon. Omdat van de relatiegerelateerde gegevens uitsluitend de actuele
+gegevens geconverteerd worden naar BRP-formaat is het niet mogelijk om (uitsluitend) op basis
+van de BRP-gegevens te matchen. Daarom vindt de matching plaats op basis van de IST-tabel
+waarin wel de volledige historie is opgenomen.
+Als de oude actuele IST-rij voorkomt in precies één nieuwe IST-stapel dan is er sprake van een
+match. Hierbij moeten alle gegevens met uitzondering van groepen met administratieve
+gegevens5 exact overeenkomen.
+
+3.1.5
+
+Huwelijk / geregistreerd partnerschap
+Gelijk aan kind geldt dat van Huwelijk / geregistreerd partnerschap uitsluitend actuele gegevens
+overgezet worden. Daarom vindt de matching ook op dezelfde wijze plaats, namelijk door middel
+van het vergelijken van de IST-stapel.
+Deze IST-stapel kan echter uiteen vallen in meerdere Relaties, dit als gevolg van een omzetting
+van huwelijk in geregistreerd partnerschap en vice versa. De IST-stapel kan meerdere
+omzettingen bevatten. Op basis van de huidige wetgeving is uitsluitend omzetting van een
+geregistreerd partnerschap in een huwelijk nog toegestaan. In het verleden kwamen echter
+meerdere opvolgende omzettingen wel voor. Hiermee wordt bedoeld dat een geregistreerd
+partnerschap wordt omgezet in een huwelijk, welke vervolgens weer wordt omgezet in een
+geregistreerd partnerschap.
+Regels voor matchen van de relaties die bij een IST-stapel horen:
+
+1. Als zowel de oude als de nieuwe IST-stapel tot precies één Relatie heeft geleid en deze zijn
+van hetzelfde soort (huwelijk of geregistreerd partnerschap), dan is dit een match
+2. Als de oude en/of nieuwe IST-stapel tot meer dan één Relatie geleid heeft, en als het
+aantal Relaties bij de oude en nieuwe IST-stapel gelijk is, dan mag alleen aan de nieuwe
+Relatie een ontbinding toegevoegd zijn. Er mag in de BRP-gegevens geen andere wijziging
+voorkomen. In dit geval zijn alle Relaties behorende bij de IST-stapel gematch-d.
+3. Als de oude en/of nieuwe IST-stapel tot meer dan één Relatie geleid heeft, en als in de
+nieuwe een extra relatie voorkomt, dan moet dit de meest recente relatie zijn (meest
+recente op basis van Datum sluiting van het huwelijk of geregistreerd partnerschap). In de
+bestaande relaties mag er slechts één wijziging zijn, namelijk dat de relatie, die in de oude
+IST-stapel het meest recent was, ontbonden wordt. Verder mag in de BRP-gegevens geen
+andere wijziging voorkomen. In dit geval zijn alle Relaties behorende bij de IST-stapel
+gematch-d
+4. Als niet aan punt 1 t/m 3 is voldaan: er is geen eenduidige match op Relaties.
+3.1.6
+
+Ouder
+In tegenstelling tot kind en huwelijk / geregistreerd partnerschap is hier slechts sprake van
+precies één familierechtelijke betrekking-relatie voor de combinatie van categorie 02 en
+categorie 03. Het matchen van de relatie levert dus altijd een 1:1 match op. De stapel van
+categorie 02 dan wel categorie 03 kan echter wel uitvallen in meerdere ouder-betrokkenheden
+en daarbij behorende gerelateerde persoonsgegevens.
+Regels voor matchen van ouder-betrokkenheden:
+Deze regels vinden afzonderlijk plaats voor de categorie 02 en categorie 03 stapel.
+
+5
+
+Dit zijn de gegevens die in Logisch Ontwerp GBA [LO-GBA] en Logisch Ontwerp RNI [LO-RNI] aangeduid worden met soort gegeven
+3. Dit betreffen in geval van relatie gerelateerde gegevens de volgende groepen: 81 Akte, 82 Document, 83 Procedure, 84 Onjuist,
+86 Opneming en 88 RNI-deelnemer
+
+Operatie BRP
+
+Pagina 8 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+1. Als zowel de oud als nieuw GBA stapel niet geleid heeft tot een ouderbetrokkenheid, geen
+actie vereist.
+NB: blijkbaar is er sprake van juridisch gezien geen ouder.
+2. Als zowel de oud als nieuw GBA stapel geleid heeft tot precies één ouder-betrokkenheid,
+dan is dit een match
+3. zowel de oud als nieuw GBA stapel geleid heeft tot meerdere order-betrokkenheden en
+het aantal betrokkenheden in de oude en nieuwe situatie is gelijk, dan mag er slechts één
+verschil zijn, namelijk dat de meest recente betrokkenheid de datum einde geldigheid
+gevuld wordt. Er mag in de BRP-gegevens geen andere wijziging voorkomen. In dit geval
+zijn alle Relaties behorende bij de IST-stapel gematch-d.
+4. Als de nieuwe GBA stapel geleid heeft tot één betrokkenheid meer dan de oude GBA
+stapel, dan moet dit de recentste Betrokkenheid zijn in de nieuwe situatie zijn. In de
+bestaande Betrokkenheden mag er slechts één wijziging zijn, namelijk dat de
+betrokkenheid, die in oud het recentst was (op basis van datum aanvang geldigheid),
+beëindigd wordt. Er mag in de BRP-gegevens geen andere wijziging voorkomen. In dit
+geval zijn alle Relaties behorende bij de IST-stapel gematch-d.
+5. Als niet aan punt 1 t/m 4 is voldaan: er is geen eenduidige match op betrokkenheden.
+3.1.7
+
+Onderzoek
+
+Het matchen van onderzoeken vindt plaatst op basis van de gegevens die in onderzoek staan.
+Uitsluitend als precies dezelfde gegevens6 in onderzoek staan, betreft het hetzelfde onderzoek.
+3.2
+
+Mutaties binnen een stapel
+Zoals eerder beschreven is het van belang dat bij doorvoeren van de wijzigingen op de BRP
+persoonslijst de bijgewerkte persoonslijst weer een correcte afspiegeling is van de GBA
+persoonslijst en dat herkenbaar is wat er aan de persoonslijst veranderd is. Daarnaast moet het
+leveren van mutatieberichten in zowel het BRP-formaat als het GBA-formaat ook berichten
+opleveren die de mutaties op een vergelijkbare manier vormgegeven als dat gangbaar is in het
+BRP-stelsel en het GBA-stelsel. Voor beide stelsels geldt dat in het bericht uitsluitend de mutatie,
+dat wil zeggen de oude en nieuwe gegevens van hetgeen gewijzigd is opgenomen wordt.
+Desondanks gebruiken GBA en BRP verschillende patronen om dit in de berichten tot uitdrukking
+te brengen. Voor beide stelsel geldt dat het gebruikte patroon zijn oorsprong heeft in hoe
+historie wordt opgebouwd in dat stelsel, in feite zijn de mutatieberichten een 1:1 afspiegeling
+van welke historie is aangelegd als gevolg van een mutatie.
+Een voorbeeld:
+Een persoon verhuist van de Beatrixlaan 10 naar de Julianastraat 41.
+In de GBA betekent dit dat er een nieuwe categorie 08 op de persoonslijst wordt geplaatst, met
+daarin het adres Julianastraat 41. Omdat de GBA, in tegenstelling tot de BRP, niet expliciet een
+einddatum geldigheid vastlegt verandert er niets met betrekking tot de categorie waarin het
+oude adres, Beatrixstraat 10, is vastgelegd. In het mutatiebericht staan twee categorieën
+opgenomen, te weten de categorie met het oude adres en de categorie met het nieuwe adres.
+Categorie 08/58 van de Persoonslijst, voor vastlegging van de verhuizing
+Datum aanvang
+
+Adres
+
+adreshouding
+10-10-2010
+
+Indicatie
+
+Ingangsdatum
+
+Datum
+
+onjuist
+
+geldigheid
+
+opneming
+
+10-10-2010
+
+10-10-2010
+
+Beatrixlaan 10
+
+Categorie 08/58 van de Persoonslijst, na vastlegging van de verhuizing
+Datum aanvang
+
+Adres
+
+adreshouding
+
+6
+
+Indicatie
+
+Ingangsdatum
+
+Datum
+
+onjuist
+
+geldigheid
+
+opneming
+
+15-04-2015
+
+Julianalaan 41
+
+15-04-2015
+
+15-04-2015
+
+10-10-2010
+
+Beatrixlaan 10
+
+10-10-2010
+
+10-10-2010
+
+Met dezelfde gegevens wordt bedoeld dat dezelfde attributen van dezelfde rijen in onderzoek moeten staan.
+
+Operatie BRP
+
+Pagina 9 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+Voorbeeld 1 Vastlegging van een verhuizing in de GBA
+
+In de BRP leidt deze verhuizing, naast het opnemen van een nieuwe rij vanwege het nieuwe
+adres, ook tot een wijziging op het oude adres. De rij met het oude adres komt te vervallen en in
+plaatst daarvan wordt een extra rij opgenomen voor het oude adres waarin de datum einde
+geldigheid gevuld wordt. In het mutatiebericht staan drie rijen opgenomen, te weten het oude
+vervallen adres, het oude adres met datum einde geldigheid en het nieuwe adres.
+
+Operatie BRP
+
+Pagina 10 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+Groep Adres van de Persoonslijst, voor vastlegging van de verhuizing
+Adres
+
+Nadere
+
+Datum
+
+Datum einde
+
+aanduiding
+
+aanvang
+
+geldigheid
+
+verval
+
+geldigheid
+
+Beatrixlaan 10
+
+10-10-2010
+
+Tijdstip registratie
+
+Tijdstip verval
+
+10-10-2010 11:23
+
+Groep Adres van de Persoonslijst, na vastlegging van de verhuizing
+Adres
+
+Nadere
+
+Datum
+
+Datum einde
+
+aanduiding
+
+aanvang
+
+geldigheid
+
+verval
+
+geldigheid
+
+Julianalaan 41
+
+15-04-2015
+
+Beatrixlaan 10
+
+10-10-2010
+
+Beatrixlaan 10
+
+10-10-2010
+
+Tijdstip registratie
+
+Tijdstip verval
+
+15-04-2015 9:04
+15-04-2015
+
+15-04-2015 9:04
+10-10-2010 11:23
+
+15-04-2015 9:04
+
+Voorbeeld 2 Vastlegging van een verhuizing in de BRP
+
+Wat in bovenstaand voorbeeld wordt getoond is het patroon hoe de BRP historie aanlegt. Met
+andere woorden, hoe historie wordt aangelegd als een BRP-bijhouder een actualisering
+doorvoert. Dit is echter niet de structuur hoe een persoonslijst eruit ziet nadat het geconverteerd
+is vanuit het GBA. Dit staat weergegeven in onderstaande voorbeeld.
+Groep Adres van de Persoonslijst, na vastlegging van de verhuizing
+Adres
+
+Nadere
+
+Datum
+
+Datum einde
+
+aanduiding
+
+aanvang
+
+geldigheid
+
+verval
+
+geldigheid
+
+Julianalaan 41
+
+15-04-2015
+
+Beatrixlaan 10
+
+10-10-2010
+
+Tijdstip registratie
+
+Tijdstip verval
+
+15-04-2015 9:04
+15-04-2015
+
+10-10-2010 11:23
+
+Voorbeeld 3 Vastlegging van een verhuizing in de GBA, geconverteerd naar de BRP
+
+Als het leveren van mutatieberichten aan BRP-afnemers uitsluitend gebaseerd wordt op de
+informatie zoals weergegeven in Voorbeeld 1 dan zal het bericht of minder gegevens bevatten of
+de leveringsmodule moet extra functionaliteit bevat om de ontbrekende rij te kunnen genereren.
+Een andere optie zou kunnen zijn om de conversie naar BRP aan te passen, zodat deze extra rij
+ook onderdeel gaat uitmaken van de persoonslijst. Hiervoor is niet gekozen omdat dit in strijd is
+met uitgangspunt dat in hoofdstuk 2 vermeld staat: “Tijdens synchronisatie mag geen afbreuk
+worden gedaan aan de ‘juridische pl’”.
+Om de leveringsmodule in algemene zin ontbrekende rijen te laten genereren stuit ook op
+problemen. Bijvoorbeeld in situaties waar de oude gegevens ‘verdwijnen’, omdat GBA geen
+historie aanlegt (denk bijvoorbeeld aan categorie 07, 12 en 13) of omdat er een WALG
+uitgevoerd wordt, dan is deze informatie niet uit de opgeslagen persoonslijst te destilleren.
+Dit impliceert dat er een mechanisme nodig is dat gegevens, die na het doorvoeren van de
+wijzigingen, niet meer op de persoonslijst staan, kan doorgeven aan de leveringsmodule. Zodra
+de levering heeft plaatsgevonden is deze informatie niet meer relevant. Om geen onnodige
+afhankelijkheid te creëren tussen de synchronisatiemodule en leveringsmodule wordt de extra
+informatie tijdelijk vastgelegd in de BRP database. In feite zijn dit gegevens die op de
+persoonslijst in de BRP vastgelegd waren, maar als gevolg van de mutatie verwijderd moeten
+worden om plaats te maken voor andere gegevens. De leveringsmodule kan deze informatie,
+samen met alle gegevens die op de persoonslijst zijn opgenomen, uit de database lezen. Nadat
+de levering heeft plaatsgevonden kan de extra informatie weer verwijderd worden.
+De structuur die in de BRP gekozen is om deze informatie vast te houden is door deze in dezelfde
+his-tabellen op te nemen als waar de gegevens van de persoonslijst staan. Aan deze his-tabellen
+is een extra attribuut toegevoegd waarmee aangegeven wordt of een rij onderdeel uitmaakt van
+
+Operatie BRP
+
+Pagina 11 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+de Persoonslijst of dat deze oude gegevens (lees extra informatie) bevat ten behoeve van de
+mutatielevering. Dit attribuut heet ‘Indicatie voorkomen tbv levering mutaties’.
+Kijkend naar het eerder besproken voorbeeld van de verhuizing is het nu mogelijk om in de BRP
+de extra rij vast te leggen ten behoeve van mutatielevering, zonder dat dit invloed heeft op de
+persoonslijst. Deze extra rij zal verder in het document aangeduid worden met de naam mutatierij of afgekort M-rij.
+Groep Adres van de Persoonslijst, na vastlegging van de verhuizing
+Adres
+
+Nadere
+
+Datum
+
+Datum einde
+
+aanduiding
+
+aanvang
+
+geldigheid
+
+verval
+
+geldigheid
+
+Tijdstip registratie
+
+Tijdstip
+
+Indicatie
+
+verval
+
+voorkomen
+tbv levering
+mutaties
+
+Julianalaan 41
+
+15-04-2015
+
+Beatrixlaan 10
+
+10-10-2010
+
+Beatrixlaan 10
+
+10-10-2010
+
+15-04-2015 9:04
+15-04-2015
+
+10-10-2010 11:23
+10-10-2010 11:23
+
+10-10-2010
+
+Ja
+
+11:23
+
+Voorbeeld 4 Vastlegging van een verhuizing in de GBA, geconverteerd naar de BRP, inclusief extra
+informatie tbv levering
+
+Naast dat alle gegevens beschikbaar zijn voor de leveringsmodule, moet ook duidelijk zijn welke
+gegevens betrokken zijn bij de bijhouding. In de BRP is dit te bepalen door aan de hand van de
+Administratieve handeling alle daaraan gekoppelde acties op te halen. Aan deze acties zijn
+vervolgens de rijen uit de verschillende groepen gekoppeld die geraakt zijn door de bijhouding.
+In geval van een geconverteerde persoonslijst is het niet mogelijk om een rij die komt te
+vervallen aan de nieuwe Administratieve handeling te koppelen. Tijdens de conversie wordt de
+Actie verval namelijk gevuld met dezelfde actie als die in Actie inhoud vermeldt staat. Zie
+Documentatie bidirectionele conversie [CONV-DOC] voor meer informatie over hoe en waarom
+de conversie op deze wijze plaatsvindt. In onderstaande voorbeeld van de correctie van een
+adres wordt dit weergegeven
+Groep Adres van de Persoonslijst, voor correctie van het adres
+Adres
+
+Nadere
+
+Datum
+
+Datum
+
+Tijdstip
+
+Tijdstip
+
+Actie
+
+Actie
+
+Actie
+
+aanduiding
+
+aanvang
+
+einde
+
+registratie
+
+verval
+
+inhoud
+
+verval
+
+aanp.
+
+verval
+
+geldigheid
+
+geldigheid
+
+geldigh.
+
+Beatrixlaan
+
+10-10-
+
+10-10-2010
+
+10
+
+2010
+
+11:23
+
+<1>
+
+Actie 1 is gekoppeld aan de administratieve handeling van de initiële vulling
+Groep Adres van de Persoonslijst, na correctie van het adres
+Adres
+
+Nadere
+
+Datum
+
+Datum
+
+Tijdstip
+
+Tijdstip
+
+Actie
+
+Actie
+
+Actie
+
+aanduiding
+
+aanvang
+
+einde
+
+registratie
+
+verval
+
+inhoud
+
+verval
+
+aanp.
+
+verval
+
+geldigheid
+
+geldigheid
+
+geldigh.
+
+Julianalaan
+
+10-10-
+
+15-04-2015
+
+41
+
+2010
+
+9:04
+
+10-10-
+
+10-10-2010
+
+10-10-
+
+2010
+
+11:23
+
+2010
+
+Beatrixlaan
+10
+
+O
+
+<2>
+<1>
+
+<1>
+
+11:23
+Actie 1 is gekoppeld aan de administratieve handeling van de initiële vulling
+Actie 2 is gekoppeld aan de administratieve handeling van de synchronisatie
+
+Voorbeeld 5 Correctie van een adres in de GBA, geconverteerd naar de BRP
+
+Zoals uit bovenstaande voorbeeld blijkt, is het oude adres dat vervalt niet aan de nieuwe
+Administratieve handeling gekoppeld. Wederom geldt dat de leveringsmodule extra informatie
+aangereikt moet krijgen. In dit geval informatie waaruit blijkt dat het oude adres ook bij deze
+Administratieve handeling betrokken is. Hiervoor is een extra attribuut aan de his-tabellen
+
+Operatie BRP
+
+Pagina 12 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+toegevoegd: ‘Actie verval tbv levering mutaties’. Dit attribuut wordt gevuld met een Actie die
+betrokken is bij de nieuwe Administratieve handeling7. Hierdoor wordt bereikt dat er een
+koppeling ontstaat tussen de administratieve handelen en deze rij. Hierdoor is het voor de
+leveringsmodule duidelijk dat deze rij ook onderdeel van de levering moet zijn.
+Groep Adres van de Persoonslijst, na correctie van het adres
+Adres
+
+Nadere
+
+Datum
+
+Datum
+
+Tijdstip
+
+Tijdsti
+
+Actie
+
+Actie
+
+Actie
+
+Actie
+
+aanduidin
+
+aanvang
+
+einde
+
+registrati
+
+p
+
+inhou
+
+verva
+
+aanp.
+
+verval
+
+g verval
+
+geldighei
+
+geldighei
+
+e
+
+verval
+
+d
+
+l
+
+geldigh
+
+tbv
+
+d
+
+d
+
+.
+
+levering
+mutatie
+s
+
+Julianalaan
+
+10-10-
+
+15-04-
+
+41
+
+2010
+
+2015
+
+<2>
+
+9:04
+Beatrixlaa
+n 10
+
+O
+
+10-10-
+
+10-10-
+
+10-10-
+
+2010
+
+2010
+
+2010
+
+11:23
+
+11:23
+
+<1>
+
+<1>
+
+<3>
+
+Actie 1 is gekoppeld aan de administratieve handeling van de initiële vulling
+Actie 2 is gekoppeld aan de administratieve handeling van de synchronisatie
+Actie 3 is gekoppeld aan de administratieve handeling van de synchronisatie
+
+Voorbeeld 6 Correctie van een adres in de GBA, geconverteerd naar de BRP, inclusief extra
+informatie tbv levering
+
+3.3
+
+Herkennen van specifieke soorten mutaties binnen een stapel
+In vorige paragraaf is beschreven hoe mutaties, met behulp van extra rijen en het vullen van
+extra attributen, in BRP moeten worden vastgelegd. Deze paragraaf beschrijft hoe herkent
+wordt, door de oude en nieuwe stapel te vergelijken, of de extra M-rijen aangemaakt moeten
+worden en/of de extra attributen gevuld worden.
+Voor het herkennen van specifieke mutaties die binnen een stapel hebben plaatsgevonden,
+worden afzonderlijke rijen met elkaar vergeleken. Als een rij, inclusief verantwoordingsinformatie
+(Acties, Bronnen en Documenten) overeenkomt dan is deze niet gewijzigd. Voor alle
+afzonderlijke rijen in oud dan wel nieuw die elkaars equivalent zijn, maar als gevolg van de
+mutatie niet meer exact gelijk zijn, wordt gekeken of er een specifieke mutatie op heeft
+plaatsgevonden. Als dit niet het geval is dan wordt de rij gezien als verwijderde dan wel
+toegevoegde rij, afhankelijk van of deze uitsluitend in oud of nieuw voorkomen. Feitelijk is dit
+een terugvalmechanisme als geen specifieke mutatie herkend wordt.
+Hoe omgegaan wordt met verwijderde en toegevoegde rijen staat in paragraaf 3.3.6 beschreven.
+In de paragrafen 3.3.2 t/m 3.3.4 worden per soort historiepatroon beschreven welke specifieke
+mutaties herkend worden. Deze situaties hebben betrekking op individuele rijen en zijn
+beschrijven in de vorm van als-dan. In het als-gedeelte staat beschreven onder welke condities
+een rij uit de nieuwe stapel (de geconverteerde gegevens uit het synchronisatiebericht) en de
+oude stapel (gegevens zoals deze in de BRP database staan) als dezelfde (aangepaste) rij gezien
+moet worden. In het dan-gedeelte staat vervolgens vermeldt of er naast het doorvoeren
+genoemde aanpassingen nog extra velden gevuld moeten worden. In een aantal gevallen staat
+hier ook vermeld dat er een extra rij aangemaakt moet worden.
+
+3.3.1
+
+Gegevens afkomstig uit GBA-categorie zonder historie
+Op de GBA persoonslijst staan gegevens waarvan geen historie wordt bijgehouden. Dit betreffen
+de gegevens uit categorie 07 Inschrijving, categorie 12 Reisdocument, categorie 13 Kiesrecht en
+de PROBAS-aanduiding uit categorie 04. Daarnaast geldt dit ook voor gegevens uit groep 83
+
+7
+
+Het maakt niet uit welke Actie hiervoor gebruikt, mits deze aan de nieuwe Administratieve handeling is gekoppeld. Dit betekent dat
+het per casus kan verschillen welke actie gebruikt wordt.
+
+Operatie BRP
+
+Pagina 13 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+Procedure van alle categorieën waarin dit voorkomt. Dit betreffen de volgende groepen in de
+BRP:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Persoon, groep Inschrijving
+Persoon, groep Persoonskaart
+Persoon \ Indicatie, indicatie Verstrekkingsbeperking
+Persoon \ Verificatie
+Persoon \ Reisdocument
+Persoon, groep Signalering met betrekking tot verstrekken reisdocument
+Persoon, groep Uitsluiting kiesrecht
+Persoon, groep Deelname EU verkiezingen
+Persoon \ Indicatie, indicatie Bijzondere verblijfsrechtelijke positie
+Onderzoek
+
+De conversie zal voor deze groepen nooit meer dan één rij opleveren. Er is immers geen historie
+aanwezig in de GBA. Hierdoor zullen patronen zoals beschreven in paragraaf 3.2, waarbij rijen
+worden beëindigd of vervallen niet voorkomen. Dit impliceert dat er op deze stapels uitsluitend
+sprake kan zijn van het toevoegen en/of verwijderen van een rij.
+Voor bovenstaande groepen geldt dat de brongegevens in de GBA geen datum opneming hebben
+die op deze gegevens betrekking heeft. Dit met uitzondering van Reisdocument, Bezit
+buitenlands reisdocument en Signalering met betrekking tot verstrekken reisdocument welke
+voorkomen uit categorie 12 die wel een datum opneming bevat. Daarom wordt, met uitzondering
+van de gegevens uit categorie 12, tijdens de conversie het element 07.80.20 Datumtijdstempel
+gebruikt om het tijdstip registratie te vullen.
+Dit heeft tot gevolg dat de conversie bij iedere nieuwe versie van een persoonslijst altijd een
+andere tijdstip registratie oplevert, ook als er geen wijziging heeft plaatsgevonden in de
+desbetreffende gegevens. Dit betreffen, met uitzondering van de groep de Inschrijving waarin de
+datumtijdstempel en versienummer staan, gegevens die slechts zeer uitzonderlijk wijzigen. Om
+te voorkomen dat bij ieder nieuwe synchronisatiebericht deze groepen onnodig bijgewerkt
+worden, en als gevolg daarvan geleverd worden, wordt een verschil op een tijdstip registratie die
+voorkomt uit 07.80.20 Datumtijdstempel genegeerd.
+3.3.2
+
+BRP-Groep met F-historie afkomstig uit GBA-categorie met historie
+Onderstaande situaties hebben betrekking op BRP-groepen met uitsluitend formele historie,
+waarvan de bron een GBA categorie is waarop historie bijgehouden wordt.
+DW-011: Actualisering waardoor rij vervalt
+Als in de oude stapel en de nieuwe stapel een rij voorkomt waarin naast onderstaande
+kenmerken alle andere gegevens overeenkomen:
+Tijdstip verval wordt gevuld
+Actie verval wordt gevuld
+Nadere aanduiding verval blijft leeg
+Dan
+Actie verval tbv levering mutaties wordt gevuld zodat deze via een willekeurige actie
+aan de huidige administratieve handeling wordt gekoppeld.
+DW-012: Correctie waardoor rij vervalt
+Als in de oude stapel en de nieuwe stapel een rij voorkomt waarin naast onderstaande
+kenmerken alle andere gegevens overeenkomen:
+Tijdstip verval wordt gevuld
+Actie verval wordt gevuld
+Nadere aanduiding verval wordt gevuld
+Dan
+Actie verval tbv levering mutaties wordt gevuld zodat deze via een willekeurige actie
+aan de huidige administratieve handeling wordt gekoppeld.
+DW-013: Correctie in de historie waardoor rij vervalt
+
+Operatie BRP
+
+Pagina 14 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+NB: omdat dit uitsluitend een mutatie op een historische rij betreft, is het niet relevant om dit
+nader te duiden. Het leidt immers toch tot een resync, omdat het geen bijhouding op actueel
+betreft. Deze situatie hoeft dus NIET gebouwd te worden. De situatie staat wel in deze spec’s,
+omdat dit misschien nog nodig/relevant is voor de analyse en verfijning nav proefsync’s met
+productiedata.
+Als in de oude stapel en de nieuwe stapel een rij voorkomt waarin naast onderstaande
+kenmerken alle andere gegevens overeenkomen:
+Tijdstip verval was al gevuld maar wijzigt niet
+Actie verval was al gevuld maar wijzigt niet
+Nadere aanduiding verval gevuld wordt
+dan
+Actie verval tbv levering mutaties wordt niet gewijzigd.
+3.3.3
+
+BRP-Groep met M+F-historie afkomstig uit GBA-categorie met historie
+Onderstaande situaties hebben betrekking op BRP-groepen met zowel formele als materiele
+historie, waarvan de bron een GBA categorie is waarop historie bijgehouden wordt.
+NB: De groep Nationaliteit en de indicaties Staatloos, Vastgesteld niet-Nederlander en Behandeld
+als Nederlander bevatten migratie-elementen8. Deze moeten naast de ‘gewone’ elementen ook in
+de vergelijking meegenomen worden. Toelichting: Deze migratie-elementen zijn benodigd voor
+de terugconversie naar GBA-formaat. Dit betekent dat wijzigingen op deze elementen gevolgen
+hebben voor het te leveren bericht op het GBA-afnemerskoppelvlak.
+DW-021: Actualisering waardoor oorspronkelijke actuele rij materieel eindigt
+Als in de oude stapel en de nieuwe stapel een rij voorkomt waarin naast onderstaande
+kenmerken alle andere gegevens overeenkomen:
+Datum einde geldigheid wordt gevuld
+Tijdstip verval blijft leeg
+Actie aanpassing geldigheid wordt gevuld
+Actie verval blijft leeg
+Nadere aanduiding verval blijft leeg
+Specifiek voor de groep Nationaliteit en de indicaties Staatloos, Vastgesteld nietNederlander en Behandeld als Nederlander:
+Reden verlies of Migratie: Reden beëindigen nationaliteit9 wordt gevuld of beide
+blijven leeg
+Dan
+Maak van de oude rij een M-rij (zie DW-100 in paragraaf 3.3.6) en leg daarnaast de nieuwe
+rij vast.
+DW-022: Correctie waardoor oorspronkelijke actuele rij vervalt.
+Als in de oude stapel en de nieuwe stapel een rij voorkomt waarin naast onderstaande
+kenmerken alle andere gegevens overeenkomen:
+Datum einde geldigheid blijft leeg
+Tijdstip verval gevuld wordt, waardoor deze gelijk wordt aan Tijdstip registratie
+Actie aanpassing geldigheid blijft leeg
+Actie verval gevuld wordt
+Nadere aanduiding verval gevuld wordt
+Dan
+Actie verval tbv levering mutaties wordt gevuld zodat deze via een willekeurige actie
+aan de huidige administratieve handeling wordt gekoppeld.
+DW-023: Correctie waardoor DEG gevuld wordt obv andere rij
+
+Dit zijn de elementen Migratie: Reden opname nationaliteit, Migratie: Reden beëindigen nationaliteit en Migratie: Datum einde
+bijhouding
+In de groep Nationaliteit zijn beide elementen opgenomen. Bij de indicaties is alleen het element Migratie: Reden beëindigen
+nationaliteit opgenomen.
+
+88
+
+9
+
+Operatie BRP
+
+Pagina 15 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+Als in de oude stapel en de nieuwe stapel een rij voorkomt waarin naast onderstaande
+kenmerken alle andere gegevens overeenkomen:
+Datum einde geldigheid was al gevuld, deze blijft gelijk of wijzigt
+Tijdstip verval blijft leeg
+Actie aanpassing geldigheid was al gevuld maar wijzigt
+Actie verval blijft leeg
+Nadere aanduiding verval blijft leeg
+Dan
+Maak van de oude rij een M-rij (zie DW-100 in paragraaf 3.3.6) en leg daarnaast de nieuwe
+rij vast.
+DW-024: Actualisering waardoor oorspronkelijke actuele rij vervalt.
+Deze situatie treedt op als is een nieuwe rij wordt toegevoegd met dezelfde Datum aanvang
+geldigheid, zonder dat de vervallen rij onjuist wordt gemaakt.
+Als in de oude stapel en de nieuwe stapel een rij voorkomt waarin naast onderstaande
+kenmerken alle andere gegevens overeenkomen:
+Datum einde geldigheid blijft leeg
+Tijdstip verval wordt gevuld
+Actie aanpassing geldigheid blijft leeg
+Actie verval wordt gevuld
+Nadere aanduiding verval blijft leeg
+Dan
+Maak van de oude rij een M-rij (zie DW-100 in paragraaf 3.3.6)
+Leg de nieuwe rij vast waarbij Actie verval tbv levering mutaties wordt gevuld zodat
+deze via een willekeurige actie aan de huidige administratieve handeling wordt gekoppeld.
+NB: de nieuwe rij en de M-rij zijn beide aan dezelfde acties gekoppeld.
+DW-025: Correctie waardoor ‘stapel’ vervalt
+Als in de oude stapel en de nieuwe stapel een rij voorkomt waarin naast onderstaande
+kenmerken alle andere gegevens overeenkomen:
+Datum einde geldigheid wordt gevuld
+Tijdstip verval wordt gevuld
+Actie aanpassing geldigheid wordt gevuld
+Actie verval wordt gevuld
+Nadere aanduiding verval wordt gevuld
+Specifiek voor de groep Nationaliteit en de indicaties Staatloos, Vastgesteld nietNederlander en Behandeld als Nederlander:
+Reden verlies of Migratie: Reden beëindigen nationaliteit wordt gevuld of beide
+blijven leeg
+Dan
+Actie verval tbv levering mutaties wordt gevuld zodat deze via een willekeurige actie
+aan de huidige administratieve handeling wordt gekoppeld.
+3.3.4
+
+Groep Bijhouding
+Specifiek voor de groep Bijhouding gelden, naast de situaties die beschreven staan in de vorige
+paragraaf, nog een enkele aanvullende situaties.
+DW-031: Actualisering uit cat 08 (binnengemeentelijke verhuizing)
+Toelichting: de oude actuele rij komt te vervallen
+Dit is een variatie op DW-024, waarbij rekening wordt gehouden met het feit dat nadere
+bijhoudingsaard de waarde ‘?’ krijgt als deze niet meer actueel is.
+Als in de oude stapel en de nieuwe stapel een rij voorkomt waarin naast onderstaande
+kenmerken alle andere gegevens overeenkomen:
+Nadere bijhoudingsaard wordt gewijzigd in ‘?’
+Datum einde geldigheid blijft leeg
+Tijdstip verval wordt gevuld
+
+Operatie BRP
+
+Pagina 16 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+Actie aanpassing geldigheid blijft leeg
+Actie verval wordt gevuld
+Nadere aanduiding verval blijft leeg
+Dan
+Maak van de oude rij een M-rij (zie DW-100 in paragraaf 3.3.6)
+Leg de nieuwe rij vast waarbij Actie verval tbv levering mutaties wordt gevuld zodat
+deze via een willekeurige actie aan de huidige administratieve handeling wordt gekoppeld.
+NB: de nieuwe rij en de M-rij zijn beide aan dezelfde acties gekoppeld.
+DW-032: Actualisering uit cat 08 (intergemeentelijke verhuizing) of Actualisering uit
+cat 07 (persoonslijst wordt opgeschort)
+Dit is een variatie op DW-021, waarbij rekening wordt gehouden met het feit dat nadere
+bijhoudingsaard de waarde ‘?’ krijgt als deze niet meer actueel is.
+Als in de oude stapel en de nieuwe stapel een rij voorkomt waarin naast onderstaande
+kenmerken alle andere gegevens overeenkomen:
+Nadere bijhoudingsaard wordt gewijzigd in ‘?’
+Datum einde geldigheid wordt gevuld
+Tijdstip verval blijft leeg
+Actie aanpassing geldigheid wordt gevuld
+Actie verval blijft leeg
+Nadere aanduiding verval blijft leeg
+Dan
+Maak van de oude rij een M-rij (zie DW-100 in paragraaf 3.3.6) en leg de nieuwe rij vast.
+DW-034: Correctie uit cat 08. NB: oorspronkelijke actuele rij vervalt
+Dit is een variatie op DW-022, waarbij rekening wordt gehouden met het feit dat nadere
+bijhoudingsaard de waarde ‘?’ krijgt als deze niet meer actueel is.
+Als in de oude stapel en de nieuwe stapel een rij voorkomt waarin naast onderstaande
+kenmerken alle andere gegevens overeenkomen:
+Nadere bijhoudingsaard wordt gewijzigd in ‘?’
+Datum einde geldigheid blijft leeg
+Tijdstip verval wordt gevuld, waardoor deze gelijk wordt aan Tijdstip registratie
+Actie aanpassing geldigheid blijft leeg
+Actie verval wordt gevuld
+Nadere aanduiding verval wordt gevuld
+Dan
+Actie verval tbv levering mutaties wordt gevuld zodat deze via een willekeurige actie
+aan de huidige administratieve handeling wordt gekoppeld.
+3.3.5
+
+Groep Nationaliteit
+Specifiek voor de groep Nationaliteit geldt, naast de situaties die beschreven staan in paragraaf
+3.3.3, nog een aanvullende situatie.
+DW-041: Bijhouding van de nationaliteit wordt beëindigd
+Nb: deze situatie lijkt op DW-024. Het verschil is echter dat tevens de elementen Bijhouding
+beëindigd? en Migratie: Datum einde bijhouding gevuld worden.
+Als in de oude stapel en de nieuwe stapel een rij voorkomt waarin naast onderstaande
+kenmerken alle andere gegevens overeenkomen:
+Datum einde geldigheid blijft leeg
+Tijdstip verval wordt gevuld
+Actie aanpassing geldigheid blijft leeg
+Actie verval wordt gevuld
+Nadere aanduiding verval blijft leeg
+Bijhouding beëindigd? wordt gevuld
+Migratie: Datum einde bijhouding wordt gevuld
+
+Operatie BRP
+
+Pagina 17 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+Dan
+Actie verval tbv levering mutaties wordt gevuld zodat deze via een willekeurige actie
+aan de huidige administratieve handeling wordt gekoppeld.
+
+3.3.6
+
+Algemeen
+Onderstaande situaties gelden voor iedere groep ongeacht het soort historie. Deze dienen als
+terugval als op een rij geen specifieke situaties uit de voorgaande paragrafen van toepassing is.
+DW-001: Verwijderen
+Een rij die is verwijderd, dat wil zeggen de rij voorkomt in de oude stapel maar niet meer in de
+nieuwe, wordt niet daadwerkelijk uit de BRP database verwijderd, maar wordt een M-rij (zie DW100 onderaan deze paragraaf).
+DW-002: Toevoegen
+Een rij die is toevoegt, dat wil zeggen de rij niet voorkomt in de oude stapel maar wel in de
+nieuwe, wordt 1:1 overgenomen in de BRP database.
+Een specifieke vorm is dat de rij die wordt toegevoegd een actuele, niet beëindigde rij is. Dit is te
+herkennen aan het feit dat datum einde geldigheid en tijdstip verval niet gevuld zijn. Deze zal
+aangeduid worden als DW-002-ACT.
+DW-100: Maak van een rij een M-rij:
+Actie verval krijgt dezelfde waarde als Actie inhoud van dezelfde rij.
+Tijdstip verval krijgt dezelfde waarde als tijdstip registratie van dezelfde rij.
+Indicatie voorkomen tbv levering mutaties krijgt de waarde ‘Ja’.
+Actie verval tbv levering mutaties wordt gevuld zodat deze via een willekeurige actie aan de
+huidige administratieve handeling wordt gekoppeld.
+
+3.3.7
+
+Algemene richtlijnen
+Een GBA voorkomen moet, exclusief onderzoekgegevens, altijd leiden tot precies één Actie in de
+BRP.
+Dit betekent dat het niet mag voorkomen dat een GBA-voorkomen in de ene groep leidt tot een
+gewijzigde dan wel ongewijzigde rij waarbij de bestaande actie in gebruik blijft en in een andere
+groep leidt tot een nieuwe rij met een nieuwe actie.
+Toelichting
+Als één GBA voorkomen leidt tot meerdere acties in de BRP, dan is het niet mogelijk om hiervan
+tijdens de terugconversie weer één GBA Voorkomen te maken.
+
+Operatie BRP
+
+Pagina 18 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+Bijvoorbeeld:
+persoonslijst – versie 1
+Anr/bsn
+Naam
+1234567890
+Jan Jansen
+
+Geslacht
+M
+
+Geboorte
+1-1-2000 R’dam
+
+Pl - versie 2: er heeft een WALG plaatsgevonden op de geboortegegevens
+Anr/bsn
+Naam
+Geslacht
+Geboorte
+1234567890
+Jan Jansen
+M
+1-1-2000 Almere
+
+…
+
+…
+
+In de groepen Identificatienummers, samengestelde naam, geslacht, enz wordt door de
+deltabepaling geen verschil geconstateerd. Bij de groep Geboorte wordt vastgesteld dat er een
+toevoeging (DW-002) en een verwijdering (DW-001) is. Om een correcte terugconversie uit te
+voeren moeten deze gegevens tijdens de terugconversie weer samengevoegd worden tot precies
+één categorie in GBA en niet meerdere elkaar opvolgende categorieën. Dit wordt uitsluitend
+bereikt als alle gegevens die uit één categorie uit de GBA komen, ook allemaal aan dezelfde actie
+gekoppeld zijn. Om tevens correcte BRP-mutatieberichten aan Afnemers te kunnen sturen, mag
+een bestaande (ongewijzigde) rij niet aan de nieuwe actie en daarmee aan de nieuwe
+Administratieve handeling gekoppeld worden. In het bericht zou dit namelijk opgenomen worden
+als een nieuwe rij bij Identificatienummers, enz, zonder dat er een bestaande rij vervalt en/of
+beëindigd wordt.
+Om deze problemen te voorkomen moeten de gegevens die uit één categorie komen gekoppeld
+blijven aan één en de zelfde actie. Als bij één van de groepen sprake is van een nieuwe rij (DW002), dan moet dit bij de andere groepen ook leiden tot een nieuwe rij (ook als daar geen
+mutatie geconstateerd is). Dit om af te dwingen dat het precies één actie blijft per categorie. In
+onderstaande afbeelding is weergegeven tot welke gegevens dit in de BRP leidt.
+Synchronisatie 1
+Categorie 01 Persoon
+
+Groep Identificatienummers
+
+Anr/bsn
+
+1234
+
+Anr/bsn
+
+1234
+
+naam
+
+Jan Jansen
+
+Actie inhoud
+
+<Actie 1>
+
+geslacht
+
+M
+
+...
+
+...
+
+Geboorte
+
+1-1-2000 R dam
+
+...
+
+...
+
+Groep Samengestelde naam
+Naam
+
+Jan Jansen
+
+Actie inhoud
+
+<Actie 1>
+
+...
+
+...
+
+Groep Geboorte
+
+Geboorte
+
+1-1-2000 R dam
+
+Actie inhoud
+
+<Actie 1>
+
+...
+
+...
+
+NB: slechts een deel van de groepen is
+weergegeven
+
+Synchronisatie 2
+Categorie 01 Persoon
+
+Groep Identificatienummers
+
+Anr/bsn
+
+1234
+
+Anr/bsn
+
+1234
+
+naam
+
+Jan Jansen
+
+Actie inhoud
+
+<Actie 2>
+
+geslacht
+
+M
+
+...
+
+...
+
+Geboorte
+
+1-1-2000 Almere
+
+Anr/bsn
+
+1234
+
+...
+
+...
+
+Actie inhoud
+
+<Actie 1>
+
+...
+
+...
+
+Groep Samengestelde naam
+Naam
+
+Jan Jansen
+
+Actie inhoud
+
+<Actie 2>
+
+...
+
+...
+
+Naam
+
+Jan Jansen
+
+Actie inhoud
+
+<Actie 1>
+
+...
+
+...
+
+Groep Geboorte
+Geboorte
+
+1-1-2000 R dam
+
+Actie inhoud
+
+<Actie 2>
+
+...
+
+...
+
+Geboorte
+
+1-1-2000 R dam
+
+Actie inhoud
+
+<Actie 1>
+
+...
+
+...
+
+NB: slechts een deel van de groepen is
+weergegeven
+
+Operatie BRP
+
+Pagina 19 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+Voor gegevens waarbij tijdstip registratie is gevuld op basis van de datumtijdstempel uit
+categorie 07 (zie paragraaf 3.3.1) wordt hierop een uitzondering gemaakt. Uitsluitend in de
+groepen waar daadwerkelijk gegevens gewijzigd zijn, worden de gegevens bijgewerkt. Dit kan
+ertoe leiden dat bij een deel van de groepen nog verwezen wordt naar een actie die voortkomt
+uit de oude persoonslijst en dat bij de groep met gewijzigde gegevens verwezen wordt naar actie
+die voortkomt uit de nieuwe persoonslijst. Specifiek voor deze groepen heeft dit geen gevolgen
+voor terugconversie, omdat dit uitsluitend groepen betreft die in de GBA geen historie bevatten.
+Onderzoek
+Als gegevens in onderzoek staan, ligt er door middel van Gegeven in onderzoek een verwijzing
+van desbetreffende attributen uit de rij naar het onderzoek.
+Afgekorte
+
+Nadere
+
+Datum
+
+Datum einde
+
+naam
+
+huisnr
+
+...
+
+aanduiding
+
+aanvang
+
+geldigheid
+
+openbare
+
+verval
+
+geldigheid
+
+Tijdstip registratie
+
+Tijdstip
+
+Indicatie
+
+verval
+
+voorkomen
+tbv levering
+
+ruimte
+Beatrixlaan
+
+mutaties
+10
+
+…
+
+10-10-2010
+
+10-10-2010 11:23
+
+10-10-2010
+
+Ja
+
+11:23
+
+Gegeven in
+onderzoek
+
+Onderzoek
+
+Bij specifieke DW-situaties wordt van de bestaande rij een M-rij gemaakt en wordt de rij met de
+nieuwe gegevens opgenomen. In onderstaande voorbeeld wordt dit weergegeven voor DW-021
+die van toepassing is op het adres aan de Beatrixstraat. De nieuwe rij over de Beatrixstraat
+vervangt feitelijk de oude rij, welke om die reden een M-rij is geworden. Dit betekent dat als het
+onderzoek ook nog steeds voorkomt op de PL10, dan moeten de Gegevens in onderzoek ook
+omgehangen worden naar de nieuwe rij.
+Afgekorte
+
+Nadere
+
+Datum
+
+Datum einde
+
+naam
+
+huisnr
+
+...
+
+aanduiding
+
+aanvang
+
+geldigheid
+
+openbare
+
+verval
+
+geldigheid
+
+Tijdstip registratie
+
+Tijdstip
+
+Indicatie
+
+verval
+
+voorkomen
+tbv levering
+
+ruimte
+
+mutaties
+
+Julianalaan
+
+41
+
+…
+
+15-04-2015
+
+Beatrixlaan
+
+10
+
+…
+
+10-10-2010
+
+Beatrixlaan
+
+10
+
+…
+
+10-10-2010
+
+15-04-2015 9:04
+15-04-2015
+
+10-10-2010 11:23
+10-10-2010 11:23
+
+10-10-2010
+
+Ja
+
+11:23
+
+Gegeven in
+onderzoek
+3.4
+
+Onderzoek
+
+Consequenties
+Voor meerdere categorieën uit de GBA geldt dat deze bij de conversie splitsen naar verschillende
+groepen in de BRP. Dit is bijvoorbeeld het geval bij categorie 01 Persoon en categorie 08
+Verblijfplaats. Als er in de GBA een bijhouding op zo’n categorie plaatsvindt, wordt een nieuw
+voorkomen aangemaakt. Hierin wordt de gewijzigde gegevens opgenomen, en in alle andere
+GBA-groepen worden de gegevens 1:1 overgenomen uit het oude voorkomen.
+Persoonslijst in GBA-formaat, voor de naamswijziging
+Anr/bsn
+Naam
+Geboorte
+…
+1234567890
+Jan Jansen
+1-1-2000,
+…
+Den Haag
+
+Geldigheid
+1-1-2000
+
+Opneming
+3-1-2000
+
+Persoonslijst in GBA-formaat, na de naamswijziging
+
+10
+
+met andere woorden, er is een stapelmatch, zie paragraaf 3.1.7
+
+Operatie BRP
+
+Pagina 20 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+Anr/bsn
+1234567890
+
+Naam
+Piet Jansen
+
+1234567890
+
+Jan Jansen
+
+Geboorte
+1-1-2000,
+Den Haag
+1-1-2000,
+Den Haag
+
+…
+…
+
+Geldigheid
+10-3-2015
+
+Opneming
+11-3-2015
+
+…
+
+1-1-2000
+
+3-1-2000
+
+Tijdens de conversie naar de BRP worden de gegevens van alle voorkomen geconverteerd naar
+rijen in de verschillende BRP-groepen. Dit gebeurt ook voor de groepen waarop de bijhouding
+geen betrekking had. In geval van bovenstaande voorbeeld betekent dit dat niet alleen in de
+groepen waarin de naamgegevens staan twee rijen opgenomen worden. Ook bij alle andere
+groepen, zoals identificatienummers en geboorte worden twee rijen opgenomen, ondanks dat
+deze twee rijen dezelfde inhoudelijke gegevens bevatten. Voor beide rijen geldt wel dat deze
+afwijkende verantwoordingsgegevens bevatten. Aan de oudste rij is in dit geval de geboorteakte
+gekoppeld, bij de nieuwste rij zal dit een document met betrekking tot de naamswijziging zijn. In
+hoofdstuk 7 van Documentatie bidirectionele conversie [CONV-DOC] kan nagelezen worden hoe
+de conversie van historie in detail werkt.
+Voor de levering van gegevens betekent dit niet alleen de groepen met naamgegevens aan de
+nieuwe administratieve handeling gekoppeld zijn, maar ook de andere groepen die uit dezelfde
+GBA categorie voortkomen. Dit heeft tot gevolg dat de leveringsmodule al deze groepen als
+gewijzigd beschouwd en in het leveringsbericht zal gaan opnemen. Alle deze gegevens worden
+verantwoord door het document met betrekking tot de naamswijziging. Voor het GBA
+leveringsbericht wordt, conform Logisch Ontwerp GBA [LO-GBA], uitsluitend de
+gegevenselementen geleverd die daadwerkelijk gewijzigd. In dit geval is dat uitsluitend de
+voornaam, datum aanvang geldigheid en de verantwoordingsinformatie11. Het BRPleveringsbericht kent deze filtering van ongewijzigde gegevens niet. Alle groepen waarin rijen
+geraakt zijn worden, mits de afnemer geautoriseerd is, geleverd. Hierdoor zal bijvoorbeeld een
+BRP-afnemer die uitsluitend geautoriseerd is voor geboortegegevens, toch een bericht ontvangen
+als de voornaam gewijzigd wordt. Hierin wordt twee keer dezelfde geboortegegevens
+opgenomen, welke verantwoord wordt door het document met betrekking tot de naamswijziging.
+Bij groepen met materiele en formele historie, bijvoorbeeld de groep identificatienummers, geldt
+dat het brondocument waardoor de gegevens oorspronkelijk opgenomen zijn, nog terug te
+vinden is in de materiele historie. Immers, aan de rij die geldig is vanaf de geboorte tot aan de
+naamswijziging hangt het brondocument dat geleidt heeft tot deze gegevens. Bij een groep met
+uitsluitend formele historie, bijvoorbeeld de groep geboorte, geldt dat alle historische GBAvoorkomens leiden tot vervallen rijen in de BRP. Hierdoor is het brondocument waardoor de
+gegevens oorspronkelijk opgenomen zijn, uitsluitend in een vervallen rij terug te vinden is.
+
+11
+
+Afhankelijk van de autorisatie kan een afnemer ook minder gegevens ontvangen omdat hij daarvoor niet gerechtigd is.
+
+Operatie BRP
+
+Pagina 21 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+4
+
+Bepaling soort administratieve handeling
+
+Een synchronisatie vanuit de GBA leidt tot een administratieve handeling12. Deze administratieve
+handeling is in geval van een synchronisatie altijd van een van de onderstaande soorten:
+•
+GBA - Bijhouding actueel
+•
+GBA - Bijhouding overig
+•
+GBA - Infrastructurele wijziging
+•
+GBA - Afvoeren PL
+Deze soorten komen 1:1 overeen met de specifieke leveringsberichten die de GBA kent. Kortom,
+de soort administratieve handeling geeft aan welke type bericht naar afnemers gestuurd moet
+worden. In principe kan een synchronisatie leiden tot meerdere type berichten. Een
+synchronisatie kan immers zowel een infrastructurele wijziging als wijziging in de
+persoonsgegevens bevatten. Voor alle combinaties die in de persoonslijst kunnen voorkomen
+geldt dat deze gebundeld worden in één Administratieve handeling:
+•
+GBA - Afvoeren PL
+Als deze voorkomt in combinatie met GBA - Infrastructurele wijziging, GBA - Bijhouding
+actueel en/of GBA - Bijhouding overig dan leidt tot uitsluitend tot de Administratieve
+handeling GBA - Afvoeren PL. Aan de hand van het bericht Afvoeren PL wordt aan de
+afnemer gemeld dat de persoonslijst uit zijn administratie verwijderd kan worden.
+Daarom is het niet meer relevant om andere mutaties te melden.
+•
+GBA - Bijhouding actueel / GBA - Bijhouding overig
+Als een van deze voorkomt in combinatie met GBA - Infrastructurele wijziging dan wordt
+uitsluitend de GBA - Bijhouding actueel dan wel GBA - Bijhouding overig geleverd. Hierin
+wordt tevens de informatie van de infrastructurele wijziging meegeleverd. De afnemer
+wordt dus alsnog op de hoogte gesteld van de infrastructurele wijziging, dit wordt echter
+niet met een apart berichttype verstuurd.
+In de bovenstaande opsomming werd al aangegeven dat de combinatie van GBA - Afvoeren PL
+en GBA – Bijhouding overig leidt tot GBA - Afvoeren PL. Als er geen sprake is van afvoeren,
+maar van een of meerdere andere wijzigingen, dan zal dit altijd vastgelegd worden als GBA –
+Bijhouding overig.
+In de volgende paragrafen staan per soort administratieve handeling de voorwaarden
+beschreven. Normaliter zal bij iedere synchronisatie, ongeacht het soort administratieve
+handeling, het versienummer en de datumtijdstempel uit de groep Inschrijving wijzigen. Dit is
+derhalve niet bij de voorwaarden beschreven.
+
+4.1
+
+GBA - Infrastructurele wijziging
+In GBA is een infrastructurele wijziging te herkennen doordat aan rubriek 08.72.10 Omschrijving
+van de aangifte adreshouding die de waarde ‘W’ of ‘T’ krijgt (zie Logisch Ontwerp GBA [LO-GBA],
+paragraaf 3.9.7 en III.2.7.2). In het BRP-formaat betekent dit dat er een nieuwe actuele rij
+wordt opgenomen in Persoon / Adres, waarin het attribuut Reden wijziging de waarde ‘I’
+(infrastructurele wijziging) of ‘B’ (technische wijzigingen i.v.m. BAG) krijgt.
+Daarnaast mogen alleen andere gegevens wijzigen die afkomstig zijn uit deze zelfde GBAcategorie. Deze worden, doordat ze aan dezelfde actie gekoppeld zijn, in dezelfde
+Administratieve handeling opgenomen. Dit kunnen de volgende gegevens zijn:
+•
+Objecttype Persoon, groep Bijhouding
+•
+Objecttype Persoon, groep Migratie
+
+12
+
+of in uitzonderlinge gevallen tot 2 administratieve handelingen
+
+Operatie BRP
+
+Pagina 22 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+4.2
+
+GBA - Afvoeren PL
+Er is sprake van afvoeren persoonslijst als deze wordt opgeschort met reden ‘F’ (Fout). Dit wordt
+vastgelegd in het attribuut Nadere bijhoudingsaard.
+
+4.3
+
+GBA - Bijhouding actueel vs GBA - Bijhouding overig
+Voor alle stapels waarop wijzigingen hebben plaatsgevonden wordt, afzonderlijk per stapel,
+bepaald of er sprake is van uitsluitend een bijhouding op de actuele gegevens. Als dit voor alle
+gewijzigde stapels het geval is, dan is het een GBA - Bijhouding actueel. Daarentegen, als dit
+voor tenminste één stapel niet van toepassing is, dan wordt het geheel van alle wijzigingen een
+GBA - Bijhouding overig.
+Het bepalen of er sprake is van een GBA - Bijhouding actueel vindt plaats op het resultaat van
+het bijwerken van de persoonslijst. Dit impliceert dat dit gebeurt op basis van het BRP
+gegevensformaat13. Bij het beschreven van de situaties die als GBA - Bijhouding actueel
+aangemerkt moeten worden, wordt de onderstaande definitie gehanteerd.
+
+Actuele gegevens
+De gegevens op een persoonslijst die nu gelden. Dit zijn de gegevens die niet vervallen zijn
+(Tijdstip verval is niet gevuld) en niet beëindigd zijn (Datum einde geldigheid is niet gevuld14).
+Bijhouding op actuele gegevens kan twee verschillende soorten bijhoudingen betreffen, te
+weten:
+•
+Actualisering van actuele gegevens
+In de een BRP groep worden nieuwe actuele gegevens opgenomen, zonder dat er sprake
+is van enige vorm van correctie.
+•
+Correctie van actuele gegevens
+In de een BRP groep worden nieuwe actuele gegevens opgenomen, waarbij er sprake is
+van correctie van uitsluitend de oorspronkelijke actuele gegevens.
+In de volgende subparagrafen staat beschreven welke mutaties op een BRP stapel aangemerkt
+worden als actualisering of correctie van actuele gegevens. In de daaropvolgende subparagrafen
+wordt ingegaan op specifieke BRP groepen die afwijkende van dit standaardpatroon.
+4.3.1
+
+Actualisering van actuele gegevens
+Een actualisering van de actuele gegevens als gevolg van een synchronisatie vanuit GBA is als
+volgt te herkennen:
+DAA-1: Actualisering nieuwe gegevens
+Situatie: In een nieuwe dan wel bestaande stapel worden uitsluitend actuele gegevens
+opgenomen. Voorafgaande aan de actualisering waren er geen actuele gegevens.
+Geen datum
+einde geldigheid
+
+Geen datum
+einde geldigheid
+
+Franse
+nationaliteit
+
+8-3-2014
+
+Geen datum
+einde geldigheid
+
+Franse
+nationaliteit
+
+8-3-2014
+
+5-6-2013
+
+Geen
+Deense
+Nationaliteit
+8-3-2014
+Situatie
+voor
+synchronisatie
+
+13
+
+14
+
+Deense
+nationaliteit
+
+Situatie
+na
+synchronisatie
+
+Franse
+nationaliteit
+
+Franse
+nationaliteit
+
+Situatie
+voor
+synchronisatie
+
+Situatie
+na
+synchronisatie
+
+10-1-2000
+
+10-1-2000
+
+Franse
+nationaliteit
+
+Franse
+nationaliteit
+
+Situatie
+voor
+synchronisatie
+
+Situatie
+na
+synchronisatie
+
+Gegevens of relaties en gerelateerden vormt hierop een uitzondering. In paragraaf 4.3.7 staat beschreven hoe met deze gegevens
+omgegaan wordt.
+of datum einde geldigheid komt niet voor als attribuut omdat in desbetreffende groep geen materiele historie wordt bijgehouden.
+
+Operatie BRP
+
+Pagina 23 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+In geval van een groep met zowel materiele als formele historie ontstaat er precies één
+voorkomen, waarbij geldt dat in dit voorkomen de elementen Datum einde geldigheid en Tijdstip
+verval niet ingevuld zijn.
+In geval van een groep met uitsluitend formele historie ontstaat er precies één voorkomen,
+waarbij geldt dat in dit voorkomen het element Tijdstip verval niet ingevuld is.
+Daarnaast zijn er geen M-rijen ontstaan.
+Situaties uitgedrukt in DW’s
+1x DW-002-Act
+DAA-2: Actualisering bestaande gegevens
+Situatie: In een bestaande stapel worden uitsluitend nieuwe actuele gegevens opgenomen. Deze
+volgen de oorspronkelijke actuele gegevens op.
+Geen datum
+einde geldigheid
+
+5-6-2014
+
+10-1-2013
+
+Adres 2
+
+Adres 1
+
+Adres 1
+
+Situatie
+voor
+synchronisatie
+
+Situatie
+na
+synchronisatie
+
+Gelijk aan de actualisering van nieuwe gegevens (DAA-1) ontstaat er precies één nieuw
+voorkomen, waaraan dezelfde eisen worden gesteld.
+In geval van een groep met zowel materiele als formele historie is er daarnaast precies één
+voorkomen waarbij uitsluitend Datum einde geldigheid en Actie aanpassing geldigheid ingevuld
+wordt. Alle andere elementen wijzigen niet en het element Tijdstip verval is niet ingevuld.
+Daarnaast heeft de aanpassing van bovenstaande voorkomen geleid tot een M-rij.
+In geval van een groep met uitsluitend formele historie is er daarnaast (dus naast het nieuwe
+voorkomen) precies één voorkomen waarbij uitsluitend Tijdstip verval en Actie verval ingevuld
+worden. Alle andere elementen wijzigen niet. Daarnaast zijn er geen M-rijen ontstaan.
+Voor de bestaande voorkomens, zowel in geval van een groep met formele als materiele en
+formele historie, geldt tevens dat de bijbehorende verantwoordingsgegevens in Actie, Actie/Bron,
+Document en Administratieve handeling niet gewijzigd mogen zijn. Hetzelfde geldt voor
+gekoppelde onderzoeksgegevens in Onderzoek, Persoon \ Onderzoek en Gegeven in onderzoek.
+Situaties uitgedrukt in DW’s
+Formele historie:
+1x DW-002-Act + 1x DW-011
+Formel en materiele historie:
+1x DW-002-Act + 1x DW-021
+1x DW-002-Act + 1x DW-024 + optioneel 1x DW-023
+DAA-3: Actualisering beëindigen gegevens
+Situatie: In een bestaande stapel wordt de geldigheid van de actuele gegevens beëindigd.
+
+Operatie BRP
+
+Pagina 24 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+Geen datum
+einde geldigheid
+
+5-6-2014
+
+Franse
+nationaliteit
+
+Franse
+nationaliteit
+
+Situatie
+voor
+synchronisatie
+
+Situatie
+na
+synchronisatie
+
+10-1-2000
+
+Deze situatie kan zich alleen voordoen bij een groep met zowel materiele als formele historie. Er
+is precies één voorkomen waarbij uitsluitend Datum einde geldigheid en Actie aanpassing
+geldigheid ingevuld worden. Alle andere elementen wijzigen niet en het element Tijdstip verval is
+niet ingevuld.
+Daarnaast heeft de aanpassing van bovenstaande voorkomen geleid tot een M-rij.
+Situaties uitgedrukt in DW’s
+Formele historie:
+nvt
+Formele en materiele historie:
+1x DW-021
+4.3.2
+
+Correctie van actuele gegevens
+In de een BRP groep worden nieuwe actuele gegevens opgenomen, waarbij er sprake is van
+correctie van uitsluitend de oorspronkelijke actuele gegevens.
+Een correctie van de actuele gegevens als gevolg van een synchronisatie vanuit GBA is als volgt
+te herkennen:
+DAC-1: Correctie in actuele gegevens
+Situatie: In een bestaande stapel worden uitsluitend nieuwe actuele gegevens opgenomen. De
+oorspronkelijke actuele gegevens komen te vervallen.
+
+Geen datum
+einde geldigheid
+
+Geen datum
+einde geldigheid
+
+5-6-2014
+
+Geen datum
+einde geldigheid
+
+Adres 2
+
+Adres 2
+
+Adres 3
+
+5-6-2014
+
+Adres 2
+
+Adres 2
+Adres 3
+
+7-5-2014
+
+10-1-2013
+
+Adres 1
+
+Situatie
+voor
+synchronisatie
+
+Adres 1
+
+Adres 2
+
+Situatie
+na
+synchronisatie
+
+10-1-2013
+
+Adres 1
+
+Situatie
+voor
+synchronisatie
+
+Adres 1
+Situatie
+na
+synchronisatie
+
+10-1-2013
+
+Adres 1
+
+Situatie
+voor
+synchronisatie
+
+Adres 1
+Situatie
+na
+synchronisatie
+
+Gelijk aan de actualisering van nieuwe gegevens (DAA-1) ontstaat er precies één nieuw
+voorkomen, waaraan dezelfde eisen worden gesteld.
+In geval van een groep met zowel materiele als formele historie is er daarnaast precies één
+voorkomen waarbij uitsluitend tijdstip verval, actie verval en nadere aanduiding verval gevuld
+worden. Als er direct voorafgaan een historisch, niet vervallen, voorkomens is, dan zal hiervan
+actie aanpassing geldigheid wijzigen. Daarnaast kan de datum einde geldigheid wijzigen.
+In geval van een groep met uitsluitend formele historie is er daarnaast (dus naast het nieuwe
+voorkomen) precies één voorkomen waarbij uitsluitend tijdstip verval, actie verval en nadere
+aanduiding verval gevuld worden.
+
+Operatie BRP
+
+Pagina 25 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+NB: de situatie dat de datum aanvang geldigheid gecorrigeerd wordt zal afhankelijk van de
+situatie tot een GBA - Bijhouding actueel of GBA - Bijhouding overig leiden. Als de actuele rij een
+voorganger heeft, bijvoorbeeld het vorige adres waar iemand gewoond heeft, dan zal dit, in
+tegenstelling tot in het GBA, tevens leiden het wijzigen van deze voorganger. Hierop wijzigt
+namelijk de Datum einde geldigheid.
+Situaties uitgedrukt in DW’s
+Formele historie:
+1x DW-002-Act + 1x DW-012
+Formele en materiele historie:
+1x DW-002-Act + 1x DW-022 + optioneel 1x DW-023
+DAC-2: Correctie onterecht opgenomen, geen historische rijen opgenomen
+Situatie: De oorspronkelijke actuele gegevens komen te vervallen. Er komen geen andere
+gegevens voor in de plaats.
+Geen datum
+einde geldigheid
+
+10-1-2000
+
+Franse
+nationaliteit
+
+Situatie
+voor
+synchronisatie
+
+Franse
+nationaliteit
+Situatie
+na
+synchronisatie
+
+In deze situatie ontstaat er geen nieuw voorkomen.
+In geval van een groep met zowel materiele als formele historie is er precies één voorkomen
+waarbij datum einde geldigheid, tijdstip verval, actie verval, actie aanpassing geldigheid en
+nadere aanduiding verval gevuld worden. Dit was oorspronkelijk de actuele categorie.
+In geval van een groep met uitsluitend formele historie is er precies één voorkomen waarbij
+uitsluitend tijdstip verval, actie verval en nadere aanduiding verval gevuld worden. Dit was
+oorspronkelijk de actuele categorie.
+Situaties uitgedrukt in DW’s
+Formele historie:
+1x DW-012
+Formele en materiele historie:
+1x DW-025
+4.3.3
+
+Groepen waarvan GBA-herkomst geen historie heeft
+Op de GBA persoonslijst staan gegevens waarvan geen historie wordt bijgehouden. Zie paragraaf
+3.3.1 voor welke categorieën in GBA en welke groepen in BRP dit betreft. Wijzigingen op deze
+gegevens moet altijd gezien worden als actualisering op actueel. Immers, vanuit de GBA
+gegevens beredeneert kan alleen het actuele voorkomen gewijzigd zijn, er is immers uitsluitend
+een actueel voorkomen. Het verblijfsrecht moet op deze zelfde wijze behandeld worden. Dit
+omdat van het verblijfsrecht geen historie uit het GBA geconverteerd wordt.
+
+4.3.4
+
+Onderzoek
+Als er een wijziging plaatsvindt op een Onderzoek dat uitsluitend aan actuele gegevens
+gekoppeld is, dan moet dit gezien worden als actualisering op actueel. Is dit niet het geval – het
+betreft een Onderzoek op (deels) niet-actuele gegevens - dan wordt dit gezien als actualisering
+overig. Voor relaties en betrokkenheden geldt dat de actuele gegevens in de BRP niet
+
+Operatie BRP
+
+Pagina 26 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+noodzakelijkerwijs voortkomen uit de actuele GBA-categorie, zie Documentatie bidirectionele
+conversie [CONV-DOC]. Om te voorkomen dat dit onterecht gezien wordt als actualisering op
+actueel, moet voor relaties en betrokkenheden daarom ook gekeken worden of de gegevens
+voortkomen uit de actuele GBA-categorie. Als het voortkomt uit een historische GBA-categorie
+dan moet het altijd gezien worden als actualisering overig.
+Uitzondering
+Als administratieve gegevens15 in onderzoek gezet worden, wordt dit altijd gezien als
+actualisering overig
+4.3.5
+
+Groep Voornaam en Geslachtsnaamcomponent
+Deze groepen zijn, vanuit de conversie vanuit GBA bezien, een herhaling van wat reeds
+vastgelegd is in de groep samengestelde naam. Doordat bijvoorbeeld het wijzigen van twee naar
+één voornaam wel tot afleidend gedrag leidt of de stapel met de tweede naam, leidt dit tot
+andere DW’s als de groep Samengestelde naam, waardoor dit niet binnen het gebruikelijke
+patroon past om te bepalen of er sprake is van een GBA - Bijhouding actueel. Tevens worden
+deze groepen niet gebruikt bij de terugconversie naar GBA-formaat, dus kunnen nooit invloed
+hebben of er sprake moet zijn van een GBA - Bijhouding actueel of GBA - Bijhouding overig.
+Daarom worden deze groepen niet meegenomen in de bepaling of er sprake is van GBA Bijhouding actueel of GBA - Bijhouding overig.
+
+4.3.6
+
+Groep Bijhouding
+Voor de groep Bijhouding moeten dezelfde situaties herkent worden als bij de groepen waarvan
+de GBA-herkomst historie bevat, zoals beschreven in de paragrafen 4.3.1 en 4.3.2. Doordat
+echter een deel van de gegevens voorkomt uit categorie 07, welke geen historie bevat, gedraagt
+een bijhouding op deze groep zich afwijkend. Dit wordt veroorzaakt doordat uitsluitend op de
+actuele rij de nadere bijhoudingsaard ingevuld wordt op basis van de informatie uit categorie 07.
+Bij de historische rijen wordt in dit element de waarde ‘Onbekend’ opgenomen. Dit betekent dat
+dezelfde situaties (DAA-1 t/m 3 en DAC-1 en 2) van toepassing zijn, echter met het verschil dat
+de rij die actueel was, wijzigt. Hierin verandert namelijk de waarde van Nadere bijhoudingsaard
+in ‘Onbekend’.
+Situaties uitgedrukt in DW’s
+1x DW-002-Act
+1x DW-002-Act + 1x DW-031 + optioneel 1x DW-023
+1x DW-002-Act + 1x DW-032
+1x DW-002-Act + 1x DW-034 + optineel 1x DW-023
+1x DW-002 die voortkomt uit de actuele categorie 08
+
+4.3.7
+
+Groep Nationaliteit
+Voor de groep Nationaliteit moeten dezelfde situaties herkent worden als bij de groepen waarvan
+de GBA-herkomst historie bevat, zoals beschreven in de paragrafen 4.3.1 en 4.3.2. Doordat de
+groep Nationaliteit daarnaast een specifieke conversie kent voor de einde bijhouding van de
+vreemde nationaliteit, is er ook een specifieke situatie om met deze mutatie om te gaan tijdens
+de deltabepaling, zie paragraaf 3.3.5. Dit betekent dat er ook een extra situatie is waarbij er
+sprake is van een GBA - Bijhouding actueel.
+DAA-4: Einde bijhouding nationaliteit
+Situatie: De oorspronkelijke actuele gegevens komen te vervallen. Er komen geen andere
+gegevens voor in de plaats. In tegenstelling tot DAC-2 is er geen sprake van onjuiste gegevens.
+
+15
+
+Gegevens uit de objecttypen Actie, Bron en Document
+
+Operatie BRP
+
+Pagina 27 van 28
+
+Definitief | 1.7 | Functioneel ontwerp Deltabepaling | 03-05-2017
+
+Geen datum
+einde geldigheid
+
+10-1-2000
+
+Franse
+nationaliteit
+
+Situatie
+voor
+synchronisatie
+
+Franse
+nationaliteit
+Situatie
+na
+synchronisatie
+
+In deze situatie ontstaat er geen nieuw voorkomen.
+In geval van een groep met zowel materiele als formele historie is er precies één voorkomen
+waarbij tijdstip verval en actie verval gevuld worden. Dit was oorspronkelijk de actuele categorie.
+Situaties uitgedrukt in DW’s
+Formele en materiele historie:
+1x DW-041
+4.3.8
+
+Relatie, Betrokkenheid en gerelateerde persoon
+Gebruik van uitsluitend BRP-data is niet mogelijk. Hierin is niet zichtbaar of er 'extra' wijzigingen
+hebben plaatsgevonden in de historie. Ook het feit dat voorkomen(s) onjuist zijn gemaakt wordt
+niet als zodanig in de BRP-data vastgelegd, omdat uitsluitend de 'actuele' gegevens
+geconverteerd worden. Dit betekent dat de oude rij niet als onjuist aangemerkt wordt in de BRP,
+maar wordt verwijdert (DW-001). Als op basis van de BRP-data een mutatiebericht gestuurd zou
+worden, wordt hierin dus niet vastgelegd dat de oude rij onjuist gemaakt. Kortom dit
+mutatiebericht is correcte weergave van de bijhouding die heeft plaatsgevonden.
+Omdat de BRP-data niet toereikend is, vindt de bepaling van GBA - Bijhouding actueel of GBA Bijhouding overig plaats op uitsluitend IST. Als uitsluitend de actuele categorie is toegevoegd, en
+verder geen mutaties dan is er sprake van GBA - Bijhouding actueel. In alle andere gevallen dat
+er iets gewijzigd is, is er sprake van GBA - Bijhouding overig. Ook het onjuist maken van de
+oude actuele categorie wordt als GBA - Bijhouding overig aangemerkt. Zoals in de vorige alinea
+beschreven staat is deze situatie niet vastgelegd in de BRP-data. Voor BRP mutatieberichten
+wordt geen gebruik gemaakt van de IST-tabel, om te voorkomen dat de historische data alsnog
+geconverteerd moet worden naar het BRP-formaat. Om GBA en BRP mutatieberichten
+consistente informatie te laten verstrekken, maakt ook de GBA mutatielevering geen gebruik van
+de IST-gegevens.
+
+Operatie BRP
+
+Pagina 28 van 28
+
+

@@ -1,0 +1,120 @@
+Levsaantek
+
+Dyn
+
+OGM A06 Protocol
+Release 59 17-7-2017
+
+ID
+
+LevsaantekID
+
+*i
+
+ToegangLevsautorisatie >
+
+ToegangLevsautorisatie
+
+*
+
+Dienst >
+
+Dienst
+
+*
+
+Ts
+
+TsKlaarzettenLev
+
+* s1
+
+DatAanvMaterielePeriodeRes Dat
+
+.
+
+DatEindeMaterielePeriodeRes Dat
+
+.
+
+ScopePatroon
+
+Dyn
+
+ID ScopePatroonID * i
+
+TsAanvFormelePeriodeRes
+
+Ts
+
+.
+
+TsEindeFormelePeriodeRes
+
+Ts
+
+*
+
+AdmHnd >
+
+AdmHnd
+
+.
+
+ScopePatroonElement
+ScopePatroonElementID
+
+SrtSynchronisatie >
+
+SrtSynchronisatie
+
+.
+
+ID
+
+ScopePatroon >
+
+ScopePatroon
+
+.
+
+ScopePatroon > ScopePatroon
+Element >
+
+LevsaantekPers
+
+Dyn
+
+Levsaantek >
+
+Levsaantek
+
+* s2
+
+TsKlaarzettenLev
+
+Ts
+
+* s3
+
+Pers >
+
+Pers
+
+DatAanvMaterielePeriode Dat
+TsLaatsteWijzPers
+
+Ts
+
+* s1
+.
+*
+
+Element
+
+Dyn
+*i
+* u1
+* u1
+
+

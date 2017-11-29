@@ -1,0 +1,7811 @@
+Bijlage Registreer erkenning
+Versie: Release 59
+Gegenereerd op: 19 juli 2017
+Status: Definitief
+
+1 Handeling: Erkenning
+Berichtspecificatie
+
+Registreer erkenning (bhg_afsRegistreerErkenning)
+
+Kardinaliteit
+1
+
+Stuurgegevens (communicatieID)
+Zendende partij, Zendende systeem, Referentienummer, Datum/tijd verzending
+
+1
+
+Parameters (communicatieID)
+Verwerkingswijze
+
+Erkenning
+
+(objecttype="AdministratieveHandeling", communicatieID)
+
+1
+
+Partij, Toelichting ontlening
+
+Gedeblokkeerde meldingen
+
+0..1
+
+Gedeblokkeerde melding (objecttype="GedeblokkeerdeMelding", referentieID, communicatieID)
+
+1..n
+
+Regel
+
+Bronnen
+
+1
+
+Bron (objecttype="AdministratieveHandelingBron", communicatieID)
+Document (objecttype="Document", communicatieID)
+
+1..n
+1
+
+Soort, Aktenummer, Omschrijving, Partij
+
+Acties
+
+1
+
+Registratie ouder (objecttype="Actie", communicatieID)
+
+1
+
+Datum aanvang geldigheid
+
+Bronnen
+
+1
+
+Bron (objecttype="ActieBron", referentieID, communicatieID)
+Persoon (objecttype="Persoon", objectSleutel, communicatieID)
+Betrokkenheden
+
+1..n
+1
+1
+
+Kind (objecttype="Betrokkenheid", objectSleutel, communicatieID)
+Familierechtelijke betrekking (objecttype="Relatie", objectSleutel, communicatieID)
+Betrokkenheden
+Ouder (objecttype="Betrokkenheid", communicatieID)
+Persoon (objecttype="Persoon", objectSleutel, communicatieID)
+Identificatienummers (communicatieID)
+
+1
+1
+1
+1
+1
+0..1
+
+Burgerservicenummer, Administratienummer
+
+Samengestelde naam (communicatieID)
+
+0..1
+
+Namenreeks?, Predicaat, Voornamen, Adellijke titel, Voorvoegsel, Scheidingsteken,
+Geslachtsnaamstam
+
+Geboorte (communicatieID)
+
+0..1
+
+Datum geboorte, Gemeente geboorte, Woonplaatsnaam geboorte, Buitenlandse
+plaats geboorte, Buitenlandse regio geboorte, Omschrijving locatie geboorte,
+Land/gebied geboorte
+
+Geslachtsaanduiding (communicatieID)
+
+0..1
+
+Geslachtsaanduiding
+
+Registratie geslachtsnaam/voornaam (objecttype="Actie", communicatieID)
+
+0..1
+
+Datum aanvang geldigheid
+
+Bronnen
+
+1
+
+Bron (objecttype="ActieBron", referentieID, communicatieID)
+Persoon (objecttype="Persoon", objectSleutel, communicatieID)
+Samengestelde naam (communicatieID)
+
+1..n
+1
+1
+
+Namenreeks?
+
+Voornamen
+Persoon \ Voornaam (objecttype="PersoonVoornaam", communicatieID)
+
+0..1
+1..n
+
+Volgnummer, Naam
+
+Geslachtsnaamcomponenten
+Persoon \ Geslachtsnaamcomponent (objecttype="PersoonGeslachtsnaamcomponent",
+
+1
+1
+
+communicatieID)
+Predicaat, Adellijke titel, Voorvoegsel, Scheidingsteken, Stam
+
+Registratie nationaliteit (objecttype="Actie", communicatieID)
+
+0..n
+
+Datum aanvang geldigheid
+
+Bronnen
+
+0..1
+
+Bron (objecttype="ActieBron", referentieID, communicatieID)
+Persoon (objecttype="Persoon", objectSleutel, communicatieID)
+Nationaliteiten
+Nationaliteit (objecttype="PersoonNationaliteit", communicatieID)
+
+1..n
+1
+1
+1
+
+Nationaliteit, Reden verkrijging
+
+Beëindiging nationaliteit (objecttype="Actie", communicatieID)
+
+0..n
+
+Datum einde geldigheid
+
+Bronnen
+
+0..1
+
+Bron (objecttype="ActieBron", referentieID, communicatieID)
+Persoon (objecttype="Persoon", objectSleutel, communicatieID)
+Nationaliteiten
+Nationaliteit (objecttype="PersoonNationaliteit", objectSleutel, communicatieID)
+Reden verlies
+
+Autorisatieregels
+Code
+
+Versie Niveau Omschrijving
+
+1..n
+1
+1
+1
+
+R2489
+
+6
+
+F
+
+De administratieve handeling mag alleen ingediend worden door gemeente
+van geboorte of bijhoudingspartij
+
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1815
+
+4
+
+D
+
+Geen nationaliteit - ook geen onbekende - en ook geen indicatie staatloos
+aanwezig
+
+R1836
+
+7
+
+F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2638
+
+1
+
+F
+
+Er mag maximaal één ouder bij het kind geregistreerd staan
+
+Gegevensvalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1848
+
+4
+
+D
+
+Registersoort moet geldig zijn voor soort document
+
+R1849
+
+4
+
+D
+
+Aktenummer verplicht bij Nederlandse registerakten en leeg bij andere
+documentsoorten
+
+R1850
+
+5
+
+F
+
+Uitsluitend indien een document geen Nederlandse registerakte is mag de
+omschrijving gevuld zijn
+
+R2428
+
+2
+
+F
+
+Een opgegeven gedeblokkeerde melding moet verwijzen naar een regel die
+als deblokkeerbaar is vastgelegd
+
+Integriteitsregels
+Code
+
+Versie Niveau Omschrijving
+
+R1605
+
+5
+
+F
+
+Soort document moet verwijzen naar bestaand stamgegeven
+
+R2235
+
+4
+
+F
+
+Partij in document moet verwijzen naar bestaande partij
+
+1.1
+
+Use case: Controleer inhoud
+
+Generieke regels voor deze use case
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1579
+
+19
+
+D
+
+Van een overleden persoon mag uitsluitend een beperkte set van gegevens
+worden bijgehouden
+
+R1580
+
+7
+
+F
+
+Een persoon mag niet worden bijgehouden als de reden van opschorting
+foutief is
+
+R1833
+
+7
+
+F
+
+De objectsleutel waarmee een persoon in het bericht wordt aangewezen
+moet geldig zijn
+
+R1835
+
+10
+
+F
+
+Objectsleutel in bijhouding moet verwijzen naar bestaand object in BRP van
+juiste type
+
+R1839
+
+3
+
+F
+
+Gedeblokkeerde meldingen moeten in verwerking daadwerkelijk optreden
+
+R2098
+
+6
+
+F
+
+Bijhouding geblokkeerd wegens verhuizing
+
+R2511
+
+3
+
+F
+
+Objectsleutel die verwijst naar relatie moet verwijzen naar relatie van juiste
+soort
+
+R2512
+
+3
+
+F
+
+Objectsleutel die verwijst naar betrokkenheid moet verwijzen naar
+betrokkenheid met de juiste rol
+
+R2536
+
+4
+
+F
+
+Minimaal één hoofdpersoon moet een ingezetene of overledene zijn
+
+R2626
+
+4
+
+W
+
+Waarschuwing bij bijhouding indien gegevens van een hoofdpersoon in
+onderzoek staan
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1838
+
+4
+
+F
+
+In een bijhouding moet ReferentieID verwijzen naar CommunicatieID in
+berichtelement van het juiste type.
+
+R2348
+
+1
+
+F
+
+Partij van de Administratieve handeling moet gelijk zijn aan de Zendende
+partij
+
+R2413
+
+3
+
+F
+
+Een toelichting ontlening is verplicht bij het deblokkeren van een melding
+
+1.2
+
+Use case: Controleer inhoud (actualisering)
+
+Generieke regels voor deze use case
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1606
+
+5
+
+D
+
+Brondocument moet geldig zijn voor de administratieve handeling en actie
+
+R2493
+
+10
+
+D
+
+Melding indien er een feitdatum op de persoonslijst staat die recenter dan of
+gelijk is aan de Peildatum, DAG en DEG van de Administratieve handeling.
+
+1.3
+
+Use case: Autorisatie administratieve handeling
+
+Generieke regels voor deze use case
+Autorisatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2106
+
+7
+
+F
+
+De administratieve handeling moet zijn toegestaan voor de
+bijhoudingsautorisatie
+
+R2115
+
+4
+
+F
+
+De bijhoudingsautorisatie mag niet geblokkeerd zijn
+
+R2247
+
+4
+
+F
+
+De toegang bijhoudingsautorisatie moet geldig zijn
+
+R2248
+
+4
+
+F
+
+De toegang bijhoudingsautorisatie mag niet geblokkeerd zijn
+
+R2250
+
+6
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij en rol
+bestaan
+
+R2251
+
+5
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en
+ondertekenaar bestaan
+
+R2252
+
+5
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en
+transporteur bestaan
+
+R2268
+
+2
+
+F
+
+De geautoriseerde partij moet een geldige partij zijn
+
+R2269
+
+2
+
+F
+
+De ondertekenaar moet een geldige partij zijn
+
+R2270
+
+2
+
+F
+
+De transporteur moet een geldige partij zijn
+
+R2271
+
+2
+
+F
+
+De combinatie partij met rol voor toegang bijhoudingsautorisatie moet geldig
+zijn
+
+R2299
+
+2
+
+F
+
+De bijhoudingsautorisatie moet geldig zijn
+
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R2343
+
+4
+
+1.4
+
+F
+
+Algemene foutmelding bij schending autorisatieregels
+
+Actie: Registratie ouder
+
+Specifieke regels voor deze combinatie Handeling \ Actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1729
+
+4
+
+W
+
+Waarschuwen als erkenner onder curatele staat
+
+R1734
+
+4
+
+D
+
+Ouder mag niet zijn overleden
+
+R1736
+
+3
+
+D
+
+Erkenner moet minstens 16 jaar zijn
+
+R1748
+
+3
+
+D
+
+Erkend kind jonger dan 7 jaar moet Nederlander worden indien erkenner
+Nederlander is
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2450
+
+1
+
+F
+
+Datum erkenning moet na datum geboorte van het kind liggen
+
+Gegevensvalidatieregels
+Code
+
+Versie Vorm
+
+Niveau Omschrijving
+
+R1466
+
+7
+
+D
+
+Gemeente geboorte moet geldig zijn op datum geboorte
+
+R1467
+
+9
+
+D
+
+Land/gebied geboorte moet geldig zijn op datum geboorte
+
+R1469
+
+6
+
+D
+
+Datum geboorte mag niet onbekend zijn bij geboorte in Nederland
+
+R1585
+
+7
+
+F
+
+Het administratienummer moet voldoen aan het voorschrift
+
+R1587
+
+7
+
+F
+
+Het burgerservicenummer moet voldoen aan het voorschrift
+
+R1672
+
+5
+
+F
+
+Voorvoegsel en scheidingsteken moeten beide ingevuld zijn of
+beide niet
+
+R1673
+
+7
+
+F
+
+Predicaat en adellijke titel in samengestelde naam mogen niet
+beide een waarde hebben
+
+R1676
+
+5
+
+F
+
+Combinatie scheidingsteken en voorvoegsel in samengestelde
+naam moet voorkomen als stamgegeven
+
+R1809
+
+9
+
+F
+
+Namenreeks en Voornaam sluiten elkaar uit
+
+R1810
+
+4
+
+F
+
+Namenreeks en Voorvoegsel in Samengestelde naam sluiten elkaar
+uit
+
+R2021
+
+6
+
+F
+
+Buitenlandse plaats geboorte of buitenlandse regio geboorte moet
+gevuld zijn indien een persoon is geboren in het buitenland
+
+R2032
+
+4
+
+F
+
+Buitenlandse plaats geboorte en buitenlandse regio geboorte
+moeten leeg zijn indien de persoon niet is geboren in het
+buitenland
+
+R2034
+
+4
+
+F
+
+Gemeente geboorte en/of woonplaatsnaam geboorte mogen
+uitsluitend gevuld zijn indien de persoon is geboren in Nederland
+
+R2036
+
+3
+
+F
+
+Woonplaatsnaam geboorte mag alleen gevuld zijn als ook
+gemeente gevuld is
+
+R2041
+
+5
+
+F
+
+Gemeente geboorte verplicht als land/gebied gelijk is aan
+Nederland
+
+R2046
+
+6
+
+F
+
+Omschrijving locatie geboorte verplicht als land/gebied gelijk is
+aan onbekend of internationaal gebied
+
+R2155
+
+4
+
+D
+
+Woonplaatsnaam geboorte moet verwijzen naar bestaand
+stamgegeven
+
+R2177
+
+1
+
+F
+
+Datum geboorte mag niet in de toekomst liggen
+
+R2354
+
+8
+
+F
+
+Datum aanvang geldigheid van de actie mag niet in de toekomst
+liggen
+
+R2458
+
+4
+
+F
+
+De groep identificatienummers moet ten minste een
+administratienummer of een burgerservicenummer bevatten
+
+R2867
+
+1
+
+D
+
+Persoon zonder Nederlandse nationaliteit mag geen predicaat en
+adellijke titel in samengestelde naam hebben
+
+Integriteitsregels
+Code
+
+Versie Vorm
+
+Niveau Omschrijving
+
+R1274
+
+6
+
+F
+
+R1569
+
+6
+
+XSD / Afl. F
+
+Geslachtsaanduiding moet verwijzen naar bestaand stamgegeven
+
+R1598
+
+6
+
+XSD / Afl. F
+
+Rol (betrokkenheid in de relatie) moet verwijzen naar bestaand
+stamgegeven
+
+R1631
+
+8
+
+XSD / Afl. F
+
+Soort relatie moet verwijzen naar een bestaand stamgegeven
+
+R1649
+
+5
+
+F
+
+R1674
+
+6
+
+XSD / Afl. F
+
+Adellijke titel in samengestelde naam moet verwijzen naar
+bestaand stamgegeven
+
+R1675
+
+6
+
+XSD / Afl. F
+
+Predicaat in samengestelde naam moet verwijzen naar bestaand
+stamgegeven
+
+R2145
+
+6
+
+XSD / Afl. F
+
+Geslachtsnaamstam in samengestelde naam is verplicht
+
+R2146
+
+5
+
+XSD / Afl. F
+
+Land/gebied geboorte in geboorte is verplicht
+
+R2164
+
+1
+
+F
+
+R2169
+
+4
+
+XSD / Afl. F
+
+Namenreeks? in samengestelde naam is verplicht
+
+R2171
+
+4
+
+XSD / Afl. F
+
+Datum geboorte in geboorte is verplicht
+
+Datum moet een geldige kalenderdatum zijn
+
+Land/gebied geboorte moet verwijzen naar bestaand stamgegeven
+
+Gemeente geboorte moet verwijzen naar bestaand stamgegeven
+
+R2172
+
+4
+
+XSD / Afl. F
+
+Geslachtsaanduiding in geslachtsaanduiding is verplicht
+
+Algemene regels voor deze actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1726
+
+7
+
+D
+
+Geslachtsnaam Nederlands kind moet overeenkomen met ouder
+
+R1727
+
+6
+
+D
+
+Geslachtsnaam Nederlands kind moet overeenkomen met die van eerder kind
+uit dezelfde relatie
+
+R1731
+
+8
+
+D
+
+Kind moet een predicaat of adellijke titel hebben als de vader met identieke
+geslachtsnaam dat ook heeft
+
+R1732
+
+7
+
+D
+
+Ouder mag geen kinderen hebben met identieke geboortedatum
+
+R1733
+
+5
+
+D
+
+Tussen ouders mag geen verwantschap bestaan
+
+R1751
+
+5
+
+W
+
+Waarschuwing: gegevens ouder staan in onderzoek
+
+R1845
+
+6
+
+F
+
+In het bijhoudingsbericht gerelateerde objectsleutels en voorkomensleutels
+moeten verwijzen naar gerelateerde objecten en voorkomens in de BRP
+
+R2117
+
+3
+
+F
+
+De persoon die met een objectsleutel wordt aangewezen moet een
+ingeschrevene zijn
+
+R2502
+
+4
+
+F
+
+Betrokkenen in dezelfde relatie mogen niet hetzelfde administratienummer
+en/of burgerservicenummer hebben
+
+R2523
+
+3
+
+D
+
+Ouder mag geen kinderen hebben met identieke burgerservicenummers
+en/of administratienummers
+
+R2532
+
+2
+
+F
+
+Er mag maximaal één ouder worden geregistreerd waaruit het kind is
+geboren
+
+R2543
+
+5
+
+D
+
+Kind mag alleen het predicaat of de adellijke titel van de vader voeren, als de
+geslachtsnaam gelijk is aan die van de vader
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1468
+
+3
+
+F
+
+Datum geboorte van het kind moet na de datum geboorte van de ouder(s)
+liggen
+
+R1625
+
+14
+
+F
+
+De groepen geslachtsaanduiding, geboorte en samengestelde naam zijn
+verplicht voor een pseudo-persoon
+
+R1630
+
+3
+
+F
+
+Persoon is hoogstens één keer betrokken in dezelfde relatie
+
+R2181
+
+13
+
+F
+
+Een persoon wordt of aangewezen met een objectsleutel of het betreft een
+pseudo persoon
+
+1.5
+
+Actie: Registratie geslachtsnaam/voornaam
+
+Specifieke regels voor deze combinatie Handeling \ Actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1572
+
+12
+
+W
+
+Waarschuwing indien een geslachtsnaamwijziging gevolgen heeft voor
+kind(eren)
+
+R1790
+
+12
+
+W
+
+Melding dat reisdocument ongeldig wordt na wijziging personalia, wijziging
+Burgerservicenummer of verkrijging of verlies Nederlandse nationaliteit
+
+R2437
+
+3
+
+W
+
+Waarschuwing indien de gerelateerde gegevens van een persoon wijzigen en
+deze persoon voorkomt als een pseudo-persoon op de persoonslijst van een
+ander.
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2471
+
+2
+
+D
+
+Voornaam mag alleen ingevuld worden indien de namenreeks indicator
+wijzigt naar "Nee"
+
+R2475
+
+1
+
+F
+
+Datum aanvang geldigheid van de actie moet gelijk zijn aan datum erkenning
+
+R2552
+
+1
+
+F
+
+Datum aanvang geldigheid van de actie moet groter dan of gelijk zijn aan
+datum geboorte
+
+Gegevensvalidatieregels
+Code
+
+Versie Vorm
+
+R1571
+
+6
+
+XSD / Afl. F
+
+Niveau Omschrijving
+
+R1807
+
+6
+
+F
+
+Lengte van de voornamen mag bij elkaar opgeteld niet langer dan
+200 karakters zijn
+
+R1809
+
+9
+
+F
+
+Namenreeks en Voornaam sluiten elkaar uit
+
+R1919
+
+3
+
+F
+
+Voornaam mag geen spatie bevatten.
+
+R1920
+
+4
+
+F
+
+Volgnummers voornamen moeten uniek en aaneensluitend zijn
+
+R2161
+
+4
+
+F
+
+Combinatie scheidingsteken en voorvoegsel in
+geslachtsnaamcomponent moet voorkomen als stamgegeven
+
+R2163
+
+5
+
+F
+
+Predicaat en adellijke titel in geslachtsnaamcomponent mogen niet
+beide een waarde hebben
+
+R2173
+
+3
+
+F
+
+Namenreeks en voorvoegsel in geslachtsnaamcomponent mogen
+niet beide een waarde hebben
+
+R2228
+
+2
+
+F
+
+Voorvoegsel en scheidingsteken in geslachtsnaamcomponent
+moeten beide ingevuld zijn of beide niet
+
+R2354
+
+8
+
+F
+
+Datum aanvang geldigheid van de actie mag niet in de toekomst
+liggen
+
+R2869
+
+1
+
+D
+
+Persoon zonder Nederlandse nationaliteit mag geen predicaat en
+adellijke titel in geslachtsnaamcomponent hebben
+
+Er mag slechts één voorkomen van geslachtsnaamcomponent
+aanwezig zijn
+
+Integriteitsregels
+Code
+
+Versie Vorm
+
+Niveau Omschrijving
+
+R1274
+
+6
+
+F
+
+R2156
+
+3
+
+XSD / Afl. F
+
+Adellijke titel in geslachtsnaamcomponent moet verwijzen naar
+bestaand stamgegeven
+
+R2157
+
+4
+
+XSD / Afl. F
+
+Predicaat in geslachtsnaamcomponent moet verwijzen naar
+bestaand stamgegeven
+
+R2166
+
+4
+
+XSD / Afl. F
+
+Stam in geslachtsnaamcomponent is verplicht
+
+R2169
+
+4
+
+XSD / Afl. F
+
+Namenreeks? in samengestelde naam is verplicht
+
+Datum moet een geldige kalenderdatum zijn
+
+Algemene regels voor deze actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1697
+
+7
+
+D
+
+Persoon met de Nederlandse nationaliteit moet een voornaam hebben.
+
+R1731
+
+8
+
+D
+
+Kind moet een predicaat of adellijke titel hebben als de vader met identieke
+geslachtsnaam dat ook heeft
+
+R2543
+
+5
+
+D
+
+Kind mag alleen het predicaat of de adellijke titel van de vader voeren, als de
+geslachtsnaam gelijk is aan die van de vader
+
+R2736
+
+1
+
+W
+
+Waarschuwing dat de naamswijziging niet doorwerkt in de Samengestelde
+naam en het Naamgebruik
+
+R2737
+
+3
+
+W
+
+Waarschuwing dat de naamswijziging niet doorwerkt in het Naamgebruik
+
+R2738
+
+2
+
+W
+
+Waarschuwing: Naamswijziging hoofdpersoon werkt niet door bij (ex)partner
+
+R2740
+
+2
+
+W
+
+Waarschuwing dat een gewijzigde Samengestelde naam niet doorwerkt in het
+Naamgebruik
+
+R2746
+
+1
+
+F
+
+Datum aanvang geldigheid van het gewijzigde Geslachtsnaamcomponent
+moet recenter zijn dan de Datum aanvang geldigheid van het beëindigde
+voorkomen van de Geslachtsnaamcomponent en Samengestelde naam
+
+R2747
+
+1
+
+F
+
+Datum aanvang geldigheid van de gewijzigde Voornaam moet recenter zijn
+dan de Datum aanvang geldigheid van het beëindigde voorkomen van de
+Voornaam en Samengestelde naam
+
+R2748
+
+1.6
+
+1
+
+F
+
+Datum aanvang geldigheid van de gewijzigde Samengestelde naam moet
+recenter zijn dan de Datum aanvang geldigheid van het beëindigde
+voorkomen van de Samengestelde naam
+
+Actie: Registratie nationaliteit
+
+Specifieke regels voor deze combinatie Handeling \ Actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1695
+
+5
+
+D
+
+Door kind te verkrijgen nationaliteit moet bestaan bij ouder
+
+R2582
+
+2
+
+W
+
+Waarschuwing indien het verkrijgen of het verliezen van een nationaliteit
+gevolgen heeft voor kind(eren)
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2552
+
+1
+
+F
+
+Datum aanvang geldigheid van de actie moet groter dan of gelijk zijn aan
+datum geboorte
+
+Gegevensvalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1707
+
+6
+
+D
+
+Nationaliteit moet verwijzen naar geldig stamgegeven
+
+R1708
+
+3
+
+D
+
+Reden verkrijging moet verwijzen naar geldig stamgegeven
+
+R2354
+
+8
+
+F
+
+Datum aanvang geldigheid van de actie mag niet in de toekomst liggen
+
+Integriteitsregels
+Code
+
+Versie Niveau Omschrijving
+
+R1274
+
+6
+
+F
+
+Datum moet een geldige kalenderdatum zijn
+
+R1685
+
+5
+
+F
+
+Nationaliteit moet verwijzen naar bestaand stamgegeven
+
+R1686
+
+3
+
+F
+
+Reden verkrijging moet verwijzen naar bestaand stamgegeven
+
+Algemene regels voor deze actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1692
+
+3
+
+F
+
+Een te verkrijgen nationaliteit mag nog niet voorkomen bij persoon
+
+R1696
+
+11
+
+D
+
+Persoon met Nederlandse nationaliteit mag geen namenreeks hebben
+
+R1697
+
+7
+
+D
+
+Persoon met de Nederlandse nationaliteit moet een voornaam hebben.
+
+R1790
+
+12
+
+W
+
+Melding dat reisdocument ongeldig wordt na wijziging personalia, wijziging
+Burgerservicenummer of verkrijging of verlies Nederlandse nationaliteit
+
+R2011
+
+3
+
+F
+
+Voor een persoon met de Nederlandse nationaliteit wordt uitsluitend deze
+nationaliteit bijgehouden
+
+R2643
+
+1
+
+F
+
+Bij onbeëindigde staatloosheid is registratie nationaliteit uitsluitend
+toegestaan als de DAG daarvan na de DAG van staatloos ligt
+
+R2644
+
+1
+
+F
+
+Bij beëindigde staatloosheid is registratie nationaliteit uitsluitend toegestaan
+als de DAG daarvan op of na de DEG van staatloos ligt
+
+R2870
+
+1
+
+F
+
+Bij onbeëindigde 'Behandeld als Nederlander' is registratie nationaliteit
+uitsluitend toegestaan als de DAG daarvan na de DAG van 'Behandeld als
+Nederlander' ligt
+
+R2871
+
+1
+
+F
+
+Bij onbeëindigde 'Vastgesteld niet-Nederlander' is registratie nationaliteit
+uitsluitend toegestaan als de DAG daarvan na de DAG van 'Vastgesteld nietNederlander' ligt
+
+R2872
+
+1
+
+F
+
+Bij beëindigde 'Behandeld als Nederlander' is registratie nationaliteit
+uitsluitend toegestaan als de DAG daarvan op of na de DEG van 'Behandeld
+als Nederlander' ligt
+
+R2873
+
+1
+
+F
+
+Bij beëindigde 'Vastgesteld niet-Nederlander' is registratie nationaliteit
+uitsluitend toegestaan als de DAG daarvan op of na de DEG van 'Vastgesteld
+niet-Nederlander' ligt
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1688
+
+4
+
+F
+
+Reden verplicht bij verkrijging Nederlandse nationaliteit
+
+R2544
+
+3
+
+F
+
+Reden verkrijging mag alleen gevuld zijn bij verkrijging van de Nederlandse
+nationaliteit
+
+1.7
+
+Actie: Beëindiging nationaliteit
+
+Specifieke regels voor deze combinatie Handeling \ Actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R2582
+
+2
+
+W
+
+Waarschuwing indien het verkrijgen of het verliezen van een nationaliteit
+gevolgen heeft voor kind(eren)
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2451
+
+1
+
+F
+
+Datum einde geldigheid van de actie moet gelijk zijn aan datum erkenning
+
+Gegevensvalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1706
+
+3
+
+D
+
+Reden verlies moet verwijzen naar geldig stamgegeven
+
+R2527
+
+3
+
+F
+
+Datum einde geldigheid van de actie mag niet in de toekomst liggen
+
+Integriteitsregels
+Code
+
+Versie Niveau Omschrijving
+
+R1274
+
+6
+
+F
+
+Datum moet een geldige kalenderdatum zijn
+
+R1687
+
+3
+
+F
+
+Reden verlies moet verwijzen naar bestaand stamgegeven
+
+Algemene regels voor deze actie
+Controleregels
+Code
+
+Versie Vorm
+
+Niveau Omschrijving
+
+R1658
+
+6
+
+F
+
+Datum einde geldigheid van de actie moet op of na datum aanvang
+geldigheid liggen
+
+R1790
+
+12
+
+W
+
+Melding dat reisdocument ongeldig wordt na wijziging personalia,
+wijziging Burgerservicenummer of verkrijging of verlies
+Nederlandse nationaliteit
+
+R1845
+
+6
+
+F
+
+In het bijhoudingsbericht gerelateerde objectsleutels en
+voorkomensleutels moeten verwijzen naar gerelateerde objecten
+en voorkomens in de BRP
+
+R2640
+
+2
+
+F
+
+Te beëindigen materiëel historische groep mag niet al zijn
+beëindigd
+
+Invoervalidatieregels
+Code
+
+Versie Vorm
+
+R1689
+
+5
+
+XSD / Afl. F
+
+Niveau Omschrijving
+Reden verplicht bij verlies van Nederlandse nationaliteit
+
+R2545
+
+2
+
+XSD / Afl. F
+
+Reden mag alleen ingevuld zijn bij verlies van Nederlandse
+nationaliteit
+
+R2799
+
+3
+
+F
+
+Een nationaliteit mag maximaal één keer voorkomen in het bericht
+
+2 Handeling: Vernietiging erkenning
+Berichtspecificatie
+
+Registreer erkenning (bhg_afsRegistreerErkenning)
+Stuurgegevens (communicatieID)
+
+Kardinaliteit
+1
+
+Zendende partij, Zendende systeem, Referentienummer, Datum/tijd verzending
+
+1
+
+Parameters (communicatieID)
+Verwerkingswijze
+
+Vernietiging erkenning
+
+(objecttype="AdministratieveHandeling", communicatieID)
+
+1
+
+Partij, Toelichting ontlening
+
+Gedeblokkeerde meldingen
+Gedeblokkeerde melding (objecttype="GedeblokkeerdeMelding", referentieID,
+
+0..1
+1..n
+
+communicatieID)
+Regel
+
+Bronnen
+
+1
+
+Bron (objecttype="AdministratieveHandelingBron", communicatieID)
+Document (objecttype="Document", communicatieID)
+
+1..n
+1
+
+Soort, Aktenummer, Omschrijving, Partij
+
+Acties
+
+1
+
+Verval ouder (objecttype="Actie", communicatieID)
+Bronnen
+
+1
+1
+
+Bron (objecttype="ActieBron", referentieID, communicatieID)
+Persoon (objecttype="Persoon", objectSleutel, communicatieID)
+Betrokkenheden
+Kind (objecttype="Betrokkenheid", objectSleutel, communicatieID)
+Familierechtelijke betrekking (objecttype="Relatie", objectSleutel,
+
+1..n
+1
+1
+1
+1
+
+communicatieID)
+
+Betrokkenheden
+Ouder (objecttype="Betrokkenheid", objectSleutel, communicatieID)
+Registratie geslachtsnaam/voornaam (objecttype="Actie", communicatieID)
+
+1
+1
+0..1
+
+Datum aanvang geldigheid
+
+Bronnen
+
+1
+
+Bron (objecttype="ActieBron", referentieID, communicatieID)
+Persoon (objecttype="Persoon", objectSleutel, communicatieID)
+Samengestelde naam (communicatieID)
+
+1..n
+1
+1
+
+Namenreeks?
+
+Voornamen
+Persoon \ Voornaam (objecttype="PersoonVoornaam", communicatieID)
+
+0..1
+1..n
+
+Volgnummer, Naam
+
+Geslachtsnaamcomponenten
+Persoon \ Geslachtsnaamcomponent
+(objecttype="PersoonGeslachtsnaamcomponent", communicatieID)
+
+1
+1
+
+Predicaat, Adellijke titel, Voorvoegsel, Scheidingsteken, Stam
+
+Registratie nationaliteit (objecttype="Actie", communicatieID)
+
+0..n
+
+Datum aanvang geldigheid
+
+Bronnen
+
+0..1
+
+Bron (objecttype="ActieBron", referentieID, communicatieID)
+
+1..n
+
+Persoon (objecttype="Persoon", objectSleutel, communicatieID)
+
+1
+
+Nationaliteiten
+
+1
+
+Nationaliteit (objecttype="PersoonNationaliteit", communicatieID)
+
+1
+
+Nationaliteit, Reden verkrijging
+
+Verval nationaliteit (objecttype="Actie", communicatieID)
+Bronnen
+
+0..n
+0..1
+
+Bron (objecttype="ActieBron", referentieID, communicatieID)
+
+1..n
+
+Persoon (objecttype="Persoon", objectSleutel, communicatieID)
+Nationaliteiten
+
+1
+1
+
+Nationaliteit (objecttype="PersoonNationaliteit", objectSleutel, communicatieID)
+
+1
+
+Autorisatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2489
+
+6
+
+F
+
+De administratieve handeling mag alleen ingediend worden door gemeente
+van geboorte of bijhoudingspartij
+
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1815
+
+4
+
+D
+
+Geen nationaliteit - ook geen onbekende - en ook geen indicatie staatloos
+aanwezig
+
+R1836
+
+7
+
+F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2616
+
+1
+
+F
+
+Er moeten precies twee ouders bij het kind geregistreerd staan
+
+R2623
+
+1
+
+W
+
+Waarschuwen als het kind de indicatie Bijzondere verblijfsrechtelijke positie
+heeft terwijl de ouder die niet vervalt deze indicatie niet heeft
+
+Gegevensvalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1848
+
+4
+
+D
+
+Registersoort moet geldig zijn voor soort document
+
+R1849
+
+4
+
+D
+
+Aktenummer verplicht bij Nederlandse registerakten en leeg bij andere
+documentsoorten
+
+R1850
+
+5
+
+F
+
+Uitsluitend indien een document geen Nederlandse registerakte is mag de
+omschrijving gevuld zijn
+
+R2428
+
+2
+
+F
+
+Een opgegeven gedeblokkeerde melding moet verwijzen naar een regel die
+als deblokkeerbaar is vastgelegd
+
+Integriteitsregels
+Code
+
+Versie Niveau Omschrijving
+
+R1605
+
+5
+
+F
+
+Soort document moet verwijzen naar bestaand stamgegeven
+
+R2235
+
+4
+
+F
+
+Partij in document moet verwijzen naar bestaande partij
+
+2.1
+
+Use case: Controleer inhoud
+
+Generieke regels voor deze use case
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1579
+
+19
+
+D
+
+Van een overleden persoon mag uitsluitend een beperkte set van gegevens
+worden bijgehouden
+
+R1580
+
+7
+
+F
+
+Een persoon mag niet worden bijgehouden als de reden van opschorting
+foutief is
+
+R1833
+
+7
+
+F
+
+De objectsleutel waarmee een persoon in het bericht wordt aangewezen
+moet geldig zijn
+
+R1835
+
+10
+
+F
+
+Objectsleutel in bijhouding moet verwijzen naar bestaand object in BRP van
+juiste type
+
+R1839
+
+3
+
+F
+
+Gedeblokkeerde meldingen moeten in verwerking daadwerkelijk optreden
+
+R2098
+
+6
+
+F
+
+Bijhouding geblokkeerd wegens verhuizing
+
+R2511
+
+3
+
+F
+
+Objectsleutel die verwijst naar relatie moet verwijzen naar relatie van juiste
+soort
+
+R2512
+
+3
+
+F
+
+Objectsleutel die verwijst naar betrokkenheid moet verwijzen naar
+betrokkenheid met de juiste rol
+
+R2536
+
+4
+
+F
+
+Minimaal één hoofdpersoon moet een ingezetene of overledene zijn
+
+R2626
+
+4
+
+W
+
+Waarschuwing bij bijhouding indien gegevens van een hoofdpersoon in
+onderzoek staan
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1838
+
+4
+
+F
+
+In een bijhouding moet ReferentieID verwijzen naar CommunicatieID in
+berichtelement van het juiste type.
+
+R2348
+
+1
+
+F
+
+Partij van de Administratieve handeling moet gelijk zijn aan de Zendende
+partij
+
+R2413
+
+3
+
+F
+
+Een toelichting ontlening is verplicht bij het deblokkeren van een melding
+
+2.2
+
+Use case: Controleer inhoud (actualisering)
+
+Generieke regels voor deze use case
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1606
+
+5
+
+D
+
+Brondocument moet geldig zijn voor de administratieve handeling en actie
+
+R2493
+
+10
+
+D
+
+Melding indien er een feitdatum op de persoonslijst staat die recenter dan of
+gelijk is aan de Peildatum, DAG en DEG van de Administratieve handeling.
+
+2.3
+
+Use case: Autorisatie administratieve handeling
+
+Generieke regels voor deze use case
+Autorisatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2106
+
+7
+
+F
+
+De administratieve handeling moet zijn toegestaan voor de
+bijhoudingsautorisatie
+
+R2115
+
+4
+
+F
+
+De bijhoudingsautorisatie mag niet geblokkeerd zijn
+
+R2247
+
+4
+
+F
+
+De toegang bijhoudingsautorisatie moet geldig zijn
+
+R2248
+
+4
+
+F
+
+De toegang bijhoudingsautorisatie mag niet geblokkeerd zijn
+
+R2250
+
+6
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij en rol
+bestaan
+
+R2251
+
+5
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en
+ondertekenaar bestaan
+
+R2252
+
+5
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en
+transporteur bestaan
+
+R2268
+
+2
+
+F
+
+De geautoriseerde partij moet een geldige partij zijn
+
+R2269
+
+2
+
+F
+
+De ondertekenaar moet een geldige partij zijn
+
+R2270
+
+2
+
+F
+
+De transporteur moet een geldige partij zijn
+
+R2271
+
+2
+
+F
+
+De combinatie partij met rol voor toegang bijhoudingsautorisatie moet geldig
+zijn
+
+R2299
+
+2
+
+F
+
+De bijhoudingsautorisatie moet geldig zijn
+
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R2343
+
+4
+
+2.4
+
+F
+
+Algemene foutmelding bij schending autorisatieregels
+
+Actie: Verval ouder
+
+Specifieke regels voor deze combinatie Handeling \ Actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1845
+
+6
+
+F
+
+In het bijhoudingsbericht gerelateerde objectsleutels en voorkomensleutels
+moeten verwijzen naar gerelateerde objecten en voorkomens in de BRP
+
+R2334
+
+3
+
+F
+
+Alleen een niet-vervallen voorkomen kan vervallen
+
+R2624
+
+1
+
+F
+
+Persoon waarvan het ouderschap met een kind komt te vervallen mag geen
+OUWKIG zijn
+
+Integriteitsregels
+Code
+
+Versie Vorm
+
+R1598
+
+6
+
+XSD / Afl. F
+
+Rol (betrokkenheid in de relatie) moet verwijzen naar bestaand
+stamgegeven
+
+R1631
+
+8
+
+XSD / Afl. F
+
+Soort relatie moet verwijzen naar een bestaand stamgegeven
+
+2.5
+
+Niveau Omschrijving
+
+Actie: Registratie geslachtsnaam/voornaam
+
+Specifieke regels voor deze combinatie Handeling \ Actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1572
+
+12
+
+W
+
+Waarschuwing indien een geslachtsnaamwijziging gevolgen heeft voor
+kind(eren)
+
+R1790
+
+12
+
+W
+
+Melding dat reisdocument ongeldig wordt na wijziging personalia, wijziging
+Burgerservicenummer of verkrijging of verlies Nederlandse nationaliteit
+
+R2437
+
+3
+
+W
+
+Waarschuwing indien de gerelateerde gegevens van een persoon wijzigen en
+deze persoon voorkomt als een pseudo-persoon op de persoonslijst van een
+ander.
+
+R2620
+
+1
+
+F
+
+Datum aanvang geldigheid van de actie moet gelijk zijn aan datum aanvang
+geldigheid van het te vervallen ouderschap
+
+R2622
+
+1
+
+F
+
+Datum aanvang geldigheid van de actie moet gelijk zijn aan de datum
+aanvang geldigheid van de actuele niet-beëindigde voorkomens van
+voornaam, geslachtsnaamcomponent en samengestelde naam
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2471
+
+2
+
+D
+
+Voornaam mag alleen ingevuld worden indien de namenreeks indicator
+wijzigt naar "Nee"
+
+Gegevensvalidatieregels
+Code
+
+Versie Vorm
+
+R1571
+
+6
+
+Niveau Omschrijving
+
+XSD / Afl. F
+
+Er mag slechts één voorkomen van geslachtsnaamcomponent
+aanwezig zijn
+
+R1807
+
+6
+
+F
+
+Lengte van de voornamen mag bij elkaar opgeteld niet langer dan
+200 karakters zijn
+
+R1809
+
+9
+
+F
+
+Namenreeks en Voornaam sluiten elkaar uit
+
+R1919
+
+3
+
+F
+
+Voornaam mag geen spatie bevatten.
+
+R1920
+
+4
+
+F
+
+Volgnummers voornamen moeten uniek en aaneensluitend zijn
+
+R2161
+
+4
+
+F
+
+Combinatie scheidingsteken en voorvoegsel in
+geslachtsnaamcomponent moet voorkomen als stamgegeven
+
+R2163
+
+5
+
+F
+
+Predicaat en adellijke titel in geslachtsnaamcomponent mogen niet
+beide een waarde hebben
+
+R2173
+
+3
+
+F
+
+Namenreeks en voorvoegsel in geslachtsnaamcomponent mogen
+niet beide een waarde hebben
+
+R2228
+
+2
+
+F
+
+Voorvoegsel en scheidingsteken in geslachtsnaamcomponent
+moeten beide ingevuld zijn of beide niet
+
+R2354
+
+8
+
+F
+
+Datum aanvang geldigheid van de actie mag niet in de toekomst
+liggen
+
+R2869
+
+1
+
+D
+
+Persoon zonder Nederlandse nationaliteit mag geen predicaat en
+adellijke titel in geslachtsnaamcomponent hebben
+
+Integriteitsregels
+Code
+
+Versie Vorm
+
+Niveau Omschrijving
+
+R1274
+
+6
+
+F
+
+R2156
+
+3
+
+XSD / Afl. F
+
+Adellijke titel in geslachtsnaamcomponent moet verwijzen naar
+bestaand stamgegeven
+
+R2157
+
+4
+
+XSD / Afl. F
+
+Predicaat in geslachtsnaamcomponent moet verwijzen naar
+bestaand stamgegeven
+
+R2166
+
+4
+
+XSD / Afl. F
+
+Stam in geslachtsnaamcomponent is verplicht
+
+R2169
+
+4
+
+XSD / Afl. F
+
+Namenreeks? in samengestelde naam is verplicht
+
+Datum moet een geldige kalenderdatum zijn
+
+Algemene regels voor deze actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1697
+
+7
+
+D
+
+Persoon met de Nederlandse nationaliteit moet een voornaam hebben.
+
+R1731
+
+8
+
+D
+
+Kind moet een predicaat of adellijke titel hebben als de vader met identieke
+geslachtsnaam dat ook heeft
+
+R2543
+
+5
+
+D
+
+Kind mag alleen het predicaat of de adellijke titel van de vader voeren, als de
+geslachtsnaam gelijk is aan die van de vader
+
+R2736
+
+1
+
+W
+
+Waarschuwing dat de naamswijziging niet doorwerkt in de Samengestelde
+naam en het Naamgebruik
+
+R2737
+
+3
+
+W
+
+Waarschuwing dat de naamswijziging niet doorwerkt in het Naamgebruik
+
+R2738
+
+2
+
+W
+
+Waarschuwing: Naamswijziging hoofdpersoon werkt niet door bij (ex)partner
+
+R2740
+
+2
+
+W
+
+Waarschuwing dat een gewijzigde Samengestelde naam niet doorwerkt in het
+Naamgebruik
+
+R2746
+
+1
+
+F
+
+Datum aanvang geldigheid van het gewijzigde Geslachtsnaamcomponent
+moet recenter zijn dan de Datum aanvang geldigheid van het beëindigde
+voorkomen van de Geslachtsnaamcomponent en Samengestelde naam
+
+R2747
+
+1
+
+F
+
+Datum aanvang geldigheid van de gewijzigde Voornaam moet recenter zijn
+dan de Datum aanvang geldigheid van het beëindigde voorkomen van de
+Voornaam en Samengestelde naam
+
+R2748
+
+1
+
+F
+
+Datum aanvang geldigheid van de gewijzigde Samengestelde naam moet
+recenter zijn dan de Datum aanvang geldigheid van het beëindigde
+voorkomen van de Samengestelde naam
+
+2.6
+
+Actie: Registratie nationaliteit
+
+Specifieke regels voor deze combinatie Handeling \ Actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1695
+
+5
+
+D
+
+Door kind te verkrijgen nationaliteit moet bestaan bij ouder
+
+R2582
+
+2
+
+W
+
+Waarschuwing indien het verkrijgen of het verliezen van een nationaliteit
+gevolgen heeft voor kind(eren)
+
+R2620
+
+1
+
+F
+
+Datum aanvang geldigheid van de actie moet gelijk zijn aan datum aanvang
+geldigheid van het te vervallen ouderschap
+
+Gegevensvalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1707
+
+6
+
+D
+
+Nationaliteit moet verwijzen naar geldig stamgegeven
+
+R1708
+
+3
+
+D
+
+Reden verkrijging moet verwijzen naar geldig stamgegeven
+
+R2354
+
+8
+
+F
+
+Datum aanvang geldigheid van de actie mag niet in de toekomst liggen
+
+Integriteitsregels
+Code
+
+Versie Niveau Omschrijving
+
+R1274
+
+6
+
+F
+
+Datum moet een geldige kalenderdatum zijn
+
+R1685
+
+5
+
+F
+
+Nationaliteit moet verwijzen naar bestaand stamgegeven
+
+R1686
+
+3
+
+F
+
+Reden verkrijging moet verwijzen naar bestaand stamgegeven
+
+Algemene regels voor deze actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1692
+
+3
+
+F
+
+Een te verkrijgen nationaliteit mag nog niet voorkomen bij persoon
+
+R1696
+
+11
+
+D
+
+Persoon met Nederlandse nationaliteit mag geen namenreeks hebben
+
+R1697
+
+7
+
+D
+
+Persoon met de Nederlandse nationaliteit moet een voornaam hebben.
+
+R1790
+
+12
+
+W
+
+Melding dat reisdocument ongeldig wordt na wijziging personalia, wijziging
+Burgerservicenummer of verkrijging of verlies Nederlandse nationaliteit
+
+R2011
+
+3
+
+F
+
+Voor een persoon met de Nederlandse nationaliteit wordt uitsluitend deze
+nationaliteit bijgehouden
+
+R2643
+
+1
+
+F
+
+Bij onbeëindigde staatloosheid is registratie nationaliteit uitsluitend
+toegestaan als de DAG daarvan na de DAG van staatloos ligt
+
+R2644
+
+1
+
+F
+
+Bij beëindigde staatloosheid is registratie nationaliteit uitsluitend toegestaan
+als de DAG daarvan op of na de DEG van staatloos ligt
+
+R2870
+
+1
+
+F
+
+Bij onbeëindigde 'Behandeld als Nederlander' is registratie nationaliteit
+uitsluitend toegestaan als de DAG daarvan na de DAG van 'Behandeld als
+Nederlander' ligt
+
+R2871
+
+1
+
+F
+
+Bij onbeëindigde 'Vastgesteld niet-Nederlander' is registratie nationaliteit
+uitsluitend toegestaan als de DAG daarvan na de DAG van 'Vastgesteld nietNederlander' ligt
+
+R2872
+
+1
+
+F
+
+Bij beëindigde 'Behandeld als Nederlander' is registratie nationaliteit
+uitsluitend toegestaan als de DAG daarvan op of na de DEG van 'Behandeld
+als Nederlander' ligt
+
+R2873
+
+1
+
+F
+
+Bij beëindigde 'Vastgesteld niet-Nederlander' is registratie nationaliteit
+uitsluitend toegestaan als de DAG daarvan op of na de DEG van 'Vastgesteld
+niet-Nederlander' ligt
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1688
+
+4
+
+F
+
+Reden verplicht bij verkrijging Nederlandse nationaliteit
+
+R2544
+
+3
+
+F
+
+Reden verkrijging mag alleen gevuld zijn bij verkrijging van de Nederlandse
+nationaliteit
+
+2.7
+
+Actie: Verval nationaliteit
+
+Specifieke regels voor deze combinatie Handeling \ Actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R2621
+
+1
+
+F
+
+Datum aanvang geldigheid van de het te vervallen voorkomen moet groter
+dan of gelijk zijn aan datum aanvang geldigheid van het te vervallen
+ouderschap
+
+Algemene regels voor deze actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1790
+
+12
+
+W
+
+Melding dat reisdocument ongeldig wordt na wijziging personalia, wijziging
+Burgerservicenummer of verkrijging of verlies Nederlandse nationaliteit
+
+R1845
+
+6
+
+F
+
+In het bijhoudingsbericht gerelateerde objectsleutels en voorkomensleutels
+moeten verwijzen naar gerelateerde objecten en voorkomens in de BRP
+
+R2334
+
+3
+
+F
+
+Alleen een niet-vervallen voorkomen kan vervallen
+
+3 Uitwerking regels
+R1273
+Datum (deels) onbekend
+Definitie:
+
+Een Datum evt. (deels) onbekend heeft het formaat 'jjjj-mm-dd'. Als een datum
+deels onbekend is dan moet:
+• indien dag onbekend is voor dag ('dd') de waarde 00 zijn ingevuld;
+• indien maand onbekend is voor zowel dag ('dd') als maand ('mm') de waarde
+00 zijn ingevuld;
+• indien jaar onbekend is zowel dag ('dd') als maand ('mm') de waarde 00 zijn
+ingevuld en voor jaar ('jjjj') de waarde 0000.
+
+Versie:
+
+7
+
+Soort:
+
+Definitieregel
+
+R1274
+Datum moet een geldige kalenderdatum zijn
+Definitie:
+
+Indien de datum een 'Volledig bekende datum' (R2547) betreft moet deze in de
+combinatie van jaar, maand en dag geldig zijn binnen de Gregoriaanse kalender.
+Toelichting:
+Omdat de XSD afdwingt dat een datum met het attribuuttype Datum altijd een
+'Volledig bekende datum' (R2547) betreft moet deze altijd in de combinatie van
+jaar, maand en dag geldig zijn binnen de Gregoriaanse kalender.
+De XSD dwingt voor een datum met het attribuuttype Datum evt. (deels) onbekend
+af dat deze voldoet aan de definitie van Datum (deels) onbekend (R1273).
+
+Versie:
+
+6
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven datum is geen geldige kalenderdatum.
+
+R1278
+Hoofdactie
+Definitie:
+
+De eerste Actie die voorkomt binnen een Administratieve handeling wordt de
+Hoofdactie genoemd.
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1279
+Nevenactie
+Definitie:
+
+Een Actie die binnen een Administratieve handeling niet de Hoofdactie (R1278) is,
+wordt een "Nevenactie" genoemd.
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1280
+'Verwantschap'
+Definitie:
+
+Twee Persoonen zijn verwant (op een zekere peildatum) als ze (op die peildatum):
+1. een Familierechtelijke betrekking hebben* of
+2. beide betrokken zijn in verschillende Familierechtelijke betrekkingen waarbij in
+beide eenzelfde derde Persoon is betrokken.
+
+(*) Twee personen in een Familierechtelijke betrekking die beiden als Ouder zijn
+betrokken zijn niet verwant, dat zijn immers 'gewoon' de ouders van een Kind.
+Toelichting:
+1. Een voorbeeld bij punt 2 is een Kind en Oma (moeder van de moeder van het
+kind). Deze personen zijn verwant, omdat zowel Kind als Oma betrokken zijn in
+verschillende Familierechtelijke betrekkingen waarbij in beide de moeder van
+het Kind is betrokken.
+2. Pseudo-personen worden in deze regel buiten beschouwing gelaten.
+Versie:
+
+6
+
+Soort:
+
+Definitieregel
+
+R1284
+Geldig voorkomen stamgegeven op peildatum
+Definitie:
+
+Een Stamgegeven is geldig op een zekere peildatum, indien aan de volgende
+voorwaarden is voldaan:
+1.
+2.
+
+indien gevuld moet DatumAanvangGeldigheid van Stamgegeven <= peildatum;
+indien gevuld moet DatumEindeGeldigheid van Stamgegeven > peildatum.
+
+Als er sprake is van Datum (deels) onbekend (R1273) dan moet de R1283 Vergelijken (partiële) datums streng uitgevoerd worden.
+Toelichting
+• het Stamgegeven is geldig op elke peildatum indien DatumAanvangGeldigheid
+en DatumEindeGeldigheid leeg zijn.
+• Voor de stamtabel Partij geldt dat Partij.Datum ingang en Partij.Datum einde
+ipv respectievelijk DatumAanvangGeldigheid en DatumEindeGeldigheid gebruikt
+moeten worden.
+• Voor de stamtabel Partij \ Rol geldt dat Partij \ Rol.Datum ingang en Partij \
+Rol.Datum einde ipv respectievelijk DatumAanvangGeldigheid en
+DatumEindeGeldigheid gebruikt moeten worden.
+Versie:
+
+7
+
+Soort:
+
+Definitieregel
+
+R1287
+Hoofdpersoon
+Definitie:
+
+De Persoon wiens gegevens worden gewijzigd in de Hoofdactie (R1278) wordt de
+Hoofdpersoon genoemd.
+Opmerkingen:
+1. In gevallen dat de Hoofdactie (R1278) slechts wijzigingen op gegevens van 1
+Persoon bevat, is dat de Hoofdpersoon.
+2. In gevallen dat de Hoofdactie (R1278) wijzigingen op gegevens van meerdere
+personen bevat, gaat het om de volgende situaties met de volgende
+Hoofdpersonen:
+a. een 'Huwelijk' (H) of 'Geregistreerd partnerschap' (G): als beide partners
+'Ingeschrevene' (I) zijn, zijn beide partners Hoofdpersoon. Als een van beide
+partners 'Pseudo-persoon' (P) is, is de andere partner (de 'Ingeschrevene' (I)) de
+Hoofdpersoon.
+b. een 'Familierechtelijke betrekking' (F): hier is de Persoon met de rol 'Kind' (K)
+altijd de Hoofdpersoon, tenzij er sprake is van een bijschrijving van een Soort
+
+Persoon 'Pseudo-persoon' (P) in de rol van 'Kind' (K) bij een 'Ingeschrevene' (I) in
+de rol van 'Ouder' (O), dan is de Persoon met de rol 'Ouder' (O) de Hoofdpersoon.
+3. Een Persoon in de soort 'Pseudo-persoon' (P) kan dus nooit een Hoofdpersoon
+zijn!
+4. Een Persoon waarvan de gewijzigde gegevens slechts voorkomen als gegeven
+van een gerelateerde Persoon, kan nooit een Hoofdpersoon zijn.
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R1325
+'Datum aanvang volledige opschorting'
+Definitie:
+
+De 'Datum aanvang volledige opschorting' (R1325) is de datum van het begin van
+de actuele periode dat de bijhouding van een Persoon aaneengesloten 'Volledig
+opgeschort' (R2212) is. Dit is dus de Datum aanvang geldigheid van het oudste niet
+vervallen voorkomen van Persoon.Bijhouding in deze periode.
+De 'Datum aanvang volledige opschorting' (R1325) kan (deels) onbekend zijn.
+Toelichting:
+Omdat de datum van overlijden van een persoon (deels) onbekend kan zijn kan ook
+de 'Datum aanvang volledige opschorting' (R1325) (deels) onbekend zijn.
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1466
+Gemeente geboorte moet geldig zijn op datum geboorte
+Definitie:
+
+Als de Persoon.Gemeente geboorte is gevuld, dan moet deze op Persoon.Datum
+geboorte verwijzen naar een Geldig voorkomen stamgegeven op peildatum (R1284)
+in de Stamtabel Gemeente.
+
+Versie:
+
+7
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Gemeente geboorte is niet geldig op de opgegeven geboortedatum.
+
+R1467
+Land/gebied geboorte moet geldig zijn op datum geboorte
+Definitie:
+
+Als het Persoon.Land/gebied geboorte is gevuld, dan moet deze op Persoon.Datum
+geboorte verwijzen naar een Geldig voorkomen stamgegeven op peildatum (R1284)
+in Stamtabel Land/gebied.
+
+Versie:
+
+9
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Land/gebied geboorte is niet geldig op de opgegeven geboortedatum.
+
+R1468
+Datum geboorte van het kind moet na de datum geboorte van de ouder(s) liggen
+Definitie:
+
+Persoon.Datum geboorte van een Kind moet na de Persoon.Datum geboorte van
+elke Ouder liggen.
+
+Versie:
+
+3
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Datum geboorte van het kind moet na datum geboorte van de ouder(s) liggen.
+
+R1469
+Datum geboorte mag niet onbekend zijn bij geboorte in Nederland
+Definitie:
+
+Als Persoon.Land/gebied geboorte een waarde heeft die verwijst naar "Nederland"
+(Land/gebied) heeft, dan mag de Persoon.Datum geboorte niet Datum (deels)
+onbekend (R1273) zijn.
+
+Versie:
+
+6
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+De geboortedatum mag geen (deels) onbekende datum zijn als de geboorte in
+Nederland heeft plaatsgevonden.
+
+R1540
+'Inhoudelijke groep'
+Definitie:
+
+Inhoudelijke groepen zijn groepen van de Persoonslijst die bij de Persoon horen. Dit
+zijn alle groepen onder Objecttypen Persoon, Persoon \ Adres, Persoon \
+Geslachtsnaamcomponent, Persoon \ Indicatie, Persoon \ Nationaliteit, Persoon \
+Reisdocument, Persoon \ Verificatie, Persoon \ Verstrekkingsbeperking, Persoon \
+Voornaam, Persoon \ Buitenlands persoonsnummer, Relatie (soorten Huwelijk en
+Geregistreerd partnerschap) en Betrokkenheid (rol Ouder).
+(Dit zijn dus de groepen uit het persoonsdeel van het bericht over de persoon, in
+tegenstelling tot de groepen uit bijvoorbeeld het verantwoordingsdeel en het
+onderzoeksdeel)
+
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R1541
+'Verantwoordingsgroep'
+Definitie:
+
+Verantwoordingsgroepen zijn groepen van de Persoonslijst die de verantwoording
+van de 'Inhoudelijke groep' (R1540) vormen. Dit zijn groepen onder de Objecttypen
+Administratieve handeling, Actie, Actie \ Bron, Document, Gedeblokkeerde melding
+en de koppelingen tussen die Objecttypen.
+(Dit zijn dus de groepen uit het verantwoordingsdeel van het bericht over de
+persoon)
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1543
+'Onderzoeksgroep'
+Definitie:
+
+Een Onderzoeksgroep is een groep die gegevens bevat omtrent onderzoeken op bij
+de Persoon aanwezige of ontbrekende gegevens. We hebben het hier altijd over de
+aan de Persoon gerelateerde Onderzoeken. Dus de Persoon \ Onderzoek gegevens,
+die direct gerelateerd zijn aan de uitgangspersoon.
+Voor het 'Onderzoeksdeel' worden de volgende begrippen gehanteerd:
+• Onderzoeksdeel: het deel binnen het bericht, dat informatie bevat over de
+onderzoeken.
+• Onderzoek: Binnen het onderzoeksdeel komen de 'Onderzoeken' voor, die de
+o.a. de Onderzoek.Datum aanvang, Onderzoek.Status en eventueel
+Onderzoek.Datum einde van het onderzoek bevatten
+
+•
+
+Gegeven in onderzoek: Als onderdeel van 'Onderzoek', zijn de in het onderzoek
+betrokken gegevens vastgelegd in Gegeven in onderzoek. Deze geeft aan
+welke gegevens (Gegeven in onderzoek.Element en optioneel: Gegeven in
+onderzoek.Object sleutel gegeven en Gegeven in onderzoek.Voorkomen sleutel
+gegeven) in het Onderzoek zijn betrokken.
+Persoon \ Adres.Persoon aangetroffen op adres? valt ook onder het
+onderzoekdeel. Bijzonder aan dit attribuut is dat deze geen onderdeel is van
+Onderzoek of Gegeven in onderzoek, maar van Persoon \ Adres.
+
+•
+
+Een onderzoeksgroep gedraagt zich verder hetzelfde als een Inhoudelijke groep, er
+is dus sprake van een afgeleid administratief en verantwoording d.m.v. een
+administratieve handeling met acties en bronnen.
+(Het betreft hier de groepen uit het Onderzoeksdeel van het bericht, deze hebben
+betrekking op de onderzoeken op persoonsgegevens, in tegenstelling tot de
+groepen uit bijvoorbeeld het Verantwoordingsdeel en het Persoonsdeel)
+Versie:
+
+4
+
+Soort:
+
+Definitieregel
+
+R1569
+Geslachtsaanduiding moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+Als de Persoon.Geslachtsaanduiding is gevuld, dan moet deze verwijzen naar een
+voorkomen in het stamgegeven Geslachtsaanduiding.
+
+Versie:
+
+6
+
+Soort:
+
+Integriteitsregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven geslachtsaanduiding bestaat niet.
+
+R1571
+Er mag slechts één voorkomen van geslachtsnaamcomponent aanwezig zijn
+Definitie:
+
+Er mag slechts 1 voorkomen van Persoon \ Geslachtsnaamcomponent aanwezig
+zijn. Het Persoon \ Geslachtsnaamcomponent.Volgnummer heeft (daardoor) altijd
+de waarde 1.
+Toelichting
+De GBA kent een beperkte vastlegging van naamgegevens. Zolang de BRP en de
+GBA naast elkaar bestaan - en/of zolang akten nauwkeuriger registratie nog niet
+ondersteunen - controleren de centrale voorzieningen dat het gebruik van de
+mogelijkheden van de BRP beperkt blijft tot een enkel voorkomen van
+geslachtsnaamcomponent.
+Tot ingebruikname (geplande aanpassing in BOP stap 5) is er slechts 1
+Geslachtsnaamcomponent geldig/mogelijk.
+
+Versie:
+
+6
+
+Soort:
+
+Gegevensvalidatieregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Er is slechts één voorkomen van geslachtsnaamcomponent toegestaan.
+
+R1572
+Waarschuwing indien een geslachtsnaamwijziging gevolgen heeft voor kind(eren)
+Definitie:
+
+Er moet een waarschuwing getoond worden indien een wijziging plaatsvindt op de
+groep Persoon \ Geslachtsnaamcomponent en deze Persoon heeft actuele Kinderen.
+
+Ontwerpbeslissingen:
+1. De regel zou nader geprecisieerd kunnen worden t.a.v. adellijke titels en/of
+predicaten, echter gezien het uitzonderlijke karakter daarvan wordt hier van
+afgezien.
+2. De regel controleert op basis van de actuele gegevens of er kinderen zijn. Dit
+betekent dat er geen rekening wordt gehouden met kinderen die (een deel
+van) de periode waarop naamswijziging betrekking heeft nog wel kind van deze
+persoon was. Dit is het geval als er op een later moment een adoptie heeft
+plaatsgevonden waardoor het kind andere ouders heeft gekregen. Omdat het
+een waarschuwing betreft en er zelden sprake is van deze materieel beeindigde
+kind-betrokkenheden, is er vanaf gezien om de materiele periode van alle
+kinderen af te zetten tegen de materiele periode van de gewijzigde
+geslachtsnaamcomponent.
+Versie:
+
+12
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+De geslachtsnaamwijziging heeft mogelijk gevolgen voor kind(eren).
+
+R1579
+Van een overleden persoon mag uitsluitend een beperkte set van gegevens worden
+bijgehouden
+Definitie:
+
+Indien de Persoon Hoofdpersoon (R1287) is en de Persoon.Nadere bijhoudingsaard
+'Overleden' (O) is mag van deze Persoon uitsluitend het volgende worden
+bijgehouden:
+• elke "Groep" van de 'Volledig persoon' (R1998) waarvoor Materiële historie
+wordt bijgehouden, waarvan de Datum aanvang geldigheid voor de 'Datum
+aanvang volledige opschorting' (R1325) ligt.
+• elke Relatie waarbij deze persoon een Betrokkenheid heeft waarvan de
+Relatie.Datum aanvang voor de 'Datum aanvang volledige opschorting'
+(R1325) ligt, indien de aanvang van de relatie wordt geregistreerd,
+• elke Relatie waarbij deze persoon een Betrokkenheid heeft waarvan de
+Relatie.Datum einde voor de 'Datum aanvang volledige opschorting' (R1325)
+ligt, indien het einde van de relatie wordt geregistreerd.
+• De groep Persoon.Verblijfsrecht indien de Persoon.Datum aanvang
+verblijfsrecht voor de 'Datum aanvang volledige opschorting' (R1325) ligt.
+• De groep Persoon.Bijhouding indien het Wijziging gemeente infrastructureel bij
+overledene of Correctie bijhouding betreft.
+• Onderzoeksgegevens: Onderzoek en Gegeven in onderzoek.
+• Groep Persoon.Vastgesteld niet Nederlander
+• Persoon \ Nationaliteit
+
+Versie:
+
+19
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+De aanvangsdatum van de bijhouding ligt ná overlijdensdatum van de persoon en
+kan daarom niet meer worden bijgehouden.
+
+R1580
+Een persoon mag niet worden bijgehouden als de reden van opschorting foutief is
+Definitie:
+
+Indien de Persoon.Nadere bijhoudingsaard 'Fout' (F) of 'Gewist' (W) is mogen van
+deze Persoon geen gegevens worden bijgehouden.
+
+Opmerking: Over "Gewist" (code W) wordt verder niet gesproken in de
+meldingstekst omdat er over deze nadere bijhoudingsaard niets gecommuniceerd
+wordt in het LO. Het betreft een 'technische' nadere bijhoudingsaard.
+Versie:
+
+7
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Een persoon mag niet worden bijgehouden als de reden van opschorting foutief is.
+
+R1585
+Het administratienummer moet voldoen aan het voorschrift
+Definitie:
+
+De cijfers (v.l.n.r.) a[0] t/m a[9] van het Administratienummer moeten voldoen aan
+het volgende voorschrift:
+1.
+2.
+3.
+4.
+
+a[0] <> 0
+a[i] <> a[i+1]
+a[0]+a[1]+.+a[9] gedeeld door 11 geeft rest 0 of 5
+(1*a[0])+(2*a[1])+(4*a[2])+.+(512*a[9]) is deelbaar door 11
+
+Versie:
+
+7
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het opgegeven administratienummer is niet geldig.
+
+R1587
+Het burgerservicenummer moet voldoen aan het voorschrift
+Definitie:
+
+De cijfers (v.l.n.r.) s[0] t/m s[8] van het Burgerservicenummer, moeten voldoen
+aan het voorschrift dat:
+1.
+
+(9*s[0])+(8*s[1])+(7*s[2])+...+(2*s[7]) - (1*s[8]) deelbaar is door 11 (lees:
+geen rest heeft).
+
+Versie:
+
+7
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het opgegeven burgerservicenummer is niet geldig.
+
+R1598
+Rol (betrokkenheid in de relatie) moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+In de groep Betrokkenheid.Identiteit van Betrokkenheid moet de waarde van
+Betrokkenheid.Rol voorkomen in Stamgegeven Soort betrokkenheid.
+Toelichting
+In een bericht geeft de naam van een XML-element de betrokkenheid aan. Deze
+verwijst (impliciet) naar de (naam van de) rol van het stamgegeven.
+
+Versie:
+
+6
+
+Soort:
+
+Integriteitsregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Opgegeven Rol code &Rol is geen bestaand stamgegeven.
+
+R1605
+
+Soort document moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+In de groep Document.Identiteit moet de waarde van Document.Soort voorkomen
+in "Stamgegeven" Soort document.
+
+Versie:
+
+5
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het opgegeven soort document is geen bestaand stamgegeven.
+
+R1606
+Brondocument moet geldig zijn voor de administratieve handeling en actie
+Definitie:
+
+Voor elk Document dat is geregistreerd bij een Actie geldt dat het Document.Soort
+moet behoren tot de "Soorten document" die zijn toegestaan bij de combinatie van
+het Actie.Soort en het Administratieve handeling.Soort waartoe de Actie behoort.
+Deze controle wordt in de BMR ondersteund door het objecttype Soort actie \
+Brongebruik. Deze kent de volgende attributen:
+• Soort actie \ Brongebruik.Soort actie
+• Soort actie \ Brongebruik.Soort administratieve handeling
+• Soort actie \ Brongebruik.Soort document
+Dit objecttype geeft aan welk Soort actie \ Brongebruik.Soort document is
+toegestaan bij het gebruik van de Soort actie \ Brongebruik.Soort actie in
+combinatie met Soort actie \ Brongebruik.Soort administratieve handeling.
+Toelichting
+Deze regel dient niet te worden uitgevoerd bij:
+• correcties
+• actualisering van Persoon \ Adres, Onderzoek en Gegeven in onderzoek
+
+Versie:
+
+5
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Het bij de actie opgegeven brondocument is niet toegestaan voor deze
+administratieve handeling.
+
+R1625
+De groepen geslachtsaanduiding, geboorte en samengestelde naam zijn verplicht voor een
+pseudo-persoon
+Definitie:
+
+Voor een Persoon die in het Bericht niet wordt aangewezen met een objectsleutel
+(een 'Pseudo-persoon' (P) dus) zijn de groepen Persoon.Geslachtsaanduiding,
+Persoon.Geboorte en Persoon.Samengestelde naam verplicht.
+
+Versie:
+
+14
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De groepen geslachtsaanduiding, geboorte en samengestelde naam zijn verplicht
+voor een pseudo-persoon.
+
+R1630
+Persoon is hoogstens één keer betrokken in dezelfde relatie
+Definitie:
+
+Een Persoon mag in één en dezelfde Relatie ten hoogste één Betrokkenheid hebben.
+Opmerking:
+
+Met deze regel wordt bedoeld dat een persoon binnen dezelfde relatie maar 1x
+betrokken mag zijn. De scope van de regel is dus 1 relatie. In een FRB kun je niet
+zowel als kind als als ouder betrokken zijn. En voor HGP zegt deze regel dat iemand
+niet met zichzelf getrouwd/partnerschap mag zijn/hebben.
+Versie:
+
+3
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Een persoon mag ten hoogste één keer betrokken zijn binnen een relatie.
+
+R1631
+Soort relatie moet verwijzen naar een bestaand stamgegeven
+Definitie:
+
+In de groep Relatie.Identiteit van een Relatie moet het attribuut Relatie.Soort
+verwijzen naar een bestaande waarde in Soort relatie.
+Toelichting
+In een bericht geeft de naam van een XML-element de soort relatie aan. Deze
+verwijst (impliciet) naar de (naam van de) soort relatie van het stamgegeven.
+
+Versie:
+
+8
+
+Soort:
+
+Integriteitsregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Soort relatie komt niet voor als stamgegeven.
+
+R1649
+Land/gebied geboorte moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+Het Persoon.Land/gebied geboorte moet voorkomen in Stamgegeven Land/gebied.
+
+Versie:
+
+5
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het opgegeven land/gebied geboorte is geen bestaand stamgegeven.
+
+R1658
+Datum einde geldigheid van de actie moet op of na datum aanvang geldigheid liggen
+Definitie:
+
+Actie.Datum einde geldigheid >= Datum aanvang geldigheid van de
+overeenkomstige groep.
+
+Versie:
+
+6
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Datum einde geldigheid dient op of na datum aanvang geldigheid te liggen.
+
+R1672
+Voorvoegsel en scheidingsteken moeten beide ingevuld zijn of beide niet
+Definitie:
+
+Het Persoon.Scheidingsteken in de groep Persoon.Samengestelde naam moet een
+waarde hebben als ook Persoon.Voorvoegsel een waarde heeft, anders mag
+Persoon.Scheidingsteken geen waarde hebben.
+
+Versie:
+
+5
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Alleen een voorvoegsel of alleen een scheidingsteken opgeven is niet toegestaan.
+
+R1673
+Predicaat en adellijke titel in samengestelde naam mogen niet beide een waarde hebben
+Definitie:
+
+Het Persoon.Predicaat en de Persoon.Adellijke titel mogen niet beide een waarde
+hebben.
+
+Versie:
+
+7
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Predicaat en adellijke titel in samengestelde naam mogen niet beide een waarde
+hebben.
+
+R1674
+Adellijke titel in samengestelde naam moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+Als de Persoon.Adellijke titel is gevuld, dan moet deze verwijzen naar een
+voorkomen in het stamgegeven Adellijke titel.
+
+Versie:
+
+6
+
+Soort:
+
+Integriteitsregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven adellijke titel in samengestelde naam is geen bestaand
+stamgegeven.
+
+R1675
+Predicaat in samengestelde naam moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+Als de Persoon.Predicaat is gevuld, dan moet deze verwijzen naar een voorkomen
+in het stamgegeven Predicaat.
+
+Versie:
+
+6
+
+Soort:
+
+Integriteitsregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het opgegeven predicaat in samengestelde naam is geen bestaand stamgegeven.
+
+R1676
+Combinatie scheidingsteken en voorvoegsel in samengestelde naam moet voorkomen als
+stamgegeven
+Definitie:
+
+De ingevulde combinatie van Persoon.Scheidingsteken én Persoon.Voorvoegsel in
+de groep Persoon.Samengestelde naam moet voorkomen in Stamgegeven
+Voorvoegsel.
+
+Versie:
+
+5
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven combinatie scheidingsteken en voorvoegsel in samengestelde naam
+is geen bestaand stamgegeven.
+
+R1685
+Nationaliteit moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+Persoon \ Nationaliteit.Nationaliteit moet verwijzen naar een stamgegeven in
+Nationaliteit.
+
+Versie:
+
+5
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven nationaliteit is geen bestaand stamgegeven.
+
+R1686
+Reden verkrijging moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+Persoon \ Nationaliteit.Reden verkrijging moet voorkomen in Stamgegeven Reden
+verkrijging NL nationaliteit.
+
+Versie:
+
+3
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven reden verkrijging is geen bestaand stamgegeven.
+
+R1687
+Reden verlies moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+Persoon \ Nationaliteit.Reden verlies moet voorkomen in Stamgegeven Reden
+verlies NL nationaliteit.
+
+Versie:
+
+3
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven reden verlies is geen bestaand stamgegeven.
+
+R1688
+Reden verplicht bij verkrijging Nederlandse nationaliteit
+Definitie:
+
+Persoon \ Nationaliteit.Reden verkrijging moet een waarde hebben als Persoon \
+Nationaliteit.Nationaliteit verwijst naar "Nederlandse".
+
+Versie:
+
+4
+
+Soort:
+
+Invoervalidatieregel
+
+Verschijningsvorm: Nadere specificatie per handeling
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De reden verkrijging is verplicht op te geven bij een Nederlandse nationaliteit.
+
+R1689
+Reden verplicht bij verlies van Nederlandse nationaliteit
+Definitie:
+
+Persoon \ Nationaliteit.Reden verlies moet een waarde hebben als Persoon \
+Nationaliteit.Nationaliteit verwijst naar "Nederlandse" en Datum einde geldigheid
+gevuld is.
+
+Versie:
+
+5
+
+Soort:
+
+Invoervalidatieregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De reden verlies is verplicht op te geven bij beëindiging van de Nederlandse
+nationaliteit.
+
+R1692
+Een te verkrijgen nationaliteit mag nog niet voorkomen bij persoon
+Definitie:
+
+Een Persoon \ Nationaliteit.Identiteit mag niet worden geregistreerd als op Datum
+aanvang geldigheid bij betrokken Persoon die Persoon \ Nationaliteit.Identiteit op
+Datum aanvang geldigheid reeds voorkomt.
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven nationaliteit mag niet al bestaan bij deze persoon.
+
+R1695
+Door kind te verkrijgen nationaliteit moet bestaan bij ouder
+Definitie:
+
+Bij Kind met een Persoon \ Nationaliteit.Identiteit zonder enige verantwoording,
+moet op Datum aanvang geldigheid daarvan die Persoon \ Nationaliteit.Identiteit
+ook bij een (nieuwe of bestaande) Ouder bestaan.
+Toelichting
+• 'Pseudo-persoon' (P)(en) worden buiten beschouwing gelaten. Daarvan is
+immers de nationaliteit niet van toepassing.
+• Zonder verantwoording wil zeggen "van rechtswege" door afstamming
+verkregen: zonder specifiek brondocument, maar slechts o.b.v. een triviale
+rechtsgrond.
+• Als het Kind een zgn. 3e generatie kind betreft, zou de Nederlandse Persoon \
+Nationaliteit.Identiteit toch mogen ontbreken bij de Ouders, maar daar hoeft in
+deze regel geen rekening mee te worden gehouden.
+• Deze regel moet altijd gedeblokkeerd worden in het geval van een zwakke
+adoptie. Bij zwakke adoptie verkrijgt kind niet automatisch de Nederlandse
+nationaliteit.
+
+Versie:
+
+5
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+De van rechtswege verkregen nationaliteit komt niet voor bij een ouder.
+
+R1696
+Persoon met Nederlandse nationaliteit mag geen namenreeks hebben
+Definitie:
+
+Een Persoon met de "Nederlandse" Persoon \ Nationaliteit.Identiteit, mag op
+Datum aanvang geldigheid daarvan in zijn Persoon.Samengestelde naam geen
+Persoon.Namenreeks? hebben.
+Toelichting:
+Nationaliteit wordt voor pseudo-personen niet vastgelegd en daarom geldt deze
+regel daar niet voor.
+
+Versie:
+
+11
+
+Soort:
+
+Controleregel
+
+Verschijningsvorm: Nadere specificatie per handeling
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie
+ondernemen
+
+Meldingstekst:
+
+Persoon met Nederlandse nationaliteit mag geen namenreeks hebben.
+
+R1697
+Persoon met de Nederlandse nationaliteit moet een voornaam hebben.
+Definitie:
+
+Een Persoon met de "Nederlandse" Nationaliteit, moet op Persoon \
+Nationaliteit.Standaard.Datum aanvang geldigheid minstens één Persoon \
+Voornaam.Identiteit hebben.
+
+Versie:
+
+7
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Een persoon met de Nederlandse nationaliteit moet een voornaam hebben.
+
+R1706
+Reden verlies moet verwijzen naar geldig stamgegeven
+Definitie:
+
+Persoon \ Nationaliteit.Reden verlies moet op Datum einde geldigheid verwijzen
+naar een Geldig voorkomen stamgegeven op peildatum (R1284) waarde in
+Stamgegeven Reden verlies NL nationaliteit.
+
+Versie:
+
+3
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+De opgegeven reden verlies is niet geldig op datum einde geldigheid van de
+Nederlandse nationaliteit.
+
+R1707
+Nationaliteit moet verwijzen naar geldig stamgegeven
+Definitie:
+
+Persoon \ Nationaliteit.Nationaliteit moet op Datum aanvang geldigheid verwijzen
+naar Geldig voorkomen stamgegeven op peildatum (R1284) waarde in
+Stamgegeven Nationaliteit.
+
+Versie:
+
+6
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+De opgegeven nationaliteit is niet geldig op datum aanvang geldigheid van de
+nationaliteit.
+
+R1708
+Reden verkrijging moet verwijzen naar geldig stamgegeven
+Definitie:
+
+Persoon \ Nationaliteit.Reden verkrijging moet op Datum aanvang geldigheid
+verwijzen naar een Geldig voorkomen stamgegeven op peildatum (R1284) waarde
+in Stamgegeven Reden verkrijging NL nationaliteit.
+
+Versie:
+
+3
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+De opgegeven reden verkrijging is niet geldig op datum aanvang geldigheid van de
+Nederlandse nationaliteit.
+
+R1726
+Geslachtsnaam Nederlands kind moet overeenkomen met ouder
+Definitie:
+
+Een Bijhouding van de Familierechtelijke betrekking van een Ingezeten Kind met de
+Nederlandse Persoon \ Nationaliteit.Identiteit, is niet toegestaan als daardoor op
+Datum aanvang geldigheid de geslachtsnaam van het Kind niet overeenkomt met
+de geslachtsnaam van minstens één Ouder.
+Geslachtsnaam van een Ouder en Kind komen overeen indien Namenreeks,
+Voorvoegsel, Scheidingsteken en Geslachtsnaamstam uit de groep
+Persoon.Samengestelde naam zoals vastgelegd in de BRP of verkregen met het
+Bericht exact gelijk zijn.
+Toelichting
+1. De regel is niet van toepassing voor een niet-ingeschreven Kind omdat daarvan
+de Persoon \ Nationaliteit.Identiteit onbekend is in de BRP.
+2. De regel is niet van toepassing als het Kind een namenreeks heeft omdat het
+attribuut Geslachtsnaamstam dan niet geïnterpreteerd mag worden als een
+geslachtsnaam.
+
+3.
+4.
+
+De regel is niet van toepassing als het Kind geen enkele Ouder heeft.
+Een Ouder met een namenreeks voldoet door deze wijze van vergelijking niet.
+
+Versie:
+
+7
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Geslachtnaam van kind mag niet afwijken van de geslachtsnaam van één van de
+ouders.
+
+R1727
+Geslachtsnaam Nederlands kind moet overeenkomen met die van eerder kind uit dezelfde
+relatie
+Definitie:
+
+Een Bijhouding van de Familierechtelijke betrekking van een Ingezeten Kind met de
+Nederlandse Persoon \ Nationaliteit.Identiteit, is niet toegestaan als daardoor de
+geslachtsnaam van het Kind niet overeenkomt met de geslachtsnaam van elk ander
+gezamenlijk ingezeten Kind van beide Ouder(s).
+Toelichting
+1. Alle betrokken personen bij deze regel moeten ingeschrevenen zijn.
+2. De regel is niet van toepassing als het Kind een namenreeks heeft omdat het
+attribuut Geslachtsnaamstam dan niet geïnterpreteerd mag worden als een
+geslachtsnaam.
+3. Van een "ander gezamenlijk ingezeten Kind" is sprake als beide Ouders op
+'Systeemdatum' (R2016) reeds Ouder.Ouderschap hebben over een ander
+Ingezeten Kind.
+4. De geslachtsnaam van Kind komt overeen indien Namenreeks, Voorvoegsel,
+Scheidingsteken en Geslachtsnaamstam uit de groep Persoon.Samengestelde
+naam zoals vastgelegd in de BRP of verkregen met het Bericht exact gelijk zijn.
+Een broer of zus met een namenreeks voldoet door deze wijze van vergelijking
+niet en resulteert derhalve in een overtreding van de regel.
+
+Versie:
+
+6
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Geslachtsnaam kind mag niet afwijken van geslachtsnaam van een ander kind met
+dezelfde ouders.
+
+R1729
+Waarschuwen als erkenner onder curatele staat
+Definitie:
+
+Er moet een waarschuwing getoond worden indien een erkenner op
+Ouder.Ouderschap.Datum aanvang geldigheid onder Persoon.Curatele staat.
+Bij Registratie ouder is de erkenner de betreffende Ouder. Bij Registratie geborene
+is de erkenner de Ouder waarbij Ouder.Ouder uit wie het kind is geboren? de
+waarde "Nee" heeft.
+
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+De erkenner mag niet onder curatele staan.
+
+R1731
+Kind moet een predicaat of adellijke titel hebben als de vader met identieke geslachtsnaam
+dat ook heeft
+
+Definitie:
+
+Op Ouder.Ouderschap.Datum aanvang geldigheid moet bij het Kind
+Persoon.Predicaat of Persoon.Adellijke titel gevuld zijn indien:
+
+•
+
+die Ouder een 'Man' (M) is,
+
+EN
+
+•
+
+die Ouder dezelfde Persoon.Geslachtsnaamstam, Persoon.Voorvoegsel en
+Persoon.Scheidingsteken heeft als het Kind,
+
+EN
+
+•
+
+die Ouder een Persoon.Predicaat of Persoon.Adellijke titel heeft.
+
+Toelichting:
+• Door de vergelijking te baseren op Persoon.Samengestelde naam is de regel
+zowel van toepassing voor een 'Ingeschrevene' (I) als een 'Pseudo-persoon'
+(P).
+• De regel eist niet dat de predicaat of adellijke titel hetzelfde zijn bij ouder en
+kind.
+Versie:
+
+8
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Kind moet een predicaat of adellijke titel hebben als de vader met identieke
+geslachtsnaam die ook heeft.
+
+R1732
+Ouder mag geen kinderen hebben met identieke geboortedatum
+Definitie:
+
+Bij de registratie van Ouder.Ouderschap mag de betrokken Ouder op
+Ouder.Ouderschap.Datum aanvang geldigheid geen Kind hebben met
+Persoon.Datum geboorte die overkomen met Persoon.Datum geboorte van het
+nieuwe Kind.
+Toelichting:
+Het doel van deze regel is het voorkomen van nogmaals registreren van hetzelfde
+kind bij de ouder. Controleren op datum geboorte is hiervoor een goede indicatie
+maar niet exact genoeg, in geval van een meerling, om met zekerheid vast te
+stellen dat het hetzelfde kind betreft. Als er sprake is van een ander kind met
+dezelfde geboortedatum als een huidig kind dat bij de ouder geregistreerd staat
+moet deze regel gedeblokkeerd worden.
+Het controleren op alleen datum geboorte houdt deze regel relatief simpel omdat
+deze niet wijzigt op het moment van de registratie van het ouderschap. Dit in
+tegenstelling tot extra controle op personalia (naam, geslachtsnaam) die de
+controle exacter maken, maar juist op het moment van het registreren van het
+ouderschap kunnen wijzigen waardoor extra complexiteit ontstaat.
+
+Versie:
+
+7
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Bij de ouder staat reeds een kind met identieke geboortedatum geregistreerd.
+
+R1733
+Tussen ouders mag geen verwantschap bestaan
+
+Definitie:
+
+Een Ouder.Ouderschap mag niet worden geregistreerd als op of na
+DatumAanvangGeldigheid daarvan het Kind twee Ouders krijgt waartussen
+'Verwantschap' (R1280) bestaat.
+
+Versie:
+
+5
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Omdat er een verwantschap bestaat tussen de ouders, mag de nieuwe
+familierechtelijke betrekking niet worden geregistreerd.
+
+R1734
+Ouder mag niet zijn overleden
+Definitie:
+
+Een Ouder mag op Datum aanvang geldigheid van zijn Ouder.Ouderschap niet zijn
+overleden.
+
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Omdat de ouder reeds is overleden, is de registratie niet toegestaan.
+
+R1736
+Erkenner moet minstens 16 jaar zijn
+Definitie:
+
+Een erkenner moet op Datum aanvang geldigheid van zijn Ouder.Ouderschap
+minstens 16 jaar oud zijn.
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+De erkenner moet minstens 16 jaar oud zijn.
+
+R1748
+Erkend kind jonger dan 7 jaar moet Nederlander worden indien erkenner Nederlander is
+Definitie:
+
+Een Kind moet de Nederlandse Persoon \ Nationaliteit.Identiteit hebben of
+verkrijgen indien
+de erkenner (Persoon) de Nederlandse Persoon \ Nationaliteit.Identiteit heeft
+EN
+het Kind jonger dan 7 jaar is
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Het kind moet de Nederlandse nationaliteit hebben omdat het jonger is dan 7 jaar
+en de erkenner ook de Nederlandse nationaliteit heeft.
+
+R1751
+Waarschuwing: gegevens ouder staan in onderzoek
+Definitie:
+
+Geef een waarschuwing als een Ouder aan een Onderzoek met de Onderzoek.Status
+<> 'Afgesloten' is gekoppeld.
+
+Versie:
+
+5
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+De gegevens van een ouder van een hoofdpersoon van het bijhoudingsvoorstel
+staan in onderzoek.
+
+R1790
+Melding dat reisdocument ongeldig wordt na wijziging personalia, wijziging
+Burgerservicenummer of verkrijging of verlies Nederlandse nationaliteit
+Definitie:
+
+Deze regel geeft een waarschuwing aan de Bijhouder, zodra er sprake is van:
+Een bijhouding op een Persoon, waarin 1 of meer van de volgende gegevens zijn
+geactualiseerd:
+• Persoon.Voornamen
+• Persoon.Geslachtsnaamstam
+• Persoon.Geslachtsaanduiding
+• Persoon.Burgerservicenummer
+• Verkrijging van de Nederlandse nationaliteit
+• Verlies van de Nederlandse nationaliteit
+EN
+Waarbij sprake is van een Persoon \ Reisdocument zonder indicatie Persoon \
+Reisdocument.Aanduiding inhouding/vermissing
+Toelichting
+• Deze regel is niet van toepassing bij de AH Geboorte in Nederland met
+erkenning na geboortedatum. Immers, de persoon kan op dat moment nog
+geen reisdocument hebben.
+• Deze regel is niet van toepassing bij de AH Verkrijging vreemde nationaliteit
+i.c.m. de actie Registratie nationaliteit, maar wel i.c.m. de actie Registratie
+geslachtsnaam/voornaam.
+• Deze regel is niet van toepassing bij de AH Verkrijging Nederlandse
+nationaliteit i.c.m. de actie Registratie geslachtsnaam/voornaam, maar wel
+i.c.m. de actie Registratie nationaliteit.
+Ontwerpbeslissingen:
+• Deze Regel is bewust niet aan de Actie Registratie geslachtsnaam gekoppeld.
+Dit om te voorkomen dat deze regel onterecht betrokken wordt bij
+bijhoudingen waar de geslachtsnaam uitsluitend gewijzigd mag worden als de
+persoon niet de Nederlandse nationaliteit bezit. Deze controle kan namelijk
+uitsluitend betrekking hebben op personen die wel de Nederlandse nationaliteit
+bezitten. Uitsluitend dan kan je een geldig (lees: niet ingehouden / niet
+vermist) reisdocument bezitten.
+• Omdat de regel niet aan de genoemde actie gekoppeld is, moet deze aan de
+relevante administratieve handelingen gekoppeld worden.
+• Persoon.Datum geboorte is bewust niet opgenomen in de regel hoewel
+aanpassing hiervan een reisdocument wel ongeldig maakt. Echter, de enige
+handeling waarmee dit kan is Correctie geboorte en deze regel betreft een
+controle over meerdere groepen en is dus niet van toepassing bij correcties.
+
+Versie:
+
+12
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+Vanwege gewijzigde persoonsgegevens zijn geldige reisdocumenten van rechtswege
+vervallen.
+
+R1807
+Lengte van de voornamen mag bij elkaar opgeteld niet langer dan 200 karakters zijn
+Definitie:
+
+De concatenatie van alle actuele exemplaren van Persoon \ Voornaam.Naam van
+een Persoon gescheiden door spaties, mag niet langer dan 200 karakters zijn.
+Opmerking:
+
+Eventuele spaties in de Voornaam zelf worden niet gestript.
+Versie:
+
+6
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De lengte van de voornamen mag bij elkaar opgeteld niet langer dan 200 karakters
+zijn.
+
+R1809
+Namenreeks en Voornaam sluiten elkaar uit
+Definitie:
+
+De Persoon.Samengestelde naam mag geen (afgeleide) Persoon.Voornamen hebben
+als Persoon.Namenreeks? de waarde "Ja" heeft.
+Toelichting:
+• Dit impliceert (m.u.v. correcties) dat een 'Ingeschrevene' (I) met een
+"Namenreeks" geen enkele Persoon \ Voornaam.Identiteit mag hebben omdat
+de Persoon.Voornamen daarvan zijn afgeleid.
+
+Versie:
+
+9
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Voornaam mag niet voorkomen als er sprake is van een namenreeks.
+
+R1810
+Namenreeks en Voorvoegsel in Samengestelde naam sluiten elkaar uit
+Definitie:
+
+De Persoon.Samengestelde naam mag geen (afgeleid) Persoon.Voorvoegsel hebben
+als Persoon.Namenreeks? de waarde "Ja" heeft.
+
+Versie:
+
+4
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Namenreeks en voorvoegsel mogen niet gelijktijdig in samengestelde naam
+voorkomen.
+
+R1815
+Geen nationaliteit - ook geen onbekende - en ook geen indicatie staatloos aanwezig
+Definitie:
+
+Bij een Persoon moet de indicator Persoon.Staatloos zijn geregistreerd, als bij die
+Persoon geen enkele Persoon \ Nationaliteit.Identiteit staat geregistreerd. Deze
+regel wordt op drie momenten gecontroleerd:
+1.
+2.
+
+3.
+
+Als bij inschrijving geen enkele Persoon \ Nationaliteit.Identiteit wordt
+geregistreerd, moet Persoon.Staatloos worden geregistreerd,
+Als bij beëindiging of verval van de laatste Persoon \ Nationaliteit.Identiteit
+geen nieuwe Persoon \ Nationaliteit.Identiteit wordt geregistreerd. moet
+Persoon.Staatloos worden geregistreerd.
+Als beëindiging van Persoon.Staatloos wordt geregistreerd, moet bij de Persoon
+minimaal één Persoon \ Nationaliteit.Identiteit zijn geregistreerd.
+
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Nationaliteit en indicator Staatloos ontbreekt.
+
+R1833
+De objectsleutel waarmee een persoon in het bericht wordt aangewezen moet geldig zijn
+
+Definitie:
+
+De 'Gemaskeerde objectsleutel' (R1834) waarmee een Persoon in het Bericht wordt
+aangewezen moet geldig zijn.
+
+Versie:
+
+7
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De objectsleutel waarmee de persoon in het bericht wordt aangewezen is niet
+geldig.
+
+R1834
+'Gemaskeerde objectsleutel'
+Definitie:
+
+De 'Gemaskeerde objectsleutel' (R1834) wijst een Persoon aan en maskeert de
+interne objectsleutel. Deze 'Gemaskeerde objectsleutel' (R1834) moet een beperkte
+tijd geldig zijn. De objectsleutel verliest z'n geldigheid, zodra zich een wijziging in
+de persoonsgegevens heeft voorgedaan nadat de gemaskeerde sleutel aan een
+partij is verstrekt
+Toelichting:
+• Er moet voorkomen worden dat de objectsleutel een sterkere sleutel wordt dan
+het BSN en afnemers deze sleutel gaan gebruiken i.p.v. het BSN. Dit houdt in
+dat voorkomen moet worden dat de objectsleutel 'as-is' wordt
+gecommuniceerd. Er zal een vorm van maskering toegepast worden met een
+beperkte geldigheid. De concrete invulling hiervan is een technisch
+implementatie en wordt dus niet verder (functioneel) beschreven.
+
+Versie:
+
+8
+
+Soort:
+
+Definitieregel
+
+R1835
+Objectsleutel in bijhouding moet verwijzen naar bestaand object in BRP van juiste type
+Definitie:
+
+Een objectsleutel in een bericht moet verwijzen naar een bestaand object in de BRP
+van het juiste type.
+Opmerking:
+De regel geldt voor elke specialisatie van het 'abstracte root' Object zoals Persoon,
+Relatie, Betrokkenheid etc.
+
+Versie:
+
+10
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De in het bericht opgenomen objectsleutel bestaat niet of is niet van de juiste type.
+
+R1836
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+Definitie:
+
+Een Nevenactie (R1279) mag alleen betrekking hebben op een Hoofdpersoon
+(R1287).
+
+Versie:
+
+7
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De nevenactie mag niet voor deze persoon worden uitgevoerd.
+
+R1838
+
+In een bijhouding moet ReferentieID verwijzen naar CommunicatieID in berichtelement van
+het juiste type.
+Definitie:
+
+Elk referentieID in een Bijhoudingsvoorstel moet verwijzen naar een
+communicatieID dat behoort bij een berichtelement van hetzelfde type als het
+berichtelement dat behoort bij het referentieID.
+Uitzondering hierop zijn referentieID's in berichtelementen van het type
+Gedeblokkeerde melding. Want deze referentieID's mogen verwijzen naar
+berichtelementen van een ander type.
+Toelichting:
+Onderstaand voorbeeld toont twee regels uit een berichtdefinitie. De tweede regel
+bevat een referentieID die naar het communicatieID van de eerste regel kan
+verwijzen. Het type berichtelement is bij beide regels Bron.
+Bron (objecttype="AdministratieveHandelingBron", communicatieID="123")
+Bron (objecttype="ActieBron", referentieID="123", communicatieID="987")
+
+Versie:
+
+4
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het referentieID verwijst niet naar een juist CommunicatieID.
+
+R1839
+Gedeblokkeerde meldingen moeten in verwerking daadwerkelijk optreden
+Definitie:
+
+Elke Gedeblokkeerde melding moet in de verwerking van het Bijhoudingsvoorstel
+ook daadwerkelijk optreden.
+De gedeblokkeerde melding moet optreden in het element dat in de deblokkade is
+gespecificeerd m.b.v. referentieID.
+Toelichting:
+1. Met deze regel wordt voorkomen dat meldingen "op voorhand" worden
+gedeblokkeerd.
+2. Deze regel mag niet gewijzigd worden van Blokkerend naar Deblokkerend (of
+Melding) omdat deze regel dan ook "op voorhand" gedeblokkeerd kan worden
+en daarmee zinloos is.
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De gedeblokkeerde melding is niet opgetreden.
+
+R1845
+In het bijhoudingsbericht gerelateerde objectsleutels en voorkomensleutels moeten
+verwijzen naar gerelateerde objecten en voorkomens in de BRP
+Definitie:
+
+Als in de hiërarchie van een Bijhoudingsbericht in een Actie een tweetal elementen
+is verbonden én elk element met een sleutel naar een geregistreerd Object of
+Voorkomen in de BRP verwijst, dan moet in de BRP het ene Object of Voorkomen
+waarnaar wordt verwezen gerelateerd zijn aan het andere Object of Voorkomen.
+Gerelateerde objecten en voorkomens in berichten:
+1. Deze regel heeft betrekking op objecten of voorkomens die in het bericht met
+een object- of voorkomensleutel worden aangewezen.
+
+2.
+
+3.
+
+4.
+
+In de bericht hiërarchie zijn elementen verbonden met parent en child relaties.
+Elementen kunnen via meerdere hiërarchische lagen verbonden zijn. In
+bijvoorbeeld de actie Registratie einde geregistreerd partnerschap is het
+element Geregistreerd partnerschap een parent van het element
+Betrokkenheden en het element Partner een child van het element
+Betrokkenheden. Dus zijn het element Geregistreerd partnerschap en het
+element Partner verbonden (Partner is een subchild van Geregistreerd
+partnerschap).
+Een Object is alleen met het eerste Object met sleutel dat in de hiërarchie
+voorkomt verbonden. In bijvoorbeeld de actie Registratie einde geregistreerd
+partnerschap is de Relatie wel verbonden met de Betrokkenheid maar niet met
+de Persoon.
+Een voorkomensleutel in een bericht moet verwijzen naar een bestaand
+voorkomen van de juiste groep. De juiste groep is in het bericht opgenomen
+als label bij de voorkomensleutel. Bij de groep Standaard van een object is de
+naam van het objecttype als label in het bericht opgenomen in plaats van de
+naam van de groep.
+
+Gerelateerde objecten en voorkomens in het LGM:
+1. In het LGM is een object gerelateerd aan een ander object indien één van deze
+objecten verwijst naar het andere object. Een Betrokkenheid is bijvoorbeeld
+gerelateerd aan een Relatie indien in Betrokkenheid.Persoon wordt verwezen
+naar die Relatie.
+2. In het LGM is een voorkomen van een Groep gerelateerd aan een object als het
+onderdeel is van het Object. Andersom is het object aan een voorkomen
+verbonden als het eigenaar is van de Groep. Een voorkomenen van de groep
+Persoon.Verblijfsrecht is bijvoorbeeld gerelateerd aan de Persoon waar deze
+groep onderdeel van is.
+Versie:
+
+6
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven objectsleutels en voorkomensleutels vormen geen gerelateerde set
+aan gegevens in de BRP.
+
+R1848
+Registersoort moet geldig zijn voor soort document
+Definitie:
+
+Voor een Nederlandse registerakte (R2149) moet de Registersoort, afhankelijk van
+het Document.Soort geldig zijn.
+Deze geldigheid wordt als volgt gecontroleerd: De 1e positie van het opgegeven
+Document.Aktenummer moet gelijk zijn aan de in Soort document.Registersoort
+opgenomen waarde bij het gebruikte Document.Soort
+
+Versie:
+
+4
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+De eerste positie van het aktenummer bevat een onjuiste registersoort.
+
+R1849
+Aktenummer verplicht bij Nederlandse registerakten en leeg bij andere documentsoorten
+Definitie:
+
+Alleen voor Nederlandse registerakte (R2149) dient het Document.Aktenummer een
+waarde te hebben, anders is Document.Aktenummer leeg.
+
+Versie:
+
+4
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Van Nederlandse registerakten dient het aktenummer te zijn gevuld. Van overige
+documentsoorten dient het aktenummer leeg te zijn.
+
+R1850
+Uitsluitend indien een document geen Nederlandse registerakte is mag de omschrijving
+gevuld zijn
+Definitie:
+
+Uitsluitend indien een document geen Nederlandse registerakte (R2149) is mag de
+Document.Omschrijving gevuld zijn.
+
+Versie:
+
+5
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Uitsluitend indien een document geen Nederlandse registerakte is mag de
+omschrijving gevuld zijn.
+
+R1919
+Voornaam mag geen spatie bevatten.
+Definitie:
+
+Persoon \ Voornaam.Naam mag geen spatie bevatten.
+
+Versie:
+
+3
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+In een opgegeven voornaam zijn spaties niet toegestaan.
+
+R1920
+Volgnummers voornamen moeten uniek en aaneensluitend zijn
+Definitie:
+
+In de groep Persoon \ Voornaam.Identiteit van een Persoon moeten de Persoon \
+Voornaam.Volgnummers van Naam uniek zijn en bovendien aaneensluitend
+genummerd beginnend met de waarde "1".
+
+Versie:
+
+4
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Volgnummers in voornaam moeten uniek zijn en aaneensluitend genummerd met
+beginwaarde "1" .
+
+R1998
+'Volledig persoon'
+Definitie:
+
+Een volledig Persoon is het complete beeld van de persoon zoals deze in de BRP is
+geadministreerd. Het gaat om de administratie van alle gegevens (Element) van het
+Element.Soort 'Attribuut' met Element.Autorisatie: 'Optioneel', 'Via
+groepsautorisatie', 'Verplicht', 'Aanbevolen', 'Uitzondering' en
+'Bijhoudingsgegevens'.
+Een volledig persoon bevat attributen uit:
+Inhoudelijke groepen ('Inhoudelijke groep' (R1540))
+Verantwoordingsgroepen ('Verantwoordingsgroep' (R1541))
+De verantwoordingsinformatie betreft alle Administratieve handeling die de
+Persoonslijst van de hoofdpersoon hebben bijgehouden of hebben geleid tot een
+mutatie van het onderzoeksdeel ('Onderzoeksgroep' (R1543)). Dit betreft alle
+Administratieve handelingen die voorkomen in de groep Persoon.Afgeleid
+administratief van de hoofdpersoon. Ook de Actie en Actie \ Bron die bij die
+Administratieve handelingen horen, worden opgenomen.
+Onderzoeksgroepen ('Onderzoeksgroep' (R1543))
+
+De gegevens uit Onderzoek, die betrekking hebben op de te leveren Persoon
+moeten worden opgenomen. Het betreft altijd aan de Persoon gerelateerde
+Onderzoeken. Dus de Persoon \ Onderzoek gegevens, die gerelateerd zijn aan de
+persoon.
+Versie:
+
+5
+
+Soort:
+
+Definitieregel
+
+R2011
+Voor een persoon met de Nederlandse nationaliteit wordt uitsluitend deze nationaliteit
+bijgehouden
+Definitie:
+
+Bij een Persoon met de Nederlandse Persoon \ Nationaliteit.Nationaliteit of de
+indicatie Persoon.Behandeld als Nederlander? mogen geen andere actuele Persoon \
+Nationaliteiten worden geregistreerd.
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het bijhouden van een vreemde nationaliteit is niet mogelijk naast de Nederlandse
+nationaliteit.
+
+R2014
+'OUWKIG'
+Definitie:
+
+Ouder uit wie het kind is geboren.
+Dit wordt expliciet genmaakt, door de Ouder te kenmerken via de registratie
+Ouder.Ouder uit wie het kind is geboren? = "Ja".
+Deze zogenaamde OUWKIG is tevens de "adresgevende ouder".
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2016
+'Systeemdatum'
+Definitie:
+
+De systeemdatum is de actuele datum tijdens het evalueren van een regel van het
+BRP syteem en heeft het formaat 'jjjjmmdd'.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2021
+Buitenlandse plaats geboorte of buitenlandse regio geboorte moet gevuld zijn indien een
+persoon is geboren in het buitenland
+Definitie:
+
+Persoon.Buitenlandse plaats geboorte en/of Persoon.Buitenlandse regio geboorte
+moet gevuld zijn indien:
+Persoon.Land/gebied geboorte ongelijk is aan "Nederland" (landcode 6030)
+EN
+Persoon.Land/gebied geboorte ongelijk is aan "Onbekend" (landcode 0000)
+EN
+Persoon.Land/gebied geboorte ongelijk is aan "Internationaal gebied" (landcode
+9999).
+
+Versie:
+
+6
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Buitenlandse regio geboorte of buitenlandse plaats geboorte is verplicht indien een
+persoon is geboren in het buitenland.
+
+R2032
+Buitenlandse plaats geboorte en buitenlandse regio geboorte moeten leeg zijn indien de
+persoon niet is geboren in het buitenland
+Definitie:
+
+Persoon.Buitenlandse plaats geboorte en Persoon.Buitenlandse regio geboorte
+moeten leeg zijn indien:
+Persoon.Land/gebied geboorte gelijk is aan "Nederland" (landcode 6030)
+OF
+Persoon.Land/gebied geboorte gelijk is aan "Onbekend" (landcode 0000)
+OF
+Persoon.Land/gebied geboorte gelijk is aan "Internationaal gebied" (landcode
+9999).
+
+Versie:
+
+4
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Buitenlandse locatiegegevens zijn uitsluitend toegestaan bij geboorte in het
+buitenland.
+
+R2034
+Gemeente geboorte en/of woonplaatsnaam geboorte mogen uitsluitend gevuld zijn indien
+de persoon is geboren in Nederland
+Definitie:
+
+Persoon.Gemeente geboorte en/of Persoon.Woonplaatsnaam geboorte mogen
+uitsluitend gevuld zijn indien Persoon.Land/gebied geboorte gelijk is aan
+"Nederland" (landcode 6030).
+
+Versie:
+
+4
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Nederlandse locatiegegevens geboorte zijn uitsluitend toegestaan als de persoon is
+geboren in Nederland.
+
+R2036
+Woonplaatsnaam geboorte mag alleen gevuld zijn als ook gemeente gevuld is
+Definitie:
+
+Het attribuut Persoon.Woonplaatsnaam geboorte mag alleen een waarde hebben,
+als ook het attribuut Persoon.Gemeente geboorte een waarde bezit.
+
+Versie:
+
+3
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Woonplaatsnaam geboorte mag geen waarde hebben als gemeente geboorte niet is
+gevuld.
+
+R2041
+Gemeente geboorte verplicht als land/gebied gelijk is aan Nederland
+
+Definitie:
+
+Als Persoon.Land/gebied geboorte = "Nederland" (landcode 6030), dan moet
+attribuut Persoon.Gemeente geboorte een waarde bezitten.
+
+Versie:
+
+5
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Gemeente van geboorte is verplicht bij geboorte in Nederland.
+
+R2046
+Omschrijving locatie geboorte verplicht als land/gebied gelijk is aan onbekend of
+internationaal gebied
+Definitie:
+
+Indien Persoon.Land/gebied geboorte = "Onbekend" (landcode 0000)
+OF
+Persoon.Land/gebied geboorte = "Internationaal gebied" (landcode 9999)
+dan moet Persoon.Omschrijving locatie geboorte gevuld zijn. Anders mag dit
+attribuut geen waarde hebben.
+
+Versie:
+
+6
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Omschrijving locatie geboorte verplicht bij land/gebied is onbekend of internationaal
+gebied, maar anders niet toegestaan.
+
+R2098
+Bijhouding geblokkeerd wegens verhuizing
+Definitie:
+
+Als een bijhoudingsvoorstel (Verwerkingswijze 'Bijhouding') ter verwerking wordt
+aangeboden en een Hoofdpersoon (R1287) van het bijhoudingsvoorstel is op dat
+moment betrokken in een verhuizing en de AH betreft niet GBA - Verhuizing
+intergemeentelijk GBA naar BRP, dan geldt dat het bijhoudingsvoorstel niet in
+behandeling kan worden genomen.
+Toelichting
+• Een Persoon is betrokken in een verhuizing, als
+Blokkering.Administratienummer = Persoon.Administratienummer
+• De blokkade op de PL is gezet vanwege de AH GBA - Verhuizing
+intergemeentelijk GBA naar BRP. Daarom moet deze AH juist wel verwerkt
+worden.
+• Deze regel is niet van toepassing voor de AH's Constatering verblijf kind en
+Vestiging niet-ingeschrevene.
+
+Versie:
+
+6
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Bijhouding is geblokkeerd wegens verhuizing.
+
+R2106
+De administratieve handeling moet zijn toegestaan voor de bijhoudingsautorisatie
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient de Soort
+administratieve handeling toegestaan te zijn bij de Bijhoudingsautorisatie.
+
+Dit is het geval als de Soort administratieve handeling via een
+Bijhoudingsautorisatie \ Soort administratieve handeling is gekoppeld aan de
+Bijhoudingsautorisatie.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Bijhoudingsautorisatie kan worden geselecteerd.
+Versie:
+
+7
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De soort administratieve handeling is niet toegestaan voor deze autorisatie.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2115
+De bijhoudingsautorisatie mag niet geblokkeerd zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan mag
+Bijhoudingsautorisatie.Geblokkeerd? niet de waarde 'Ja' hebben.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+4
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De autorisatie is door de beheerder tijdelijk geblokkeerd.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2117
+De persoon die met een objectsleutel wordt aangewezen moet een ingeschrevene zijn
+Definitie:
+
+De Persoon die met een objectsleutel wordt aangewezen moet een 'Ingeschrevene'
+(I) zijn.
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De persoon die met een objectsleutel wordt aangewezen moet een ingeschrevene
+zijn.
+
+R2123
+'Gerelateerden gegevens'
+Definitie:
+
+Gegevens van een persoon(dit kan een 'Ingeschrevene' (I) of 'Pseudo-persoon' (P)
+zijn) die op de persoonslijst van een 'Gerelateerde ingeschrevene' (R2124) staan.
+Als de persoon als Partner of Ouder is betrokken in een relatie zijn dit alle attributen
+uit de groepen:
+• Persoon.Identificatienummers,
+• Persoon.Samengestelde naam,
+• Persoon.Geslachtsaanduiding,
+• Persoon.Geboorte.
+Als de persoon als Kind is betrokken in een relatie zijn dit alle attributen uit de
+groepen:
+• Persoon.Identificatienummers,
+• Persoon.Samengestelde naam,
+• Persoon.Geboorte.
+
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R2124
+'Gerelateerde ingeschrevene'
+Definitie:
+
+Dit is een Persoon die 'Ingeschrevene' (I) is waarmee een Relatie bestaat met de
+betreffende Persoon.
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2129
+Geldig
+Definitie:
+
+Een object is geldig op een peildatum als:
+De Datum aanvang geldigheid op of voor de peildatum ligt en de Datum einde
+geldigheid na de peildatum ligt.
+of
+De Datum ingang op of voor de peildatum ligt en de Datum einde na de peildatum
+ligt.
+(dus: de geldigeheidsperiode is inclusief de ingangsdatum, maar exclusief de
+einddatum)
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2145
+Geslachtsnaamstam in samengestelde naam is verplicht
+Definitie:
+
+Binnen de groep Persoon.Samengestelde naam is Persoon.Geslachtsnaamstam
+verplicht.
+Deze regel is niet van toepassing voor het Bericht van de administratieve
+handeling Wijziging naam indien in dat bericht de indicator Persoon.Afgeleid? op
+"Ja" staat.
+
+Versie:
+
+6
+
+Soort:
+
+Integriteitsregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Geslachtsnaamstam in samengestelde naam is verplicht.
+
+R2146
+Land/gebied geboorte in geboorte is verplicht
+Definitie:
+
+Binnen de groep Persoon.Geboorte is Persoon.Land/gebied geboorte verplicht.
+
+Versie:
+
+5
+
+Soort:
+
+Integriteitsregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Land/gebied geboorte in geboorte is verplicht.
+
+R2149
+
+Nederlandse registerakte
+Definitie:
+
+Een Nederlandse registerakte is een Document, waarvoor geldt dat Soort
+document.Registersoort een waarde heeft.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2155
+Woonplaatsnaam geboorte moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+Als de Persoon.Woonplaatsnaam geboorte is gevuld, dan moet deze verwijzen naar
+een voorkomen in het stamgegeven Plaats.
+Toelichting:
+Omdat de Persoon.Woonplaatsnaam geboorte kan afwijken van de stamgegevens is
+dit een deblokkeerbare regel.
+
+Versie:
+
+4
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+De opgegeven woonplaatsnaam geboorte is geen bestaand stamgegeven.
+
+R2156
+Adellijke titel in geslachtsnaamcomponent moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+In de groep Persoon \ Geslachtsnaamcomponent.Standaard moet het attribuut
+Persoon \ Geslachtsnaamcomponent.Adellijke titel verwijzen naar een
+stamgegeven in Adellijke titel.
+
+Versie:
+
+3
+
+Soort:
+
+Integriteitsregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven adellijke titel in geslachtsnaamcomponent is geen bestaand
+stamgegeven.
+
+R2157
+Predicaat in geslachtsnaamcomponent moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+In de groep Persoon \ Geslachtsnaamcomponent.Standaard moet het attribuut
+Persoon \ Geslachtsnaamcomponent.Predicaat verwijzen naar een stamgegeven in
+Predicaat.
+
+Versie:
+
+4
+
+Soort:
+
+Integriteitsregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het opgegeven predicaat in geslachtsnaamcomponent is geen bestaand
+stamgegeven.
+
+R2161
+Combinatie scheidingsteken en voorvoegsel in geslachtsnaamcomponent moet voorkomen
+als stamgegeven
+Definitie:
+
+De ingevulde combinatie van Persoon \ Geslachtsnaamcomponent.Scheidingsteken
+én Persoon \ Geslachtsnaamcomponent.Voorvoegsel in de groep Persoon \
+Geslachtsnaamcomponent.Standaard moet voorkomen in Stamgegeven
+Voorvoegsel.
+
+Toelichting
+Deze regel is een gegevensvalidatieregel en geen integriteitsregel omdat in de
+database er geen harde verwijzing ligt naar de voorvoegsel-tabel. De voorvoegsel
+tabel wordt als opzoeklijstje gehanteerd t.b.v. het GBA. In de toekomst komt de
+tabel ook in zijn geheel te vervallen en daarmee ook deze regel.
+Versie:
+
+4
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven combinatie scheidingsteken en voorvoegsel in
+geslachtsnaamcomponent is geen bestaand stamgegeven.
+
+R2163
+Predicaat en adellijke titel in geslachtsnaamcomponent mogen niet beide een waarde
+hebben
+Definitie:
+
+Persoon \ Geslachtsnaamcomponent.Predicaat en Persoon \
+Geslachtsnaamcomponent.Adellijke titel mogen niet beide een waarde hebben.
+
+Versie:
+
+5
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Predicaat en adellijke titel in geslachtsnaamcomponent mogen niet beide gevuld
+zijn.
+
+R2164
+Gemeente geboorte moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+Als de Persoon.Gemeente geboorte is gevuld, dan moet deze verwijzen naar een
+voorkomen in het stamgegeven Gemeente.
+
+Versie:
+
+1
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven gemeente geboorte is geen bestaand stamgegeven.
+
+R2166
+Stam in geslachtsnaamcomponent is verplicht
+Definitie:
+
+Binnen de groep Persoon \ Geslachtsnaamcomponent.Standaard is Persoon \
+Geslachtsnaamcomponent.Stam verplicht.
+
+Versie:
+
+4
+
+Soort:
+
+Integriteitsregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Stam in geslachtsnaamcomponent is verplicht.
+
+R2169
+Namenreeks? in samengestelde naam is verplicht
+Definitie:
+
+Binnen de groep Persoon.Samengestelde naam is Persoon.Namenreeks? verplicht.
+
+Versie:
+
+4
+
+Soort:
+
+Integriteitsregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Namenreeks? in samengestelde naam is verplicht.
+
+R2171
+Datum geboorte in geboorte is verplicht
+Definitie:
+
+Binnen de groep Persoon.Geboorte is Persoon.Datum geboorte verplicht.
+
+Versie:
+
+4
+
+Soort:
+
+Integriteitsregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Datum geboorte in geboorte is verplicht.
+
+R2172
+Geslachtsaanduiding in geslachtsaanduiding is verplicht
+Definitie:
+
+Binnen de groep Persoon.Geslachtsaanduiding is Persoon.Geslachtsaanduiding
+verplicht.
+
+Versie:
+
+4
+
+Soort:
+
+Integriteitsregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Geslachtsaanduiding in de groep geslachtsaanduiding is verplicht.
+
+R2173
+Namenreeks en voorvoegsel in geslachtsnaamcomponent mogen niet beide een waarde
+hebben
+Definitie:
+
+De Persoon \ Geslachtsnaamcomponent.Standaard mag geen (afgeleid) Persoon \
+Geslachtsnaamcomponent.Voorvoegsel hebben als Persoon.Namenreeks? de waarde
+"Ja" heeft.
+
+Versie:
+
+3
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Voorvoegsel in geslachtsnaamcomponent mag niet voorkomen als er sprake is van
+een namenreeks.
+
+R2177
+Datum geboorte mag niet in de toekomst liggen
+Definitie:
+
+Indien gevuld moet Persoon.Datum geboorte <= 'Systeemdatum' (R2016)
+
+Versie:
+
+1
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Datum geboorte mag niet in de toekomst liggen.
+
+R2181
+Een persoon wordt of aangewezen met een objectsleutel of het betreft een pseudo persoon
+Definitie:
+
+Van een Persoon is in het Bericht óf de objectsleutel aanwezig óf één of meer
+groepen van de 'Gerelateerden gegevens' (R2123).
+
+Versie:
+
+13
+
+Soort:
+
+Invoervalidatieregel
+
+Verschijningsvorm: Nadere specificatie per handeling
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het identificerend gegeven van de persoon is ongeldig.
+
+R2212
+'Volledig opgeschort'
+Definitie:
+
+Een Persoon is volledig opgeschort indien de Persoon.Nadere bijhoudingsaard
+'Overleden' (O), 'Fout' (F), 'Onbekend' (?) of 'Gewist' (W) is.
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2228
+Voorvoegsel en scheidingsteken in geslachtsnaamcomponent moeten beide ingevuld zijn of
+beide niet
+Definitie:
+
+Het Persoon \ Geslachtsnaamcomponent.Scheidingsteken in de groep "Persoon \
+Geslachtsnaamcomponent" moet een waarde hebben als ook Persoon \
+Geslachtsnaamcomponent.Voorvoegsel een waarde heeft, anders mag Persoon \
+Geslachtsnaamcomponent.Scheidingsteken geen waarde hebben.
+
+Versie:
+
+2
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Voorvoegsel en scheidingsteken moeten beide een waarde hebben, of beide geen
+waarde.
+
+R2235
+Partij in document moet verwijzen naar bestaande partij
+Definitie:
+
+In de groep Document.Identiteit moet de waarde van Document.Partij voorkomen
+in Partij.
+
+Versie:
+
+4
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven partij is geen bestaand stamgegeven.
+
+R2247
+De toegang bijhoudingsautorisatie moet geldig zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient de
+bijbehorende Toegang bijhoudingsautorisatie Geldig (R2129) te zijn op de
+'Systeemdatum' (R2016).
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+4
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De toegang bijhoudingsautorisatie is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2248
+De toegang bijhoudingsautorisatie mag niet geblokkeerd zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient Toegang
+bijhoudingsautorisatie.Geblokkeerd? ongelijk aan "Ja" te zijn.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+4
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De toegang bijhoudingsautorisatie is geblokkeerd door de beheerder.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2250
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij en rol bestaan
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient er
+tenminste één voorkomen van Toegang bijhoudingsautorisatie te bestaan die hoort
+bij de Toegang bijhoudingsautorisatie.Geautoriseerde.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd. Door bij dat
+selectieproces de Toegang bijhoudingsautorisatie.Ondertekenaar en Toegang
+bijhoudingsautorisatie.Transporteur buiten beschouwing te laten, worden de voor
+deze regel benodigde voorkomens van Toegang bijhoudingsautorisatie geselecteerd.
+
+Versie:
+
+6
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Geen autorisatie voor de opgegeven combinatie van partij en rol.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2251
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en ondertekenaar
+bestaan
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient er
+tenminste één voorkomen van Toegang bijhoudingsautorisatie te bestaan die hoort
+bij de combinatie van Toegang bijhoudingsautorisatie.Geautoriseerde en Toegang
+bijhoudingsautorisatie.Ondertekenaar.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd. Door bij dat
+selectieproces de Toegang bijhoudingsautorisatie.Transporteur buiten beschouwing
+te laten, worden de voor deze regel benodigde voorkomens van Toegang
+bijhoudingsautorisatie geselecteerd.
+
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven combinatie van partij, rol en ondertekenaar is niet juist.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2252
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en transporteur
+bestaan
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient er
+tenminste één voorkomen van Toegang bijhoudingsautorisatie te bestaan die hoort
+bij de combinatie van Toegang bijhoudingsautorisatie.Geautoriseerde en Toegang
+bijhoudingsautorisatie.Transporteur.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd. Door bij dat
+selectieproces de Toegang bijhoudingsautorisatie.Ondertekenaar buiten
+
+beschouwing te laten, worden de voor deze regel benodigde voorkomens van
+Toegang bijhoudingsautorisatie geselecteerd.
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven combinatie van partij, rol en transporteur is niet juist.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2268
+De geautoriseerde partij moet een geldige partij zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient
+Bericht.Zendende partij te verwijzen naar een Geldig voorkomen stamgegeven op
+peildatum (R1284) op 'Systeemdatum' (R2016) van Partij.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De verzendende partij is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2269
+De ondertekenaar moet een geldige partij zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient het OIN van
+het PKI-overheidscertificaat waarmee het bericht is ondertekend (de
+ondertekenaar) te verwijzen naar een Geldig voorkomen stamgegeven op peildatum
+(R1284) op 'Systeemdatum' (R2016) van Partij.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De ondertekenaar is geen geldige partij.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2270
+De transporteur moet een geldige partij zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient het OIN van
+het PKI-overheidscertificaat waarmee de beveiligde verbinding is opgezet (de
+transporteur) te verwijzen naar Geldig voorkomen stamgegeven op peildatum
+(R1284) op 'Systeemdatum' (R2016) van Partij.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De transporteur is geen geldige partij.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2271
+De combinatie partij met rol voor toegang bijhoudingsautorisatie moet geldig zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient de
+bijbehorende Toegang bijhoudingsautorisatie te verwijzen naar een Geldig
+voorkomen stamgegeven op peildatum (R1284) op 'Systeemdatum' (R2016) van
+Partij \ Rol.
+
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd.
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De combinatie partij en rol is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2299
+De bijhoudingsautorisatie moet geldig zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient de bij de
+Toegang bijhoudingsautorisatie behorende Bijhoudingsautorisatie Geldig (R2129) te
+zijn op de 'Systeemdatum' (R2016).
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De bijhoudingsautorisatie is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2334
+Alleen een niet-vervallen voorkomen kan vervallen
+Definitie:
+
+Uitsluitend een voorkomen van een groep waarbij Tijdstip verval leeg is kan
+vervallen.
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het voorkomen waarvan het verval moet worden geregistreerd is reeds vervallen.
+
+R2343
+Algemene foutmelding bij schending autorisatieregels
+Definitie:
+
+Bij schending van één of meer van de autorisatieregels die zijn gekoppeld aan Use
+Case BY.1.AA, Use Case LV.1.AL of Use Case VB.1.AV.CA wordt in plaats van de
+meldingstekst bij de geschonden regel, de in deze regel opgenomen meldingstekst
+opgenomen in het berichtonderdeel Meldingen van het resultaatbericht. Zodat niet
+precies blijkt wat er aan de hand is.
+
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Er is een autorisatiefout opgetreden.
+
+R2348
+Partij van de Administratieve handeling moet gelijk zijn aan de Zendende partij
+Definitie:
+
+Administratieve handeling.Partij moet gelijk zijn aan Bericht.Zendende partij.
+
+Versie:
+
+1
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Partij van de administratieve handeling moet gelijk zijn aan de zendende partij.
+
+R2354
+Datum aanvang geldigheid van de actie mag niet in de toekomst liggen
+Definitie:
+
+Indien aanwezig moet Actie.Datum aanvang geldigheid <= 'Systeemdatum'
+(R2016)
+
+Versie:
+
+8
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum aanvang geldigheid van de actie mag niet in de toekomst liggen.
+
+R2413
+Een toelichting ontlening is verplicht bij het deblokkeren van een melding
+Definitie:
+
+Indien een bijhoudingsbericht minimaal één Gedeblokkeerde melding bevat, moet in
+het bericht een Administratieve handeling.Toelichting ontlening worden opgegeven.
+
+Versie:
+
+3
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Bij het deblokkeren van een melding is het opgeven van een toelichting ontlening
+verplicht.
+
+R2428
+Een opgegeven gedeblokkeerde melding moet verwijzen naar een regel die als
+deblokkeerbaar is vastgelegd
+Definitie:
+
+Regel.Code in een Gedeblokkeerde melding.Regel moet verwijzen naar een
+stamgegeven waarbij Regel.Soort melding 'Deblokkeerbaar' is in de stamtabel
+Regel.
+
+Versie:
+
+2
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven gedeblokkeerde melding moet verwijzen naar een regel die als
+deblokkeerbaar is vastgelegd in de stamtabel Regel.
+
+R2437
+Waarschuwing indien de gerelateerde gegevens van een persoon wijzigen en deze persoon
+voorkomt als een pseudo-persoon op de persoonslijst van een ander.
+Definitie:
+
+Er moet een waarschuwing getoond worden indien er een wijziging (actualisering,
+correctie of verwijdering) plaats vindt op de 'Gerelateerden gegevens' (R2123) van
+een Persoon die 'Ingeschrevene' (I) is en deze Persoon ook als 'Pseudo-persoon' (P)
+voorkomt op de persoonslijst van een andere Persoon.
+De controle of de Persoon ook als 'Pseudo-persoon' (P) voorkomt kan gedaan
+worden door te zoeken naar een (of meerdere) 'Pseudo-persoon' (P) die het zelfde
+Burgerservicenummer of het zelfde Administratienummer hebben als de persoon
+waarvan de 'Gerelateerden gegevens' (R2123) van zijn gewijzigd.
+Toelichting:
+1. Deze regel zorgt ervoor dat er een waarschuwing komt als een relatie t.g.v.
+ontrelateren asymmetrisch is geworden en een wijziging van de 'Gerelateerden
+gegevens' (R2123) dus niet meer vanzelf doorwerkt op de persoonslijst van
+gerelateerden.
+2. Deze regel is in principe generiek maar is gekoppeld aan alle Handeling \ Acties
+waarvoor is vastgesteld dat het wijzigen van 'Gerelateerden gegevens' (R2123)
+
+daadwerkelijk van toepassing is. Hierdoor wordt de regel in alleen in de
+specificatie rapportage opgenomen als deze van toepassing is.
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+De persoon komt als pseudopersoon op de persoonslijst van een ander voor.
+Waarschuw de betreffende bijhouder zodat deze de wijziging op de persoonslijst
+kan uitvoeren.
+
+R2450
+Datum erkenning moet na datum geboorte van het kind liggen
+Definitie:
+
+In het Bericht moet Datum aanvang geldigheid van de actie Registratie ouder na de
+Persoon.Datum geboorte van het Kind liggen.
+
+Versie:
+
+1
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Datum erkenning moet na datum geboorte van het kind liggen
+
+R2451
+Datum einde geldigheid van de actie moet gelijk zijn aan datum erkenning
+Definitie:
+
+In het Bericht moet Datum einde geldigheid van de Actie dezelfde waarde hebben
+als Ouder.Ouderschap".Datum aanvang geldigheid" van de erkenner.
+
+Versie:
+
+1
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven datum einde geldigheid van de actie moet gelijk zijn aan de datum
+erkenning.
+
+R2458
+De groep identificatienummers moet ten minste een administratienummer of een
+burgerservicenummer bevatten
+Definitie:
+
+Binnen de groep Persoon.Identificatienummers moet tenminste
+Persoon.Administratienummer of Persoon.Burgerservicenummer een waarde
+hebben.
+
+Versie:
+
+4
+
+Soort:
+
+Gegevensvalidatieregel
+
+Verschijningsvorm: Nadere specificatie per handeling
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De groep identificatienummers moet ten minste het administratienummer of het
+burgerservicenummer bevatten.
+
+R2471
+Voornaam mag alleen ingevuld worden indien de namenreeks indicator wijzigt naar "Nee"
+Definitie:
+
+Persoon \ Voornaam mag alleen bij deze actie ingevuld worden indien de indicator
+Persoon.Namenreeks? wijzigt van "Ja" naar "Nee".
+Toelichting
+Deze regel dwingt af dat de voornaam NIET gewijzigd mag worden als de indicator
+Persoon.Namenreeks? op "Nee" blijft staan. Als de indicator op "Ja" staat dan mag
+sowieso geen Voornaam opgegeven worden.
+
+Versie:
+
+2
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+De voornaam mag alleen ingevuld worden indien de namenreeks indicator wijzigt
+naar "Nee"
+
+R2475
+Datum aanvang geldigheid van de actie moet gelijk zijn aan datum erkenning
+Definitie:
+
+In het Bericht moet Datum aanvang geldigheid van de Actie dezelfde waarde
+hebben als Ouder.Ouderschap".Datum aanvang geldigheid" van de erkenner.
+
+Versie:
+
+1
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven datum aanvang geldigheid van de actie moet gelijk zijn aan de
+datum erkenning.
+
+R2489
+De administratieve handeling mag alleen ingediend worden door gemeente van geboorte of
+bijhoudingspartij
+Definitie:
+
+Indien de Administratieve handeling.Partij de Rol 'Bijhoudingsorgaan College' heeft
+moet deze overeenkomen met minimaal één van de volgende partijen:
+• Persoon.Gemeente geboorte van de Hoofdpersoon (R1287)
+• 'Voortzettende gemeente' (R2573) van de Persoon.Gemeente geboorte van de
+Hoofdpersoon (R1287)
+• Persoon.Bijhoudingspartij van de Hoofdpersoon (R1287)
+Toelichting
+Als de Hoofdpersoon (R1287) in het buitenland geboren is, dan kan de geboorteakte
+in Den Haag zijn opgemaakt (Haagse akte). De geboortegemeente is dan wel
+bekend maar ligt in buitenland. Den Haag kan in dat geval geen bijhoudingsvoorstel
+indienen maar moet de akte doorsturen naar de woongemeente van het kind die
+dan het bijhoudingsvoorstel kan indienen.
+
+Versie:
+
+6
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Alleen de gemeente van geboorte en de bijhoudingsgemeente van het kind mogen
+deze handeling aanbieden.
+
+R2493
+Melding indien er een feitdatum op de persoonslijst staat die recenter dan of gelijk is aan de
+Peildatum, DAG en DEG van de Administratieve handeling.
+Definitie:
+
+Geef een melding indien een 'Feitdatum' (R2495) op de persoonslijst ('Volledig
+persoon' (R1998)) van de Hoofdpersoon (R1287) /Hoofdpersonen recenter (oftewel
+groter) dan of gelijk is aan:
+• de DAG of
+• de DEG (deze datum moet met 1 dag ingekort worden omdat dit een tot datum
+is) of
+• de Peildatum(s)
+van de groep(en) uit de Actie(s) van de Administratieve handeling in het bericht.
+Doe dit alleen bij Administratieve handeling(en) van de Administratieve
+handeling.Categorie 'Actualisering'.
+Toelichting
+
+1.
+2.
+3.
+4.
+5.
+
+Doel van deze regel is te controleren dat bijhoudingen in de juiste volgorde
+worden doorgevoerd.
+Bij bijhoudingen waarbij meerdere hoofdpersonen (persoonslijsten) betrokken
+zijn wordt er 1 melding gegeven.
+Indien de 'Feitdatum' (R2495) een DEG betreft (en dus een tot datum is) dan
+moet deze datum met 1 dag ingekort worden.
+Voor de groepen van Onderzoek en Persoon \ Verificatie wordt de controle niet
+uitgevoerd.
+R1283 - Vergelijken (partiële) datums beschrijft hoe om te gaan met
+onbekende datums. We volgen hier de default methode. (soepel)
+
+Versie:
+
+10
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Op de persoonslijst van de hoofdpersoon/hoofdpersonen staan recentere gegevens
+dan de gegevens die voor registratie zijn aangeboden.
+
+R2495
+'Feitdatum'
+Definitie:
+
+Onderstaand zijn de Feitdatums opgenomen die op de PersoonsLijst van een
+Persoon kunnen voorkomen.
+Onderstaande feitdatums gelden ook voor de 'Gerelateerden gegevens' (R2123).
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Voor alle groepen die materiele historie hebben:
+• de DAG (Datum Aanvang Geldigheid)
+• de DEG (Datum Einde geldigheid)
+Persoon.Datum inschrijving
+Persoon.Datum geboorte
+Persoon.Datum overlijden
+Persoon \ Adres.Datum aanvang adreshouding
+Persoon.Datum mededeling verblijfsrecht
+Persoon.Datum aanleiding aanpassing deelname EU verkiezingen
+Persoon \ Reisdocument.Datum ingang document
+Persoon \ Reisdocument.Datum uitgifte
+Persoon \ Reisdocument.Datum inhouding/vermissing
+Relatie.Datum aanvang
+Relatie.Datum einde
+
+De volgende datums komen ook voor op de Persoonslijst maar worden niet bij de
+controles gebruikt omdat ze niet als feitdatum worden beschouwd:
+• Persoon \ Nationaliteit.Migratie Datum einde bijhouding
+• Persoon.Datum voorzien einde verblijfsrecht
+• Persoon.Datum voorzien einde uitsluiting kiesrecht
+• Persoon.Datum voorzien einde uitsluiting EU verkiezingen
+• Persoon \ Reisdocument.Datum einde document
+• Persoon \ Verificatie.Datum
+• Onderzoek.Datum aanvang
+• Onderzoek.Datum einde
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2502
+
+Betrokkenen in dezelfde relatie mogen niet hetzelfde administratienummer en/of
+burgerservicenummer hebben
+Definitie:
+
+Personen die betrokken zijn in dezelfde Relatie mogen niet hetzelfde
+Persoon.Burgerservicenummer en/of Persoon.Administratienummer hebben.
+Toelichting
+Beëindigde ouderschap-betrokkenheden (DEG ingevuld bij Ouder.Ouderschap)
+moeten bij de controle buiten beschouwing gelaten worden.
+
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Betrokkenen hebben hetzelfde administratienummer en/of hetzelfde
+burgerservicenummer.
+
+R2511
+Objectsleutel die verwijst naar relatie moet verwijzen naar relatie van juiste soort
+Definitie:
+
+Een objectsleutel in een bericht dat verwijst naar een object van het type Relatie
+moet verwijzen naar een Relatie van het juiste Relatie.Soort. Het juiste soort relatie
+is in het bericht opgenomen als label bij de objectsleutel die naar een relatie
+verwijst.
+Toelichting:
+• Onderstaand voorbeeld toont een regel uit de berichtdefinitie waarin het label
+aangeeft dat de relatie waarnaar de objectsleutel verwijst van het soort
+Geregistreerd partnerschap moet zijn.
+Geregistreerd partnerschap (objecttype="Relatie", objectsleutel,
+communicatieID)
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De in het bericht opgenomen objectsleutel die naar een relatie verwijst, verwijst
+niet naar het juiste soort relatie.
+
+R2512
+Objectsleutel die verwijst naar betrokkenheid moet verwijzen naar betrokkenheid met de
+juiste rol
+Definitie:
+
+Een objectsleutel in een bericht die verwijst naar een object van het type
+Betrokkenheid moet verwijzen naar een betrokkenheid met de juiste
+Betrokkenheid.Rol. De juiste rol van de betrokkenheid is in het bericht opgenomen
+als label bij de objectsleutel die naar een betrokkenheid verwijst.
+Toelichting:
+• Onderstaan voorbeeld toont een regel uit de berichtdefinitie waarin het label
+aangeeft dat de betrokkenheid waarnaar de objectsleutel verwijst de rol van
+Partner moet hebben.
+Partner (objecttype="Betrokkenheid", objectsleutel, communicatieID)
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De in het bericht opgenomen objectsleutel die naar een betrokkenheid verwijst,
+verwijst niet naar een betrokkenheid met de juiste rol.
+
+R2523
+Ouder mag geen kinderen hebben met identieke burgerservicenummers en/of
+administratienummers
+Definitie:
+
+Bij de registratie van een Ouder.Ouderschap mag de betrokken Ouder op
+Ouder.Ouderschap.Datum aanvang geldigheid daarvan niet reeds Ouder zijn van
+een Kind met hetzelfde Persoon.Burgerservicenummer en/of
+Persoon.Administratienummer.
+Toelichting
+Hier wordt specifiek gedoeld op Kind(eren) die al als 'Pseudo-persoon' (P) zijn
+opgenomen bij de Ouder(s).
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Bij de ouder is al een kind geregistreerd met een identiek burgerservicenummer
+en/of administratienummer.
+
+R2527
+Datum einde geldigheid van de actie mag niet in de toekomst liggen
+Definitie:
+
+Indien aanwezig moet Actie.Datum einde geldigheid <= 'Systeemdatum' (R2016)
+
+Versie:
+
+3
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum einde geldigheid van de actie mag niet in de toekomst liggen.
+
+R2532
+Er mag maximaal één ouder worden geregistreerd waaruit het kind is geboren
+Definitie:
+
+Bij een Familierechtelijke betrekking mag maximaal één Ouder betrokkenheid
+worden geregistreerd waarvoor geldt dat Ouder.Ouder uit wie het kind is geboren?
+= "Ja".
+
+Versie:
+
+2
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Er mag maximaal één ouder worden geregistreerd waaruit het kind is geboren.
+
+R2536
+Minimaal één hoofdpersoon moet een ingezetene of overledene zijn
+Definitie:
+
+Indien de Administratieve handeling.Partij de Rol 'Bijhoudingsorgaan College' heeft
+moet minstens één Hoofdpersoon (R1287) een 'Ingezetene' (I) zijn.
+Toelichting:
+• Bij de registratie van een huwelijk of geregistreerd partnerschap zijn twee
+hoofdpersonen betrokken. Minstens één moet een ingezetene zijn.
+• Omdat overledenen binnen de BRP ook bijhoudingsaard 'Ingezetene' (I)
+hebben, mag de hoofdpersoon dus ook overleden zijn. Regel R1579 - Van een
+overleden persoon mag uitsluitend een beperkte set van gegevens worden
+bijgehouden beperkt vervolgens welke gegevens voor overledenen wel of niet
+aangepast mogen worden.
+
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Minimaal één hoofdpersoon moet een ingezetene zijn.
+
+R2543
+Kind mag alleen het predicaat of de adellijke titel van de vader voeren, als de
+geslachtsnaam gelijk is aan die van de vader
+Definitie:
+
+Op Ouder.Ouderschap.Datum aanvang geldigheid mag bij het Kind
+Persoon.Predicaat of Persoon.Adellijke titel alleen gevuld zijn in het bericht indien:
+
+•
+
+die Ouder een 'Man' (M) is,
+
+EN
+
+•
+
+die Ouder dezelfde Persoon.Geslachtsnaamstam, Persoon.Voorvoegsel en
+Persoon.Scheidingsteken heeft als het Kind,
+
+EN
+
+•
+
+die Ouder een Persoon.Predicaat of Persoon.Adellijke titel heeft.
+
+Toelichting:
+• Door de vergelijking te baseren op Persoon.Samengestelde naam is de regel
+zowel van toepassing voor een 'Ingeschrevene' (I) als een 'Pseudo-persoon'
+(P).
+• De regel eist niet dat de predicaat of adellijke titel exact hetzelfde zijn bij ouder
+en kind.
+Versie:
+
+5
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Kind mag alleen een predicaat of adellijke titel hebben als de vader met identieke
+geslachtsnaam dat ook heeft.
+
+R2544
+Reden verkrijging mag alleen gevuld zijn bij verkrijging van de Nederlandse nationaliteit
+Definitie:
+
+Persoon \ Nationaliteit.Reden verkrijging mag alleen een waarde hebben als
+Persoon \ Nationaliteit.Nationaliteit verwijst naar "Nederlandse".
+
+Versie:
+
+3
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De reden verkrijging alleen toegestaan bij de Nederlandse nationaliteit.
+
+R2545
+Reden mag alleen ingevuld zijn bij verlies van Nederlandse nationaliteit
+Definitie:
+
+Persoon \ Nationaliteit.Reden verlies mag alleen een waarde hebben als Persoon \
+Nationaliteit.Nationaliteit verwijst naar "Nederlandse" en Datum einde geldigheid
+gevuld is.
+
+Versie:
+
+2
+
+Soort:
+
+Invoervalidatieregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De reden verlies is alleen toegestaan bij beëindiging van de Nederlandse
+nationaliteit.
+
+R2547
+'Volledig bekende datum'
+Definitie:
+
+Een volledig bekende datum heeft het formaat 'jjjj-mm-dd', waarbij:
+• 'mm' niet de waarde 00 heeft
+EN
+• 'dd' niet de waarde 00 heeft.
+Toelichting:
+Als het jaar de waarde 0000 heeft en maand en dag zijn bekend (hebben niet de
+waarde 00) dan betekent dit het jaar 0. Het jaar 0 voldoet niet aan de Gregoriaanse
+kalender. De controle op Gregoriaanse kalender gebeurt in een andere regel.
+
+Versie:
+
+5
+
+Soort:
+
+Definitieregel
+
+R2552
+Datum aanvang geldigheid van de actie moet groter dan of gelijk zijn aan datum geboorte
+Definitie:
+
+In het Bericht moet Datum aanvang geldigheid van de Actie groter dan of gelijk zijn
+aan Persoon.Datum geboorte van het Kind.
+
+Versie:
+
+1
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven datum aanvang geldigheid van de actie moet groter dan of gelijk zijn
+aan de datum geboorte.
+
+R2573
+'Voortzettende gemeente'
+Definitie:
+
+Iedere gemeente die via één of meerdere gemeentes als Gemeente.Voortzettende
+gemeente is geregistreerd bij een andere gemeente is een 'Voortzettende
+gemeente' (R2573) van deze andere gemeente.
+Toelichting:
+Bij een gemeente kan een Gemeente.Voortzettende gemeente geregistreerd
+worden. Omdat deze voortzettende gemeente ook weer een gemeente is waarbij
+een Gemeente.Voortzettende gemeente geregistreerd kan worden is het mogelijk
+om een lijst van gemeentes te registreren.
+Als bijvoorbeeld de gemeente Appingedam als voortzettende gemeente Barneveld
+heeft. En Barneveld heeft als voortzettende gemeente Castricum. Dan is Castircum
+indirect, via Barneveld, een voortzettende gemeente van Appingedam.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2582
+Waarschuwing indien het verkrijgen of het verliezen van een nationaliteit gevolgen heeft
+voor kind(eren)
+Definitie:
+
+Er moet een waarschuwing getoond worden indien een Persoon een Persoon \
+Nationaliteit.Nationaliteit verkrijgt of verliest en deze Persoon Kinderen heeft.
+
+Versie:
+
+2
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+Het verkrijgen of verliezen van een nationaliteit heeft mogelijk gevolgen voor
+kind(eren).
+
+R2616
+Er moeten precies twee ouders bij het kind geregistreerd staan
+Definitie:
+
+Er moeten precies twee Ouder(s) bij het Kind geregistreerd staan. Deze Ouder(s)
+mogen overleden zijn.
+Toelichting:
+Omdat er een Ouder verwijderd wordt door de Administratieve handeling is het
+resultaat na verwerking hiervan dat er precies 1 ouder bij het kind geregistreerd
+staat.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Er staan niet precies twee ouders bij het kind geregistreerd.
+
+R2620
+Datum aanvang geldigheid van de actie moet gelijk zijn aan datum aanvang geldigheid van
+het te vervallen ouderschap
+Definitie:
+
+In het Bericht moet Datum aanvang geldigheid van de Actie dezelfde waarde
+hebben als Ouder.Ouderschap".Datum aanvang geldigheid" van de ouder waarvan
+het ouderschap komt te vervallen.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven datum aanvang geldigheid van de actie moet gelijk zijn aan de
+datum waarop het ouderschap komt te vervallen.
+
+R2621
+Datum aanvang geldigheid van de het te vervallen voorkomen moet groter dan of gelijk zijn
+aan datum aanvang geldigheid van het te vervallen ouderschap
+Definitie:
+
+Datum aanvang geldigheid van het voorkomen dat komt te vervallen moet groter
+dan of gelijk zijn aan Ouder.Ouderschap".Datum aanvang geldigheid" van de ouder
+waarvan het ouderschap komt te vervallen.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Datum aanvang geldigheid van het te vervallen voorkomen moet groter dan of
+gelijk zijn aan de datum waarop het ouderschap komt te vervallen.
+
+R2622
+Datum aanvang geldigheid van de actie moet gelijk zijn aan de datum aanvang geldigheid
+van de actuele niet-beëindigde voorkomens van voornaam, geslachtsnaamcomponent en
+samengestelde naam
+Definitie:
+
+Datum aanvang geldigheid van de Actie moet gelijk zijn aan:
+• Datum aanvang geldigheid van het actuele niet-beëindigde voorkomen van
+elke Persoon \ Voornaam, indien de indicatie Persoon.Namenreeks? wijzigt
+EN
+• Datum aanvang geldigheid van het actuele niet-beëindigde voorkomen van de
+Persoon \ Geslachtsnaamcomponent
+EN
+
+•
+
+Datum aanvang geldigheid van het actuele niet-beëindigde voorkomen van de
+Persoon.Samengestelde naam
+
+De vergelijking van (deels) onbekende datums moet streng worden gedaan volgens
+R1283 - Vergelijken (partiële) datums.
+Toelichting
+• Met deze regel wordt afgedwongen dat de registratie van een naam met een
+ingangsdatum in het verleden precies samenvalt met een eerder geregistreerde
+naam op die zelfde datum. Dit is bijvoorbeeld van belang bij de
+AH:"Vernietiging erkenning".
+• Niet-beëindigd wil zeggen: Datum einde geldigheid = leeg
+• De extra conditie bij voornaam zorgt ervoor dat deze conditie alleen geldig is
+als er iets wijzigt aan de voornaam. Als alleen de geslachtsnaam wijzigt dan is
+de conditie dus niet van toepassing.
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Datum aanvang geldigheid van de actie moet gelijk zijn aan de datum aanvang
+geldigheid van de actuele niet-beëindigde voorkomens van voornaam,
+geslachtsnaamcomponent en samengestelde naam.
+
+R2623
+Waarschuwen als het kind de indicatie Bijzondere verblijfsrechtelijke positie heeft terwijl de
+ouder die niet vervalt deze indicatie niet heeft
+Definitie:
+
+Het Kind heeft de indicatie Persoon.Bijzondere verblijfsrechtelijke positie? terwijl de
+Ouder die niet vervalt deze niet heeft.
+Toelichting:
+De actie Verval ouder bepaald welke ouder vervalt. Op basis hiervan en de huidige
+ouders is voor de verwerking van de administratieve handelingen te bepalen welke
+ouder niet vervalt.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+Het kind heeft een bijzondere verblijfsrechtelijke positie terwijl de overgebleven
+ouder deze indicatie niet heeft.
+
+R2624
+Persoon waarvan het ouderschap met een kind komt te vervallen mag geen OUWKIG zijn
+Definitie:
+
+De Persoon waarvan het Ouder.Ouderschap met een Kind komt te vervallen mag
+geen 'OUWKIG' (R2014) zijn.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De persoon waarvan het ouderschap met een kind komt te vervallen mag geen
+OUWKIG zijn.
+
+R2626
+Waarschuwing bij bijhouding indien gegevens van een hoofdpersoon in onderzoek staan
+Definitie:
+
+Geef een waarschuwing als een Hoofdpersoon (R1287) aan een Onderzoek met de
+Onderzoek.Status <> 'Afgesloten' is gekoppeld.
+
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+Bij één of meer hoofdpersonen van het bijhoudingsverzoek staan gegevens in
+onderzoek.
+
+R2638
+Er mag maximaal één ouder bij het kind geregistreerd staan
+Definitie:
+
+Er mag maximaal één Ouder bij het Kind geregistreerd staan. Deze Ouder mag
+overleden zijn.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Er staan meer dan één ouder bij het kind geregistreerd.
+
+R2640
+Te beëindigen materiëel historische groep mag niet al zijn beëindigd
+Definitie:
+
+Indien Datum einde geldigheid van een materiële historische groep wordt
+geregistreerd moet van de te beëindigen groep Datum aanvang geldigheid gevuld
+en Datum einde geldigheid leeg zijn.
+Opmerking:
+Door te controleren of Datum aanvang geldigheid gevuld is, wordt duidelijker dat er
+bij een groep met uitsluitend vervallen voorkomens niet aan deze regel is voldaan.
+
+Versie:
+
+2
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De groep kan niet worden beëindigd omdat deze groep reeds beëindigd of vervallen
+is.
+
+R2643
+Bij onbeëindigde staatloosheid is registratie nationaliteit uitsluitend toegestaan als de DAG
+daarvan na de DAG van staatloos ligt
+Definitie:
+
+Als bij de Persoon de groep Persoon.Staatloos is geregistreerd en het meest recente
+voorkomen bevat geen Persoon.Staatloos.Datum einde geldigheid dan is Registratie
+nationaliteit uitsluitend toegestaan als Persoon \ Nationaliteit.Standaard.Datum
+aanvang geldigheid na de meest recente Persoon.Staatloos.Datum aanvang
+geldigheid ligt.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum aanvang geldigheid van nationaliteit ligt niet na de meest recente datum
+aanvang geldigheid van staatloos.
+
+R2644
+Bij beëindigde staatloosheid is registratie nationaliteit uitsluitend toegestaan als de DAG
+daarvan op of na de DEG van staatloos ligt
+Definitie:
+
+Als bij de Persoon de groep Persoon.Staatloos is geregistreerd en het meest recente
+voorkomen bevat een Persoon.Staatloos.Datum einde geldigheid dan is Registratie
+nationaliteit uitsluitend toegestaan als Persoon \ Nationaliteit.Standaard.Datum
+aanvang geldigheid op of na de meest recente Persoon.Staatloos.Datum einde
+geldigheid ligt.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum aanvang geldigheid van nationaliteit ligt niet op of na de meest recente
+datum einde geldigheid van staatloos.
+
+R2736
+Waarschuwing dat de naamswijziging niet doorwerkt in de Samengestelde naam en het
+Naamgebruik
+Definitie:
+
+Indien:
+• de Persoon \ Voornaam en/of Persoon \ Geslachtsnaamcomponent wijzigt en
+• Persoon.Afgeleid? de waarde "Nee" heeft
+Dan moet er een waarschuwing gegeven worden dat de wijziging niet doorwerkt in
+de Persoon.Samengestelde naam en Persoon.Naamgebruik.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+De Samengestelde naam wordt niet afgeleid waardoor de naamswijziging niet
+doorwerkt in de Samengestelde naam en Naamgebruik.
+
+R2737
+Waarschuwing dat de naamswijziging niet doorwerkt in het Naamgebruik
+Definitie:
+
+Indien
+• de Persoon \ Voornaam en/of Persoon \ Geslachtsnaamcomponent wijzigt en
+• Persoon.Afgeleid? heeft de waarde "Ja" en
+• Persoon.Naamgebruik afgeleid? heeft de waarde "Nee" en
+• Persoon.Naamgebruik <> 'Partner' (P)
+Dan moet er een waarschuwing gegeven worden dat de wijziging niet doorwerkt in
+het Persoon.Naamgebruik.
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+Naamgebruik wordt niet afgeleid waardoor de naamswijziging niet doorwerkt in het
+naamgebruik.
+
+R2738
+Waarschuwing: Naamswijziging hoofdpersoon werkt niet door bij (ex)partner
+Definitie:
+
+Geef een waarschuwing dat de naamswijziging van de Hoofdpersoon (R1287) niet
+doorwerkt bij de (ex)partner.
+Indien :
+• bij de Hoofdpersoon (R1287) Persoon \ Geslachtsnaamcomponent wijzigt en
+• de Hoofdpersoon (R1287) Persoon.Afgeleid? de waarde "Nee" heeft en
+• De (ex) Partner Persoon.Naamgebruik <> 'Eigen' (E) heeft staan.
+
+Versie:
+
+2
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+De naamswijziging werkt niet door bij een (ex)partner.
+
+R2740
+Waarschuwing dat een gewijzigde Samengestelde naam niet doorwerkt in het Naamgebruik
+Definitie:
+
+Indien één of meer van de volgende attributen wijzigt:
+
+•
+•
+•
+•
+•
+•
+
+Persoon.Namenreeks?
+Persoon.Predicaat
+Persoon.Voornamen
+Persoon.Voorvoegsel
+Persoon.Scheidingsteken
+Persoon.Geslachtsnaamstam
+
+en
+
+•
+
+Persoon.Afgeleid? heeft de waarde "Nee"
+
+en
+
+•
+•
+
+Persoon.Naamgebruik afgeleid? heeft de waarde "Nee"
+Persoon.Naamgebruik <> 'Partner' (P)
+Dan moet er een waarschuwing gegeven worden dat de wijziging niet doorwerkt in
+het Persoon.Naamgebruik.
+Versie:
+
+2
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+Naamgebruik wordt niet afgeleid waardoor de gewijzigde Samengestelde naam niet
+doorwerkt in het Naamgebruik
+
+R2746
+Datum aanvang geldigheid van het gewijzigde Geslachtsnaamcomponent moet recenter zijn
+dan de Datum aanvang geldigheid van het beëindigde voorkomen van de
+Geslachtsnaamcomponent en Samengestelde naam
+Definitie:
+
+Indien de Persoon \ Geslachtsnaamcomponent gewijzigd wordt moet de
+Actie.Datum aanvang geldigheid recenter zijn dan de Datum aanvang geldigheid
+van de te beëindigen voorkomens van Persoon \
+Geslachtsnaamcomponent.Standaard en Persoon.Samengestelde naam.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De Datum aanvang geldigheid van het nieuwe Geslachtsnaamcomponent moet na
+de Datum aanvang geldigheid van eerdere Geslachtsnaamcomponenten en de
+Samengestelde naam liggen.
+
+R2747
+Datum aanvang geldigheid van de gewijzigde Voornaam moet recenter zijn dan de Datum
+aanvang geldigheid van het beëindigde voorkomen van de Voornaam en Samengestelde
+naam
+Definitie:
+
+Indien de Persoon \ Voornaam gewijzigd wordt moet de Actie.Datum aanvang
+geldigheid recenter zijn dan de Datum aanvang geldigheid van de te beëindigen
+voorkomens van Persoon \ Voornaam.Standaard en Persoon.Samengestelde naam.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum aanvang geldigheid van de gewijzigde voornaam moet na de datum
+aanvang geldigheid van bestaande voornamen en de samengestelde naam liggen.
+
+R2748
+Datum aanvang geldigheid van de gewijzigde Samengestelde naam moet recenter zijn dan
+de Datum aanvang geldigheid van het beëindigde voorkomen van de Samengestelde naam
+Definitie:
+
+Indien de Persoon.Samengestelde naam gewijzigd wordt moet de Actie.Datum
+aanvang geldigheid recenter zijn dan de Datum aanvang geldigheid van het te
+beëindigen voorkomen van de Persoon.Samengestelde naam.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De Datum aanvang geldigheid van de nieuwe Samengestelde naam moet na de
+Datum aanvang geldigheid van de eerdere Samengestelde naam liggen.
+
+R2799
+Een nationaliteit mag maximaal één keer voorkomen in het bericht
+Definitie:
+
+Een specifieke Nationaliteit mag maximaal één keer voorkomen in het bericht.
+
+Versie:
+
+3
+
+Soort:
+
+Invoervalidatieregel
+
+Verschijningsvorm: Nadere specificatie per handeling
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Dezelfde nationaliteit wordt meerdere keren beëindigd.
+
+R2867
+Persoon zonder Nederlandse nationaliteit mag geen predicaat en adellijke titel in
+samengestelde naam hebben
+Definitie:
+
+Een ingeschreven persoon zonder Nederlandse Persoon \ Nationaliteit mag geen
+Persoon.Predicaat en de Persoon.Adellijke titel hebben.
+
+Versie:
+
+1
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Persoon zonder Nederlandse nationaliteit mag geen predicaat en adellijke titel in
+samengestelde naam hebben
+
+R2869
+Persoon zonder Nederlandse nationaliteit mag geen predicaat en adellijke titel in
+geslachtsnaamcomponent hebben
+Definitie:
+
+Een persoon zonder Nederlandse Persoon \ Nationaliteit mag geen Persoon \
+Geslachtsnaamcomponent.Predicaat en Persoon \
+Geslachtsnaamcomponent.Adellijke titel hebben.
+
+Versie:
+
+1
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Persoon zonder Nederlandse nationaliteit mag geen predicaat en adellijke titel in
+geslachtsnaamcomponent hebben
+
+R2870
+Bij onbeëindigde 'Behandeld als Nederlander' is registratie nationaliteit uitsluitend
+toegestaan als de DAG daarvan na de DAG van 'Behandeld als Nederlander' ligt
+Definitie:
+
+Als bij de Persoon de groep Persoon.Behandeld als Nederlander is geregistreerd en
+het meest recente voorkomen bevat geen Persoon.Behandeld als
+Nederlander.Datum einde geldigheid dan is Registratie nationaliteit uitsluitend
+toegestaan als Persoon \ Nationaliteit.Standaard.Datum aanvang geldigheid na de
+meest recente Persoon.Behandeld als Nederlander.Datum aanvang geldigheid ligt.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum aanvang geldigheid van nationaliteit ligt niet na de meest recente datum
+aanvang geldigheid van Behandeld als Nederlander.
+
+R2871
+Bij onbeëindigde 'Vastgesteld niet-Nederlander' is registratie nationaliteit uitsluitend
+toegestaan als de DAG daarvan na de DAG van 'Vastgesteld niet-Nederlander' ligt
+Definitie:
+
+Als bij de Persoon de groep Persoon.Vastgesteld niet Nederlander is geregistreerd
+en het meest recente voorkomen bevat geen Persoon.Vastgesteld niet
+Nederlander.Datum einde geldigheid dan is Registratie nationaliteit uitsluitend
+toegestaan als Persoon \ Nationaliteit.Standaard.Datum aanvang geldigheid na de
+meest recente Persoon.Vastgesteld niet Nederlander.Datum aanvang geldigheid ligt.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum aanvang geldigheid van nationaliteit ligt niet na de meest recente datum
+aanvang geldigheid van Vastgesteld niet Nederlander.
+
+R2872
+Bij beëindigde 'Behandeld als Nederlander' is registratie nationaliteit uitsluitend toegestaan
+als de DAG daarvan op of na de DEG van 'Behandeld als Nederlander' ligt
+Definitie:
+
+Als bij de Persoon de groep Persoon.Behandeld als Nederlander is geregistreerd en
+het meest recente voorkomen bevat een Persoon.Behandeld als Nederlander.Datum
+einde geldigheid dan is Registratie nationaliteit uitsluitend toegestaan als Persoon \
+Nationaliteit.Standaard.Datum aanvang geldigheid op of na de meest recente
+Persoon.Behandeld als Nederlander.Datum einde geldigheid ligt.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum aanvang geldigheid van nationaliteit ligt niet op of na de meest recente
+datum einde geldigheid van Behandeld als Nederlander.
+
+R2873
+Bij beëindigde 'Vastgesteld niet-Nederlander' is registratie nationaliteit uitsluitend
+toegestaan als de DAG daarvan op of na de DEG van 'Vastgesteld niet-Nederlander' ligt
+Definitie:
+
+Als bij de Persoon de groep Persoon.Vastgesteld niet Nederlander is geregistreerd
+en het meest recente voorkomen bevat een Persoon.Vastgesteld niet
+Nederlander.Datum einde geldigheid dan is Registratie nationaliteit uitsluitend
+toegestaan als Persoon \ Nationaliteit.Standaard.Datum aanvang geldigheid op of
+na de meest recente Persoon.Vastgesteld niet Nederlander.Datum einde geldigheid
+ligt.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum aanvang geldigheid van nationaliteit ligt niet op of na de meest recente
+datum einde geldigheid van Vastgesteld niet-Nederlander.
+
+

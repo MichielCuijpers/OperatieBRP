@@ -1,0 +1,158 @@
+UCS BY.0.VZ - Verzend bijhoudingsnotificatie
+Versie
+
+0.56
+
+Datum
+
+25 november 2016
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+16-08-2016
+
+0.1
+
+Initiële versie
+
+Operatie BRP
+
+27-09-2016
+
+0.2
+
+Titel van document gewijzigd: min-teken tussen code en
+omschrijving geplaatst.
+Tabel met reviewhistorie opgenomen.
+Referenties bijgewerkt.
+
+Operatie BRP
+
+26-10-2016
+
+0.3
+
+Reviewcommentaar Operatie BRP verwerkt (alleen tekstuele)
+
+Operatie BRP
+
+25-11-2016
+
+0.4
+
+Term ISC vervangen door migratievoorziening
+
+Operatie BRP
+
+17-01-2017
+
+0.5
+
+Referenties verbeterd.
+
+Operatie BRP
+
+07-02-2017
+
+0.6
+
+Use cases die in dit document uitgewerkt zijn werden
+Operatie BRP
+aangeduid met een *. De * is verwijderd bij deze use cases.
+In plaats hiervan zijn de use cases die niet in dit document
+(maar wel in een andere document) uitgewerkt zijn, voorzien
+van een
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Operatie BRP
+
+symbool.
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Doel ....................................................................................................................................3
+Functionele context ...............................................................................................................3
+Referenties ..........................................................................................................................4
+
+Verwerking ............................................................................................................... 5
+2.1
+
+Beschrijving .........................................................................................................................5
+
+1 Inleiding
+1.1
+
+Doel
+
+Deze Use Case heeft tot doel om de door BY.1.BV (zie hiertoe UCS BY.0.AV – Afhandelen verzoek
+[1]) klaargezette bijhoudingsnotificaties ijn het synchrone proces van het koppelvlak Levering te
+verzenden aan de bijhouder of de migratievoorziening.
+
+1.2
+
+Functionele context
+
+NB een vork achter de use case naam ( ) geeft aan dat de uitwerking in een afzonderlijke use
+case specification is opgenomen.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+UCS BY.0.AV – Afhandelen verzoek
+
+Operatie BRP
+
+-
+
+-
+
+2 Verwerking
+2.1
+
+Beschrijving
+
+In het asynchrone proces worden de in de wachtrij klaargezette Bijhoudingsnotificaties per
+afleverpunt daadwerkelijk verzonden. Hierbij is van belang aan welk stelsel de
+bijhoudingsnotificatie moet worden gezonden.
+Het stelsel kan worden teruggevonden in de stuurgegevens van de Bijhoudingsnotificatie. Als het
+‘ontvangende systeem’ de waarde ‘Bijhoudingsysteem’ heeft, dan is er sprake van het BRP stelsel.
+Als het ‘ontvangende systeem’ de waarde ‘ISC’ heeft dan is er sprake van het GBA stelsel.
+Als het stelsel BRP is, dan wordt het bericht via het BRP koppelvlak Levering naar de bijhouder
+verstuurd. Als het stelsel GBA is, dan wordt het bericht afgeleverd bij de migratievoorziening, dat
+vervolgens het bericht verstuurt aan de GBA bijhouder.
+
+

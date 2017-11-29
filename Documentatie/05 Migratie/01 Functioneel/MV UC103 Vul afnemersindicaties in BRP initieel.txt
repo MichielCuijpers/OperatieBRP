@@ -1,0 +1,726 @@
+Use case 103 Vul afnemersindicaties in BRP
+initieel
+
+2.5
+
+Datum
+Status
+
+13-04-2017
+Definitief
+
+Definitief | 2.5 | Use case 103 Vul afnemersindicaties in BRP initieel | 13-04-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+
+2
+
+AFNEMERSINDICATIES ..................................................................................................................5
+2.1
+2.2
+2.3
+2.4
+
+3
+
+MODEL GBA-V.....................................................................................................................................5
+MODEL BRP ..........................................................................................................................................6
+CONVERSIEREGELS ...............................................................................................................................7
+LOGGING ...............................................................................................................................................8
+
+GBA-STAPELS CONVERTEREN NAAR BRP-HISTORIE ....................................................9
+3.1
+3.2
+3.3
+
+4
+
+REFERENTIES ........................................................................................................................................4
+PRE CONDITIES .....................................................................................................................................4
+LEESWIJZER ..........................................................................................................................................4
+
+BRP-HISTORIE .....................................................................................................................................9
+GBA-HISTORIE.....................................................................................................................................9
+CONVERSIEALGORITME ........................................................................................................................9
+
+OPMERKINGEN ..................................................................................................................................11
+
+Operatie BRP
+
+Pagina 2 van 11
+
+Definitief | 2.5 | Use case 103 Vul afnemersindicaties in BRP initieel | 13-04-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+29-01-2014
+
+1.0
+
+Operatie BRP
+
+23-05-2014
+16-06-2014
+
+1.1
+1.2
+
+23-03-2015
+07-05-2015
+
+1.3
+1.4
+
+28-07-2015
+30-11-2015
+03-12-2015
+08-01-2016
+
+2.0
+2.1
+2.2
+2.3
+
+21-02-2016
+
+2.4
+
+13-04-2017
+
+2.5
+
+Documentatie uit de Wiki overgezet naar dit
+document
+Tekstuele aanpassingen
+Reviewcommentaar verwerkt: datum / tijd
+einde volgen moet niet gevuld worden
+Tekstuele aanpassing
+Reviewcommentaar verwerkt
+Indien geen abonnement gevonden kan
+worden wordt er nu een fout gelogd in plaats
+van het opslaan zonder abonnement
+Versie aangemaakt voor release 3.1
+BMR 44 verwerkt
+Reviewcommentaar verwerkt
+Situatie beschreven indien twee stapels de
+einddatum gelijk is.
+Aanpassingen vanwege
+documentatierichtlijnen
+Tekstuele aanpassingen
+
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+16-06-2014
+
+1.1
+
+Review
+
+Operatie BRP
+
+16-03-2015
+
+1.2
+
+Review
+
+Operatie BRP
+
+01-12-2015
+
+2.1
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 11
+
+Definitief | 2.5 | Use case 103 Vul afnemersindicaties in BRP initieel | 13-04-2017
+
+1
+
+Inleiding
+
+Dit document beschrijft op welke wijze de afnemersindicaties initieel gevuld worden.
+De vulling van de afnemersindicaties kan pas plaatsvinden nadat de autorisatietabelregels zijn
+gevuld [UC102].
+Ten behoeve van protocollering dient historie van afnemersindicaties vastgelegd te worden. In
+de BRP wordt voor gegevens die niet direct gerelateerd zijn aan de persoon op andere wijze
+historie vastgelegd. De voornaamste afwijking is dat er geen reden voor de wijziging wordt
+vastgelegd (Actie).
+
+1.1
+
+Referenties
+#
+[UC102]
+
+1.2
+
+Document
+UC102 Vul autorisatietabelregels in BRP
+initieel.doc
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+Pre condities
+De autorisatietabelregels zijn gevuld [UC102].
+
+1.3
+
+Leeswijzer
+Wanneer bij Waarde een tekst staat tussen quotes ('), wordt daarmee de daadwerkelijke waarde
+bedoeld.
+Soms wordt de Waarde <geen waarde> ingevuld. In die gevallen wordt bedoeld dat er niets
+ingevuld hoeft te worden.
+In de meeste gevallen accepteert de BRP geen lege tekst. In die gevallen wordt een standaard
+tekst opgenomen: 'Toegevoegd n.a.v. conversie, maar gegeven onbekend'. Er is dan bij Waarde
+<onbekend> ingevuld.
+Wanneer Waarde een rubriek bevat wordt verwezen naar een te converteren rubriek uit de
+autorisatietabelregel.
+Verplichte attributen zijn gemarkeerd met een sterretje ( * ).
+Alle andere Waarden verwijzen naar een BRP gegevenselement of een waarde uit een stamtabel.
+
+Operatie BRP
+
+Pagina 4 van 11
+
+Definitief | 2.5 | Use case 103 Vul afnemersindicaties in BRP initieel | 13-04-2017
+
+2
+
+Afnemersindicaties
+
+De afnemersindicaties kunnen pas geconverteerd worden als de Leveringsautorisaties zijn
+geconverteerd.
+De LO3-rubrieken die betrekking hebben op afnemersindicaties zijn:
+
+2.1
+
+Attribuut
+
+Toelichting
+
+14.40.10 Afnemersindicatie
+
+Afnemersindicatie
+
+14.85.10 Geldigheid
+
+Ingangsdatum geldigheid met betrekking tot de elementen van
+de categorie Afnemersindicatie persoonslijst
+
+Model GBA-V
+De tabel waar in GBA-V de afnemersindicatie (categorie 14) van de persoon opgeslagen wordt
+heet lo3_pl_afnemer_ind. In de onderstaande tabel wordt uitgelegd wat er in deze tabel zit en
+welke bedrijfsregels er gelden.
+lo3_pl_afnemer_ind
+Attribuut
+
+Toelichting
+
+pl_id
+
+Verwijzing naar de persoon
+
+stapel_nr
+
+Verwijzing naar een (sub) stapel binnen de stapel die betrekking heeft
+op één afnemer. Het kan echter voor komen dat een afnemer in
+meerdere stapelnummers voor komt.
+
+volg_nr
+
+Het volgnummer dat gebruikt wordt om de voorkomens binnen een
+stapel te sorteren. Dit volgnummer is essentieel omdat anders niet
+bepaald kan worden wanneer een afnemersindicatie logisch is
+verwijderd. Een logisch verwijderde afnemersindicatie bevat een lege
+afnemer_code. Een logisch verwijderde afnemersindicatie kan mogelijk
+meer dan eens voor komen binnen een stapel.
+
+afnemer_code
+
+De code van de afnemer (14.40.10). Deze is leeg als een
+afnemersindicatie logisch is verwijderd. Per stapel_nr mag slechts één
+unieke afnemer_code voor komen (naast lege voorkomens).
+
+geldigheid_start_datum
+
+De datum vanaf wanneer de afnemersindicatie geldig is (14.85.10).
+
+Operatie BRP
+
+Pagina 5 van 11
+
+Definitief | 2.5 | Use case 103 Vul afnemersindicaties in BRP initieel | 13-04-2017
+
+2.2
+
+Model BRP
+In de BRP wordt het objecttype Persoon \ afnemersindicatie gebruikt om afnemersindicaties vast
+te leggen.
+Persoon \ Afnemerindicatie
+Attribuut
+
+Waarde
+
+Toelichting
+
+Identiteit
+ID*
+
+Max(ID) + 1
+
+Deze waarde wordt automatisch gegenereerd.
+
+Persoon*
+
+Persoon.ID
+
+Op basis van het pl_id zal de persoon in GBAV opgezocht moeten worden. Aan de hand
+van A-nummer kan dan vervolgens de
+persoon in BRP opgezocht worden.
+
+Afnemer*
+
+Partij.ID
+
+Op basis van de afnemer_code kan de juiste
+partij gevonden worden in Partij.
+
+Leveringsautorisatie*
+
+Leveringsautorisatie.ID
+
+Een afnemersindicatie dient aan de meest
+recente Leveringsautorisatie gekoppeld te
+worden van de afnemer (ook als deze niet
+meer geldig is).
+
+Datumaanvang
+materiële periode
+
+<leeg>
+
+In GBA geldt een afnemersindicatie voor de
+hele historie van de persoon en niet vanaf
+een bepaald tijdstip. Daarom dient deze
+waarde niet gevuld te worden (NULL).
+
+Datum \ Tijd einde
+volgen
+
+<leeg>
+
+Niet van toepassing
+
+Standaard
+
+Operatie BRP
+
+Pagina 6 van 11
+
+Definitief | 2.5 | Use case 103 Vul afnemersindicaties in BRP initieel | 13-04-2017
+
+2.3
+
+Conversieregels
+Stapels dienen conform de BRP-historielogica voor niet persoonsgerelateerde gegevens
+geconverteerd te worden welke beschreven is in het hoofdstuk 3.
+Wanneer bij een persoon meerdere stapels voorkomen met dezelfde afnemersindicatie, wordt
+slechts een van de stapels geconverteerd. Om te bepalen welke stapel dat is, dienen de
+onderstaande regels toegepast te worden (de rood gemarkeerde stapel wordt gebruikt):
+
+•
+
+•
+
+•
+
+Indien er één actuele stapel is (het voorkomen met het laagst volgnummer heeft een
+gevulde afnemersindicatie) gebruik dan deze stapel
+Stapel 1
+Volgnummer
+
+Afnemerind.
+
+Datum
+
+0
+
+6
+
+2001-01-01
+
+1
+
+6
+
+1995-01-01
+
+Stapel 2
+Volgnummer
+0
+
+Afnemerind.
+-
+
+Datum
+2006-01-01
+
+1
+
+6
+
+2000-01-01
+
+Indien er meerdere actuele stapels zijn, gebruik dan de stapel die in het voorkomen met het
+laagste volgnummer, de oudste datum heeft
+Stapel 1
+Volgnummer
+
+Afnemerind.
+
+Datum
+
+0
+1
+
+6
+6
+
+1999-01-01
+1995-01-01
+
+Stapel 2
+Volgnummer
+0
+
+Afnemerind.
+6
+
+Datum
+2006-01-01
+
+1
+
+6
+
+1995-01-01
+
+Indien er geen actuele stapels zijn, gebruik dan de stapel die in het voorkomen met het
+laagste volgnummer, de meest recente datum heeft
+Stapel 1
+Volgnummer
+
+Afnemerind.
+
+Datum
+
+0
+1
+
+6
+
+2000-01-01
+1999-01-01
+
+Stapel 2
+Volgnummer
+0
+
+Afnemerind.
+-
+
+Datum
+2006-01-01
+
+1
+
+6
+
+1995-01-01
+
+• Indien er geen actuele stapels zijn en in het voorkomen met het laagste volgnummer is de
+datum gelijk, dan maakt het niet uit welke stapel gebruikt wordt.
+Indien een stapel slechts één voorkomen kent en afnemersindicatie is leeg dan wordt de stapel
+genegeerd.
+Soms gaat er bij het converteren wat historie-informatie verloren. Deze informatie is echter niet
+van belang voor de protocollering.
+
+Operatie BRP
+
+Pagina 7 van 11
+
+Definitief | 2.5 | Use case 103 Vul afnemersindicaties in BRP initieel | 13-04-2017
+
+2.4
+
+Logging
+Alle bijzondere situaties die tijdens de conversie geconstateerd worden, dienen gelogd te
+worden. Met bijzondere situaties wordt onder andere bedoeld (maar niet uitsluitend):
+• technische fouten
+• deels of in zijn geheel niet geconverteerde stapels met afnemersindicaties
+Minimaal de volgende gegevens worden gelogd indien ze aanwezig zijn:
+•
+•
+•
+•
+
+de persoon
+de afnemersindicatie
+het stapelnummer
+een omschrijving van de situatie
+
+Operatie BRP
+
+Pagina 8 van 11
+
+Definitief | 2.5 | Use case 103 Vul afnemersindicaties in BRP initieel | 13-04-2017
+
+3
+
+GBA-Stapels converteren naar BRP-historie
+
+In dit hoofdstuk wordt beschreven op welke wijze GBA-stapels naar BRP-historie geconverteerd
+kan worden. In principe is dit van toepassing voor alle stapels die voor kunnen komen. In de
+praktijk is dit echter alleen van toepassing op afnemersindicaties.
+3.1
+
+BRP-historie
+De BRP gebruikt in grote lijnen het volgende model om met historie om te gaan:
+
+•
+•
+
+een actuele entiteit met alle attributen
+een historische entiteit met daarin alleen de attributen waar historie van gewenst is
+
+De historische entiteit bevat noodzakelijkerwijs wat extra informatie:
+
+•
+•
+•
+
+een verwijzing naar de actuele entiteit
+het tijdstip waarop de historie is ontstaan (Tijdstip registratie)
+het tijdstip waarop de historie is vervallen (Tijdstip verval)
+
+Let op: DienstInh en DienstVerval worden niet gevuld omdat in de GBA niet bekend is in het
+kader van welke dienst een afnemersindicatie is geplaatst of verwijderd.
+3.2
+
+GBA-historie
+De GBA gebruikt stapels om met historie om te gaan:
+Attribuut
+
+Toelichting
+
+Stapelnummer
+
+Het nummer van de stapel, alle regels met hetzelfde nummer behoren tot
+dezelfde stapel. Verplicht.
+
+Volgnummer
+
+Oplopend nummer beginnend bij 0 (nul) en bepaalt binnen de stapel de
+volgorde van de regels. 0 is de meest recente regel. Verplicht.
+
+Afnemersindicatie
+
+De afnemer waar de regel bij hoort. Optioneel. Indien niet aanwezig
+betekent dit dat de stapel niet meer actueel is vanaf Datum Ingang. Op deze
+manier kan een Datum Ingang en Datum Einde uitgedrukt worden.
+
+Datum Ingang
+
+Vanaf deze datum is de regel geldig. Verplicht.
+
+In het SAD van GBA-V is een aanvullende beschrijving van het gebruik van stapels te vinden.
+3.3
+
+Conversiealgoritme
+Stapels kunnen naar het BRP-model geconverteerd worden. Bij deze conversie wordt de BRP
+historielogica gehanteerd. Dit wijkt af van wat er bij de conversie van personen gebeurt, waarbij
+het glazenbolprincipe gehanteerd wordt. Datum ingang wordt ingevuld bij Tijdstip registratie van
+de nieuwe regel en bij Tijdstip verval van de vorige regel als die aanwezig is.
+De logica kan het beste geïllustreerd worden door elke regel uit de stapel één voor één vast te
+leggen zoals dat in de BRP-praktijk ook zou gebeuren (hoogste volgnummer eerst, laagste
+volgnummer laatst). Hierbij maken we gebruik van de onderstaande voorbeeldstapel zoals die bij
+afnemersindicaties voor kan komen.
+Stapel voorbeeld 1
+Stapelnummer
+
+Volgnummer
+
+Afnemersindicatie
+
+Datum ingang
+
+1
+
+0
+
+12
+
+01-01-1999
+
+1
+
+1
+
+-
+
+01-01-1997
+
+Operatie BRP
+
+Pagina 9 van 11
+
+Definitief | 2.5 | Use case 103 Vul afnemersindicaties in BRP initieel | 13-04-2017
+
+1
+
+2
+
+12
+
+01-01-1996
+
+1
+
+3
+
+12
+
+01-01-1995
+
+Volgnummer 3 registreren:
+BRP-vulling
+Tijdstip registratie
+
+Tijdstip verval
+
+01-01-1995
+
+-
+
+Tijdstip registratie wordt gevuld met de waarde van Datum ingang (01-01-1995).
+Volgnummer 2 registreren:
+BRP-vulling
+Tijdstip registratie
+
+Tijdstip verval
+
+01-01-1995
+
+01-01-1996
+
+01-01-1996
+
+-
+
+Tijdstip verval van de vorige regel wordt gevuld met de waarde van Datum ingang (01-011996).
+Tijdstip registratie wordt gevuld met de waarde van Datum ingang (01-01-1996).
+Volgnummer 1 registreren:
+BRP-vulling
+Tijdstip registratie
+
+Tijdstip verval
+
+01-01-1995
+
+01-01-1996
+
+01-01-1996
+
+01-01-1997
+
+Tijdstip verval wordt gevuld met de waarde van Datum ingang (01-01-1997).
+Volgnummer 0 registreren:
+BRP-vulling
+Tijdstip registratie
+
+Tijdstip verval
+
+01-01-1995
+
+01-01-1996
+
+01-01-1996
+
+01-01-1997
+
+01-01-1999
+
+-
+
+Tijdstip registratie wordt gevuld met de waarde van Datum ingang (01-01-1999).
+
+Operatie BRP
+
+Pagina 10 van 11
+
+Definitief | 2.5 | Use case 103 Vul afnemersindicaties in BRP initieel | 13-04-2017
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 11 van 11
+
+

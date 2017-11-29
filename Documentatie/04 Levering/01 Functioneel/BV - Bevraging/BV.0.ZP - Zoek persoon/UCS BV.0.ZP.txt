@@ -1,0 +1,788 @@
+UCS BV.0.ZP – Zoek persoon
+Versie
+
+1.0
+
+Datum
+
+10 juli 2017
+
+Status
+
+Definitief
+
+Locatie
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+21-04-2017
+
+0.1
+
+Eerste versie nav herstructurering
+
+oBRP
+
+25-04-2017
+
+0.2
+
+Aangepast nav review
+
+oBRP
+
+17-05-2017
+
+0.3
+
+R2297 'Historisch zoeken alleen bij autorisatie' is vervallen
+
+oBRP
+
+24-05-2017
+
+0.4
+
+Extra zoekoptie en aanpassing R2402 op simultaan waar igv oBRP
+historisch zoeken
+
+10-07-2017
+
+1.0
+
+Definitief gemaakt
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+0.4
+
+Interne review
+
+oBRP
+
+UCS BV.0.ZP - Zoek persoon
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Invoer ....................................................................................................................... 6
+2.1
+2.2
+2.3
+2.4
+
+3
+
+Beschrijving .........................................................................................................................9
+Schematische weergave.........................................................................................................9
+Beschrijving activiteitendiagram ........................................................................................... 11
+Bedrijfsregels ..................................................................................................................... 13
+
+Uitvoer .................................................................................................................... 14
+4.1
+4.2
+4.3
+
+5
+
+Beschrijving .........................................................................................................................6
+Verzoekbericht .....................................................................................................................6
+Specifieke toelichting op het verzoekbericht .............................................................................6
+Bijzonderheden.....................................................................................................................7
+
+Verwerking ............................................................................................................... 9
+3.1
+3.2
+3.3
+3.4
+
+4
+
+Doel ....................................................................................................................................3
+Functionele context ...............................................................................................................3
+Referenties ..........................................................................................................................4
+Openstaande punten .............................................................................................................4
+
+Beschrijving ....................................................................................................................... 14
+Resultaatbericht.................................................................................................................. 14
+Toelichting op het resultaatbericht ........................................................................................ 14
+
+Ontwerpbeslissingen .............................................................................................. 15
+
+Status: Definitief, versie: 1.0
+
+Pagina 2 van 15
+
+UCS BV.0.ZP - Zoek persoon
+
+1 Inleiding
+1.1
+
+Doel
+
+Het primaire doel van de dienst ‘Zoek persoon’ is om een persoonsidentificatie (BSN, A-nummer of
+persoonsobjectsleutel) te verkrijgen van een persoon over wie de afnemer/bijhouder (gebruiker)
+deze nog niet heeft. De gebruiker moet dan natuurlijk wel over voldoende andere gegevens om de
+persoon langs een andere weg te kunnen vinden. Bijvoorbeeld adresgegevens en een
+geboortedatum, Naamsgegevens en woonplaats of een reisdocumentnummer. De dienst ‘Zoek
+persoon’ geeft van alle personen die aan het zoekcriterium voldoen een beperkte set van
+resultaatgegevens retour. Hiermee zou de gebruiker in staat moeten zijn om de juiste persoon in
+het resultaat te kiezen en deze bijvoorbeeld met de dienst ‘Geef details persoon’ verder op te
+vragen.
+De dienst kan zoeken in de materiële historie. De gegevens die retour worden gegeven zijn echter
+altijd de op het huidig moment geldige gegevens. Deze kunnen dus verschillen van de inhoud
+waarop is gezocht! Als de afnemer of bijhouder op grond van die gegevens toch nog twijfelt tussen
+verschillende personen, dan zal hij de betreffende personen met de dienst ‘Geef details persoon’
+moeten opvragen om meer gegevens te verkrijgen en de juiste persoon te bepalen.
+De dienst geeft geen personen terug als er alleen maar gezocht is op adresgegevens (in dat geval
+moet de dienst ‘Zoek persoon op adresgegevens’ worden gebruikt) of als het aantal resultaten te
+hoog is (instelbaar in de autorisatie). Daarnaast beschermt de dienst ‘Zoek Persoon’ het systeem
+tegen overbelasting. Dit betekent dat zoekopdrachten die een te groot beslag zouden leggen op de
+verwerkingscapaciteit van het systeem geweigerd kunnen worden. Ook kan een zoekopdracht
+tijdelijke worden geweigerd als op dat moment andere zoekopdrachten het systeem zwaar
+belasten. De zoekopdracht moet dan op een later moment opnieuw worden aangeboden. Het
+systeem is echter zo geconfigureerd dat bij de gebruik van de reguliere zoekpaden dit niet zal
+optreden.
+Hoewel de dienst ‘Zoek persoon’ vooral bedoeld is om een ingang naar andere diensten te
+verschaffen, kan het zijn dat een gebruiker aan de beperkte resultaatset van deze dienst al
+voldoende informatie over een persoon heeft (bijvoorbeeld als hij alleen zijn actuele adres nodig
+heeft). In dat geval hoeft de gebruiker geen aanvullende diensten meer aan te roepen. In het
+resultaat van de dienst ‘Zoek persoon’ worden ook de verplichte gegevens meegeleverd o.a.
+onderzoeken, melding verstrekkingsbeperkingen en (nadere) bijhoudingsaard.
+
+1.2
+
+Functionele context
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitdiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+
+Status: Definitief, versie: 1.0
+
+Pagina 3 van 15
+
+UCS BV.0.ZP - Zoek persoon
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving Generieke Berichtstructuur
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+4
+
+Aspectbeschrijving Historiefilter
+
+Operatie BRP
+
+-
+
+-
+
+5
+
+Aspectbeschrijving Formele en Materiele Historie
+
+Operatie BRP
+
+-
+
+-
+
+6
+
+Logisch Ontwerp Basisregistratie Personen
+
+Operatie BRP
+
+-
+
+-
+
+1.4
+
+Openstaande punten
+•
+
+Zoeken op nationaliteit:
+In object Nationaliteit bevat de groep Identiteit de nationaliteitscode, maar de groep
+Standaard bepaalt eigenlijk de geldigheid van die code. De zoekfunctionaliteit ‘snapt’ die
+constructie niet: de nationaliteitscode zit in een groep met historiepatroon ‘Geen’ en is
+daarmee altijd geldig. Het gevolg is dus dat wanneer (mede) gezocht wordt op de actuele
+Nederlandse nationaliteit, hoogstwaarschijnlijk ook personen gevonden worden waarbij de
+Nederlandse nationaliteit beëindigd is. Bij het vervallen van een nationaliteit vervalt ook
+alleen de groep standaard, dus zelfs dan zal de betreffende nationaliteit nog steeds
+gevonden worden!
+Het komt op zich vaker voor dat een bepaalde groep iets zegt over de geldigheid van het
+hele object (denk aan ouderschap) maar nationaliteit lijkt het enige echte pijnpunt wat
+zoeken betreft. Dit kan dus eventueel met een uitzonderingsconstructie worden opgelost.
+Alternatief is een generieke oplossing, waarbij in de Element tabel wordt vastgelegd welke
+groep de geldigheid van het object uitdrukt.
+
+•
+
+Foutmelding koppelen aan de elementen van het verzoekbericht:
+BRPXML ondersteunt een drietal verwijsmechanismen. Dit staat beschreven in paragraaf
+8.3.5 van het LO-BRP. Eén van die verwijsmechanismen is door middel van
+communicatieID/referentieID in het bericht. Hierbij is het mogelijk om objecten of groepen
+in het bericht te markeren met een communicatieID. In hetzelfde bericht of in het bericht
+dat daar direct op volgt (respons) kan daarnaar verwezen worden door het opnemen van
+een referentieID.
+Eén van de toepassingen hiervoor is om bij foutmeldingen aan te gegeven waar deze
+betrekking op heeft. De melding in het responsbericht kan daarmee verwijzen naar een
+object of groep in het verzoekbericht. De afnemer (of systeemleverancier) kan deze
+verwijzing potentieel gebruiken om naar de foutmelding naar eindgebruiker duidelijker te
+maken. Op dit moment levert de BRP deze informatie nog niet: de verwijzing is altijd naar
+het hoofdniveau (stuurgegevens) van het verzoekbericht. BRP gebruikt dit mechanisme al
+wel om bij een waarschuwing over een persoon (bijvoorbeeld de aanduiding dat bij een
+persoon een verstrekkingsbeperking aanwezig is) aan te geven over welke persoon in het
+resultaatbericht deze melding gaat (maar dat is dus een verwijzing binnen het
+resultaatbericht, niet een verwijzing van het resultaatbericht naar het verzoekbericht).
+Dit verwijsmechanisme is vooral zinvol wanneer er in het verzoekbericht een herhalende
+structuur voorkomt zodat bij de foutmelding kan worden aangewezen op welk item binnen
+die repeterende structuur de melding slaat. Dit komt op dit moment maar op één plek voor
+en dat zijn de zoekcriteria in Zoek Persoon (en Zoek Persoon op adresgegevens). Als de
+gebruiker bijvoorbeeld in één van zijn zoekcriteria een optie gebruikt die niet is toegestaan
+bij het betreffende attribuut, zou hiermee duidelijk kunnen worden gemaakt op welk
+attribuut dit slaat. Om dit te implementeren zou voor elk zoekcriterium de in het
+verzoekbericht meegegeven communicatieID tijdens de verwerking moeten worden
+vastgehouden.
+
+Status: Definitief, versie: 1.0
+
+Pagina 4 van 15
+
+UCS BV.0.ZP - Zoek persoon
+
+Zie voor meer informatie de analyse van WIT-537: https://www.modernodam.nl/svn/brpvoortbrenging/05 Wit-Rood/WIT-537 Foutmeldingen laten verwijzen naar objecten van
+verzoekbericht
+(noot: een tweede repeterende structuur is de scoping in Geef details persoon. Hier staat
+het huidige bericht echter maar één communicatieID voor de hele structuur door. Het lijkt
+hier ook minder zinvol omdat aanroepende systemen waarschijnlijk alleen een aantal vaste
+scopingpresets toestaan. Een fout is dus minder waarschijnlijk en bovenden kan de
+eindgebruiker er dan niets mee)
+
+Status: Definitief, versie: 1.0
+
+Pagina 5 van 15
+
+UCS BV.0.ZP - Zoek persoon
+
+2 Invoer
+2.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft het verzoekbericht waarmee aan de bevragende partij een beperkte set
+van resultaatgegevens van alle personen die aan het zoekcriterium voldoen kan worden verstrekt.
+
+2.2
+
+Verzoekbericht
+
+De structuur van het verzoekbericht staat beschreven in Aspectbeschrijving Generieke
+berichtstructuur [2].
+
+2.3
+
+Specifieke toelichting op het verzoekbericht
+
+Toelichting op het verzoekbericht van deze dienst.
+Stuurgegevens
+Van een ingevoerd bericht worden stuurgegevens Zendende partij, het Zendende systeem, een
+Referentienummer en het Tijdstip vastgelegd en meegeleverd als onderdeel van het
+verzoekbericht.
+Parameters
+Parameter Rol is bedoeld voor de routering van het verzoek (zonder dat het nodig is om de
+database te bevragen; rol is in principe afleidbaar). Bevragingen door Bijhouders worden bij
+voorkeur op de master uitgevoerd.
+In het bericht wordt de Leveringsautorisatie, waarbinnen een synchronisatieverzoek voor een
+persoon wordt gedaan, geïdentificeerd door de Leveringsautorisatieidentificatie voor de Dienst.
+Parameter Zoekbereik geeft aan of er gezocht wordt naar gegevens op één materiële peildatum
+(waarde ‘Peilmoment’) of dat er wordt gezocht naar geldigheid op enig moment in de materiële
+tijdslijn (waarde ‘Materiele periode’).
+Parameter PeilmomentMaterieelZoekvraag geeft de peildatum of de bovengrens van de materiële
+periode aan. Als deze leeg wordt gelaten dan geldt de systeemdatum (dus: zoeken op actueel of in
+de gehele materiële periode). Zie Aspectbeschrijving Formele en Materiele Historie [5].
+Zoekcriteria
+De bevragende partij mag in principe elke combinatie van zoekcriteria meegeven, zolang hij maar
+geautoriseerd is voor het betreffende Element. Voor het zoeken in de historie dient hij ook
+geautoriseerd te zijn voor de (eventuele) materiële historie van de gebruikte zoekcriteria. Niet elke
+Optie is mogelijk bij elk Element.
+De parameter Optie mag de volgende waarden hebben:
+Optie
+
+Betekenis
+
+Exact
+
+De waarde in het attribuut dient exact gelijk te zijn (over de volledige lengte)
+aan de in het zoekcriterium opgegeven Waarde.
+Indien het een tekstattribuut betreft, dan dient de lengte en ongeconverteerde
+inhoud gelijk te zijn (dus GEEN omzetting van hoofdletters en diakritische
+tekens). Indien het een datum betreft, dan dienen de waarden voor dag, maand
+en jaar gelijk te zijn (dus geen logica voor gedeeltelijk onbekende datums).
+
+Klein
+
+De lengte en de geconverteerde inhoud dient gelijk te zijn (na omzetting van
+hoofdletters en diakritische tekens) aan de in het zoekcriterium opgegeven
+Waarde.
+Deze optie is alleen mogelijk bij tekstattributen.
+
+Status: Definitief, versie: 1.0
+
+Pagina 6 van 15
+
+UCS BV.0.ZP - Zoek persoon
+
+Vanaf exact
+
+De waarde in het attribuut dient te beginnen met de in het zoekcriterium
+opgegeven Waarde.
+Indien het een tekstattribuut betreft dan mag de aanwezige tekst langer zijn dan
+de opgegeven zoektekst. Het 'overblijvende deel' wordt niet beschouwd in de
+vergelijking.
+Indien het een datumattribuut betreft dan dient voor het opgegeven deel een
+ondergrens en een bovengrens bepaald te worden door aanvullen tot lengte 8
+met nullen respectievelijk negens. Vervolgens moet gezocht worden naar
+waarden die zich in die range bevinden. Bijvoorbeeld: het opgegeven deel is
+'1963', dan moet gezocht worden naar '19630000' <= 'datumveld' <=
+'19639999'.
+
+Vanaf klein
+
+De waarde in het attribuut dient na omzetting van hoofdletters en diakritische
+tekens te beginnen met de in het zoekcriterium opgegeven Waarde.
+Indien het een tekstattribuut betreft dan dient de geconverteerde inhoud van het
+opgegeven deel gelijk te zijn (dus na omzetting van hoofdletters en diakritische
+tekens). De aanwezige tekst mag dus langer zijn dan de opgegeven zoektekst.
+Het 'overblijvende deel' wordt niet beschouwd in de vergelijking.
+Indien het een datumattribuut betreft dan is de afhandeling conform de optie
+“Vanaf exact”.
+
+Leeg
+
+Het attribuut dient leeg te zijn.
+Deze optie is alleen mogelijk bij specifieke tekstattributen waar de afwezigheid
+van belang kan zijn voor het terugdringen van het aantal resultaten, zoals bij
+Toevoeging huisnummer.
+Optie 'Leeg' voor een Indicator moet, afhankelijk van de soort indicator, als volgt
+geïnterpreteerd worden:
+▪
+▪
+▪
+
+2.4
+
+'Ja of Leeg'; afwezigheid van de indicator groep met waarde 'Ja'.
+'Nee of Leeg'; afwezigheid van de indicator groep met waarde 'Nee'.
+'Ja, Nee of Leeg'; afwezigheid van de indicator groep met waarde 'Ja' of
+'Nee'.
+
+Bijzonderheden
+•
+
+Slim zoeken
+Met ‘slim zoeken’ wordt het gebruik van de zoekopties ‘Klein’, ‘Vanaf exact’ en ‘Vanaf klein’
+bedoeld. Beide opties kunnen gebruikt worden op alle attributen die een tekst van
+variabele lengte kunnen bevatten. Dus bijvoorbeeld wel op Geslachtsnaamstam en op
+Naam openbare ruimte, maar niet op Gemeentecode (is numeriek) of op Postcode (heeft
+een vaste lengte).
+Zowel de optie ‘Klein’ als ‘Vanaf klein’ passen omzetting van hoofdletters en diakritische
+tekens toe. De optie ‘Vanaf klein’ vindt bovendien ook een succesvolle match als de vulling
+van het betreffende attribuut langer is dan het zoekargument maar wel overeenkomt met
+het deel wat in het zoekargument is meegegeven.
+Voor de omzetting geldt:
+•
+
+•
+•
+
+De meest diakritische tekens zijn samengesteld uit een basisletter aangevuld met
+een extra symbool (grave, acute, circumflex, tilde, macron, breve, duiaeresis, ring,
+ogonek, dot, cedilla, caron). Deze worden omgezet naar de basisletter.
+Hoofdletters worden omgezet naar de bijbehorende kleine letter.
+Hoofdletters met diakritische tekens worden omgezet naar de bijbehorende kleine
+basisletter
+
+Status: Definitief, versie: 1.0
+
+Pagina 7 van 15
+
+UCS BV.0.ZP - Zoek persoon
+
+•
+
+Er is een beperkte set van bijzondere tekens die soms worden omgezet naar meer
+dan één teken. Zo wordt de þ (Ijslandse thorn) omgezet naar ‘th’ en ‘ß’ (Duitse
+ringel-s) naar ‘ss’.
+
+Zie ook Logisch Ontwerp Basisregistratie Personen [6] voor een complete opsomming van
+de tekenset.
+
+Status: Definitief, versie: 1.0
+
+Pagina 8 van 15
+
+UCS BV.0.ZP - Zoek persoon
+
+3 Verwerking
+3.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft de verwerking van het verzoekbericht ‘Zoek persoon’.
+
+3.2
+
+Schematische weergave
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitendiagrammen wordt verwezen naar de Leeswijzer [1].
+Activiteitendiagram met de verwerking van het verzoekbericht ‘Zoek persoon’.
+In het diagram is alleen de happy flow weergegeven. Foutafhandeling is hier niet opgenomen maar
+de XSD-validatie en invoercontrole’s staan beschreven in de begeleidende tekst in de volgende
+paragraaf of in de aangeroepen Use Cases.
+
+Status: Definitief, versie: 1.0
+
+Pagina 9 van 15
+
+UCS BV.0.ZP - Zoek persoon
+
+Status: Definitief, versie: 1.0
+
+Pagina 10 van 15
+
+UCS BV.0.ZP - Zoek persoon
+
+3.3
+
+Beschrijving activiteitendiagram
+
+De verwerking van het ontvangen verzoekbericht bestaat uit een aantal volgordelijke stappen die
+uitgevoerd worden. In de onderstaande toelichtende tekst zijn de stappen onderverdeeld in ‘XSD
+controle’, ‘Controle invoer’, ‘Verwerking’ en ‘Uitvoer’. Elke toegelichte stap is terug te vinden in het
+activiteitendiagram in de vorige paragraaf.
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de aan de Use Cases gekoppelde regels in BMR.
+
+XSD controle
+•
+
+AL.1.XV – XSD validatie
+Het inkomende verzoek wordt gevalideerd door deze te controleren tegen het bij het
+verzoek behorende XSD-schema (XML Schema Definition). Als er een XSD fout wordt
+geconstateerd, dan wordt er direct een technische foutmelding teruggegeven aan de
+zendende applicatie.
+
+Controle invoer
+•
+
+LV.1.AB – Archiveer bericht
+Draagt zorg voor de archivering van het technisch verwerkbare inkomende verzoekbericht
+en van het uitgaande bericht (het resultaatbericht).
+
+•
+
+LV.1.AL – Autorisatie levering
+Het inkomende verzoek wordt gecontroleerd op geldigheid van leveringsautorisatie en
+dienst autorisatie.
+
+•
+
+BV.1.ZP.CI – Controleer inhoud
+Een zoekvraag dient minstens één zoekcriterium te bevatten dat geen adresgegeven is. De
+Zoekcriteria van het inkomende verzoek worden gecontroleerd op;
+
+•
+
+o
+
+Element:
+▪
+Moet een element van de soort attribuut zijn.
+▪
+Moet een geldig stamgegeven zijn dat onderdeel is van het kern-schema én
+qua autorisatie opvraagbaar zijn.
+▪
+Mag niet verwijzen naar een datum aanvang geldigheid.
+▪
+De bevragende partij moet autorisatie hebben voor het element.
+▪
+Zoeken op onderzoek en verantwoording is niet toegestaan.
+
+o
+
+Waarde:
+▪
+Moet leeg zijn bij Optie "Leeg".
+▪
+Mag niet leeg zijn indien Optie ongelijk is aan "Leeg".
+▪
+Mag niet langer zijn dan de maximale lengte van het element indien het
+type ‘alfanumeriek’ is.
+▪
+Mag niet strijdig zijn met het datatype van het element.
+
+o
+
+Optie:
+▪
+“Vanaf klein", “Vanaf exact” of "Klein" zijn alleen toegestaan indien het
+element van het type 'alfanumeriek' is. Daarnaast mag "Vanaf klein" en
+“Vanaf exact” ook worden toegepast op een element van het type 'datum
+(evt. deels onbekend)'.
+
+LV.1.ZP.HR – Haal resultaten
+
+Status: Definitief, versie: 1.0
+
+Pagina 11 van 15
+
+UCS BV.0.ZP - Zoek persoon
+
+Wordt een zoekvraag ontvangen op een moment dat het zoekproces het systeem te zwaar
+belast, dan kan het verzoek niet in behandeling worden genomen. Verder dient de
+zoekvraag voldoende snel te evalueren zijn en mag deze niet teveel (tussen) resultaten
+opleveren.
+Het zoekresultaat mag alleen personen bevatten die voldoen aan alle opgegeven
+zoekcriteria en dient te voldoen aan de Totale Populatiebeperking. Daarbij geldt dat alleen
+niet-vervallen en ingeschreven personen geleverd mogen worden. Er mag geen sprake zijn
+van een verstrekkingsbeperking op de persoon voor de afnemer.
+Hoe er historisch gezocht wordt is afhankelijk van de parameters uit het verzoekbericht;
+o
+
+o
+
+Zoeken op één materiële peildatum (Zoekbereik = 'Peilmoment' (of leeg)):
+▪
+Zoeken naar de actuele gegevens (PeilmomentMaterieelZoekvraag is leeg).
+▪
+Zoeken naar gegevens zoals ze geldig waren op de opgegeven datum
+(PeilmomentMaterieelZoekvraag is gevuld).
+Zoeken naar geldigheid op enig moment in de materiële tijdslijn (Zoekbereik =
+'Materiele periode'):
+▪
+Zoeken naar geldigheid op een willekeurig moment
+(PeilmomentMaterieelZoekvraag is leeg).
+▪
+Zeken naar gegevens zoals ze geldig waren 'op of voor' de opgegeven
+datum (PeilmomentMaterieelZoekvraag is gevuld).
+
+Voor het historisch zoeken geldt verder dat:
+o
+o
+o
+
+Alleen niet-vervallen voorkomens worden beschouwd.
+Groepen die geen materieel historiepatroon hebben zijn altijd geldig.
+Er tenminste één datum in het opgegeven zoekbereik moet bestaan waarop een of
+meer zoekcriteria waar zijn.
+
+Verwerking
+Na het doorlopen van de controles wordt het resultaatbericht samengesteld en aan de verzoekende
+partij gestuurd.
+Uitvoer
+•
+
+LV.1.SPL - Samenstellen Persoonslijst
+Hier wordt de ongefilterde persoonslijst opgesteld voor de in het bericht te leveren persoon.
+In deze stap wordt ook gefilterd op de grens van deze persoonslijst.
+
+•
+
+LV.1.MBZ – Maak bericht zoek persoon (op adresgegevens)
+Alleen actuele gegevens en wettelijk verplichte verantwoordingsgegevens worden geleverd
+en alleen onderzoeksgegevens die betrekking hebben op in het bericht aanwezige
+gegevens.
+De groep migratie mag alleen worden opgenomen indien sprake is van emigratie.
+Zijn in het resultaatbericht meerdere hoofdpersonen, dan wordt de volgorde bepaald op
+basis van het BSN (oplopend).
+Het resultaatbericht mag geen onderzoeken naar ontbrekende gegevens bevatten.
+
+•
+
+LV.1.AFB – Autorisatiefilter bericht
+De in de vorige stap samengestelde persoonslijst wordt gefilterd op autorisatie op historie,
+verantwoording, onderzoek, inhoudelijke groepen en attributen.
+
+•
+
+LV.1.BO – Bericht opschonen
+
+Status: Definitief, versie: 1.0
+
+Pagina 12 van 15
+
+UCS BV.0.ZP - Zoek persoon
+
+Na het filteren in de voorgaande stappen kunnen er lege groepen of niet relevante
+verwijzingen in het bericht ontstaan. In deze stap wordt ook de sortering van groepen en
+objecten bepaald.
+
+•
+
+LV.1.MR – Maak resultaatbericht
+Het resultaat en de “geslaagd” melding of de eventuele foutmelding(en) worden in een
+(synchroon) resultaatbericht opgenomen.
+
+•
+
+LV.1.PB – Protocolleer bericht
+Alle leveringen waarin persoonsgegevens zijn opgenomen moeten worden geprotocolleerd
+alvorens de levering aan afnemers mag plaatsvinden.
+Wanneer de dienst ten behoeve van bijhouders wordt uitgevoerd, dan is protocollering niet
+nodig.
+
+•
+
+LV.1.VR – Verzend resultaatbericht
+Vervolgens wordt het resultaatbericht afgeleverd aan de indiener van het verzoekbericht.
+Het resultaatbericht wordt gearchiveerd (LV.1.AB).
+Echter indien het niet mogelijk is om een levering te protocolleren dan mogen er geen
+gegevens geleverd worden.
+
+3.4
+
+Bedrijfsregels
+
+Voor een toelichting op de verschillende soorten bedrijfsregels, de meldingsniveaus, de toepassing
+en werking ervan in het bijhoudingsproces, wordt verwezen naar de daartoe opgestelde
+Aspectbeschrijving Controles [3].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels en definitieregels zijn opgenomen de bijlage: BV.0.ZP – Bijlage Zoek persoon.doc.
+
+Status: Definitief, versie: 1.0
+
+Pagina 13 van 15
+
+UCS BV.0.ZP - Zoek persoon
+
+4 Uitvoer
+4.1
+
+Beschrijving
+
+Dit proces levert altijd een resultaatbericht op. Deze bevat ofwel een foutmelding ofwel van één of
+meer personen de ‘beperkte set van gegevens’. Daarnaast worden in het resultaat de verplicht te
+leveren gegevens meegegeven als daar sprake van is.
+
+4.2
+
+Resultaatbericht
+
+In antwoord op de aanroep van de dienst ontvangt de afnemer een synchroon resultaatbericht.
+Voor de volledige beschrijving en inhoud van het resultaatbericht wordt verwezen naar
+Aspectbeschrijving Generieke Berichtstructuur [2] en de bijlage: BV.0.ZP – Bijlage Zoek
+persoon.doc.
+
+4.3
+
+Toelichting op het resultaatbericht
+
+Stuurgegevens
+Van het bericht worden stuurgegevens Zendende partij, het Zendende systeem, een
+Referentienummer, een Crossreferentienummer (Referentienummer uit de stuurgegevens van het
+Verzoekbericht) en het Tijdstip vastgelegd en meegeleverd als onderdeel van het resultaatbericht.
+Resultaat
+Het resultaat van de Verwerking kan de waarde “Geslaagd” of “Foutief” aannemen. Daarachter
+wordt aangegeven wat het Hoogste Meldingsniveau is, dat is aangetroffen tijdens de uitgevoerde
+controles. De ernst wordt uitgedrukt in het meldingsniveau en betreft in aflopende hoogte:
+Fout
+Deblokkeerbaar
+Waarschuwing
+Informatie1
+Meldingen
+In het bericht zijn de Regels opgenomen die gecontroleerd zijn, met daarbij aangegeven welke
+Soort melding (informatief, waarschuwing, deblokkeerbaar, fout) en de Melding zelf, die in tekst
+aangeeft wat er op basis van de gecontroleerde regel is geconstateerd.
+
+1
+
+Dit meldingsniveau wordt momenteel nog niet gehanteerd, maar is gereserveerd voor toekomstig gebruik.
+
+Status: Definitief, versie: 1.0
+
+Pagina 14 van 15
+
+UCS BV.0.ZP - Zoek persoon
+
+5 Ontwerpbeslissingen
+•
+
+We leggen niet uitgebreid vast welke zoekopties toegestaan zijn bij welke attributen. We
+kijken alleen (via de Element tabel) naar het datatype van het attribuut.
+
+•
+
+Bij Zoek persoon willen we voorkomen dat men toch alleen op adresgegevens gaat zoeken
+(want daar is de dienst Zoek persoon op adresgegevens voor). Dat een gebruiker echt
+alleen maar op adresgegevens zoekt is eenvoudig af te vangen (en dat doen we nu ook)
+maar als een gebruiker dit aanvult met een ander persoonsgegeven wordt het soms
+twijfelachtig: adres + geslachtsnaam is prima, maar adres + geslachtsaanduiding is dat
+eigenlijk niet. Omdat het complex is om dit goed af te vangen en omdat GBA-V ook niet
+waterdicht is op dit punt, laten we het op dit moment zo.
+
+Status: Definitief, versie: 1.0
+
+Pagina 15 van 15
+
+

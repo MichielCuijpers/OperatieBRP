@@ -1,0 +1,379 @@
+LO3 Bericht
+
+Dyn
+
+LGM 11 Verantwoording Conversie
+
+Identiteit
+
+D
+
+ID
+
+LO3 bericht ID
+
+Berichtsoort onderdeel LO3 stelsel? D
+
+-
+
+Release 59
+
+*i
+
+Ja/Nee
+
+*
+
+Referentie
+
+D
+
+LO3 referentie
+
+*
+
+Bron >
+
+D
+
+LO3 Berichten bron
+
+*
+
+Administratienummer
+
+D
+
+Administratienummer
+
+. s1
+
+Persoon >
+
+D
+
+Persoon
+
+.
+
+Berichtdata
+
+D
+
+Byteaopslag
+
+*
+
+Checksum
+
+D
+
+Checksum
+
+*
+
+Tijdstip conversie
+
+DX
+
+Datum/Tijd
+
+*
+
+Foutcode
+
+DX
+
+LO3 foutcode
+
+.
+
+Verwerkingsmelding
+
+DX
+
+LO3 verwerkingsmelding
+
+.
+
+Conversie
+
+-
+
+-
+
+LO3 Berichten bron
+Identiteit
+D
+
+ID
+
+Naam D
+
+LO3 Voorkomen
+
+......
+
+Dyn
+
+Conversie ID
+
+-
+
+Identiteit
+
+*i
+
+ID
+
+Naam enumeratiewaarde * l
+
+-
+
+-
+
+ID
+
+D
+
+LO3 voorkomen ID
+
+*i
+
+LO3 Bericht >
+
+D
+
+LO3 Bericht
+
+* u1
+
+LO3 categorie
+
+D
+
+LO3 categorie
+
+* u1
+
+Identiteit
+
+LO3 stapelvolgnummer
+
+D
+
+Volgnummer
+
+. u1
+
+ID
+
+D
+
+Conversie ID
+
+*i
+
+LO3 voorkomenvolgnummer D
+
+Volgnummer
+
+. u1
+
+Code
+
+D
+
+LO3 meldingcode
+
+*
+
+Omschrijving
+
+D
+
+Onbeperkte omschrijving
+
+*
+
+LO3 Categorie melding
+
+*
+
+Mapping
+
+-
+
+LO3 Soort melding
+
+-
+
+Actie >
+
+DX
+
+Actie
+
+. ua1
+
+LO3 conversie sortering
+
+DX
+
+Sorteervolgorde
+
+*
+
+LO3 Melding
+D
+
+LO3 voorkomen > D
+
+-
+
+LO3 melding ID
+
+*i
+
+LO3 Voorkomen
+
+* ua1
+
+Soort >
+
+D
+
+LO3 Soort melding
+
+* ua1
+
+Log severity >
+
+D
+
+LO3 Severity
+
+*
+
+Groep
+
+D
+
+LO3 groep
+
+. ua1
+
+Rubriek
+
+D
+
+LO3 Severity
+
+ID
+
+LO3 rubriek excl categorie en groep . ua1
+
+LO3 Aanduiding Ouder
+Identiteit
+
+D
+
+Ouder > D
+Soort >
+
+Dyn
+
+D
+
+-
+
+LO3 aanduiding Ouder ID
+
+*i
+
+Ouder
+
+* u1
+
+LO3 Soort aanduiding Ouder
+
+* u1
+
+Rel
+
+Identiteit
+D
+
+Naam D
+
+ID
+
+-
+
+Dyn
+
+Identiteit
+ID
+
+Rel
+
+Categorie melding > D
+
+Conversie ID
+
+Rel
+
+Identiteit
+
+-
+
+D
+
+LO3 soort aanduiding Ouder ID
+
+*i
+
+Naam enumeratiewaarde
+
+*l
+
+ID
+
+Naam D
+
+*i
+
+Naam enumeratiewaarde * l
+
+LO3 Soort aanduiding Ouder
+
+-
+
+D
+
+Naam D
+
+Dyn
+
+Identiteit
+
+Actie
+
+LO3 Categorie melding
+
+Rel
+
+-
+
+Rel
+-
+
+Conversie ID
+
+*i
+
+Naam enumeratiewaarde *
+
+17-7-2017
+
+

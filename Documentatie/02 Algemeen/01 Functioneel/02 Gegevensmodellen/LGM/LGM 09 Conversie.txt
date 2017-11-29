@@ -1,0 +1,365 @@
+Conversie aangifte adreshouding
+
+Conversie voorvoegsel
+
+SG
+
+SG
+
+LGM 09 Conversie
+Identiteit
+
+D
+
+ID
+
+Rubriek 7210 Omschrijving van de aangifte adreshouding D
+
+Identiteit
+
+-
+
+Conversie ID
+
+*i
+
+ID
+
+D
+
+-
+
+Conversie ID
+
+*i
+
+LO3 voorvoegsel
+
+*l
+
+Release 59 17-7-2017
+
+LO3 omschrijving van de aangifte adreshouding
+
+*l
+
+Rubriek 0231 Voorvoegsel D
+
+Aangever >
+
+D
+
+Aangever
+
+. u1
+
+Voorvoegsel
+
+D
+
+Naam enumeratiewaarde * u1
+
+Reden wijziging verblijf >
+
+D
+
+Reden wijziging verblijf
+
+. u1
+
+Scheidingsteken
+
+D
+
+Scheidingsteken
+
+Conversie adellijke titel predikaat
+
+ID
+
+Conversie RNI-deelnemer
+
+SG
+
+Identiteit
+
+D
+
+Conversie ID
+
+Rubriek 0221 Adellijke titel predikaat D
+
+* u1
+
+SG
+
+Identiteit
+
+*i
+
+D
+
+ID
+
+LO3 adellijke titel predikaat * l
+
+Rubriek 8811 Code RNI-deelnemer D
+
+Geslachtsaanduiding >
+
+D
+
+Geslachtsaanduiding
+
+* u1 l
+
+Partij >
+
+Adellijke titel >
+
+D
+
+Adellijke titel
+
+. u1
+
+Predicaat >
+
+D
+
+Predicaat
+
+. u1
+
+Conversie reden opschorting
+
+Conversie ID
+
+D
+
+*i
+
+LO3 RNI-deelnemer
+
+*l
+
+Partij
+
+* u1
+
+SG
+
+Identiteit
+
+-
+
+-
+
+ID
+
+D
+
+Conversie ID
+
+*i
+
+Rubriek 6720 Omschrijving reden opschorting bijhouding
+
+D
+
+LO3 omschrijving reden opschorting bijhouding
+
+*l
+
+Nadere bijhoudingsaard >
+
+D
+
+Nadere bijhoudingsaard
+
+* u1
+
+Conversie aanduiding inhouding/vermissing reisdocument
+
+SG
+
+Identiteit
+
+-
+
+-
+
+Conversie reden beëindigen nationaliteit
+
+SG
+
+Identiteit
+
+-
+
+-
+
+ID
+
+D
+
+Conversie ID
+
+*i
+
+ID
+
+D
+
+Conversie ID
+
+*i
+
+Rubriek 3570 Aanduiding inhouding dan wel vermissing Nederlands reisdocument
+
+D
+
+LO3 aanduiding inhouding dan wel vermissing NL reisdocument
+
+*l
+
+Rubriek 6410 Reden beëindigen nationaliteit
+
+D
+
+LO3 Reden beëindigen nationaliteit
+
+*l
+
+Aanduiding inhouding/vermissing reisdocument >
+
+D
+
+Aanduiding inhouding/vermissing reisdocument
+
+* u1
+
+Reden verlies >
+
+D
+
+Reden verlies NL nationaliteit
+
+. ua1
+
+Conversie reden ontbinding huwelijk/geregistreerd partnerschap
+
+SG
+
+Identiteit
+
+-
+
+ID
+
+D
+
+Conversie ID
+
+Rubriek 0741 Reden ontbinding huwelijk/geregistreerd partnerschap
+
+D
+
+Reden einde relatie >
+
+D
+
+ID
+
+Rubriek 3511 Nederlands reisdocument D
+Soort Nederlands reisdocument >
+
+D
+
+-
+
+-
+
+Conversie ID
+
+*i
+
+LO3 reden ontbinding/nietigverklaring huwelijk/geregistreerd partnerschap * l
+
+Rubriek 6310 Reden opname nationaliteit
+
+D
+
+LO3 Reden opname nationaliteit
+
+*l
+
+Reden einde relatie
+
+Reden verkrijging >
+
+D
+
+Reden verkrijging NL nationaliteit
+
+. ua1
+
+Conversie ID
+
+Identiteit
+D
+
+SG
+
+D
+
+SG
+
+ID
+
+Conversie soort NL reisdocument
+Identiteit
+
+-
+
+-
+
+*i
+
+Conversie reden opname nationaliteit
+
+* u1
+
+Conversie LO3 Rubriek
+Identiteit
+
+*i
+
+ID
+
+D
+
+LO3 Nederlands reisdocument
+
+*l
+
+Naam D
+
+Soort Nederlands reisdocument
+
+* u1
+
+SG
+-
+
+-
+
+Conversie LO3 Rubriek ID
+
+*i
+
+Conversie LO3 Rubriek Naam
+
+*l
+
+

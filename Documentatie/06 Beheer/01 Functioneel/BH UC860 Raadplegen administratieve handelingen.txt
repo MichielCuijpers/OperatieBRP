@@ -1,0 +1,644 @@
+UC860 Raadplegen administratieve
+handelingen
+
+1.0
+
+Datum
+Status
+
+05-08-2015
+Definitief
+
+Definitief | 1.0 | UC860 Raadplegen administratieve handelingen | 05-08-2015
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................6
+2.1
+
+3
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................5
+PRECONDITIE ........................................................................................................................................5
+POSTCONDITIE......................................................................................................................................5
+REGULIER VERLOOP ..............................................................................................................................6
+
+AANVULLENDE SPECIFICATIES .................................................................................................7
+3.1 ZOEKEN .................................................................................................................................................7
+3.2 DETAILS ADMINISTRATIEVE HANDELING ............................................................................................7
+3.2.1 Lijst van acties ..........................................................................................................................9
+3.2.2 Lijst van gedeblokkeerde meldingen ................................................................................9
+3.2.3 Lijst van berichten ...................................................................................................................9
+3.3 DETAILS VAN ACTIES..........................................................................................................................10
+3.3.1 Gewijzigde groepen vinden ................................................................................................10
+3.3.2 Lijst van personen .................................................................................................................11
+3.3.3 Lijst van relaties en betrokkenheden .............................................................................11
+3.3.4 Lijst van onderzoeken ..........................................................................................................12
+3.3.5 Lijst van bronnen ...................................................................................................................13
+
+4
+
+OPMERKINGEN ..................................................................................................................................14
+
+Operatie BRP
+
+Pagina 2 van 14
+
+Definitief | 1.0 | UC860 Raadplegen administratieve handelingen | 05-08-2015
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+24-04-2015
+29-04-2015
+07-05-2015
+08-05-2015
+03-06-2015
+05-08-2015
+
+0.1
+0.2
+0.3
+0.4
+0.5
+1.0
+
+Initiële versie
+Reviewcommentaar verwerkt
+Details van actie en relaties beschreven
+Reviewcommentaar verwerkt
+Onderzoeksgegevens toegevoegd
+• Definitief gemaakt ten behoeve van
+release 3.1
+• Te tonen zoekresultaten en details
+aangepast
+• Verwijzing naar BMR-versie verwijderd
+
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+29-04-2015
+
+0.1
+
+Review
+
+Operatie BRP
+
+08-05-2015
+
+0.3
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 14
+
+Definitief | 1.0 | UC860 Raadplegen administratieve handelingen | 05-08-2015
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+De binnen de BRP geadministreerde persoonsgegevens worden bijgehouden doordat wijzigingen
+worden doorgevoerd vanuit de gemeentelijke of ministeriële verantwoordelijkheid. Het initiatief
+gegevens te wijzigen komt vanuit het betreffende bijhoudingsorgaan; deze stuurt daartoe een
+bericht aan de BRP die de daadwerkelijke bijhouding doet plaatsvinden. Voor de verwerking
+binnen de BRP wordt dit bericht uiteen gerafeld in één of meer Acties. Het geheel aan acties
+wordt de administratieve handeling genoemd; dit is in de BRP de weerslag van wat in termen
+van de burgerzakenmodule 'de zaak' zal zijn geweest. Qua niveau staat het op hetzelfde niveau
+als het bericht; het verschil bestaat eruit dat het bericht het vehikel is waarmee de
+administratieve handeling wordt bewerkstelligd. (Bron: [BMR]).
+Administratieve handeling is een dynamisch gegeven en wordt beschreven in het [BMR]:
+Kern.Administratieve handeling.
+De administratieve handeling fungeert als een spin in het web van waaruit de beheerder kan
+navigeren naar alle gegevens die een relatie hebben met de administratieve handeling.
+In dit document wordt beschreven op welke wijze de beheerder administratieve handelingen kan
+raadplegen.
+
+Operatie BRP
+
+Pagina 4 van 14
+
+Definitief | 1.0 | UC860 Raadplegen administratieve handelingen | 05-08-2015
+
+1.2
+
+1.3
+
+Referenties
+#
+[BMR]
+
+Document
+https://www.modernodam.nl/bmr
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+[UCRP]
+
+UC862 Raadplegen persoonsgegevens
+
+Operatie BRP
+
+-
+
+-
+
+[UCRB]
+
+UC842 Raadplegen berichten
+
+Operatie BRP
+
+-
+
+-
+
+[FASPVER]
+
+Fundamentele aspectbeschrijving
+Verantwoording
+
+Operatie BRP
+
+-
+
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 5 van 14
+
+Definitief | 1.0 | UC860 Raadplegen administratieve handelingen | 05-08-2015
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+1. De beheerder meldt het systeem aan de hand van een aantal zoekcriteria welke
+administratieve handeling getoond dienen te worden (AS: 3.1)
+2. Het systeem toont een lijst van administratieve handelingen die voldoen aan de zoekcriteria
+(AS: 3.1)
+3. De beheerder selecteert een administratieve handeling
+4. Het systeem toont de details van de geselecteerde administratieve handeling (AS: 3.2)
+5. Het systeem toont de verschillende lijsten die bij de administratieve handelingen horen (AS:
+3.2.1, 3.2.2, 3.2.3)
+6. De beheerder selecteert een regel uit de lijst van acties
+7. Het systeem toont de details van de geselecteerde regel (AS: 3.3)
+8. De use case eindigt
+
+Operatie BRP
+
+Pagina 6 van 14
+
+Definitief | 1.0 | UC860 Raadplegen administratieve handelingen | 05-08-2015
+
+3
+
+Aanvullende specificaties
+
+3.1
+
+Zoeken
+De beheerder kan op basis van de volgende zoekcriteria administratieve handelingen vinden:
+Label
+Soort
+Administratieve
+Handeling Partij
+Administratieve
+Handeling Partijcode
+Tijdstip registratie begin
+
+Attribuut
+Administratieve handeling.Soort
+Administratieve handeling.Partij.Naam
+
+Toelichting
+-
+
+Administratieve handeling.Partij.Code
+
+-
+
+Bericht Partij
+
+Administratieve handeling.Tijdstip
+registratie
+Administratieve handeling.Tijdstip
+registratie
+Administratieve handeling.Tijdstip
+levering
+Administratieve handeling.Tijdstip
+levering
+Bericht.Ontvangende Partij.Naam
+
+Bericht Partijcode
+
+Bericht.Ontvangende partij.code
+
+Administratienummer
+Burgerservicenummer
+
+Persoon.Administratienummer
+Persoon.Burgerservicenummer
+
+Tijdstip registratie eind
+Tijdstip levering begin
+Tijdstip levering eind
+
+Alleen berichten waarvoor
+geldt dat Bericht.Richting =
+‘Uitgaand’.
+Alleen berichten waarvoor
+geldt dat Bericht.Richting =
+‘Uitgaand’.
+-
+
+De onderstaande gegevens worden in het zoekresultaat getoond. Omdat het mogelijk is op veel
+verschillende criteria te zoeken en het aantal kolommen dat getoond kan worden beperkt is,
+worden niet alle zoekcriteria in het zoekresultaat getoond.
+Label
+Soort
+Administratieve
+Handeling Partij
+Administratieve
+Handeling Partijcode
+Tijdstip registratie
+Tijdstip levering
+
+3.2
+
+Attribuut
+Administratieve handeling.Soort
+Administratieve handeling.Partij.Naam
+
+Toelichting
+-
+
+Administratieve handeling.Partij.Code
+
+-
+
+Administratieve handeling.Tijdstip
+registratie
+Administratieve handeling.Tijdstip
+levering
+
+-
+
+Details administratieve handeling
+Een administratieve handeling is de verzameling van acties die geleid heeft tot het wijzigen van
+één of meer persoonsgegevens in de BRP. De volgende details van de administratieve handeling
+worden getoond:
+Label
+Soort
+Partij
+
+Operatie BRP
+
+Attribuut
+Administratieve handeling.Soort
+Administratieve handeling.Partij.Naam
+
+Toelichting
+-
+
+Pagina 7 van 14
+
+Definitief | 1.0 | UC860 Raadplegen administratieve handelingen | 05-08-2015
+
+Partijcode
+Toelichting ontlening
+Tijdstip registratie
+Tijdstip levering
+
+Administratieve
+Administratieve
+ontlening
+Administratieve
+registratie
+Administratieve
+levering
+
+handeling.Partij.Code
+handeling.Toelichting
+
+-
+
+handeling.Tijdstip
+
+-
+
+handeling.Tijdstip
+
+-
+
+Naast de details van de administratieve handeling worden ook lijsten getoond met gegevens die
+relevant zijn voor deze administratieve handeling.
+
+Operatie BRP
+
+Pagina 8 van 14
+
+Definitief | 1.0 | UC860 Raadplegen administratieve handelingen | 05-08-2015
+
+3.2.1
+
+Lijst van acties
+In het objecttype Actie wordt geregistreerd welke acties het gevolg waren van de administratieve
+handeling. De volgende gegevens van de actie worden getoond en gesorteerd op Tijdstip
+registratie:
+• Actie.Soort
+• Actie.Tijdstip registratie
+• Actie.Datum ontlening
+
+3.2.2
+
+Lijst van gedeblokkeerde meldingen
+In het objecttype Administratieve handeling \ Gedeblokkeerde melding is geregistreerd welke
+fouten er zijn gedeblokkeerd. De volgende gegevens van de gedeblokkeerde meldingen worden
+getoond en gesorteerd op Regel.Soort, Regel.Code en Regel.Omschrijving:
+•
+•
+•
+•
+•
+
+3.2.3
+
+Regel.Soort
+Regel.Code
+Regel.Omschrijving
+Regel.Specificatie
+Gedeblokkeerde melding.Melding
+
+Lijst van berichten
+Naar aanleiding van een administratieve handeling ontvangt en verstuurt de BRP berichten. Er
+wordt getoond welke berichten er in het kader van de administratieve handeling zijn verstuurd
+en ontvangen. De berichten zijn chronologisch gesorteerd op Bericht.Datum/tijd verzending en
+Bericht.Datum/tijd ontvangst. De volgende gegevens van de berichten worden getoond:
+•
+•
+•
+•
+•
+•
+
+Bericht.Datum/tijd verzending
+Bericht.Datum/tijd ontvangst
+Bericht.Soort
+Bericht.Verzendende partij
+Bericht.Ontvangende partij
+Bericht.Referentienummer
+
+Wanneer de beheerder een regel selecteert worden de details van het bericht getoond. Het tonen
+van de details van een bericht is beschreven in [UCRB].
+
+Operatie BRP
+
+Pagina 9 van 14
+
+Definitief | 1.0 | UC860 Raadplegen administratieve handelingen | 05-08-2015
+
+3.3
+
+Details van acties
+De volgende details van actie worden getoond:
+• Actie.Soort
+• Actie.Tijdstip registratie
+• Actie.Datum ontlening
+Naast de bovenstaande details worden ook de gewijzigde groepen van Persoon, gerelateerde
+objecten van Persoon, Relaties en Betrokkenheden getoond. Tevens worden de bronnen van de
+actie getoond.
+
+3.3.1
+
+Gewijzigde groepen vinden
+Het vinden van de gewijzigde groepen in Persoon, gerelateerde objecten van Persoon, relaties en
+betrokkenheden, vindt samengevat op de volgende manier plaats:
+1. Zoek alle personen waar de administratieve handeling voorkomt
+2. Zoek alle groepen van de persoon die zijn gewijzigd door een actie van de administratieve
+handeling
+3. Zoek alle groepen van gerelateerde objecten van de persoon die zijn gewijzigd door een actie
+van de administratieve handeling
+4. Zoek alle relaties en betrokkenheden die door een actie van de administratieve handeling zijn
+gewijzigd
+De personen die door een administratieve handeling geraakt zijn kunnen geraadpleegd worden
+aan de hand van Persoon.Afgeleid administratief.Administratieve handeling (ook de historische
+voorkomens).
+Wanneer de administratieve handeling bij een persoon voorkomt, dient voor die persoon in elke
+groep van de persoon en de groepen van de gerelateerde objecten, gekeken te worden of de
+actie voorkomt in één van de volgende attributen:
+•
+•
+•
+•
+
+ActieInh
+ActieAanpGel
+ActieVerval
+ActieVervalTbvLevMuts
+
+Indien de actie voorkomt dienen alle gegevens van die groep getoond te worden. Hierbij moet
+het duidelijk zijn dat het gaat om:
+• Toegevoegde gegevens (ActieInh)
+• Gewijzigde gegevens (ActieAanpGel)
+• Vervallen gegevens (ActieVerval of ActieVervalTbvLevMuts)
+Meer informatie over administratieve handelingen en acties is beschreven in [FASPVER].
+
+Operatie BRP
+
+Pagina 10 van 14
+
+Definitief | 1.0 | UC860 Raadplegen administratieve handelingen | 05-08-2015
+
+3.3.2
+
+Lijst van personen
+Bij het raadplegen van een actie wordt een lijst van personen getoond die door de actie zijn
+geraakt en de gewijzigde groepen van die persoon.
+Er kunnen meerdere groepen gewijzigd zijn. Gegevens van dezelfde groep worden gegroepeerd
+getoond.
+De structuur van de getoonde gegevens is als volgt:
+•
+•
+•
+•
+•
+•
+
+Alles uit groep identiteit van persoon
+Gegevens uit groep Identificatienummers van de persoon
+Gegevens uit groep Samengestelde naam van de persoon
+Gegevens uit groep Geboorte van de persoon
+Gegevens uit groep Geslachtsaanduiding
+Per groep van persoon
+o Gegevens toegevoegd
+o Gegevens gewijzigd
+o Gegevens verval
+• Per gerelateerd object
+o Alles uit groep identiteit van object
+o Per groep van object
+▪ Gegevens toegevoegd
+▪ Gegevens gewijzigd
+▪ Gegevens verval
+Wanneer de beheerder een persoon selecteert worden de details van de persoon getoond. Het
+tonen van de details van een persoon is beschreven in [UCRP].
+
+3.3.3
+
+Lijst van relaties en betrokkenheden
+Indien van toepassing worden ook de gegevens van de relaties en de betrokkenheden getoond
+die door de actie van de administratieve handeling zijn geraakt. De structuur hiervan is als volgt:
+• Alles uit groep identiteit van relatie
+• Per groep van relatie
+o Gegevens toegevoegd
+o Gegevens verval
+• Per gerelateerde betrokkenheid
+o Alles uit groep identiteit van de betrokkenheid
+o Gegevens uit groep Identificatienummers van de persoon
+o Gegevens uit groep Samengestelde naam van de persoon
+o Gegevens uit groep Geboorte van de persoon
+o Gegevens uit groep Geslachtsaanduiding
+o Per groep uit de betrokkenheid
+▪ Gegevens toegevoegd
+▪ Gegevens verval
+
+Operatie BRP
+
+Pagina 11 van 14
+
+Definitief | 1.0 | UC860 Raadplegen administratieve handelingen | 05-08-2015
+
+3.3.4
+
+Lijst van onderzoeken
+Indien aanwezig worden er ook onderzoeksgegevens getoond die door de administratieve
+handeling zijn geraakt. De structuur hiervan is als volgt:
+• Alles uit groep identiteit van onderzoek
+• Per groep van onderzoek
+o Gegevens toegevoegd
+o Gegevens gewijzigd
+o Gegevens verval
+• Per gerelateerd object van onderzoek
+o Alles uit groep identiteit van object
+o Per groep van object
+▪ Gegevens toegevoegd
+▪ Gegevens gewijzigd
+▪ Gegevens verval
+• Per persoon
+o Gegevens uit groep Identificatienummers van de persoon
+o Gegevens uit groep Samengestelde naam van de persoon
+o Gegevens uit groep Geboorte van de persoon
+o Gegevens uit groep Geslachtsaanduiding
+
+Operatie BRP
+
+Pagina 12 van 14
+
+Definitief | 1.0 | UC860 Raadplegen administratieve handelingen | 05-08-2015
+
+3.3.5
+
+Lijst van bronnen
+Elke actie bevat een lijst van geen of meer bronnen. Voor elke bron worden de volgende
+gegevens getoond:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Rechtsgrond.Code
+Rechtsgrond.Soort
+Rechtsgrond.Omschrijving
+Rechtsgrond.Leidt tot strijdigheid?
+Actie\ Bron.Rechtsgrondomschrijving
+Document.Soort
+Document.Identificatie
+Document.Aktenummer
+Document.Omschrijving
+
+Operatie BRP
+
+Pagina 13 van 14
+
+Definitief | 1.0 | UC860 Raadplegen administratieve handelingen | 05-08-2015
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 14 van 14
+
+

@@ -1,0 +1,5896 @@
+Logisch Ontwerp Migratie GBA - BRP
+
+Versie 0.04
+
+Datum
+Status
+
+juli 2016
+Concept
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Documentinformatie
+
+Titel
+
+Logisch Ontwerp Migratie GBA - BRP
+
+Datum
+
+2016-07-01
+
+Versie
+
+04a
+
+Status
+
+Concept
+
+Verspreiding
+
+Publiek (website Operatie BRP)
+
+Documentlocatie
+
+Versiehistorie
+
+Versie
+
+Verspreiding
+
+Datum
+
+Omschrijving
+
+0.2
+
+Programma
+
+Oktober
+
+Eerste paragrafen van hoofdstuk 3
+
+intern
+
+2015
+
+Programma
+
+Maart 2016
+
+0.3
+
+intern
+0.3
+
+BZK/B&I en
+
+Herziening op basis van reviewcommentaar; verdere uitwerking
+hoofdstuk 3
+
+Maart 2016
+
+Review en verwerking reviewcommentaar
+
+Mei 2016
+
+Review en verwerking reviewcommentaar
+
+Juli 2016
+
+Eerste publieke versie
+
+RvIG
+0.3
+
+Werkgroep
+Beleidsaspecten
+BRP
+
+0.4
+
+Publiek
+
+Pagina 3 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Inhoud
+
+1	   HOOFDSTUK 1 .................................................................................................................... 8	  
+2	   HOOFDSTUK 2 .................................................................................................................... 9	  
+3	   CONVERSIE VAN GEGEVENS ...................................................................................... 10	  
+3.1	   NOG INVULLEN ................................................................................................................ 10	  
+3.1.1	   Gegevens van personen als persoon en als gerelateerde bij de conversie van GBA
+naar BRP .................................................................................................................. 10	  
+3.1.2	   Naamgegevens in de BRP en de conversie van naamgegevens van GBA naar
+BRP .......................................................................................................................... 11	  
+3.1.3	   Converteren actuele en historische gegevens .......................................................... 12	  
+3.1.4	   Niet geconverteerde gegevens bij de conversie van GBA naar BRP ....................... 13	  
+3.1.5	   Niet geconverteerde gegevens bij de conversie van BRP naar GBA ....................... 13	  
+3.1.6	   Voorkomenregels in GBA en BRP ........................................................................... 13	  
+3.1.7	   PL-en die niet geconverteerd kunnen worden bij de conversie van GBA naar
+BRP .......................................................................................................................... 14	  
+3.1.8	   Opzet van de conversiebeschrijvingen ..................................................................... 14	  
+3.1.9	   Algemene en administratieve gegevens .................................................................... 16	  
+3.2	   CONVERSIE VAN GBA NAAR BRP................................................................................... 17	  
+3.2.1	   Identificatienummers ................................................................................................ 17	  
+3.2.2	   Naamgegevens ......................................................................................................... 18	  
+3.2.3	   Gebeurtenisgegevens ............................................................................................... 29	  
+3.2.4	   Geslachtsaanduiding ................................................................................................ 33	  
+3.2.5	   Nummerverwijzingen ............................................................................................... 34	  
+3.2.6	   Familierechtelijke betrekking .................................................................................. 35	  
+3.2.7	   Nationaliteit ............................................................................................................. 36	  
+3.2.8	   Soort verbintenis ...................................................................................................... 37	  
+3.2.9	   Blokkering PL .......................................................................................................... 38	  
+3.2.10	   Opschorting ............................................................................................................ 38	  
+3.2.11	   Inschrijving ............................................................................................................ 40	  
+3.2.12	   Persoonskaart ........................................................................................................ 40	  
+3.2.13	   Geheimhouding ...................................................................................................... 41	  
+3.2.14	   Versiebeheer........................................................................................................... 41	  
+3.2.15	   Bijhoudingsgemeente ............................................................................................. 42	  
+3.2.16	   Adreshouding ......................................................................................................... 42	  
+3.2.17	   Adresaangifte ......................................................................................................... 43	  
+3.2.18	   Woon- of briefadres in Nederland ......................................................................... 44	  
+3.2.19	   Woonadres in het buitenland ................................................................................. 46	  
+3.2.20	   Emigratie- en immigratiegegevens ........................................................................ 48	  
+3.2.21	   Indicatie document ................................................................................................. 50	  
+3.2.22	   Verblijfsrecht .......................................................................................................... 50	  
+3.2.23	   Gezag ..................................................................................................................... 50	  
+3.2.24	   Curatele .................................................................................................................. 50	  
+3.2.25	   Reisdocument ......................................................................................................... 51	  
+3.2.26	   Signalering ............................................................................................................. 51	  
+3.2.27	   Nederlands kiesrecht .............................................................................................. 51	  
+3.2.28	   Europees kiesrecht ................................................................................................. 51	  
+3.2.29	   Reden ontbinding huwelijk/geregistreerd partnerschap ........................................ 52	  
+3.2.30	   Afnemersindicatie................................................................................................... 52	  
+3.2.31	   Administratieve gegevens ....................................................................................... 52	  
+3.3	   CONVERSIE VAN BRP NAAR GBA................................................................................... 53	  
+Pagina 5 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+3.3.1	  
+3.3.2	  
+3.3.3	  
+3.3.4	  
+3.3.5	  
+3.3.6	  
+3.3.7	  
+3.3.8	  
+3.3.9	  
+3.3.10	  
+3.3.11	  
+3.3.12	  
+3.3.13	  
+3.3.14	  
+3.3.15	  
+3.3.16	  
+3.3.17	  
+3.3.18	  
+3.3.19	  
+3.3.20	  
+3.3.21	  
+3.3.22	  
+3.3.23	  
+3.3.24	  
+3.3.25	  
+3.3.26	  
+3.3.27	  
+3.3.28	  
+3.3.29	  
+3.3.30	  
+3.3.31	  
+
+Identificatienummers ................................................................................................ 53	  
+Naamgegevens ......................................................................................................... 54	  
+Gebeurtenisgegevens ............................................................................................... 63	  
+Geslachtsaanduiding ................................................................................................ 67	  
+Nummerverwijzingen ............................................................................................... 67	  
+Familierechtelijke betrekking .................................................................................. 68	  
+Nationaliteit ............................................................................................................. 69	  
+Soort verbintenis ...................................................................................................... 70	  
+Blokkering PL .......................................................................................................... 70	  
+Opschorting ............................................................................................................ 71	  
+Inschrijving ............................................................................................................ 72	  
+Persoonskaart ........................................................................................................ 72	  
+Geheimhouding ...................................................................................................... 73	  
+Versiebeheer........................................................................................................... 73	  
+Bijhoudingsgemeente ............................................................................................. 74	  
+Adreshouding ......................................................................................................... 75	  
+Adresaangifte ......................................................................................................... 75	  
+Woon- of briefadres in Nederland ......................................................................... 76	  
+Woonadres in het buitenland ................................................................................. 78	  
+Emigratie- en immigratiegegevens ........................................................................ 79	  
+Indicatie document ................................................................................................. 81	  
+Verblijfsrecht .......................................................................................................... 82	  
+Gezag ..................................................................................................................... 82	  
+Curatele .................................................................................................................. 82	  
+Reisdocument ......................................................................................................... 82	  
+Signalering ............................................................................................................. 83	  
+Nederlands kiesrecht .............................................................................................. 83	  
+Europees kiesrecht ................................................................................................. 83	  
+Reden ontbinding huwelijk/geregistreerd partnerschap ........................................ 83	  
+Afnemersindicatie................................................................................................... 84	  
+Administratieve gegevens ....................................................................................... 84	  
+
+Pagina 6 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Inleiding
+
+<nog invullen>
+
+Pagina 7 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+1
+
+Hoofdstuk 1
+
+<nog invullen>
+
+Pagina 8 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+2
+
+Hoofdstuk 2
+
+<nog invullen>
+
+Pagina 9 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+3
+
+Conversie van gegevens
+
+Inleidende tekst met uitleg over wat er in dit hoofdstuk staat.
+
+3.1
+
+Nog invullen
+De inhoud van deze paragraaf is nog in ontwikkeling.
+
+3.1.1
+
+Gegevens van personen als persoon en als gerelateerde bij de conversie van GBA
+naar BRP
+In de GBA worden de identificatienummers en de naam-, geboorte- en
+geslachtsgegevens van een gerelateerde van een persoon samen met de gegevens
+over de relatie vastgelegd bij de gegevens van die persoon. In de BRP is dat niet zo.
+In de BRP worden de gegevens van elke persoon apart vastgelegd en worden de
+gegevens over elke relatie apart vastgelegd. Bij de relatiegegevens zijn verwijzingen
+opgenomen naar de apart vastgelegde gegevens van de bij die relatie betrokken
+personen.
+In de BRP worden twee soorten persoonsgegevens opgenomen. De eerste soort
+persoonsgegevens wordt aangeduid met de term “Ingeschrevenen”, de twee met de
+term “Pseudo-personen”. Om die soorten te onderscheiden kent de BRP het gegeven
+soort persoon. Bij ingeschrevenen heeft soort persoon de waarde “I”, bij pseudopersonen de waarde “P”. Pseudo-personen zijn altijd een gerelateerde van een
+ingeschrevene. Een ingeschrevene kan een gerelateerde zijn van een andere
+ingeschrevene. De verzameling gegevens die in de BRP wordt bijgehouden van
+pseudo-personen is een deelverzameling van de gegevens die voor een
+ingeschrevene worden bijgehouden. Zie het LO GBA en het LO BRP voor meer uitleg
+over de manier waarop in de GBA resp. de BRP gegevens van gerelateerden worden
+vastgelegd en het LO BRP voor meer uitleg over het gegeven soort persoon.
+Bij de conversie van GBA naar BRP wordt er onderscheid gemaakt tussen de
+conversie van gegevens van een persoon en de conversie van gegevens van zijn
+gerelateerden. De gegevens van een persoon worden geconverteerd naar een set
+gegevens waarbij het gegeven soort persoon de waarde “I” (Ingeschrevene) heeft.
+De gegevens van elk van zijn gerelateerden worden geconverteerd naar een set
+gegevens waarbij het gegeven soort persoon de waarde “P” (Pseudo-persoon) heeft.
+Bij de conversie van de gegevens over de identificatienummers en de naam-,
+geboorte- en geslachtsgegeven uit de GBA categorieën 01/51 Persoon, 02/52
+Ouder1, 03/53 Ouder2, 05 Huwelijk/geregistreerd partnerschap en 09/59 Kind zijn
+drie situaties te onderscheiden:
+1. de conversie van deze gegevens uit de groepen 01 Identificatienummers, 02
+Naam, 03 Geboorte, 04 Geslacht in de categorieën 01/51 Persoon;
+2. conversie van deze gegevens uit de groep 61 Naamgebruik in de categorie 01
+Persoon;
+3. de conversie van deze gegevens uit de groepen 01 Identificatienummers, 02
+Naam, 03 Geboorte en 04 Geslacht in de categorieën 02/52 Ouder1, 03/53
+Ouder2, 05 Huwelijk/geregistreerd partnerschap en, met uitzondering van groep
+04 Geslacht, 09/59 Kind.
+Pagina 10 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+In de eerste situatie gelden de in de paragrafen 3.2.1 Identificatienummers, 3.2.2
+Naamgegevens, 3.2.3 Gebeurtenisgegevens (alleen voor de groep 03 Geboorte) en
+3.2.4 Geslachtsaanduiding beschreven conversieregels voor de conversie van GBA
+naar BRP zowel voor de gegevens in de actuele categorie 01 Persoon als voor de
+gegevens in de historische categorieën 51 Persoon. Bij de conversie ontstaat er in
+de BRP voor de betrokken gegevens historie, uiteraard alleen als er ook historie in
+de GBA aanwezig is.
+Voor de naamgegevens in groep 02 Naam in historische categorieën 51 Persoon
+geldt een beperking. Zie daarvoor paragraaf 3.1.2 Naamgegevens in de BRP en de
+conversie van naamgegevens van GBA naar BRP.
+In de tweede situatie gelden de in de paragraaf 3.2.2 Naamgegevens voor de groep
+61 Naamgebruik beschreven conversieregels voor de conversie van GBA naar BRP
+alleen voor de gegevens in de actuele categorie 01 Persoon. Alleen de actuele
+gegevens over het naamgebruik worden geconverteerd. Ook als er in de GBA
+historische gegevens aanwezig zijn over het naamgebruik, zijn er in de BRP
+onmiddellijk na de conversie alleen actuele gegevens over het naamgebruik
+aanwezig.
+In de derde situatie gelden de in de paragrafen 3.2.1 Identificatienummers, 3.2.2
+Naamgegevens, 3.2.3 Gebeurtenisgegevens (alleen voor de groep 03 Geboorte) en
+3.2.4 Geslachtsaanduiding beschreven conversieregels voor de conversie van GBA
+naar BRP alleen voor de gegevens in de actuele categorieën 02 Ouder1, 03 Ouder2,
+05 Huwelijk/geregistreerd partnerschap en 09 Kind. En daarnaast, in geval van
+ouderwisselingen, ook de meest recente historische gegevens van elke eerdere
+ouder waarvan gegevens zijn opgenomen in categorieën 52 Ouder1 en 53 Ouder2.
+En verder, in geval van het verbreken van een ouder-kind relatie, voor elk kind
+waarvoor dat geldt, de meest recente historische gegevens van het kind/de kinderen
+in categorieën 59. Bij een omzetting van een huwelijk/geregistreerd partnerschap
+worden ook de gegevens uit de groep 02 Naam in de categorie 55 die direct
+voorafgaand aan de omzetting geldig was, geconverteerd.
+Ook als er in de GBA dus voor een gerelateerde historische gegevens aanwezig zijn,
+zijn er in de BRP onmiddellijk na de conversie alleen actuele gegevens aanwezig
+over identificatienummers, naam, geboorte en geslacht.
+Voor de naamgegevens in groep 02 Naam in de te converteren categorieën geldt
+een beperking. Zie paragraaf 3.1.2 Naamgegevens in de BRP en de conversie van
+naamgegevens van GBA naar BRP.
+3.1.2
+
+Naamgegevens in de BRP en de conversie van naamgegevens van GBA naar BRP
+In de GBA worden de naamgegevens van personen en gerelateerden vastgelegd in
+de groep 02 Naam. De BRP kent voor het vastleggen van naamgegevens van
+personen vier gegevensgroepen. Dat zijn:
+•
+de gegevensgroep voornaam
+•
+de gegevensgroep geslachtsnaamcomponent
+•
+de gegevensgroep samengestelde naam
+•
+de gegevensgroep naamgebruik
+Zie het LO BRP voor meer uitleg hierover.
+De gegevens in de BRP-gegevensgroep samengestelde naam komen het meest
+overeen met de gegevens in de GBA-groep 02 Naam.
+
+Pagina 11 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+In aanvulling op de regels uit paragraaf 3.1.1 Gegevens van personen als persoon
+en als gerelateerde bij de conversie van GBA naar BRP geldt voor de conversie van
+naamgegevens van GBA naar BRP nog het volgende.
+Met betrekking tot situatie 1 uit paragraaf 3.1.1 geldt dat de gegevens uit de GBAgroep 02 Naam in de actuele categorie 01 Persoon conform die in paragraaf 3.2.2
+Naamgegevens beschreven conversieregels worden geconverteerd naar alle vier
+hiervoor genoemde BRP-gegevensgroepen. De gegevens uit de groep 02 Naam uit
+historische categorieën 51 Persoon worden alleen geconverteerd naar de BRPgegevensgroep samengestelde naam. Onmiddellijk na de conversie kent dus alleen
+de gegevensgroep samengestelde naam in de BRP historie, uiteraard alleen als er
+ook historie is in de GBA. De gegevensgroepen voornaam, geslachtsnaamcomponent
+en naamgebruik komen alleen actueel voor. Het gegeven volgnummer in de BRPgegevensgroep geslachtsnaamcomponent die bij de conversie wordt aangemaakt
+heeft altijd de waarde 1. Bij de conversie ontstaan geen gegevensgroepen
+geslachtsnaamcomponent waarbij het gegeven volgnummer een andere waarde
+heeft dan 1. Zie het LO BRP voor een nadere uitleg over het gegeven volgnummer
+en de gegevensgroep geslachtsnaamcomponent.
+Met betrekking tot situatie 3 uit paragraaf 3.1.1 geldt dat de gegevens uit de GBAgroep 02 Naam in de te converteren categorieën 02/52 Ouder1, 03/53 Ouder2,
+05/55 Huwelijk/geregistreerd partnerschap en 09/59 Kind alleen worden
+geconverteerd naar de BRP-gegevensgroep samengestelde naam. Onmiddellijk na
+de conversie komt alleen de gegevensgroep samengestelde naam in de BRP voor en
+wel zonder historie vanwege de verdere voorwaarden die gelden voor deze groep.
+De BRP-gegevensgroepen voornaam, geslachtsnaamcomponent en naamgebruik
+komen niet voor.
+3.1.3
+
+Converteren actuele en historische gegevens
+De in paragraaf 3.2 Conversie van GBA naar BRP en paragraaf 3.3 Conversie van
+BRP naar GBA beschreven conversieregels gelden voor actuele en historische
+gegevens.
+De conversie van historische categorieën waarin element 84.40 Indicatie onjuist
+voorkomt, wordt apart beschreven.
+
+3.1.3.1
+
+Algemene uitzonderingen
+Algemene uitzonderingen op de regel dat de beschreven conversieregels gelden voor
+actuele en historische gegevens zijn genoemd in paragraaf 3.1.1 Gegevens van
+personen als persoon en als gerelateerde bij de conversie van GBA naar BRP en
+3.1.2 Naamgegevens in de BRP en de conversie van naamgegevens van GBA naar
+BRP.
+
+3.1.3.2
+
+Speciale uitzonderingen
+Een speciale uitzondering op de regel dat de beschreven conversieregels gelden voor
+actuele en historische gegevens heeft te maken met het feit dat er in de GBA
+categorieën zijn, waarin meerdere groepen gegevens voorkomen, die onafhankelijk
+van elkaar kunnen wijzigen. Als de gegevens van een groep gegevens wijzigen,
+kunnen de gegevens in de andere groepen in de categorie die door een actualisering
+ontstaat, gelijk blijven. In de BRP komen alleen groepen met gegevens voor. Daarin
+worden alleen actualiseringen doorgevoerd als er gegevens wijzigen in zo’n groep.
+Dit betekent dus dat gegevens uit een groep in een GBA-categorie alleen
+Pagina 12 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+geconverteerd worden naar de overeenkomstige gegevens in de BRP als de inhoud
+van de gegevens in die groep afwijkt van de gegevens in die groep in de categorie
+die er onmiddellijk aan voorafgaat. Uitgangspunt is hierbij dat de categoriestapel
+oplopend gesorteerd is op datum ingang geldigheid en dat het proces aanvangt bij
+de oudste historische categorie. De te converteren administratieve gegevens worden
+ontleend aan de dezelfde categorie waarin de groep voorkomt waarvan de gegevens
+geconverteerd worden. Als onjuist aangemerkte categorieën worden overgeslagen
+bij het bepalen van verschillen.
+Bij de conversie van gegevens van de BRP naar de GBA wordt met het voorgaande
+rekening gehouden en worden de gegevens van een betrokken groep BRP-gegevens
+naar de overeenkomstige gegevens in meerdere GBA-categorieën geconverteerd.
+Het bovenstaande
+•
+Groep 01
+•
+Groep 02
+•
+Groep 04
+•
+Groep 09
+•
+Groep 14
+•
+Groep 15
+•
+Groep 20
+•
+Groep 61
+•
+Groep 62
+
+kan spelen bij de volgende GBA-groepen:
+Identificatienummers
+Naam
+Geslacht
+Gemeente
+Immigratie
+Soort verbintenis
+A-nummerverwijzingen
+Naamgebruik
+Familierechtelijke betrekking
+
+Andere uitzonderingen zijn telkens vermeld bij de betrokken conversieregels.
+3.1.4
+
+Niet geconverteerde gegevens bij de conversie van GBA naar BRP
+Als er bij de conversie van GBA naar BRP gegevens niet geconverteerd worden,
+worden de niet geconverteerde gegevens wel bewaard. Ze worden door de centrale
+voorzieningen in de duale periode gebruikt bij het verstrekken van gegevens. Als het
+om verstrekkingen aan gemeenten en afnemers gaat die nog gebruik maken van het
+GBA-stelsel, worden de te verstrekken BRP-gegevens geconverteerd naar GBAgegevens. De vanuit de BRP geconverteerde gegevens worden door de centrale
+voorzieningen zo nodig aangevuld met gegevens uit de betrokken bewaarde, niet
+geconverteerde gegevens.
+De bewaarde, niet geconverteerde gegevens zijn niet beschikbaar in het BRP-stelsel
+en spelen ook geen rol bij verstrekkingen in het BRP-stelsel. De bewaarde gegevens
+zijn in beide stelsels in het kader van gegevensbeheer beschikbaar voor handmatige
+raadplegingen.
+
+3.1.5
+
+Niet geconverteerde gegevens bij de conversie van BRP naar GBA
+Gegevens in de BRP die niet geconverteerd worden naar de GBA, zijn volledig
+beschikbaar in het BRP-stelsel. Ze zijn bij gegevensverstrekkingen niet beschikbaar
+in het GBA-stelsel. Ze zijn zo nodig wel handmatig te raadplegen.
+
+3.1.6
+
+Voorkomenregels in GBA en BRP
+Zowel in de GBA als in de BRP geldt dat er gegevens zijn die verplicht voorkomen.
+Het kan ook zijn dat een gegeven niet mag voorkomen. Soms geldt zo’n verplichting
+altijd, soms is de verplichting of het verbod afhankelijk van de aan- of afwezigheid
+van andere gegevens. De regels daarvoor worden aangeduid met de term
+“voorkomenregels”. Voorkomenregels zijn niet expliciet opgenomen in het LO GBA
+Pagina 13 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+en het LO BRP, maar zijn af te leiden uit de beschrijvingen van het GBA- resp. het
+BRP-gegevensmodel.
+Als bij de conversie blijkt dat een gegeven dat verplicht moet voorkomen in de
+geconverteerde gegevens, niet aanwezig is in de te converteren gegevens, wordt
+voor dat gegeven in de geconverteerde gegevens de in het LO GBA dan wel LO BRP
+voorgeschreven waarde opgenomen. In de GBA gaat het dan om de bij de
+elementdefinities opgenomen standaardwaarden. In de BRP is bij de
+gegevensdefinities bij het waardenbereik vastgelegd om welke waarden het gaat.
+De situatie kan zich ook voordoen dat een aantal samenhangende gegevens na
+conversie zodanige waarden bevat, dat de voorkomenregels van de GBA dan wel de
+BRP voorschrijven dat dan geen van die gegevens voor mag komen. De betrokken
+gegevens worden dan uit het conversieresultaat weggelaten. Er gaat daarbij geen
+informatie verloren.
+Er is een aantal uitzonderingen op deze regel. Die uitzonderingen zijn beschreven bij
+de betrokken conversieregels.
+3.1.7
+
+PL-en die niet geconverteerd kunnen worden bij de conversie van GBA naar BRP
+Uitgangspunt bij het beschrijven van de conversieregels is dat alle te converteren
+PL-en in de GBA voldoen aan alle regels uit het LO GBA. Die regels zijn vertaald in
+zogenoemde precondities. De precondities bevatten verder eisen die voortkomen uit
+de regels die voor BRP-PL-en gelden.
+Voorbeelden van situaties die zijn toegestaan op een PL in de GBA, maar niet op een
+PL in de BRP:
+•
+gebeurtenisland is Nederland en gebeurtenisplaats is geen gemeentecode;
+•
+reden opschorting is de standaardwaarde punt;
+•
+soort verbintenis is standaardwaarde punt.
+Een PL die niet aan de precondities voldoet, wordt niet geconverteerd. Zo’n PL zal
+eerst gecorrigeerd moeten worden.
+Ook PL-en die wel aan de precondities voldoen maar zodanige gegevens bevatten
+dat de in de onderscheiden paragrafen beschreven conversieregels geen uitsluitsel
+geven over de uit te voeren conversie, zijn niet converteerbaar. Ook deze PL-en
+moeten eerst gecorrigeerd worden.
+Er is een zeer klein aantal PL-en waarbij dat corrigeren niet mogelijk is. Zie hiervoor
+paragraaf <nummer en naam opnemen>.
+
+3.1.8
+
+Opzet van de conversiebeschrijvingen
+De gegevens uit de gegevensset van de GBA en die van de BRP zijn naast elkaar
+gezet en aan elkaar gerelateerd. Zie Bijlage Concordantieoverzicht GBA BRP, een
+overzicht waaruit blijkt welke GBA-rubriek overeenkomt met welk BRP-gegeven. Uit
+dat overzicht blijkt, uiteraard niet onverwacht, dat er groepen bij elkaar horende
+gegevens te onderscheiden zijn. In de subparagrafen van paragraaf 3.2 Conversie
+van GBA naar BRP en 3.3 Conversie van BRP naar GBA wordt de conversie van al die
+groepen in dezelfde volgorde beschreven.
+Alle paragrafen zijn gelijk opgebouwd. De opbouw is als volgt:
+Pagina 14 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+•
+
+•
+
+•
+
+Een tabel met de betrokken GBA- en BRP-gegevens. Bij de beschrijving van
+de conversie vanuit GBA naar BRP staan de GBA-gegevens in de meest
+linkse kolom. Bij de conversie van BRP naar GBA staan de BRP-gegevens in
+die kolom. Bij de GBA-gegevens zijn het rubrieknummer en de rubrieknaam
+opgenomen. Bij de BRP-gegevens alleen de gegevensnaam.
+Een beschrijving van het grotere geheel waarvan de betrokken gegevens
+uitmaken. Voor de GBA-gegevens zijn dat de categorieën, voor de BRPgegevens zijn dat de gegevensgroepen en het objecttype waartoe een groep
+behoort.
+Die beschrijving is met name van belang voor sommige BRP-gegevens. Niet
+alle namen van BRP-gegevens zijn uniek. Om in het LO BRP zo nodig nadere
+informatie over het betrokken gegeven te vinden, is het nodig te weten tot
+welke groep een gegeven dat betrokken is bij de onderhavige
+conversiebeschrijving en waarvan de naam niet uniek is, behoort.
+Zie het LO GBA en het LO BRP voor een andere uitleg over categorieën
+gegevensgroepen en objecttypen.
+De eigenlijke conversieregels.
+
+De tabellen bevatten de GBA-en BRP-gegevens waarvan de conversie in de
+betrokken paragraaf wordt beschreven. Voor elk GBA-gegeven is aangegeven met
+welk BRP-gegeven het correspondeert. En uiteraard andersom, voor elk BRPgegeven is aangegeven met welk GBA-gegeven het correspondeert. Meestal is de
+relatie tussen de betrokken gegevens 1 op 1. Bij de gegevens over
+administratienummer, naam, gebeurtenis en geslacht (paragrafen 3.2.1, 3.2.2,
+3.2.3 en 3.2.4 resp. 3.3.1, 3.3.2, 3.3.3 en 3.3.4) kan het 1 op N zijn. Een GBAgegeven correspondeert met meerdere BRP-gegevens. Dat is een gevolg van het
+verschil in registreren van gegevens van gerelateerden in GBA en BRP. Zie
+paragraaf 3.1.1 Gegevens van personen als persoon en als gerelateerde bij de
+conversie van GBA naar BRP en het LO GBA en het LO BRP.
+De situatie dat meerdere BRP-gegevens corresponderen met een GBA-gegeven
+komt bij de conversie niet voor. Als een GBA-gegeven met meer dan een BRPgegeven correspondeert, wordt het BRP-gegeven altijd maar naar een van de
+corresponderende GBA-gegevens geconverteerd. Dit komt alleen voor bij de
+naamgegevens (zie paragraaf 3.2.2 en 3.3.2).
+Een en ander komt ook tot uiting in de tabellen. Als er sprake is van een 1 op N
+relatie, komt in de tabel aan de GBA-kant maar een cel voor en aan de BRP-kant N
+cellen. Als er voor een GBA-gegeven geen corresponderende BRP-gegeven is, is de
+BRP-cel naast dat GBA-gegeven leeg. En als er voor een BRP-gegeven geen
+corresponderend GBA-gegeven is, is de GBA-cel naast dat BRP-gegeven leeg. Die
+notatie wordt ook gebruikt voor de hiervoor genoemde gevallen dat een BRPgegeven altijd maar naar een van de corresponderende GBA-gegevens
+geconverteerd wordt.
+De volgorde van de gegevens in de tabellen is zowel bij de conversiebeschrijvingen
+van GBA naar BRP als die van BRP naar GBA gebaseerd op het GBA-gegevensmodel.
+De gegevens in de betrokken categorieën zijn uitgangspunt. Dat leidt alleen in
+paragraaf 3.2.2 en 3.3.2 Naamgegevens tot een tabel, waarbij uitgaan van de BRPgegevens een overzichtelijker tabel zou hebben opgeleverd. Omdat het bij de
+betrokken GBA-gegevens in feite om dezelfde gegevens gaat van een persoon en
+zijn gerelateerden, blijkt een geaggregeerd overzicht mogelijk. De op dat
+geaggregeerde overzicht gebaseerde tabellen zijn voldoende overzichtelijk om in
+deze paragrafen af te zien van het uitganspunt en voor een afwijkende opzet in deze
+
+Pagina 15 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+paragrafen te kiezen.. In de paragrafen 3.2.2 en 3.3.2 Naamgegevens is daarom
+ook zo’n geaggregeerd overzicht opgenomen in een tweede tabel.
+Er blijkt ook een in feite dubbel geaggregeerd overzicht mogelijk met betrekking tot
+gegevens over gebeurtenissen. Het gaat enerzijds om geboortegegevens van een
+persoon en van gerelateerden en anderzijds om gegevens over de gebeurtenissen,
+geboorte, overlijden, aangaan van een huwelijk/geregistreerd partnerschap en
+beëindigen van een huwelijk/geregistreerd partnerschap. De geaggregeerde
+overzichten zijn in een tweede tabel opgenomen in de paragrafen 3.2.3 en 3.3.3
+Gebeurtenis.
+3.1.9
+
+Algemene en administratieve gegevens
+De GBA- en BRP-gegevens zijn voor de conversiebeschrijving in tweeën gedeeld, de
+‘algemene’ gegevens en de ‘administratieve’ gegevens. Deze indeling komt
+grotendeels, maar niet helemaal overeen met de indeling in de wet- en regelgeving
+BRP.
+Onder algemene gegevens worden in dit document verstaan: gegevens die op zich
+betekenis hebben. Onder administratieve gegevens wordt verstaan: gegevens die
+iets zeggen over algemene gegevens.
+De algemene gegevens zijn zoals vermeld in paragraaf 3.1.8 Opzet van de
+conversiebeschrijvingen, onderverdeeld in groepen waarvan de conversie hierna per
+groep beschreven wordt.
+De administratieve gegevens worden in een keer in hun geheel beschreven in
+paragraaf 3.2.31 en 3.3.31 Administratieve gegevens.
+
+Pagina 16 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+3.2
+
+Conversie van GBA naar BRP
+In de volgende paragrafen wordt de conversie beschreven vanuit het betrokken
+gegeven uit de BRP. Alleen in paragraaf 3.2.2 Naamgegevens wordt de conversie
+beschreven vanuit de betrokken rubriek uit de GBA.
+Elke paragraaf begint met een overzicht van de betrokken GBA- en BRP-gegevens.
+De kop van elk overzicht is als volgt.
+GBA
+Rubrieknummer
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+De inhoud van die kolommen is als volgt.
+•
+In de kolom GBA Rubrieknummer zijn alleen de betrokken actuele
+rubrieknummers opgenomen. Daarmee worden echter ook de overeenkomstige
+historische rubrieknummers bedoeld, uiteraard voor zover ze bestaan.
+•
+In de kolom GBA rubrieknaam is de naam van de betrokken rubriek opgenomen.
+•
+In de kolom BRP Gegevennaam is de naam van het betrokken BRP-gegeven
+opgenomen. Die namen zijn voor actuele en historische gegevens gelijk.
+In de conversieregels worden alleen de actuele rubrieknummers genoemd. Daarmee
+worden echter ook de overeenkomstige historische rubrieknummers bedoeld,
+uiteraard voor zover ze bestaan. Bij de BRP gegevens worden zowel de actuele als
+historische voorkomens van die gegevens bedoeld.
+3.2.1
+
+Identificatienummers
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+01.01.10
+02.01.10
+03.01.10
+05.01.10
+
+09.01.10
+01.01.20
+02.01.20
+03.01.20
+05.01.20
+
+09.01.20
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+A-nummer persoon
+A-nummer ouder1
+A-nummer ouder2
+A-nummer
+echtgenoot/geregistreerd
+partner
+A-nummer kind
+
+administratienummer
+
+Burgerservicenummer
+persoon
+Burgerservicenummer ouder1
+Burgerservicenummer ouder2
+Burgerservicenummer
+echtgenoot/geregistreerd
+partner
+Burgerservicenummer kind
+
+burgerservicenummer
+
+Gegevens over de identificatienummers komen voor:
+
+Pagina 17 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+•
+
+•
+
+in de GBA in groep 01 Identificatienummers in categorie 01/51 Persoon, 02/52
+Ouder1, 03/53 Ouder2, 05/55 Huwelijk/geregistreerd partnerschap en 09/59
+Kind;
+in de BRP in de gegevensgroep identificatienummers in het objecttype persoon.
+
+Conversieregels
+In de beschrijving hierna staat “cc” voor een categorienummer en “nn” voor de
+nadere aanduiding in de rubrieknaam (persoon, ouder1, ouder2,
+echtgenoot//geregistreerd partner, kind). De paragraaf 3.1.1 Gegevens van
+personen als persoon en als gerelateerde bij de conversie van GBA naar BRP is hier
+van toepassing. Dat geldt ook voor de paragraaf 3.1.3.2 Speciale uitzonderingen.
+Gegeven administratienummer
+Als rubriek cc.01.10 A-nummer “nn” aanwezig is, wordt de inhoud ongewijzigd
+geconverteerd naar het gegeven administratienummer.
+Als de rubriek niet aanwezig is, wordt het gegeven niet opgenomen.
+Gegeven burgerservicenummer
+Als rubriek cc.01.20 Burgerservicenummer “nn” aanwezig is, wordt de inhoud
+ongewijzigd geconverteerd naar het gegeven burgerservicenummer.
+Als de rubriek niet aanwezig is, wordt het gegeven niet opgenomen.
+3.2.2
+
+Naamgegevens
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie. Vanwege het feit dat een aantal BRPgegevens dezelfde naam hebben, is in onderstaande tabel ook een kolom
+opgenomen waarin telkens de naam van de betrokken BRP gegevensgroep is
+opgenomen.
+Bij de GBA-rubrieken uit de categorieën 02 Ouder1, 03 Ouder2, 05
+Huwelijk/geregistreerd partnerschap en 09 Kind zijn de cellen in de tabel waarin de
+BRP-gegevens uit de groepen voornaam, geslachtsnaamcomponent en naamgebruik
+voorkomen en de namen daarin grijs gemaakt. Hiermee wordt aangeduid dat de
+betrokken BRP-gegevens in de BRP niet geregistreerd worden bij pseudo-personen.
+Zie paragraaf 3.1.1 Gegevens van personen als persoon en als gerelateerde bij de
+conversie van GBA naar BRP en 3.1.2 Naamgegevens in de BRP en de conversie van
+naamgegevens van GBA naar BRP. Bij de onder de kop ‘Conversieregels’ beschreven
+conversie is hiermee rekening gehouden.
+GBA
+Rubrieknummer
+
+GBA
+Rubrieknaam
+
+01.02.10
+
+Voornamen persoon
+
+01.02.20
+
+Adellijke
+titel/predikaat1
+
+1
+
+BRP
+Gegevennaam
+
+BRP Groep
+
+voornamen
+
+samengestelde
+naam
+voornaam
+voornaam
+naamgebruik
+
+volgnummer
+naam
+voornamen
+naamgebruik
+adellijke titel
+
+samengestelde
+naam
+
+In de BRP wordt de term “predicaat” gebruikt. Die conventie wordt in het LO Migratie
+zoveel mogelijk gevolgd. Echter, in het LO GBA wordt de aanduiding “predikaat” gebruikt
+
+Pagina 18 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+GBA
+Rubrieknummer
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+BRP Groep
+
+persoon
+
+predicaat
+
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+volgnummer
+adellijke titel
+predicaat
+adellijke titel
+naamgebruik
+predicaat
+naamgebruik
+voorvoegsel
+scheidingsteken
+volgnummer
+01.02.30
+
+Voorvoegsel
+geslachtnaam persoon
+
+voorvoegsel
+scheidingsteken
+voorvoegsel
+naamgebruik
+scheidingsteken
+naamgebruik
+geslachtsnaamstam
+volgnummer
+
+01.02.40
+
+Geslachtsnaam
+persoon
+
+stam
+geslachtsnaamstam naamgebruik
+namenreeks?
+afgeleid?
+
+01.61.10
+
+02.02.10
+
+Aanduiding
+naamgebruik
+
+Voornamen ouder1
+
+naamgebruik
+
+naamgebruik
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+naamgebruik
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+samengestelde
+naam
+samengestelde
+naam
+naamgebruik
+
+naamgebruik
+afgeleid?
+
+naamgebruik
+
+voornamen
+
+samengestelde
+naam
+
+i.p.v. “predicaat”, met name in de rubrieknamen. Die conventie wordt in dit document
+gevolgd als er rubrieknamen uit de GBA voorkomen.
+Pagina 19 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+GBA
+Rubrieknummer
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+BRP Groep
+
+volgnummer
+naam
+voornamen
+naamgebruik
+adellijke titel
+
+voornaam
+voornaam
+naamgebruik
+
+predicaat
+volgnummer
+02.02.20
+
+Adellijke
+titel/predikaat ouder1
+
+adellijke titel
+predicaat
+adellijke titel
+naamgebruik
+predicaat
+naamgebruik
+voorvoegsel
+scheidingsteken
+volgnummer
+
+02.02.30
+
+Voorvoegsel
+geslachtnaam ouder1
+
+voorvoegsel
+scheidingsteken
+voorvoegsel
+naamgebruik
+Scheidingsteken
+naamgebruik
+geslachtsnaamstam
+volgnummer
+
+02.02.40
+
+Geslachtsnaam
+ouder1
+
+stam
+geslachtsnaamstam naamgebruik
+namenreeks?
+afgeleid?
+
+voornamen
+03.02.10
+
+Voornamen ouder2
+
+Pagina 20 van 85
+
+volgnummer
+naam
+
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+naamgebruik
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+naamgebruik
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+samengestelde
+naam
+samengestelde
+naam
+samengestelde
+naam
+voornaam
+voornaam
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+GBA
+Rubrieknummer
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+BRP Groep
+
+voornamen
+naamgebruik
+adellijke titel
+
+naamgebruik
+
+predicaat
+volgnummer
+03.02.20
+
+Adellijke
+titel/predikaat ouder2
+
+adellijke titel
+predicaat
+adellijke titel
+naamgebruik
+predicaat
+naamgebruik
+voorvoegsel
+scheidingsteken
+volgnummer
+
+03.02.30
+
+Voorvoegsel
+geslachtnaam ouder2
+
+voorvoegsel
+scheidingsteken
+voorvoegsel
+naamgebruik
+Scheidingsteken
+naamgebruik
+geslachtsnaamstam
+volgnummer
+
+03.02.40
+
+Geslachtsnaam
+ouder2
+
+stam
+geslachtsnaamstam naamgebruik
+namenreeks?
+afgeleid?
+
+voornamen
+05.02.10
+
+Voornamen
+echtgenoot/geregistreerd partner
+
+volgnummer
+naam
+voornamen
+naamgebruik
+
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+naamgebruik
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+naamgebruik
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+samengestelde
+naam
+samengestelde
+naam
+samengestelde
+naam
+voornaam
+voornaam
+naamgebruik
+
+Pagina 21 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+GBA
+Rubrieknummer
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+BRP Groep
+
+adellijke titel
+
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+predicaat
+volgnummer
+05.02.20
+
+Adellijke
+titel/predikaat
+echtgenoot/geregistreerd partner
+
+adellijke titel
+predicaat
+adellijke titel
+naamgebruik
+predicaat
+naamgebruik
+voorvoegsel
+scheidingsteken
+volgnummer
+
+05.02.30
+
+Voorvoegsel
+geslachtnaam
+echtgenoot/geregistreerd partner
+
+voorvoegsel
+scheidingsteken
+voorvoegsel
+naamgebruik
+scheidingsteken
+naamgebruik
+geslachtsnaamstam
+volgnummer
+
+05.02.40
+
+Geslachtsnaam
+echtgenoot/geregistreerd partner
+
+stam
+geslachtsnaamstam naamgebruik
+namenreeks?
+afgeleid?
+
+voornamen
+09.02.10
+
+Voornamen kind
+
+09.02.20
+
+Adellijke
+titel/predikaat kind
+
+Pagina 22 van 85
+
+volgnummer
+naam
+voornamen
+naamgebruik
+adellijke titel
+
+naamgebruik
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+naamgebruik
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+samengestelde
+naam
+samengestelde
+naam
+samengestelde
+naam
+voornaam
+voornaam
+naamgebruik
+samengestelde
+naam
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+GBA
+Rubrieknummer
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+BRP Groep
+
+predicaat
+
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+volgnummer
+adellijke titel
+predicaat
+adellijke titel
+naamgebruik
+predicaat
+naamgebruik
+voorvoegsel
+scheidingsteken
+volgnummer
+09.02.30
+
+Voorvoegsel
+geslachtnaam kind
+
+voorvoegsel
+scheidingsteken
+voorvoegsel
+naamgebruik
+scheidingsteken
+naamgebruik
+geslachtsnaamstam
+volgnummer
+
+09.02.40
+
+Geslachtsnaam kind
+
+stam
+geslachtsnaamstam naamgebruik
+namenreeks?
+afgeleid?
+
+naamgebruik
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+naamgebruik
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+samengestelde
+naam
+samengestelde
+naam
+
+Naamgegevens komen voor:
+•
+in de GBA in groep 02 Naam in categorie 01/51 Persoon, 02/52 Ouder1, 03/53
+Ouder2, 05/55 Huwelijk/geregistreerd partnerschap en 09/59 Kind en in groep
+61 Naamgebruik in categorie 01/51 Persoon;
+•
+in de BRP in de gegevensgroepen voornaam, geslachtsnaamcomponent,
+samengestelde naam en naamgebruik in het objecttype persoon.
+Conversieregels
+In de beschrijving hierna staat de aanduiding “cc” voor een categorienummer. De
+GBA-rubrieken worden aangeduid met de toevoeging “betrokkene”, wat staat voor
+de persoonsaanduiding in de onderscheiden rubrieknamen. Uitzondering is rubriek
+Pagina 23 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+01.61.10 Naamgebruik, die alleen in categorie 01 voorkomt. Met gebruik van deze
+aanduidingen komt de tabel aan het begin van deze paragraaf er als volgt uit te
+zien.
+GBA
+Rubrieknummer
+
+cc.02.10
+
+GBA
+Rubrieknaam
+
+Voornamen
+betrokkene
+
+BRP
+Gegevennaam
+
+BRP Groep
+
+voornamen
+
+samengestelde
+naam
+voornaam
+voornaam
+naamgebruik
+
+volgnummer
+naam
+voornamen
+naamgebruik
+adellijke titel
+predicaat
+volgnummer
+
+cc.02.20
+
+Adellijke
+titel/predikaat
+betrokkene
+
+adellijke titel
+predicaat
+adellijke titel
+naamgebruik
+predicaat
+naamgebruik
+voorvoegsel
+scheidingsteken
+voorvoegsel
+
+cc.02.30
+
+Voorvoegsel
+geslachtnaam
+betrokkene
+
+volgnummer
+scheidingsteken
+voorvoegsel
+naamgebruik
+scheidingsteken
+naamgebruik
+geslachtsnaamstam
+volgnummer
+
+cc.02.40
+
+Geslachtsnaam
+betrokkene
+
+stam
+geslachtsnaamstam naamgebruik
+namenreeks?
+afgeleid?
+
+Pagina 24 van 85
+
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+naamgebruik
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+naamgebruik
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+samengestelde
+naam
+samengestelde
+naam
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+GBA
+Rubrieknummer
+01.61.10
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+BRP Groep
+
+Aanduiding
+naamgebruik
+
+naamgebruik
+
+naamgebruik
+
+naamgebruik
+afgeleid?
+
+naamgebruik
+
+De paragrafen 3.1.1 Gegevens van personen als persoon en als gerelateerde bij de
+conversie van GBA naar BRP en 3.1.2 Naamgegevens in de BRP en de conversie van
+naamgegevens van GBA naar BRP zijn hier van toepassing. Dat geldt ook voor de
+paragraaf 3.1.3 Converteren actuele en historische gegevens.
+Rubriek cc. 02.10 Voornamen betrokkene
+Als rubriek cc. 02.10 Voornamen betrokkene voorkomt, gaat de conversie als
+volgt.
+a. Elke door spaties gescheiden naam die voorkomt in de rubriek, wordt
+ongewijzigd geconverteerd naar een gegeven naam in de gegevensgroep
+voornaam, waarbij bij de eerste naam in het gegeven volgnummer in de
+gegevensgroep voornaam de waarde “1” wordt opgenomen en voor elke
+volgende naam een met 1 opgehoogde waarde.
+b. De gehele inhoud wordt ongewijzigd geconverteerd naar het gegeven
+voornamen in de gegevensgroep samengestelde naam.
+c. de gehele inhoud wordt ongewijzigd geconverteerd naar het gegeven
+voornamen naamgebruik in de gegevensgroep naamgebruik.
+N.B.
+De regel c wordt alleen uitgevoerd voor de gegevens uit de actuele categorie 01
+Persoon.
+Voor de categorieën 02/52 Ouder1, 03/53 Ouder2, 05/55 Huwelijk/geregistreerd
+partnerschap en 09/59 Kind wordt alleen regel b uitgevoerd.
+Als rubriek cc.02.10 Voornamen betrokkene niet voorkomt, wordt er niets
+geconverteerd, d.w.z.:
+•
+er wordt geen groep voornaam aangelegd;
+•
+het gegeven voornamen wordt niet opgenomen in de gegevensgroep
+samengestelde naam;
+•
+het gegeven voornamen naamgebruik wordt niet opgenomen in de
+gegevensgroep naamgebruik.
+Rubriek cc.02.20 Adellijke titel/predikaat betrokkene
+Als rubriek cc.02.20 Adellijke titel/predikaat betrokkene voorkomt, is de conversie
+afhankelijk van het feit of de inhoud betrekking heeft op een predicaat of een
+adellijke titel. In de BRP zijn dit in alle betrokken gegevensgroepen afzonderlijke
+gegevens die nooit gelijk voorkomen. Als het gegeven adellijke titel voorkomt,
+komt het gegeven predicaat niet voor en andersom
+De inhoud van rubriek cc.02.20 Adellijke titel/predikaat betrokkene betreft een
+predicaat.
+De conversie gaat dan als volgt.
+a. De inhoud wordt geconverteerd naar het gegeven predicaat in de
+gegevensgroep geslachtsnaamcomponent. In het voorkomen van de
+gegevensgroep geslachtsnaamcomponent die hierbij ontstaat, heeft het
+gegeven volgnummer de waarde “1”.
+Pagina 25 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+b.
+c.
+
+d.
+
+De inhoud wordt geconverteerd naar het gegeven predicaat in de
+gegevensgroep samengestelde naam.
+Als de waarde in rubriek 01.61.10 Aanduiding naamgebruik gelijk is aan “E”
+of “N” of als de rubriek niet voorkomt, wordt de inhoud geconverteerd naar
+het gegeven predicaat naamgebruik in de gegevensgroep naamgebruik.
+Als de waarde in rubriek 01.61.10 Aanduiding naamgebruik gelijk is aan “P”
+of “V”, wordt de inhoud niet geconverteerd. De gegevens predicaat
+naamgebruik en adellijke titel naamgebruik worden niet in de
+gegevensgroep naamgebruik opgenomen.
+
+N.B.
+De regels c en d worden alleen uitgevoerd voor de actuele categorie 01
+Persoon.
+Voor de categorieën 02/52 Ouder1, 03/53 Ouder2, 05/55 Huwelijk/
+geregistreerd partnerschap en 09/59 Kind wordt alleen regel b uitgevoerd.
+De inhoud van rubriek cc.02.20 Adellijke titel/predikaat betrokkene betreft een
+adellijke titel.
+De conversie gaat dan als volgt.
+a. De inhoud wordt geconverteerd naar het gegeven adellijke titel in de
+gegevensgroep geslachtsnaamcomponent. In het voorkomen van de
+gegevensgroep geslachtsnaamcomponent die hierbij ontstaat, heeft het
+gegeven volgnummer de waarde “1”.
+b. De inhoud wordt geconverteerd naar het gegeven adellijke titel in de
+gegevensgroep samengestelde naam.
+c. Als de waarde in rubriek 01.61.10 Aanduiding naamgebruik gelijk is aan “E”
+of “N” of als element 61.10 niet voorkomt, wordt de inhoud geconverteerd
+naar het gegeven adellijke titel naamgebruik in de gegevensgroep
+naamgebruik.
+d. Als de waarde in rubriek 01.61.10 Aanduiding naamgebruik gelijk is aan “P”
+of “V”, wordt de inhoud niet geconverteerd. De gegevens predicaat
+naamgebruik en adellijke titel naamgebruik worden niet in de
+gegevensgroep naamgebruik opgenomen.
+N.B.
+De regels c en d worden alleen uitgevoerd voor de actuele categorie 01
+Persoon.
+Voor de categorieën 02/52 Ouder1, 03/53 Ouder2, 05/55 Huwelijk/
+geregistreerd partnerschap en 09/59 Kind wordt alleen regel b uitgevoerd.
+
+Bij de conversie wordt de een- of tweeletterige code met behulp van de
+Conversietabel Adellijke titel / predicaat (zie de bijlage Conversietabellen)
+omgezet in de eenletterige code die, samen met het geslacht van de persoon
+aangeeft welke adellijke titel het betreft.
+Als rubriek cc.02.20 Adellijke titel/predikaat betrokkene niet voorkomt, wordt er
+niets geconverteerd, d.w.z. de gegevens predicaat en adellijke titel in de
+gegevensgroepen geslachtsnaamcomponent en samengestelde naam en de
+gegevens predicaat naamgebruik en adellijk titel naamgebruik in de
+gegevensgroep naamgebruik worden niet in die groepen opgenomen.
+
+Pagina 26 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Rubriek cc.02.30 Voorvoegsel geslachtsnaam betrokkene
+Als rubriek cc.02.30 Voorvoegsel geslachtsnaam betrokkene voorkomt, gaat de
+conversie als volgt.
+a. De inhoud wordt ongewijzigd geconverteerd naar het gegeven voorvoegsel in
+de gegevensgroep geslachtsnaamcomponent. In het voorkomen van de
+gegevensgroep geslachtsnaamcomponent die hierbij ontstaat, wordt in het
+gegeven scheidingsteken een spatie opgenomen en heeft het gegeven
+volgnummer de waarde “1”.
+b. De inhoud wordt ongewijzigd geconverteerd naar het gegeven voorvoegsel in
+de gegevensgroep samengestelde naam, waarbij in het bijbehorende gegeven
+scheidingsteken in de gegevensgroep samengestelde naam een spatie wordt
+opgenomen.
+c. Als de waarde in rubriek 01.61.10 Aanduiding naamgebruik gelijk is aan “E” of
+“N” of als rubriek 01.61.10 niet voorkomt, wordt de inhoud ongewijzigd
+geconverteerd naar het gegeven voorvoegsel in de gegevensgroep
+naamgebruik, waarbij in het gegeven scheidingsteken naamgebruik in de
+gegevensgroep naamgebruik een spatie wordt opgenomen.
+d. als de waarde in rubriek 01.61.10 Aanduiding naamgebruik gelijk is aan “P” of
+“V”, wordt niet de inhoud van element 02.30 Voorvoegsel uit categorie 01
+Persoon geconverteerd, maar, als het daarin voorkomt, de inhoud van dit
+element in groep 02 Naam in de categorie 05 Huwelijk/Geregistreerd
+partnerschap waarin een staand huwelijk of partnerschap is vastgelegd dan
+wel, als er geen staand huwelijk of partnerschap is, in de categorie 05 waarin
+het laatst ontbonden huwelijk of partnerschap is vastgelegd. De inhoud van
+dat element wordt ongewijzigd geconverteerd naar het gegeven voorvoegsel
+in de gegevensgroep naamgebruik, waarbij in het bijbehorende gegeven
+scheidingsteken naamgebruik in de gegevensgroep naamgebruik een spatie
+wordt opgenomen.
+N.B.
+De regels c en d worden alleen uitgevoerd voor de actuele categorie 01 Persoon.
+Voor de categorieën 02/52 Ouder1, 03/53 Ouder2, 05/55 Huwelijk/ geregistreerd
+partnerschap en 09/59 Kind wordt alleen regel b uitgevoerd.
+Als rubriek cc.02.30 Voorvoegsel geslachtsnaam betrokkene niet voorkomt, wordt
+er niets geconverteerd, d.w.z. de gegevens voorvoegsel en scheidingsteken in de
+gegevensgroepen geslachtsnaamcomponent en samengestelde naam en de
+gegevens voorvoegsel naamgebruik en scheidingsteken naamgebruik in de
+gegevensgroep naamgebruik worden niet in die groepen opgenomen.
+Rubriek cc.02.40 Geslachtsnaam betrokkene
+Als rubriek cc.02.40 Geslachtsnaam betrokkene voorkomt, gaat de conversie als
+volgt.
+a. De inhoud wordt ongewijzigd geconverteerd naar het gegeven stam in de
+gegevensgroep geslachtsnaamcomponent. In het voorkomen van de
+gegevensgroep geslachtsnaamcomponent die hierbij ontstaat, heeft het
+gegeven volgnummer de waarde “1”.
+b. De inhoud wordt ongewijzigd geconverteerd naar het gegeven
+geslachtsnaamstam in de gegevensgroep samengestelde naam.
+c. Als de waarde in rubriek 01.61.10 Aanduiding naamgebruik gelijk is aan “E” of
+als element 61.10 niet voorkomt, wordt de inhoud ongewijzigd geconverteerd
+naar het gegeven geslachtsnaamstam naamgebruik in de gegevensgroep
+naamgebruik.
+d. Als de waarde in rubriek 01.61.10 Aanduiding naamgebruik gelijk is aan “N”,
+wordt de inhoud ongewijzigd geconverteerd naar het gegeven
+Pagina 27 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+e.
+
+f.
+
+geslachtsnaamstam naamgebruik in de gegevensgroep naamgebruik. Dat
+gegeven wordt, gescheiden door de tekens “ - “ (spatie, streepje, spatie),
+aangevuld met gegevens uit groep 02 Naam in de categorie 05
+Huwelijk/Geregistreerd partnerschap waarin een staand huwelijk of
+partnerschap is vastgelegd dan wel, als er geen staand huwelijk of
+partnerschap is, in de categorie 05 waarin het laatst ontbonden huwelijk of
+partnerschap is vastgelegd. De aanvulling bestaat uit de inhoud van element
+02.30 Voorvoegsel, als dat voorkomt, gevolgd door een spatie, en de inhoud
+van element 02.40 Geslachtsnaam.
+Als de waarde in element 61.10 Aanduiding naamgebruik gelijk is aan “P”,
+wordt de inhoud van element 02.40 uit groep 02 Naam in de categorie 05
+Huwelijk/Geregistreerd partnerschap waarin een staand huwelijk of
+partnerschap is vastgelegd dan wel, als er geen staand huwelijk of
+partnerschap is, in de categorie 05 waarin het laatst ontbonden huwelijk of
+partnerschap is vastgelegd, ongewijzigd geconverteerd naar het gegeven
+geslachtsnaamstam naamgebruik in de gegevensgroep naamgebruik.
+Als de waarde in rubriek 01.61.10 Aanduiding naamgebruik gelijk is aan “V”,
+wordt de inhoud van element 02.40 uit groep 02 Naam in de categorie 05
+Huwelijk/Geregistreerd partnerschap waarin een staand huwelijk of
+partnerschap is vastgelegd dan wel, als er geen staand huwelijk of
+partnerschap is, in de categorie 05 waarin het laatst ontbonden huwelijk of
+partnerschap is vastgelegd, ongewijzigd geconverteerd naar het gegeven
+geslachtsnaamstam naamgebruik in de gegevensgroep naamgebruik. Dat
+gegeven wordt, gescheiden door de tekens “ - “ (spatie, streepje, spatie),
+aangevuld met gegevens uit groep 02 Naam in de categorie 01 Persoon. De
+aanvulling bestaat uit de inhoud van element 02.30 Voorvoegsel, als dat
+voorkomt, gevolgd door een spatie, en de inhoud van groep 02.40
+Geslachtsnaam.
+
+N.B.
+De regels b, c, d, e en f worden alleen uitgevoerd voor de actuele categorie 01
+Persoon.
+Voor de categorieën 02/52 Ouder1, 03/53 Ouder2, 05/55 Huwelijk/ geregistreerd
+partnerschap en 09/59 Kind wordt alleen regel b uitgevoerd.
+Als rubriek cc.02.40 Geslachtsnaam betrokkene niet voorkomt in een te
+converteren categorie, geldt wat is beschreven in de paragraaf, waarin speciale
+en uitzonderingsgevallen beschreven worden <referentie opnemen naar de plek in
+het LO Migratie waar dat staat>. Zie ook paragraaf 3.1.1. Gegevens van personen
+als persoon en als gerelateerde bij de conversie van GBA naar BRP.
+Gegeven namenreeks?
+Voor dit gegeven is er geen overeenkomstig gegeven in de GBA. Bij de conversie
+wordt in het gegeven namenreeks? in de groep samengestelde naam altijd de
+waarde “nee” opgenomen.
+Gegeven afgeleid?
+Voor dit gegeven is er geen overeenkomstig gegeven in de GBA. Bij de conversie
+wordt in het gegeven afgeleid? in de groep samengestelde naam altijd de waarde
+“ja” opgenomen.
+Rubriek 01.61.10 Naamgebruik
+Als rubriek 01.61.10 Aanduiding naamgebruik voorkomt, wordt de inhoud
+ongewijzigd geconverteerd naar het gegeven naamgebruik in de gegevensgroep
+naamgebruik.
+
+Pagina 28 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Als rubriek 01.61.10 Aanduiding naamgebruik niet voorkomt (het betreft dan een
+PL van een ingeschrevene die nooit ingezetene is geweest), wordt de waarde “E”
+(Eigen geslachtsnaam) opgenomen in het gegeven naamgebruik in de
+gegevensgroep naamgebruik.
+Deze conversie wordt alleen uitgevoerd voor de gegevens uit de actuele categorie
+01 Persoon.
+Gegeven naamgebruik afgeleid?
+Voor dit gegeven is er geen overeenkomstig gegeven in de GBA. Bij de conversie
+wordt in het gegeven naamgebruik afgeleid? in de groep naamgebruik altijd de
+waarde “ja” opgenomen.
+3.2.3
+
+Gebeurtenisgegevens
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+01.03.10
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Geboortedatum persoon
+
+01.03.20
+
+Geboorteplaats persoon
+
+01.03.30
+
+Geboorteland persoon
+
+datum geboorte
+gemeente geboorte
+buitenlandse plaats
+geboorte
+omschrijving locatie
+geboorte
+woonplaatsnaam
+geboorte
+buitenlandse regio
+geboorte
+land/gebied geboorte
+
+02.03.10
+
+Geboortedatum ouder1
+
+02.03.20
+
+Geboorteplaats ouder1
+
+02.03.30
+
+Geboorteland ouder1
+
+03.03.10
+
+Geboortedatum ouder2
+
+03.03.20
+
+Geboorteplaats ouder2
+
+datum geboorte
+gemeente geboorte
+buitenlandse plaats
+geboorte
+omschrijving locatie
+geboorte
+woonplaatsnaam
+geboorte
+buitenlandse regio
+geboorte
+land/gebied geboorte
+datum geboorte
+gemeente geboorte
+buitenlandse plaats
+geboorte
+omschrijving locatie
+geboorte
+woonplaatsnaam
+geboorte
+buitenlandse regio
+geboorte
+Pagina 29 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+GBA
+Rubrieknummer
+03.03.30
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Geboorteland ouder2
+
+land/gebied geboorte
+
+05.03.10
+
+Geboortedatum
+echtgenoot/geregistreerd
+partner
+
+datum geboorte
+
+05.03.20
+
+Geboorteplaats
+echtgenoot/geregistreerd
+partner
+
+05.03.30
+
+Geboorteland
+echtgenoot/geregistreerd
+partner
+
+09.03.10
+
+Geboortedatum kind
+
+09.03.20
+
+Geboorteplaats kind
+
+09.03.30
+
+Geboorteland kind
+
+05.06.10
+
+Datum
+huwelijkssluiting/aangaan
+geregistreerd partnerschap
+
+05.06.20
+
+Plaats
+huwelijkssluiting/aangaan
+geregistreerd partnerschap
+
+05.06.30
+
+Land
+huwelijkssluiting/aangaan
+geregistreerd partnerschap
+
+05.07.10
+
+Datum ontbinding
+huwelijk/geregistreerd
+partnerschap
+Plaats ontbinding
+
+05.07.20
+
+Pagina 30 van 85
+
+gemeente geboorte
+buitenlandse plaats
+geboorte
+omschrijving locatie
+geboorte
+woonplaatsnaam
+geboorte
+buitenlandse regio
+geboorte
+land/gebied geboorte
+
+datum geboorte
+gemeente geboorte
+buitenlandse plaats
+geboorte
+omschrijving locatie
+geboorte
+woonplaatsnaam
+geboorte
+buitenlandse regio
+geboorte
+land/gebied geboorte
+datum aanvang
+
+gemeente aanvang
+buitenlandse plaats
+aanvang
+omschrijving locatie
+aanvang
+woonplaatsnaam
+aanvang
+buitenlandse regio
+aanvang
+land/gebied aanvang
+
+datum einde
+
+gemeente einde
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+GBA
+Rubrieknummer
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+huwelijk/geregistreerd
+partnerschap
+
+buitenlandse plaats einde
+omschrijving locatie
+einde
+woonplaatsnaam einde
+buitenlandse regio einde
+land/gebied einde
+
+05.07.30
+
+Land ontbinding
+huwelijk/geregistreerd
+partnerschap
+
+06.08.10
+
+Datum overlijden
+
+06.08.20
+
+Plaats overlijden
+
+06.08.30
+
+Land overlijden
+
+datum overlijden
+gemeente overlijden
+buitenlandse plaats
+overlijden
+omschrijving locatie
+overlijden
+woonplaatsnaam
+overlijden
+buitenlandse regio
+overlijden
+land/gebied overlijden
+
+Gebeurtenisgegevens betreffen gegevens over de volgende gebeurtenissen:
+•
+Geboorte
+•
+Overlijden
+•
+Aangaan huwelijk / geregistreerd partnerschap
+•
+Beëindigen huwelijk / geregistreerd partnerschap
+Gegevens over de geboorte komen voor:
+•
+in de GBA in de groep 03 Geboorte in categorie 01/51 Persoon, 02/52
+Ouder1, 03/53 Ouder2, 05/55 Huwelijk/geregistreerd partnerschap en 09/59
+Kind. Vanwege de voorkomenregels in de GBA kan het voorkomen dat in een
+categorie 02/52 Ouder1, 03/53 Ouder2, 05/55 Huwelijk/geregistreerd
+partnerschap en 09/59 Kind geen gegevens over de geboorte aanwezig zijn;
+•
+in de BRP in de gegevensgroep geboorte in het objecttype persoon.
+Gegevens over het overlijden komen voor:
+•
+in de GBA in de groep 08 Overlijden in categorie 06/56 Overlijden;
+•
+in de BRP in de gegevensgroep overlijden in het objecttype persoon.
+Gegevens over het aangaan van een huwelijk/geregistreerd partnerschap komen
+voor:
+•
+in de GBA in de groep 06 Huwelijkssluiting/aangaan geregistreerd
+partnerschap in categorie 05/55 Huwelijk/geregistreerd partnerschap;
+•
+in de BRP in de gegevensgroep relatie (huwelijk/geregistreerd partnerschap)
+in het objecttype persoon.
+Gegevens over het beëindigen van een huwelijk/geregistreerd partnerschap komen
+voor:
+•
+in de GBA in de groep 07 Ontbinding huwelijk/geregistreerd partnerschap in
+categorie 05/55 Huwelijk/geregistreerd partnerschap;
+
+Pagina 31 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+•
+
+in de BRP in de gegevensgroep relatie (huwelijk/geregistreerd partnerschap)
+in het objecttype persoon.
+
+Conversieregels
+Voor elke gebeurtenis is er in de GBA een datum, plaats en land van de gebeurtenis.
+In de beschrijving hierna staat de aanduiding “cc” voor een categorienummer en
+“gg” voor een groepnummer. De GBA-rubrieken en de BRP-gegevens worden
+aangeduid met de toevoeging “gebeurtenis”, wat staat voor de gebeurtenis- en
+persoonsaanduiding in de onderscheiden rubriek- en gegevensnamen. Met gebruik
+van deze aanduidingen komt de tabel aan het begin van deze paragraaf er als volgt
+uit te zien.
+GBA
+Rubrieknummer
+cc.gg.10
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Datum gebeurtenis
+
+cc.gg.20
+
+Plaats gebeurtenis
+
+cc.gg.30
+
+Land gebeurtenis
+
+datum gebeurtenis
+gemeente gebeurtenis
+buitenlandse plaats
+gebeurtenis
+omschrijving locatie
+gebeurtenis
+woonplaatsnaam
+gebeurtenis
+buitenlandse regio
+gebeurtenis
+land/gebied gebeurtenis
+
+De paragraaf 3.1.1 Gegevens van personen als persoon en als gerelateerde bij de
+conversie van GBA naar BRP is hier van toepassing.
+Gegeven datum gebeurtenis
+Als rubriek cc.gg.10 Datum gebeurtenis aanwezig is, wordt de inhoud ongewijzigd
+geconverteerd naar het gegeven datum gebeurtenis.
+Plaats gebeurtenis
+Bij het registreren van gegevens over de plaats van de gebeurtenis kent de BRP
+meer mogelijkheden dan de GBA. De BRP maakt daarbij gebruik van een vijftal
+gegevens.
+Als rubriek cc.gg.20 Plaats gebeurtenis aanwezig is, gelden de hierna beschreven
+regels.
+Gegeven gemeente gebeurtenis
+Als de code die het land van de gebeurtenis aanduidt “6030” (Nederland) is,
+bevat rubriek cc.gg.20 Plaats gebeurtenis een code uit Tabel 33
+Gemeententabel. Die code wordt geconverteerd naar het gegeven gemeente
+gebeurtenis. Daarbij wordt de viercijferige code met behulp van de
+conversietabel Gemeenten (zie de bijlage Conversietabellen) omgezet in de
+corresponderende, in de BRP gebruikte viercijferige code.
+N.B.
+Als de code die het land van de gebeurtenis aanduidt “6030” (Nederland) is en
+rubriek cc.gg.20 Plaats gebeurtenis bevat geen code uit Tabel 33
+
+Pagina 32 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Gemeententabel, kan de betrokken PL niet geconverteerd worden (zie
+paragraaf <verwijzing opnemen>).
+Gegeven woonplaatsnaam gebeurtenis
+Dit gegeven wordt bij de conversie van GBA naar BRP nooit gevuld omdat er
+geen overeenkomstig gegeven in de GBA is.
+Gegeven buitenlandse plaats gebeurtenis
+Als de code die het land van de gebeurtenis aanduidt een andere is dan “6030”
+(Nederland), “9999” (Internationaal gebied) of “0000” (Onbekend), wordt de
+inhoud van rubriek cc.gg.20 Plaats gebeurtenis ongewijzigd geconverteerd naar
+het gegeven buitenlandse plaats gebeurtenis.
+N.B.
+Dit geldt ook als de rubriek een waarde bevat, die voorkomt in de Tabel 33
+Gemeententabel.
+Gegeven buitenlandse regio gebeurtenis
+Dit gegeven wordt bij de conversie van GBA naar BRP nooit gevuld omdat er
+geen overeenkomstig gegeven in de GBA is.
+Gegeven locatieomschrijving gebeurtenis
+Als de code die het land van de gebeurtenis aanduidt “9999” (Internationaal
+gebied) of “0000” (Onbekend) is, wordt de inhoud van rubriek cc.gg.20 Plaats
+gebeurtenis ongewijzigd geconverteerd naar het gegeven locatieomschrijving
+gebeurtenis.
+N.B.
+Dit geldt ook als de rubriek een waarde bevat, die voorkomt in de Tabel 33
+Gemeententabel.
+Gegeven land/gebied gebeurtenis
+Als rubriek cc.gg.30 Land gebeurtenis aanwezig is, bevat die rubriek een code uit
+Tabel 34 Landentabel. Die code wordt geconverteerd naar het gegeven
+land/gebied gebeurtenis. Daarbij wordt de viercijferige code met behulp van de
+conversietabel Landen (zie de bijlage Conversietabellen) omgezet in
+corresponderende, in de BRP gebruikte viercijferige code.
+N.B.
+Als er in een categorie 02/52 Ouder1, 03/53 Ouder2, 05/55 Huwelijk/geregistreerd
+partnerschap en 09/59 Kind geen gegevens over de geboorte aanwezig zijn, worden
+er geen geboortegegevens in de BRP opgenomen.
+
+3.2.4
+
+Geslachtsaanduiding
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+01.04.10
+02.04.10
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Geslachtsaanduiding persoon
+Geslachtsaanduiding ouder1
+
+geslachtsaanduiding
+
+Pagina 33 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+GBA
+Rubrieknummer
+03.04.10
+05.04.10
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Geslachtsaanduiding ouder2
+Geslachtsaanduiding
+echtgenoot/geregistreerd
+partner
+
+Gegevens over het geslacht komen voor
+•
+in de GBA voor in groep 04 Geslacht in categorie 01/51 Persoon, 02/52 Ouder1,
+03/53 Ouder2 en 05/55 Huwelijk/geregistreerd partnerschap;
+•
+in de BRP in de gegevensgroep geslachtsaanduiding in het objecttype persoon.
+Conversieregels
+In de beschrijving hierna staat “cc” voor een categorienummer en “nn” voor de
+nadere aanduiding in de rubrieknaam. De paragraaf 3.1.1 Gegevens van personen
+als persoon en als gerelateerde bij de conversie van GBA naar BRP is hier van
+toepassing. Dat geldt ook voor de paragraaf 3.1.3.2 Speciale uitzonderingen.
+Gegeven geslachtsaanduiding
+De inhoud van rubriek cc.04.10 Geslachtsaanduiding “nn” wordt ongewijzigd
+geconverteerd naar het gegeven geslachtsaanduiding.
+3.2.5
+
+Nummerverwijzingen
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+01.20.10
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Vorig A-nummer
+
+01.20.20
+
+Volgende A-nummer
+
+vorige
+administratienummer
+volgende
+administratienummer
+vorige
+burgerservicenummer
+volgende
+burgerservicenummer
+
+Gegevens over nummerverwijzingen komen voor:
+•
+in de GBA in groep 20 A-nummerverwijzingen in categorie 01/51 Persoon;
+•
+in de BRP in de groep nummerverwijzing in het objecttype persoon.
+Conversieregels
+De paragraaf 3.1.3.2 Speciale uitzonderingen is hier van toepassing.
+Gegeven vorige administratienummer
+De inhoud van rubriek 01.20.10 Vorig A-nummer wordt ongewijzigd
+geconverteerd naar het gegeven vorige administratienummer.
+Als de rubriek niet aanwezig is, wordt het gegeven niet opgenomen.
+
+Pagina 34 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Gegeven volgende administratienummer
+De inhoud van rubriek 01.20.20 Volgende A-nummer wordt ongewijzigd
+geconverteerd naar het gegeven volgende administratienummer.
+Als de rubriek niet aanwezig is, wordt het gegeven niet opgenomen.
+Gegeven vorige burgerservicenummer
+Dit gegeven wordt bij de conversie van GBA naar BRP nooit gevuld omdat er geen
+overeenkomstig gegeven in de GBA is.
+Gegeven volgende burgerservicenummer
+Dit gegeven wordt bij de conversie van GBA naar BRP nooit gevuld omdat er geen
+overeenkomstig gegeven in de GBA is.
+3.2.6
+
+Familierechtelijke betrekking
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+02.62.10
+
+03.62.10
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Datum ingang
+familierechtelijke betrekking
+ouder1
+Datum ingang
+familierechtelijke betrekking
+ouder2
+
+datum ingang geldigheid
+
+ouder uit wie het kind is
+geboren?
+Gegevens over de familierechtelijke betrekking komen voor:
+•
+in de GBA in groep 62 Familierechtelijke betrekking in categorie 02/52 Ouder1
+en 03/53 Ouder2;
+•
+in de BRP in de administratieve gegevens waarmee in de BRP een relatie tussen
+twee personen wordt vastgelegd (zie paragraaf 3.2.31) en in de gegevensgroep
+ouderschap in het objecttype ouder.
+Conversieregels
+In de beschrijving hierna staat bij de leverende GBA-gegevens de aanduiding “cc”
+voor een categorienummer. De GBA-rubrieken worden aangeduid met de toevoeging
+“betrokkene”, wat staat voor de aanduiding van de gerelateerde. De paragraaf 3.1.1
+Gegevens van personen als persoon en als gerelateerde bij de conversie van GBA
+naar BRP is hier van toepassing. Dat geldt ook voor de paragraaf 3.1.3.2 Speciale
+uitzonderingen.
+Bij de conversie worden altijd de gegevens van de actuele ouder geconverteerd en
+wel, als er historie is voor die ouder, vanuit de oudste historische categorie waarin
+gegevens van die ouder zijn opgenomen. En daarnaast, in geval van
+ouderwisselingen, ook de oudste historische gegevens van elke eerdere ouder.
+Gegeven datum ingang geldigheid
+De inhoud van rubriek cc.62.10 Datum ingang familierechtelijke betrekking
+betrokkene wordt ongewijzigd geconverteerd naar het gegeven datum ingang
+
+Pagina 35 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+geldigheid in de administratieve gegevens waarmee in de BRP een relatie tussen
+twee personen wordt vastgelegd (zie paragraaf 3.2.31).
+Gegeven ouder uit wie het kind is geboren?
+Dit gegeven wordt bij de conversie van GBA naar BRP nooit gevuld omdat er geen
+overeenkomstig gegeven in de GBA is.
+3.2.7
+
+Nationaliteit
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+
+GBA
+Rubrieknaam
+
+04.05.10
+
+Nationaliteit
+
+04.65.10
+
+Aanduiding bijzonder
+Nederlanderschap
+
+04.63.10
+
+Reden opname nationaliteit
+
+04.64.10
+
+Reden beëindigen nationaliteit
+
+BRP
+Gegevennaam
+nationaliteit
+staatloos?
+vastgesteld niet
+Nederlander?
+behandeld als
+Nederlander?
+reden verkrijging
+reden verlies
+bijhouding beëindigd?
+
+Gegevens over de nationaliteit komen voor:
+•
+in de GBA in de groepen 05 Nationaliteit, 63 Opnemen nationaliteit, 64
+Beëindigen nationaliteit en 65 Bijzonder Nederlanderschap;
+•
+in de BRP in de groepen nationaliteit, staatloos, vastgesteld niet Nederlander en
+behandeld als Nederlander in het objecttype persoon.
+Conversieregels
+Gegeven nationaliteit
+Als rubriek 04.05.10 Nationaliteit voorkomt en de inhoud van die rubriek ongelijk
+is aan “0499”, wordt de inhoud ongewijzigd geconverteerd naar het gegeven
+nationaliteit.
+Gegeven staatloos?
+Als rubriek 04.05.10 Nationaliteit voorkomt en de inhoud van die rubriek gelijk is
+aan “0499”, wordt in het gegeven staatloos? de waarde “ja” opgenomen.
+Gegeven vastgesteld niet Nederlander?
+Als rubriek 04.65.10 10 Aanduiding bijzonder Nederlanderschap voorkomt en de
+inhoud van die rubriek gelijk is aan “V”, wordt in het gegeven vastgesteld niet
+Nederlander? de waarde “ja” opgenomen.
+Gegeven behandeld als Nederlander?
+Als rubriek 04.65.10 10 Aanduiding bijzonder Nederlanderschap voorkomt en de
+inhoud van die rubriek gelijk is aan “B”, wordt in het gegeven behandeld als
+Nederlander? de waarde “ja” opgenomen.
+Gegeven reden verkrijging
+Als rubriek 04.63.10 Reden opname nationaliteit voorkomt en:
+Pagina 36 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+•
+•
+
+de inhoud van rubriek 04.05.20 Nationaliteit “0001” (Nederlander) is, wordt
+de inhoud ongewijzigd geconverteerd naar het gegeven reden verkrijging;
+de inhoud van rubriek 04.05.20 Nationaliteit niet “0001” (Nederlander) is,
+wordt de inhoud niet geconverteerd.
+
+Gegeven reden verlies
+Als rubriek 04.64.10 10 Reden beëindigen nationaliteit in een categorie voorkomt
+en:
+•
+de inhoud van rubriek 54.05.10 Nationaliteit in de onmiddellijk eraan
+voorafgaande historische categorie waar rubriek 54.84.10 niet in voorkomt,
+“0001” (Nederlander) is, wordt de inhoud ongewijzigd geconverteerd naar het
+gegeven reden verlies;
+•
+de inhoud van rubriek 54.05.10 Nationaliteit in de onmiddellijk eraan
+voorafgaande historische categorie waar rubriek 54.84.10 niet in voorkomt,
+niet “0001” (Nederlander) is, wordt de inhoud niet geconverteerd, tenzij de
+volgende regel bepaalt dat het gegeven wel geconverteerd wordt.
+Gegeven bijhouding beëindigd?
+Als rubriek 04.64.10 10 Reden beëindigen nationaliteit voorkomt en de inhoud
+gelijk is aan “404” en de inhoud van rubriek 54.05.10 Nationaliteit in de
+onmiddellijk eraan voorafgaande historische categorie waar rubriek 54.84.10 niet
+in voorkomt, niet “0001” (Nederlander) is, wordt in het gegeven bijhouding
+beëindigd? de waarde “ja” opgenomen.
+N.B
+Uit bovenstaande volgt dat de inhoud van rubrieken 04.63.10 Reden opname
+nationaliteit en 04.64.10 Reden beëindiging nationaliteit alleen geconverteerd wordt
+als er sprake is van de Nederlandse nationaliteit. Het betreft de codes lager dan
+“300’. De codes “300” en hoger worden niet geconverteerd, de code “404”
+uitgezonderd. Ook de code “000” wordt niet geconverteerd als er geen sprake is van
+de Nederlandse nationaliteit.
+In de gevallen dat de inhoud van de rubriek 04.63.10 Reden opname nationaliteit en
+04.64.10 Reden beëindigen nationaliteit niet geconverteerd wordt, blijft de inhoud
+van daarvan wel beschikbaar in de centrale voorzieningen voor gebruik bij de
+conversie van BRP naar GBA. Zie paragraaf 3.1.4 Niet geconverteerde gegevens bij
+de conversie van GBA naar BRP.
+3.2.8
+
+Soort verbintenis
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+05.15.10
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Soort verbintenis
+
+Zie voetnoot 2
+
+Gegevens over de soort verbintenis komen voor:
+•
+in de GBA in groep 15 Soort verbintenis in categorie 05/55
+Huwelijk/geregistreerd partnerschap;
+•
+in de BRP komt geen gegeven2 voor dat overeenkomt met Soort verbintenis.
+
+2 Er is in de centrale voorzieningen van de BRP een gegeven soort (onderdeel van objecttype
+relatie) waarin wordt vastgelegd of het om een huwelijk of geregistreerd partnerschap gaat.
+Pagina 37 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Conversieregels
+De paragraaf 3.1.1 Gegevens van personen als persoon en als gerelateerde bij de
+conversie van GBA naar BRP is hier van toepassing. Dat geldt ook voor de paragraaf
+3.1.3.2 Speciale uitzonderingen.
+Bij de conversie worden altijd de gegevens van de actuele verbintenis geconverteerd
+en wel, als er historie is voor die verbintenis, vanuit de oudste historische categorie
+waarin gegevens van die verbintenis zijn opgenomen. En daarnaast, in geval van er
+sprake is van wijzigingen in de soort verbintenis, ook de oudste historische
+gegevens van die eerdere verbintenis.
+De rubriek 05.15.10 Soort verbintenis heeft geen tegenhanger in de BRP. Als in deze
+rubriek de waarde “H” is opgenomen, worden de bijbehorende gegevens over het
+huwelijk in de BPR vastgelegd als gegevens van een relatie van het type huwelijk.
+Als in deze rubriek de waarde “P” is opgenomen, worden de bijbehorende gegevens
+over het geregistreerd partnerschap in de BPR vastgelegd als gegevens van een
+relatie van het type geregistreerd partnerschap.
+N.B.
+Als de inhoud van de rubriek 05.15.10 Soort verbintenis de waarde “.” heeft, kan de
+betrokken PL niet geconverteerd worden (zie paragraaf <verwijzing opnemen>).
+3.2.9
+
+Blokkering PL
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+07.66.20
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Datum ingang blokkering PL
+
+Gegevens over de blokkering komen voor:
+•
+in de GBA in groep 66 Blokkering in categorie 07 Inschrijving;
+•
+in de BRP komt geen gegeven voor dat overeenkomt met Datum ingang
+blokkering PL.
+Conversieregels
+De inhoud van rubriek 07.66.20 Datum ingang blokkering PL wordt niet
+geconverteerd.
+N.B.
+Als in de duale periode een PL in een GBA-gemeente betrokken is bij een
+intergemeentelijke verhuizing, blokkeert die gemeente de PL om te voorkomen dat
+de gemeente nog een bijhouding op de PL uitvoert. De blokkering heeft alleen
+betekenis in die GBA-gemeente. Het gegeven is niet nodig in de BRP. Zie ook
+paragraaf xxx Intergemeentelijke verhuizingen <verwijzing nog opnemen> in de
+duale periode.
+3.2.10
+
+Opschorting
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+
+Pagina 38 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+GBA
+Rubrieknummer
+07.67.10
+07.67.20
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Datum opschorting bijhouding
+Omschrijving reden
+opschorting bijhouding
+
+datum ingang geldigheid
+bijhoudingsaard
+nadere bijhoudingsaard
+
+Gegevens over de opschorting komen voor:
+•
+in de GBA in groep 67 Opschorting in categorie 07 Inschrijving;
+•
+in de BRP in de administratieve gegevens (zie paragraaf 3.2.31) die horen bij de
+gegevensgroep bijhouding in het objecttype persoon.
+Conversieregels
+Gegeven datum ingang geldigheid
+De inhoud van rubriek 07.67.10 Datum opschorting wordt opgenomen in het
+gegeven datum ingang geldigheid bij de administratieve gegevens met betrekking
+tot de groep bijhouding (zie paragraaf 3.2.31).
+Gegeven bijhoudingsaard
+Als rubriek 07.67.20 Omschrijving reden opschorting bijhouding niet voorkomt,
+wordt de waarde “I” opgenomen in het gegeven bijhoudingsaard.
+Als rubriek 07.67.20 Omschrijving reden opschorting bijhouding voorkomt en
+•
+de inhoud van de rubriek de waarde “E”, “M” of “R” heeft, wordt de waarde
+“N” opgenomen in het gegeven bijhoudingsaard;
+•
+de inhoud van de rubriek de waarde “F” heeft, wordt de waarde “I”
+opgenomen in het gegeven bijhoudingsaard.
+•
+de inhoud van de rubriek de waarde “O” heeft, wordt de waarde “I”
+opgenomen in het gegeven bijhoudingsaard3.
+Gegeven nadere bijhoudingsaard
+Als rubriek 07.67.20 Omschrijving reden opschorting bijhouding niet voorkomt,
+wordt de waarde “A” opgenomen in het gegeven nadere bijhoudingsaard.
+Als rubriek 07.67.20 Omschrijving reden opschorting bijhouding voorkomt en de
+inhoud van de rubriek de waarde “E”, “F”, “M”, “O” of “R” heeft4, wordt de inhoud
+van de rubriek 07 .67.20 Omschrijving reden opschorting met behulp van de
+conversietabel Reden opschorting (zie de bijlage Conversietabellen)
+geconverteerd naar het gegeven nadere bijhoudingsaard.
+N.B.
+Als de inhoud van de rubriek 07.67.20 Omschrijving reden opschorting bijhouding
+de waarde “.” heeft, kan de betrokken PL niet geconverteerd worden (zie paragraaf
+<verwijzing opnemen>).
+
+3 Er wordt een change overwogen die onderscheid mogelijk maakt tussen overledenen die
+voor overlijden ingezetenen waren en die voor overlijden geen ingezetene waren. Als de
+change gerealiseerd wordt, wordt de conversieregel:
+Als de inhoud van de rubriek de waarde “O” heeft, wordt de waarde “I” opgenomen in het
+gegeven bijhoudingsaard als <conditie> en de waarde “N” als <conditie>.
+4 In GBA-V komen ook PL-en voor waarbij rubriek 07.67.20 Omschrijving reden opschorting
+bijhouding de waarde “W” heeft. Deze PL-en maken formeel geen deel uit van GBA-V en
+worden ook niet geconverteerd.
+Pagina 39 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+3.2.11
+
+Inschrijving
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+07.68.10
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Datum eerste inschrijving
+GBA/RNI
+
+datum inschrijving
+
+Gegevens over de inschrijving komen voor:
+•
+in de GBA in groep 68 Opname in categorie 07 Inschrijving;
+•
+in de BRP in de gegevensgroep inschrijving in het objecttype persoon.
+Conversieregels
+Gegeven datum inschrijving
+De inhoud van rubriek 07.68.10 Datum inschrijving GBA/RNI wordt ongewijzigd
+geconverteerd naar het gegeven datum inschrijving.
+3.2.12
+
+Persoonskaart
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+07.69.10
+07.87.10
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Gemeente waar de PK zich
+bevindt
+PK-gegevens volledig
+meegeconverteerd
+
+gemeente persoonskaart
+persoonskaart volledig
+geconverteerd?
+
+Gegevens over de persoonskaart komen voor:
+•
+in de GBA in groep 69 Gemeente PK en in groep 87 PK-conversie in categorie 07
+Inschrijving;
+•
+in de BRP in de gegevensgroep persoonskaart in het objecttype persoon.
+Conversieregels
+Gegeven gemeente persoonskaart
+Als de rubriek 07.69.10 Gemeente waarde PK zich bevindt voorkomt, wordt de
+inhoud van deze rubriek ongewijzigd geconverteerd naar het gegeven gemeente
+persoonskaart.
+Gegeven persoonskaart volledig geconverteerd?
+Als de rubriek 07.87.10 PK-gegevens volledig meegeconverteerd voorkomt, wordt
+de inhoud van deze rubriek, de waarde “P”, geconverteerd naar de waarde “ja” in
+het gegeven persoonskaart volledig geconverteerd?.
+Als de rubriek 07.87.10 PK-gegevens volledig meegeconverteerd niet voorkomt,
+wordt de waarde “nee” opgenomen in het gegeven persoonskaart volledig
+geconverteerd?.
+
+Pagina 40 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+3.2.13
+
+Geheimhouding
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+07.70.10
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Indicatie geheim
+
+volledige
+verstrekkingsbeperking?
+partij
+omschrijving derde
+gemeente verordening
+
+Gegevens over geheimhouding komen voor:
+•
+in de GBA in groep 70 Geheim in categorie 07 Inschrijving;
+•
+in de BRP in de gegevensgroep verstrekkingsbeperking in het objecttype
+persoon.
+Conversieregels
+Gegeven volledige verstrekkingsbeperking?
+Als de rubriek 07.70.10 Indicatie geheim een andere waarde heeft dan de waarde
+“0”, dan wordt in het gegeven volledige verstrekkingsbeperking? de waarde “ja”
+opgenomen.
+Als de rubriek 07.70.10 Indicatie geheim de waarde “0” heeft, blijft het gegeven
+volledige verstrekkingsbeperking? leeg.
+Gegeven partij
+Dit gegeven wordt bij de conversie van GBA naar BRP nooit gevuld omdat er geen
+overeenkomstig gegeven in de GBA is.
+Gegeven omschrijving derde
+Dit gegeven wordt bij de conversie van GBA naar BRP nooit gevuld omdat er geen
+overeenkomstig gegeven in de GBA is.
+Gegeven gemeente verordening
+Dit gegeven wordt bij de conversie van GBA naar BRP nooit gevuld omdat er geen
+overeenkomstig gegeven in de GBA is.
+3.2.14
+
+Versiebeheer
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+07.80.10
+07.80.20
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Versienummer
+Datumtijdstempel
+
+Gegevens over versiebeheer komen voor:
+•
+in de GBA in groep 80 Synchroniciteit in categorie 07 Inschrijving;
+
+Pagina 41 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+•
+
+in de BRP komt geen gegeven voor dat overeenkomt Versienummer en
+Datumtijdstempel.
+
+Conversieregels
+De inhoud van rubriek 07.80.10 Versienummer wordt niet geconverteerd.
+De inhoud van rubriek 07.80.20 Datumtijdstempel PL wordt niet geconverteerd.
+De inhoud van deze rubrieken blijft wel beschikbaar in de centrale voorzieningen in
+de gegevens versienummer en datumtijdstempel (die geen deel uitmaken van het
+BRP gegevensmodel) voor raadplegingen en voor gebruik bij de conversie van BRP
+naar GBA. Zie paragraaf 3.1.4 Niet geconverteerde gegevens bij de conversie van
+GBA naar BRP.
+3.2.15
+
+Bijhoudingsgemeente
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+08.09.10
+08.09.20
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Gemeente van inschrijving
+Datum inschrijving in de
+gemeente
+
+bijhoudingspartij
+datum ingang geldigheid
+
+Gegevens over de bijhoudingsgemeente komen voor:
+•
+in de GBA in groep 09 Gemeente in categorie 08 Verblijfplaats;
+•
+in de BRP in de gegevensgroep bijhouding in het objecttype persoon en in de
+administratieve gegevens (zie paragraaf 3.2.31) die horen bij die
+gegevensgroep.
+Conversieregels
+De paragraaf 3.1.3.2 Speciale uitzonderingen is hier van toepassing.
+Gegeven bijhoudingspartij
+De inhoud van rubriek 08.09.10 Gemeente van inschrijving wordt geconverteerd
+naar het gegeven bijhoudingspartij. Daarbij wordt de viercijferige code met
+behulp van de conversietabel Partij (zie de bijlage Conversietabellen) omgezet
+naar de zescijferige code die hoort bij de betrokken gemeente.
+Gegeven datum ingang geldigheid
+De inhoud van rubriek 08.09.20 Datum inschrijving in de gemeente wordt
+ongewijzigd geconverteerd naar het gegeven datum ingang geldigheid in de
+administratieve gegevens met betrekking tot de groep bijhouding (zie paragraaf
+3.2.31).
+3.2.16
+
+Adreshouding
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+
+Pagina 42 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+GBA
+Rubrieknummer
+08.10.10
+08.10.20
+08.10.30
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Functie adres
+Gemeentedeel
+Datum aanvang adreshouding
+
+soort
+gemeentedeel
+datum aanvang
+adreshouding
+
+Gegevens over de adreshouding komen voor:
+•
+in de GBA in groep 10 Adreshouding in categorie 08 Verblijfplaats;
+•
+in de BRP in de gegevensgroep adres in het objecttype persoon.
+Conversieregels
+Gegeven soort
+De inhoud van rubriek 08.10.10 Functie adres wordt ongewijzigd geconverteerd
+naar het gegeven soort.
+Gegeven gemeentedeel
+De inhoud van rubriek 08.10.20 Gemeentedeel wordt ongewijzigd geconverteerd
+naar het gegeven gemeentedeel.
+Gegeven datum aanvang adreshouding
+De inhoud van rubriek 08.10.30 Datum aanvang adreshouding wordt ongewijzigd
+geconverteerd naar het gegeven datum aanvang adreshouding.
+
+3.2.17
+
+Adresaangifte
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+08.72.10
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Omschrijving van de aangifte
+adreshouding
+
+reden wijziging
+aangever adreshouding
+reden wijziging migratie
+aangever migratie
+
+Gegevens over de adresaangifte komen voor:
+•
+in de GBA in groep 72 Adresaangifte in categorie 08 Verblijfplaats;
+•
+in de BRP in de gegevensgroep adres (reden wijziging en aangever
+adreshouding) en in de gegevensgroep migratie (reden wijziging migratie en
+aangever migratie), beiden in het objecttype persoon.
+Conversieregels
+Gegeven reden wijziging
+Als groep 13 Adres Buitenland niet voorkomt in de categorie, wordt de inhoud van
+rubriek 08.72.10 Omschrijving van de aangifte adreshouding met behulp van de
+conversietabel Aangifte adreshouding (zie de bijlage Conversietabellen)
+geconverteerd naar het gegeven reden wijziging.
+
+Pagina 43 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Gegeven aangever adreshouding
+Als groep 13 Adres Buitenland niet voorkomt in de categorie, wordt de inhoud van
+rubriek 08.72.10 Omschrijving van de aangifte adreshouding met behulp van de
+conversietabel Aangifte adreshouding (zie de bijlage Conversietabellen)
+geconverteerd naar het gegeven aangever adreshouding.
+Gegeven reden wijziging migratie
+Als groep 13 Adres Buitenland voorkomt in de categorie, wordt de inhoud van
+rubriek 08.72.10 Omschrijving van de aangifte adreshouding met behulp van de
+conversietabel Aangifte adreshouding (zie de bijlage Conversietabellen)
+geconverteerd naar het gegeven reden wijziging migratie.
+Gegeven aangever migratie
+Als groep 13 Adres Buitenland voorkomt in de categorie, wordt de inhoud van
+rubriek 08.72.10 Omschrijving van de aangifte adreshouding met behulp van de
+conversietabel Aangifte adreshouding (zie de bijlage Conversietabellen)
+geconverteerd naar het gegeven aangever migratie.
+3.2.18
+
+Woon- of briefadres in Nederland
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+08.11.10
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Straatnaam
+
+08.11.15
+08.11.20
+08.11.30
+08.11.40
+08.11.50
+
+Naam openbare ruimte
+Huisnummer
+Huisletter
+Huisnummertoevoeging
+Aanduiding bij huisnummer
+
+08.11.60
+08.11.70
+08.11.80
+
+Postcode
+Woonplaatsnaam
+Identificatiecode verblijfplaats
+
+08.11.90
+
+Identificatiecode
+nummeraanduiding
+
+afgekorte naam
+openbare ruimte
+naam openbare ruimte
+huisnummer
+huisletter
+huisnummertoevoeging
+locatie ten opzichte van
+adres
+postcode
+woonplaatsnaam
+identificatiecode
+adresseerbaar object
+identificatiecode
+nummeraanduiding
+
+08.12.10
+
+Locatiebeschrijving
+
+locatieomschrijving
+
+08.09.10
+
+Gemeente van inschrijving
+
+gemeente
+land/gebied
+persoon aangetroffen op
+adres?
+
+Gegevens over het woon- of briefadres in Nederland komen voor:
+•
+in de GBA in groep 11 Adres en 12 Locatie in categorie 08 Verblijfplaats, waarbij
+of groep 11 Adres of groep 12 Locatie voorkomt of geen van beiden;
+•
+in de BRP in de gegevensgroep adres in het objecttype persoon.
+
+Pagina 44 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Conversieregels
+Als groep 11 Adres of groep 12 Locatie voorkomt, gelden de volgende regels.
+Gegeven afgekorte naam openbare ruimte
+Als rubriek 08.11.10 Straatnaam voorkomt en een andere waarde dan “.” (punt)
+bevat, wordt de inhoud daarvan ongewijzigd geconverteerd naar het gegeven
+afgekorte naam openbare ruimte. Bevat de rubriek de waarde “.”, dan wordt de
+inhoud niet geconverteerd5.
+Gegeven openbare ruimte
+Als rubriek 08.11.15 Naam openbare ruimte voorkomt, wordt de inhoud daarvan
+ongewijzigd geconverteerd naar het gegeven naam openbare ruimte.
+Gegeven huisnummer
+Als rubriek 08.11.20 Huisnummer voorkomt, wordt de inhoud daarvan
+ongewijzigd geconverteerd naar het gegeven huisnummer.
+Gegeven huisletter
+Als rubriek 08.11.30 Huisletter voorkomt, wordt de inhoud daarvan ongewijzigd
+geconverteerd naar het gegeven huisletter.
+Gegeven huisnummertoevoeging
+Als rubriek 08.11.40 Huisnummertoevoeging voorkomt, wordt de inhoud daarvan
+ongewijzigd geconverteerd naar het gegeven huisnummertoevoeging.
+Gegeven locatie ten opzichte van adres
+Als rubriek 08.11.50 Aanduiding bij huisnummer voorkomt, wordt de inhoud
+daarvan ongewijzigd geconverteerd naar het gegeven locatie ten opzichte van
+adres.
+Gegeven Postcode
+Als rubriek 08.11.60 Postcode voorkomt, wordt de inhoud daarvan ongewijzigd
+geconverteerd naar het gegeven postcode.
+Gegeven woonplaatsnaam
+Als rubriek 08.11.70 Woonplaatsnaam voorkomt, wordt de inhoud daarvan
+ongewijzigd geconverteerd naar het gegeven woonplaatsnaam.
+Gegeven identificatiecode adresseerbaar object
+Als rubriek 08.11.80 Identificatiecode verblijfplaats voorkomt, wordt de inhoud
+daarvan ongewijzigd geconverteerd naar het gegeven identificatiecode
+adresseerbaar object.
+Gegeven identificatiecode nummeraanduiding
+Als rubriek 08.11.90 Identificatiecode nummeraanduiding voorkomt, wordt de
+inhoud daarvan ongewijzigd geconverteerd naar het gegeven identificatiecode
+nummeraanduiding.
+Gegeven locatieomschrijving
+
+5 Een adres dat in de GBA wordt aangeduid met de term ‘puntadres’ d.w.z. een adres waarin
+in element 11.0 Straatnaam de waarde ‘.’ voorkomt, is in de BRP herkenbaar aan het feit
+dat het gegeven afgekorte naam openbare ruimte niet voorkomt in de gegevensgroep
+adres.
+Pagina 45 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Als rubriek 08.12.10 Locatiebeschrijving voorkomt, wordt de inhoud daarvan
+ongewijzigd geconverteerd naar het gegeven locatieomschrijving.
+Gegeven gemeente
+De inhoud van rubriek 08.09.10 Gemeente van inschrijving uit hetzelfde
+voorkomen van categorie 08 Verblijfplaats als de groep 11 Adres of 12 Locatie die
+geconverteerd wordt, wordt geconverteerd naar het gegeven gemeente. Daarbij
+wordt de viercijferige code met behulp van de conversietabel Gemeenten (zie de
+bijlage Conversietabellen) omgezet in de corresponderende, in de BRP gebruikte
+viercijferige code die hoort bij de betrokken gemeente.
+Gegeven land gebied
+Als groep 11 adres of 12 Locatie voorkomt, wordt in het gegeven land/gebied de
+viercijferige code uit de conversietabel Landen (zie de bijlage Conversietabellen)
+opgenomen die hoort bij Nederland.
+Gegeven persoon aangetroffen op adres?
+Dit gegeven kent in de GBA geen overeenkomstige rubriek en wordt bij de
+conversie van GBA naar BRP niet gevuld.
+3.2.19
+
+Woonadres in het buitenland
+Het gaat in deze paragraaf over gegevens over het verblijf in het buitenland dan wel
+over een verblijfadres in het buitenland.
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+08.13.10
+08.13.20
+08.13.30
+08.13.40
+08.13.50
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Land adres buitenland
+Datum aanvang adres
+buitenland
+Regel 1 adres buitenland
+Regel 2 adres buitenland
+Regel 3 adres buitenland
+
+land/gebied
+datum ingang geldigheid
+buitenlands
+buitenlands
+buitenlands
+buitenlands
+buitenlands
+buitenlands
+
+adres
+adres
+adres
+adres
+adres
+adres
+
+regel
+regel
+regel
+regel
+regel
+regel
+
+1
+2
+3
+4
+5
+6
+
+Gegevens over het woonadres in het buitenland komen voor:
+•
+in de GBA in groep 13 Adres buitenland in categorie 08 Verblijfplaats;
+•
+in de BRP in de gegevensgroep adres in het objecttype persoon.
+Conversieregels
+De volgende conversieregels gelden alleen voor voorkomens van categorie 08
+Verblijfplaats waarin de groep 10 Adreshouding niet voorkomt. De conversieregels
+voor de gegevens uit groep 13 Adres buitenland in voorkomens van categorie 08
+Verblijfplaats waarin die groep wel voorkomt, worden beschreven in paragraaf
+3.2.20 Emigratie- en immigratiegegevens.
+Gegeven land/gebied
+
+Pagina 46 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Als rubriek 08.13.10 Land adres buitenland voorkomt, bevat die rubriek een code
+uit Tabel 34 Landentabel. Die code wordt geconverteerd naar het gegeven
+land/gebied. Daarbij wordt de viercijferige code met behulp van de conversietabel
+Landen (zie de bijlage Conversietabellen) omgezet in de corresponderende, in de
+BRP gebruikte viercijferige code.
+Gegeven datum ingang geldigheid
+Als rubriek 08.13.20 Datum aanvang adres buitenland voorkomt, wordt de inhoud
+van die rubriek opgenomen in het gegeven datum ingang geldigheid bij de
+administratieve gegevens met betrekking tot de groep adres (zie paragraaf
+3.2.31).
+Gegeven buitenlands adres regel 1
+Als rubriek 08.13.30 Regel 1 adres buitenland voorkomt, wordt de inhoud van die
+rubriek ongewijzigd geconverteerd naar het gegeven buitenlands adres regel 1.
+Als de rubrieken 08.13.30 Adres buitenland 1 en rubriek 08.13.50 Adres
+buitenland 3 niet voorkomen, wordt de inhoud van rubriek 08.13.40 Regel 2 adres
+buitenland ongewijzigd geconverteerd naar het gegeven buitenlands adres regel
+1.
+Gegeven buitenlands adres regel 2
+Als rubriek 08.13.40 Regel 2 adres buitenland voorkomt, wordt de inhoud van die
+rubriek opgenomen in het gegeven buitenlands adres regel 2, tenzij de rubrieken
+08.13.30 Adres buitenland 1 en rubriek 08.13.50 Adres buitenland 3 niet
+voorkomen. In dat geval wordt dit element niet opgenomen.
+Gegeven buitenlands adres regel 3
+Als rubriek 08.13.50 Regel 3 adres buitenland voorkomt, wordt de inhoud van die
+rubriek ongewijzigd geconverteerd naar het gegeven buitenlands adres regel 3.
+Gegeven buitenlands adres regel 4
+Dit gegeven kent in de GBA geen overeenkomstige rubriek en wordt bij de
+conversie van GBA naar BRP niet gevuld.
+Gegeven buitenlands adres regel 5
+Dit gegeven kent in de GBA geen overeenkomstige rubriek en wordt bij de
+conversie van GBA naar BRP niet gevuld.
+Gegeven buitenlands adres regel 6
+Dit gegeven kent in de GBA geen overeenkomstige rubriek en wordt bij de
+conversie van GBA naar BRP niet gevuld.
+Bovenstaande regels gelden ook als in groep 13 Adres buitenland een adres in
+Nederland is opgenomen, wat dan blijkt uit het feit dat rubriek 08.13.10 Land adres
+buitenland de waarde “6030” Nederland bevat.
+Opmerking:
+Voor niet-ingezetenen bestaat in de BRP de mogelijkheid om een verblijfadres in
+Nederland vast te leggen. Daarbij worden de gegevens gebruikt die gebruikt worden
+om een woon- of briefadres van een ingezetene vast te leggen. In de GBA worden
+daarvoor de gegevens uit groep 13 Adres buitenland gebruikt. Dit komt met name
+
+Pagina 47 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+voor bij geprivilegieerden die in Nederland verblijven, maar er voor kiezen om als
+niet-ingezetene ingeschreven te zijn.6
+
+3.2.20
+
+Emigratie- en immigratiegegevens
+Het gaat in deze paragraaf over gegevens over het vertrek uit Nederland (emigratie)
+dan wel de aanvang van een verblijf in Nederland (immigratie).
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+
+GBA
+Rubrieknaam
+
+08.13.10
+08.14.10
+08.13.20
+08.14.20
+08.13.30
+
+Land adres buitenland
+Land vanwaar ingeschreven
+Datum aanvang adres
+buitenland
+Datum vestiging in Nederland
+Regel 1 adres buitenland
+
+08.13.40
+
+Regel 2 adres buitenland
+
+08.13.50
+
+Regel 3 adres buitenland
+
+BRP
+Gegevennaam
+soort migratie
+land/gebied migratie
+datum ingang geldigheid
+buitenlands
+migratie
+buitenlands
+migratie
+buitenlands
+migratie
+buitenlands
+migratie
+buitenlands
+migratie
+buitenlands
+migratie
+
+adres regel 1
+adres regel 2
+adres regel 3
+adres regel 4
+adres regel 5
+adres regel 6
+
+Emigratie- en immigratiegegevens komen voor:
+•
+in de GBA in groep 13 Adres buitenland en 14 Immigratie in categorie 08
+Verblijfplaats, waarbij of groep 13 Adres buitenland of groep 14 Immigratie
+voorkomt of geen van beiden;
+•
+in de BRP in de gegevensgroep migratie in het objecttype persoon.
+Conversieregels
+De paragraaf 3.1.3.2 Speciale uitzonderingen is hier van toepassing voor wat betreft
+groep 14 Immigratie.
+De volgende conversieregels gelden alleen voor voorkomens van categorie 08
+Verblijfplaats waarin de groep 10 Adreshouding voorkomt. De conversieregels voor
+voorkomens waarin die groep niet voorkomt worden beschreven in paragraaf 3.2.19
+Woonadres in het buitenland.
+Als groep 10 Adreshouding en groep 13 Adres buitenland of groep 14 Emigratie
+voorkomt, gelden de volgende regels.
+
+6 Deze mogelijkheid is pas beschikbaar als ook voor de gegevens van niet-ingezetenen de
+bijhouding is overgaan naar de BRP.
+Pagina 48 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Gegeven soort migratie
+Als groep 13 Adres buitenland voorkomt, wordt de waarde “E” opgenomen in het
+gegeven soort migratie.
+Als groep 14 Immigratie voorkomt, wordt de waarde “I” opgenomen in het
+gegeven soort migratie.
+Gegeven land/gebied migratie
+Als rubriek 08.13.10 Land adres buitenland voorkomt, bevat die rubriek een code
+uit Tabel 34 Landentabel. Die code wordt geconverteerd naar het gegeven
+land/gebied migratie. Daarbij wordt de viercijferige code met behulp van de
+conversietabel Landen (zie de bijlage Conversietabellen) omgezet in de
+corresponderende , in de BRP gebruikte viercijferige code.
+Als rubriek 08.14.10 Land vanwaar ingeschreven voorkomt, bevat die rubriek een
+code uit Tabel 34 Landentabel. Die code wordt geconverteerd naar het gegeven
+land/gebied migratie. Daarbij wordt de viercijferige code met behulp van de
+conversietabel Landen (zie de bijlage Conversietabellen) omgezet in de
+corresponderende, in de BRP gebruikte viercijferige code.
+Gegeven datum ingang geldigheid
+Als rubriek 08.13.20 Datum aanvang adres buitenland voorkomt, wordt de inhoud
+van die rubriek ongewijzigd geconverteerd naar het gegeven datum ingang
+geldigheid bij de administratieve gegevens met betrekking tot de groep migratie
+(zie paragraaf 3.2.31).
+Als rubriek 08.14.20 Datum vestiging Nederland voorkomt, wordt de inhoud van
+die rubriek ongewijzigd geconverteerd naar het gegeven datum ingang geldigheid
+bij de administratieve gegevens met betrekking tot de groep migratie (zie
+paragraaf 3.2.31).
+Gegeven buitenlands adres regel 1 migratie
+Als rubriek 08.13.30 Regel 1 adres buitenland voorkomt, wordt de inhoud van die
+rubriek ongewijzigd geconverteerd naar het gegeven buitenlands adres regel 1
+migratie.
+Als de rubrieken 08.13.30 Adres buitenland 1 en rubriek 08.13.50 Adres
+buitenland 3 niet voorkomen, wordt de inhoud van 08.13.40 Adres buitenland
+regel 2 ongewijzigd geconverteerd naar gegeven buitenland adres regel 1
+migratie.
+Gegeven buitenlands adres regel 2 migratie
+Als rubriek 08.13.40 Regel 2 adres buitenland voorkomt, wordt de inhoud van die
+rubriek ongewijzigd geconverteerd naar het gegeven buitenlands adres regel 2
+migratie, tenzij de rubrieken 08.13.30 Adres buitenland 1 en rubriek 08.13.50
+Adres buitenland 3 niet voorkomen. In dat geval wordt dit element niet
+opgenomen.
+Gegeven buitenlands adres regel 3 migratie
+Als rubriek 08.13.50 Regel 3 adres buitenland voorkomt, wordt de inhoud van die
+rubriek ongewijzigd geconverteerd naar het gegeven buitenlands adres regel 3
+migratie.
+Gegeven buitenlands adres regel 4 migratie
+Dit gegeven kent in de GBA geen overeenkomstige rubriek en wordt bij de
+conversie van GBA naar BRP niet gevuld.
+Gegeven buitenlands adres regel 5 migratie
+Pagina 49 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Dit gegeven kent in de GBA geen overeenkomstige rubriek en wordt bij de
+conversie van GBA naar BRP niet gevuld.
+Gegeven buitenlands adres regel 6 migratie
+Dit gegeven kent in de GBA geen overeenkomstige rubriek en wordt bij de
+conversie van GBA naar BRP niet gevuld.
+3.2.21
+
+Indicatie document
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+
+3.2.22
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Verblijfsrecht
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+
+3.2.23
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Gezag
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+
+3.2.24
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Curatele
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+
+Pagina 50 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+GBA
+Rubrieknummer
+
+3.2.25
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Reisdocument
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+
+3.2.26
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Signalering
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+
+3.2.27
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Nederlands kiesrecht
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+
+3.2.28
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Europees kiesrecht
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+
+Pagina 51 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+GBA
+Rubrieknummer
+
+3.2.29
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Reden ontbinding huwelijk/geregistreerd partnerschap
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Als er gegev over omntbiondg geconverterd worden, zie par 3.2.3, dan ook reden
+en wel als volgt.
+3.2.30
+
+Afnemersindicatie
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+
+3.2.31
+
+GBA
+Rubrieknaam
+
+BRP
+Gegevennaam
+
+Administratieve gegevens
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit GBA en BRP zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+GBA
+Rubrieknummer
+
+GBA
+Rubrieknaam
+
+Pagina 52 van 85
+
+BRP
+Gegevennaam
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+3.3
+
+Conversie van BRP naar GBA
+In de volgende paragrafen wordt de conversie beschreven vanuit de betrokken
+rubriek uit de GBA. Alleen in paragraaf 3.3.2 Naamgegevens wordt de conversie
+beschreven vanuit de betrokken gegeven uit de BRP.
+Elke paragraaf begint met een overzicht van de betrokken GBA- en BRP-gegevens.
+De kop van elk overzicht is als volgt.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+De inhoud van die kolommen is als volgt.
+•
+In de kolom BRP Gegevennaam is de naam van het betrokken BRP-gegeven
+opgenomen. Die namen zijn voor actuele en historische gegevens gelijk.
+•
+In de kolom GBA rubrieknaam is de naam van de betrokken GBA rubriek
+opgenomen.
+•
+In de kolom GBA Rubrieknummer zijn alleen de betrokken actuele
+rubrieknummers opgenomen. Daarmee worden echter ook de overeenkomstige
+historische rubrieknummers bedoeld, uiteraard voor zover ze bestaan.
+In de conversieregels worden alleen de actuele rubrieknummers genoemd. Daarmee
+worden echter ook de overeenkomstige historische rubrieknummers bedoeld,
+uiteraard voor zover ze bestaan. Bij de BRP gegevens worden zowel de actuele als
+historische voorkomens van die gegevens bedoeld.
+3.3.1
+
+Identificatienummers
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+administratienummer
+
+A-nummer persoon
+A-nummer ouder1
+A-nummer ouder2
+A-nummer
+echtgenoot/geregistreerd partner
+A-nummer kind
+
+burgerservicenummer
+
+Burgerservicenummer persoon
+Burgerservicenummer ouder1
+Burgerservicenummer ouder2
+Burgerservicenummer
+echtgenoot/geregistreerd partner
+Burgerservicenummer kind
+
+GBA
+Rubrieknummer
+01.01.10
+02.01.10
+03.01.10
+05.01.10
+09.01.10
+01.01.20
+02.01.20
+03.01.20
+05.01.20
+09.01.20
+
+Gegevens over de identificatienummers komen voor:
+•
+in de BRP in de gegevensgroep identificatienummers in het objecttype persoon;
+
+Pagina 53 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+•
+
+in de GBA in groep 01 Identificatienummers in categorie 01/51 Persoon, 02/52
+Ouder1, 03/53 Ouder2, 05/55 Huwelijk/geregistreerd partnerschap en 09/59
+Kind.
+
+Conversieregels
+De gegevens over de identificatienummers kunnen betrekking hebben op een
+persoon of op een gerelateerde (ouder, partner of kind) van de persoon. De te
+converteren gegevens worden of ontleend aan de verzameling gegevens van de
+persoon zelf of aan de verzameling gegevens van de betrokken gerelateerde. De
+paragraaf 3.1.1 Gegevens van personen als persoon en als gerelateerde bij de
+conversie van GBA naar BRP is hier van toepassing.
+In de beschrijving hierna staat bij de ontvangende GBA-gegevens de aanduiding
+“cc” voor een categorienummer. De GBA-rubrieken worden aangeduid met de
+toevoeging “betrokkene”, wat staat voor resp. persoon, ouder1, ouder2, en
+echtgenoot/geregistreerd partner.
+Rubriek cc.01.10 A-nummer betrokkene
+De inhoud van het gegeven administratienummer wordt ongewijzigd
+geconverteerd naar rubriek cc.01.10 A-nummer betrokkene.
+Als het gegeven niet aanwezig is, wordt het gegeven niet opgenomen.
+Rubriek cc.01.20 Burgerservicenummer betrokkene
+De inhoud van het gegeven burgerservicenummer wordt ongewijzigd
+geconverteerd naar rubriek cc.01.20 Burgerservicenummer betrokkene.
+Als het gegeven niet aanwezig is, wordt het gegeven niet opgenomen.
+3.3.2
+
+Naamgegevens
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie. Vanwege het feit dat een aantal BRPgegevens dezelfde naam hebben, is in onderstaande tabel ook een kolom
+opgenomen waarin telkens de naam van de betrokken BRP gegevensgroep is
+opgenomen.
+BRP Groep
+
+BRP
+Gegevennaam
+
+samengestelde
+naam
+voornaam
+voornaam
+naamgebruik
+
+voornamen
+
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+
+Pagina 54 van 85
+
+volgnummer
+naam
+voornamen
+naamgebruik
+adellijke titel
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+Voornamen persoon
+
+01.02.10
+
+Adellijke
+titel/predikaat
+persoon
+
+01.02.20
+
+predicaat
+volgnummer
+adellijke titel
+
+volgnummer
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+BRP Groep
+
+BRP
+Gegevennaam
+
+geslachtsnaamcomponent
+naamgebruik
+
+predicaat
+
+naamgebruik
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+naamgebruik
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+samengestelde
+naam
+samengestelde
+naam
+naamgebruik
+
+adellijke titel
+naamgebruik
+predicaat
+naamgebruik
+voorvoegsel
+
+Voorvoegsel
+geslachtnaam
+persoon
+
+01.02.30
+
+Geslachtsnaam
+persoon
+
+01.02.40
+
+volgnummer
+voorvoegsel
+scheidingsteken
+voorvoegsel
+naamgebruik
+scheidingsteken
+naamgebruik
+geslachtsnaamstam
+volgnummer
+stam
+geslachtsnaamstam naamgebruik
+namenreeks?
+afgeleid?
+naamgebruik
+naamgebruik
+afgeleid?
+
+samengestelde
+naam
+voornaam
+voornaam
+naamgebruik
+
+voornamen
+
+samengestelde
+naam
+
+GBA
+Rubrieknummer
+
+scheidingsteken
+
+naamgebruik
+
+samengestelde
+naam
+
+GBA
+Rubrieknaam
+
+volgnummer
+naam
+voornamen
+naamgebruik
+adellijke titel
+
+Aanduiding
+naamgebruik
+
+01.61.10
+
+Voornamen ouder1
+
+02.02.10
+
+Adellijke
+titel/predikaat
+ouder1
+
+02.02.20
+
+predicaat
+
+Pagina 55 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+BRP Groep
+
+BRP
+Gegevennaam
+
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+volgnummer
+
+naamgebruik
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+naamgebruik
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+samengestelde
+naam
+samengestelde
+naam
+samengestelde
+naam
+voornaam
+voornaam
+naamgebruik
+samengestelde
+naam
+samengestelde
+naam
+Pagina 56 van 85
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+adellijke titel
+predicaat
+adellijke titel
+naamgebruik
+predicaat
+naamgebruik
+voorvoegsel
+
+Voorvoegsel
+geslachtnaam
+ouder1
+
+02.02.30
+
+Geslachtsnaam
+ouder1
+
+02.02.40
+
+Voornamen ouder2
+
+03.02.10
+
+Adellijke
+titel/predikaat
+ouder2
+
+03.02.20
+
+scheidingsteken
+volgnummer
+voorvoegsel
+scheidingsteken
+voorvoegsel
+naamgebruik
+scheidingsteken
+naamgebruik
+geslachtsnaamstam
+volgnummer
+stam
+geslachtsnaamstam naamgebruik
+namenreeks?
+afgeleid?
+
+voornamen
+volgnummer
+naam
+voornamen
+naamgebruik
+adellijke titel
+
+predicaat
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+BRP Groep
+
+BRP
+Gegevennaam
+
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+volgnummer
+
+naamgebruik
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+naamgebruik
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+samengestelde
+naam
+samengestelde
+naam
+
+GBA
+Rubrieknummer
+
+adellijke titel
+predicaat
+adellijke titel
+naamgebruik
+predicaat
+naamgebruik
+voorvoegsel
+
+Voorvoegsel
+geslachtnaam
+ouder2
+
+03.02.30
+
+Geslachtsnaam
+ouder2
+
+03.02.40
+
+Voornamen
+echtgenoot/geregistreerd partner
+
+05.02.10
+
+Adellijke
+titel/predikaat
+echtgenoot/geregistreerd partner
+
+05.02.20
+
+scheidingsteken
+volgnummer
+voorvoegsel
+scheidingsteken
+voorvoegsel
+naamgebruik
+scheidingsteken
+naamgebruik
+geslachtsnaamstam
+volgnummer
+stam
+geslachtsnaamstam naamgebruik
+namenreeks?
+afgeleid?
+
+samengestelde
+naam
+
+voornamen
+
+voornaam
+voornaam
+naamgebruik
+
+volgnummer
+naam
+voornamen
+naamgebruik
+adellijke titel
+
+samengestelde
+naam
+
+GBA
+Rubrieknaam
+
+Pagina 57 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+BRP Groep
+
+BRP
+Gegevennaam
+
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+predicaat
+
+naamgebruik
+samengestelde
+naam
+
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+naamgebruik
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+samengestelde
+naam
+samengestelde
+naam
+samengestelde
+naam
+voornaam
+voornaam
+naamgebruik
+samengestelde
+naam
+Pagina 58 van 85
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+volgnummer
+adellijke titel
+predicaat
+adellijke titel
+naamgebruik
+predicaat
+naamgebruik
+voorvoegsel
+
+Voorvoegsel
+geslachtnaam
+echtgenoot/geregistreerd partner
+
+05.02.30
+
+Geslachtsnaam
+echtgenoot/geregistreerd partner
+
+05.02.40
+
+Voornamen kind
+
+09.02.10
+
+Adellijke
+titel/predikaat kind
+
+09.02.20
+
+scheidingsteken
+volgnummer
+voorvoegsel
+scheidingsteken
+voorvoegsel
+naamgebruik
+scheidingsteken
+naamgebruik
+geslachtsnaamstam
+volgnummer
+stam
+geslachtsnaamstam naamgebruik
+namenreeks?
+afgeleid?
+
+voornamen
+volgnummer
+naam
+voornamen
+naamgebruik
+adellijke titel
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+BRP Groep
+
+BRP
+Gegevennaam
+
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+predicaat
+
+naamgebruik
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+naamgebruik
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+samengestelde
+naam
+samengestelde
+naam
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+volgnummer
+adellijke titel
+predicaat
+adellijke titel
+naamgebruik
+predicaat
+naamgebruik
+voorvoegsel
+
+Voorvoegsel
+geslachtnaam kind
+
+09.02.30
+
+Geslachtsnaam kind
+
+09.02.40
+
+scheidingsteken
+volgnummer
+voorvoegsel
+scheidingsteken
+voorvoegsel
+naamgebruik
+scheidingsteken
+naamgebruik
+geslachtsnaamstam
+volgnummer
+stam
+geslachtsnaamstam naamgebruik
+namenreeks?
+afgeleid?
+
+Naamgegevens komen voor:
+•
+in de BRP in de gegevensgroepen voornaam, geslachtsnaamcomponent,
+samengestelde naam en naamgebruik in het objecttype persoon;
+•
+in de GBA in groep 02 Naam in categorie 01/51 Persoon, 02/52 Ouder1, 03/53
+Ouder2, 05/55 Huwelijk/geregistreerd partnerschap en 09/59 Kind en in groep
+61 Naamgebruik in categorie 01/51 Persoon.
+Conversieregels
+In de beschrijving hierna staat de aanduiding “cc” voor een categorienummer. De
+GBA-rubrieken worden aangeduid met de toevoeging “betrokkene”, wat staat voor
+de persoonsaanduiding in de onderscheiden rubrieknamen. Uitzondering is rubriek
+Pagina 59 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+01.61.10 Naamgebruik, die alleen in categorie 01 voorkomt. Met gebruik van deze
+aanduidingen komt de tabel aan het begin van deze paragraaf er als volgt uit te
+zien.
+BRP Groep
+
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+samengestelde
+naam
+voornaam
+voornaam
+naamgebruik
+
+voornamen
+
+Voornamen
+betrokkene
+
+cc.02.10
+
+Adellijke
+titel/predikaat
+betrokkene
+
+cc.02.20
+
+Voorvoegsel
+geslachtnaam
+betrokkene
+
+cc.02.30
+
+Geslachtsnaam
+betrokkene
+
+cc.02.40
+
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+naamgebruik
+samengestelde
+naam
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+naamgebruik
+samengestelde
+naam
+geslachtsnaamcomponent
+geslachtsnaamcomponent
+naamgebruik
+
+samengestelde
+naam
+Pagina 60 van 85
+
+volgnummer
+naam
+voornamen
+naamgebruik
+adellijke titel
+
+GBA
+Rubrieknummer
+
+predicaat
+volgnummer
+adellijke titel
+predicaat
+adellijke titel
+naamgebruik
+predicaat
+naamgebruik
+voorvoegsel
+
+scheidingsteken
+volgnummer
+voorvoegsel
+scheidingsteken
+voorvoegsel
+naamgebruik
+Scheidingsteken
+naamgebruik
+geslachtsnaamstam
+volgnummer
+stam
+geslachtsnaamstam naamgebruik
+Namenreeks?
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+BRP Groep
+
+BRP
+Gegevennaam
+
+samengestelde
+naam
+naamgebruik
+
+afgeleid?
+
+naamgebruik
+
+naamgebruik
+afgeleid?
+
+naamgebruik
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+Aanduiding
+naamgebruik
+
+01.61.10
+
+De paragraaf 3.1.1 Gegevens van personen als persoon en als gerelateerde bij de
+conversie van GBA naar BRP is hier van toepassing.
+Bij de conversie van BRP naar GBA wordt uitgegaan van de gegevens in de
+gegevensgroep samengestelde naam en in de gegevensgroep naamgebruik. De
+gegevens uit de gegevensgroep geslachtsnaamcomponent en de gegevens uit de
+gegevensgroep voornaam worden bij de conversie buiten beschouwing gelaten. De
+inhoud ervan wordt niet geconverteerd omdat er geen overeenkomstige gegevens in
+de GBA zijn.
+Gegevensgroep samengestelde naam
+De gegevens uit de gegevensgroep samengestelde naam worden geconverteerd
+naar de gegevens in Groep 02 Naam in de betrokken categorie (01 Persoon dan wel
+02 Ouder1, 03 Ouder2, 05 Huwelijk/geregistreerd partnerschap of 09 Kind). De
+benodigde gegevens worden of ontleend aan de verzameling gegevens van de
+persoon zelf (als het om conversie van gegevens naar categorie 01 Persoon gaat) of
+aan de verzameling gegevens van de betrokken gerelateerde (als het om conversie
+van gegevens naar categorie 02/52 Ouder2, 03/53 Ouder2, 05/55
+Huwelijk/geregistreerd partnerschap of 09/59 Kind gaat). Zie paragraaf 3.1.1
+Gegevens van personen als persoon en als gerelateerde bij de conversie van GBA
+naar BRP.
+Gegeven voornamen uit de gegevensgroep samengestelde naam
+Als dit gegeven voorkomt wordt de inhoud van dit gegeven ongewijzigd
+geconverteerd naar rubriek cc.02.10 Voornamen betrokkene.
+Als dit gegeven niet voorkomt, wordt er niets geconverteerd.
+Gegevens voorvoegsel en scheidingsteken uit de gegevensgroep samengestelde
+naam
+Als deze gegevens voorkomen:
+a. wordt de inhoud van het gegeven voorvoegsel ongewijzigd geconverteerd
+naar rubriek cc.02.30 Voorvoegsel betrokkene;
+b. wordt de inhoud van het gegeven scheidingsteken niet geconverteerd.
+Als deze gegevens niet voorkomen, wordt er niets geconverteerd.
+N.B.
+Tot aan het einde van de duale periode zullen er geen andere scheidingstekens
+voorkomen dan de spatie en zullen er geen voorvoegsels voorkomen die niet
+voorkomen in de GBA-tabel 36 Voorvoegseltabel.
+
+Pagina 61 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Gegevens predicaat en adellijke titel uit de gegevensgroep samengestelde naam
+In de BRP komen deze twee gegevens nooit samen voor.
+Als een van de gegevens voorkomt wordt de inhoud van dit gegeven
+geconverteerd naar rubriek cc.02.20 Adellijke titel/predikaat betrokkene.
+Als geen van deze gegevens voorkomt, wordt er niets geconverteerd.
+De eenletterige code wordt bij de conversie met behulp van de Conversietabel
+Adellijke titel / predicaat (zie de bijlage Conversietabellen) en het geslacht van
+de persoon omgezet in de een- of tweeletterige code die voorkomt in Tabel 38
+Adellijke titel/predikaat.
+N.B.
+De predicaatcodes “H” en “K” worden niet geconverteerd. De bijbehorende
+predicaten komen niet voor in Tabel 38 Adellijke titel/predikaat.
+Gegeven geslachtsnaamstam uit de gegevensgroep samengestelde naam
+Dit gegeven komt altijd voor. Bij de conversie wordt de inhoud van het
+gegeven geslachtsnaamstam ongewijzigd geconverteerd naar rubriek cc.02.40
+Geslachtsnaam betrokkene.
+Gegeven namenreeks? uit de gegevensgroep samengestelde naam
+Dit gegeven wordt niet geconverteerd omdat er geen overeenkomstig gegeven
+is in de GBA.
+Gegeven afgeleid? uit de gegevensgroep samengestelde naam
+Dit gegeven wordt niet geconverteerd omdat er geen overeenkomstig gegeven
+is in de GBA.
+Gegevensgroep naamgebruik
+Alleen het gegeven naamgebruik uit de gegevensgroep naamgebruik wordt
+geconverteerd naar groep 61 Naamgebruik in categorie 01/51 Persoon. De
+benodigde gegevens worden ontleend aan de verzameling gegevens van de persoon
+zelf omdat het om conversie van gegevens naar categorie 01 Persoon gaat.
+De overige gegevens uit de gegevensgroep Naamgebruik (persoon) worden niet
+geconverteerd omdat er geen overeenkomstige gegevens in de GBA zijn.
+Gegeven naamgebruik uit de gegevensgroep naamgebruik
+De inhoud van het gegeven naamgebruik wordt ongewijzigd geconverteerd naar
+element 61.10 Aanduiding naamgebruik.
+N.B.
+Dit gebeurt ook als het om een persoon gaat die nooit ingezetene geweest is. In
+de GBA komt bij dergelijke personen geen aanduiding van het naamgebruik voor.
+Het naamgebruik is bij de conversie van de gegevens van GBA naar BRP met
+waarde “ E” opgenomen bij de gegevens van deze personen in de BRP. Na het
+begin van de duale periode worden alle gegevens voor bijhouding en levering aan
+de BRP-gegevensverzameling ontleend (zie hoofdstuk <verwijzing opnemen>).
+Die gegevens worden door de centrale voorzieningen zo nodig geconverteerd naar
+GBA-gegevens. Dat heeft tot gevolg dat in voorkomende gevallen in GBAberichten het naamgebruik ook wordt opgenomen bij de gegevens van een
+persoon die nooit ingezetene geweest is.
+
+Pagina 62 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+3.3.3
+
+Gebeurtenisgegevens
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+datum geboorte
+
+gemeente geboorte
+
+buitenlandse plaats
+geboorte
+
+buitenlandse regio
+geboorte
+
+omschrijving locatie
+geboorte
+
+GBA
+Rubrieknaam
+Geboortedatum persoon
+Geboortedatum ouder1
+Geboortedatum ouder2
+Geboortedatum
+echtgenoot/geregistreerd
+Geboortedatum kind
+Geboorteplaats persoon
+Geboorteplaats ouder1
+Geboorteplaats ouder2
+Geboorteplaats
+echtgenoot/geregistreerd
+Geboorteplaats kind
+Geboorteplaats persoon
+Geboorteplaats ouder1
+Geboorteplaats ouder2
+Geboorteplaats
+echtgenoot/geregistreerd
+Geboorteplaats kind
+Geboorteplaats persoon
+Geboorteplaats ouder1
+Geboorteplaats ouder2
+Geboorteplaats
+echtgenoot/geregistreerd
+Geboorteplaats kind
+Geboorteplaats persoon
+Geboorteplaats ouder1
+Geboorteplaats ouder2
+Geboorteplaats
+echtgenoot/geregistreerd
+Geboorteplaats kind
+
+GBA
+Rubrieknummer
+01.03.10
+02.03.10
+03.03.10
+05.03.10
+partner
+09.03.10
+01.03.20
+02.03.20
+03.03.20
+05.03.20
+partner
+09.03.20
+01.03.20
+02.03.20
+03.03.20
+05.03.20
+partner
+09.03.20
+01.03.20
+02.03.20
+03.03.20
+05.03.20
+partner
+09.03.20
+01.03.20
+02.03.20
+03.03.20
+05.03.20
+partner
+09.03.20
+
+woonplaatsnaam
+geboorte
+
+land/gebied geboorte
+
+datum aanvang
+gemeente aanvang
+buitenlandse plaats
+aanvang
+
+Geboorteland persoon
+Geboorteplaats ouder1
+Geboorteplaats ouder2
+Geboorteplaats
+echtgenoot/geregistreerd partner
+Geboorteplaats kind
+
+01.03.30
+02.03.20
+03.03.20
+05.03.20
+
+Datum huwelijkssluiting/aangaan
+geregistreerd partnerschap
+
+05.06.10
+
+Plaats huwelijkssluiting/aangaan
+geregistreerd partnerschap
+
+09.03.20
+
+05.06.20
+
+Pagina 63 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+buitenlandse regio
+aanvang
+omschrijving locatie
+aanvang
+woonplaatsnaam
+aanvang
+land/gebied aanvang
+
+datum einde
+
+gemeente einde
+buitenlandse plaats
+einde
+buitenlandse regio
+einde
+omschrijving locatie
+einde
+woonplaatsnaam
+einde
+land/gebied einde
+
+datum overlijden
+gemeente overlijden
+buitenlandse plaats
+overlijden
+buitenlandse regio
+overlijden
+omschrijving locatie
+overlijden
+woonplaatsnaam
+overlijden
+land/gebied overlijden
+
+Land huwelijkssluiting/aangaan
+geregistreerd partnerschap
+
+05.06.30
+
+Datum ontbinding
+huwelijk/geregistreerd
+partnerschap
+
+05.07.10
+
+Plaats ontbinding
+huwelijk/geregistreerd
+partnerschap
+
+05.07.20
+
+Land ontbinding
+huwelijk/geregistreerd
+partnerschap
+
+05.07.30
+
+Datum overlijden
+
+06.08.10
+
+Plaats overlijden
+
+06.08.20
+
+Land overlijden
+
+06.08.30
+
+Gebeurtenisgegevens betreffen gegevens over de volgende gebeurtenissen:
+•
+Geboorte
+•
+Overlijden
+•
+Aangaan huwelijk / geregistreerd
+•
+Beëindigen huwelijk / geregistreerd partnerschap
+Gegevens over de geboorte komen voor:
+•
+in de BRP in de gegevensgroep geboorte in het objecttype persoon;
+•
+in de GBA in de groep 03 Geboorte in categorie 01/51 Persoon, 02/52
+Ouder1, 03/53 Ouder2, 05/55 Huwelijk/geregistreerd partnerschap en 09/59
+Kind. Vanwege de voorkomenregels in de GBA kan het voorkomen dat in een
+categorie 02/52 Ouder1, 03/53 Ouder2, 05/55 Huwelijk/geregistreerd
+partnerschap en 09/59 Kind geen gegevens over de geboorte aanwezig zijn.
+Gegevens over het overlijden komen voor:
+•
+in de BRP in de gegevensgroep overlijden in het objecttype persoon;
+•
+in de GBA in de groep 08 Overlijden in categorie 06/56 Overlijden.
+Pagina 64 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Gegevens over het aangaan van een huwelijk/geregistreerd partnerschap komen
+voor:
+•
+in de BRP in de gegevensgroep relatie (huwelijk/geregistreerd partnerschap)
+in het objecttype persoon;
+•
+in de GBA in de groep 06 Huwelijkssluiting/aangaan geregistreerd
+partnerschap in categorie 05/55 Huwelijk/geregistreerd partnerschap.
+Gegevens over het beëindigen van een huwelijk/geregistreerd partnerschap komen
+voor:
+•
+in de BRP in de gegevensgroep relatie (huwelijk/geregistreerd partnerschap)
+in het objecttype persoon;
+•
+in de GBA in de groep 07 Ontbinding huwelijk/geregistreerd partnerschap in
+categorie 05/55 Huwelijk/geregistreerd partnerschap.
+Conversieregels
+Voor elke gebeurtenis is er in de BRP
+•
+een datum gebeurtenis en
+o of een gemeente gebeurtenis en mogelijk een woonplaatsnaam
+gebeurtenis
+o of een buitenlandse plaats gebeurtenis en mogelijk een buitenlandse
+regio gebeurtenis
+o of een omschrijving locatie gebeurtenis
+•
+een land/gebied gebeurtenis.
+De gegevens over de gebeurtenis geboorte kunnen betrekking hebben op een
+persoon of op een gerelateerde (ouder, partner of kind) van de persoon. De te
+converteren gegevens worden of ontleend aan de verzameling gegevens van de
+persoon zelf of aan de verzameling gegevens van de betrokken gerelateerde. De
+paragraaf 3.1.1 Gegevens van personen als persoon en als gerelateerde bij de
+conversie van GBA naar BRP is hier van toepassing.
+In de beschrijving hierna staat bij de ontvangende GBA-gegevens de aanduiding
+“cc” voor een categorienummer en “gg” voor een groepnummer. De BRP-gegevens
+en de GBA-rubrieken worden aangeduid met de toevoeging “gebeurtenis”, wat staat
+voor de gebeurtenis- en persoonsaanduiding in de onderscheiden rubriek- en
+gegevensnamen. Met gebruik van deze aanduidingen komt de tabel aan het begin
+van deze paragraaf er als volgt uit te zien.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+datum gebeurtenis
+gemeente gebeurtenis
+buitenlandse plaats
+gebeurtenis
+buitenlandse regio
+gebeurtenis
+omschrijving locatie
+gebeurtenis
+woonplaatsnaam
+gebeurtenis
+land/gebied
+gebeurtenis
+
+Datum gebeurtenis
+
+GBA
+Rubrieknummer
+cc.gg.10
+
+Plaats gebeurtenis
+
+cc.gg.20
+
+Land gebeurtenis
+
+cc.gg.30
+
+Pagina 65 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Rubriek cc.gg.10 Datum gebeurtenis
+De inhoud van het gegeven datum gebeurtenis wordt ongewijzigd geconverteerd
+naar rubriek cc.gg.10 Datum gebeurtenis.
+Rubriek cc.gg.20 Plaats gebeurtenis
+Bij het registreren van gegevens over de plaats van de gebeurtenis kent de BRP
+meer mogelijkheden dan de GBA. De BRP maakt daarbij gebruik van een vijftal
+gegevens.
+Gegeven gemeente gebeurtenis
+Als het gegeven gemeente gebeurtenis gevuld is, wordt de inhoud van dit
+gegeven geconverteerd naar rubriek cc.gg.20 Plaats gebeurtenis. Daarbij wordt
+de code met behulp van de conversietabel Gemeenten (zie de bijlage
+Conversietabellen) omgezet naar de van toepassing zijnde code uit de tabel 33
+Gemeententabel van de GBA.
+Gegeven woonplaatsnaam gebeurtenis
+Dit gegeven wordt nooit geconverteerd omdat er geen overeenkomstig
+gegeven is in de GBA.
+Gegeven buitenlandse plaats gebeurtenis en gegeven buitenlandse regio
+gebeurtenis
+•
+Als alleen het gegeven buitenlandse plaats gebeurtenis gevuld is, wordt de
+inhoud van dit gegeven ongewijzigd geconverteerd naar rubriek cc.gg.20
+Plaats gebeurtenis, ook als de inhoud de waarde “Onbekend” bevat.
+•
+Als ook het gegeven buitenlandse regio gebeurtenis gevuld is, wordt de
+inhoud van dit gegeven gescheiden door een komma en een spatie
+toegevoegd aan de omschrijving uit het gegeven buitenlandse plaats
+gebeurtenis. Het resultaat daarvan wordt opgenomen in rubriek cc.gg.20
+Plaats gebeurtenis. Omdat de inhoud van rubriek cc.gg.20 Plaats gebeurtenis
+maximaal 40 tekens lang mag zijn, wordt het resultaat zo nodig na teken 40
+afgekapt.
+•
+Als alleen het gegeven buitenlandse regio gebeurtenis gevuld is, wordt de
+inhoud van dit gegeven ongewijzigd geconverteerd naar rubriek cc.gg.20
+Plaats gebeurtenis, ook als de inhoud de waarde “Onbekend” bevat.
+Gegeven omschrijving locatie gebeurtenis
+Als het gegeven omschrijving locatie gebeurtenis gevuld is, wordt de inhoud
+van dit gegeven ongewijzigd geconverteerd naar rubriek cc.gg.20 Plaats
+gebeurtenis, ook als de inhoud de waarde “Onbekend” bevat.
+Rubriek cc.gg.30 Land gebeurtenis
+De inhoud van het gegeven land/gebied gebeurtenis wordt geconverteerd naar
+rubriek cc.gg.30 Land gebeurtenis. Daarbij wordt de code met behulp van de
+conversietabel Landen (zie de bijlage Conversietabellen) omgezet naar de van
+toepassing zijnde code uit de tabel 34 Landentabel van de GBA.
+N.B.
+Voor de categorieën 02/52 Ouder1, 03/53 Ouder2, 05/55 Huwelijk/geregistreerd
+partnerschap en 09/59 Kind bepalen de voorkomenregels dat het niet is toegestaan
+dat alle drie de elementen in die groep de standaardwaarde bevatten. Als het
+resultaat van de conversie is dat alle drie de elementen in een groep Geboorte in de
+genoemde categorieën de standaardwaarde zouden bevatten, wordt de groep
+Geboorte niet opgenomen in die categorieën.
+Pagina 66 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+3.3.4
+
+Geslachtsaanduiding
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+geslachtsaanduiding
+
+Geslachtsaanduiding persoon
+Geslachtsaanduiding ouder1
+Geslachtsaanduiding ouder2
+Geslachtsaanduiding
+echtgenoot/geregistreerd partner
+
+GBA
+Rubrieknummer
+01.04.10
+02.04.10
+03.04.10
+05.04.10
+
+Gegevens over het geslacht komen voor:
+•
+in de BRP in de gegevensgroep geslachtsaanduiding in het objecttype persoon;
+•
+in de GBA in groep 04 Geslacht in categorie 01/51 Persoon, 02/52 Ouder1,
+03/53 Ouder2, 05/55 Huwelijk/geregistreerd partnerschap.
+Conversieregels
+De gegevens over de geslachtsaanduiding kunnen betrekking hebben op een
+persoon of op een gerelateerde (ouder of partner) van de persoon. De te
+converteren gegevens worden of ontleend aan de verzameling gegevens van de
+persoon zelf of aan de verzameling gegevens van de betrokken gerelateerde. De
+paragraaf 3.1.1 Gegevens van personen als persoon en als gerelateerde bij de
+conversie van GBA naar BRP is hier van toepassing.
+In de beschrijving hierna staat bij de ontvangende GBA-gegevens de aanduiding
+“cc” voor een categorienummer. De GBA-rubrieken worden aangeduid met de
+toevoeging “betrokkene”, wat staat voor de aanduiding van de gerelateerde.
+Rubriek cc.04.10 Geslachtsaanduiding betrokkene
+De inhoud van het gegeven geslachtsaanduiding wordt ongewijzigd geconverteerd
+naar rubriek cc.04.10 Geslachtsaanduiding betrokkene.
+3.3.5
+
+Nummerverwijzingen
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+vorige
+administratienummer
+volgende
+administratienummer
+vorige
+burgerservicenummer
+volgende
+burgerservicenummer
+
+Vorig A-nummer
+
+GBA
+Rubrieknummer
+01.20.10
+
+Volgende A-nummer
+
+01.20.20
+
+Gegevens over de nummerverwijzingen komen voor:
+Pagina 67 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+•
+•
+
+in de BRP in de gegevensgroep nummerverwijzing in het objecttype persoon;
+in de GBA in groep 20 A-nummerverwijzingen in categorie 01/51 Persoon.
+
+Conversieregels
+Rubriek 01.20.10 Vorig A-nummer
+De inhoud van het gegeven vorige administratienummer wordt ongewijzigd
+geconverteerd naar rubriek 10.20.10 Vorige A-nummer.
+Rubriek 01.20.20 Volgende A-nummer
+De inhoud van het gegeven volgende administratienummer wordt ongewijzigd
+geconverteerd naar rubriek 10.20.20 Volgende A-nummer.
+Gegeven Vorige burgerservicenummer
+Dit gegeven wordt bij de conversie van BRP naar GBA nooit geconverteerd omdat
+er geen overeenkomstig gegeven is in de GBA.
+Gegeven Volgende burgerservicenummer
+Dit gegeven wordt bij de conversie van BRP naar GBA nooit geconverteerd omdat
+er geen overeenkomstig gegeven is in de GBA.
+3.3.6
+
+Familierechtelijke betrekking
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+datum ingang
+geldigheid
+
+Datum ingang familierechtelijke
+betrekking ouder1
+Datum ingang familierechtelijke
+betrekking ouder2
+
+GBA
+Rubrieknummer
+02.62.10
+03.62.10
+
+ouder uit wie het kind
+is geboren?
+Gegevens over de familierechtelijke betrekking komen voor:
+•
+in de BRP in de administratieve gegevens waarmee in de BRP een relatie tussen
+twee personen wordt vastgelegd (zie paragraaf 3.3.31) en in de gegevensgroep
+ouderschap in het objecttype ouder;
+•
+in de GBA in groep 62 Familierechtelijke betrekking in categorie 02/52 Ouder1
+en 03/53 Ouder2.
+Conversieregels
+In de beschrijving hierna staat bij de ontvangende GBA-gegevens de aanduiding
+“cc” voor een categorienummer. De GBA-rubrieken worden aangeduid met de
+toevoeging “betrokkene”, wat staat voor de aanduiding van de gerelateerde.
+Rubriek cc.62.10 Datum ingang familierechtelijke betrekking betrokkene
+De inhoud van het gegeven datum ingang geldigheid wordt bij het converteren
+ontleend aan de administratieve gegevens waarmee in de BRP een relatie tussen
+twee personen wordt vastgelegd (zie paragraaf 3.3.31) en ongewijzigd
+geconverteerd naar rubriek cc.62.10 Datum ingang familierechtelijke betrekking
+betrokkene.
+Pagina 68 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Gegeven ouder uit wie het kind is geboren?
+Dit gegeven wordt bij de conversie van BRP naar GBA nooit geconverteerd omdat
+er geen overeenkomstig gegeven in de GBA is.
+3.3.7
+
+Nationaliteit
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+nationaliteit
+staatloos?
+vastgesteld niet
+Nederlander?
+behandeld als
+Nederlander?
+reden verkrijging
+reden verlies
+bijhouding beëindigd?
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+Nationaliteit
+
+04.05.10
+
+Aanduiding bijzonder
+Nederlanderschap
+
+04.65.10
+
+Reden opname nationaliteit
+
+04.63.10
+
+Reden beëindigen nationaliteit
+
+04.64.10
+
+Gegevens over de nationaliteit komen voor:
+•
+in de BRP in de groepen nationaliteit, staatloos, vastgesteld niet Nederlander en
+behandeld als Nederlander in het objecttype persoon;
+•
+in de GBA in de groepen 05 Nationaliteit, 63 Opnemen nationaliteit, 64
+Beëindigen nationaliteit en 65 Bijzonder Nederlanderschap.
+Conversieregels
+Rubriek 04.05.10 Nationaliteit
+Als het gegeven nationaliteit voorkomt, wordt de inhoud van dit gegeven
+ongewijzigd geconverteerd naar rubriek 04.05.10 Nationaliteit.
+Als het gegeven staatloos? voorkomt en de waarde “ja” heeft, wordt in rubriek
+04.05.10 Nationaliteit de waarde ”0499” opgenomen.
+Rubriek 04.65.10 Aanduiding bijzonder Nederlanderschap
+Als het gegeven vastgesteld niet Nederlander? voorkomt en de waarde “ja” heeft,
+wordt in rubriek 04.65.10 Aanduiding bijzonder Nederlanderschap de waarde “V”
+opgenomen.
+Als het gegeven behandeld als Nederlander? voorkomt en de waarde “ja” heeft,
+wordt in rubriek 04.65.10 Aanduiding bijzonder Nederlanderschap de waarde “B”
+opgenomen.
+Rubriek 04.63.10 Reden opname nationaliteit
+Als het gegeven reden verkrijging voorkomt, wordt de inhoud van dit gegeven
+ongewijzigd geconverteerd naar rubriek 04.63.10 Reden opname nationaliteit.
+Rubriek 04.64.10 Reden beëindigen nationaliteit
+Als het gegeven reden verlies voorkomt, wordt de inhoud van dit gegeven
+ongewijzigd geconverteerd naar rubriek 04.64.10 Reden beëindigen nationaliteit.
+Als het gegeven bijhouding beëindigd? voorkomt, wordt in rubriek 04.64.10
+Reden beëindigen nationaliteit de waarde “404” opgenomen.
+Pagina 69 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+N.B
+Indien er sprake is van een andere nationaliteit dan de Nederlandse en de
+bijhouding van die nationaliteit is niet beëindigd, komen de gegevens reden
+verkrijging en reden verlies niet voor. Als de betrokken gegevens vanuit de GBA
+geconverteerd zijn, is de inhoud van de GBA-rubrieken 04.63.10 Reden opname
+nationaliteit en 04.64.10 Reden beëindiging nationaliteit in de centrale
+voorzieningen bewaard voor gebruik bij de conversie van BRP naar GBA. De
+bewaarde gegevens worden dan opgenomen in de betreffende rubriek. In andere
+gevallen (er is dan sprake van bijhouding in de BRP) wordt er de waarde “000”
+Onbekend in opgenomen. Zie paragraaf 3.1.4 Niet geconverteerde gegevens bij de
+conversie van GBA naar BRP.
+3.3.8
+
+Soort verbintenis
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+Soort verbintenis
+
+GBA
+Rubrieknummer
+05.15.10
+
+Gegevens over de soort verbintenis komen voor:
+•
+in de BRP komt geen gegeven voor dat overeenkomt met Soort verbintenis7;
+•
+in de GBA in groep 15 Soort verbintenis in categorie 05/55
+Huwelijk/geregistreerd partnerschap.
+Conversieregels
+De paragraaf 3.1.1 Gegevens van personen als persoon en als gerelateerde bij de
+conversie van GBA naar BRP is hier van toepassing.
+Rubriek 05.15.10 Soort verbintenis
+Als de bij een persoon opgenomen gegevens over een relatie betrekking hebben
+op een huwelijk, wordt in rubriek 05.15.10 Soort verbintenis de waarde “H”
+opgenomen.
+Als de bij een persoon opgenomen gegevens over een relatie betrekking hebben
+op een geregistreerd partnerschap, wordt in rubriek 05.15.10 Soort verbintenis de
+waarde “P” opgenomen.
+3.3.9
+
+Blokkering PL
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+Datum ingang blokkering PL
+
+GBA
+Rubrieknummer
+07.66.20
+
+Gegevens over de blokkering komen voor:
+7 Er is in de centrale voorzieningen van de BRP een gegeven soort (onderdeel van objecttype
+relatie) waarin wordt vastgelegd of het om een huwelijk of geregistreerd partnerschap gaat.
+Pagina 70 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+•
+•
+
+in de BRP komt geen gegeven voor dat overeenkomt met Datum ingang
+blokkering PL.
+in de GBA in groep 66 Blokkering in categorie 07 Inschrijving.
+
+Conversieregels
+Rubriek 07.66.20 Datum ingang blokkering PL wordt bij een conversie van een PL
+vanuit BRP naar GBA nooit gevuld.
+N.B.
+Als een PL van een BPR-gemeente betrokken is bij een intergemeentelijke
+verhuizing naar een GBA-gemeente, zijn er in de BRP voorzieningen om te
+voorkomen dat de gemeente nog wijzigingen aanbrengt op de PL. De betrokken
+GBA-gemeente hoeft daarvan geen kennis te hebben. Zie ook paragraaf xxx
+Intergemeentelijke verhuizingen <verwijzing nog opnemen> in de duale periode.
+3.3.10
+
+Opschorting
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+
+BRP
+Gegevennaam
+datum ingang
+geldigheid
+bijhoudingsaard
+nadere
+bijhoudingsaard
+
+GBA
+Rubrieknaam
+Datum opschorting bijhouding
+
+Omschrijving reden opschorting
+bijhouding
+
+GBA
+Rubrieknummer
+07.67.10
+
+07.67.20
+
+Gegevens over de opschorting komen voor:
+•
+in de BRP in de administratieve gegevens (zie paragraaf 3.2.31) bij de
+gegevensgroep bijhouding in het objecttype persoon;
+•
+in de GBA voor in groep 67 Opschorting in categorie 07 Inschrijving.
+Conversieregels
+Rubriek 07.67.10 Datum opschorting bijhouding
+Als de bijhouding van een PL van een persoon is opgeschort, wordt de inhoud van
+het gegeven datum ingang geldigheid, dat onderdeel is van de administratieve
+gegevens die horen bij de groep bijhouding (zie paragraaf 3.3.31), opgenomen in
+rubriek 07.67.10 Datum opschorting bijhouding.
+Rubriek 07.67.20 Omschrijving reden opschorting bijhouding
+Als de inhoud van het gegeven nadere bijhoudingsaard de waarde “E”, “F”, “M”.
+“O” of “R” heeft, wordt de inhoud van het gegeven nadere bijhoudingsaard
+ongewijzigd geconverteerd naar rubriek 07.67.20 Omschrijving reden opschorting
+bijhouding.
+Als de inhoud van het gegeven Nadere bijhoudingsaard de waarde “V” heeft,
+wordt in de rubriek 07.67.20 Omschrijving reden opschorting bijhouding de
+waarde “E” opgenomen.
+Als de inhoud van het gegeven Nadere bijhoudingsaard de waarde “A” heeft,
+wordt de inhoud van het gegeven Nadere bijhoudingsaard niet geconverteerd.
+
+Pagina 71 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+N.B.
+Als de inhoud van het gegeven nadere bijhoudingsaard de waarde “?” heeft, kan
+de betrokken PL niet geconverteerd worden (zie paragraaf <verwijzing
+opnemen>).
+Gegeven bijhoudingsaard
+Dit gegeven wordt bij de conversie van BRP naar GBA nooit geconverteerd omdat
+er geen overeenkomstig gegeven is in de GBA.
+3.3.11
+
+Inschrijving
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+datum inschrijving
+
+Datum eerste inschrijving
+GBA/RNI
+
+GBA
+Rubrieknummer
+07.68.10
+
+Gegevens over de inschrijving komen voor:
+•
+in de BRP in de gegevensgroep inschrijving in het objecttype persoon;
+•
+in de GBA voor in groep 68 Opname in categorie 07 Inschrijving.
+Conversieregels
+Rubriek 07.68.10 Datum inschrijving GBA/RNI
+De inhoud van het gegeven datum inschrijving wordt ongewijzigd geconverteerd
+naar rubriek 07.68.10 Datum inschrijving GBA/RNI.
+3.3.12
+
+Persoonskaart
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+gemeente
+persoonskaart
+persoonskaart volledig
+geconverteerd?
+
+Gemeente waar de PK zich bevindt
+PK-gegevens volledig
+meegeconverteerd
+
+GBA
+Rubrieknummer
+07.69.10
+07.87.10
+
+Gegevens over de persoonskaart komen voor:
+•
+in de BRP in de gegevensgroep persoonskaart in het objecttype persoon;
+•
+in de GBA voor in groep 69 Gemeente PK en in groep 87 PK-conversie in
+categorie 07 Inschrijving.
+Conversieregels
+Rubriek 07.69.10 Gemeente waar de PK zich bevindt
+De inhoud van het gegeven gemeente persoonskaart wordt ongewijzigd
+geconverteerd naar rubriek 07.69.10 Gemeente waar de PK zich bevindt.
+Pagina 72 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Rubriek 07.87.10 PK-gegevens volledig meegeconverteerd
+Als de inhoud van het gegeven persoonskaart volledig geconverteerd? de waarde
+“ja” bevat, wordt in rubriek 07.87.10 PK-gegevens volledig meegeconverteerd de
+waarde “P” opgenomen.
+Als de inhoud van het gegeven persoonskaart volledig geconverteerd? een andere
+waarde dan “ja” bevat, wordt dit gegeven niet geconverteerd.
+3.3.13
+
+Geheimhouding
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+volledige
+verstrekkingsbeperking?
+partij
+omschrijving derde
+gemeente verordening
+
+Indicatie geheim
+
+GBA
+Rubrieknummer
+07.70.10
+
+Gegevens over geheimhouding komen voor:
+•
+in de BRP in de gegevensgroep verstrekkingsbeperking in het objecttype
+persoon;
+•
+in de GBA voor in groep 70 Geheim in categorie 07 Inschrijving.
+Conversieregels
+Rubriek 07.70.10 Indicatie geheim
+Als de inhoud van het gegeven volledige verstrekkingsbeperking? de waarde “ja”
+heeft, wordt in rubriek 07.70.10 Indicatie geheim de waarde “7” opgenomen.
+Als de inhoud van het gegeven volledige verstrekkingsbeperking? leeg is, wordt in
+rubriek 07.70.10 Indicatie geheim de waarde “0” opgenomen.
+Gegeven partij
+Dit gegeven wordt bij de conversie van BRP naar GBA nooit geconverteerd omdat
+er geen overeenkomstig gegeven is in de GBA.
+Gegeven omschrijving derde
+Dit gegeven wordt bij de conversie van BRP naar GBA nooit geconverteerd omdat
+er geen overeenkomstig gegeven is in de GBA.
+Gegeven gemeente verordening
+Dit gegeven wordt bij de conversie van BRP naar GBA nooit geconverteerd omdat
+er geen overeenkomstig gegeven is in de GBA.
+3.3.14
+
+Versiebeheer
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+
+Pagina 73 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+Versienummer
+Datumtijdstempel
+
+GBA
+Rubrieknummer
+07.80.10
+07.80.20
+
+Gegevens over versiebeheer komen voor:
+•
+in de BRP komt geen gegeven voor dat overeenkomt Versienummer en
+Datumtijdstempel;
+•
+in de GBA voor in groep 80 Synchroniciteit in categorie 07 Inschrijving.
+Conversieregels
+Rubriek 07.80.10 Versienummer
+Deze rubriek wordt gevuld vanuit de in de centrale voorzieningen in het gegeven
+versienummer (dat geen deel uitmaakt van het BRP gegevensmodel) bewaarde
+inhoud van deze rubriek.
+Rubriek 07.80.20 Datumtijdstempel
+Deze rubriek wordt gevuld vanuit de in de centrale voorzieningen in het gegeven
+datumtijdstempel (dat geen deel uitmaakt van het BRP gegevensmodel)
+bewaarde inhoud van deze rubriek.
+Zie ook paragraaf 3.1.4 Niet geconverteerde gegevens bij de conversie van GBA
+naar BRP.
+3.3.15
+
+Bijhoudingsgemeente
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+bijhoudingspartij
+datum ingang
+geldigheid
+
+Gemeente van inschrijving
+Datum inschrijving in de gemeente
+
+GBA
+Rubrieknummer
+08.09.10
+08.09.20
+
+Gegevens over de bijhoudingsgemeente komen voor:
+•
+in de BRP in de gegevensgroep bijhouding in het objecttype persoon en in de
+administratieve gegevens (zie paragraaf 3.2.31) die horen bij die
+gegevensgroep;
+•
+in de GBA voor in groep 09 Gemeente in categorie 08 Verblijfplaats.
+Conversieregels
+Rubriek 08.09.10 Gemeente van inschrijving
+De inhoud van gegeven bijhoudingspartij wordt geconverteerd naar rubriek
+08.09.10 Gemeente van inschrijving. Daarbij wordt de zescijferige code met
+behulp van de conversietabel Partij (zie de bijlage Conversietabellen) omgezet
+naar de viercijferige code die hoort bij de betrokken gemeente.
+
+Pagina 74 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Rubriek 08.09.20 Datum inschrijving in de gemeente
+De inhoud van het gegeven datum ingang geldigheid in de administratieve
+gegevens met betrekking tot de groep bijhouding (zie paragraaf 3.3.31) wordt
+ongewijzigd geconverteerd naar rubriek 08.09.20 Datum inschrijving in de
+gemeente.
+3.3.16
+
+Adreshouding
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+soort
+gemeentedeel
+datum aanvang
+adreshouding
+
+Functie adres
+Gemeentedeel
+Datum aanvang adreshouding
+
+GBA
+Rubrieknummer
+08.10.10
+08.10.20
+08.10.30
+
+Gegevens over de bijhoudingsgemeente komen voor:
+•
+in de BRP in de gegevensgroep adres in het objecttype persoon;
+•
+in de GBA voor in groep 10 Adreshouding in categorie 08 Verblijfplaats.
+Conversieregels
+Rubriek 08.10.10 Functie adres
+De inhoud van gegeven soort wordt ongewijzigd geconverteerd naar rubriek
+08.10.10 Functie adres.
+Rubriek 08.10.20 Gemeentedeel
+De inhoud van het gegeven gemeentedeel wordt ongewijzigd geconverteerd naar
+rubriek 08.10.20 Gemeentedeel.
+Rubriek 08.10.30 Datum aanvang adreshouding
+De inhoud van het gegeven datum aanvang adreshouding wordt ongewijzigd
+geconverteerd naar rubriek 08.10.30 Datum aanvang adreshouding.
+
+3.3.17
+
+Adresaangifte
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+reden wijziging
+aangever
+adreshouding
+reden wijziging
+migratie
+aangever migratie
+
+Omschrijving van de aangifte
+adreshouding
+
+GBA
+Rubrieknummer
+
+08.72.10
+
+Pagina 75 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Gegevens over de adresaangifte komen voor:
+•
+in de BRP in de gegevensgroep adres (reden wijziging en aangever
+adreshouding) en in de gegevensgroep migratie (reden wijziging migratie en
+aangever migratie), beiden in het objecttype persoon;
+•
+in de GBA voor in groep 72 Adresaangifte in categorie 08 Verblijfplaats.
+Conversieregels
+Rubriek 08.72.10 Omschrijving van de aangifte adreshouding
+Als het om gegevens uit de groep migratie gaat, wordt de inhoud van gegevens
+reden wijziging migratie en aangever migratie met behulp van de conversietabel
+Aangifte adreshouding (zie de bijlage Conversietabellen) geconverteerd naar
+Rubriek 08.72.10 Omschrijving van de aangifte adreshouding.
+Als het om gegevens uit de groep adres gaat, wordt de inhoud van gegevens
+reden wijziging en aangever adreshouding met behulp van de conversietabel
+Aangifte adreshouding (zie de bijlage Conversietabellen) geconverteerd naar
+Rubriek 08.72.10 Omschrijving van de aangifte adreshouding.
+
+3.3.18
+
+Woon- of briefadres in Nederland
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+afgekorte naam
+openbare ruimte
+naam openbare ruimte
+huisnummer
+huisletter
+huisnummertoevoeging
+locatie ten opzichte van
+adres
+postcode
+woonplaatsnaam
+identificatiecode
+adresseerbaar object
+identificatiecode
+nummeraanduiding
+
+GBA
+Rubrieknaam
+Straatnaam
+
+GBA Rubrieknummer
+08.11.10
+
+Naam openbare ruimte
+Huisnummer
+Huisletter
+Huisnummertoevoeging
+Aanduiding bij huisnummer
+
+08.11.15
+08.11.20
+08.11.30
+08.11.40
+08.11.50
+
+Postcode
+Woonplaatsnaam
+Identificatiecode verblijfplaats
+
+08.11.60
+08.11.70
+08.11.80
+
+Identificatiecode
+nummeraanduiding
+
+08.11.90
+
+locatieomschrijving
+
+Locatiebeschrijving
+
+08.12.10
+
+gemeente
+land/gebied
+persoon aangetroffen
+op adres?
+
+Pagina 76 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Gegevens over het woon- of briefadres in Nederland komen voor:
+•
+in de BRP in de gegevensgroep adres in het objecttype persoon;
+•
+in de GBA in groep 11 Adres en 12 Locatie in categorie 08 Verblijfplaats.
+Conversieregels
+De volgende conversieregels worden alleen uitgevoerd voor adresgegevens
+waarvoor geldt dat de betrokken persoon in de periode dat de adresgegevens geldig
+waren of zijn, ingezetene was of is.
+Toelichting:
+Voor niet-ingezetenen bestaat in de BRP de mogelijkheid om een verblijfadres in
+Nederland vast te leggen. Daarbij worden de gegevens gebruikt die gebruikt worden
+om een woon- of briefadres van een ingezetene vast te leggen. In de GBA worden
+daarvoor de gegevens uit groep 13 Adres buitenland gebruikt. Dit komt met name
+voor bij geprivilegieerden die in Nederland verblijven, maar er voor kiezen om als
+niet-ingezetene ingeschreven te zijn. Als in de BRP voor een niet-ingezetene op de
+genoemde wijze een adres is vastgelegd, worden die adresgegevens niet
+geconverteerd naar de GBA.8
+Rubriek 08.11.10 Straatnaam
+De inhoud van het gegeven afgekorte naam openbare ruimte wordt ongewijzigd
+geconverteerd naar rubriek 08.11.10 Straatnaam. Als het gegeven naam
+openbare ruimte en het gegeven locatieomschrijving niet voorkomt, wordt in
+rubriek 08.11.10 de waarde “.” (punt) opgenomen.
+Rubriek 08.11.15 Naam openbare ruimte
+Als het gegeven naam openbare ruimte voorkomt, wordt de inhoud daarvan
+ongewijzigd geconverteerd naar rubriek 08.11.15 Naam openbare ruimte.
+Rubriek 08.11.20 Huisnummer
+Als het gegeven huisnummer voorkomt, wordt de inhoud daarvan ongewijzigd
+geconverteerd naar rubriek 08.11.20 Huisnummer.
+Rubriek 08.11.30 Huisletter
+Als het gegeven huisletter voorkomt, wordt de inhoud daarvan ongewijzigd
+geconverteerd naar rubriek 08.11.30 Huisletter.
+Rubriek 08.11.40 Huisnummertoevoeging
+Als het gegeven huisnummertoevoeging voorkomt, wordt de inhoud daarvan
+ongewijzigd geconverteerd naar rubriek 08.11.40 Huisnummertoevoeging.
+Rubriek 08.11.50 Aanduiding bij huisnummer
+Als het gegeven locatie ten opzichte van adres voorkomt, wordt de inhoud
+daarvan ongewijzigd geconverteerd naar rubriek 08.11.50 Aanduiding bij
+huisnummer.
+Rubriek 08.11.60 Postcode
+Als het gegeven postcode voorkomt, wordt de inhoud daarvan ongewijzigd
+geconverteerd naar rubriek 08.11.60 Postcode.
+Rubriek 08.11.70 Woonplaatsnaam
+
+8 Deze mogelijkheid is pas beschikbaar als ook voor de gegevens van niet-ingezetenen de
+bijhouding is overgaan naar de BRP.
+Pagina 77 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Als het gegeven woonplaatsnaam voorkomt, wordt de inhoud daarvan
+ongewijzigd geconverteerd naar rubriek 08.11.70 Woonplaatsnaam.
+Rubriek 08.11.80 Identificatiecode verblijfplaats
+Als het gegeven identificatiecode adresseerbaar object voorkomt, wordt de inhoud
+daarvan ongewijzigd geconverteerd naar rubriek 08.11.80 Identificatiecode
+verblijfplaats.
+Rubriek 08.11.90 Identificatiecode nummeraanduiding
+Als het gegeven identificatiecode nummeraanduiding voorkomt, wordt de inhoud
+daarvan ongewijzigd geconverteerd naar rubriek 08.11.90 Identificatiecode
+nummeraanduiding.
+Rubriek 08.12.10 Locatiebeschrijving
+Als het gegeven locatieomschrijving voorkomt, wordt de inhoud daarvan
+ongewijzigd geconverteerd naar rubriek 08.12.10 Locatiebeschrijving.
+Gegeven gemeente
+Dit gegeven kent in de GBA geen overeenkomstige rubriek en wordt bij de
+conversie van BRP naar GBA niet geconverteerd.
+Gegeven land gebied
+Dit gegeven kent in de GBA geen overeenkomstige rubriek en wordt bij de
+conversie van BRP naar GBA niet geconverteerd.
+Gegeven persoon aangetroffen op adres?
+Dit gegeven kent in de GBA geen overeenkomstige rubriek en wordt bij de
+conversie van BRP naar GBA niet geconverteerd.
+3.3.19
+
+Woonadres in het buitenland
+Het gaat in deze paragraaf over gegevens over het verblijf in het buitenland dan wel
+over een verblijfadres in het buitenland.
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+land/gebied
+Datum ingang
+geldigheid
+buitenlands adres
+regel 1
+buitenlands adres
+regel 2
+buitenlands adres
+regel 3
+buitenlands adres
+regel 4
+buitenlands adres
+regel 5
+
+Land adres buitenland
+Datum aanvang adres buitenland
+
+GBA
+Rubrieknummer
+08.13.10
+08.13.20
+
+Regel 1 adres buitenland
+
+08.13.30
+
+Regel 2 adres buitenland
+
+08.13.40
+
+Regel 3 adres buitenland
+
+08.13.50
+
+Pagina 78 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+buitenlands adres
+regel 6
+Gegevens over het woonadres in het buitenland komen voor:
+•
+in de BRP in de gegevensgroep adres in het objecttype persoon;
+•
+in de GBA in groep 13 Adres buitenland in categorie 08 Verblijfplaats.
+Conversieregels
+Rubriek 08.13.10 Land adres buitenland
+Als het gegeven land/gebied voorkomt, wordt inhoud van dat gegeven
+geconverteerd naar rubriek 08.13.10 Land adres buitenland. Daarbij wordt de
+code met behulp van de conversietabel Landen (zie de bijlage Conversietabellen)
+omgezet naar de van toepassing zijnde code uit de tabel 34 Landentabel van de
+GBA.
+Rubriek 08.13.20 Datum aanvang adres buitenland
+Het gegeven datum ingang geldigheid bij de administratieve gegevens met
+betrekking tot de groep adres (zie paragraaf 3.3.31) wordt ongewijzigd
+geconverteerd naar rubriek 08.13.20 Datum aanvang adres buitenland.
+Rubriek 08.13.30 Regel 1 adres buitenland
+Als het gegeven buitenlands adres regel 1 voorkomt, wordt de inhoud van die
+rubriek ongewijzigd geconverteerd naar rubriek 08.13.30 Regel 1 adres
+buitenland, tenzij de gegevens buitenlands adres regel 2, 3, 4, 5, en 6 niet
+voorkomen. In dat geval wordt deze rubriek niet opgenomen.
+Rubriek 08.13.40 Regel 2 adres buitenland
+Als het gegeven buitenlands adres regel 2 voorkomt, wordt de inhoud van die
+rubriek ongewijzigd geconverteerd naar rubriek 08.13.40 Regel 2 adres
+buitenland. Als alleen het gegeven buitenlands adres regel 1 voorkomt, wordt de
+inhoud van dit gegeven ongewijzigd geconverteerd naar rubriek 08.13.40 Regel 2
+adres buitenland.
+Rubriek 08.13.50 Regel 3 adres buitenland
+Als het gegeven buitenlands adres regel 3 voorkomt, wordt de inhoud van die
+rubriek ongewijzigd geconverteerd naar rubriek 08.13.40 Regel 3 adres
+buitenland.
+Gegeven buitenlands adres regel 4
+Dit gegeven kent in de GBA geen overeenkomstige rubriek en wordt bij de
+conversie van BRP naar GBA niet geconverteerd.
+Gegeven buitenlands adres regel 5
+Dit gegeven kent in de GBA geen overeenkomstige rubriek en wordt bij de
+conversie van BRP naar GBA niet geconverteerd.
+Gegeven buitenlands adres regel 6
+Dit gegeven kent in de GBA geen overeenkomstige rubriek en wordt bij de
+conversie van BRP naar GBA niet geconverteerd.
+3.3.20
+
+Emigratie- en immigratiegegevens
+Het gaat in deze paragraaf over gegevens over het vertrek uit Nederland (emigratie)
+dan wel de aanvang van een verblijf in Nederland (immigratie).
+Pagina 79 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+Land adres buitenland
+Land vanwaar ingeschreven
+Datum aanvang adres buitenland
+Datum vestiging in Nederland
+Regel 1 adres buitenland
+
+08.13.10
+08.14.10
+08.13.20
+08.14.20
+08.13.30
+
+Regel 2 adres buitenland
+
+08.13.40
+
+Regel 3 adres buitenland
+
+08.13.50
+
+soort migratie
+land/gebied migratie
+datum ingang
+geldigheid
+buitenlands adres
+regel 1 migratie
+buitenlands adres
+regel 2 migratie
+buitenlands adres
+regel 3 migratie
+buitenlands adres
+regel 4 migratie
+buitenlands adres
+regel 5 migratie
+buitenlands adres
+regel 6 migratie
+
+Emigratie- en immigratiegegevens komen voor:
+•
+in de BRP in de gegevensgroep migratie in het objecttype persoon;
+•
+in de GBA in groep 13 Adres buitenland dan wel in de groep 14 Immigratie in
+categorie 08 Verblijfplaats.
+Conversieregels
+Gegeven soort migratie
+Het gegeven soort migratie kent geen overeenkomstige rubriek in de GBA. Het
+gegeven bepaalt wel of de gegevens uit de betrokken groep migratie worden
+geconverteerd naar groep 13 Adres buitenland of groep 14 Immigratie.
+Rubriek 08.13.10 Land adres buitenland
+Als het gegeven land/gebied migratie voorkomt en als de inhoud van het gegeven
+soort migratie de waarde “E” heeft, wordt inhoud van dat gegeven, geconverteerd
+naar rubriek 08.13.10 Land adres buitenland. Daarbij wordt de code met behulp
+van de conversietabel Landen (zie de bijlage Conversietabellen) omgezet naar de
+van toepassing zijnde code uit de tabel 34 Landentabel van de GBA.
+Rubriek 08.14.10 Land vanwaar ingeschreven
+Als het gegeven land/gebied migratie voorkomt en als de inhoud van het gegeven
+soort migratie de waarde “I” heeft, wordt inhoud van dat gegeven, geconverteerd
+naar rubriek 08.14.10 Land vanwaar ingeschreven. Daarbij wordt de code met
+behulp van de conversietabel Landen (zie de bijlage Conversietabellen) omgezet
+naar de van toepassing zijnde code uit de tabel 34 Landentabel van de GBA.
+Rubriek 08.13.20 Datum aanvang adres buitenland
+Als de inhoud van het gegeven soort migratie de waarde “E” heeft, wordt het
+gegeven datum ingang geldigheid bij de administratieve gegevens met betrekking
+Pagina 80 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+tot de groep migratie (zie paragraaf 3.3.31) ongewijzigd geconverteerd naar
+rubriek 08.13.20 Datum aanvang adres buitenland.
+
+Rubriek 08.14.20 Datum vestiging Nederland
+Als de inhoud van het gegeven soort migratie de waarde “I” heeft, wordt het
+gegeven datum ingang geldigheid bij de administratieve gegevens met betrekking
+tot de groep migratie (zie paragraaf 3.3.31) ongewijzigd geconverteerd naar
+rubriek 08.14.20 Datum vestiging Nederland.
+Rubriek 08.13.30 Regel 1 adres buitenland
+Als het gegeven buitenlands adres regel 1 migratie voorkomt, wordt de inhoud
+van dat gegeven ongewijzigd geconverteerd naar rubriek 08.13.30 Regel 1 adres
+buitenland, tenzij de gegevens buitenlands adres regel 2, 3, 4, 5, en 6 migratie
+niet voorkomen. In dat geval wordt deze rubriek niet opgenomen.
+Rubriek 08.13.40 Regel 2 adres buitenland
+Als het gegeven buitenlands adres regel 2 migratie voorkomt, wordt de inhoud
+van dat gegeven ongewijzigd geconverteerd naar rubriek 08.13.40 Regel 2 adres
+buitenland. Als alleen het gegeven buitenlands adres regel 1 migratie voorkomt,
+wordt de inhoud van dit gegeven ongewijzigd geconverteerd naar rubriek
+08.13.40 Regel 2 adres buitenland.
+Rubriek 08.13.40 Regel 3 adres buitenland
+Als het gegeven buitenlands adres regel 3 migratie voorkomt, wordt de inhoud
+van dat gegeven ongewijzigd geconverteerd naar rubriek 08.13.40 Regel 3 adres
+buitenland.
+Gegeven buitenlands adres regel 4 migratie
+Dit gegeven kent in de GBA geen overeenkomstige rubriek en wordt bij de
+conversie van GBA naar BRP niet geconverteerd.
+Gegeven buitenlands adres regel 5 migratie
+Dit gegeven kent in de GBA geen overeenkomstige rubriek en wordt bij de
+conversie van GBA naar BRP niet geconverteerd.
+Gegeven buitenlands adres regel 6 migratie
+Dit gegeven kent in de GBA geen overeenkomstige rubriek en wordt bij de
+conversie van GBA naar BRP niet geconverteerd.
+3.3.21
+
+Indicatie document
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+Pagina 81 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+3.3.22
+
+Verblijfsrecht
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+3.3.23
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+Gezag
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+3.3.24
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+Curatele
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+3.3.25
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+Reisdocument
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+Pagina 82 van 85
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+3.3.26
+
+Signalering
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+3.3.27
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+Nederlands kiesrecht
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+
+3.3.28
+
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+Onverwerkt document
+aanwezig?
+
+Indicatie document
+
+GBA
+Rubrieknummer
+08.75.10
+
+Europees kiesrecht
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+3.3.29
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+Reden ontbinding huwelijk/geregistreerd partnerschap
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+Pagina 83 van 85
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+3.3.30
+
+Afnemersindicatie
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+3.3.31
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+Administratieve gegevens
+<inhoud paragraaf nog opnemen>
+De volgende gegevens uit BRP en GBA zijn betrokken bij de onder de kop
+‘Conversieregels’ beschreven conversie.
+BRP
+Gegevennaam
+
+Pagina 84 van 85
+
+GBA
+Rubrieknaam
+
+GBA
+Rubrieknummer
+
+Concept | Logisch Ontwerp GBA - BRP, versie 0.04 | juli 2016
+
+Bijlagen etc.
+•
+•
+•
+•
+•
+•
+•
+•
+
+Concordantieoverzicht GBA BRP
+Conversietabel Gemeenten
+Conversietabel Landen
+Conversietabel Reden opschorting
+Conversietabel Adellijke titel / predicaat
+Conversietabel Partij
+Conversietabel Aangifte adreshouding
+Conversietabel Verblijfsrecht
+
+<Deze en andere bijlagen moeten nog opgenomen worden>
+
+Pagina 85 van 85
+
+

@@ -1,0 +1,513 @@
+UCS BV.0.KO – Geef kandidaat ouder
+Versie
+
+1.0
+
+Datum
+
+10 juli 2017
+
+Status
+
+Definitief
+
+Locatie
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+22-03-2017
+
+0.1
+
+Eerste versie nav herstructurering
+
+oBRP
+
+28-03-2017
+
+0.2
+
+Peer review verwerkt
+
+oBRP
+
+10-07-2017
+
+1.0
+
+Definitief gemaakt. Hfd openstaande punten toegevoegd
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS BV.0.KO - Geef kandidaat ouder
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Invoer ....................................................................................................................... 4
+2.1
+2.2
+2.3
+2.4
+
+3
+
+Beschrijving .........................................................................................................................5
+Schematische weergave.........................................................................................................5
+Beschrijving activiteitendiagram .............................................................................................7
+Bedrijfsregels .......................................................................................................................9
+
+Uitvoer .................................................................................................................... 10
+4.1
+4.2
+4.3
+
+5
+
+Beschrijving .........................................................................................................................4
+Verzoekbericht .....................................................................................................................4
+Specifieke toelichting op het verzoekbericht .............................................................................4
+Bijzonderheden.....................................................................................................................4
+
+Verwerking ............................................................................................................... 5
+3.1
+3.2
+3.3
+3.4
+
+4
+
+Doel ....................................................................................................................................3
+Functionele context ...............................................................................................................3
+Referenties ..........................................................................................................................3
+Openstaande punten .............................................................................................................3
+
+Beschrijving ....................................................................................................................... 10
+Resultaatbericht.................................................................................................................. 10
+Toelichting op het resultaatbericht ........................................................................................ 10
+
+Ontwerpbeslissingen .............................................................................................. 11
+
+Status: Definitief, versie: 1.0
+
+Pagina 2 van 11
+
+UCS BV.0.KO - Geef kandidaat ouder
+
+1 Inleiding
+1.1
+
+Doel
+
+Deze dienst wordt door bijhouders gebruikt in de context van het registreren van een aangifte van
+geboorte in Nederland. Daarbij moet worden vastgesteld wie juridisch gezien de ouders van het
+kind zijn. Dat is in elk geval de ‘ouder uit wie het kind is gekomen’ (=OUWKIG, in de meeste
+gevallen is dat de moeder). De bepaling van de andere ouder, de ‘ouder uit wie het kind niet is
+gekomen’ (=NOUWKIG) is iets lastiger (bron is Burgerlijk Wetboek, artikel 199).
+Deze dienst geeft op basis van de BSN van de OUWKIG en de geboortedatum van het kind de
+gegevens retour van welke persoon volgens de BRP waarschijnlijk de NOUWKIG is. Het is
+vervolgens aan de Ambtenaar Burgerlijke Stand om deze gegevens al dan niet te gebruiken voor
+de verdere afhandeling en bijhouding van de geboorte-aangifte. De BRP beschikt bijvoorbeeld niet
+over gegevens over ‘erkenning voor de geboorte’ en kan dus niet te allen tijde de juiste ‘andere’
+ouder bepalen. Daarom ook heet deze dienst Geef kandidaat ouder.
+
+1.2
+
+Functionele context
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitdiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving Generieke Berichtstructuur
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+1.4
+
+Openstaande punten
+
+Deze use case is niet gerealiseerd.
+
+Status: Definitief, versie: 1.0
+
+Pagina 3 van 11
+
+UCS BV.0.KO - Geef kandidaat ouder
+
+2 Invoer
+2.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft het verzoekbericht van de bijhouder tot de bepaling van de kandidaat voor
+de ‘andere’ juridische ouder van de persoon.
+
+2.2
+
+Verzoekbericht
+
+De structuur van het verzoekbericht staat beschreven in Aspectbeschrijving Generieke
+berichtstructuur [2].
+
+2.3
+
+Specifieke toelichting op het verzoekbericht
+
+Toelichting op het verzoekbericht van deze dienst.
+Stuurgegevens
+Van een ingevoerd bericht worden stuurgegevens Zendende partij, het Zendende systeem, een
+Referentienummer en het Tijdstip vastgelegd en meegeleverd als onderdeel van het
+verzoekbericht.
+Parameters
+In het bericht wordt de leveringsautorisatie, waarbinnen een synchronisatieverzoek voor een
+persoon wordt gedaan, geïdentificeerd door de Leveringsautorisatieidentificatie voor de Dienst.
+Parameter Rol is bedoeld voor de routering van het verzoek (zonder dat het nodig is om de
+database te bevragen; rol is in principe afleidbaar). Bevragingen door bijhouders worden bij
+voorkeur op de master uitgevoerd.
+Identificatiecriteria
+In het bericht wordt de OUWKIG uitsluitend geïdentificeerd door het opgegeven
+Burgerservicenummer. Daarnaast wordt de geboortedatum van het kind opgegeven. Met deze twee
+gegevens kan de BRP de kandidaat ouder bepalen.
+
+2.4
+
+Bijzonderheden
+
+Niet van toepassing.
+
+Status: Definitief, versie: 1.0
+
+Pagina 4 van 11
+
+UCS BV.0.KO - Geef kandidaat ouder
+
+3 Verwerking
+3.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft de verwerking van het verzoekbericht Geef kandidaat ouder.
+
+3.2
+
+Schematische weergave
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitendiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+Activiteitendiagram met de verwerking van een verzoek tot levering van een kandidaat ouder van
+een kind op grond van de geboortedatum en het BSN van OUWKIG.
+In het diagram is alleen de happy flow weergegeven. Foutafhandeling is hier niet opgenomen maar
+de XSD-validatie en invoercontrole’s staan beschreven in de begeleidende tekst in de volgende
+paragraaf of in de aangeroepen Use Cases.
+
+Status: Definitief, versie: 1.0
+
+Pagina 5 van 11
+
+UCS BV.0.KO - Geef kandidaat ouder
+
+Status: Definitief, versie: 1.0
+
+Pagina 6 van 11
+
+UCS BV.0.KO - Geef kandidaat ouder
+
+3.3
+
+Beschrijving activiteitendiagram
+
+De verwerking van het ontvangen verzoekbericht bestaat uit een aantal volgordelijke stappen die
+uitgevoerd worden. In de onderstaande toelichtende tekst zijn de stappen onderverdeeld in ‘XSD
+controle’, ‘Controle invoer’, ‘Verwerking’ en ‘Uitvoer’. Elke toegelichte stap is terug te vinden in het
+activiteitendiagram in de vorige paragraaf.
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de aan de Use Cases gekoppelde regels in BMR.
+
+XSD controle
+•
+
+AL.1.XV – XSD validatie
+Het inkomende verzoek wordt gevalideerd door deze te controleren tegen het bij het
+verzoek behorende XSD-schema (XML Schema Definition). Als er een XSD fout wordt
+geconstateerd, dan wordt er direct een technische foutmelding teruggegeven aan de
+zendende applicatie.
+
+Controle invoer
+•
+
+LV.1.AB – Archiveer bericht
+Draagt zorg voor de archivering van het technisch verwerkbare inkomende verzoekbericht
+en van het uitgaande bericht (het resultaatbericht).
+
+•
+
+LV.1.AL – Autorisatie levering
+Het inkomende verzoek wordt gecontroleerd op geldigheid van leveringsautorisatie en
+dienst autorisatie.
+
+•
+
+LV.1.CPI – Controleer persoonsselectie identiteitsnummer
+Het in het bericht opgenomen identificatienummer (burgerservicenummer) mag maar één
+persoon opleveren. De persoon moet een ingeschrevene zijn en mag niet vervallen zijn.
+Het leveringsverzoek wordt niet verwerkt als de persoon een verstrekkingsbeperking heeft,
+geldend voor de verzoekende partij.
+
+Verwerking
+•
+
+BV.1.KO.KO – Bepaal kandidaat ouder
+Na het goed doorlopen van alle controles worden de kandidaat ouder(s) bepaald.
+Dit geschied als volgt:
+o Eerst wordt bepaald of er huwelijken of geregistreerde partnerschappen bestaan bij
+de ‘OUWKIG’ die beëindigd zijn wegens het overlijden van de partner en waarbij er
+minder dan 306 dagen zit tussen die beëindiging en de geboorte van het kind.
+o Als in de vorige stap geen kandidaat is gevonden, wordt bepaald of er huwelijken
+of geregistreerde partnerschappen bestaan bij de ‘OUWKIG’ die geldig waren op de
+geboortedatum van het kind.
+o Indien aldus kandidaten zijn gevonden die Ingeschreven personen zijn, dan kunnen
+de gegevens van die kandidaat rechtstreeks gebruikt worden om het bericht te
+vullen.
+o Indien aldus kandidaten zijn gevonden die pseudo-personen zijn met een aanwezig
+BSN nummer, dan kan geprobeerd worden om op grond van dat BSN een match te
+vinden met een ingeschreven persoon. Als deze persoon gevonden wordt dan
+
+Status: Definitief, versie: 1.0
+
+Pagina 7 van 11
+
+UCS BV.0.KO - Geef kandidaat ouder
+
+o
+
+worden zijn gegevens opgenomen in het resultaatbericht. Als de persoon niet
+gevonden wordt (of als er geen BSN aanwezig is) dan worden alleen de gegevens
+van de pseudo-persoon overgenomen. Dat laatste zal resulteren in een beperkter
+bericht omdat er minder gegevens beschikbaar zullen zijn.
+Als wel een ingeschreven persoon gevonden is via een match op de pseudopersoon bij de ‘OUWKIG’, dan wordt ook nog gecontroleerd of alle gegevens van de
+ingeschrevene en van de pseudo-persoon overeenkomen. Indien er een afwijking
+bestaat dan zal de dienst hiervoor een waarschuwing meesturen (dit verschil kan
+onbedoeld zijn maar het kan ook een opzettelijk afwijkend beeld vanaf de
+‘OUWKIG’ zijn, bijvoorbeeld omdat de partner een geslachtswijziging heeft
+ondergaan. Dit afwijkende beeld is in principe niet van toepassing op het kind).
+
+Uitvoer
+•
+
+LV.1.SPL - Samenstellen Persoonslijst
+Hier worden de ongefilterde persoonslijsten opgesteld voor de in het bericht te leveren
+personen zoals bepaald in de vorige stap. In deze stap wordt ook gefilterd op de grens van
+deze persoonslijst.
+
+•
+
+LV.1.AFB – Autorisatiefilter bericht
+De in de vorige stap samengestelde persoonslijst wordt gefilterd op autorisatie op historie,
+verantwoording, onderzoek, inhoudelijke groepen en attributen.
+
+•
+
+BV.1.KO.MB – Maak kandidaat ouder bericht
+Berichtspecifieke filtering; alleen actuele gegevens en verplicht te leveren verantwoording
+wordt in het bericht opgenomen. Onderzoek wordt alleen geleverd als het de geleverde
+gegevens raakt.
+
+•
+
+LV.1.BO – Bericht opschonen
+Na het filteren in de voorgaande stappen kunnen er lege groepen of niet relevante
+verwijzingen in het bericht ontstaan. In deze stap wordt ook de sortering van groepen en
+objecten bepaald.
+
+•
+
+LV.1.MR – Maak resultaatbericht
+Het resultaat en de “geslaagd” melding of de eventuele foutmelding(en) worden in een
+(synchroon) resultaatbericht opgenomen. Er wordt dus altijd een resultaatbericht
+vervaardigd.
+
+•
+
+LV.1.VR – Verzend resultaatbericht
+Vervolgens wordt het resultaatbericht afgeleverd aan de indiener van het verzoekbericht.
+Het resultaatbericht wordt gearchiveerd (LV.1.AB).
+
+•
+
+LV.1.AB - Archiveer bericht
+Deze stap verzorgt de archivering van het verzonden bericht (ten behoeve van de
+beheerorganisatie).
+
+Status: Definitief, versie: 1.0
+
+Pagina 8 van 11
+
+UCS BV.0.KO - Geef kandidaat ouder
+
+3.4
+
+Bedrijfsregels
+
+Voor een toelichting op de verschillende soorten bedrijfsregels, de meldingsniveaus, de toepassing
+en werking ervan in het bijhoudingsproces, wordt verwezen naar de daartoe opgestelde
+Aspectbeschrijving Controles [3].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels en definitieregels zijn opgenomen de bijlage: BV.0.KO – Bijlage Geef kandidaat
+ouder.doc.
+
+Status: Definitief, versie: 1.0
+
+Pagina 9 van 11
+
+UCS BV.0.KO - Geef kandidaat ouder
+
+4 Uitvoer
+4.1
+
+Beschrijving
+
+Dit proces levert altijd een resultaatbericht op. Deze bevat ofwel een foutmelding ofwel de
+gegevens van de kandidaat ouder.
+
+4.2
+
+Resultaatbericht
+
+In antwoord op de aanroep van de dienst ontvangt de afnemer een synchroon resultaatbericht.
+Voor de volledige beschrijving en inhoud van het resultaatbericht wordt verwezen naar
+Aspectbeschrijving Generieke Berichtstructuur [2] en de bijlage: BV.0.KO – Bijlage Geef kandidaat
+ouder.doc.
+
+4.3
+
+Toelichting op het resultaatbericht
+
+Stuurgegevens
+Van het bericht worden stuurgegevens Zendende partij, het Zendende systeem, een
+Referentienummer, een Crossreferentienummer (Referentienummer uit de stuurgegevens van het
+Verzoekbericht) en het Tijdstip vastgelegd en meegeleverd als onderdeel van het resultaatbericht.
+Resultaat
+Het resultaat van de Verwerking kan de waarde “Geslaagd” of “Foutief” aannemen. Daarachter
+wordt aangegeven wat het Hoogste Meldingsniveau is, dat is aangetroffen tijdens de uitgevoerde
+controles. De ernst wordt uitgedrukt in het meldingsniveau en betreft in aflopende hoogte:
+Fout
+Deblokkeerbaar
+Waarschuwing
+Informatie1
+Meldingen
+In het bericht zijn de Regels opgenomen die gecontroleerd zijn, met daarbij aangegeven welke
+Soort melding (informatief, waarschuwing, deblokkeerbaar, fout) en de Melding zelf, die in tekst
+aangeeft wat er op basis van de gecontroleerde regel is geconstateerd.
+Personen
+In het bericht wordt na correcte verwerking aangegeven voor welke persoon de kandidaat (andere)
+ouder is, volgens de gegevens waarover de BRP beschikt en uitgaande van de opgegeven
+‘OUWKIG’ en geboortedatum. In normale gevallen zullen er nul of één resultaten zijn. In
+uitzonderlijke gevallen is het mogelijk dat er meer dan één resultaat is.
+
+1
+
+Dit meldingsniveau wordt momenteel nog niet gehanteerd, maar is gereserveerd voor toekomstig gebruik.
+
+Status: Definitief, versie: 1.0
+
+Pagina 10 van 11
+
+UCS BV.0.KO - Geef kandidaat ouder
+
+5 Ontwerpbeslissingen
+•
+
+Omdat deze dienst alleen beschikbaar zal worden gesteld voor gebruik in het kader van de
+bijhouding, wordt er niet geprotocolleerd.
+
+•
+
+Er wordt wel gebruikt gemaakt van de generieke controleregels voor het selecteren van de
+persoon voor de ‘OUWKIG’. Dat betekent dat er ook wordt gecontroleerd op de
+populatiebeperking en de aanwezigheid van een verstrekkingsbeperking voor de
+betreffende Partij. Omdat de dienst gebruikt wordt in het kader van de bijhouding, zal het
+echter in de praktijk niet voorkomen dat de opgegeven persoon niet voldoet aan de
+populatiebeperking of dat er sprake is van een verstrekkingsbeperking voor de betreffende
+Partij. Het is immers niet mogelijk om een verstrekkingsbeperking in te stellen bij een
+gemeente of ‘de minister’).
+
+•
+
+Het uitvoerbericht bevat geen nationaliteitsgegevens omdat die meestal niet nodig zijn: als
+de ‘OUWKIG’ de Nederlandse nationaliteit heeft krijgt het kind die ook en worden er verder
+geen andere nationaliteiten meer vastgelegd. In de overige gevallen zal de ambtenaar met
+de dienst Geef details persoon de gegevens van de ‘NOUWKIG’ moeten opvragen om de
+juiste nationaliteit van het kind vast te kunnen stellen.
+In incidentele gevallen kan er sprake zijn van meer dan één kandidaat. Dit kan als de
+‘OUWKIG’ in de 306 dagen voor de geboorte meer dan eenmaal weduwe is geworden of als
+er tijdens de geboorte sprake was van een bigamisch huwelijk. In die gevallen zal de dienst
+alle kandidaten leveren en is het aan de ambtenaar om duidelijk te krijgen wie er als ouder
+mag worden aangemerkt. De matching van psuedo-persoon naar ingeschreven persoon
+gaat op basis van het BSN en kan in de BRP slechts één actuele persoon opleveren. Er
+kunnen dus geen dubbele kandidaten uit de matching meer komen.
+
+Status: Definitief, versie: 1.0
+
+Pagina 11 van 11
+
+

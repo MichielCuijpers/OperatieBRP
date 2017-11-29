@@ -1,0 +1,616 @@
+Ontrelateren in combinatie met
+verwijderen en overschrijven
+3-7-2017
+
+Uitgangspunten
+1.
+
+Alle V&O-handelingen zijn asymmetrisch
+ Bij V&O bijna altijd ontrelateren.
+
+2.
+
+Controle bij V&O of eerdere AH-en zijn geleverd
+ Om te voorkomen dat nog te leveren gegevens worden verwijderd.
+
+3.
+
+Ontrelateren vindt plaats in één transactie met ‘echte’ AH
+ Zodat relateerproces tussendoor niet ingrijpt.
+
+4.
+
+Na V&O een volledigbericht i.p.v. mutatiebericht
+ Afnemers mogen de mutatie niet ontvangen, maar moeten wel de PL
+krijgen zoals die na V&O is.
+
+5.
+
+Mutatieberichten voor ontrelateer-AH en ‘echte’ AH na afloop van
+transactie
+ Dus als zeker is dat de transactie niet wordt teruggedraaid.
+ Vraag: kan de ontrelateer-AH dan nog wel goed worden geleverd?
+
+2
+
+Voorbeeld 1: geslachtswijziging Piet
+Piet (i)
+
+Partner
+
+Huwelijk
+
+Partner
+
+Marie (i)
+
+Partner
+
+Huwelijk
+
+Partner
+
+Marie (i)
+
+Geslacht: M
+
+Petra (i)
+Geslacht: V
+Geslacht (DEG): M
+Naam (DEG): Piet
+•
+•
+
+Mutatiebericht Piet: geslachtswijziging
+Mutatiebericht Marie: geslachtswijzging partner
+3
+
+Voorbeeld 1: ontrelateren n.a.v.
+overschrijvingsverzoek Petra
+
+Petra (i)
+
+Partner
+
+Huwelijk
+
+Partner
+
+Marie (p)
+
+Partner
+
+Huwelijk
+
+Partner
+
+Marie (i)
+
+Partner
+
+Huwelijk
+
+Partner
+
+Geslacht: V
+Geslacht (DEG): M
+Naam (DEG): Piet
+
+Petra (p)
+Geslacht: V
+Geslacht (DEG): M
+Naam (DEG): Piet
+
+Na ontrelateren niet direct mutatieberichten.
+4
+
+Voorbeeld 1: overschrijven oude
+geslacht Petra
+
+Petra (i)
+
+Partner
+
+Huwelijk
+
+Partner
+
+Marie (p)
+
+Partner
+
+Huwelijk
+
+Partner
+
+Marie (i)
+
+Partner
+
+Huwelijk
+
+Partner
+
+Geslacht: V
+Geslacht (DEG): M
+Naam (DEG): Piet
+
+Petra (p)
+Geslacht: V
+Geslacht (DEG): M
+Naam (DEG): Piet
+
+•
+•
+•
+
+Mutatiebericht Marie: ontrelateren
+Mutatiebericht Petra: ontrelateren
+Volledigbericht Petra: volledige PL excl. verwijderde gegevens
+5
+
+Voorbeeld 1: historieopbouw Piet
+Piet
+
+Geslachtswijziging
+
+Petra
+
+Piet
+Piet
+
+Formele tijd 
+
+Overschrijven geslacht
+Petra
+Piet (Nav P)
+
+Petra
+Piet (Nav P)
+
+Materiële tijd 
+6
+
+Voorbeeld 2: geslachtswijziging Piet
+Piet (i)
+
+Partner
+
+Huwelijk
+
+Partner
+
+Marie (i)
+
+Partner
+
+Huwelijk
+
+Partner
+
+Marie (i)
+
+Geslacht: M
+
+Petra (i)
+Geslacht: V
+Geslacht (DEG): M
+Naam (DEG): Piet
+•
+•
+
+Mutatiebericht Piet: geslachtswijziging
+Mutatiebericht Marie: geslachtswijzging partner
+7
+
+Voorbeeld 2: ontrelateren n.a.v.
+overschrijvingsverzoek Marie
+
+Petra (i)
+
+Partner
+
+Huwelijk
+
+Partner
+
+Marie (p)
+
+Partner
+
+Huwelijk
+
+Partner
+
+Marie (i)
+
+Partner
+
+Huwelijk
+
+Partner
+
+Geslacht: V
+Geslacht (DEG): M
+Naam (DEG): Piet
+
+Petra (p)
+Geslacht: V
+Geslacht (DEG): M
+Naam (DEG): Piet
+
+Na ontrelateren niet direct mutatieberichten.
+8
+
+Voorbeeld 2: overschrijven nieuwe
+geslacht Petra op PL Marie
+
+Petra (i)
+
+Partner
+
+Huwelijk
+
+Partner
+
+Marie (p)
+
+Partner
+
+Huwelijk
+
+Partner
+
+Marie (i)
+
+Partner
+
+Huwelijk
+
+Partner
+
+Geslacht: V
+Geslacht (DEG): M
+Naam (DEG): Piet
+
+Piet
+Petra (p)
+Geslacht: V
+Geslacht (DEG): M
+Naam (DEG): Piet
+
+•
+•
+
+•
+
+Mutatiebericht Petra: ontrelateren
+Mutatiebericht Marie: ontrelateren
+ Gaat niet goed, want deel identificerende gegevens van Petra (p), namelijk
+de Samengestelde naam en Geslachtsaanduiding die ten tijde van het
+ontrelateren actueel waren zijn verwijderd.
+9
+Volledigbericht Marie: volledige PL excl. verwijderde gegevens
+
+Voorbeeld 2: historieopbouw Piet op
+PL van Marie
+Piet
+
+Geslachtswijziging
+
+Petra
+
+Piet
+Piet
+
+Formele tijd 
+
+Overschrijven geslacht
+Piet
+Piet
+
+Petra (Nav P)
+Piet (Nav P)
+
+Materiële tijd 
+10
+
+Voorbeeld 3: adoptie Piet
+Piet (i)
+
+Kind
+
+Frb
+
+Ouder
+
+Hanna (i)
+
+Piet (i)
+
+Kind
+
+Frb
+
+Ouder
+
+Marie (i)
+
+Ouder
+
+Hanna (i)
+
+Ouderschap (DEG)
+•
+•
+
+Mutatiebericht Piet: +ouder Marie -ouder Hanna
+Mutatiebericht Marie: +kind Piet
+11
+
+Voorbeeld 3: ontrelateren n.a.v.
+verwijderverzoek
+Piet (i)
+
+Kind
+
+Frb
+
+Ouder
+
+Marie (i)
+
+Ouder
+
+Hanna (i)
+
+Ouderschap (DEG)
+Ouder
+
+Hanna (p)
+
+Ouderschap (DEG)
+
+Piet (p)
+
+Kind
+
+Frb
+
+Ouder
+
+Hanna (i)
+
+Ontrelateren vindt alleen voor de oorspronkelijke ouder plaats. Relatie met nieuw ouder blijft symmetrisch.
+
+12
+
+Voorbeeld 3: verwijderen gegevens
+van vóór adoptie bij Piet
+Piet (i)
+
+Kind
+
+Frb
+
+Ouder
+
+Marie (i)
+
+Ouder
+
+Hanna (i)
+
+Ouderschap (DEG)
+Ouder
+
+Hanna (p)
+
+Ouderschap (DEG)
+
+Piet (p)
+
+•
+•
+
+•
+
+Kind
+
+Frb
+
+Ouder
+
+Hanna (i)
+
+Mutatiebericht Hanna: ontrelateren
+ Gaat niet goed, want door ontrelateren vervallen betrokkenheid is inmiddels verwijderd.
+Mutatiebericht Piet: ontrelateren
+ Gaat niet goed, want door ontrelateren vervallen ouder is inmiddels verwijderd.
+Volledigbericht Piet: volledige PL excl. verwijderde gegevens
+13
+
+Voorbeeld 4: adoptie Piet
+Piet (i)
+
+Kind
+
+Frb
+
+Ouder
+
+Hanna (i)
+
+Piet (i)
+
+Kind
+
+Frb
+
+Ouder
+
+Marie (i)
+
+Ouder
+
+Hanna (i)
+
+Ouderschap (DEG)
+•
+•
+
+Mutatiebericht Piet: +ouder Marie -ouder Hanna
+Mutatiebericht Marie: +kind Piet
+14
+
+Voorbeeld 4: ontrelateren n.a.v.
+verzoek verwijdering kindgegevens
+Piet (i)
+
+Kind
+
+Frb
+
+Ouder
+
+Marie (i)
+
+Ouder
+
+Hanna (i)
+
+Ouderschap (DEG)
+Ouder
+
+Hanna (p)
+
+Ouderschap (DEG)
+
+Piet (p)
+
+Kind
+
+Frb
+
+Ouder
+
+Hanna (i)
+
+Geeft zelfde plaatje als voorbeeld 3, want Hanna (i) moet een kopie kind van Piet krijgen, zodat Piet (i)
+ongewijzigd blijft.
+
+15
+
+Voorbeeld 4: verwijderen
+kindgegevens
+Piet (i)
+
+Kind
+
+Frb
+
+Ouder
+
+Marie (i)
+
+Ouder
+
+Hanna (i)
+
+Ouderschap (DEG)
+Ouder
+
+Hanna (p)
+
+Ouderschap (DEG)
+
+Piet (p)
+•
+•
+•
+
+Kind
+
+Frb
+
+Ouder
+
+Hanna (i)
+
+Mutatiebericht Hanna: ontrelateren
+ Gaat niet goed, want door ontrelateren vervallen betrokkenheid is inmiddels verwijderd.
+Mutatiebericht Piet: ontrelateren
+ Gaat niet goed, want door ontrelateren vervallen ouder is inmiddels verwijderd.
+Volledigbericht Piet: volledige PL excl. verwijderde gegevens
+
+16
+
+Oplossingsrichtingen voor levering
+ontrelateer-AH na verwijderen (1/2)
+1.
+
+Nooit n.a.v. ontrelateren mutatieberichten sturen
++
+‒
+
+‒
+
+2.
+
+Ontrelateren niet meer in 1 transactie met echte AH
++
+‒
+‒
+‒
+
+3.
+
+Probleem dat ontrelateren niet goed geleverd kan worden doet zich
+niet meer voor
+Opvolgende mutatiebericht onduidelijk voor afnemers die sleutels
+gebruiken (echter, dat mogen ze eigenlijk niet)
+Soort persoon zit in de gegevensset, dus moet geleverd worden (is
+belangrijke indicatie voor asymmetrie)
+Ontrelateren wordt gewoon geleverd
+Verwijderen/overschrijven moet wachten tot ontrelateren is geleverd
+Er is iets anders nodig om relateren tegen te houden
+Risico dat alleen ontrelateren wordt doorgevoerd
+
+Te verwijderen gegevens in 2 stappen verwijderen: eerst markeren,
+dan ontrelateren leveren, dan gemarkeerde gegevens verwijderen
++
+‒
+
+Ontrelateren kan worden geleverd
+Vermenging levering/bijhouding. Vanuit architectuur niet wenselijk
+17
+
+Oplossingsrichtingen voor levering
+ontrelateer-AH na verwijderen (2/2)
+4. Onvolledige deltabepaling n.a.v. ontrelateren
+accepteren
++
+
+‒
+
+Voor hoofdpersoon wordt toch al volledig bericht na
+verwijderen/overschrijven gestuurd
+Bij verwijderen na adoptie gaat ontrelateerbericht ook
+voor niet-hoofdpersoon fout
+
+5. Ontrelateerbericht onderdrukken voor hoofdpersoon
+van verwijderen/overschrijven
+o
+
+Exact dezelfde voor- en nadelen als bij optie 4
+
+6. Na ontrelateren blob aanmaken en parkeren.
+Geparkeerde blob leveren en verwijderen.
++
+?
+
+Is functioneel eigenlijk precies wat je wilt
+Technisch mogelijk?
+18
+
+

@@ -1,0 +1,356 @@
+UCS SL.0.PS - Protocollering selecties
+Versie
+
+1.0
+
+Datum
+
+12 juli 2017
+
+Status
+
+Definitief
+
+Locatie
+
+Documenthistorie
+Datum
+02-05-2017
+
+Versie Beschrijving
+
+Auteur
+
+0.1
+
+oBRP
+
+Initiële opzet
+
+04-05-2017
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+29-05-2017
+
+0.3
+
+Status selectietaak aangepast
+
+oBRP
+
+08-06-2017
+
+0.4
+
+Vullen van leveringsaantekening op basis van afleiding van
+gegevens, niet op basis van te protocolleren bestand.
+
+oBRP
+
+08-06-2017
+
+0.5
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+12-07-2017
+
+1.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+0.4
+
+Interne review
+
+UCS SL.0.PS - Protocollering selecties
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Invoer ....................................................................................................................... 4
+2.1
+2.2
+2.3
+
+3
+
+Beschrijving .........................................................................................................................5
+Schematische weergave.........................................................................................................5
+Beschrijving activiteitendiagram .............................................................................................5
+Bedrijfsregels .......................................................................................................................6
+
+Uitvoer ...................................................................................................................... 7
+4.1
+
+5
+
+Beschrijving .........................................................................................................................4
+Verzoekbericht .....................................................................................................................4
+Bijzonderheden.....................................................................................................................4
+
+Verwerking ............................................................................................................... 5
+3.1
+3.2
+3.3
+3.4
+
+4
+
+Doel ....................................................................................................................................3
+Functionele context ...............................................................................................................3
+Referenties ..........................................................................................................................3
+
+Beschrijving .........................................................................................................................7
+
+Ontwerpbeslissingen ................................................................................................ 8
+
+Status: Definitief, versie: 1.0
+
+Pagina 2 van 8
+
+UCS SL.0.PS - Protocollering selecties
+
+1 Inleiding
+1.1
+
+Doel
+
+Tijdens de protocollering van selecties worden één of meerdere selectietaken geprotocolleerd.
+Alle selectietaken die bij het starten van de protocollering zijn geleverd en de status “selectie te
+protocolleren” hebben worden geprotocolleerd.
+Een deel van de te protocolleren gegevens (namelijk de Leveringsaantekening \ Persoon) zijn al
+eerder in het proces bij het uitvoeren van de selectietaak in een protocolleer bestand apart gezet.
+De gegevens met betrekking tot Leveringsaantekening worden in deze Use Case afgeleid.
+Met deze stap, het protocolleren van selecties, worden de protocolleer gegevens van de
+geselecteerde selectietaken weggeschreven in de protocolleringsadministratie van de centrale
+voorzieningen.
+Deze Use Case beschrijft het protocolleren van selecties.
+
+1.2
+
+Functionele context
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitdiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 1.0
+
+Pagina 3 van 8
+
+UCS SL.0.PS - Protocollering selecties
+
+2 Invoer
+2.1
+
+Beschrijving
+
+De protocollering van selecties kan door de beheerder worden geïnitieerd vanuit de
+beheerapplicatie of automatisch op een te configureren moment door het systeem gestart worden.
+
+2.2
+
+Verzoekbericht
+
+Niet van toepassing
+
+2.3
+
+Bijzonderheden
+
+De volgende gegevens zijn van belang om de protocollering van selecties te kunnen starten:
+
+•
+
+Selectietaken
+
+Wanneer het selectieresultaat daadwerkelijk is geleverd aan de partij dan mag er pas
+geprotocolleerd worden. De beheerder wijzigt hierop de status van de selectietaak zodat deze
+(automatisch) wordt opgepakt bij het protocolleren van selecties.
+
+•
+
+Protocolleer bestand
+
+Naast bovenstaande gegevens moet het protocolleerbestand van de geleverde selectietaak
+beschikbaar zijn. Tijdens het uitvoeren van de selectietaak zijn de te protocolleren gegevens van
+de selectietaak tijdelijk in een protocolleerbestand gezet. Dit bestand geldt als input voor het
+daadwerkelijk protocolleren van de selectietaak.
+
+Status: Definitief, versie: 1.0
+
+Pagina 4 van 8
+
+UCS SL.0.PS - Protocollering selecties
+
+3 Verwerking
+3.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft de verwerking van de protocollering van selecties.
+
+3.2
+
+Schematische weergave
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitendiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+In het diagram is alleen de happy flow weergegeven. Foutafhandeling is hier niet opgenomen,
+controles staan beschreven in de begeleidende tekst in de volgende paragraaf of in de
+aangeroepen Use Cases.
+
+3.3
+
+Beschrijving activiteitendiagram
+
+Het protocolleren van selecties bestaat uit een aantal volgordelijke stappen die uitgevoerd worden.
+In de onderstaande toelichtende tekst zijn de stappen beschreven. Elke toegelichte stap is terug te
+vinden in het activiteitendiagram in de vorige paragraaf.
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de aan de specificatie van de Use Cases en de aan de Use Cases gekoppelde
+regels in BMR.
+
+Status: Definitief, versie: 1.0
+
+Pagina 5 van 8
+
+UCS SL.0.PS - Protocollering selecties
+
+•
+
+SL.1.PS.CP – Controleer te protocolleren selectietaken
+Wanneer een selectietaak de status ‘selectie te protocolleren’ heeft wordt deze selectietaak
+geselecteerd ter verwerking van de protocollering. Er kunnen meerdere selectietaken
+worden geselecteerd.
+
+De volgende stappen worden per selectietaak doorlopen.
+•
+
+SL.1.PS.CB – Controleer bestand
+In deze stap wordt per selectietaak gecontroleerd of er een te protocolleren bestand
+aanwezig is. Wanneer bij een te protocolleren selectietaak geen protocolleerbestand
+aanwezig is wordt de status van de selectietaak gewijzigd zodat dit voor de beheerder
+duidelijk wordt.
+
+•
+
+SL.1.PS.PS – Protocolleer selectietaak
+Het te protocolleren bestand met de Leveringsaantekening \ Persoon van de selectietaak
+wordt verwerkt in de protocolleringsadministratie van de centrale voorzieningen.
+In de leveringsaantekening wordt vastgelegd welke Dienst is geleverd binnen welke
+Leveringsautorisatie, aan welke afnemer en op welk datum/tijdstip er geleverd is. De
+gegevens met betrekking tot de Leveringsaantekening worden afgeleid en verwerkt in de
+protocolleringsadministratie.
+De status van de selectietaak wordt gezet naar ‘Protocollering in uitvoering’.
+Tijdens de verwerking van de protocollering wordt de voortgang van de protocollering van
+de selectietaak in de beheerapplicatie weergegeven bij de betreffende selectietaak. Tevens
+heeft de beheerder in de beheerapplicatie de mogelijkheid om het protocolleren van een
+specifieke selectietaak te pauzeren en te hervatten.
+
+•
+
+SL.1.PS.WS – Wijzig status selectietaak
+Zodra de protocollering is verwerkt wordt de status van de selectietaak gewijzigd.
+
+3.4
+
+Bedrijfsregels
+
+Voor een toelichting op de verschillende soorten bedrijfsregels, de meldingsniveaus, de toepassing
+en werking ervan in het bijhoudingsproces, wordt verwezen naar de daartoe opgestelde
+Aspectbeschrijving Controles [2].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels, verwerkingslogica en definitieregels zijn opgenomen de bijlage: SL.0.PS – Bijlage
+Protocollering selecties.doc
+
+Status: Definitief, versie: 1.0
+
+Pagina 6 van 8
+
+UCS SL.0.PS - Protocollering selecties
+
+4 Uitvoer
+4.1
+
+Beschrijving
+
+Niet van toepassing.
+
+Status: Definitief, versie: 1.0
+
+Pagina 7 van 8
+
+UCS SL.0.PS - Protocollering selecties
+
+5 Ontwerpbeslissingen
+•
+
+De controle van het wel of niet protocolleren voor een partij is uitgevoerd op het moment
+van de selectie uitvoer. Aan de hand van deze controle wordt er wel of geen protocolleer
+bestand gegenereerd.
+Met het protocolleren van de geleverde selectietaken wordt deze controle niet opnieuw
+gedaan. Dus wanneer er een bestand aanwezig is wordt dit bestand geprotocolleerd.
+
+Status: Definitief, versie: 1.0
+
+Pagina 8 van 8
+
+

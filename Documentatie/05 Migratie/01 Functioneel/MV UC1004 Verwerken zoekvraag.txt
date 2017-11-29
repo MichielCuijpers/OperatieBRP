@@ -1,0 +1,1450 @@
+UC1004 Verwerken zoekvragen
+
+1.4
+
+Datum
+Status
+
+06-06-2017
+Definitief
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................5
+1.1 BEKNOPTE OMSCHRIJVING ...................................................................................................................5
+1.1.1 Ad hoc vraag .............................................................................................................................6
+1.1.2 Ad hoc adresvraag ..................................................................................................................7
+1.2 REFERENTIES ........................................................................................................................................8
+1.3 PRECONDITIE ........................................................................................................................................8
+1.4 POSTCONDITIE......................................................................................................................................8
+
+2
+
+AANVULLENDE SPECIFICATIES .................................................................................................9
+2.1
+2.2
+2.3
+2.4
+
+3
+
+VERLOOP: VERWERKEN HQ01-BERICHT............................................................................................9
+ALTERNATIEF VERLOOP: VERWERKEN XQ01-BERICHT .....................................................................9
+ALTERNATIEF VERLOOP: VERWERKEN WEBSERVICE-VRAAG ...........................................................10
+ALTERNATIEF VERLOOP: VERWERKEN OPVRAGEN PL-VRAAG ........................................................10
+
+AANVULLENDE SPECIFICATIES: ALGEMEEN ....................................................................11
+3.1 CONVERSIE PERSOONSLIJST..............................................................................................................11
+3.2 VASTSTELLEN OF AFNEMER GEAUTORISEERD IS ..............................................................................11
+3.3 FILTEREN RUBRIEKEN .........................................................................................................................11
+3.4 PROTOCOLLEREN ANTWOORD ............................................................................................................11
+3.5 PROTOCOLFOUTEN ..............................................................................................................................12
+3.6 CONVERSIE ZOEKCRITERIA ................................................................................................................12
+3.6.1 Gebeurtenisplaats (CAP001) .............................................................................................12
+3.6.2 Voornamen (CEL0210) ........................................................................................................12
+3.6.3 Geslachtsnaam (CEL0240) .................................................................................................12
+3.6.4 Adellijke titel/predicaat (CEL0220) .................................................................................12
+3.6.5 Voorvoegsel CEL0230 ..........................................................................................................12
+3.6.6 Verblijfstitel CCA10 ...............................................................................................................12
+3.6.7 Verblijfplaats CCA08 .............................................................................................................13
+3.7 ZOEKCRITERIA DIE NIET ZIJN TOEGESTAAN .....................................................................................13
+3.7.1 Relaties ......................................................................................................................................13
+3.7.2 Zoeken op historische categorie ......................................................................................14
+3.7.3 Groepen die niet voor mogen komen ............................................................................14
+3.7.4 Rubrieken die niet voor mogen komen .........................................................................14
+3.8 GEDRAG DIENSTEN/SERVICES MIGRATIEVOORZIENING ..................................................................14
+
+4
+
+ZOEK PERSOON (NETWERK) .....................................................................................................15
+4.1
+
+5
+
+BRP ZOEK PERSOON ..........................................................................................................................15
+
+ZOEK PERSOON OP ADRES (NETWERK) .............................................................................16
+5.1 ZOEK PERSOON OP ADRES MET PERSOONSIDENTIFICATIE ..............................................................16
+5.1.1 BRP zoek persoon service...................................................................................................16
+5.1.2 BRP zoek persoon op adresgegevens service .............................................................16
+5.2 ZOEK PERSOON OP ADRES MET ADRESIDENTIFICATIE (XQ01) ......................................................16
+5.2.1 BRP Zoek persoon op adresgegevens ............................................................................17
+
+6
+
+ZOEKEN PERSOON (WEBSERVICE) ........................................................................................19
+6.1 ZOEKEN PERSOON ..............................................................................................................................19
+6.2 ZOEKEN PERSOON OP ADRES.............................................................................................................19
+6.2.1 Zoeken persoon op persoonsidentificatie .....................................................................19
+6.2.2 Zoeken persoon op adresidentificatie ............................................................................19
+6.3 FOUTREDENEN ....................................................................................................................................19
+6.4 SLIM ZOEKEN ......................................................................................................................................20
+6.4.1 Niet slim zoeken .....................................................................................................................20
+
+Operatie BRP
+
+Pagina 2 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+6.4.2 Wildcards ..................................................................................................................................20
+6.4.3 Hoofdlettergevoelig en geen diakritische tekens .......................................................21
+6.4.4 Voorbeelden .............................................................................................................................21
+6.5 ZOEKEN OP HISTORIE ........................................................................................................................22
+7
+
+OPVRAGEN PL-SERVICE ...............................................................................................................23
+7.1
+7.2
+7.3
+
+8
+
+OPVRAGEN PL .....................................................................................................................................23
+AUTORISATIE VAN DE PARTIJ.............................................................................................................23
+FOUTREDENEN ....................................................................................................................................23
+
+OPMERKINGEN ..................................................................................................................................24
+8.1
+
+VERSCHILLEN ......................................................................................................................................24
+
+Operatie BRP
+
+Pagina 3 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+11-11-2016
+21-11-2016
+
+0.1
+0.2
+
+Operatie BRP
+Operatie BRP
+
+28-11.2016
+
+0.3
+
+25-01-2017
+
+0.4
+
+14-03-2017
+16-03-2017
+21-03-2017
+07-04-2017
+14-04-2017
+
+0.5
+0.6
+0.7
+0.8
+0.9
+
+20-04-2017
+
+1.0
+
+24-04-2017
+08-05-2017
+
+1.1
+1.2
+
+19-05-2017
+
+1.3
+
+06-06-2017
+
+1.4
+
+Initiële versie
+Reviewcommentaar verwerkt, zoeken op
+lastig te converteren rubrieken uitgesloten
+Flows verwijderd, overige zoekvragen
+opgenomen, naam use case gewijzigd.
+Groepen en rubrieken die niet voor mogen
+komen aangepast.
+Uitzondering op geslachtsnaam partner
+toegevoegd
+Adresvraag toegevoegd
+Reviewcommentaar verwerkt
+Reviewcommentaar verwerkt
+Webservice toegevoegd
+R2610 en R2343 toegevoegd, 2308 en 2311
+gemapt op webservice
+Zoeken op reden verkrijging nationaliteit
+niet toegestaan
+Opvragen PL
+Reviewcommentaar verwerkt
+Typo gefixt en extra toelichting opgenomen
+bij slim zoeken.
+R2290 naar 013 aangepast (ipv 18)
+018 opgenomen wanneer een rubriek niet is
+toegestaan volgens het LO
+Slim zoeken en zoeken op historie aangepast
+(bevat known issues)
+Voorbeelden toegevoegd
+Opvragen PL uitgebreid
+Controle geldige partij uitgebreid met Datum
+overgang naar BRP.
+Uitsluiten van zoeken op historische
+rubrieken die niet aanwezig zijn toegevoegd.
+
+Operatie BRP
+Operatie BRP
+
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+BRP
+
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+21-11-2016
+
+0.1
+
+Review
+
+Operatie BRP
+
+15-03-2017
+
+0.5
+
+Review
+
+Operatie BRP
+
+19-03-2017
+
+0.6
+
+Review
+
+Operatie BRP
+
+24-04-2017
+
+1.0
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 4 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Afnemers kunnen in de GBA zoeken naar personen aan de hand van de volgende diensten
+waarvoor de afnemer geautoriseerd dient te zijn:
+•
+•
+•
+•
+•
+
+Ad hoc vraag: [LO] C.2.11.3 Ad hoc vragen GBA-V
+Ad hoc adresvraag: [LO] C.2.11.4 Ad hoc adresvragen GBA-V
+Ad hoc vraag webservice: [LO] C.7.3 LO3 Adhoc Service
+Ad hoc adresvraag webservice: [LO] C.7.3 LO3 Adhoc Service
+Opvragen PL webservice: [LO] C.7.4 Opvragen PL
+
+De migratievoorziening ondersteunt ieder van deze diensten. Eventuele bijzonderheden bij het
+ontvangen van zoekvragen of het versturen van antwoorden door de migratievoorziening,
+worden in dit document beschreven. Voor alle overige informatie over de werking van de
+diensten dient het [LO] geraadpleegd te worden.
+Er wordt van uitgegaan dat gebruik gemaakt wordt van standaard functionaliteit van de BRP
+voor het zoeken naar personen. In de beschreven verlopen in dit document wordt duidelijk wat
+door de migratievoorziening gedaan wordt en wat door de BRP.
+Voor de ad hoc vraag wordt gebruik gemaakt van de BRP-service ‘Zoek persoon’. Meer
+informatie over de BRP-service ‘Zoek persoon’ is te vinden in [ZOEK1].
+Voor de ad hoc adresvraag wordt gebruikt gemaakt van de BRP-services ‘Zoek persoon op
+adresgegevens’ en ‘Zoek persoon’. Meer informatie over de BRP-service ‘Zoek persoon op
+adresgegevens’ is te vinden in [ZOEK2].
+
+Operatie BRP
+
+Pagina 5 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+1.1.1
+
+Ad hoc vraag
+
+Operatie BRP
+
+Pagina 6 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+1.1.2
+
+Ad hoc adresvraag
+
+Operatie BRP
+
+Pagina 7 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+1.2
+
+1.3
+
+Referenties
+#
+[BMR]
+
+Document
+https://www.modernodam.nl/bmr
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+[LO]
+
+Logisch Ontwerp
+
+RvIG
+
+3.10
+
+08-10-2016
+
+[CONV]
+
+Documentatie bidirectionele conversie
+
+Operatie BRP
+
+-
+
+-
+
+[UC102]
+
+MV UC102 Vul autorisatietabelregels in BRP
+initieel
+
+Operatie BRP
+
+-
+
+-
+
+[PROT]
+
+UCS-LV.1.PB
+
+Operatie BRP
+
+-
+
+-
+
+[ZOEK1]
+
+UCS BV.0.ZP.docx
+
+Operatie BRP
+
+-
+
+-
+
+[ZOEK2]
+
+UCS BV.0.ZA.docx
+
+Operatie BRP
+
+-
+
+-
+
+[AS]
+
+MV Aanvullende specificaties
+
+Operatie BRP
+
+-
+
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 8 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+2
+
+Aanvullende specificaties
+
+In de onderstaande verlopen zijn niet alle foutsituaties uitgeschreven. Welke foutsituaties zich
+voor kunnen doen blijkt uit de tabellen van de mogelijke meldingen van de verschillende BRPservices (zie 4.1, 5.2).
+2.1
+
+Verloop: Verwerken Hq01-bericht
+Bij het verwerken van zoekvragen wordt het meeste door de migratievoorziening uitgevoerd.
+Alleen het daadwerkelijke zoeken wordt door de BRP gedaan. In het onderstaande verloop wordt
+op hoofdlijnen beschreven wat de migratievoorziening wel en niet doet. Voor de details van de
+verschillende zoekvragen dient het [LO] geraadpleegd te worden.
+1. De migratievoorziening ontvangt een Hq01-bericht van een afnemer (AV: 2.2)
+2. De migratievoorziening stelt vast dat de afnemer geautoriseerd is voor het stellen van de
+zoekvraag (AS: 3.2)
+3. De migratievoorziening stelt vast dat de afnemer geautoriseerd is voor de gevraagde
+rubrieken (indien van toepassing) en de rubrieken van de zoekvraag (AS: 3.2)
+4. De migratievoorziening stelt vast dat alle rubrieken van de zoekvraag zijn toegestaan (AS:
+3.7)
+5. De migratievoorziening converteert de GBA-zoekvraag naar een BRP-zoekvraag (AS: 3.6)
+6. De migratievoorziening stelt de BRP-zoekvraag aan de BRP (AS: 4.1)
+7. De migratievoorziening ontvangt een antwoord op de zoekvraag van de BRP
+8. De migratievoorziening converteert de BRP-gegevens naar GBA-rubrieken (AS: 3.1)
+9. De migratievoorziening filtert de rubrieken die de afnemer niet heeft gevraagd uit de
+geconverteerde persoonslijst (indien van toepassing) (AS: 3.3)
+10. De migratievoorziening maakt een antwoordbericht met de gevraagde gegevens van de
+persoonslijst
+11. De migratievoorziening verstuurt het antwoordbericht
+12. De use case eindigt.
+
+2.2
+
+Alternatief verloop: Verwerken Xq01-bericht
+1. De migratievoorziening ontvangt een Xq01-bericht van een afnemer
+2. De migratievoorziening stelt vast dat de afnemer geautoriseerd is voor het stellen van de
+zoekvraag (AS: 3.2)
+3. De migratievoorziening stelt vast dat de afnemer geautoriseerd is voor de gevraagde
+rubrieken (indien van toepassing) en de rubrieken van de zoekvraag (AS: 3.2)
+4. De migratievoorziening stelt vast dat alle rubrieken van de zoekvraag zijn toegestaan (AS:
+3.7)
+5. De migratievoorziening converteert de GBA-zoekvraag naar een BRP-zoekvraag (AS: 3.6)
+6. De migratievoorziening stelt de BRP-zoekvraag aan de BRP-service (AS: 5, 5.2)
+7. De migratievoorziening ontvangt een antwoord op de zoekvraag van de BRP
+8. De migratievoorziening converteert per persoon de BRP-gegevens naar een GBA-rubrieken
+(AS: 3.1)
+9. De migratievoorziening filtert de rubrieken die de afnemer niet heeft gevraagd uit de
+geconverteerde persoonslijsten (indien van toepassing) (AS: 3.3)
+10. De migratievoorziening maakt een antwoordbericht met de gevraagde gegevens van de
+persoonslijsten
+11. De migratievoorziening verstuurt het antwoordbericht
+12. De use case eindigt.
+
+Operatie BRP
+
+Pagina 9 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+2.3
+
+Alternatief verloop: Verwerken webservice-vraag
+1. De migratievoorziening ontvangt een webservice-vraag van een afnemer
+2. De migratievoorziening stelt vast dat de afnemer geautoriseerd is voor het stellen van de
+zoekvraag (AS: 3.2)
+3. De migratievoorziening stelt vast dat de afnemer geautoriseerd is voor de gevraagde
+rubrieken (indien van toepassing) en de rubrieken van de zoekvraag (AS: 3.2)
+4. De migratievoorziening stelt vast dat alle rubrieken van de zoekvraag zijn toegestaan (AS:
+3.7)
+5. De migratievoorziening converteert de GBA-zoekvraag naar een BRP-zoekvraag (AS: 3.6)
+6. De migratievoorziening stelt de BRP-zoekvraag aan de BRP-service (AS: 6.1, 6.2)
+7. De migratievoorziening ontvangt een antwoord op de zoekvraag van de BRP
+8. De migratievoorziening converteert per persoon de BRP-gegevens naar een GBA-rubrieken
+(AS: 3.1)
+9. De migratievoorziening filtert de rubrieken die de afnemer niet heeft gevraagd uit de
+geconverteerde persoonslijsten (indien van toepassing) (AS: 3.3)
+10. De migratievoorziening maakt een antwoordbericht met de gevraagde gegevens van de
+persoonslijsten
+11. De migratievoorziening verstuurt het antwoordbericht
+12. De use case eindigt.
+
+2.4
+
+Alternatief verloop: Verwerken Opvragen PL-vraag
+1. De migratievoorziening
+2. De migratievoorziening
+zoekvraag (AS: 7.2)
+3. De migratievoorziening
+4. De migratievoorziening
+5. De migratievoorziening
+6. De migratievoorziening
+7. De migratievoorziening
+8. De migratievoorziening
+9. De migratievoorziening
+10. De use case eindigt.
+
+Operatie BRP
+
+ontvangt een Opvragen PL-vraag van een afnemer
+stelt vast dat de afnemer geautoriseerd is voor het stellen van de
+stelt vast dat de zoekvraag een BSN en/of a-nummer bevat (AS: 7.1)
+converteert de GBA-zoekvraag naar een BRP-zoekvraag (AS: 3.6)
+stelt de BRP-zoekvraag aan de BRP-service (AS: 7.1)
+ontvangt een antwoord op de zoekvraag van de BRP
+converteert de BRP-gegevens naar een GBA-rubrieken (AS: 3.1)
+maakt een antwoordbericht met de gevonden persoonslijst
+verstuurt het antwoordbericht
+
+Pagina 10 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+3
+
+Aanvullende specificaties: Algemeen
+
+In dit hoofdstuk worden de requirements beschreven die gelden voor alle zoekvragen die gesteld
+kunnen worden (Hq01, Xq01 en webservice).
+
+3.1
+
+Conversie persoonslijst
+Hoe een persoonslijst geconverteerd wordt is beschreven in [CONV].
+
+3.2
+
+Vaststellen of afnemer geautoriseerd is
+De migratievoorziening dient vast te stellen of de afnemer geautoriseerd is voor het gebruik van
+de dienst, de gevraagde rubrieken in de kop van het bericht en de rubrieken van de zoekvraag.
+Alle rubrieken dienen voor te komen in Dienstbundel \ LO3 Rubriek. Meer informatie over
+Leveringsautorisatie, Dienstbundels en Diensten is te vinden in [BMR] en [UC102].
+
+3.3
+
+Filteren rubrieken
+Alle rubrieken op de persoonslijst die niet voorkomen in de lijst van gevraagde rubrieken, dienen
+uit de persoonslijst gefilterd te worden. Let op: het a-nummer is een verplichte gevraagde
+rubriek.
+
+3.4
+
+Protocolleren antwoord
+Een burger heeft het recht om in te zien welke persoonsgegevens verstrekt zijn aan welke
+afnemers in een bepaalde periode. Daarom dient in de BRP elke verstrekking aan een afnemer
+vastgelegd te worden. Dit wordt protocolleren genoemd.
+Bij de meeste verstrekkingen aan een afnemer worden alle gegevens geleverd waarvoor de
+afnemer is geautoriseerd. Daardoor hoeft ten behoeve van protocolleren alleen vastgelegd te
+worden dat er verstrekt is aan een afnemer en in het kader van welke autorisatie dit is gebeurd.
+Er hoeft niet vastgelegd te worden welke gegevens geleverd zijn, dit kan op basis van de
+autorisatie afgeleid worden.
+In het Hq01-bericht wordt echter aangegeven welke gegevens geleverd dienen te worden in het
+Ha01-bericht en worden niet alle gegevens verstrekt waarvoor de afnemer is geautoriseerd. Het
+aangeven welke gegevens geleverd dienen te worden, wordt scoping genoemd.
+De BRP kent ook diensten waar scoping wordt toegepast. Ten behoeve protocollering wordt voor
+deze diensten, naast het feit dat er geleverd is en in het kader van welke autorisatie, de scope
+vastgelegd.
+Voor de Migratievoorziening geldt dat verstrekkingen waar scoping van toepassing is, de scope
+niet vastgelegd hoeft te worden in de BRP. Dat er verstrekt is en in het kader van welke
+autorisatie, is voldoende.
+Het vastleggen van de protocollering vindt plaats in de BRP.
+Meer informatie over protocollering is te vinden in [PROT].
+
+Operatie BRP
+
+Pagina 11 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+3.5
+
+Protocolfouten
+De migratievoorziening kan niet in alle situaties een geschikte foutcode retourneren. Dit komt
+bijvoorbeeld voor wanneer bijvoorbeeld de BRP-service meldt dat een zoekvraag te lang duurt,
+of dat de zoekvraag het systeem te zwaar belast.
+In die gevallen dient de fout (exceptie) gelogd te worden en dient een Pf03-bericht gestuurd te
+worden aan de afnemer. Dit dient ook gemeld te worden aan de beheerder. Er wordt dan een
+taak voor de beheerder gestart (zie ook [AS]).
+
+3.6
+
+Conversie zoekcriteria
+De LO3-rubrieken uit de zoekvraag dienen geconverteerd te worden naar BRP-attributen van de
+zoekvraag aan BRP. Voor de meeste rubrieken geldt dat deze eenvoudig (een op een) omgezet
+kunnen worden zoals dat in het conversiedocument [CONV] beschreven is. In sommige gevallen
+kan dit echter niet omdat LO3-rubrieken bijvoorbeeld naar meerdere BRP-attributen
+geconverteerd worden. Het is dan onduidelijk hoe de BRP-zoekvraag eruit moet zien. In de
+volgende paragrafen wordt beschreven hoe met deze gevallen om te gaan.
+De gevallen worden per categorie/groep/rubriek beschreven. De code achter de naam van de
+categorie/groep/rubriek verwijst naar een code van een conversieregel uit het
+conversiedocument [CONV].
+
+3.6.1
+
+Gebeurtenisplaats (CAP001)
+Indien alleen gezocht wordt op elementnummer 03.20 Plaats en niet 03.30 Land, dient naar
+objecttypen in de BRP gezocht te worden met de naam: Gemeente, Buitenlandse plaats en
+Locatieomschrijving. Hierbij dient minimaal een van de attributen overeen te komen.
+
+3.6.2
+
+Voornamen (CEL0210)
+Indien gezocht wordt op elementnummer 02.10 Voornamen zoek in de BRP dan altijd naar
+Voornamen uit de groep Samengestelde naam.
+
+3.6.3
+
+Geslachtsnaam (CEL0240)
+Indien gezocht wordt op elementnummer 02.40 Geslachtsnaam zoek in de BRP dan altijd naar
+Geslachtsnaamstam uit de groep Samengestelde naam.
+
+3.6.4
+
+Adellijke titel/predicaat (CEL0220)
+Indien gezocht wordt op elementnummer 02.20 Adellijke titel/predicaat zoek in de BRP dan altijd
+naar Adellijke titel of Predicaat in de groep Samengestelde naam.
+
+3.6.5
+
+Voorvoegsel CEL0230
+Indien gezocht wordt op elementnummer 02.30 Voorvoegsel geslachtsnaam zoek in de BRP dan
+altijd naar Voorvoegsel en Scheidingsteken in de groep Samengestelde naam.
+
+3.6.6
+
+Verblijfstitel CCA10
+Er kan niet gezocht worden op rubrieken uit de historische categorie 60 Verblijfstitel omdat deze
+niet geconverteerd wordt en niet in de BRP aanwezig is.
+
+Operatie BRP
+
+Pagina 12 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+Indien gezocht wordt op rubrieken uit de historische categorie 60 Verblijfstitel dient er een Hf01bericht als antwoord gestuurd te worden met foutreden ‘X’.
+
+3.6.7
+
+Verblijfplaats CCA08
+
+Indien alleen gezocht wordt op een punt (.) in rubriek 08.11.10 Straatnaam, eventueel in
+combinatie met rubriek 08.09.10 Gemeente van inschrijving, zoek in de BRP of er een lege
+Straatnaam (NULL) voorkomt in Persoon \ Adres.
+Indien gezocht wordt op een punt (.) in rubriek 08.11.10 Straatnaam, maar er zijn ook andere
+rubrieken dan 08.11.10 Straatnaam en 08.09.10 Gemeente van inschrijving uit categorie 08
+Verblijfplaats aanwezig, dient wel op een punt (.) gezocht te worden in Straatnaam van Persoon
+\ Adres.
+Indien gezocht wordt op rubriek 08.09.10 Gemeente van inschrijving zoek dan altijd op
+Bijhoudingspartij in de groep Bijhouding.
+
+3.7
+
+Zoekcriteria die niet zijn toegestaan
+Er zijn een aantal rubrieken die zich lastig laten converteren naar een BRP-gegeven. Uit analyse
+van productiedata van GBA-V is gebleken dat niet of nauwelijks op deze rubrieken gezocht
+wordt.
+Om deze reden is in de migratievoorziening gekozen om het niet toe te staan te zoeken op deze
+rubrieken.
+Uit analyse van productiedata van GBA-V is ook gebleken dat een groot aantal rubrieken nooit
+gebruikt wordt om te zoeken. Er is voor gekozen om het niet toe te staan om te zoeken op deze
+rubrieken.
+Indien een dergelijke rubriek in een zoekvraag voorkomt, wordt afhankelijk van de dienst, het
+volgende gestuurd aan de afnemer:
+• Hf01-bericht: code ‘X’ (bij Hq01)
+• Xf01-bericht: code ‘X’ (bij Xq01)
+• Webservice-antwoordbericht: letter ‘X’ en code ‘018’
+
+3.7.1
+
+Relaties
+Het is niet mogelijk om te zoeken op rubrieken uit categorieën van gerelateerden. Het betreft de
+volgende categorieën:
+•
+•
+•
+•
+•
+
+02
+03
+05
+09
+11
+
+Ouder1
+Ouder2
+Huwelijk
+Kind
+Gezagsverhouding
+
+Er geldt een uitzondering voor de volgende rubrieken waar wel op gezocht mag worden:
+• 05.02.40 Geslachtsnaam partner
+
+Operatie BRP
+
+Pagina 13 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+3.7.2
+
+Zoeken op historische categorie
+Het is (bij de netwerkvraag) niet mogelijk om te zoeken op rubrieken uit een historische
+categorie. Dat betekent dat alle rubrieken uit categorie 51 of hoger niet voor mogen komen in de
+zoekvraag.
+
+3.7.3
+
+Groepen die niet voor mogen komen
+De volgende groepen mogen niet in de zoekvraag voorkomen:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+3.7.4
+
+13
+14
+71
+80
+81
+82
+83
+84
+85
+86
+87
+88
+
+Adres buitenland
+Immigratie
+Verificatie
+Synchroniciteit
+Akte
+Document
+Procedure
+Onjuist
+Geldigheid
+Opneming
+PK-conversie
+RNI-deelnemer
+
+Rubrieken die niet voor mogen komen
+De volgende rubrieken mogen niet in de zoekvraag voorkomen:
+•
+•
+•
+•
+•
+
+3.8
+
+04/54.63.10 Reden verkrijging nationaliteit
+04/54.64.10 Reden verlies nationaliteit
+07.67.10 Datum opschorting bijhouding
+07.70.10 Indicatie geheim
+08.09.20 Datum inschrijving in de gemeente
+
+Gedrag diensten/services migratievoorziening
+Het uitgangspunt is dat de diensten/services van de migratievoorziening, voor zover dat mogelijk
+is, zich hetzelfde gedragen als de GBA-diensten/services. Dit is in sommige gevallen echter niet
+mogelijk omdat de BRP-services waarvan gebruik gemaakt wordt door de migratievoorziening:
+• meer bedrijfsregels kent. Dit is bijvoorbeeld het geval wanneer de BRP-services een zoekvraag
+onvoldoende snel kunnen evalueren. Deze bedrijfsregel kennen de GBA-netwerkvragen niet.
+• meerdere bedrijfsregels verzamelen onder een enkele melding. Dit is met name het geval bij
+bedrijfsregels die betrekking hebben op autorisatie. Hierdoor is niet precies vast te stellen
+welke autorisatiebedrijfsregels is geschonden.
+
+Operatie BRP
+
+Pagina 14 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+4
+
+Zoek persoon (netwerk)
+
+Voor de ad hoc vraag (Hq01) gebruikt de migratievoorziening de BRP-service Zoek persoon (zie
+[ZOEK1]).
+4.1
+
+BRP zoek persoon
+In de onderstaande tabel is te vinden welke BRP-regels als fout kunnen optreden in de service en
+op welke wijze deze door de migratievoorziening naar een GBA-foutreden vertaald dienen te
+worden. Sommige BRP-regels zouden nooit op mogen treden. Deze regels worden als exceptie
+gelogd. Deze exceptie hoeft niet expliciet gemeld te worden aan de beheerder en ook niet
+middels een protocolfout aan de afnemer. Andere BRP-regels kunnen wel optreden maar kunnen
+niet vertaald worden naar een GBA-foutreden. In deze situatie dient een protocolfout gemeld te
+worden aan de afnemer (zie ook par. 3.5).
+Regel Toelichting (komt ongeveer overeen met de melding)
+Gegevensvalidatieregels
+R2295 Peilmoment materieel mag niet in de toekomst liggen
+Controleregels
+R2265 Attribuut van zoekcriterium dient een element van de soort attribuut te
+zijn
+R2281 Bij een zoekcriterium dient de opgegeven optie toegestaan te zijn bij
+het betreffende element
+R2284 Een zoekvraag dient voldoende snel te evalueren te zijn
+R2285 Een zoekvraag mag niet te veel tussenresultaten opleveren
+R2288 Een zoekvraag voor 'Zoek persoon' dient tenminste één zoekcriterium
+te bevatten dat geen adresgegeven is
+R2289 Een zoekvraag mag niet te veel resultaten opleveren
+R2290 Er dient autorisatie te bestaan voor de gebruikte zoekcriteria
+R2297 Bij historisch zoeken dient er historie-autorisatie te zijn voor de
+opgegeven criteria
+R2308 Bij een zoekcriterium dient de opgegeven waarde niet strijdig te zijn
+met het datatype van het element
+R2311 Bij een alfanumeriek zoekcriterium dient de opgegeven waarde niet
+langer te zijn dan de maximale lengte van het opgegeven element
+R2340 Het zoekproces mag niet te zwaar belast zijn
+R2343 Algemene foutmelding bij schending autorisatieregels levering
+R2389 Zoeken op onderzoek en verantwoording is niet toegestaan
+R2541 Attribuut van zoekcriterium dient een geldig stamgegeven te zijn in de
+stamtabel Element
+R2542 Attribuut van zoekcriterium dient een opvraagbaar element te zijn
+R2610 Zoeken op datum aanvang geldigheid (DAG) is niet toegestaan
+Invoervalidatieregels
+R2266 Zoekcriterium Waarde dient leeg te zijn bij Zoekoptie "Leeg"
+R2267 Zoekcriterium Waarde mag niet leeg zijn als Zoekoptie ongelijk is aan
+"Leeg"
+
+Foutreden
+<Exception>
+<Exception>
+<Exception>
+Pf03
+Pf03
+U
+U
+X
+<Exception>
+<Exception>
+<Exception>
+Pf03
+X
+<Exception>
+<Exception>
+<Exception>
+<Exception>
+<Exception>
+<Exception>
+
+Als het resultaatbericht van de BRP geen meldingen bevat en geen personen, dient foutreden ‘G’
+gemeld te worden aan de afnemer.
+Het is voor de migratievoorziening niet mogelijk om foutreden ‘H’ of ‘R’ te melden omdat de BRPservice hier geen onderscheid in maakt. Het resultaatbericht van de BRP-service zal in beide
+gevallen geen meldingen bevatten en geen personen.
+
+Operatie BRP
+
+Pagina 15 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+5
+
+Zoek persoon op adres (netwerk)
+
+5.1
+
+Zoek persoon op adres met persoonsidentificatie
+In de ad hoc adresvraag (Xq01) kan een persoonsidentificatie of een adresidentificatie gebruikt
+worden om personen op een adres te vinden.
+Om de ad hoc adresvraag met persoonsidentificatie te beantwoorden gebruikt de
+migratievoorziening twee services van de BRP: Zoek persoon (zie [ZOEK1]) en Zoek persoon op
+adresgegevens (zie [ZOEK2]). Met Zoek persoon wordt eerst de persoon gezocht. Daarna wordt
+Persoon \ Adres.Identificatiecode nummeraanduiding van de gevonden persoon gebruikt om met
+de service Zoek persoon op adresgegevens andere personen op het adres te vinden
+
+5.1.1
+
+BRP zoek persoon service
+Om te zoeken op adres met persoonsidentificatie dient eerst gezocht te worden met de Zoek
+persoon service.
+Indien de gevonden persoon geen Persoon \ Adres.Identificatiecode nummeraanduiding bevat
+dient foutcode ‘G’ gemeld te worden aan de afnemer.
+De overige mogelijke foutcodes zijn hetzelfde als die bij de Zoek persoon service (zie par. 4.1).
+
+5.1.2
+
+BRP zoek persoon op adresgegevens service
+Nadat een persoon gevonden is met de Zoek persoon service dient met Persoon \
+Adres.Identificatiecode nummeraanduiding gezocht te worden met de Zoek persoon op
+adresgegevens service.
+De mogelijke foutcodes zijn hetzelfde als die bij de Zoek persoon op adresgegevens service (zie
+par. 5.2.1).
+
+5.2
+
+Zoek persoon op adres met adresidentificatie (Xq01)
+
+In de ad hoc adresvraag (Xq01) kan een persoonsidentificatie of een adresidentificatie gebruikt
+worden om personen op een adres te vinden.
+Om de ad hoc adresvraag met adresidentificatie te beantwoorden gebruikt de
+migratievoorziening de BRP-service Zoek persoon op adresgegevens (zie [ZOEK2]).
+
+Operatie BRP
+
+Pagina 16 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+5.2.1
+
+BRP Zoek persoon op adresgegevens
+In de onderstaande tabel is te vinden welke BRP-regels als fout kunnen optreden in de service en
+op welke wijze deze door de migratievoorziening naar een GBA-foutreden vertaald dienen te
+worden. Sommige BRP-regels zouden nooit op mogen treden. Deze regels worden als exceptie
+gelogd. Deze exceptie hoeft niet expliciet gemeld te worden aan de beheerder en ook niet
+middels een protocolfout aan de afnemer. Andere BRP-regels kunnen wel optreden maar kunnen
+niet vertaald worden naar een GBA-foutreden. In deze situatie dient een protocolfout gemeld te
+worden aan de afnemer (zie ook par. 3.5).
+Regel
+Toelichting (komt ongeveer overeen met de melding)
+Gegevensvalidatieregels
+R2295
+Peilmoment materieel mag niet in de toekomst liggen
+Controleregels
+
+R2265
+R2281
+R2284
+R2285
+R2288
+R2289
+R2290
+R2297
+R2308
+R2311
+R2340
+R2343
+R2373
+R2374
+
+R2375
+R2389
+
+Attribuut van zoekcriterium dient een element van de soort attribuut
+te zijn
+Bij een zoekcriterium dient de opgegeven optie toegestaan te zijn bij
+het betreffende element
+Een zoekvraag dient voldoende snel te evalueren te zijn
+Een zoekvraag mag niet te veel tussenresultaten opleveren
+Een zoekvraag voor 'Zoek persoon' dient tenminste één
+zoekcriterium te bevatten dat geen adresgegeven is
+Een zoekvraag mag niet te veel resultaten opleveren
+Er dient autorisatie te bestaan voor de gebruikte zoekcriteria
+Bij historisch zoeken dient er historie-autorisatie te zijn voor de
+opgegeven criteria
+Bij een zoekcriterium dient de opgegeven waarde niet strijdig te zijn
+met het datatype van het element
+Bij een alfanumeriek zoekcriterium dient de opgegeven waarde niet
+langer te zijn dan de maximale lengte van het opgegeven element
+Het zoekproces mag niet te zwaar belast zijn
+Algemene foutmelding bij schending autorisatieregels levering
+Een zoekvraag dient tenminste één zoekcriterium te bevatten met
+een adresgegeven dat geografisch beperkend is.
+Bij de zoekcriteria huisnummer, huisletter en/of
+huisnummertoevoeging moet verplicht ook een postcode of
+straatnaam opgegeven worden.
+Bij het zoekcriterium straatnaam moet verplicht ook een gemeente
+of woonplaats opgegeven worden.
+Zoeken op onderzoek en verantwoording is niet toegestaan
+
+Foutreden
+<Exception>
+<Exception>
+<Exception>
+Pf03
+Pf03
+U
+P
+X
+<Exception>
+<Exception>
+<Exception>
+Pf03
+X
+P
+P
+
+P
+<Exception>
+
+R2610
+Zoeken op datum aanvang geldigheid (DAG) is niet toegestaan
+Invoervalidatieregels
+
+<Exception>
+
+R2266
+R2267
+
+<Exception>
+
+Zoekcriterium Waarde dient leeg te zijn bij Zoekoptie "Leeg"
+Zoekcriterium Waarde mag niet leeg zijn als Zoekoptie ongelijk is aan
+"Leeg"
+
+<Exception>
+
+Als het resultaatbericht van de BRP geen meldingen bevat en geen personen, dient foutreden ‘G’
+gemeld te worden aan de afnemer.
+Indien de gevonden personen allemaal geen Persoon \ Adres.Identificatiecode
+nummeraanduiding object bevatten, of als twee of meer Persoon \ Adres.Identificatiecode
+nummeraanduiding object van elkaar verschillen, dient de foutcode ‘U’ gemeld te worden aan de
+afnemer.
+
+Operatie BRP
+
+Pagina 17 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+Regel R2289 dient voor de migratievoorziening aangepast te worden zodat deze alleen
+teruggegeven wordt als het aantal personen niet in een Xa01-bericht past. Dit wijkt af van het
+standaard gedrag van de BRP-service dat deze code teruggeeft als het aantal personen meer is
+dan een geconfigureerd aantal.
+
+Operatie BRP
+
+Pagina 18 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+6
+
+Zoeken persoon (webservice)
+
+In GBAV is het mogelijk om te zoeken op personen middels de LO3 Adhoc (web)service (zie par.
+C.7.3 [LO]).
+6.1
+
+Zoeken persoon
+Wanneer gezocht wordt naar personen is het element IndicatieAdresVraag gevuld met de waarde
+‘0’. De belangrijkste verschillen met de netwerkvariant zijn:
+• Slim zoeken (zie ook par. 6.4)
+• Meerdere zoekresultaten
+• Zoeken op historie (zie ook par. 6.5)
+Er dient op dezelfde wijze van de BRP-service gebruik gemaakt te worden zoals beschreven in
+par. 4.1.
+
+6.2
+
+Zoeken persoon op adres
+Wanneer gezocht wordt naar personen op een adres is het element IndicatieAdresVraag gevuld
+met de waarde ‘1’. De belangrijkste verschillen met de netwerkvariant zijn:
+• Slim zoeken (zie ook hst. 6.4)
+• Zoeken op historie (zie ook hst. 6.5)
+
+6.2.1
+
+Zoeken persoon op persoonsidentificatie
+
+Er dient op dezelfde wijze van de BRP-services gebruik gemaakt te worden zoals beschreven in
+par. 5.1.
+
+6.2.2
+
+Zoeken persoon op adresidentificatie
+Er dient op dezelfde wijze van de BRP-services gebruik gemaakt te worden zoals beschreven in
+par. 5.2.
+
+6.3
+
+Foutredenen
+In de onderstaande tabel is te vinden hoe de regels van de BRP-services naar foutletter en
+foutcode vertaald dienen te worden.
+Regel
+R2284
+R2285
+R2288
+
+Toelichting
+Een zoekvraag dient voldoende snel te evalueren te zijn
+Een zoekvraag mag niet teveel tussenresultaten opleveren
+
+R2289
+R2290
+R2340
+R2373
+
+Een zoekvraag mag niet teveel resultaten opleveren
+Er dient autorisatie te bestaan voor de gebruikte zoekcriteria
+Het zoekproces mag niet te zwaar belast zijn
+
+Een zoekvraag voor 'Zoek persoon' dient tenminste één
+zoekcriterium te bevatten dat geen adresgegeven is
+
+Een zoekvraag dient tenminste één zoekcriterium te bevatten
+met een adresgegeven dat geografisch beperkend is.
+
+Operatie BRP
+
+Code
+031
+031
+019
+
+Letter
+T
+T
+X
+
+032
+013
+031
+020
+
+P
+X
+T
+X
+
+Pagina 19 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+R2374
+
+Bij de zoekcriteria huisnummer, huisletter en/of
+huisnummertoevoeging moet verplicht ook een postcode of
+straatnaam opgegeven worden.
+R2375 Bij het zoekcriterium straatnaam moet verplicht ook een
+gemeente of woonplaats opgegeven worden.
+R2343 Algemene foutmelding bij schending autorisatieregels
+
+020
+
+X
+
+020
+
+X
+
+013
+
+X
+
+R2308
+
+Bij een zoekcriterium dient de opgegeven waarde niet strijdig
+te zijn met het datatype van het element
+R2311 Bij een alfanumeriek zoekcriterium dient de opgegeven
+waarde niet langer te zijn dan de maximale lengte van het
+opgegeven element
+
+022
+
+X
+
+026
+
+X
+
+-
+
+033
+
+G
+
+001
+018
+
+X
+X
+
+levering
+
+-
+
+Als het resultaat van de BRP geen meldingen bevat en geen
+personen
+Alle regels die foutreden <Exception> op kunnen leveren
+Als volgens het [LO] niet is toegestaan om op een rubriek te
+zoeken
+
+De GBAV-webservice kent diverse andere foutletters en foutcodes van bedrijfsregels die niet
+door de BRP-services gecontroleerd worden. De migratievoorziening dient deze zelf te
+controleren. In de onderstaande tabel is beschreven welke foutletters en foutcodes dit zijn.
+
+Letter
+X
+X
+
+Code Omschrijving
+024 Dubbel rubrieknummer in zoekcriteria niet toegestaan: <rubrieknummer>
+025 Dubbel rubrieknummer in masker niet toegestaan: <rubrieknummer>
+
+Overige foutletters en foutcodes van de GBAV-webservice zullen nooit door de
+migratievoorziening gemeld worden (zie par. 3.8).
+
+6.4
+
+Slim zoeken
+Voor de webservice-varianten van de zoekvragen in de GBA, is het ook mogelijk om slim te
+zoeken (zie [LO] C.7.3.2 Slim zoeken). Slim zoeken wordt ook door de BRP ondersteund (zie
+[ZOEK1]). Standaard wordt er slim gezocht in de GBA.
+In de volgende paragrafen wordt beschreven hoe in het BRP-bericht omgegaan dient te worden
+met een aantal functies van het slim zoeken in de GBA.
+
+6.4.1
+
+Niet slim zoeken
+In de GBA kunnen rubrieken niet slim gezocht worden door de rubriek vooraf te laten gaan van
+een ‘\’. Wanneer dit voorkomt dient in het BRP-bericht de parameter Optie van het betreffende
+element, de waarde ‘Exact’ te bevatten.
+
+6.4.2
+
+Wildcards
+In de GBA is het mogelijk om te zoeken op wildcards. Er wordt dan een ‘*’ opgenomen aan het
+eind van de waarde waarop gezocht wordt. Wanneer dit voorkomt dient in het BRP-bericht de
+parameter Optie van het betreffende element, de waarde ‘Vanaf klein’ te bevatten. Bij het
+overnemen van de GBA-zoekwaarde in de BRP-zoekwaarde, dient de ‘*’ uit de GBA-zoekwaarde
+verwijderd te worden.
+
+Operatie BRP
+
+Pagina 20 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+Zoeken met een wildcard kan ook voorkomen in combinatie met hoofdletters en diakritische
+tekens. Indien dat het geval is dient in het BRP-bericht de parameter Optie van het betreffende
+element, de waarde ‘Vanaf exact’ te bevatten.
+Let op: er wordt in de BRP geen onderscheid tussen diakritische tekens en hoofdletters. Dit wijkt
+af het [LO].
+Wanneer de zoekwaarde begint met een ‘\’, dient deze paragraaf genegeerd te worden.
+
+6.4.3
+
+Hoofdlettergevoelig en geen diakritische tekens
+Indien er geen diakritische tekens en geen hoofdletters voorkomen in een zoekwaarde, dienen in
+de GBA diakritische tekens en hoofdletters genegeerd te worden bij het zoeken. Wanneer dit
+voorkomt dient in het BRP-bericht de parameter Optie van het betreffende element, de waarde
+‘Klein’ te bevatten.
+Wanneer er geen hoofdletter of diakritisch teken voorkomt in de zoekwaarde, maar eindigt de
+zoekwaarde met een wildcard (*), dient in het BRP-bericht de parameter Optie van het
+betreffende element, de waarde ‘Vanaf klein’ te bevatten.
+Let op: er wordt in de BRP geen onderscheid tussen diakritische tekens en hoofdletters. Dit wijkt
+af het [LO].
+Wanneer de zoekwaarde begint met een ‘\’, dient deze paragraaf genegeerd te worden.
+
+6.4.4
+
+Voorbeelden
+In de onderstaande tabel zijn een aantal voorbeelden te vinden hoe de zoekargumenten van de
+GBA vertaald dienen te worden naar zoekargumenten in de BRP.
+Zoekargument
+Björn
+björn
+bjorn
+\bjorn
+bjorn*
+björn*
+Bj*rn
+bj*rn
+2017
+2017*
+\2017*
+
+Operatie BRP
+
+Optie BRP
+Exact
+Exact
+Klein
+Exact
+Vanaf klein
+Vanaf exact
+Exact
+Klein
+Klein
+Vanaf klein
+Exact
+
+Zoekwaarde BRP
+Björn
+björn
+bjorn
+bjorn
+bjorn
+björn
+Bj*rn
+bj*rn
+2017
+2017
+2017*
+
+Pagina 21 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+6.5
+
+Zoeken op historie
+In de GBA kan op historie gezocht worden. Element IndicatieZoekenInHistorie is dan gevuld met
+de waarde ‘1’ (zie ook paragraaf C.7.3.4 in [LO]). Indien dit voorkomt dient de parameter
+Zoekbereik in het BRP-bericht gevuld te worden met de waarde ‘Materiele periode’.
+Dit geldt overigens niet voor de adresidentificatie van de AdHocAdresVraag: alleen personen die
+actueel op het adres zijn ingeschreven worden geselecteerd (zie ook paragraaf C.7.3.4 in [LO]).
+Het zoeken op het niet aanwezig zijn van historische rubrieken is niet goed mogelijk in de BRP.
+Wanneer een categorie eerder is ontstaan dan een groep in die categorie, kan de BRP de periode
+van voor het ontstaan van de groep niet gebruiken bij het bepalen of een groep ooit leeg was.
+Wanneer IndicatieZoekenInHistorie gevuld is met waarde ‘1’ en er zijn een of meer rubrieken
+leeg, wordt er niet gezocht en dient code ‘018’ met de letter ‘X’ in het resultaat gemeld te
+worden.
+Let op: In de BRP wijkt het zoeken op historie af van de GBA. In de BRP dienen zoekcriteria uit
+dezelfde BRP-groep op hetzelfde moment in de tijd waar te zijn. Voor zoekcriteria uit
+verschillende BRP-groepen is dit niet het geval. De GBA kent deze extra voorwaarde niet
+waardoor geen enkel zoekcriterium op hetzelfde tijdstip waar hoeft te zijn. Ze hoeven elk
+afzonderlijke slechts op enig moment in de tijd waar te zijn.
+
+Operatie BRP
+
+Pagina 22 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+7
+
+Opvragen PL-service
+
+In GBA-V is het voor bijhouders (ook RNI) mogelijk om een hele persoonslijst op te vragen
+middels de service Opvragen PL (zie par. C.7.4 [LO]).
+
+7.1
+
+Opvragen PL
+Er dient op dezelfde wijze van de BRP-services gebruik gemaakt te worden zoals beschreven in
+par. 4.1.
+Let op: er mag alleen gezocht worden op BSN en/of a-nummer.
+
+7.2
+
+Autorisatie van de partij
+In tegenstelling tot de andere zoekvragen dient de migratievoorziening zorg te dragen voor de
+autorisatie van de partij. Dat komt omdat de wijze waarop bijhouders geautoriseerd worden voor
+de service Opvragen PL afwijkt van de overige diensten (AdHoc, Spontaan et cetera).
+Een geautoriseerde partij dient aan de volgende voorwaarden te voldoen:
+• De Partij is geldig.
+• De partij heeft geen gevulde Partij.Datum overgang naar BRP, of Partij.Datum overgang naar
+BRP ligt na de huidige datum.
+• De partij heeft een geldige Partij rol.Rol met de waarde ‘Bijhoudingsorgaan College’ of
+‘Bijhoudingsorgaan Minister’.
+• De partij heeft voor de hiervoor genoemde Partij rol.Rol een geldige Toegang
+leveringsautorisatie.
+• De partij heeft een geldige Leveringsautorisatie met een geldige Dienstbundel en Dienst met
+een Dienst.Soort die gelijk is aan ‘Zoek persoon’.
+Een Partij, Partij rol, Toegang leveringsautorisatie, Dienstbundel en Dienst is geldig als:
+• de huidige datum op of na Datum ingang ligt en voor Datum einde indien aanwezig, en
+• Geblokkeerd? niet gevuld is als dit als attribuut aanwezig is
+Een partij met de juiste Partij / Rol is geautoriseerd voor alle gegevens van de persoonslijst
+(inclusief onjuiste categorieën). Dat betekent dat niet gecontroleerd hoeft te worden of de partij
+op de gebruikte (identificerende) gegevens mag zoeken en of de partij de gegevens van de
+persoonslijst mag ontvangen.
+
+7.3
+
+Foutredenen
+Voor de Opvragen PL-service gelden dezelfde foutredenen zoals beschreven in par. 6.3.
+
+Operatie BRP
+
+Pagina 23 van 24
+
+Definitief | 1.4| UC1004 Verwerken zoekvragen | 06-06-2017
+
+8
+
+Opmerkingen
+
+8.1
+
+Verschillen
+De BRP verschilt met zoeken op een aantal punten met de GBA:
+• In de GBA wordt onderscheid gemaakt tussen zoeken op diakritische tekens en zoeken op
+hoofdletters. In de BRP wordt dit onderscheid niet gemaakt. Als een diakritische teken
+voorkomt of een hoofdletter, zal dit altijd leiden tot Exact zoeken in de BRP.
+• Bij zoeken op historie in de GBA zal voor ieder zoekcriterium de gehele historie in ogenschouw
+genomen worden. Hierbij hoeven de zoekcriteria niet op de hetzelfde moment in de tijd waar
+te zijn. In de BRP is dit alleen het geval als de zoekcriteria tot verschillende BRP-groepen
+behoren. Wanneer het zoekcriteria uit dezelfde groep betreft dienen deze zoekcriteria op
+hetzelfde moment in de tijd waar te zijn.
+Het zoeken op het niet aanwezig zijn van historische rubrieken is niet goed mogelijk in
+de BRP. Wanneer een categorie eerder is ontstaan dan een groep in die categorie, kan
+de BRP de periode van voor het ontstaan van de groep niet gebruiken bij het bepalen
+of een groep ooit leeg was.
+
+Operatie BRP
+
+Pagina 24 van 24
+
+

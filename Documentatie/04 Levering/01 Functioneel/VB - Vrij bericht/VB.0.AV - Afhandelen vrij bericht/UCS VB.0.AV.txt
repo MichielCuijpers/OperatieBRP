@@ -1,0 +1,587 @@
+UCS VB.0.AV - Afhandelen vrij bericht
+Versie
+
+1.0
+
+Datum
+
+11 juli 2017
+
+Status
+
+Definitief
+
+Locatie
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+16-12-2016
+
+0.1
+
+Initiële versie
+
+oBRP
+
+03-01-2017
+
+0.2
+
+Versie (ter review) met uitgewerkte BRM regels
+
+oBRP
+
+06-01-2017
+
+0.3
+
+Eerste versie
+
+oBRP
+
+16-01-2017
+
+0.4
+
+Archivering voor vrij bericht specifiek gemaakt
+
+oBRP
+
+23-01-2017
+
+0.5
+
+R2498 is autorisatiecontrole geworden
+
+oBRP
+
+27-01-2017
+
+0.6
+
+Gewijzigde autorisatie controle op ontvanger tgv ‘Datum
+overgang naar BRP'
+
+oBRP
+
+30-05-2017
+
+0.7
+
+Ontvangend systeem verwijderd uit bericht
+
+oBRP
+
+11-07-2017
+
+1.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.2
+
+Interne review
+
+0.3
+
+Grooming sessie Team Rood
+
+UCS VB.0.AV - Afhandelen vrij bericht
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Invoer ....................................................................................................................... 5
+2.1
+2.2
+2.3
+2.4
+
+3
+
+Beschrijving .........................................................................................................................5
+Verzoekbericht .....................................................................................................................5
+Specifieke toelichting op het verzoekbericht .............................................................................5
+Bijzonderheden.....................................................................................................................5
+
+Verwerking ............................................................................................................... 6
+3.1
+3.2
+3.3
+3.4
+
+4
+
+Doel ....................................................................................................................................3
+Functionele context ...............................................................................................................3
+Referenties ..........................................................................................................................3
+
+Beschrijving .........................................................................................................................6
+Schematische weergave.........................................................................................................6
+Beschrijving activiteitendiagram .............................................................................................8
+Bedrijfsregels .......................................................................................................................9
+
+Uitvoer .................................................................................................................... 10
+4.1
+Beschrijving ....................................................................................................................... 10
+4.2
+Resultaatbericht.................................................................................................................. 10
+4.2.1
+Toelichting op het resultaatbericht .................................................................................... 10
+4.3
+Notificeer vrij bericht ........................................................................................................... 10
+
+5
+
+Ontwerpbeslissingen .............................................................................................. 11
+
+Status: Definitief, versie: 1.0
+
+Pagina 2 van 11
+
+UCS VB.0.AV - Afhandelen vrij bericht
+
+1 Inleiding
+1.1
+
+Doel
+
+Het vrije bericht biedt een mogelijkheid van onderlinge digitale communicatie tussen de partijen
+die op het BRP- of GBA-stelsel zijn aangesloten. Dit zijn de BRP afnemers, BRP bijhouders, de BRP
+beheerder en BRP afnemers/bijhouders die (nog) op het GBA-stelsel zijn aangesloten. Ook partijen
+in het BRP-stelsel die zelf geen leveringsautorisatie hebben, zoals bewerkers, kunnen op het vrije
+bericht aansluiten.
+Tijdens de duale periode vindt er communicatie plaats tussen partijen die werken in het GBAstelsel en partijen die werken in het BRP-stelsel. Berichten, zoals het vrije bericht, die worden
+verstuurd door een partij in het GBA-stelsel naar een partij in het BRP-stelsel worden onderschept
+en omgezet van het GBA formaat naar het BRP formaat. Het onderscheppen en omzetten van de
+berichten, alsmede het verzenden van omgezette berichten en het ontvangen van berichten wordt
+uitgevoerd door de zogenaamde migratievoorziening.
+Het vrije bericht kan voor uiteenlopende doeleinden gebruikt worden. Zo kunnen tekstuele
+berichten als een mededeling of notificatie verstuurd worden. Maar het vrije bericht kan ook
+gebruikt worden om bijvoorbeeld gepland onderhoud aan te kondigen.
+De bericht inhoud van het vrije bericht bestaat uit een veld voor vrije tekst en een aanduiding voor
+het soort vrije bericht. De vrije tekst is ongestructureerd, dat wil zeggen dat het niet door het
+systeem geïnterpreteerd kan worden. Er zijn geen beperkingen of voorwaarden gesteld aan de
+vulling van dit veld. Het soort vrije bericht kan gebruikt worden om het onderwerp aan te duiden
+wat de ontvangende partij de mogelijkheid biedt het bericht intern te routeren.
+
+1.2
+
+Functionele context
+
+Voor een toelichting op de symbolen en de kleurstelling die gebruikt zijn de in de Use Case
+modellen en activiteitendiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 1.0
+
+Pagina 3 van 11
+
+UCS VB.0.AV - Afhandelen vrij bericht
+
+2
+
+Aspectbeschrijving Generieke Berichtstructuur
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 1.0
+
+Pagina 4 van 11
+
+UCS VB.0.AV - Afhandelen vrij bericht
+
+2 Invoer
+2.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft het verzoekbericht dat de verzendende partij stuurt als het vrije bericht.
+
+2.2
+
+Verzoekbericht
+
+De structuur van het verzoekbericht staat beschreven in Aspectbeschrijving Generieke
+Berichtstructuur [2].
+
+2.3
+
+Specifieke toelichting op het verzoekbericht
+
+Toelichting op het verzoekbericht van het vrije bericht.
+Stuurgegevens
+Van een verzoek worden stuurgegevens Zendende partij, het Zendende systeem, een
+Referentienummer en het Tijdstip vastgelegd en meegeleverd als onderdeel van het
+verzoekbericht.
+De vulling van de berichtelementen Zendende partij en Zendende systeem in de stuurgegevens is
+specifiek en afhankelijk van het stelsel waar de verzendende partij bij aangesloten is. Is de
+zendende partij op het GBA-stelsel aangesloten, dan heeft de centrale voorzieningen het bericht
+ontvangen van de migratievoorziening.
+GBA-stelsel
+
+BRP-stelsel
+
+Zendende partij
+
+De partijcode van de geautoriseerde partij zoals bekend bij de
+centrale voorzieningen namens wie het bericht wordt
+verzonden.
+
+Zendende systeem
+
+Vaste waarde: ‘ISC’
+(synoniem voor
+migratievoorziening).
+
+De naam van het systeem
+waarmee de zendende partij
+het bericht verstuurt.
+
+Parameters
+De parameters voor het vrije bericht zijn:
+GBA-stelsel
+
+BRP-stelsel
+
+Zender vrij bericht
+
+Vulling conform Zendende partij uit stuurgegevens.
+
+Ontvanger vrij bericht
+
+De partijcode van de geautoriseerde partij zoals bekend bij de
+centrale voorzieningen die het bericht moet ontvangen.
+
+2.4
+
+Bijzonderheden
+
+Geen.
+
+Status: Definitief, versie: 1.0
+
+Pagina 5 van 11
+
+UCS VB.0.AV - Afhandelen vrij bericht
+
+3 Verwerking
+3.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft de verwerking van het vrije bericht.
+De BRP controleert de integriteit van het verzoekbericht en gaat de authenticatie en autorisatie van
+de zendende en ontvangende partij na.
+De verzendende partij ontvangt direct (synchroon) een resultaatbericht met melding over de
+verwerking van het verstuurde vrije bericht.
+Is de verwerking succesvol dan zal voor de ontvangende partij het notificatie vrij bericht
+(asynchroon) door de centrale voorzieningen worden aangemaakt en verzonden. Het notificatie vrij
+bericht heeft dezelfde inhoud als het verzoekbericht.
+
+3.2
+
+Schematische weergave
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitendiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+In het diagram is de happy flow weergegeven met foutafhandeling op de XSD-validatie en de
+invoercontrole’s. De uitwerking van het diagram staat beschreven in de begeleidende tekst in de
+volgende paragraaf en in de aangeroepen Use Cases.
+
+Status: Definitief, versie: 1.0
+
+Pagina 6 van 11
+
+UCS VB.0.AV - Afhandelen vrij bericht
+
+Status: Definitief, versie: 1.0
+
+Pagina 7 van 11
+
+UCS VB.0.AV - Afhandelen vrij bericht
+
+3.3
+
+Beschrijving activiteitendiagram
+
+De verwerking van het ontvangen verzoekbericht bestaat uit een aantal volgordelijke stappen die
+uitgevoerd worden. In de onderstaande toelichtende tekst zijn de stappen onderverdeeld in ‘XSD
+controle’, ‘Controle invoer’, ‘Verwerking’ en ‘Uitvoer’. Elke toegelichte stap is terug te vinden in het
+activiteitendiagram uit de vorige paragraaf.
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de aan de Use Cases gekoppelde regels in BMR.
+
+XSD controle
+•
+
+LV.1.XV – XSD validatie
+Het inkomende verzoek wordt gevalideerd door deze te controleren tegen het bij het
+verzoek behorende XSD-schema (XML Schema Definition). Als er een XSD fout wordt
+geconstateerd, dan wordt er direct een technische foutmelding teruggegeven aan de
+zendende applicatie.
+
+Controle invoer
+•
+
+VB.1.AV.AB – Archiveer bericht
+Deze stap zorgt voor de archivering van het technisch verwerkbare inkomende
+verzoekbericht.
+
+•
+
+VB.1.AV.CA – Controleer autorisatie
+Het verzoekbericht wordt gecontroleerd op geldigheid van autorisatie. Zowel de Zendende
+partij als de Ontvanger vrij bericht moeten aan alle genoemde autorisatieregels voldoen.
+Een zendende of ontvangende partij die aangesloten is op het BRP-stelsel heeft autorisatie
+voor het vrije bericht als de groep vrij bericht bij de partij aanwezig is met een afleverpunt.
+De groep vrij bericht mag niet geblokkeerd zijn en moet geldig zijn op de huidige datum.
+Voor de zendende partij geldt bovendien dat eventueel toegepaste bewerkerconstructie
+(combinatie van geautoriseerde partij, ondertekenaar en transporteur) ook geldig dienen te
+zijn voor de betreffende autorisatie voor het vrije bericht.
+Deze controles zijn niet van toepassing indien de partij (nog) op het GBA-stelsel
+aangesloten is. De controle of de zendende of ontvangende partij geldig is, moet
+daarentegen altijd uitgevoerd worden.
+Als onderdeel van deze stap is ook de invoervalidatieregel opgenomen voor het vaststellen
+of het stuurgegeven zendende partij gelijk is aan de parameter zender vrij bericht. Deze
+controle is niet afhankelijk van het stelsel waarbij de partij is aangesloten.
+
+•
+
+VB.1.AV.CI – Controleer inhoud
+Vervolgens wordt gecontroleerd op bericht specifieke gegevens.
+Voor het vrije bericht is dit beperkt tot de soort vrij bericht die moet bestaan en geldig
+moet zijn. Komt het bericht van de migratievoorziening, dan is de soort vrij bericht met een
+vaste waarde gevuld.
+
+Verwerking
+
+Status: Definitief, versie: 1.0
+
+Pagina 8 van 11
+
+UCS VB.0.AV - Afhandelen vrij bericht
+
+nvt.
+
+Uitvoer
+Stappen voor het resultaatbericht:
+•
+
+LV.1.MR – Maak resultaatbericht
+De “geslaagd” melding of de eventuele foutmelding(en) worden in een (synchroon)
+resultaatbericht opgenomen. Er wordt dus altijd als het bericht aan de XSD-validatie
+voldoet een resultaatbericht vervaardigd.
+
+•
+
+LV.1.VR – Verzend resultaatbericht
+Vervolgens wordt het resultaatbericht afgeleverd aan de Zendende partij van het
+Verzoekbericht.
+
+•
+
+VB.1.AV.AB – Archiveer bericht
+Het resultaatbericht wordt in deze stap gearchiveerd.
+
+Stappen voor het notificatie vrij bericht:
+•
+
+VB.1.AV.NB – Maak notificatiebericht
+In deze stap wordt het te versturen vrije bericht samengesteld. De ontvangende partij is
+afkomstig uit het verzoekbericht met de parameter Ontvanger vrij bericht.
+
+•
+
+VB.1.AV.VV – Verzend vrij bericht
+Het asynchrone notificatie Vrij bericht wordt met deze stap verzonden.
+Is de ontvangende partij niet aangesloten op het BRP-stelsel, dan is het afleverpunt het
+koppelvlak van de Migratievoorziening. Anders wordt het bericht via het BRP koppelvlak
+Levering naar het afleverpunt van de ontvangende partij verstuurd.
+
+•
+
+VB.1.AV.AB – Archiveer bericht
+Het notificatie vrij bericht wordt in deze stap gearchiveerd.
+
+3.4
+
+Bedrijfsregels
+
+Voor een toelichting op de verschillende soorten bedrijfsregels, de meldingsniveaus, de toepassing
+en werking ervan in het leveringssproces, wordt verwezen naar de daartoe opgestelde
+Aspectbeschrijving Controles [3].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels en definitieregels zijn opgenomen de bijlage: VB.0.AV – Bijlage Afhandelen vrij
+bericht.doc.
+
+Status: Definitief, versie: 1.0
+
+Pagina 9 van 11
+
+UCS VB.0.AV - Afhandelen vrij bericht
+
+4 Uitvoer
+4.1
+
+Beschrijving
+
+Dit proces levert altijd direct (synchroon) een resultaatbericht en na succesvolle verwerking op een
+later tijdstip (asynchroon) een notificeer vrij bericht.
+Voor de volledige beschrijving en inhoud van de uitvoerberichten wordt verwezen naar
+Aspectbeschrijving Generieke Berichtstructuur [2] en de bijlage: VB.0.AV – Bijlage Afhandelen vrij
+bericht.doc.
+
+4.2
+
+Resultaatbericht
+
+In antwoord op het ingekomen verzoekbericht van het vrije bericht ontvangt de verzendende partij
+een synchroon resultaatbericht.
+4.2.1
+
+Toelichting op het resultaatbericht
+
+Stuurgegevens
+Van het bericht worden de stuurgegevens Zendende partij, Zendende systeem, Referentienummer,
+Crossreferentienummer en Tijdstip meegeleverd als onderdeel van het resultaatbericht.
+Resultaat
+Het resultaat van de Verwerking kan de waarde “Geslaagd” of “Foutief” aannemen. Daarachter
+wordt aangegeven wat het Hoogste Meldingsniveau is, dat is aangetroffen tijdens de uitgevoerde
+controles. De ernst wordt uitgedrukt in het meldingsniveau en betreft voor deze dienst in aflopende
+hoogte:
+Fout
+Waarschuwing
+Informatie1
+Meldingen
+In het bericht zijn de Regels opgenomen die gecontroleerd en geschonden zijn, met daarbij
+aangegeven welke Soort melding (informatief, waarschuwing, fout) en de Melding zelf, die in tekst
+aangeeft wat er op basis van de gecontroleerde regel is geconstateerd.
+
+4.3
+
+Notificeer vrij bericht
+
+Als het resultaat “Geslaagd” is wordt asynchroon voor de ontvangende partij een notificatie vrij
+bericht gezonden met de Use Case VB.1.AV.VV – Verzend vrij bericht.
+Stuurgegevens
+De verzender is de BRP zodat de bijbehorende stuurgegevens voor Zendende partij en Zendende
+systeem met een Referentienummer en het Tijdstip worden vastgelegd en meegeleverd. Tevens
+wordt de Ontvangende partij meegeleverd. De Ontvangende partij is afgeleid in Use Case
+VB.1.AV.NB – Maak notificatiebericht.
+Parameters
+De waarden van de parameters Zender vrij bericht en Ontvanger vrij bericht moeten worden
+overgenomen van het verzoekbericht.
+Inhoud
+De waarden van Soort vrij bericht en Inhoud vrij bericht moeten worden overgenomen van het
+verzoekbericht.
+
+1
+
+Dit meldingsniveau wordt momenteel nog niet gehanteerd, maar is gereserveerd voor toekomstig gebruik.
+
+Status: Definitief, versie: 1.0
+
+Pagina 10 van 11
+
+UCS VB.0.AV - Afhandelen vrij bericht
+
+5 Ontwerpbeslissingen
+•
+
+De autorisatieregels geven in het retourbericht slechts een generieke foutmelding retour.
+In de logging wordt wel de exacte foutconditie weggeschreven. Dit maakt het lastig voor
+kwaadwillende partijen om zich stap voor stap naar binnen te werken, terwijl er bij
+geautoriseerde gebruikers toch al een nauwe samenwerking zal bestaan met BRP-beheer
+om de autorisatie en het gebruik ervan operationeel te krijgen. Het is dus voldoende als
+alleen de beheerder kan zien welke autorisatieregel geschonden wordt.
+
+•
+
+De beheerapplicatie dwingt niet af dat de verschillende autorisatieobjecten onderling
+consistente geldigheidsperiodes hebben. Dit betekent dat het bijvoorbeeld niet
+gegarandeerd is dat wanneer de Groep vrij bericht geldig is, de bijbehorende Partij dan ook
+geldig is. De autorisatieregels controleren daarom de geldigheid van alle relevant
+autorisatieobjecten.
+
+•
+
+Uitgangspunt van het vrij bericht is dat slechts één partij als ontvangende partij per vrij
+bericht wordt ondersteund. Dit geldt ook voor de beheervoorziening, de functionaliteit om
+als een “stapelaar” naar meerdere afnemers eenzelfde vrij bericht te versturen moet de
+BRP Beheervoorziening ondersteunen.
+
+•
+
+Er is gekozen om de autorisatie voor het vrije bericht onder te brengen in een groep
+Partij/Vrije bericht. De andere mogelijkheid is om de bestaande autorisatiestructuur ook
+voor het vrije bericht te gebruiken. Dit betekent dat voor het vrije bericht een dienst moet
+worden vastgelegd en om een afzonderlijk afleverpunt voor het vrije bericht te definiëren
+zal een Leveringsautorisatie voor deze Dienst moeten worden vastgelegd. Partijen die geen
+Leveringsautorisatie hebben, zoals bewerkers, zullen dan voor deze dienst een
+Leveringsautorisatie krijgen. Er zijn echter ook bezwaren tegen deze oplossingsrichting. De
+dienst is ook beschikbaar voor niet-afnemers en zit in een structuur met allerlei extra
+mogelijkheden die niet van toepassing zijn op de vrije berichten. Gevolg zou zijn dat we
+binnen deze structuur ook niet-afnemers moeten toestaan en eigenlijk zouden moeten
+controleren dat de inrichting zodanig is dat deze extra mogelijkheden niet ingevuld worden
+en/of niet gebruikt worden bij vrije berichten.
+
+Status: Definitief, versie: 1.0
+
+Pagina 11 van 11
+
+

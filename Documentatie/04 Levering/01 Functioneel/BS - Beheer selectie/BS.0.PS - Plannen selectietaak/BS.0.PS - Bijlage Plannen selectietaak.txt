@@ -1,0 +1,1560 @@
+BS.0.PS - Bijlage Plannen selectietaak
+Versie: Werk
+Gegenereerd op: 17 juli 2017
+Status: Definitief
+
+1 Regels voor usecase BS.1.RI - Raadplegen in te plannen
+selectietaken
+1.1
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2809
+
+1
+
+I
+
+Geen in te plannen selecties gevonden
+
+R2810
+
+1
+
+F
+
+Opgeven van overzichtsperiode bij in te plannen selecties is verplicht
+
+R2811
+
+2
+
+F
+
+Bij het opgeven van een overzichtsperiode mag de einddatum niet voor de
+startdatum liggen
+
+R2812
+
+1
+
+F
+
+Ingevoerde gegevens onjuist
+
+R2825
+
+2
+
+F
+
+De gevraagde overzichtsperiode mag maximaal een jaar zijn
+
+1.2
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2702
+
+2
+
+Berekende selectiedatum
+
+2 Regels voor usecase BS.1.CS.CS - Creëer selectietaken
+2.1
+
+Autorisatieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1263
+
+7
+
+F
+
+De leveringsautorisatie mag niet geblokkeerd zijn
+
+R1264
+
+6
+
+F
+
+De gevraagde dienst mag niet geblokkeerd zijn
+
+R2052
+
+5
+
+F
+
+De toegang leveringsautorisatie mag niet geblokkeerd zijn
+
+R2056
+
+6
+
+F
+
+De dienstbundel van de gevraagde dienst mag niet geblokkeerd zijn
+
+R2715
+
+2
+
+F
+
+De gevraagde dienst moet geldig zijn op selectiedatum
+
+R2716
+
+2
+
+F
+
+De dienstbundel waarin de gevraagde dienst is opgenomen moet geldig zijn
+op de selectiedatum
+
+R2717
+
+2
+
+F
+
+De toegang leveringsautorisatie van de selectietaak moet geldig zijn op
+selectiedatum
+
+R2718
+
+2
+
+F
+
+De leveringsautorisatie bij de selectietaak moet geldig zijn op selectiedatum
+
+R2719
+
+3
+
+F
+
+De combinatie partij en rol van de toegang leveringsautorisatie moet geldig
+zijn op selectiedatum
+
+R2720
+
+2
+
+F
+
+De geautoriseerde partij moet geldig zijn op selectiedatum
+
+2.2
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2050
+
+2
+
+De toegang leveringsautorisatie van een verzoekbericht
+
+R2085
+
+3
+
+De dienst die gevraagd wordt
+
+R2129
+
+2
+
+Geldig
+
+R2698
+
+1
+
+Periode overzicht berekende selectiedatum
+
+R2700
+
+1
+
+Selectietaak met eindstatus
+
+R2702
+
+2
+
+Berekende selectiedatum
+
+2.3
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2574
+
+3
+
+Aanmaken logregel na autorisatie fout bij selecties
+
+R2699
+
+2
+
+Creëer selectietaken bij eenmalige selectiedienst
+
+R2706
+
+1
+
+Creëer selectietaken bij periodieke selectiedienst
+
+R2707
+
+1
+
+Geen ontbrekende selectietaken bij een periodieke selectiedienst
+
+R2721
+
+1
+
+Autorisatiecontrole in te plannen of geplande selectietaken
+
+3 Regels voor usecase BS.1.RDS - Raadplegen detailgegevens
+selectietaak
+3.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2813
+
+1
+
+Berekend peilmoment formeel resultaat selectietaak
+
+R2814
+
+1
+
+Berekend peilmoment materieel resultaat selectietaak
+
+4 Regels voor usecase BS.1.UB - Uploaden bestand
+4.1
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2834
+
+1
+
+4.2
+
+F
+
+Controleren selectielijst
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2833
+
+1
+
+Bestand uploaden alleen mogelijk indien dit is aangegeven bij de selectietaak
+
+R2835
+
+1
+
+Selectiebestand opslaan
+
+5 Regels voor usecase BS.1.PS.PR - Plangegevens registreren
+5.1
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2815
+
+1
+
+F
+
+Datum planning mag niet teveel afwijken van de berekende selectiedatum
+
+R2816
+
+1
+
+F
+
+Datum planning mag niet voor de eerste selectiedatum liggen
+
+R2819
+
+1
+
+F
+
+Statuswijziging selectietaak na inplannen
+
+R2820
+
+3
+
+F
+
+Gegevens wijzigen bij het plannen van een selectietaak
+
+R2821
+
+2
+
+F
+
+Wijzigen selectiesoort bij de selectietaak
+
+R2822
+
+1
+
+W
+
+Waarschuwing bij het aanpassen van de selectiesoort bij de selectietaak
+
+R2826
+
+1
+
+F
+
+Datum planning mag niet in het verleden liggen
+
+R2829
+
+1
+
+F
+
+Melding indien geen bestand is geüpload
+
+5.2
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2016
+
+1
+
+'Systeemdatum'
+
+R2702
+
+2
+
+Berekende selectiedatum
+
+5.3
+
+Integriteitsregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2818
+
+2
+
+5.4
+
+F
+
+Selectietaak uniek op datum planning
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2817
+
+1
+
+Selectietaak is ingepland
+
+6 Uitwerking regels
+R1263
+De leveringsautorisatie mag niet geblokkeerd zijn
+Definitie:
+
+Bij de Leveringsautorisatie bij De dienst die gevraagd wordt (R2085) moet
+Leveringsautorisatie.Geblokkeerd? ongelijk zijn aan "Ja"
+
+Versie:
+
+7
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven leveringsautorisatie is geblokkeerd door de beheerder.
+
+Loggingsniveau:
+
+Illegale poging
+
+R1264
+De gevraagde dienst mag niet geblokkeerd zijn
+Definitie:
+
+Bij De dienst die gevraagd wordt (R2085) moet de Dienst.Geblokkeerd? ongelijk zijn
+aan "Ja".
+
+Versie:
+
+6
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De gevraagde dienst is geblokkeerd door de beheerder.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2016
+'Systeemdatum'
+Definitie:
+
+De systeemdatum is de actuele datum tijdens het evalueren van een regel van het
+BRP syteem en heeft het formaat 'jjjjmmdd'.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2050
+De toegang leveringsautorisatie van een verzoekbericht
+Definitie:
+
+Bij een leveringsverzoek kunnen we het voorkomen van Toegang
+leveringsautorisatie aanwijzen dat overeenkomt met de inhoud van de
+stuurgegevens en de OIN's uit de gebruikte certificaten voor ondertekening en
+transport van het bericht. Dit noemen we 'de toegang leveringsautorisatie van het
+verzoekbericht'.
+De context van deze definitie bestaat uit de volgende input:
+• De waarde van Bericht.Zendende partij uit de stuurgegevens van het
+inkomende bericht. Deze bevat een Partij.Code die de 'Geautoriseerde Partij'
+aanduidt.
+• Alleen bij bevragingen: De waarde van Bericht.Rol uit de parameters van het
+inkomende bericht. Deze bevat een Rol.Naam die de 'Rol' aanduidt.
+• De waarde van Bericht.Leveringsautorisatie uit de parameters van het
+inkomende bericht. Deze bevat een Leveringsautorisatie.ID die de
+'Leveringsautorisatie' aanduidt.
+• Het OIN van het PKI-overheidscertificaat waarmee het bericht was
+ondertekend. Dit OIN noemen we de 'Ondertekenaar'.
+• Het OIN van het PKI-overheidscertificaat waarmee de beveiligde verbinding
+was opgezet. Dit OIN noemen we de 'Transporteur'
+
+'De toegang leveringsautorisatie van een verzoekbericht' is het voorkomen van
+Toegang leveringsautorisatie waarvoor geldt dat:
+Bij bevragingen (Bericht.Rol is opgegeven):
+• Toegang leveringsautorisatie.Geautoriseerde verwijst naar de Partij \ Rol van
+'Geautoriseerde Partij' en 'Rol'
+Bij niet-bevragingen (Bericht.Rol niet opgegeven):
+• Toegang leveringsautorisatie.Geautoriseerde verwijst naar een Partij \ Rol van
+'Geautoriseerde Partij'
+En bovendien (in alle gevallen):
+• Toegang leveringsautorisatie.Leveringsautorisatie verwijst naar
+de'Leveringsautorisatie'
+• De ondertekenaar klopt:
+• Het OIN van de partij Toegang leveringsautorisatie.Ondertekenaar gelijk is
+aan de 'Ondertekenaar' OF
+• Toegang leveringsautorisatie.Ondertekenaar leeg is en 'Ondertekenaar'
+gelijk is aan de OIN van de 'Geautoriseerde Partij'
+• De transporteur klopt:
+• Het OIN van de Partij Toegang leveringsautorisatie.Transporteur gelijk is
+aan de 'Transporteur' OF
+• Toegang leveringsautorisatie.Transporteur leeg is en 'Transporteur' gelijk
+is aan de OIN van de 'Geautoriseerde Partij'
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2052
+De toegang leveringsautorisatie mag niet geblokkeerd zijn
+Definitie:
+
+De Toegang leveringsautorisatie.Geblokkeerd? bij de te controleren
+Leveringsautorisatie moet ongelijk zijn aan "Ja".
+Indien het een afhandeling van een leveringsverzoek betreft dan dient De toegang
+leveringsautorisatie van een verzoekbericht (R2050) gecontroleerd te worden.
+Indien het een Selectie betreft dan dient de Selectietaak.Toegang
+leveringsautorisatie gecontroleerd te worden.
+
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De toegang leveringsautorisatie is geblokkeerd door de beheerder.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2056
+De dienstbundel van de gevraagde dienst mag niet geblokkeerd zijn
+Definitie:
+
+Bij de Dienstbundel van De dienst die gevraagd wordt (R2085) moet
+Dienstbundel.Geblokkeerd? ongelijk zijn aan "Ja".
+
+Versie:
+
+6
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De dienstbundel van de gevraagde dienst is geblokkeerd door de beheerder.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2085
+De dienst die gevraagd wordt
+Definitie:
+
+De _'Dienst die gevraagd wordt'_ leiden we als volgt af:
+
+•
+
+In het geval van een bevraging (het verzoekbericht bevat de parameter
+Bericht.Dienst):
+De Dienst met Dienst.ID gelijk aan de berichtparameter Bericht.Dienst
+
+•
+
+Voor overige verzoekberichten (het bericht bevat NIET de parameter
+Bericht.Dienst) betekent dit:
+Het voorkomen van Dienst:
+• Zich bevindt onder de Leveringsautorisatie die in het bericht is opgegeven
+middels berichtparameter Bericht.Leveringsautorisatie
+• De Soort dienst heeft, die volgt uit de berichtsoort en de handeling in het
+bericht:
+• Registreer afnemerindicatie => waarbij de berichtparameter
+Bericht.Administratieve handeling = "Plaatsing afnemerindicatie"
+• Registreer afnemerindicatie => waarbij de berichtparameter
+Bericht.Administratieve handeling = "Verwijdering afnemerindicatie"
+• Geef synchronisatie persoon => Synchronisatie persoon
+• Geef synchronisatie stamgegeven => Synchronisatie stamgegeven
+• Geef StUF BG bericht => Geef StUF BG bericht
+
+•
+
+Voor selecties (is er geen verzoekbericht):
+De Dienst met Dienst.ID gelijk aan Selectietaak.Dienst
+
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R2129
+Geldig
+Definitie:
+
+Een object is geldig op een peildatum als:
+De Datum aanvang geldigheid op of voor de peildatum ligt en de Datum einde
+geldigheid na de peildatum ligt.
+of
+De Datum ingang op of voor de peildatum ligt en de Datum einde na de peildatum
+ligt.
+(dus: de geldigeheidsperiode is inclusief de ingangsdatum, maar exclusief de
+einddatum)
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2574
+Aanmaken logregel na autorisatie fout bij selecties
+Definitie:
+
+Indien een selectietaak niet door de autorisatiecontrole komt dan moet dit in de log
+geregistreerd worden.
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R2698
+Periode overzicht berekende selectiedatum
+Definitie:
+
+De periode vanaf de ingevoerde startdatum en tot en met de ingevoerde einddatum
+op het overzicht 'Raadplegen in te plannen selecties' is de 'Periode overzicht
+berekende selectiedatum'. Deze wordt gebruikt om te bepalen of een selectiedienst
+ingepland dient te worden.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2699
+Creëer selectietaken bij eenmalige selectiedienst
+Definitie:
+
+Indien Dienst.Selectieinterval niet gevuld is
+EN
+Dienst.Eerste selectiedatum valt binnen Periode overzicht berekende selectiedatum
+(R2698)
+EN
+er wordt voldaan aan R2721 - Autorisatiecontrole in te plannen of geplande
+selectietaken
+EN
+er bestaat nog geen Selectietaak bij de Dienst
+OF
+de Selectietaak bij de Dienst is een Selectietaak met eindstatus (R2700)
+die opnieuw gepland dient te worden
+DAN
+wordt er een nieuwe Selectietaak bij de Dienst gecreëerd voor elke Toegang
+leveringsautorisatie bij de Dienst met de volgende gegevens:
+
+•
+•
+•
+•
+
+Selectietaak.Toegang leveringsautorisatie wordt gevuld met de betreffende
+toegang leveringsautorisatie
+Selectietaak.Status wordt gevuld met 'In te plannen'
+Selectietaak.Peilmoment formeel resultaat wordt gevuld met Dienst.Selectie
+peilmoment formeel resultaat
+Selectietaak.Peilmoment materieel resultaat wordt gevuld met Dienst.Selectie
+peilmoment materieel resultaat
+
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R2700
+Selectietaak met eindstatus
+Definitie:
+
+Een Selectietaak met eindstatus is een Selectietaak
+met een actuele Selectietaak status.Naam :
+• 'Geannuleerd'
+• 'Uitvoering mislukt'
+• 'Uitvoering afgebroken'
+• 'Afgekeurd'
+
+•
+•
+•
+•
+
+'Niet geleverd'
+'Geleverd zonder protocollering'
+'Protocollering uitgevoerd'
+'Protocollering mislukt'
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2702
+Berekende selectiedatum
+Definitie:
+
+De berekende selectiedatum die hoort bij de Selectietaak wordt afgeleid door
+de Dienst.Eerste selectiedatum nul, één of meer keer op te hogen met de
+combinatie van de Dienst.Eenheid selectieinterval en Dienst.Selectieinterval
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2706
+Creëer selectietaken bij periodieke selectiedienst
+Definitie:
+
+Indien Dienst.Selectieinterval is gevuld
+EN
+Dienst.Eenheid selectieinterval is gevuld
+EN
+Eén of meer Berekende selectiedatum (R2702) valt binnen Periode overzicht
+berekende selectiedatum (R2698)
+
+EN
+er wordt voldaan aan R2721 - Autorisatiecontrole in te plannen of geplande
+selectietaken op de Berekende selectiedatum (R2702)
+EN
+er bestaat nog geen Selectietaak bij de Dienst voor het betreffende draaimoment
+OF
+de Selectietaak bij de Dienst is een Selectietaak met eindstatus (R2700)
+die opnieuw gepland dient te worden
+
+DAN
+wordt er een nieuwe Selectietaak bij de Dienst gecreëerd voor elke Toegang
+leveringsautorisatie bij de Dienst met de volgende gegevens:
+
+•
+•
+•
+
+Selectietaak.Toegang leveringsautorisatie wordt gevuld met de betreffende
+toegang leveringsautorisatie
+Selectietaak.Status wordt gevuld met 'In te plannen'
+Selectietaak.Peilmoment formeel resultaat wordt gevuld met Dienst.Selectie
+peilmoment formeel resultaat verhoogd met Dienst.Selectieinterval en
+
+•
+
+•
+
+Dienst.Eenheid selectieinterval conform ophoging bij de Berekende
+selectiedatum (R2702)
+Selectietaak.Peilmoment materieel resultaat wordt gevuld met Dienst.Selectie
+peilmoment materieel resultaat verhoogd met Dienst.Selectieinterval en
+Dienst.Eenheid selectieinterval conform ophoging bij de Berekende
+selectiedatum (R2702)
+historievorm bij de selectietaak wordt gevuld met Dienst.Historievorm selectie
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2707
+Geen ontbrekende selectietaken bij een periodieke selectiedienst
+Definitie:
+
+Voor iedere Berekende selectiedatum (R2702) vanaf de Dienst.Eerste selectiedatum
+tot aan de Periode overzicht berekende selectiedatum (R2698) moet een
+Selectietaak bestaan.
+Indien een Selectietaak ontbreekt dan wordt deze gecreëerd conform R2699 Creëer selectietaken bij eenmalige selectiedienst of R2706 - Creëer selectietaken bij
+periodieke selectiedienst.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2715
+De gevraagde dienst moet geldig zijn op selectiedatum
+Definitie:
+
+De De dienst die gevraagd wordt (R2085) moet Geldig (R2129) zijn op
+Selectietaak.Datum planning indien gevuld.
+Indien Selectietaak.Datum planning niet is gevuld dan moet de De dienst die
+gevraagd wordt (R2085) Geldig (R2129) zijn op Berekende selectiedatum (R2702).
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De gevraagde dienst is niet geldig op selectiedatum.
+
+R2716
+De dienstbundel waarin de gevraagde dienst is opgenomen moet geldig zijn op de
+selectiedatum
+Definitie:
+
+De Dienstbundel die behoort bij de De dienst die gevraagd wordt (R2085) moet
+Geldig (R2129) zijn op Selectietaak.Datum planning indien gevuld.
+Indien Selectietaak.Datum planning niet is gevuld dan moet de Dienstbundel die
+behoort bij de De dienst die gevraagd wordt (R2085) Geldig (R2129) zijn op
+Berekende selectiedatum (R2702).
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De dienstbundel is niet geldig op de selectiedatum.
+
+R2717
+De toegang leveringsautorisatie van de selectietaak moet geldig zijn op selectiedatum
+Definitie:
+
+De Selectietaak.Toegang leveringsautorisatie moet Geldig (R2129) zijn op
+Selectietaak.Datum planning indien gevuld.
+
+Indien Selectietaak.Datum planning niet is gevuld dan moet Selectietaak.Toegang
+leveringsautorisatie Geldig (R2129) zijn op Berekende selectiedatum (R2702)
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De toegang leveringsautorisatie is niet geldig op selectiedatum.
+
+R2718
+De leveringsautorisatie bij de selectietaak moet geldig zijn op selectiedatum
+Definitie:
+
+De Leveringsautorisatie bij de selectietaak moet Geldig (R2129) zijn op
+Selectietaak.Datum planning indien gevuld.
+Indien Selectietaak.Datum planning niet is gevuld dan moet de Leveringsautorisatie
+bij de selectietaak Geldig (R2129) zijn op Berekende selectiedatum (R2702).
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De leveringsautorisatie is niet geldig op selectiedatum.
+
+R2719
+De combinatie partij en rol van de toegang leveringsautorisatie moet geldig zijn op
+selectiedatum
+Definitie:
+
+De Toegang leveringsautorisatie moet verwijzen naar Geldig (R2129) voorkomen in
+Partij \ Rol op de eventueel gevulde Selectietaak.Datum planning.
+Indien Selectietaak.Datum planning niet is gevuld dan moet De Toegang
+leveringsautorisatie verwijzen naar Geldig (R2129) voorkomen in Partij \ Rol op
+Berekende selectiedatum (R2702)
+
+Versie:
+
+3
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De combinatie partij en rol is niet geldig op selectiedatum
+
+R2720
+De geautoriseerde partij moet geldig zijn op selectiedatum
+Definitie:
+
+De Partij moet Geldig (R2129) zijn op Selectietaak.Datum planning indien gevuld.
+Indien Selectietaak.Datum planning niet is gevuld dan moet Partij Geldig (R2129)
+zijn op Berekende selectiedatum (R2702)
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De partij is niet geldig op selectiedatum.
+
+R2721
+Autorisatiecontrole in te plannen of geplande selectietaken
+Definitie:
+
+Een in te plannen of geplande selectietaak moet op de Selectietaak.Datum planning
+of (indien deze niet is gevuld) op Berekende selectiedatum (R2702) voldoen aan de
+autorisatiecontrole. Dit betekend dat aan al de volgende voorwaarden voldaan dient
+te worden:
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+R2715 - De gevraagde dienst moet geldig zijn op selectiedatum
+R2716 - De dienstbundel waarin de gevraagde dienst is opgenomen moet
+geldig zijn op de selectiedatum
+R2717 - De toegang leveringsautorisatie van de selectietaak moet geldig zijn
+op selectiedatum
+R2718 - De leveringsautorisatie bij de selectietaak moet geldig zijn op
+selectiedatum
+R2719 - De combinatie partij en rol van de toegang leveringsautorisatie moet
+geldig zijn op selectiedatum
+R2720 - De geautoriseerde partij moet geldig zijn op selectiedatum
+R1263 - De leveringsautorisatie mag niet geblokkeerd zijn
+R1264 - De gevraagde dienst mag niet geblokkeerd zijn
+R2056 - De dienstbundel van de gevraagde dienst mag niet geblokkeerd zijn
+R2052 - De toegang leveringsautorisatie mag niet geblokkeerd zijn
+
+Wanneer één van bovenstaande controles faalt dan wordt er een logregel
+weggeschreven volgens R2574 - Aanmaken logregel na autorisatie fout bij selecties.
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2809
+Geen in te plannen selecties gevonden
+Definitie:
+
+Indien er geen selectietaken zijn waarvoor geldt dat:
+de Berekende selectiedatum (R2702) valt binnen de gevraagde overzichtsperiode
+EN
+de Selectietaak status.Naam is gelijk aan 'In te plannen'
+EN
+voldoet aan de aanvullende opgegeven zoekcriteria
+dan wordt dit aan de gebruiker gemeld.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Informatieve melding; ter kennisname
+
+Meldingstekst:
+
+Er zijn geen in te plannen selecties gevonden.
+
+R2810
+Opgeven van overzichtsperiode bij in te plannen selecties is verplicht
+Definitie:
+
+Bij het zoeken naar in te plannen selectietaken moet altijd zowel de startdatum als
+de einddatum gevuld worden bij de zoekcriteria.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het opgeven van een overzichtsperiode is verplicht.
+
+R2811
+Bij het opgeven van een overzichtsperiode mag de einddatum niet voor de startdatum
+liggen
+
+Definitie:
+
+Bij het opgeven van de overzichtsperiode mag de einddatum niet voor de
+begindatum liggen.
+
+Versie:
+
+2
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven einddatum mag niet voor de begindatum liggen.
+
+R2812
+Ingevoerde gegevens onjuist
+Definitie:
+
+Indien één van de zoekcriteria onjuist wordt ingevoerd wordt dit gemeld aan de
+gebruiker.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Ingevoerde gegevens onjuist.
+
+R2813
+Berekend peilmoment formeel resultaat selectietaak
+Definitie:
+
+Indien alle volgende attributen een waarde hebben:
+• Dienst.Selectie peilmoment formeel resultaat
+• Dienst.Eenheid selectieinterval heeft een waarde
+• Dienst.Selectieinterval heeft een waarde
+EN
+Selectietaak.Peilmoment formeel resultaat heeft geen waarde
+dan
+wordt Selectietaak.Peilmoment formeel resultaat afgeleid door
+de Dienst.Selectie peilmoment formeel resultaat op te hogen met het
+Selectietaak.Volgnummer x (de combinatie van de Dienst.Eenheid selectieinterval
+en Dienst.Selectieinterval)
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2814
+Berekend peilmoment materieel resultaat selectietaak
+Definitie:
+
+Indien alle volgende attributen een waarde hebben:
+
+•
+•
+•
+
+Dienst.Selectie peilmoment materieel resultaat
+Dienst.Eenheid selectieinterval
+Dienst.Selectieinterval
+
+EN
+Selectietaak.Peilmoment materieel resultaat heeft geen waarde
+dan
+
+wordt Selectietaak.Peilmoment materieel resultaat afgeleid door
+de Dienst.Selectie peilmoment materieel resultaat op te hogen met het
+Selectietaak.Volgnummer x (de combinatie van de Dienst.Eenheid selectieinterval
+en Dienst.Selectieinterval)
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2815
+Datum planning mag niet teveel afwijken van de berekende selectiedatum
+Definitie:
+
+Bij het opslaan van de Selectietaak.Datum planning
+bij een periodieke selectiedienst
+mag de Selectietaak.Datum planning
+niet meer dan de
+(Dienst.Selectieinterval X Dienst.Eenheid selectieinterval)
+afwijken van de Berekende selectiedatum (R2702)
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De geplande datum wijkt teveel af van de berekende selectiedatum.
+
+R2816
+Datum planning mag niet voor de eerste selectiedatum liggen
+Definitie:
+
+Selectietaak.Datum planning mag niet vóór de Dienst.Eerste selectiedatum liggen.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Een selectietaak mag niet voor de eerste selectiedatum gepland worden.
+
+R2817
+Selectietaak is ingepland
+Definitie:
+
+Bij het correct opslaan van de Selectietaak.Datum planning wordt de
+Selectietaak.Status
+gevuld met 'Gepland' en Selectietaak.Status gewijzigd door gevuld met de
+gebruikersnaam van de gebruiker die de Selectietaak.Datum planning heeft
+opgeslagen.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2818
+Selectietaak uniek op datum planning
+Definitie:
+
+Op Selectietaak.Datum planning mag voor de combinatie Selectietaak.Toegang
+leveringsautorisatie en Selectietaak.Dienst maar één selectietaak voorkomen met
+de status 'Gepland' of 'Uitvoerbaar'.
+
+Versie:
+
+2
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Er is voor deze toegang leveringsautorisatie en deze dienst al een geplande
+selectietaak.
+
+R2819
+Statuswijziging selectietaak na inplannen
+Definitie:
+
+Indien de Selectietaak status.Naam gelijk is aan 'In te plannen'
+dan mag de nieuwe status slechts één van de volgende waarde krijgen:
+
+•
+•
+
+'Gepland'
+'Geannuleerd'
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Deze statuswijziging is niet mogelijk.
+
+R2820
+Gegevens wijzigen bij het plannen van een selectietaak
+Definitie:
+
+Tijdens het plannen van de selectietaak mogen de volgende gegevens slechts
+aangepast worden indien de Selectietaak status.Naam gelijk is aan 'In te plannen'
+of 'Gepland':
+• Dienst.Selectieresultaat controleren?
+• Dienst.Maximaal aantal personen per selectiebestand
+• Dienst.Maximale grootte selectiebestand
+• Dienst.Leverwijze selectie
+• Dienst. Medium selectie (nieuw)
+• Dienst. E-mail contactpersoon (nieuw)
+• Dienst. Verwacht aantal personen (nieuw)
+• Selectietaak. selectiesoort (nieuw)
+• Selectietaak.Datum planning
+• Selectietaak.Peilmoment formeel resultaat
+• Selectietaak.Peilmoment materieel resultaat
+• Selectietaak.Selectie lijst gebruiken?
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Dit gegeven mag niet meer gewijzigd worden.
+
+R2821
+Wijzigen selectiesoort bij de selectietaak
+Definitie:
+
+Indien de Dienst.Soort selectie is gelijk aan 'Standaard selectiedienst'
+dan mag de Selectietaak.Soort selectie niet worden aangepast.
+Toelichting:
+Indien de Dienst.Soort selectie is gelijk aan 'Selectiedienst met plaatsing
+afnemerindicatie'
+OF
+'Selectiedienst met verwijdering afnemerindicatie'
+dan mag de Selectietaak.Soort selectie worden aangepast en afwijken van de
+Dienst.Soort selectie.
+
+Versie:
+
+2
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De autorisatie betreft een standaard selectiedienst, dit kan niet worden aangepast.
+
+R2822
+Waarschuwing bij het aanpassen van de selectiesoort bij de selectietaak
+Definitie:
+
+Wanneer de Selectietaak.Selectie soort wordt opgeslagen
+EN
+Selectietaak.Selectie is ongelijk aan Dienst.Soort selectie
+dan volgt er een waarschuwing.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+Let op! Deze soort selectiedienst wijkt af van de voor deze partij geautoriseerde
+soort selectiedienst.
+
+R2825
+De gevraagde overzichtsperiode mag maximaal een jaar zijn
+Definitie:
+
+De overzichtsperiode mag maximaal één jaar bedragen.
+
+Versie:
+
+2
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De overzichtsperiode mag maximaal een jaar bedragen.
+
+R2826
+Datum planning mag niet in het verleden liggen
+Definitie:
+
+De Selectietaak.Datum planning mag nier voor 'Systeemdatum' (R2016) liggen.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De planningsdatum mag niet in het verleden liggen.
+
+R2829
+Melding indien geen bestand is geüpload
+Definitie:
+
+Indien Selectietaak status.Naam wordt gewijzigd naar 'Gepland'
+EN
+Selectietaak.Selectie lijst gebruiken? heeft de waarde 'Ja'
+dan
+moet Selectietaak.bestandsnaam een waarde hebben
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Er is nog geen bestand geüpload.
+
+R2833
+Bestand uploaden alleen mogelijk indien dit is aangegeven bij de selectietaak
+Definitie:
+
+Indien Selectietaak.Selectie lijst gebruiken? de waarde 'Ja' heeft
+
+dan is het mogelijk om een bestand te uploaden.
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2834
+Controleren selectielijst
+Definitie:
+
+Een bestand dat wordt geüpload moet voldoen aan de volgende voorwaarden:
+• het is een CSV bestand
+• Eerste regel is de header
+• De header bevat of 'Administratienummer' of 'Burgerservicenummer'
+• Onder de header staan numerieke waardes per regel
+• in het geval van een Administratienummer geldt: lengte 10
+• in het geval van Burgerservicenummer geldt: lengte 9
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het bestand voldoet niet aan de voorwaarden en kan niet worden geselecteerd.
+
+R2835
+Selectiebestand opslaan
+Definitie:
+
+Na akkoord van de gebruiker wordt het geselecteerde bestand opgeslagen en wordt
+de selectietaak.bestandsnaam gevuld met de bestandsnaam.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+7 Niet definitieve regels
+R2056
+R2085
+R2716
+R2719
+R2721
+
+

@@ -1,0 +1,5115 @@
+Detailontwerp StUF BG Transformatiecomponent
+Transformatie BRPXML  StUF BG 0310
+
+Versie 0.3
+
+Datum
+Status
+
+2 augustus 2017
+Concept
+
+Het DetailOntwerp StUF BG Transformatiecomponent is een werkdocument, dat
+samen met de opdrachtnemer van deze component en de beheerder van de StUFstandaard VNG-KING wordt opgesteld en als ‘transformatie-overeenkomst’ wordt
+geaccepteerd.
+Voorliggende versie is opgesteld door Operatie BRP en de opdrachtnemer van de
+StUF BG Transformatiecomponent. Op basis van deze specificaties zijn de BRPXMLmutatieberichten van een eerste reeks Administratieve handelingen vertaald naar
+StUF BG.
+Op deze versie heeft nog geen toetsing door VNG-KING plaatsgevonden en de
+opdrachtnemer van de StUF BG Transformatiecomponent dient de transformatievoorstellen voor verschillende concepten, entiteiten en elementen nog af te
+stemmen met VNG-KING en de bij het beheer van de StUF-standaard betrokken
+leveranciers.
+Op basis van deze afstemmingen en de transformatie van volgende Mutatie- en
+Volledigberichten kan het DetailOntwerp worden bijgewerkt en voltooid.
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Inhoud
+
+INHOUD ................................................................................................................................... 2
+1
+
+INLEIDING ..................................................................................................................... 5
+1.1
+1.2
+1.3
+1.4
+1.5
+1.6
+1.7
+
+INHOUD.......................................................................................................................... 5
+DOEL VAN DIT DOCUMENT............................................................................................ 5
+OPBOUW ........................................................................................................................ 5
+UITGANGSPUNTEN ........................................................................................................ 6
+TRANSFORMATIE STAMGEGEVENS ............................................................................... 6
+GEBRUIKTE NOTATIEWIJZE .......................................................................................... 6
+REFERENTIES................................................................................................................. 6
+
+2
+
+POSITIONERING STUF BG VERTAALVOORZIENING .............................. 8
+
+3
+
+KENMERKEN BRPXML MUTATIE- EN VOLLEDIGBERICHTEN............ 10
+3.1 INLEIDING ................................................................................................................... 10
+3.2 BRPXML MUTATIEBERICHT ONTRAFELD .................................................................. 11
+3.3 BRPXML VOLLEDIGBERICHT ONTRAFELD ................................................................ 14
+3.4 METAGEGEVENS PER GEGEVENSGROEP ..................................................................... 17
+3.5 GEBRUIK XML-ATTRIBUTEN BRPXML ..................................................................... 17
+3.6 VERWIJSMECHANISMEN IN BRPXML-BERICHTEN ................................................... 18
+3.6.1 Verwijzing op basis van communicatieID/referentieID ................... 18
+3.6.2 Verwijzing op basis van technische sleutels ........................................ 19
+3.6.3 Verwijzing op basis van een naam van een gegeven ...................... 19
+3.7 VERSCHILLEN IN GEVAL VAN GBA-BIJHOUDINGEN ................................................. 19
+3.7.1 Verschillen Mutatieberichten ...................................................................... 20
+3.7.2 Verschillen Volledigberichten ..................................................................... 20
+
+4
+
+OMGAAN MET BRP- EN STUF-CONCEPTEN ................................................. 21
+4.1
+4.2
+4.3
+4.4
+4.5
+4.6
+4.7
+4.8
+4.9
+4.10
+4.11
+4.12
+4.13
+4.14
+4.15
+
+INLEIDING ................................................................................................................... 21
+ACTUELE EN HISTORISCHE GEGEVENS [STUF0301 § 2.3 EN 3.3.1] ................. 21
+GEGEVENSMANAGEMENT [STUF0301 § 2.4 EN 3.1.3] ....................................... 25
+TRANSACTIE [STUF0301 § 2.5] ............................................................................ 26
+SOORTEN ENTITEITTYPEN EN PLAATS IN BERICHT [STUF0301 § 3.1.1] ............ 26
+METAGEGEVENS ENTITEITTYPE [STUF0301 § 3.2.1] .......................................... 27
+EXTRA ELEMENTEN [STUF0301 § 3.2.4] .............................................................. 28
+ALGEMEEN MECHANISME METAGEGEVENS [STUF0301 § 3.3.2] ......................... 28
+METAGEGEVENS BRONDOCUMENTEN [STUF0301 § 3.3.3] ................................. 29
+METAGEGEVENS GEBEURTENISSEN [STUF0301 § 3.3.4] ................................ 30
+METAGEGEVENS STATUS VAN GEGEVENS [STUF0301 § 3.3.5] ...................... 30
+OMGAAN MET (ONBEKENDE) DATUMS ................................................................... 31
+OMGAAN MET TIJDSTIPPEN ..................................................................................... 32
+TRANSFORMATIEPRINCIPES BRPXML MUTATIEBERICHTEN ................................. 33
+TRANSFORMATIEPRINCIPES BRPXML VOLLEDIGBERICHTEN ............................... 33
+
+5
+
+ONTWERPBESLISSINGEN STUF BG VERTALING .................................... 35
+
+6
+
+INTERFACE STUF BG TRANSFORMATIECOMPONENT .......................... 37
+6.1
+6.2
+
+7
+
+INKOMENDE INTERFACE .............................................................................................. 37
+UITGAANDE INTERFACE .............................................................................................. 37
+
+TRANSFORMATIE BRPXML NAAR STUF BG ................................................ 39
+7.1 BERICHTGEGEVENS ..................................................................................................... 39
+7.1.1 StUFBG - Stuurgegevens ............................................................................ 39
+7.1.2 StUFBG - Parameters ................................................................................... 39
+Pagina 2 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+7.1.3 StUFBG - Meldingen ...................................................................................... 40
+7.2 PERSOONSGEGEVENS (NPSLK01)............................................................................. 40
+7.2.1 StUF BG – npsLk01 ....................................................................................... 40
+7.2.2 Transformatieregels adellijke titel/predikaat ....................................... 53
+7.2.3 Transformatieregels locatiegegevens ..................................................... 55
+7.2.4 Transformatieregels burgerlijke staat .................................................... 56
+7.3 REISDOCUMENTGEGEVENS (RSDLK01) .................................................................... 58
+7.3.1 Reisdocumentgegevens ............................................................................... 58
+8
+
+OPENSTAANDE PUNTEN ....................................................................................... 59
+
+BIJLAGE A - HISTORIEPATROON GEGEVENSGROEPEN BRP .................. 60
+BIJLAGE B - EXTRA ELEMENTEN STUF BG ......................................................... 62
+BIJLAGE C – PEILDATUMS BRP ............................................................................... 63
+
+Pagina 3 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Documenteigenschappen
+Documentinformatie
+Documenttitel
+
+Documentatie bidirectionele conversie
+
+Documentdatum
+
+2 augustus 2017
+
+Versienummer
+
+0.3
+
+Versiestatus
+
+Concept
+
+Documentlocatie
+
+Documenthistorie
+Versiehistorie
+Versienummer
+
+Datum
+
+Auteur
+
+Aanpassingen
+
+0.1
+
+15-12-2016
+
+Operatie BRP
+
+Initiële versie
+
+0.2
+
+15-05-2017
+
+Operatie BRP
+
+1) Aanpassing uitgaande
+interface; in geval van een
+melding ook het volgnummer
+van het vertaalde bericht
+meegeven.
+
+0.3
+
+2 augustus 2017
+
+Operatie BRP
+
+1) Review opdrachtnemer StUF
+BG Transformatiecomponent
+2) Consolidatie a.g.v. stopzetting
+Operatie BRP
+
+Reviewhistorie
+Versienummer
+
+Datum
+
+Namen
+
+0.2
+
+03-04-2017
+
+Opdrachtnemer StUF BG Transformatiecomponent
+
+Datum
+
+Rol
+
+Goedkeuring
+Versienummer
+
+Akkoord
+
+Pagina 4 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+1
+
+Inleiding
+
+1.1
+
+Inhoud
+Dit document beschrijft de transformatie van persoonsgegevens en stamgegevens vanuit
+BRP naar StUF BG 0310. Deze transformatie is gewenst om gemeenten gedurende een
+nader vast te stellen periode te kunnen voorzien van StUF BG-kennisgevingsberichten.
+Het initiatief voor de transformatie van een BRP Mutatie- of Volledigbericht naar een StUF
+BG Kennisgevingsbericht ligt bij de afnemer1. Deze kan hiervoor gebruik maken van een
+specifieke dienst binnen het koppelvlak Levering van de BRP; i.c. ‘Geef StUF BG bericht’.
+
+1.2
+
+Doel van dit document
+Dit document maakt op verschillende niveaus (objecttype/gegevensgroep/metagegeven
+en xml-attribuut) inzichtelijk hoe de gegevens vanuit BRPXML getransformeerd worden
+naar StUF BG 0310. Daarbij worden ook specifieke thema's uitgewerkt als onderzoek,
+verantwoording en historie.
+Het document is primair bedoeld voor het ontwikkel- en testteam en later het beheerteam.
+Daarnaast is dit document bedoeld voor afnemers en leveranciers die geïnteresseerd zijn
+via welke transformatieregels, de vertaling tussen BRPXML en StUF BG 0310 plaats vindt.
+
+1.3
+
+Opbouw
+Deze paragraaf beschrijft de hoofdstukken om de lezer te ondersteunen bij het vinden van
+de juist informatie.
+•
+
+Hoofdstuk 1 (Inleiding) beschrijft het doel en scope van het document.
+Daarnaast bevat het de algemene uitgangspunten die gehanteerd zijn.
+
+•
+
+Hoofdstuk 2 (Positionering StUF BG Vertaalvoorziening) geeft een beeld van de
+plaats die de StUF BG Vertaalvoorziening heeft in het applicatielandschap van de
+BRP en de componenten waaruit deze voorziening is opgebouwd.
+
+•
+
+Hoofdstuk 3 (Kenmerken BRPXML Mutatieberichten en Volledigberichten) geeft
+een beeld van de inhoud en structuur van de BRPXML Mutatieberichten en
+Volledigberichten (zie voor nadere details [LOBRP] en de voorbeeldberichten.
+
+•
+
+Hoofdstuk 4 (Omgaan met BRPXML- en StUF-concepten) geeft een beeld van de
+verschillende BRPXML- en StUF-concepten en de ontwerpbeslissingen die
+hierover genomen zijn.
+
+•
+
+Hoofdstuk 5 (Precondities) beschrijft de algemene precondities waaraan de te
+transformeren BRP-berichten moeten voldoen.
+
+•
+
+Hoofdstuk 6 (Interface StUF BG Transformatiecomponent) beschrijft de
+interface waarmee de aanroep van de StUF BG Transformatiecomponent wordt
+afgehandeld.
+
+•
+
+Hoofdstuk 7 (Transformatie BRPXML naar StUF BG) beschrijft de verschillende
+aspecten van de transformatie. Eerst per concept en vervolgens per element
+wordt beschreven hoe de transformatie vanuit BRPXML plaats vindt.
+
+In dit document wordt gesproken over de ‘afnemer’; hiermee wordt zowel de gemeente als bijhouder, de gemeente
+als afnemer als de een door de Minister als afnemer geautoriseerde partij bedoeld.
+1
+
+Pagina 5 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+•
+
+Hoofdstuk 8 (Aandachtspunten) beschrijft enkele specifieke aandachtspunten die
+van belang zijn voor de transformatie van BRPXML naar StUF BG 0310.
+
+De bijlagen bevatten nadere details zoals aangegeven in de titel van de bijlage.
+
+1.4
+
+Uitgangspunten
+De volgende uitgangspunten zijn gehanteerd voor de transformatie van BRP naar StUF
+BG:
+
+1.5
+
+1.
+
+Betreft de transformatie van BRPXML naar:
+StUF versie 0301
+StUF BG versie 0310
+
+2.
+
+De transformatie beperkt zich tot de volgende BRP-berichtsoorten:
+Mutatieberichten
+Volledigberichten
+
+3.
+
+Voor de transformatie wordt een specifieke BRP-dienst ‘Geef StUFBG bericht’
+gerealiseerd. Dit is een synchrone dienst, waarbij het verzoek direct tot een
+resultaat leidt. Een verzoek tot transformatie wordt door een afnemer aan de
+BRP gedaan.
+
+4.
+
+De Transformatie verloopt stateless; er worden tijdens de transformatie geen
+gegevens vanuit de BRP-database bijgelezen
+
+5.
+
+...
+
+Transformatie stamgegevens
+Er worden geen stamgegevens getransformeerd. De afnemer is zelf verantwoordelijk voor
+het bijhouden van deze tabellen.
+
+1.6
+
+Gebruikte notatiewijze
+Door middel van een tabel wordt per conversieregel aangegeven hoe de vertaling
+plaatsvindt. In de linker kolom staat het attribuut vermeld dat gevuld moet worden. In de
+rechter kolom staat vermeld wat de vulling voor dit attribuut is. Ieder attribuut dat gevuld
+moet worden, wordt in de tabel in een aparte rij opgenomen.
+Als een attribuut geen waarde krijgt, wordt dit aangegeven met <geen transformatie>.
+
+1.7
+
+Referenties
+#
+
+Document
+
+[LOBRP]
+
+Logisch Ontwerp BRP
+
+[StUF0301]
+
+Stuf0301_20160701_patch25.zip
+
+Versie
+
+Datum
+
+1.0.8
+
+Juli 2017
+
+0301/27
+
+01-07-2017
+
+Pagina 6 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+2
+
+#
+
+Document
+
+[StUFBG0310]
+
+Bg0310_20160701_patch25.zip
+
+[TRAFOTABEL]2
+
+TransformatieTabel_BRP2StUFBG0310
+(OA-release).xls
+
+[VERSCHILDOC]
+
+Verschillendocument BRP-leveringen
+o.b.v. GBA-Bijhoudingen vs. BRPLeveringen o.b.v. BRP-Bijhoudingen
+
+Versie
+
+Datum
+
+0310/27
+
+01-07-2017
+
+-
+
+Juli 2017
+
+Nog niet
+beschikbaar
+
+Nog niet
+beschikbaar
+
+Onderdelen van deze spreadsheet nog te verwerken in het Detailontwerp StUF BG Transformatievoorziening.
+
+Pagina 7 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+2
+
+Positionering StUF BG Vertaalvoorziening
+
+De StUF BG Vertaalvoorziening verzorgt de vertaling van BRPXML Mutatie- en
+Volledigberichten naar StUF BG 0310. De vertaalvoorziening is een centraal bij de BRP
+geplaatste voorziening en omvat een tweetal componenten:
+1.
+
+De synchrone dienst ‘Geef StUF BG bericht’;
+Dit is de component waarmee afnemers de ontvangen BRPXML Mutatie- en
+Volledigberichten door de centrale voorzieningen kunnen vertalen naar StUF BG
+0310. In het Verzoek-bericht van deze synchrone BRP-dienst wordt het te
+vertalen BRPXML-bericht opgenomen. In het Resultaat-bericht ontvangt de
+afnemer direct het (de) vertaalde StUF BG-bericht(en). Voor de feitelijke
+vertaling roept deze dienst de component StUF BG Transformatiecomponent
+aan.
+
+2.
+
+De StUF BG Transformatiecomponent;
+Dit is de component die de feitelijke vertaling van BRPXML Mutatie- en
+Voleldigberichten naar StUF BG 0310 volgens de in dit ontwerp opgenomen
+transformatieregels uitvoert.
+
+Op het hoogste niveau wordt in het Architectuurdocument de BRP weergegeven met de
+specifieke Beheer- en rapportagefunctionaliteit en de koppelvlakken Bijhouding en
+Levering.
+
+Als specifiek onderdeel van het koppelvlak Levering is ten behoeve van de StUF BG
+Vertaling de dienst ‘Geef StUF BG bericht’ opgenomen:
+
+Pagina 8 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+De dienst ‘Geen StUF BG bericht’ roept voor de feitelijke vertaling van BRPXML naar StUF
+BG0310 de ‘StUF BG Transformatiecomponent’ aan. Deze component is als volgt
+opgebouwd:
+
+Onderstaand korte uitleg over de verschillende componenten binnen de StUF BG
+Transformatiecomponent:
+BRP2StUFBG-API …
+De ApplicationProgrammingInterface waarmee de BRP-dienst ‘Geef StUF BG bericht’ de
+StUF BG Transformatiecomponent aanroept. Voor de samenstelling van deze interface
+wordt verwezen naar hoofdstuk 6Fout! Verwijzingsbron niet gevonden..
+BRP2StUFBG-Gateway …
+Dit is de micro service welke fungeert als gateway en/of loadbalancer naar alle
+microservices binnen de StUF BG Transformatiecomponent. Hier is de configuratie van de
+beschikbare microservices opgeslagen en hier wordt de logging betreffende inkomende en
+uitgaande berichten gedaan.
+BRP2StUFBG-MicroService …
+Dit is de micro service die bepaalt welke onderliggende 'VertaalService' aangesproken
+wordt; dis is afhankelijk van de opgegeven BG-versie afkomstig van de 'Geef StUF BG
+bericht' service. Op dit moment zal alleen de BRP2BG0310-VertaalService aangesproken
+kunnen worden, maar in de toekomst kan hier bijvoorbeeld een BRP2BG0320VertaalService component bij komen.
+BRP2StUFBG0310-VertaalService …
+Dit is de micro service die de vertaling van BRP-XML naar BG0310 StUF berichten voor zijn
+rekening neemt. Mocht er een BG0320 vertaling gemaakt moeten worden dan komt er een
+BRP2BG0320-VertaalService component bij en blijft dit component ongewijzigd.
+Voor de specificaties van de dienst ‘Geef StUF BG bericht’ wordt verwezen naar de
+ontwerpspecificaties van deze dienst.
+De functionele specificaties van de StUF BG Transformatiecomponent worden in dit
+ontwerp verder uitgewerkt. De technische specificaties worden door de opdrachtnemer
+van deze component opgeleverd.
+
+Pagina 9 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+3
+
+Kenmerken BRPXML Mutatie- en Volledigberichten
+
+3.1
+
+Inleiding
+De transformatie van BRPXML naar StUF BG 0310 betreft in eerste instatie alleen de
+vertaling van BRPXML Mutatie- en Volledigberichten zoals de BRP deze levert aan
+afnemers.
+Met een mutatiebericht brengen de centrale voorzieningen de afnemers op de hoogte van
+de als gevolg van een verwerkte administratieve handeling nieuwe en/of gewijzigde
+gegevens van een persoon.
+Met een volledigbericht brengen de centrale voorzieningen de afnemers op de hoogte van
+de geregistreerde gegevens van een persoon. Dit kan de levering van een nieuw in de BRP
+ingeschreven persoon zijn of de levering van de geregistreerde gegevens van een persoon
+die als gevolg van een verwerkte administratieve handeling opgenomen wordt in de
+doelgroep van de leveringsautorisatie.
+Een volledigbericht kan ook op verzoek van de afnemer worden verstrekt via de diensten
+Plaatsing afnemerindicatie, Selectie met plaatsing afnemerindicatie en Synchronisatie
+persoon.
+De inhoud van een mutatie- en volledigbericht is afhankelijk van de leveringsautorisatie
+van de afnemer. Voor de vertaling naar StUF BG 0310 zijn hier primair de volgende
+leveringsautorisaties3 van toepassing:
+1. de gemeente als bijhouder; ontvangt alle persoonsgegevens; inclusief de
+zogenaamde bijhoudingsgegevens
+2. de gemeente als buitengemeentelijke afnemer; ontvangt een beperkte set
+persoonsgegevens conform het autorisatiebesluit van de Minister
+Qua structuur zijn het mutatiebericht en het volledigbericht identiek; ze verschillen met
+name in de vulling en het gebruik van XML-attributen.
+Dit hoofdstuk geeft zicht op de meest relevante kenmerken van de BRPXML mutatie- en
+volledigberichten.
+Voor wat betreft de gegevens wordt verwezen naar de gegevensgroepen. Voor de
+individule elementen per gegevensgroep wordt verwezen naar [LOBRP] Hoofdstuk 7
+Gegevensstructuur en Bijlage A Gegevenswoordenboek.
+Voor wat betreft nadere details van de BRPXML-berichten wordt verwezen naar [LOBRP]
+Hoofdstuk 8 Berichtstructuur, Bijlage C Berichtenboek en de opgeleverde
+voorbeeldberichten.
+
+Nader onderzocht wordt nog of er ook landelijek afnemers zijn, die gebruik maken van StUF BG. Indien dit het geval is,
+zullen ook de leveringsautorisaties van deze afnemers beoordeeld moeten worden op de vertaalbaarheid naar StUF BG; i.c.
+worden voldoende gegevens geleverd om de vertaling überhaupt te kunnen uitvoeren.
+3
+
+Pagina 10 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+3.2
+
+BRPXML Mutatiebericht ontrafeld
+Het mutatiebericht bevat altijd de volgende type gegevens:
+•
+Administratieve handeling die aanleiding was voor de levering.
+•
+Identificerende gegevens van de hoofdpersoon
+•
+Wettelijk verplicht te leveren gegevens, zie [LOBRP] paragraaf 5.5.1.1.
+Het mutatiebericht bevat daarnaast afhankelijk van de leveringsautorisatie van de afnemer
+ook de volgende type gegevens:
+•
+De gewijzigde gegevensgroepen (oud en nieuw) van de persoon
+•
+Identificerende gegevens van de gerelateerde(n)
+•
+Verantwoordingsgegevens, zie [LOBRP] paragraaf 5.5.5.
+Indien een bijhouding tot gevolg heeft dat er over meer dan één persoon een
+mutatiebericht geleverd moet worden, dan volgt er één mutatiebericht waarin de
+gegevens van alle betrokken personen zijn opgenomen. Bijvoorbeeld: een huwelijk tussen
+twee personen waarbij de afnemer bij beiden een afnemerindicatie had geplaatst.
+Bij een wijziging van gegevens worden alle gegevens geleverd die behoren tot de
+gegevensgroepen die zijn geraakt in de bijhouding en waarvoor de afnemer is
+geautoriseerd; ongeacht of bepaalde gegevens binnen een gegevensgroep wel of niet zijn
+gewijzigd. Daarbij wordt zowel de oude als de nieuwe inhoud van de betreffende groep
+doorgegeven.
+Onderstaande tabel geeft onder het berichtelement “synchronisatie” alle gegevensgroepen
+weer die door de centrale voorzieningen in een mutatiebericht kunnen worden geleverd.
+De autorisatie van de afnemer (leveringsautorisatie) en de aard van de bijhouding bepalen
+welke van onderstaande gegevens ook daadwerkelijk worden geleverd.
+Mutatiebericht (lvg_synVerwerkpersoon)
+Kardinaliteit
+Stuurgegevens
+
+1
+
+Zendende partij, zendende systeem, ontvangende partij, referentienummer, tijdstip verzending
+
+Parameters
+
+1
+
+Soort synchronisatie, leveringsautorisatie-identificatie, dienstidentificatie
+
+Meldingen
+
+0..1
+
+Melding
+
+1..n
+
+Regel, soort, melding
+
+Synchronisatie (verwijzing naar administratieve handeling)
+
+1
+
+Naam, categorie, partij, tijdstip registratie
+
+Bijgehouden personen
+Persoon
+
+1
+1..n
+
+Soort code
+
+Afgeleid administratief
+
+1..2
+
+Identificatienummers
+
+1..3
+
+Samengestelde naam
+
+1..3
+
+Geboorte
+
+1..2
+
+Geslachtsaanduiding
+
+1..3
+
+Pagina 11 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Mutatiebericht (lvg_synVerwerkpersoon)
+Kardinaliteit
+Inschrijving
+
+0..2
+
+Nummerverwijzing
+
+0..3
+
+Bijhouding
+
+1..3
+
+Overlijden
+
+0..2
+
+Voornamen
+
+0..1
+
+Voornaam
+
+1..n
+
+Geslachtsnaamcomponenten
+
+0..1
+
+Geslachtsnaamcomponent
+
+1..3
+
+Naamgebruik
+
+0..2
+
+Adressen
+
+0..1
+
+Adres
+
+1..n
+
+Nationaliteiten
+
+0..1
+
+Nationaliteit
+
+1..n
+
+Buitenlands persoonsnummers
+Buitenlands persoonsnummer
+Indicaties
+
+0..1
+1..n
+0..1
+
+Derde heeft gezag
+
+0..3
+
+Onder curatele
+
+0..3
+
+Volledige verstrekkingsbeperking
+
+0..2
+
+Vastgesteld niet Nederlander
+
+0..3
+
+Behandeld als Nederlander
+
+0..3
+
+Signalering met betrekking tot verstrekken reisdocument
+
+0..2
+
+Staatloos
+
+0..3
+
+Bijzondere verblijfsrechtelijke positie
+
+0..2
+
+Verstrekkingsbeperkingen (partieel)
+Verstrekkingsbeperking
+
+0..1
+1..n
+
+Betrokkenheden
+Oudergegevens (persoon is kind van)
+Betrokkenheid: kind
+Relatie: familierechtelijke betrekking
+Relatiegegevens (alleen verantwoording en formele historie)
+Betrokkenheid: ouder
+Persoon
+
+0..1
+1
+0..1
+0..1
+0..1
+
+Soort code
+
+Identificatienummers
+
+0..3
+
+Samengestelde naam
+
+0..3
+
+Geboorte
+
+0..2
+
+Geslachtsaanduiding
+
+0..3
+
+Ouderschap
+
+0..3
+
+Ouderlijk gezag
+
+0..3
+
+Kindgegevens (persoon is ouder van)
+Betrokkenheid: ouder
+Relatie: familierechtelijke betrekking
+
+0..n
+1
+
+Pagina 12 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Mutatiebericht (lvg_synVerwerkpersoon)
+Kardinaliteit
+Relatiegegevens (alleen verantwoording en formele historie)
+Betrokkenheid: kind
+Persoon
+
+0..1
+1
+1
+
+Soort code
+
+Identificatienummers
+
+0..3
+
+Samengestelde naam
+
+0..3
+
+Geboorte
+
+0..2
+
+Ouderschap (i.g.v. relatie met Kind t.b.v. historie en verantwoording)
+
+0..3
+
+Partnergegevens (persoon is partner van)
+Betrokkenheid: partner
+Relatie: huwelijk of geregistreerd partnerschap
+Relatiegegevens (aanvang/einde huwelijk of geregistreerd partnerschap)
+Betrokkenheid: partner
+Persoon
+
+0..n
+1
+1..2
+0..1
+0..1
+
+Soort code
+
+Identificatienummers
+
+0..3
+
+Samengestelde naam
+
+0..3
+
+Geboorte
+
+0..2
+
+Geslachtsaanduiding
+
+0..3
+
+Migratie
+
+0..3
+
+Verblijfsrecht
+
+0..2
+
+Reisdocumenten
+
+0..1
+
+Reisdocument
+
+1..n
+
+Uitsluiting kiesrecht
+
+0..2
+
+Deelname EU verkiezingen
+
+0..2
+
+Persoonskaart
+
+0..2
+
+Verificaties
+
+0..1
+
+Verificatie
+
+1..n
+
+Onderzoeken
+
+0..1
+
+Onderzoek
+
+1..n
+
+Gegevens in onderzoek
+
+0..1
+
+Gegeven in onderzoek
+Administratieve handelingen (Verantwoording)
+Administratieve handeling
+
+1..n
+0..1
+1
+
+Naam, categorie, partijcode, tijdstip registratie
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Document of Rechtsgrondcode (stamgegeven) of Rechtsgrondomschrijving
+Document
+
+0..1
+
+Soortnaam, aktenummer, omschrijving. partijcode
+
+Rechtsgrondcode
+
+0..1
+
+Rechtsgrondomschrijving
+
+0..1
+
+Pagina 13 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Mutatiebericht (lvg_synVerwerkpersoon)
+Kardinaliteit
+Bijgehouden acties
+Actie
+
+1
+1..n
+
+Soortnaam, Verwijzing(en) naar bron(nen)
+
+Bronnen
+Bron (verwijzing naar bron op basis van referentie-id)
+
+3.3
+
+0..1
+1..n
+
+BRPXML Volledigbericht ontrafeld
+Het volledigbericht bevat altijd de volgende type gegevens:
+•
+Administratieve handeling of Dienst die aanleiding was voor de levering
+•
+Identificerende gegevens van de hoofdpersoon
+•
+Wettelijk verplicht te leveren gegevens, zie [LOBRP] paragraaf 5.5.1.1.
+Het volledigbericht bevat daarnaast afhankelijk van de leveringsautorisatie van de afnemer
+ook de volgende type gegevens:
+•
+Actuele en historische persoonsgegevens
+•
+Identificerende gegevens van de gerelateerde(n)
+•
+Verantwoordingsgegevens, zie [LOBRP] paragraaf 5.5.5.
+Onderstaande tabel geeft onder het berichtelement “synchronisatie” alle gegevensgroepen
+weer die door de centrale voorzieningen in een mutatiebericht kunnen worden geleverd.
+De autorisatie van de afnemer (leveringsautorisatie) bepalen welke van onderstaande
+gegevens ook daadwerkelijk worden geleverd.
+Volledig bericht (lvg_synVerwerkPersoon)
+Kardinaliteit
+Stuurgegevens
+
+1
+
+Zendende partij, zendende systeem, ontvangende partij, referentienummer, tijdstip
+verzending
+
+Parameters
+
+1
+
+Soort synchronisatie, leveringsautorisatie-identificatie, dienstidentificatie
+
+Meldingen
+
+0..1
+
+Melding
+
+1..n
+
+Regel, soort, melding
+
+Synchronisatie (verwijzing naar administratieve handeling of Dienst)
+
+1
+
+Naam, categorie, partij, tijdstip registratie
+Bijgehouden personen
+Persoon
+
+1
+1
+
+Soort code
+Afgeleid administratief
+
+1..n
+
+Identificatienummers
+
+1..n
+
+Samengestelde naam
+
+1..n
+
+Geboorte
+
+1..n
+Pagina 14 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Volledig bericht (lvg_synVerwerkPersoon)
+Kardinaliteit
+Geslachtsaanduiding
+
+1..n
+
+Inschrijving
+
+0..n
+
+Nummerverwijzing
+
+0..n
+
+Bijhouding
+
+1..n
+
+Overlijden
+
+0..n
+
+Voornamen
+
+0..1
+
+Voornaam
+
+1..n
+
+Geslachtsnaamcomponenten
+
+0..1
+
+Geslachtsnaamcomponent
+
+1..n
+
+Naamgebruik
+
+0..n
+
+Adressen
+
+0..1
+
+Adres
+
+1..n
+
+Nationaliteiten
+
+0..1
+
+Nationaliteit
+
+1..n
+
+Buitenlands persoonsnummers
+Buitenlands persoonsnummer
+Indicaties
+
+0..1
+1..n
+0..1
+
+Derde heeft gezag
+
+0..n
+
+Onder curatele
+
+0..n
+
+Volledige verstrekkingsbeperking
+
+0..n
+
+Vastgesteld niet Nederlander
+
+0..n
+
+Behandeld als Nederlander
+
+0..n
+
+Signalering met betrekking tot verstrekken reisdocument
+
+0..n
+
+Staatloos
+
+0..n
+
+Bijzondere verblijfsrechtelijke positie
+Verstrekkingsbeperkingen (partieel)
+Verstrekkingsbeperking
+
+0..n
+0..1
+1..n
+
+Betrokkenheden
+Oudergegevens (persoon is kind van)
+Betrokkenheid: kind
+Relatie: familierechtelijke betrekking
+
+0..1
+1
+
+Relatiegegevens (alleen verantwoording en formele historie)
+
+0..1
+
+Betrokkenheid: ouder
+
+0..1
+
+Persoon
+
+0..1
+
+Soort code
+Identificatienummers
+
+0..n
+
+Samengestelde naam
+
+0..n
+
+Geboorte
+
+0..n
+
+Geslachtsaanduiding
+
+0..n
+
+Ouderschap
+
+0..n
+
+Ouderlijk gezag
+
+0..n
+
+Kindgegevens (persoon is ouder van)
+Betrokkenheid: ouder
+
+0..n
+
+Pagina 15 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Volledig bericht (lvg_synVerwerkPersoon)
+Kardinaliteit
+Relatie: familierechtelijke betrekking
+Relatiegegevens (alleen verantwoording en formele historie)
+Betrokkenheid: kind
+Persoon
+
+1
+0..1
+1
+1
+
+Soort code
+Identificatienummers
+
+0..n
+
+Samengestelde naam
+
+0..n
+
+Geboorte
+
+0..n
+
+Ouderschap (i.g.v. relatie met Kind t.b.v. historie en verantwoording)
+
+0..n
+
+Partnergegevens (persoon is partner van)
+Betrokkenheid: partner
+Relatie: huwelijk of geregistreerd partnerschap
+Relatiegegevens (aanvang/einde huwelijk of geregistreerd partnerschap)
+Betrokkenheid: partner
+Persoon
+
+0..n
+1
+1..n
+0..1
+0..1
+
+Soort code
+Identificatienummers
+
+0..n
+
+Samengestelde naam
+
+0..n
+
+Geboorte
+
+0..n
+
+Geslachtsaanduiding
+
+0..n
+
+Migratie
+
+0..n
+
+Verblijfsrecht
+
+0..n
+
+Reisdocumenten
+
+0..1
+
+Reisdocument
+
+1..n
+
+Uitsluiting kiesrecht
+
+0..n
+
+Deelname EU verkiezingen
+
+0..n
+
+Persoonskaart
+
+0..n
+
+Verificaties
+
+0..1
+
+Verificatie
+
+1..n
+
+Onderzoeken
+
+0..1
+
+Onderzoek
+
+1..n
+
+Gegevens in onderzoek
+
+0..1
+
+Gegeven in onderzoek
+Administratieve handelingen (Verantwoording)
+Administratieve handeling
+
+1..n
+0..1
+1
+
+Naam, categorie, partijcode, tijdstip registratie
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Document of Rechtsgrondcode (stamgegeven) of Rechtsgrondomschrijving
+Document
+
+0..1
+
+Soortnaam, aktenummer, omschrijving, partijcode
+Rechtsgrondcode
+
+0..1
+
+Pagina 16 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Volledig bericht (lvg_synVerwerkPersoon)
+Kardinaliteit
+Rechtsgrondomschrijving
+
+0..1
+
+Bijgehouden acties
+
+1
+
+Actie
+
+1..n
+
+Soortnaam, Verwijzing(en) naar bron(nen)
+Bronnen
+
+0..1
+
+Bron (verwijzing naar bron op basis van referentie-id)
+
+3.4
+
+1..n
+
+Metagegevens per gegevensgroep
+In de BRP worden per gegevensgroep metagegevens vastgelegd ten behoeve van de
+verantwoording en historie. Afhankelijk van het historiepatoon van een gegevensgroep en
+de leveringsautorisatie van betreffende afnemer kunnen per gegevensgroep de volgende
+metagegevens geleverd worden:
+Historiepatroon
+Metagegeven
+
+Formeel
+
+Materieel
+
+Tijdstip registratie
+
+X
+
+X
+
+Actie inhoud
+
+X
+
+X
+
+Tijdstip verval
+
+X
+
+X
+
+Actieverval
+
+X
+
+X
+
+Nadere aanduiding verval
+
+X
+
+X
+
+Datum aanvang geldigheid
+
+X
+
+Datum einde geldigheid
+
+X
+
+Actie aanpassing geldigheid
+
+X
+
+Deze gegevens zijn met name van belang voor de vulling van de registratie- en
+geldigheidgegevens van StUF BG. Zie hiervoor ook paragraaf 4.2.
+In Bijlage A - Historiepatroon gegevensgroepen BRP is een opsomming opgenomen
+van allen BRP-gegevensgroepen inclusief het bijbehorende historiepatroon.
+
+3.5
+
+Gebruik XML-attributen BRPXML
+BRPXML kent een aantal speciale berichtelementen die van belang zijn voor de
+berichtverwerking in zowel de centrale voorzieningen als de lokale voorzieningen van
+afnemers.
+
+Pagina 17 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Berichtelement
+
+Omschrijving
+
+CommunicatieID
+
+Een unieke identificatie van een berichtelement waarnaar via het berichtelement referentieID
+verwezen kan worden.
+
+ObjectSleutel
+
+Technische sleutel van een voorkomen van een objecttype, zoals deze in de database is
+geregistreerd; uniek per objecttype. De objectSleutel van een voorkomen van het objecttype
+Persoon wordt versleuteld in de berichten opgenomen en heeft een beperkte geldigheidsduur.
+Niet bestemd voor opslag binnen lokale voorzieningen afnenemrs en bijhouders.
+
+Objecttype
+
+Dit is een soort object (bijvoorbeeld Persoon of Relatie) waarover in de centrale voorzieningen
+gegevens worden geregistreerd. Een objecttype bestaat uit een verzameling van één of meer bij
+elkaar behorende gegevensgroepen.
+
+ReferentieID
+
+Een verwijzing naar een ander berichtelement in hetzelfde bericht of in het hieraan
+voorafgaande bericht waarvan het communicatieID dezelfde waarde heeft.
+
+Verwerkingssoort
+
+De soort verwerking zoals die in de bijhouding heeft plaatsgevonden. Alleen in gebruik bij
+mutatieberichten. De mogelijke waarden van dit berichtelement zijn:
+Waarde
+
+Omschrijving
+
+“Identificatie”
+
+Objecttype of gegevensgroep in mutatiebericht opgenomen ter
+identificatie.
+Objecttype of gegevensgroep in mutatiebericht opgenomen ter
+referentie. In gebruik wanneer objecttype of gegevensgroep
+ongewijzigd is, maar in verplicht mee te leveren onderzoek is
+betrokken.
+Objecttype of gegevensgroep als gevolg van een bijhouding in
+centrale voorzieningen toegevoegd.
+Objecttype of gegevensgroep als gevolg van een bijhouding in
+centrale voorzieningen gewijzigd.
+Objecttype of gegevensgroep als gevolg van een bijhouding in
+centrale voorzieningen komen te vervallen.
+Objecttype of gegevensgroep als gevolg van een bijhouding
+fysiek verwijderd uit centrale voorzieningen.
+
+“Referentie”
+
+“Toevoeging”
+“Wijziging”
+“Verval”
+“Verwijdering”
+
+VoorkomenSleutel
+
+3.6
+
+Technische sleutel van een voorkomen van een gegevensgroep, zoals deze in de database is
+geregistreerd; uniek per gegevensgroep. Niet bestemd voor opslag binnen lokale voorzieningen
+afnenemrs en bijhouders.
+
+Verwijsmechanismen in BRPXML-berichten
+BRPXML ondersteunt drie soorten verwijsmechanismen om redundantie in het bericht te
+voorkomen en om de samenhang tussen berichtelementen aan te kunnen geven. De
+verwijsmechanismen worden bijvoorbeeld toegepast in geval van meldingen,
+bronverwijzingen en gegevens die in onderzoek zijn genomen.
+Verwijzingen kunnen worden toegepast binnen één bericht of in geval van een
+interactiepatroon VerzoekResultaat vanuit het resultaatbericht naar berichtelementen in
+het verzoekbericht dat daaraan vooraf gegaan is. In deze paragraaf worden de mogelijke
+verwijsmechanismen, hun toepassingsgebied en enkele voorbeelden nader uitgewerkt.
+De volgende verwijsmechanismen worden door BRPXML ondersteund; een verwijzing met
+behulp van:
+• Berichtelementen communicatieID/referentieID
+• Technische sleutels
+• Naam van een gegeven
+In deze paragraaf worden de verwijsmechanismen nader beschreven.
+
+3.6.1
+
+Verwijzing op basis van communicatieID/referentieID
+Indien er binnen een mutatiebericht of volledigbericht sprake is van een verwijzing naar
+een objecttype of een gegevensgroep, kan gebruik gemaakt worden van een verwijizng op
+basis van communicatieID/referentieID.
+Pagina 18 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Voor het berichtelement (objecttype/gegevengroep) waarnaar verwezen wordt, wordt een
+binnen het bericht unieke identificatie communicatieID opgenomen bij het betreffende
+voorkomen van een objecttype of een gegevensgroep.
+Via de referentieID bij een berichtelement wordt vervolgens verwezen naar het
+betreffende objecttype of de gegevensgroep in het bericht. Dit mechanimse wordt onder
+andere toegepast bij meldingen of bronverwijzingen (verantwoordingsgegevens).
+In [LOBRP] paragraaf 8.3.5.1 wordt op deze manier van verwijzen verder ingegaan.
+
+3.6.2
+
+Verwijzing op basis van technische sleutels
+Een tweede vorm van verwijzen binnen BRPXML-berichten bestaat uit een verwijzing op
+basis van een objectSleutel of voorkomenSleutel.
+Verwijzingen op basis van objectSleutels en voorkomenSleutels worden gebruikt voor
+verwijzingen naar:
+1
+2
+
+instanties van objecttypen en/of voorkomens van gegevensgroepen die in
+onderzoek staan;
+verantwoordingsgegevens (Administratieve handeling, Actie, Bronnen) vanuit
+gegevensgroepen via elementen Actie inhoud, Actie verval of actie aanpassing
+geldigheid.
+
+In [LOBRP] paragraaf 8.3.5.2 wordt op deze manier van verwerwijzen verder ingegaan.
+
+3.6.3
+
+Verwijzing op basis van een naam van een gegeven
+Een derde vorm van verwijzen binnen BRPXML-berichten bestaat uit een verwijzing op
+basis van een elementnaam, waarbij de naam van alle aanwijsbare gegevens is geduid
+kan wordne als: <objecttype>.<gegevensgroep>.<elementnaam>
+Verwijzingen op basis van elementnamen worden gebruikt voor verwijzingen naar:
+1. Gegevens die in onderzoek staan
+Indien bijvoorbeeld het gegeven burgerservicenummer van een persoon in onderzoek
+staat, wordt dit in de onderzoeksgegevens geduid als:
+Persoon.Identificatienummers.Burgerservicenummer.
+Staat een nationaliteit van een persoon in onderzoek, dan wordtdit geduid als:
+Persoon.Nationaliteit.
+
+3.7
+
+Verschillen in geval van GBA-bijhoudingen
+Gedurende de duale periode zijn er zowel gemeenten die werken volgens het GBA-stelsel
+als gemeenten die de overstap naar het BRP-stelsel hebben gemaakt.
+De GBA-bijhoudingen worden in de BRP-verwerkt via de Migratievoorzieningen; deze
+verwerking leidt tot enige verschillen in de BRP-leveringen van mutatieberichten en
+volledigberidhten.
+Deze verschillen worden in dit document kort toegelicht; voor de details wordt verwezen
+naar [VERSCHILDOC].
+Pagina 19 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+3.7.1
+
+Verschillen Mutatieberichten
+<Nader uit te werken>
+
+3.7.2
+
+Verschillen Volledigberichten
+<Nader uit te werken>
+
+Pagina 20 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+4
+
+Omgaan met BRP- en StUF-concepten
+
+4.1
+
+Inleiding
+De informatiemodellen van BRP en StUF BG kennen hun eigen berichtsoorten en
+concepten. In dit hoofdstuk wordt beschreven hoe hier in de transfromatie mee wordt
+omgegaan.
+Als uitgangspunt wordt steeds een relevant StUF-concept aangegeven, waarna de invulling
+ten behoeve van de transformatie vanuit BRPXML wordt geduid.
+
+4.2
+
+Actuele en historische gegevens [StUF0301 § 2.3 en 3.3.1]
+StUF [StUF0301]
+De eigenschappen van een object kunnen in de tijd variëren, bijvoorbeeld doordat een
+persoon een aantal keren verhuist. Een object kan ook niet langer bestaan, bijvoorbeeld
+een overleden persoon.
+In het eerste geval spreken we over een een historisch gegeven, in het tweede geval over
+een historisch object. Een historisch object is een object dat in de werkelijkhei niet meer
+bestaat, maar nog wel van belang is. Een historisch object heeft als actuele gegevens de
+laatste (actuele) waarden, voordat het object ophield te bestaan. Deze waarden zijn nog
+steeds geldig.
+Onder een historisch gegeven wordt verstaan een gegeven met een waarde die vroeger
+geldig was, dat wil zeggen met een einde geldigheid in het verleden. Onder ee actueel
+gegeven wordt verstaan een gegeven dat nu geldig is, dat wil zeggen met een begin
+geldigheid in het verlden of heden en een eind geldigheid die geen warade heeft of in de
+toekomst ligt.
+Onder een toekomstig gegeven wordt een gegeven verstaan met een begin geldigheid in
+de toekomst.
+Materiele historie wordt geregistreerd door middel van het metagegeven
+tijdvakGeldigheid, bestaande uit beginGeldigheid en eindGeldigheid, dat de periode aan
+geeft gedurende welke een gegeven of groep van gegevens in de werkelijkheid een
+bepaalde waarde heeft (gehad).
+Formele historie wordt geregistreerd door middel van het metagegeven tijdstipRegistratie,
+dat aangeeft op welk tidjstip de waarde(n) van een gegeven of een groep gegevens in de
+registratie is cq. zijn opgenomen. Formele historie wordt niet opgenomen in de StUF-BG
+berichten.
+Naast objecten onderkent kent StUF ook het begrip Relatie. Een relatie tussen objecten
+heeft als metagegeven ook een tijdvakGeldigheid. Daarnaast beschikt een Relatie ook van
+een zogenaamde tijdvakRelatie, bestaande uit beginRelatie en eindRelatie. Dit zijn geen
+metagegevens, maar eigenschappen van de Relatie.
+
+StUF BG [StUFBG0310]
+Bovenstaande is geïmplementeerd in StUF BG versie 0310.
+
+Pagina 21 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+BRP [LOBRP]
+De BRP onderkent in haar model objecttypen en gegevensgroepen. Relaties zijn
+gemodelleerd als aparte objecttypen met hun eigen gegevensgroepen.
+Per gegevensgroep is bepaald welk historiepatroon wordt ondersteund. De BRP kent de
+volgende historie-patronen:
+Materiele historie
+Formele historie
+Geen historie
+De materiële historie wordt geregistreerd in de vorm van de metagegevens datumAanvang
+geldigheid en datumEindeGeldigheid. De formele historie wordt geregistreerd in de vorm
+van tijdstipRegistratie en tijdstipVerval. Deze gegevens worden alleen geleverd indien de
+afnemer hiervoor is geautoriseerd.
+Daarnaast dient er rekening gehouden te worden met het feit dat er in de BRP
+gegevensgroepen met formele historie zijn, maar waarvan de groep wel attributen bevat
+met een materieel aspect. Zo bevat de gegevensgroep Relatie van de objecttypen Huwelijk
+en Geregistreerd partnerschap attributten met een materieel aspect; te weten
+datumAanvang en datumEinde. Voor een overzicht van de BRP gegevensgroepen met MH,
+FH of FH-Met Materieel aspect wordt verwezen naar Bijlage A - Historiepatroon
+gegevensgroepen BRP.
+In de BRP is een relatie gemodelleerd als een apart objecttype met eigen
+gegevensgroep(en) van een bepaald historiepatroon.
+De BRP bevat geen toekomstige gegevens.
+
+Transformatie-regels
+Bij de transformatie van BRPXML naar StUF BG worden in voorkomende gevallen de StUF
+tijdvakGeldigheid en tijdstipRegistratie gevuld. Bij de transformatie dient met de volgende
+aspecten rekening gehouden te worden:
+1. De BRP onderkent de eigenschappen rondom registratie en geledigheid per
+gegevensgroep, terwijl StUF deze per Entitteitype dan wel per Relatie onderkent.
+2. Voor de levering van gegevens over de Materële en Formele historie dient een
+afnemer in de BRP apart te worden geautoriseerd. Indien gegevens niet in het
+bericht aanwezig zijn, dan worden deze gevuld met StUF-implementatie voor
+‘waardeOnbekend’.
+3. In de BRP bestaand gegevensgroepen met een formele historie patroon met in de
+groep zelf materieel historische attributen (zie ook eerdergenoemd voorbeeld).
+Per situatie moet worden bepaald welke BRP-metagegevens worden gebruikt voor de
+vulling van de StUF BG-metagegevens. Dit geldt ook voor de eigenschappen van een StUF
+Relatie.
+In onderstaande tabel een algemeen algoritme om de inhoud van de historieeigenschappen te transformeren van BRPXML naar StUF BG:
+
+Pagina 22 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+StUF-entiteittype Persoon
+StUF BG – npsLk01
+
+Vulling vanuit BRP
+
+tijdstipRegistratie
+
+In geval van een Mutatiebericht:
+Persoon.AfgeleidAdministratief.TijdstipLaatsteWijziging
+Volledigbericht:
+<Afhankelijk verwerkingswijze volledigbericht; nader uit te werken>
+
+beginGeldigheid
+
+Mutatiebericht:
+Afhankelijk van inhoud in Mutatiebericht afleiden van:
+-
+
+DatumAanvangGeldigheid van een gewijzigde MH-gegevensgroep of
+
+-
+
+attribuut met materieel aspect van een gewijzigde FH-gegevensgroep
+
+Indien er meer gewijizgde gegevensgroepen in het mutatiebericht aanezig zijn en deze
+hebben een afwijkende afgeleide beginGeldigheid, dan wordt de minst recente waarde
+gevuld.
+Volledigbericht:
+<Afhankelijk verwerkingswijze volledigbericht; nader uit te werken>
+eindGeldigheid
+
+Mutatiebericht:
+Vullen met: StUF:noValue=”geenWaarde”
+Volledigbericht:
+<Afhankelijk verwerkingswijze volledigbericht; nader uit te werken>
+
+StUF-relatie: Persoon.verblijftIn.<gerelateerde>
+StUF BG – npsLk01
+
+Vulling vanuit BRP
+
+tijdstipRegistratie
+
+In geval van een Mutatiebericht, waarbij deze StUF-relatie wordt geraakt:
+Persoon.AfgeleidAdministratief.TijdstipLaatsteWijziging
+Volledigbericht:
+<Afhankelijk verwerkingswijze volledigbericht; nader uit te werken>
+
+beginGeldigheid
+eindGeldigheid
+beginRelatie
+eindRelatie
+
+StUF-relatie: Persoon.heeftAlsEchtgenootPartner.<gerelateerde>
+StUF BG – npsLk01
+
+Vulling vanuit BRP
+
+tijdstipRegistratie
+
+In geval van een Mutatiebericht, waarbij deze StUF-relatie wordt geraakt:
+Persoon.AfgeleidAdministratief.TijdstipLaatsteWijziging
+Volledigbericht:
+<Afhankelijk verwerkingswijze volledigbericht; nader uit te werken>
+
+beginGeldigheid
+
+Pagina 23 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+eindGeldigheid
+beginRelatie
+eindRelatie
+
+StUF-relatie: Persoon.heeftAlsKinderen.<gerelateerde>
+StUF BG – npsLk01
+
+Vulling vanuit BRP
+
+tijdstipRegistratie
+
+In geval van een Mutatiebericht, waarbij deze StUF-relatie wordt geraakt:
+Persoon.AfgeleidAdministratief.TijdstipLaatsteWijziging
+Volledigbericht:
+<Afhankelijk verwerkingswijze volledigbericht; nader uit te werken>
+
+beginGeldigheid
+eindGeldigheid
+beginRelatie
+eindRelatie
+
+StUF-relatie: Persoon.heeftAlsOuders.<gerelateerde>
+StUF BG – npsLk01
+
+Vulling vanuit BRP
+
+tijdstipRegistratie
+
+In geval van een Mutatiebericht, waarbij deze StUF-relatie wordt geraakt:
+Persoon.AfgeleidAdministratief.TijdstipLaatsteWijziging
+Volledigbericht:
+<Afhankelijk verwerkingswijze volledigbericht; nader uit te werken>
+
+beginGeldigheid
+eindGeldigheid
+beginRelatie
+eindRelatie
+
+StUF-relatie: Persoon.heeftAlsNationaliteit.<gerelateerde>
+StUF BG – npsLk01
+
+Vulling vanuit BRP
+
+tijdstipRegistratie
+
+In geval van een Mutatiebericht, waarbij deze StUF-relatie wordt geraakt:
+Persoon.AfgeleidAdministratief.TijdstipLaatsteWijziging
+Volledigbericht:
+<Afhankelijk verwerkingswijze volledigbericht; nader uit te werken>
+
+beginGeldigheid
+eindGeldigheid
+beginRelatie
+eindRelatie
+Pagina 24 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Objecttype Reisdocument
+StUF BG – rsdLk01
+
+Vulling vanuit BRP
+
+tijdstipRegistratie
+beginGeldigheid
+eindGeldigheid
+
+4.3
+
+Gegevensmanagement [StUF0301 § 2.4 en 3.1.3]
+StUF [StUF0301]
+In StUF zijn twee begrippen van belang vanuit het oogpunt van gegevensmanagement:
+1) Objectidentificatie
+Objectidentificatie vindt in StUF plaats op basis van logische gegevens, de
+zogenaamde kerngegevens. Daarnaast onderkent StUF door systemen zelf
+toegekende technische sleutels die in de berichtuitwisseling gebruikt kunnen
+worden; dit betreft dan sleutelZendendSysteem wen sleutelOntvangendSysteem.
+2) Verwerking
+Binnen StUF kan de zender aangeven wat voor soort verwerking van de ontvanger
+wordt verwacht. Een bericht kan puur informatief zijn of de zender verwacht dat de
+ontvanger de gegevens uit het bericht overneemt.
+
+StUF BG [StUFBG0310]
+Bovenstaande is geïmplementeerd in StUF BG versie 0310.
+
+BRP [LOBRP]
+In BRP vindt objectidentificatie ook plaats op basis van de logische gegevens. Afnemers
+worden geautoriseerd voor voldoende identificerende gegevens om een persoon te kunnen
+identificeren. BRP kent ook een gemaskeerde technische sleutel. Deze heeft om
+beveiligingsredenen slechts een beperkte geldigheidsduur is niet bedoeld voor opslag in
+ontvangende systemen
+BRP onderkent geen mechanisme om de ontvanger ana te geven wat deze met de
+gegevens moet doen. Dit laat zij geheel aan verantwoordelijkheid van de afnemers zelf.
+De BRP biedt faciliteiten om de gegevens op ieder moment te kunnen synchroniseren.
+
+Transformatie-regels
+Vanuit de BRPXML-berichten worden de StUF-kerngegevens gevuld. Niet aanwezige
+gegevens krijgen de waarde ‘Onbekend’.
+Voor de verwerking door de ontvanger wordt de betreffende StUF-parameter standaard
+gevuld met ‘Verplichte overname’.
+
+Pagina 25 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+4.4
+
+Transactie [StUF0301 § 2.5]
+StUF [StUF0301]
+Niet altijd kan in één kennisgevingsbericht een volledige logische transactie worden
+ondergebracht. Er is binnen StUF dus de behoefte aan de mogelijkheid om meerdere
+kennisgevingsberichten te groeperen tot één transactie. Deze zogenaamde samengestelde
+transacties worden opgebouwd uit atomaire kennisgevingen.
+
+StUF BG [StUFBG0310]
+Bovenstaande is geïmplementeerd in StUF BG versie 0310.
+
+BRP [LO BRP]
+In de BRP worden zogenaamde administratieve handelingen onderkend. Deze worden
+beschouwd als een transactionele eenheid en vormen de basis voor het aanmaken en
+leveren van een mutatiebericht.
+Administratieve handelingen behandelen niet in alle gevallen een volledige businesstransactie. Voorbeeld hiervan is de Vestiging niet ingeschrevene. Deze administratieve
+handeling verzorgt de registratie van de basisgegevens van een persoon en hiermee de
+aanleg van een mini PL. Met de overige administratieve handelingen rondom de
+reisdocument-, natinaliteit- en huwelijksgegevens worden de overige gegevens
+geregisteerd. Deze administratieve handelingen leiden ieder op zich tot een eigen
+mutatiebericht.
+Daarnaast kent de BRP de situatie dat in één mutatiebericht de nieuwe of gewijzigde
+gegevens van twee persone wordt geleverd. Dit is bijvoorbeeld het geval bij een
+Voltrekking huewelijk in Nederland.
+Ander aspect om bij de transformatie rekening te houden is d elevering van zogenaamde
+Volledigberichten door de BRP. Hierin wordt een gehele Persoonslijst geleverd, die vertaald
+zal worden naar verschillende atomaire StUF-kennisgevingen.
+
+Transformatie-regels
+Vanuit de BRPXML-berichten kan alle informatie worden gehaald om het StUF-concept
+Transactie invulling te geven.
+In voorkomende gevallen wordt dit gedaan door een enkelvoudig te vertalen BRPXMLbericht te transformeren naar meerdere StUF-kennigegevingen. Hiervoor worden door de
+StUFBG Transfromatiecomponent geen samengestelde kennisgevingen aangemaakt. In
+plaats hiervan worden door de StUFBG Transformatiecomponent in juiste volgorde van
+verwerking geretourneerd aan de aanroepende dienst.
+
+4.5
+
+Soorten entiteittypen en plaats in bericht [StUF0301 § 3.1.1]
+StUF [StUF0301]
+De volgende entiteittypen binnen StUF BG zijn van belang voor de transformatie:
+1) Fundamenteel
+Persoon (NPS)
+Reisdocument (RSD)
+2) Relatie-entiteittypen:
+Persoon.verblijftop.Adres
+Pagina 26 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+-
+
+Objectidentificatie vindt in StUF plaats op basis van logische gegevens, de
+zogenaamde kerngegevens.
+
+StUF BG [StUFBG0310]
+Bovenstaande is geïmplementeerd in StUF BG versie 0310.
+
+BRP [LO BRP]
+Voor de objecten en gegevensgroepen van de BRP wordt verwezen naar het Logisch
+ontwerp BRP. In de mutatie- en volledigberichten zijn de objecten herkenbaar door de
+naamgeving in het XML-attribute objecttype. Gegevensgroepn worden niet apart geduid
+in een XML-attribute, maar kunnen worden herkend aan de tagnaam in het bericht.
+
+Transformatie-regels
+Op basis van de XML-attributes en de tagnamen zijn de BRP-objecttypen,
+-gegevensgroepen en -attributen duidelijk herkenbaar en kunnen worden getransformeerd
+naar de overeenkomstige StUF BG entiteittypen, -relaties en -attributen. Zie verdere
+uitwerking in dit document.
+
+4.6
+
+Metagegevens entiteittype [StUF0301 § 3.2.1]
+StUF [StUF0301]
+De volgende metagegevens voor entiteittypen worden door StUF onderkend:
+1. entiteittype
+2. sleutelVerzendend
+3. sleutelOntvangend
+4. sleutelGegevensbeheer
+
+StUF BG [StUFBG0310]
+Bovenstaande is geïmplementeerd in StUF BG versie 0310.
+
+BRP [LO BRP]
+De volgende metagegevens voor objecttypen worden door BRP onderkend:
+1. objecttype
+2. objectSleutel
+3. communicatieId (in geval van bijvoorbeeld een melding in het bericht)
+4. verwerkingssoort (alleen in geval van mutatiebericht)
+De volgende metagegevens voor gegevensgroepen worden door BRP onderkend:
+1. voorkomenSleutel
+2. communicatieId (in geval van bijvoorbeeld een melding in het bericht)
+3. verwerkingssoort (alleen in geval van mutatiebericht)
+
+Transformatie-regels
+Vanuit de beschikbare BRP-metagegevens wordt alleen de waarde van objecttype
+opgenomen in de StUF BG-berichten.
+De metagegevens objectSleutel, voorkomenSleutel, communicatieID en verwerkingssoort
+worden voor verschillende doeleinden (bv. Meldingen, Onderzoeksgegevens en
+Verantwoordingsgegevens) wel geïnterpreteerd tijdens de transformatie, maar niet
+overgenomen in de vertaalde StUF BG-berichten.
+Pagina 27 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+4.7
+
+Extra elementen [StUF0301 § 3.2.4]
+StUF [StUF0301]
+Het kan voorkomen dat er gegevens nodig zijn die niet in het basis-schema van het
+sectormodel (BG) gedefinieerd zijn. Bijvoorbeeld vanwege nieuwe ontwikkelingen in
+basisregistraties of de behoefte aan specifieke gegevens binnen een sectormodel. Hiervoor
+onderkent StUF het concept van ExtraElementen.
+
+StUF BG [StUFBG0310]
+Bovenstaande is geïmplementeerd in StUF BG versie 0310. In Bijlage B - Extra
+elementen StUF BG is een opsomming opgenomen van de beschikbare extra elementen
+in StUF BG en de hierbij behorende transformatieregels beperkt tot de entiteittypen en
+relatie-entiteiten zoals genoemd in paragraaf 4.5.
+
+BRP [LO BRP]
+BRP kent geen ExtraElementen.
+
+Transformatie-regels
+Zie bijlage Bijlage B - Extra elementen StUF BG
+
+4.8
+
+Algemeen mechanisme metagegevens [StUF0301 § 3.3.2]
+StUF [StUF0301]
+Een metagegeven is altijd een al dan niet samengesteld element dat wordt opgenomen
+binnen een entiteittype. In de StUF-standaard of in een sectormodel wordt de semantiek,
+syntax en functionaliteit voor een metagegeven gedefinieerd. Een metagegeven heeft één
+verplicht attribute metagegeven met als waarde true en twee nietverplichte attributes
+groepsnaam en elementnaam. Het verplichte attribute metagegeven geeft aan dat dit
+element een metagegeven is.
+Als de attributes groepsnaam en elementnaam niet voorkomen, dan gaat het om
+metagegevens met betrekking tot het entiteittype. Als het attribute groepsnaam wel en
+elementnaam niet voorkomt, dan hebben de metagegevens betrekking op gegevens uit de
+gespecificeerde groep. Als het attribute elementnaam (al dan niet in combinatie met
+groepsnaam) voorkomt, dan hebben de metagegevens betrekking op het gespecificeerde
+element.
+De waarde groepsnaam=”” in combinatie met het attribute elementnaam geeft aan dat het
+gaat om een element op het niveau van het entiteittype en niet om een element binnen
+een groep. Als een element op meerdere plekken in een entiteittype kan voorkomen, dan
+is het verplicht om naast het attribute elementnaam ook het attribute groepsnaam op te
+nemen op het metagegeven.
+Op basis van dit mechanisme kunnen mogelijk de BRP-gegevens met de indicatie onjuist
+of strijdig met de openbare orde worden geduid.
+
+StUF BG [StUFBG0310]
+Bovenstaande is geïmplementeerd in StUF BG versie 0310.
+Ja/nee? Vanuit StUF BG-invalshoek aan te vullen door Opdrachtnemer/VNG-KING.
+
+Pagina 28 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+BRP [LO BRP]
+In de BRP wordt voor gegevens die onjuist of strijdig met de openbare orde zijn het
+attribuut nadereAanduidingVerval gevuld. Dit attribuut geldt voor de gehele
+gegevensgroep.
+De BRP is bij wet verplicht deze gegevens te leveren in volledigberichten. In
+mutatieberichten worden deze gegevens alleen verplicht geleverd als de betreffende
+mutatie aanleiding heeft gegeven tot het onjuist dan wel strijdig met de openbare orde
+geraken van de gegevens. Levering vindt uiteraard uitsluitend plaats als de afnemer voor
+betreffende gegevensgroep is geautoriseerd.
+
+Transformatie-regels
+Vanuit StUF BG-invalshoek aan te vullen door Opdrachtnemer/VNG-KING. Worden
+onjuist/strijdig gegevens onderkend in StUF BG?
+
+4.9
+
+Metagegevens brondocumenten [StUF0301 § 3.3.3]
+StUF [StUF0301]
+Een brondocument is een document op grond waarvan gegevens zijn geregistreerd. In
+StUF worden gegevens over brondocumenten altijd in een entiteit opgenomen in
+combinatie met de gegevens die op grond van het brondocument zijn geregistreerd.
+StUF kent niet zoals de BRP het onderscheid tussen een brondocument voor het geldig
+worden van gegevens en een brondocument voor het niet langer geldig zijn van gegevens.
+Bij het niet langer geldig zijn van gegevens is de waarde hetzij vervangen door een
+nieuwe waarde, hetzij vervangen door de waarde StUF:noValue=”geenWaarde”8, in beide
+gevallen is er sprake van een 'nieuwe' waarde en niet van een niet langer geldig zijn van
+een waarde.
+StUF kent het gereserveerde element <brondocument StUF:metagegeven=”true”> met de
+niet-verplichte attributes groepsnaam en elementnaam. StUF laat de definitie van de
+inhoud van het <brondocument> element over aan het domeinmodel, omdat in de
+praktijk nogal wat verschillende definities worden gebruikt die moeilijk op één noemer te
+brengen zijn. GBA, Kadaster en BAG hanteren in elk geval verschillende definities.
+
+StUF BG [StUFBG0310]
+Bovenstaande is geïmplementeerd in StUF BG versie 0310.
+Ja/nee? Vanuit StUF BG-invalshoek aan te vullen door Opdrachtnemer/VNG-KING.
+
+BRP [LO BRP]
+BRP kent uitgebreide verantwoordingsinformatie. De opbouw van de
+verantwoordinggegevens in de mutatieberichten en volledigberichten is als volgt:
+Administratieve handeling
+AdministratieveHandeling/Bronnen
+AdministratieveHandeling/Acties
+Actie/Bronverwijzingen
+In de BRP kent een gegevensgroep naast de metagegevens voor de materiële of formele
+historie ook metagegevens voor de verantwoording; dit zijn:
+Actie inhoud (de actie op basis waarvan groep is ontstaan)
+Actie verval (de actie op basis waarvan de groep is vervallen)
+Actie aanpassing geldigheid (actie op basis waarvan einde geldigheid is aangepast)
+Pagina 29 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Bovenstaande meta-gegevens zijn gevuld met de unieke identificatie van de Actie die de
+gegevensgroep heeft doen ontstaan, vervallen of op basis waarvan de geldigheid is
+aangepast.
+Met deze unieke identificatie kan in het mutatiebericht of het volledigbericht via de
+AdministratieveHandeling/Acties en Actie/Bronnen de juiste
+AdministratieveHandeling/Bron worden gevonden. Een AdministratieveHandeling/Bron kan
+een document, akte of rechtsgrond zijn.
+De verantwoordinggegevens worden alleen geleverd indien de afnemer hiervoor is
+geautoriseerd.
+
+Transformatie-regels
+Vanuit StUF BG-invalshoek aan te vullen door Opdrachtnemer/VNG-KING.
+
+4.10
+
+Metagegevens gebeurtenissen [StUF0301 § 3.3.4]
+StUF [StUF0301]
+In een domeinmodel kan op het niveau van het entiteittype of van groepen van attributen
+en/of relaties daarbinnen gedefinieerd worden welke gebeurtenissen worden onderkend
+met betrekking tot de objecten van dat type c.q. tot die groep van gegevens voor objecten
+van dat type. In het domeinmodel dienen de onderkende gebeurtenissen op het niveau
+van een entiteittype of van een groep gegevens daarbinnen gedefinieerd te worden.
+StUF kent het gereserveerde element <gebeurtenis StUF:metagegeven=”true”> met de
+niet-verplichte attributes groepsnaam en elementnaam en het verplichte attribute tijdstip
+voor het opnemen van gebeurtenissen rond een object in berichten.
+
+StUF BG [StUFBG0310]
+Bovenstaande is geïmplementeerd in StUF BG versie 0310.
+Ja/nee? Vanuit StUF BG-invalshoek aan te vullen door Opdrachtnemer/VNG-KING.
+
+BRP [LO BRP]
+In de BRP wordt het bijhouden van gegevens als gevolg van levensgebeurtenissen,
+verzoeken van personen, ambtshalve wijzigingen en correcties vertaald naar zogenaamde
+administratieve handelingen, waarmee nieuwe of gewijzigde persoonsgegevens in de
+centrale voorzieningen kunnen worden opgenomen. De naam en enkele andere
+eigenschappen van een administratieve handeling wordn als onderdeel van de
+verantwoordinggegevens in een BRPXML mutatiebericht of volledigbericht opgenomen.
+
+Transformatie-regels
+In het sectormodel StUF BG zijn geen elementen opgenomen voor gebeurtenissen. Door
+een beperkt aantal leveranciers is een poging gedaan om een gebeurtenis in
+kennisgevingsberichten af te leiden op basis van het aanwezig zijn van bepaalde
+gewijzigde gegevens. Dit initiatief heeft nog geen opvolging gekregen. Er vindt derhalve
+geen transformatie van deze gegevens plaats.
+
+4.11
+
+Metagegevens status van gegevens [StUF0301 § 3.3.5]
+StUF [StUF0301]
+Met betrekking tot de status van gegevens onderkent StUF twee metagegevens:
+Pagina 30 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+1. inOnderzoek
+Dit metagegeven geeft aan dat er twijfel is over de juistheid van een gegeven,
+bijvoorbeeld vanwege een terugmelding naar een basisregistratie. Hangende het
+onderzoek blijft de in twijfel getrokken waarde van het gegeven gehandhaafd
+2. inBewerking
+Het is soms wenselijk al (een) kennisgeving(en) te versturen voordat de zender
+helemaal klaar is met het doorvoeren van veranderingen in een object,
+bijvoorbeeld om aan de ontvanger te laten weten dat de gegevens van een
+object aan het veranderen zijn
+In StUF worden deze twee metagegevens geïmplementeerd door middel van de
+gereserveerde elementen <inOnderzoek StUF:metagegeven=”true”> en <inBewerking
+StUF:metagegeven=”true”>
+
+StUF BG [StUFBG0310]
+Bovenstaande is geïmplementeerd in StUF BG versie 0310.
+
+BRP [LO BRP]
+In de BRPXML-berichten worden de onderzoeksgegevens apart van de objecttypen en
+gegevensgroepen opgenomen. Binnen de onderzoeksgegevens kan de status van het
+onderzoek (aangevangen of reeds beëindigd) worden herleid op basis van het objecttype
+Onderzoek. Daarnaast is bij het onderzoekhet objecttype GegevenInOnderzoek
+opgenomen. In dit onbjecttype wordt op basis van de volgende attributen verwezen naar
+de persoonsggegevens die in onderzoek zijn geplaatst:
+elementNaam
+objectsleutelGegeven
+voorkomensleutelGegeven
+Via attribuut elementNaam wordt verwezen naar het element dat in onderzoek is
+geplaatst. Via dit element kan naar een objecttype, gegevensgroep of attribuut worden
+verwezen; bijvoorbeeld:
+PersoonNationaliteit; als het gehele objecttype Nationaliteit in onderzoek staat
+Persoon.Geboorte; als de gehele gegevensgroep geboorte in onderzoek staat
+Persoon.Geboorte.Datum; als het attribuut geboortedatum in onderzoek staat
+Via de attributen objectsleutelGegeven en voorkomensleutelGegeven wordt verwezen naar
+het betreffende voorkomen van een objecttype of een gegevensgroep. De inhoud van
+beide attributen heeft dezelfde waarde als de objectSleutel en vorokomenSleutel.
+Indien een geheel objecttype (bv. PersoonNationaliteit) in onderzoek staat worden in
+GegevenInOnderzoek alleen de attributen elementNaam en objectsleutelGegeven gevuld.
+In de BRP wordt geen apart attribuut voor inBewerking onderkend.
+
+Transformatie-regels
+Vanuit StUF BG-invalshoek aan te vullen door Opdrachtnemer/VNG-KING.
+
+4.12
+
+Omgaan met (onbekende) datums
+StUF [StUF0301]
+In StUF wordt in geval van (deels) onbekende datums een indicator (xml-attribuut
+IndOnvolledigeDatum) met de betreffende datum meegeleverd. Dit xml-attribuut kan de
+Pagina 31 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+volgende waarden bevatten:
+Waarde
+
+Betekenis
+
+J
+
+De datum heeft een waarde maar jaar, maand en dag zijn onbekend
+
+M
+
+De datum heeft een waarde maar maand en dag zijn onbekend
+
+D
+
+De datum heeft een waarde maar maand en dag zijn onbekend
+
+V
+
+Datum is volledig
+
+StUF BG [StUFBG0310]
+Bovenstaande is geïmplementeerd in StUF BG versie 0310.
+
+BRP [LO BRP]
+In BRPXML wordt een (deels) onbekende datum volgens de volgende notatie opgenomen:
+- jjjj-mm-dd
+Bekende datum
+- jjjj-mm
+Dag onbekend
+- jjjj
+Dag en maand onbekend
+- 0000
+Dag, maand en jaar onbekend
+
+Transformatie-regels
+Transformatie op basis van nu beschikbare formaten uitvoeren. Ten behoeve van de
+volgende versie van StUF wordt gewerkt aan een andere notatiewijze. Hiermee wordt nu
+in de StUFBG Transformatiecomponent geen rekening gehouden.
+
+4.13
+
+Omgaan met tijdstippen
+StUF [StUF0301]
+In StUF wordt een tijdstip opgenomen volgens het volgende technische patroon:
+<pattern value="[0-9]{8,17}"/>
+Hiermee kan zowel een datum (jjjjmmdd) als een tijdstip (jjjjmmddhhmmssddd) worden
+uitgedrukt. Een voorbeeld van een tijdstip is de volgende waarde: “2015121314153399”
+In StUF kan bij een tijdstip ook de indicator IndOnvolledigeDatum worden opgenomen.
+
+StUF BG [StUFBG0310]
+Bovenstaande is geïmplementeerd in StUF BG versie 0310.
+
+BRP [LO BRP]
+In BRPXML wordt een tijdstip altijd volgens volgende notatie in de berichten opgenomen:
+jjjj-mm-ddThh:mm:ss.dddZ
+Hierbij gelden de volgende regels:
+- Weergave in Zulu-tijd; ontvanger kan dit desgewenst omzetten in lokale tijdzone
+- Er is altijd sprake van een bekende datum
+- De tijd is volledig gevuld; tot in duizendsten van seconden
+
+Pagina 32 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Transformatie-regels
+Transformatie op basis van nu beschikbare formaten uitvoeren. Ten behoeve van de
+volgende versie van StUF wordt gewerkt aan een andere notatiewijze. Hiermee wordt nu
+in de StUFBG Transformatiecomponent geen rekening gehouden.
+
+4.14
+
+Transformatieprincipes BRPXML mutatieberichten
+Een BRPXML mutatiebericht leidt na de transformatie in principe tot één StUF BG Lk01kennisgevingsbericht voor de StUF entiteittypen NPS (Natuurlijk persoon) of RSD
+(Reisdocument).
+Hiervan wordt onder andere in de volgende situaties vanaf geweken:
+1) In het mutatiebericht komen twee hoofdpersonen (StUF-entiteittype NPS) voor;
+dit kan bijvoorbeeld het geval zijn bij:
+a) het voltrekken of ontbinden van een huwelijk/geregistreerd partnerschap
+waarbij een symmetrische relatie tot stand komt. In dat geval levert de BRP de
+gewijzigde gegevens van beide partners in één mutatiebericht aan de afnemer.
+b) bij de geboorte van een kind, waarbij met de ouders een symmetrische
+relatie tot stand komt. In dat geval levert de BRP de gewijzigde gegevens van
+beide ouders in één en hetzelfde mutatiebericht. Van het kind wordt in dat geval
+een separaat volledigbericht geleverd; het kind is namelijk een nieuwe
+ingezetene.
+2) In het mutatiebericht komen verschillende reisdocumenten (StUFentiteittype
+RSD) voor; dit kan bijvoorbeeld het geval zijn bij het corrigeren van
+reisdocumentgegevens.
+Indien er tijdens de transformatie meerdere Lk01-kennisgevingsberichten worden
+aangemaakt, dan worden deze door de StUF BG Transformatiecomponent in de juiste
+volgorde (eerste in de lijst is de eerste voor de verwerking) aan de aanroepende
+component terug gegeven.
+Betreft het meerdere Lk01-kennisgevingsberichten voor één het hetzelfde object, dan
+keuze maken voor mechanisme ‘InBewerking’ of anderszins (Opdrachtnemer/VNG-KING).
+
+4.15
+
+Transformatieprincipes BRPXML volledigberichten
+Een BRPXML volledigbericht leidt na de transformatie in principe tot meerdere StUF BG
+Lk01-kennisgevingsbericht voor de StUF entiteittypen NPS (Natuurlijk persoon) of RSD
+(Reisdocument).
+Dit wordt veroorzaakt door onder andere de volgende situaties:
+1) De aanwezigheid van historische gegevens in het volledigbericht; bijvoorbeeld
+historische naam- of adresgegegevens. In dat geval worden tijdens de
+transformatie voor één en dezelfde persoon meerdere Lk01kennisgevingsberichten aangemaakt, waarbij het eerste bericht de oudste
+situatie weer geeft (verwerkingssoort is “T”). Ieder volgend bericht verzorgt dan
+de wijziging op de voorgaande situatie (verwerkingssoort is “W” of “C”) totdat
+de actuele situatie voor een persoon is bereikt.
+In Bijlage C – Peildatums BRP is vanuit een BRP-invalshoek aangegeven
+welke elementen voor welke objecten en groepen gebruikt kunnen worden als
+Pagina 33 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+peildatum om op basis hiervan vanuit een StUF BG-invalshoek te bepalen of en
+zoja hoe een Volledigbericht wordt opgeknipt in meerdere LK01-berichten.
+2) De aanwezigheid van zowel persoonsgegevens als reisdocumentgegevens in het
+Volledigbericht. In dat geval worden tijdens de transformatie zowel de Lk01kennisgevingsberichten voor NPS als voor RSD aangemaakt. Voor de
+betreffende NPS- en RSD-en mogelijk meerdere kennisgevingsberichten als er
+historie aanwezig is in het volledigbericht (zie punt 1).
+Indien er tijdens de transformatie meerdere Lk01-kennisgevingsberichten worden
+aangemaakt, dan worden deze door de StUF BG Transformatiecomponent in de juiste
+volgorde (eerste in de lijst is de eerste voor de verwerking) aan de aanroepende
+component terug gegeven.
+Betreft het meerdere Lk01-kennisgevingsberichten voor één het hetzelfde object, dan
+keuze maken voor mechanisme ‘InBewerking’ of anderszins (Opdrachtnemer/VNG-KING).
+
+Pagina 34 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+5
+
+Ontwerpbeslissingen StUF BG Vertaling
+
+In het voorgaande hoofdstuk zijn de ontwerpbeslissingen ten aanzien van de StUFconcepten beschreven. Daarnaast gelden de volgende algemene ontwerpbeslissingen voor
+de transformatie van BRPXML Mutatie- en Volledigberichten naar StUF BG:
+1.
+
+Om een BRPXML mutatiebericht of volledigbericht te kunnen transformeren
+naar een StUF BG Kennisgevingsbericht moet het te vertalen BRPXML-bericht
+XSD-valide zijn. Bij schending hiervan ontvangt de verzoeker direct een
+Resultaatbericht met een melding.
+
+2.
+
+In het te vertalen BRPXML-bericht moeten minimaal de volgende groepen van
+de hoofdpersoon aanwezig zijn:
+• Identificatienummers
+• Samengestelde naam
+• Geboorte
+• Geslachtsaanduiding
+Door opdrachtnemer en VNG-KING nader te bepalen of er ook een verplichting
+bestaat voor de minimale aanwezigheid van andere BRP-elementen.
+
+3.
+
+In een BRPXML Mutatiebericht moet het attribuut ‘verwerkingssoort’ voor de
+BRP-objecten en gegevensgroepen gevuld zijn
+
+4.
+
+De vertaling van een BRPXML mutatie- of volledigbericht leidt in alle gevallen
+tot een StUF BG Lk01-bericht.
+Door opdrachtnemer nader af te stemmen met VNG-KING.
+
+5.
+
+Dit kunnen Lk01-berichten zijn voor de volgende StUF Entiteittypen:
+•
+NPS
+Natuurlijk persoon
+•
+RSD
+Reisdocument
+
+6.
+
+Er vindt geen vertaling plaats van BRPXML Volledigberichten van stamgegevens
+(in StUF BG Tabel-entiteiten; dit geldt voor:
+• GEM
+Gemeenten
+• LND
+Landen
+• NAT
+Nationaliteiten
+• RDS
+Reisdocumentsoort
+Reden hiervan is de lage mutatiegraad en het feit dat deze ‘openbaar
+beschikbaar’ zijn en langs deze weg zelfstandig door afnemers kunnen worden
+verwerkt in bijvoorbeeld de lokale distributie- en magazijnsystemen.
+Door opdrachtnemer af te stemmen met VNG-KING.
+
+7.
+
+In geval een vertaling leidt tot meerdere Lk01-berichten (bv. bij de vertaling
+van een Volledigbericht) dan worden deze door de StUF BG
+Transformatiecomponent geserialiseerd in de juiste verwerkingsvolgorde
+(eerste te verwerken bericht vooraan) opgenomen in de lijst met vertaalde
+berichten. De afnemer kan ontvangen vertalingen in alle gevallen op eenzelfde
+wijze verwerken.
+
+8.
+
+Indien verplichte kerngegevens niet in het te vertalen BRP Mutatie- of
+Volledigbericht zijn opgenomen, dan worden deze gevuld met de StUFimplementatie voor ‘nil’ (xsi:nil="true"/>’).
+Door Opdrachtnemer af te stemmen met VNG-KING.
+
+Pagina 35 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+9.
+
+In BRPXML Mutatieberichten wordt zowel de oude als de nieuwe situatie van de
+gewijzigde gegevensgroepen meegeleverd; inclusief een verwerkingssoort.
+Bij de vertaling van de berichten wordt voor Was/Wordt-Relaties en Entiteiten
+(bv. vorige Huwelijken en Kinderen) volgende algoritme toegepast:
+•
+‘Wordt’-situatie wordt gevuld met Ontvangen situatie
+•
+‘Was’-situatie wordt gevuld met de StUF-implementatie voor ‘nil’
+(xsi:nil="true"/>’).
+Door Opdrachtnemer af te stemmen met VNG-KING.
+
+10. De in BRP opgenomen administratieve handelingen (als onderdeel van de
+Verantwoordingsinformatie) worden niet vertaald naar een gebeurtenis in StUF
+BG.
+Door Opdrachtnemer af te stemmen met VNG-KING.
+
+11. De volgende ‘extra elementen’ worden bij de vertaling van BRPXML naar StUF
+BG gevuld:
+•
+einddatumUitsluitingEuropeesKiesrecht
+•
+einddatumUitsluitingKiesrecht
+Door Opdrachtnemer af te stemmen met VNG-KING.
+
+Pagina 36 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+6
+
+Interface StUF BG Transformatiecomponent
+
+Voor de aanroep van de StUF BG Transformatiecomponent is een inkomende en uitgaande
+interface vastgesteld. Deze interfaces worden in dit hoofdstuk nader beschreven.
+
+6.1
+
+Inkomende interface
+De inkomende interface van de StUF BG Transformatiecomponent bestaat uit de volgende
+elementen:
+Element
+Versie StUF BG
+
+Aanwezigheid
+Verplicht
+
+Toelichting
+Het versienummer van StUF BG waarvoor de vertaling moet
+worden uitgevoerd; mogelijke waarde:
+-
+
+Vertaling berichtsoort BRP
+
+Verplicht
+
+“0310”
+
+De BRP berichtsoort dat ter vertaling wordt aangeboden;
+mogelijke waarden:
+
+Te vertalen bericht
+
+6.2
+
+Verplicht
+
+-
+
+“Mutatiebericht”
+
+-
+
+“Volledigbericht”
+
+De inhoud van het te vertalen BRPXML-bericht.
+
+Uitgaande interface
+De uitgaande interface van de StUF BG Transformatiecomponent bestaat uit de volgende
+elementen:
+Element
+Verwerkingsresultaat
+
+Lijst meldingen
+
+Aanwezigheid
+Verplicht
+
+Optioneel
+
+Toelichting
+Het resultaat van de vertaling; mogelijke waarden:
+-
+
+“Geslaagd”
+
+-
+
+“Foutief”
+
+Indien zich tijdens de vertaling fouten en of waarschuwingen
+hebben voorgedaan, dan worden deze aan de aanroepende
+component gemeld.
+Hierbij worden de volgende gegevens verstrekt:
+-
+
+Volgnummer bericht; het volgnummer van het
+bericht waarop de melding betrekking heeft. Indien het
+een blokkerende melding betreft en er geen vertaald
+bericht is aangemaakt, wordt de waarde ‘0’ gevuld.
+
+-
+
+Code; de aanduiding van de regel die is
+geschonden. De inhoud van deze code is:
+- positie 1-2: “SV” (StUFBG Vertaler)
+- positie 3-5: volgnummer
+
+-
+
+Soortnaam; de soort van de melding; mogelijke waarden
+zijn:
+- “Waarschuwing”
+- “Fout”
+
+-
+
+Meldingtekst; een zelfverklarende tekst van de de
+waarschuwing of de fout; maximaal 180 posities.
+
+Pagina 37 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Lijst vertaalde berichten
+
+Optioneel
+
+Indien het verwerkingsresultaat “Geslaagd” is, dan gevuld
+met één of meer StUF BG-kennisgevingsberichten.
+
+Pagina 38 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+7
+
+Transformatie BRPXML naar StUF BG
+
+7.1
+
+Berichtgegevens
+
+De transformatie van de BRPXML-berichtgegevens naar StUF BG is als volgt:
+
+7.1.1
+
+StUFBG - Stuurgegevens
+
+StUF BG – npsLk01/rsdLk01
+
+Vulling vanuit BRP
+
+zendendeOrganisatie
+
+zendendePartij
+
+zendendeApplicatie
+zendendeAdministratie
+zendendeGebruiker
+
+zendendeSysteem
+<niet gevuld>
+<niet gevuld>
+
+ontvangendeOrganisatie
+
+ontvangendePartij
+
+ontvangendeApplicatie
+
+<niet gevuld>
+
+zendendeAdministratie
+zendendeGebruiker
+referentienummer
+
+<niet gevuld>
+<niet gevuld>
+referentienummer
+
+tijdstipBericht
+
+tijdstipVerzending
+
+Entiteittype
+
+Afhankelijk van getransformeerd object een vaste waarde:
+
+7.1.2
+
+“NPS”
+
+i.g.v. Persoon
+
+-
+
+“RSD”
+
+i.g.v. Reisdocument
+
+StUFBG - Parameters
+
+StUF BG – npsLk01/rsdLk01
+indicatorOvername
+mutatiesoort
+
+-
+
+Vulling vanuit BRP
+Vaste waarde “V” (Verplichte overname).
+Voor een Mutatiebericht af te leiden van de inhoud van het BRPXML-bericht:
+Attribuut ‘verwerkingssoort’ bij hoofdpersoon;
+-
+
+inhoud hiervan “Toevoeging”, dan is mutatiesoort gelijk aan “T”
+
+-
+
+inhoud hiervan “Wijziging”, dan is mutatiesoort gelijk aan “W”.
+
+In geval van een Volledigbericht:
+-
+
+vaste waarde “T”
+
+Wat te doen met de StUF-waarden:
+-
+
+V(erwijdering)
+
+-
+
+C(correctie zonder FH)
+
+-
+
+F(Correctie met FH)
+
+Pagina 39 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+7.1.3
+
+StUFBG - Meldingen
+
+StUF BG – npsLk01/rsdLk01
+
+Vulling vanuit BRP
+
+?
+
+regelCode
+
+?
+
+soortNaam
+
+?
+
+melding
+
+7.2
+
+Persoonsgegevens (npsLk01)
+
+De transformatie van de BRP-persoonsgegevens naar StUF BG entiteittype NPS wordt per te
+transformeren StUF BG-element aangegeven.
+Indien de elementen 1:1 kunnen worden overgezet, wordt alleen het BRP-elementnummer
+aangegeven. Voor de specifieke eigenschappen van de BRP-elementen wordt verwezen naar
+[TRAFOTAB].
+Indien voor transformatie een specifieke transformatieregel nodig is, wordt deze in de tabel
+opgenomen. In geval van een uitgebreide regel wordt verwezen naar een specifieke paragraaf waarin
+de details zijn opgenomen.
+Samen nader uit te werken:
+1) Onderstaande specificatie voldoende diepgang?
+2) Hoe vulling oude en nieuwe waarde in StUF BG aangeven; eenmalig beschrijven?
+3) Heeft verwerking van volledigbericht nog invloed op beschreven algoritmes?
+4) Invulling StUF-gerelateerde specs inhoudelijke verantwoordelijkheid Opdrachtnemer/VNG-KING
+
+7.2.1
+
+StUF BG – npsLk01
+
+StUF BG – npsLk01
+
+Vulling vanuit BRP
+
+inp.bsn
+
+Persoon.Identificatienummers.Burgerservicenummer
+
+authentiek
+anp.identificatie
+sub.typering
+
+Vaste waarde “J”
+<geen transformatie>
+Persoon.Bijhouding.Bijhoudingsaard:
+-
+
+“I” wordt “Ingezetene”
+
+-
+
+“N” wordt “Niet-ingezetene”
+
+-
+
+“?” wordt StUF “waardeOnbekend”
+
+Persoon.Identificatienummers.Administratienummer
+geslachtsnaam
+
+Persoon.SamengesteldeNaam.Geslachtsnaamstam
+
+voorvoegselGeslachtsnaam
+
+Persoon.SamengesteldeNaam.Voorvoegsel +
+Persoon.SamengesteldeNaam.Scheidingsteken
+Indien Scheidingsteken gelijk aan ‘spatie’, dan alleen
+Persoon.SamengesteldeNaam.Voorvoegsel
+
+voorletters
+
+Afleiden van: Persoon.SamengesteldeNaam.Voornamen
+
+voornamen
+
+Persoon.SamengesteldeNaam.Voornamen
+
+Pagina 40 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+StUF BG – npsLk01
+
+Vulling vanuit BRP
+
+aanduidingNaamgebruik
+
+Persoon.Naamgebruik.Code; waarden BRP één-op-één overnemen; dit is:
+-
+
+“E”  “E”
+
+-
+
+“P”
+
+-
+
+“V”  “V”
+
+-
+
+“N”  “N”
+
+ “P”
+
+geslachtsnaamPartner
+
+GerelateerdePartner.SamengesteldeNaam.Geslachtsnaamstam
+
+voorvoegselGeslachtsnaamPartner
+
+GerelateerdePartner.SamengesteldeNaam.Voorvoegsel +
+GerelateerdePartner.SamengesteldeNaam.Scheidingsteken
+Indien Scheidingsteken gelijk aan ‘spatie’, dan alleen
+GerelateerdePartner.SamengesteldeNaam.Voorvoegsel
+
+aanhefAanschrijving
+
+<geen transformatie>
+
+voornamenAanschrijving
+
+<geen transformatie>
+Persoon.Naamgebruik? (in StUF BG semantisch anders?)
+
+geslachtsnaamAanschrijving
+
+<geen transformatie>
+Persoon.Naamgebruik? (idem; waar zijn voorvoegsels?)
+
+adellijkeTitelPredikaat
+
+Persoon.SamengesteldeNaam.AdellijkeTitelCode
+Persoon.SamengesteldeNaam.PredikaatCode
+Voor transformatieregels zie paragraaf 7.2.2
+
+geslachtsaanduiding
+
+Persoon.Geslachtsaanduiding.Code; waarden BRP één-op-één overnemen;
+dit is:
+-
+
+“M”  “M”
+
+-
+
+“V”  “V”
+
+-
+
+“O”  “O”
+
+geboortedatum
+
+Persoon.Geboorte.Datum
+
+inp.geboorteplaats
+
+Persoon.Geboorte.Gemeentecode
+Persoon.Geboorte.BuitenlandsePlaats
+Persoon.Geboorte.Locatieomschrijving
+Voor transformatieregels zie paragraaf 7.2.3.
+
+inp.geboorteLand
+
+Persoon.Geboorte.LandGebiedCode
+
+overlijdensdatum
+
+Persoon.Overlijden.Datum
+
+inp.overlijdenplaats
+
+Persoon.Overlijden.Gemeentecode
+Persoon.Overlijden.BuitenlandsePlaats
+Persoon.Overlijden.Locatieomschrijving
+Voor transformatieregels zie paragraaf 7.2.3.
+
+inp.overlijdenLand
+
+Persoon.Overlijden.LandGebiedCode
+
+inp.verblijftIn
+
+-
+
+identficatie
+authentiek
+typering
+adresaanduiding
+
+<geen transformatie>
+Vaste waarde “J”
+<geen transformatie>
+-
+
+num.identificatie
+
+Persoon.Adres.IdentificatiecodeNummeraanduiding
+
+authentiek
+
+Vaste waarde “N”
+
+wpl.woonplaatsnaam
+
+Persoon.Adres.Woonplaatsnaam
+
+gor.openbareRuimteNaam
+
+Persoon.Adres.NaamOpenbareRuimte
+
+aoa.postcode
+
+Persoon.Adres.Postcode
+
+aoa.huisnummer
+
+Persoon.Adres.Huisnummer
+
+aoa.huisletter
+
+Persoon.Adres.Huisletter
+
+aoa.huisnummertoevoeging
+
+Persoon.Adres.Huisnummertoevoeging
+
+Pagina 41 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+StUF BG – npsLk01
+ogo.locatieaanduiding
+sub.verblijfBuitenland (als choice?)
+
+Vulling vanuit BRP
+<geen transformatie>
+Alleen indien Persoon.Migratie.SoortCode=”E” (Emigratie) of
+Persoon.Bijhouding.Bijhoudingsaard=”N” (Niet-ingezetene)
+… of uit PersoonMigratie?
+
+lnd.landcode
+
+Persoon.Adres.Landcode of
+Persoon.Migratie.Landcode
+
+lnd.landnaam? (wel in schema)
+sub.adresBuitenland1
+
+Persoon.Adres.BuitenlandseAdresregel1 of
+Persoon.Migratie.BuitenlandseAdresregel1
+
+sub.adresBuitenland2
+
+Persoon.Adres.BuitenlandseAdresregel2 of
+Persoon.Migratie.BuitenlandseAdresregel2
+
+sub.adresBuitenland3
+
+Persoon.Adres.BuitenlandseAdresregel3 of
+Persoon.Migratie.BuitenlandseAdresregel3
+NB. In BRP is de situatie anders dan in GBA:
+BRP kent 6 BuitenlandseAdresregels
+lengte van deze Adresregels is 40 lang ipv 35
+Gedurende de migratieperiode van GBA naar BRP (de zogenaamde duale
+periode) zijn in de BRP bedrijfsregels actief die bewaken dat er 3
+BuitenlandseAdresregels kunnen worden gebruikt en de lengte hiervan
+maximaal 35 posities is.
+
+inOnderzoek
+
+Afleiden van Persoon.Onderzoek.GegevenInOnderzoek
+Voor transformatieregels zie paragraaf 4.11.
+
+groepsnaam (XML-attribute)
+
+Vaste waarde: “Verblijfplaats”
+
+elementNaam (XML-attribute)
+
+Afleiden van:
+Persoon.Onderzoek.GegevenInOnderzoek
+In BRP meerdere gegevens in onderzoek mogelijk; hoe hiermee omgaan in
+StUF BG?
+
+brondocument (StUF-attributen Groep/Element?)
+
+Verzameling brondocumenten die in BRP zijn opgenomen ter
+verantwoording van de registratie van Persoon.Adres en Persoon.Migratie
+(indien Migratie.SoortCode is gelijk aan ”E”). Zie ook paragraaf 4.9.
+Meerdere mogelijk?
+
+identificatie
+
+In geval van een Akte:
+AdministratieveHandeling.Actie.ActieBron.Aktenummer
+In geval van een Rechtsgrond of Document:
+<geen transformatie>
+
+datum
+
+<geen transformatie>
+
+omschrijving
+
+In geval van een Akte of Document een concatenatie van:
+AdministratieveHandeling.Actie.ActieBron.SoortNaam en
+AdministratieveHandeling.Actie.ActieBron.DocumentOmschrijving
+In geval van een Rechtsgrond:
+rechtsgrondCode (wat kan StUF hiermee?)
+rechtsgrondOmschrijving
+
+gemeente
+
+Afleiden van:
+AdministratieveHandeling.Actie.ActieBron.PartijCode
+Indien partijCode is gelijk aan ”199901” (Minister), dan geen transformatie.
+Indien PartijCode niet gelijk is aan ”199901”, dan eerste 4 posities van
+Partijcode overnemen.
+
+aktegemeente
+
+In geval van een Akte afleiden van:
+AdministratieveHandeling.Actie.ActieBron.PartijCode
+
+tijdvakRelatie/beginRelatie
+
+Zie paragraaf 4.2
+Pagina 42 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+StUF BG – npsLk01
+tijdvakRelatie/eindRelatie
+
+Vulling vanuit BRP
+Zie paragraaf 4.2
+
+tijdvakGeldigheid/beginGeldigheid
+
+Zie paragraaf 4.2
+
+tijdvakGeldigheid/eindGeldigheid
+
+Zie paragraaf 4.2
+Persoon.Adres.DatumEindeGeldigheid
+
+tijdstipRegistratie
+
+Zie paragraaf 4.2
+
+extraElementen
+
+<geen transformatie>
+
+gerelateerde: verblijfsadres
+
+Hoe interpreteren t.o.v. hiervoor opgenomen vulling adresgegevens; zelfde,
+dus zie adresaanduiding en sub.verblijfBuitenland? -
+
+aoa.identificatie
+
+<geen transformatie>
+
+authentiek
+
+Vaste waarde “J”
+
+wpl.identificatie
+
+<geen transformatie>
+
+wpl.woonplaatsnaaam
+
+Persoon.Adres.Woonplaatsnaam
+
+aoa.woonplaatsWaarinGelegen
+
+<geen transformatie>
+
+gor.identificatie
+
+<geen transformatie>
+
+opr.identificatie
+
+<geen transformatie>
+
+gor.openbareRuimteNaam
+
+Persoon.Adres.NaamOpenbareRuimte
+
+gor.straatnaam
+
+Persoon.Adres.AfgekorteNaamOpenbareRuimte
+
+aoa.postcode
+
+Persoon.Adres.Postcode
+
+aoa.huisnummer
+
+Persoon.Adres.Huisnummer
+
+aoa.huisletter
+
+Persoon.Adres.Huisletter
+
+aoa.huisnummertoevoeging
+
+Persoon.Adres.Huisnummertoevoeging
+
+inp.locatiebeschrijving
+
+Persoon.Adres.Locatiebeschrijving
+
+begindatumVerblijf
+
+Persoon.Adres.DatumAanvangAdreshouding
+
+gerelateerde: sub.verblijfbuitenland
+
+Alleen indien Persoon.Migratie.SoortCode=”E” (Emigratie) of
+Persoon.Bijhouding.Bijhoudingsaard=”N” (Niet-ingezetene)
+
+lnd.landcode
+
+Persoon.Adres.Landcode
+
+lnd.landnaam? (wel in StUFBG-schema)
+
+<geen transformatie>
+
+sub.adresBuitenland1
+
+Persoon.Adres.BuitenlandseAdresregel1
+
+sub.adresBuitenland2
+
+Persoon.Adres.BuitenlandseAdresregel2
+
+sub.adresBuitenland3
+
+Persoon.Adres.BuitenlandseAdresregel3
+NB. In BRP is de situatie anders dan in GBA:
+BRP kent 6 BuitenlandseAdresregels
+lengte van deze Adresregels is 40 lang ipv 35
+Gedurende de migratieperiode van GBA naar BRP (de zogenaamde duale
+periode) zijn in de BRP bedrijfsregels actief die bewaken dat er 3
+BuitenlandseAdresregels kunnen worden gebruikt en de lengte hiervan
+maximaal 35 posities is.
+
+inp.adresHerkomst
+
+Persoon.Adres.SoortCode
+
+sub.correspondentieAdres
+
+<geen transformatie>
+
+sub.telefoonnummer
+sub.faxnummer
+sub.emailadres
+sub.url
+sub.rekeningnummerBankGiro
+
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+Pagina 43 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+StUF BG – npsLk01
+acd.code
+inp.burgerlijkeStaat
+
+Vulling vanuit BRP
+<geen transformatie>
+Mogelijk afleidbaar van in BRPXML-bericht aanwezige gegevens
+Huwelijk/GeregistreerdPartnerschap; zie paragraaf 7.2.4.
+
+inp.gemeenteVanInschrijving
+
+Afleiden van Persoon.Bijhouding.Partijcode:
+Indien partijCode is gelijk aan ”199901” (Minister), dan <geen
+transformatie>?
+Indien PartijCode niet gelijk is aan ”199901”, dan eerste 4 posities van
+Partijcode overnemen.
+
+inp.datumInschrijving
+
+Persoon.Bijhouding.DatumAanvangGeldigheid
+
+vbt.aanduidingVerblijfstitel
+
+Persoon.Verblijfsrecht.Code (codes BRP volgen?)
+
+ing.datumVerkrijgingVerblijfstitel
+
+Persoon.Verblijfsrecht.DatumAanvang
+
+ing.datumVerliesVerblijfstitel
+
+Indien meest recente voorkomen van Persoon.Verblijfsrecht is vervallen,
+dan afleiden van Persoon.Verblijfsrecht.TijdstipVerval
+Indien meest recente voorkomen van Persoon.Verblijfsrecht niet is vervallen
+en Persoon.Verblijfsrecht.Code is gelijk aan ”98”, dan vullen met
+Persoon.Verblijfsrecht.DatumAanvang
+In andere gevallen:
+<geen transformatie>
+of vullen met ‘Persoon.Verblijfsrecht.DatumVoorzienEinde? Wat is
+semantische betekenis StUF BG?
+
+inp.datumVestigingInNederland
+
+Indien actuele voorkomen van Persoon.Migratie.SoortCode is gelijk aan ”I”
+(Immigratie), dan vullen met Persoon.Migratie.DatumAanvangGeldigheid
+
+inp.immigratieLand
+
+Indien actuele voorkomen van Persoon.Migratie.SoortCode is gelijk aan ”I”
+(Immigratie), dan vullen met Persoon.Migratie.LandGebiedCode
+
+inp.datumVertrekUitNederland
+
+Indien actuele voorkomen van Persoon.Migratie.SoortCode is gelijk aan ”E”
+(Emigratie), dan vullen met Persoon.Migratie.DatumAanvangGeldigheid
+
+inp.emigratieLand
+
+Indien actuele voorkomen van Persoon.Migratie.SoortCode is gelijk is aan
+”E” (Emigratie), dan vullen met Persoon.Migratie.LandGebiedCode
+
+inp.signaleringReisdocument
+
+Persoon.Indicaties.SignaleringMetBetrekkingTotVerkrijgingResidocument
+
+inp.aanduidingBijzonderNederlanderschap
+
+Persoon.Inidcaties.BehandeldAlsNederlander
+
+inp.buitenlandsReisdocument
+
+<geen transformatie>
+
+ing.aanduidingEuropeesKiesrecht
+
+Persoon.DeelnameEUVerkiezingen.IndicatieDeelname
+
+ing.aanduidingUitgeslotenKiesrecht
+
+Persoon.UitsluitingKiesrecht.Indicatie
+
+ing.indicatieGezagMinderjarige
+
+Persoon.Indicaties.DerdeHeeftGezag
+GerelateerdeOuder.OuderlijkGezag.IndicatieOuderHeeftGezag?
+Wat is semantische betekenis hiervan in StUF BG?
+
+ing.indicatieCurateleRegister
+
+Persoon.Indicaties.OnderCuratele
+
+inp.datumOpschortingBijhouding
+
+Afleiden van Persoon.Bijhouding.NadereBijhoudingsaard:
+Indien actuele voorkomen van Persoon.Bijhouding.NadereBijhoudingsaard
+gelijk is aan “E” (Emigratie), “O” (Overlijden), (andere waarden te
+beoordelen), dan vullen met Persoon.Bijhouding.DatumAanvangGeldigheid.
+
+inp.redenOpschortingBijhouding
+
+Afleiden van Persoon.Bijhouding.NadereBijhoudingsaard:
+Indien actuele voorkomen van Persoon.Bijhouding.NadereBijhoudingsaard
+gelijk is aan “E” (Emigratie), “O” (Overlijden), (andere waarden te
+beoordelen), dan vullen met Persoon.Bijhouding.NadereBijhoudingsaard.
+
+inp.indicatieGeheim
+
+Persoon.Indicaties.VolledigeVerstrekkingsbeperking
+Pagina 44 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+StUF BG – npsLk01
+
+Vulling vanuit BRP
+
+ing.indicatieBlokkering
+
+Wat is semantische betekenis hiervan in StUF BG?
+
+inOnderzoek
+
+Afleiden van Persoon.Onderzoek.GegevenInOnderzoek
+Voor transformatieregels zie paragraaf <nader invullen>.
+
+groepsnaam (XML-attribute)
+
+Afleiden van:
+Persoon.Onderzoek.GegevenInOnderzoek
+
+elementNaam (XML-attribute)
+
+Afleiden van:
+Persoon.Onderzoek.GegevenInOnderzoek
+In BRP meerdere gegevens in onderzoek mogelijk; hoe hiermee omgaan in
+StUF BG?
+
+aanduidingStrijdigheidNietigheid
+
+Persoon.<gegevensgroep>.NadereAanduidingVerval
+Hoe gaat StUF BG hiermee om?
+
+brondocument (StUF-attributen Groep/Element?)
+
+Verzameling brondocumenten die in BRP zijn opgenomen ter
+verantwoording van de registratie van betrokken gegevensgroepen van
+BRP-Persoon. Zie ook paragraaf <nader invullen>Fout! Verwijzingsbron
+niet gevonden.. Meerdere mogelijk?
+
+identificatie
+datum
+omschrijving
+gemeente
+aktegemeente
+tijdvakGeldigheid/beginGeldigheid
+
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+Persoon.<gegevensgroep>.DatumAanvangGeldigheid
+Hoe i.g.v. een wijziging van een FH-groep; dan afleiden van
+Persoon.<gegevensgroep>.tijdstipRegistratie?
+Wat is de semantische betekenis van dit element? Zie ook paragraaf 4.2.
+
+tijdvakGeldigheid/eindGeldigheid
+
+Persoon.<gegevensgroep>.DatumEindeGeldigheid
+Hoe i.g.v. een wijziging van een FH-groep; dan afleiden van
+Persoon.<gegevensgroep>.tijdstipRegistratie/tijdstipVerval?
+Wat is de semantische betekenis van dit element? Zie ook paragraaf 4.2.
+
+tijdstipRegistratie
+
+In geval van een Mutatiebericht:
+Persoon.AfgeleidAdministratief.TijdstipLaatsteWijziging
+In geval van een Volledigbericht:
+Afleiden van de meest recente tijdstipRegistratie van de
+Persoon.<gegevensgroepen> die zijn verwerkt in ‘Persoon’.
+
+extraElementen
+einddatumUitsluitingKiesrecht
+
+Persoon.UitsluitingKiesrecht.DatumVoorzienEinde
+
+einddatumUitsluitingEuropeesKiesrecht
+
+Persoon.DeelnameEUVerkiezingen.DatumVoorzienEindeUitsluiting
+
+inp.heeftAlsEchtgenootPartner
+gerelateerde: Partner
+inp.bsn
+authentiek
+inp.a-nummer
+geslachtsnaam
+
+GerelateerdePartner.Identificatienummers.Burgerservicenummer
+Vaste waarde “J”
+GerelateerdePartner.Identificatienummers.Administratienummer
+GerelateerdePartner.SamengesteldeNaam.Geslachtsnaamstam
+
+Pagina 45 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+StUF BG – npsLk01
+voorvoegselGeslachtsnaam
+
+Vulling vanuit BRP
+GerelateerdePartner.SamengesteldeNaam.Voorvoegsel +
+GerelateerdePartner.SamengesteldeNaam.Scheidingsteken
+Indien Scheidingsteken gelijk aan ‘spatie’, dan alleen
+GerelateerdePartner.SamengesteldeNaam.Voorvoegsel
+
+voorletters
+
+Afleiden van: GerelateerdePartner.SamengesteldeNaam.Voornamen
+
+voornamen
+
+GerelateerdePartner.SamengesteldeNaam.Voornamen
+
+adellijkeTitelPredikaat
+
+GerelateerdePartner.SamengesteldeNaam.AdellijkeTitelCode
+GerelateerdePartner.SamengesteldeNaam.PredikaatCode
+Voor transformatieregels zie paragraaf 4.2.2
+
+geslachtsaanduiding
+
+GerelateerdePartner.Geslachtsaanduiding.Code
+
+geboortedatum
+
+GerelateerdePartner.Geboorte.Datum
+
+inp.geboorteplaats
+
+GerelateerdePartner.Geboorte.Gemeentecode
+GerelateerdePartner.Geboorte.BuitenlandsePlaats
+GerelateerdePartner.Geboorte.Locatieomschrijving
+Voor transformatieregels zie paragraaf 7.2.3.
+
+inp.geboorteLand
+
+GerelateerdePartner.Geboorte.LandGebiedCode
+
+verblijfsadres
+aoa.identificatie
+
+<geen transformatie>
+
+authentiek
+
+<geen transformatie>
+
+wpl.woonplaatsnaaam
+
+<geen transformatie>
+
+gor.openbareRuimteNaam
+
+<geen transformatie>
+
+aoa.postcode
+
+<geen transformatie>
+
+aoa.huisnummer
+aoa.huisletter
+aoa.huisnummertoevoeging
+inp.locatiebeschrijving
+
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+
+sub.verblijfbuitenland
+lnd.landcode
+lnd.landnaam
+sub.adresBuitenland1
+sub.adresBuitenland2
+sub.adresBuitenland3
+soortVerbintenis
+
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+Afleiden van tag in het te vertalen BRPXML-bericht; deze is ‘Huwelijk’ of
+‘GeregistreerdPartnerschap’
+
+datumSluiting
+
+HuwelijkGeregPartnerschap.Relatie.DatumAanvang
+
+plaatsSluiting
+
+HuwelijkGeregPartnerschap.Relatie.GemeenteCodeAanvang
+HuwelijkGeregPartnerschap.Relatie.BuitenlandsePlaatsAanvang
+HuwelijkGeregPartnerschap.Relatie.LocatieomschrijvingAanvang
+Voor transformatieregels zie paragraaf 7.2.3.
+
+landSluiting
+
+HuwelijkGeregPartnerschap.Relatie.LandGebiedCodeAanvang
+
+datumOntbinding
+
+HuwelijkGeregPartnerschap.Relatie.DatumEinde
+
+plaatsOntbinding
+
+HuwelijkGeregPartnerschap.Relatie.GemeentecodeEinde
+HuwelijkGeregPartnerschap.Relatie.BuitenlandsePlaatsEinde
+HuwelijkGeregPartnerschap.Relatie.LocatieomschrijvingEinde
+Voor transformatieregels zie paragraaf 7.2.3.
+
+landOntbinding
+
+HuwelijkGeregistreerdPartn.Relatie.LandGebiedCodeEinde
+
+Pagina 46 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+StUF BG – npsLk01
+redenOntbinding
+
+Vulling vanuit BRP
+Afleiden van :
+HuwelijkGeregistreerdPartn.Relatie.RedenEindeCode
+Zie paragraaf <nader invullen>
+
+inOnderzoek
+
+Afleiden van Persoon.Onderzoek.GegevenInOnderzoek
+Voor transformatieregels zie paragraaf <nader invullen>.
+
+groepsnaam (XML-attribute)
+
+Afleiden van:
+Persoon.Onderzoek.GegevenInOnderzoek
+
+elementNaam (XML-attribute)
+
+Afleiden van:
+Persoon.Onderzoek.GegevenInOnderzoek
+In BRP meerdere gegevens in onderzoek mogelijk; hoe hiermee omgaan in
+StUF BG?
+
+aanduidingStrijdigheidNietigheid
+
+HuwelijkGeregPartnerschap.Relatie.NadereAanduidingVerval
+GerelateerdePartner.<gegevensgroep>. NadereAanduidingVerval
+Hoe gaat StUF BG hiermee om?
+
+brondocument (StUF-attributen Groep/Element?)
+
+Verzameling brondocumenten die in BRP zijn opgenomen ter
+verantwoording van de registratie van betrokken gegevensgroepen van
+BRP-Huwelijk/GeregistreerdPartnerschap. Zie ook paragraaf<nader
+invullen>. Meerdere mogelijk?
+
+identificatie
+datum
+omschrijving
+gemeente
+aktegemeente
+tijdvakGeldigheid/beginGeldigheid
+
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+HuwelijkGeregistreerdPartnerschap.Relatie.DatumAanvang
+GerelateerdePartner.<gegevensgroep>.DatumAanvangGeldigheid
+Hoe i.g.v. een wijziging van een FH-groep; dan afleiden van
+HuwelijkGeregistreerdPartnerschap.Relatie.TijdstipRegistratie of
+GerelteerdePartner.<gegevensgroep>.tijdstipRegistratie?
+Wat is de semantische betekenis van dit element? Zie ook paragraaf 4.2.
+
+tijdvakGeldigheid/eindGeldigheid
+
+HuwelijkGeregistreerdPartnerschap.Relatie.DatumEinde
+GerelateerdePartner.<gegevensgroep>.DatumEindeGeldigheid
+Hoe i.g.v. een wijziging van een FH-groep; dan afleiden van
+HuwelijkGeregistreerdPartnerschap.Relatie.TijdstipRegistratie of
+GerelteerdePartner.<gegevensgroep>.tijdstipRegistratie/tijdstipVerval?
+Wat is de semantische betekenis van dit element? Zie ook paragraaf 4.2.
+
+tijdstipRegistratie
+
+In geval van een Mutatiebericht:
+Persoon.AfgeleidAdministratief.TijdstipLaatsteWijziging
+In geval van een Volledigbericht:
+Afleiden van de meest recente tijdstipRegistratie van de
+Persoon.<gegevensgroepen> die zijn verwerkt in
+‘inp.heeftAlsEchtgenootPartner’.
+
+extraElementen
+
+<geen transformatie>
+
+inp.heeftAlsKinderen
+gerelateerde: Kind
+Pagina 47 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+StUF BG – npsLk01
+
+Vulling vanuit BRP
+
+inp.bsn
+
+GerelateerdeKind.Identificatienummers.Burgerservicenummer
+
+authentiek
+
+Vaste waarde “J”
+
+inp.a-nummer
+
+GerelateerdeKind.Identificatienummers.Administratienummer
+
+geslachtsnaam
+
+GerelateerdeKind.SamengesteldeNaam.Geslachtsnaamstam
+
+voorvoegselGeslachtsnaam
+
+GerelateerdeKind.SamengesteldeNaam.Voorvoegsel +
+GerelateerdeKind.SamengesteldeNaam.Scheidingsteken
+Indien Scheidingsteken gelijk aan ‘spatie’, dan alleen
+GerelateerdeKind.SamengesteldeNaam.Voorvoegsel
+
+voorletters
+
+Afleiden van: GerelateerdeKind.SamengesteldeNaam.Voornamen
+
+voornamen
+
+GerelateerdeKind.SamengesteldeNaam.Voornamen
+
+adellijkeTitelPredikaat
+
+GerelateerdeKind.SamengesteldeNaam.AdellijkeTitelCode
+GerelateerdeKind.SamengesteldeNaam.PredikaatCode
+Voor transformatieregels zie paragraaf 4.2.2
+
+geslachtsaanduiding
+
+GerelateerdeKind.Geslachtsaanduiding.Code
+
+geboortedatum
+
+GerelateerdeKind.Geboorte.Datum
+
+inp.geboorteplaats
+
+GerelateerdeKind.Geboorte.Gemeentecode
+GerelateerdeKind.Geboorte.BuitenlandsePlaats
+GerelateerdeKind.Geboorte.Locatieomschrijving
+Voor transformatieregels zie paragraaf 7.2.3.
+
+inp.geboorteLand
+
+GerelateerdePartner.Geboorte.LandGebiedCode
+
+verblijfsadres
+aoa.identificatie
+authentiek
+wpl.woonplaatsnaaam
+gor.openbareRuimteNaam
+aoa.postcode
+aoa.huisnummer
+aoa.huisletter
+aoa.huisnummertoevoeging
+inp.locatiebeschrijving
+
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+
+sub.verblijfbuitenland
+lnd.landcode
+lnd.landnaam
+sub.adresBuitenland1
+sub.adresBuitenland2
+sub.adresBuitenland3
+
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+
+ouderAanduiding
+
+Wat doet dit element bij Kinderen?
+
+datumIngangFamilierechtelijkeBetrekking
+
+GerelateerdeKind.Ouderschap.DatumAanvangGeldigheid
+
+datumEindeFamilierechtelijkeBetrekking
+
+GerelateerdeKind.Ouderschap.DatumEindeGeldigheid
+
+inOnderzoek
+
+Afleiden van Persoon.Onderzoek.GegevenInOnderzoek
+Voor transformatieregels zie paragraaf Fout! Verwijzingsbron niet
+gevonden..
+
+groepsnaam (XML-attribute)
+
+Afleiden van:
+Persoon.Onderzoek.GegevenInOnderzoek
+
+Pagina 48 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+StUF BG – npsLk01
+elementNaam (XML-attribute)
+
+Vulling vanuit BRP
+Afleiden van:
+Persoon.Onderzoek.GegevenInOnderzoek
+In BRP meerdere gegevens in onderzoek mogelijk; hoe hiermee omgaan in
+StUF BG?
+
+aanduidingStrijdigheidNietigheid
+
+HuwelijkGeregPartnerschap.Relatie.NadereAanduidingVerval
+GerelateerdePartner.<gegevensgroep>. NadereAanduidingVerval
+Hoe gaat StUF BG hiermee om?
+
+brondocument (StUF-attributen Groep/Element?)
+
+Verzameling brondocumenten die in BRP zijn opgenomen ter
+verantwoording van de registratie van betrokken gegevensgroepen van
+BRP-Huwelijk/GeregistreerdPartnerschap. Zie ook paragraaf Fout!
+Verwijzingsbron niet gevonden.. Meerdere mogelijk?
+
+identificatie
+datum
+omschrijving
+gemeente
+aktegemeente
+tijdvakGeldigheid/beginGeldigheid
+
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+GerelateerdeOuder.Ouderschap.DatumAanvangGeldigheid
+GerelateerdeOuder.<gegevensgroep>.DatumAanvangGeldigheid
+Hoe i.g.v. een wijziging van een FH-groep; dan afleiden van
+GerelateerdeOuder.<gegevensgroep>.tijdstipRegistratie?
+Wat is de semantische betekenis van dit element? Zie ook paragraaf Fout!
+Verwijzingsbron niet gevonden.
+
+tijdvakGeldigheid/eindGeldigheid
+
+GerelateerdeOuder.Ouderschap.DatumEindeGeldigheid
+GerelateerdeOuder.<gegevensgroep>.DatumEindeGeldigheid
+Hoe i.g.v. een wijziging van een FH-groep; dan afleiden van
+GerelateerdeOuder.<gegevensgroep>.tijdstipRegistratie/tijdstipVerval?
+Wat is de semantische betekenis van dit element? Zie ook paragraaf Fout!
+Verwijzingsbron niet gevonden.
+
+tijdstipRegistratie
+
+In geval van een Mutatiebericht:
+Persoon.AfgeleidAdministratief.TijdstipLaatsteWijziging
+In geval van een Volledigbericht:
+Afleiden van de meest recente tijdstipRegistratie van de
+Persoon.<gegevensgroepen> die zijn verwerkt in ‘inp.heeftAlsKinderen’.
+
+extraElementen
+
+<geen transformatie>
+
+inp.heeftAlsOuders
+gerelateerde: Ouder
+inp.bsn
+authentiek
+inp.a-nummer
+geslachtsnaam
+
+GerelateerdeOuder.Identificatienummers.Burgerservicenummer
+Vaste waarde “J”
+GerelateerdeOuder.Identificatienummers.Administratienummer
+GerelateerdeOuder.SamengesteldeNaam.Geslachtsnaamstam
+
+Pagina 49 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+StUF BG – npsLk01
+voorvoegselGeslachtsnaam
+
+Vulling vanuit BRP
+GerelateerdeOuder.SamengesteldeNaam.Voorvoegsel +
+GerelateerdeOuder.SamengesteldeNaam.Scheidingsteken
+Indien Scheidingsteken gelijk aan ‘spatie’, dan alleen
+GerelateerdeOuder.SamengesteldeNaam.Voorvoegsel
+
+voorletters
+
+Afleiden van: GerelateerdeOuder.SamengesteldeNaam.Voornamen
+
+voornamen
+
+GerelateerdeOuder.SamengesteldeNaam.Voornamen
+
+adellijkeTitelPredikaat
+
+GerelateerdeOuder.SamengesteldeNaam.AdellijkeTitelCode
+GerelateerdeOuder.SamengesteldeNaam.PredikaatCode
+Voor transformatieregels zie paragraaf 4.2.2
+
+geslachtsaanduiding
+
+GerelateerdeOuder.Geslachtsaanduiding.Code
+
+geboortedatum
+
+GerelateerdeOuder.Geboorte.Datum
+
+inp.geboorteplaats
+
+GerelateerdeOuder.Geboorte.Gemeentecode
+GerelateerdeOuder.Geboorte.BuitenlandsePlaats
+GerelateerdeOuder.Geboorte.Locatieomschrijving
+Voor transformatieregels zie paragraaf 7.2.3.
+
+inp.geboorteLand
+
+GerelateerdeOuder.Geboorte.LandGebiedCode
+
+verblijfsadres
+aoa.identificatie
+
+<geen transformatie>
+
+authentiek
+
+<geen transformatie>
+
+wpl.woonplaatsnaaam
+
+<geen transformatie>
+
+gor.openbareRuimteNaam
+
+<geen transformatie>
+
+aoa.postcode
+
+<geen transformatie>
+
+aoa.huisnummer
+aoa.huisletter
+aoa.huisnummertoevoeging
+inp.locatiebeschrijving
+
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+
+sub.verblijfbuitenland
+lnd.landcode
+lnd.landnaam
+sub.adresBuitenland1
+sub.adresBuitenland2
+sub.adresBuitenland3
+ouderAanduiding
+
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+<geen transformatie>
+Afleiden van aantal ouders in te vertalen bericht?
+In BRP meer dan twee ouders mogelijk.
+Hoe gaat StUF BG hiermee om?
+
+datumIngangFamilierechtelijkeBetrekking
+
+GerelateerdeOuder.Ouderschap.DatumAanvangGeldigheid
+
+datumEindeFamilierechtelijkeBetrekking
+
+GerelateerdeOuder.Ouderschap.DatumEindeGeldigheid
+
+inOnderzoek
+
+Afleiden van Persoon.Onderzoek.GegevenInOnderzoek
+Voor transformatieregels zie paragraaf Fout! Verwijzingsbron niet
+gevonden..
+
+groepsnaam (XML-attribute)
+
+Afleiden van:
+Persoon.Onderzoek.GegevenInOnderzoek
+
+elementNaam (XML-attribute)
+
+Afleiden van:
+Persoon.Onderzoek.GegevenInOnderzoek
+In BRP meerdere gegevens in onderzoek mogelijk; hoe hiermee omgaan in
+StUF BG?
+
+Pagina 50 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+StUF BG – npsLk01
+aanduidingStrijdigheidNietigheid
+
+Vulling vanuit BRP
+HuwelijkGeregPartnerschap.Relatie.NadereAanduidingVerval
+GerelateerdePartner.<gegevensgroep>. NadereAanduidingVerval
+Hoe gaat StUF BG hiermee om?
+
+brondocument (StUF-attributen Groep/Element?)
+
+Verzameling brondocumenten die in BRP zijn opgenomen ter
+verantwoording van de registratie van betrokken gegevensgroepen van
+BRP-GerelateerdeOuder. Zie ook paragraaf Fout! Verwijzingsbron niet
+gevonden..
+Meerdere mogelijk?
+
+identificatie
+datum
+omschrijving
+gemeente
+aktegemeente
+tijdvakGeldigheid/beginGeldigheid
+
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+GerelateerdeOuder.Ouderschap.DatumAanvangGeldigheid
+GerelateerdeOuder.<gegevensgroep>.DatumAanvangGeldigheid
+Hoe i.g.v. een wijziging van een FH-groep; dan afleiden van
+GerelateerdeOuder.<gegevensgroep>.tijdstipRegistratie?
+Wat is de semantische betekenis van dit element? Zie ook paragraaf 4.2.
+
+tijdvakGeldigheid/eindGeldigheid
+
+GerelateerdeOuder.Ouderschap.DatumEindeGeldigheid
+GerelateerdeOuder.<gegevensgroep>.DatumEindeGeldigheid
+Hoe i.g.v. een wijziging van een FH-groep; dan afleiden van
+GerelateerdeOuder.<gegevensgroep>.tijdstipRegistratie/tijdstipVerval?
+Wat is de semantische betekenis van dit element? Zie ook paragraaf Fout!
+Verwijzingsbron niet gevonden.
+
+tijdstipRegistratie
+
+In geval van een Mutatiebericht:
+Persoon.AfgeleidAdministratief.TijdstipLaatsteWijziging
+In geval van een Volledigbericht:
+Afleiden van de meest recente tijdstipRegistratie van de
+Persoon.<gegevensgroepen> die zijn verwerkt in ‘inp.heeftAlsOuders’.
+
+extraElementen
+
+<geen transformatie>
+
+inp.heeftAlsNationaliteit
+gerelateerde: Nationaliteit
+code
+inp.redenVerkrijging
+inp.datumVerkrijging
+inp.redenVerlies
+inp.datumVerlies
+inOnderzoek
+
+Persoon.Nationaliteit.Code
+Persoon.Nationaliteit.RedenVerkrijgingCode
+Persoon.Nationaliteit.DatumAanvangGeldigheid
+Persoon.Nationaliteit.RedenVerliesCode
+Persoon.Nationaliteit.DatumEindeGeldigheid
+Afleiden van Persoon.Onderzoek.GegevenInOnderzoek
+Voor transformatieregels zie paragraaf <nader invullen>Fout!
+Verwijzingsbron niet gevonden..
+
+groepsnaam (XML-attribute)
+
+Afleiden van:
+Persoon.Onderzoek.GegevenInOnderzoek
+
+Pagina 51 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+StUF BG – npsLk01
+elementNaam (XML-attribute)
+
+Vulling vanuit BRP
+Afleiden van:
+Persoon.Onderzoek.GegevenInOnderzoek
+In BRP meerdere gegevens in onderzoek mogelijk; hoe hiermee omgaan in
+StUF BG?
+
+aanduidingStrijdigheidNietigheid
+
+HuwelijkGeregPartnerschap.Relatie.NadereAanduidingVerval
+GerelateerdePartner.<gegevensgroep>. NadereAanduidingVerval
+Hoe gaat StUF BG hiermee om?
+
+brondocument (StUF-attributen Groep/Element?)
+
+Verzameling brondocumenten die in BRP zijn opgenomen ter
+verantwoording van de registratie van betrokken gegevensgroepen van
+BRP-GerelateerdeOuder. Zie ook paragraaf <nog invullen>.
+Meerdere mogelijk?
+
+identificatie
+datum
+omschrijving
+gemeente
+aktegemeente
+
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+Zie bij inp.verblijftIn
+
+tijdvakRelatie/beginRelatie
+
+?
+
+tijdvakRelatie/eindRelatie
+
+?
+
+tijdvakGeldigheid/beginGeldigheid
+
+Persoon.Nationaliteit.DatumAanvangGeldigheid
+
+tijdvakGeldigheid/eindGeldigheid
+
+Persoon.Nationaliteit.DatumEindeGeldigheid
+
+tijdstipRegistratie
+
+In geval van een Mutatiebericht:
+Persoon.AfgeleidAdministratief.TijdstipLaatsteWijziging
+In geval van een Volledigbericht:
+Afleiden van de meest recente tijdstipRegistratie van Persoon.Nationaliteit
+zoals verwerkt in ‘inp.heeftAlsNationaliteit’.
+
+extraElementen
+
+<geen transformatie>
+
+Pagina 52 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+7.2.2
+
+Transformatieregels adellijke titel/predikaat
+
+Bij de conversie van adellijke titels en predikaten kan binnen StUF BG maar één titel of predikaat
+worden geregistreerd. Als er binnen de BRP zowel een adellijke titel als een predikaat voorkomt wordt
+de voorkeur gegeven voor het expliciet registreren van het predikaat, aangezien deze vaak niet direct
+voor of na de geslachtsnaam wordt gehanteerd. Hiermee wordt het bi-directionele conversievoorschrift van GBA BRP gevolgd.
+Volgende situaties kunnen zich voordoen:
+Nr
+1
+
+2
+
+Situatie BRP
+
+Transformatie naar StUF BG
+
+Er is een Predicaat opgenomen bij Persoon (Groep
+
+Persoon.Predicaat in combinatie met het bijbehorende
+
+Samengestelde naam)
+
+geslacht (uit objecttype Persoon)
+
+Er is geen Adellijke titel opgenomen bij Persoon (Groep
+
+Er vindt een vertaling plaats aan de hand van de
+
+Samengestelde naam)
+
+conversietabel adellijke titel / predikaat
+
+Er is een Adellijke titel opgenomen bij Persoon (Groep
+
+Persoon.Adellijke titel in combinatie met het bijbehorende
+
+Samengestelde naam).
+
+geslacht (uit objecttype Persoon)
+
+Er is geen Predicaat opgenomen bij Persoon (Groep
+Samengestelde naam).
+
+Er vindt een vertaling plaats aan de hand van de
+conversietabel adellijke titel / predikaat
+
+3
+
+Er is een Predicaat en een
+
+Persoon.Predicaat in combinatie met het bijbehorende
+
+Adellijke titel opgenomen bij Persoon (Groep
+
+geslacht (uit objecttype Persoon)
+
+Samengestelde naam).
+
+Er vindt een vertaling plaats aan de hand van de
+conversietabel adellijke titel / predikaat
+
+4
+
+Er is geen Predicaat en geen Adellijke titel opgenomen bij
+
+<Geen transformatie>
+
+Persoon (Groep Samengestelde naam).
+
+Afhankelijk van de hierboven geschetste situatie vindt de transformatie als volgt plaats:
+BRP geslachtsaanduiding (Code)
+
+BRP Adellijke titel
+(Code)
+
+BRP Predicaat (Code)
+
+M
+
+B
+
+-
+
+(Man)
+
+(baron of Barones)
+
+V
+
+B
+
+(Vrouw)
+
+(baron of Barones)
+
+M
+
+G
+
+(Man)
+
+(graaf of gravin)
+
+V
+
+G
+
+(Vrouw)
+
+(graaf of gravin)
+
+M
+
+H
+
+(Man)
+
+(hertog of hertogin)
+
+V
+
+H
+
+(Vrouw)
+
+(hertog of hertogin)
+
+M
+
+M
+
+(Man)
+
+(markies of markiezin)
+
+V
+
+M
+
+(Vrouw)
+
+(markies of markiezin)
+
+StUF BG Adellijke titel/predikaat
+(is gelijk aan Adellijke titel/predikaat
+uit GBA Tabel 38)
+B
+(Baron)
+
+-
+
+BS
+(Barones)
+
+-
+
+G
+(graaf)
+
+-
+
+GI
+(Gravin)
+
+-
+
+H
+(Hertog)
+
+-
+
+HI
+(Hertogin)
+
+-
+
+M
+(Markies)
+
+-
+
+MI
+(Markiezin)
+
+Pagina 53 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+BRP geslachtsaanduiding (Code)
+
+BRP Adellijke titel
+(Code)
+
+BRP Predicaat (Code)
+
+M
+
+P
+
+-
+
+(Man)
+
+(prins of prinses)
+
+V
+
+P
+
+(Vrouw)
+
+(prins of prinses)
+
+M
+
+R
+
+(Man)
+
+(ridder of ridder)
+
+StUF BG Adellijke titel/predikaat
+(is gelijk aan Adellijke titel/predikaat
+uit GBA Tabel 38)
+P
+(Prins)
+
+-
+
+PS
+(Prinses)
+
+-
+
+R
+(Ridder)
+
+Of
+V
+(Vrouw)
+M
+
+-
+
+(Man)
+
+K
+
+<Geen transformatie>4
+
+(Zijne Koninklijke Hoogheid
+of Hare Koninklijke
+Hoogheid)
+
+V
+
+-
+
+(Vrouw)
+
+K
+
+<Geen transformatie>1
+
+(Zijne Koninklijke Hoogheid
+of Hare Koninklijke
+Hoogheid)
+
+M
+
+-
+
+(Man)
+
+H
+
+<Geen transformatie>1
+
+(Zijne Hoogheid of Hare
+Hoogheid)
+
+V
+
+-
+
+(Vrouw)
+
+H
+
+<Geen transformatie>1
+
+(Zijne Hoogheid of Hare
+Hoogheid)
+
+M
+
+-
+
+(Man)
+V
+(Vrouw)
+
+-
+
+J
+
+JH
+
+(jonkheer of jonkvrouw)
+
+(Jonkheer)
+
+J
+
+JV
+
+(jonkheer of jonkvrouw)
+
+(Jonkvrouw)
+
+Mogelijk wel transformatie in StUF BG 0320, als de domeinwaarden van StUF BG zijn aangepast op basis van de gehanteerde waarden in de
+BRP.
+4
+
+Pagina 54 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+7.2.3
+
+Transformatieregels locatiegegevens
+
+Op verschillende plaatsen in het BRP-model komen locatiegegevens voor; dit betreft de
+gegevensgroepen:
+•
+•
+•
+
+Geboorte
+Overlijden
+Relatie (Huwelijk/Geregistreerd partnerschap)
+
+In de BRP worden hierbij de volgende locatiegegevens onderkend:
+• gemeentecode
+• woonplaatsnaam
+• buitenlandsePlaats
+• buitenlandseRegio
+• omschrijvingLocatie
+• landGebiedCode
+In StUF
+•
+•
+•
+•
+•
+•
+•
+•
+
+BG wordt voor locatiegegevens onderscheid gemaakt in:
+inp.geboorteplaats
+inp.geboorteland
+inp.overlijdenplaats
+inp.overlijdenland
+plaatsSluiting
+landSluiting
+plaatsOntbinding
+landOntbinding
+
+Bij de transformatie worden hierbij de volgende regels aangehouden:
+StUF BG – npsLk01
+
+Vulling vanuit BRP
+
+inp.geboorteplaats
+
+Indien Persoon.Geboorte.LandGebiedCode = “0000” (Onbekend), dan vullen
+met Persoon.Geboorte.Locatieomschrijving.
+Indien Persoon.Geboorte.LandGebiedCode = “6030” (Nederland), dan vullen
+met Persoon.Geboorte.GemeenteCode.
+StUF BG verwacht hier een Gemeentenaam
+Indien Persoon.Geboorte.LandGebiedCode # “0000”/”6030” (Buitenland),
+dan vullen met Persoon.Geboorte.BuitenlandsePlaats.
+
+inp.geboorteland
+
+Persoon.Geboorte.LandGebiedCode
+
+inp.overlijdenplaats
+
+Zie transformatieregel bij inp.geboorteplaats.
+
+inp.overlijdenland
+
+Persoon.Overlijden.LandGebiedCode
+
+plaatsSluiting
+
+Zie transformatieregel bij inp.geboorteplaats.
+
+landSluiting
+
+Huwelijk/GeregistreerdPartnerschap.relatie/LandGebiedCodeAanvang
+
+plaatsOntbinding
+
+Zie transformatieregel bij inp.geboorteplaats.
+
+landOntbinding
+
+Huwelijk/GeregistreerdPartnerschap.relatie/LandGebiedCodeEinde
+
+Pagina 55 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+7.2.4
+
+Transformatieregels burgerlijke staat
+
+Het gegeven burgerlijke staat komt niet voor in de BRP. Het gegeven is niet betrouwbaar af te leiden
+omdat niet altijd alle huwelijksgegevens in het mutatiebericht of volledigbericht aanwezig zijn en bij de
+transformatie de kennis ontbreekt over de leveringsautorisatie van de afnemer.
+Indien de huwelijksgegevens ontbreken, dan is bijvoorbeeld niet met 100% zekerheid aan te geven dat
+de persoon ongehuwd en nooit gehuwd is geweest. De afnemer kan immers niet voor (een deel van)
+de huwelijksgegevens zijn geautoriseerd.
+Indien huwelijksgegevens wel aanwezig maar de ontbindingsgegevens ontbreken, dan is niet met
+100% zekerheid aan te geven dat de persoon gehuwd is. De afnemer kan in dat geval immers niet
+voor de huwelijksontbindingsgegevens zijn geautoriseerd.
+In een beperkt aantal gevallen kan de burgerlijke staat worden afgeleid:
+Bespreekpunt Opdrachtnemer/VNG-KING:
+Aangezien burgerlijke staat maar in beperkt aantal gevallen voor 100% is af te leiden, kan de situatie
+ontstaan dat het gegeven onbetrouwbaar wordt of als ‘Onbekend’ (0) wordt meegegeven. Wat is hier
+dan nog de meerwaarde van? Wellicht beter om in alle gevallen <geen transformatie> toe te passen.
+StUF BG – npsLk01
+
+Vulling vanuit BRP
+
+0 (Onbekend)
+
+<geen transformatie>
+Deze waarde vullen indien wel huwelijksgegevens in mutatiebericht of
+volledigbericht zijn aangetroffen, maar geen 100% afleiding mogelijk is?
+
+1 (Ongehuwd en nooit gehuwd geweest)
+
+<geen transformatie>; zie inleiding.
+
+2 (Gehuwd)
+
+Mutatiebericht:
+Alleen 100% betrouwbare transformatie mogelijk indien de naam van de
+administratieve handeling gelijk is aan:
+- Voltrekking huwelijk in Nederland of
+- Voltrekking huwelijk in buitenland
+NB. In geval van de Administratieve handeling ‘Correctie huwelijk’ niet met
+100% zekerheid af te leiden, omdat de afnemer mogelijk niet geautoriseerd
+is voor de ontbindingsgegevens en het in geval van een correctie niet
+bekend is of het meest recente huwelijk is gecorrigeerd.
+Volledigbericht:
+<geen transformatie>; zie inleiding.
+
+3 (Gescheiden)
+
+Mutatiebericht:
+Alleen 100% betrouwbare transformatie mogelijk indien:
+1) de naam van de administratieve handeling gelijk is aan:
+- Ontbinding huwelijk in Nederland of
+- Ontbinding huwelijk in buitenland
+EN
+2) element Persoon.Huwelijk.RedenEindeCode=”S”.
+NB. In geval van de Administratieve handeling ‘Correctie huwelijk’ niet met
+100% zekerheid af te leiden, omdat de afnemer mogelijk niet geautoriseerd
+is voor de ontbindingsgegevens. en het in geval van een correctie niet
+bekend is of het meest recente huwelijk is gecorrigeerd.
+Volledigbericht:
+<geen transformatie>; zie inleiding.
+
+Pagina 56 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+StUF BG – npsLk01
+
+Vulling vanuit BRP
+
+4 (Weduwe/weduwnaar)
+
+Mutatiebericht:
+Alleen 100% betrouwbare transformatie mogelijk indien:
+1) de naam van de administratieve handeling gelijk is aan:
+- Ontbinding huwelijk in Nederland of
+- Ontbinding huwelijk in buitenland
+EN
+2) element Persoon.Huwelijk.RedenEindeCode=”O”
+EN
+3) element Persoon.Bijhouding.NadereBijhoudingsaardCode=”A”.
+NB. In geval van de Administratieve handeling ‘Correctie huwelijk’ niet met
+100% zekerheid af te leiden, omdat de afnemer mogelijk niet geautoriseerd
+is voor de ontbindingsgegevens. en het in geval van een correctie niet
+bekend is of het meest recente huwelijk is gecorrigeerd.
+Volledigbericht:
+<geen transformatie>; zie inleiding.
+
+5 (Partnerschap)
+
+Mutatiebericht:
+Alleen 100% betrouwbare transformatie mogelijk indien de naam van de
+administratieve handeling gelijk is aan:
+- Aangaan geregistreerd partnerschap in Nederland of
+- Aangaan geregistreerd partnerschap in buitenland
+NB. In geval van de Administratieve handeling ‘Correctie huwelijk’ niet met
+100% zekerheid af te leiden, omdat de afnemer mogelijk niet geautoriseerd
+is voor de ontbindingsgegevens en het in geval van een correctie niet
+bekend is of het meest recente geregistreerd partnerschap is gecorrigeerd.
+Volledigbericht:
+<geen transformatie>; zie inleiding.
+
+6 (Partnerschap beëindigd)
+
+Mutatiebericht:
+Alleen 100% betrouwbare transformatie mogelijk indien:
+1) de naam van de administratieve handeling gelijk is aan:
+- Beeindiging geregistreerd partnerschap in Nederland of
+- Beeindiging geregistreerd partnerschap in buitenland
+EN
+2) element Persoon.Huwelijk.RedenEindeCode=”S”.
+NB. In geval van de Administratieve handeling ‘Correctie huwelijk’ niet met
+100% zekerheid af te leiden, omdat de afnemer mogelijk niet geautoriseerd
+is voor de ontbindingsgegevens. en het in geval van een correctie niet
+bekend is of het meest recente huwelijk is gecorrigeerd.
+Volledigbericht:
+<geen transformatie>; zie inleiding.
+
+7 (Achtergebleven partner)
+
+Mutatiebericht:
+Alleen 100% betrouwbare transformatie mogelijk indien:
+1) de naam van de administratieve handeling gelijk is aan:
+- Beeindiging geregistreerd partnerschap in Nederland of
+- Beeindiging geregistreerd partnerschap in buitenland
+EN
+2) element
+Persoon.GeregistreerdPartnerschapHuwelijk.RedenEindeCode=”O”
+EN
+3) element Persoon.Bijhouding.NadereBijhoudingsaardCode=”A”.
+
+Pagina 57 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+StUF BG – npsLk01
+
+Vulling vanuit BRP
+
+NB. In geval van de Administratieve handeling ‘Correctie huwelijk’ niet met
+100% zekerheid af te leiden, omdat de afnemer mogelijk niet geautoriseerd
+is voor de ontbindingsgegevens. en het in geval van een correctie niet
+bekend is of het meest recente huwelijk is gecorrigeerd.
+Volledigbericht:
+<geen transformatie>; zie inleiding.
+
+Inhoud stamtabel RedenEindeRelatie in BRP:
+•
+•
+•
+•
+•
+•
+•
+•
+
+7.3
+
+'?'
+'A'
+'N'
+'O'
+'R'
+'S'
+'V',
+'Z'
+
+Onbekend'
+Vermissing van een persoon gevolgd door andere verbintenis'
+Nietigverklaring'
+Overlijden partner'
+Rechtsvermoeden van overlijden partner
+Echtscheiding, ontbinding of eindigen conform Nederlands recht
+Naar vreemd recht anders beëindigd
+Omzetting
+
+Reisdocumentgegevens (rsdLk01)
+
+De transformatie van de BRP-persoonsgegevens naar StUF BG entiteittype RSD wordt per te
+transformeren StUF BG-element aangegeven.
+Indien de elementen 1:1 kunnen worden overgezet, wordt alleen het BRP-elementnummer
+aangegeven. Voor de specifieke eigenschappen van de BRP-elementen wordt verwezen naar
+[TRAFOTAB].
+Indien voor transformatie een specifieke transformatieregel nodig is, wordt deze in de tabel
+opgenomen. In geval van een uitgebreide regel wordt verwezen naar een specifieke paragraaf waarin
+de details zijn opgenomen.
+
+7.3.1
+
+Reisdocumentgegevens
+
+StUF BG – rsdLk01
+
+Vulling vanuit BRP
+
+Pagina 58 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+8
+
+Openstaande punten
+
+Onderstaand een inventarisatie van de ten tijde van de stopzetting van Operatie BRP
+bekende openstaande punten:
+•
+
+Afsteming specificaties met VNG-KING; rol Opdrachtnemer en VNG-KING hierbij.
+
+•
+
+Hoe omgaan met StUF-concepten, zoals opgenomen in Hoofdstuk 4. Voor een
+deel hiervan is nu de richting aangegeven, voor ander deel nog niet. De
+afhandeling van de StUF-concepten aft te stemmen tussen Opdrachtnemer en
+VNG-KING.
+
+•
+
+Met partijen vaststellen diepgang van de Transformatie-specificaties; vulling oudnieuw-situatie apart beschrijven (omgaan met actuele/beeindigde/vervallen
+gegevensgroepen). Generieke mechanismen, generiek beschrijven. Na eerste
+uitwerking toetsing door VNG-KING en mogelijk leveranciers.
+
+•
+
+Detailuitwerking van het omgaan met Volledig-berichten volgens het principe:
+“Stapeling van Lk01-berichten; oudste situatie eerst”.
+
+•
+
+Beoordeling inhoud leveringsautorisaties van de partijen die potentieel gebruik
+zullen gaan maken van de StUF BG Vertaalvoorziening. Belangrijk hierbij is te
+bepalen of er voldoende gegevens geleverd worden om de vertaling conform
+StUF Bg te kunnen uitvoeren.
+
+•
+
+Uitbreiding Transformatiespecificaties per element; hierbij onder andere
+uitgaande [TRAFOTAB]. Denk bv. aan omgaan met bijvoorbeeld de StUG BGelementen Landnaam en Gemeentenaam; vanuit BRP wordt alleen de code
+geleverd.
+
+•
+
+Afstemming tussen opdrachtnemer en VNG-KING welke zogenaamde
+‘ExtraElementen’ in de StUF BG Transfromatiecomponent een rol spelen en op
+basis van welke regels deze te transformeren.
+
+•
+
+Verschillen BRPXML-mutatieberichten in geval van GBA-bijhoudingen vs. BRPbijhoudingen. Dit onderwerp op te pakken, nadat:
+o
+Operatie BRP hiervoor een verschillendocument [VERSCHILDOC] heeft
+opgesteld
+o
+Er voldoende basis is gelegd voor de vertaling van de BRPXML Mutatie- en
+Volledigberichten op basis van BRP-handelingen.
+
+•
+
+Aandachtspunten op basis van ervaringen Opdrachtnemer tot nu toe
+
+Pagina 59 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Bijlage A - Historiepatroon gegevensgroepen BRP
+
+In de BRP worden objecttypen en gegevensgroepen onderscheiden. Gegevengroepen hebben ieder een
+eigen historiepatroon. Een gegevensgroep kan attributen bevatten met een materieel aspect.
+Voor de transformatie van de BRP-metagegevens voor materiële en formele historie naar de StUFmetagegevens hiervoor is onderstaand overzicht bedoeld:
+BRP Objecttype/Gegevensgroep
+
+Historie
+patroon
+
+Attributen met MaterieelAspect
+
+Persoon.AfgeleidAdministratief
+
+FH
+
+-
+
+Persoon.Identificatienummers
+
+MH
+
+-
+
+Persoon.SamengesteldeNaam
+
+MH
+
+-
+
+Persoon.Geboorte
+Persoon.Geslachtsaanduiding
+Persoon.Inschrijving
+Persoon.Nummerverwijzing
+Persoon.Bijhouding
+Persoon.Overlijden
+PersoonVoornaam.Voornaam
+PersoonGeslachtsnaamcomponent.Geslachtsnaamcomponent
+Persoon.Naamgebruik
+
+FH
+
+Persoon.Geboorte.Datum
+
+MH
+
+-
+
+FH
+
+Persoon.Inschrijving.Datum
+
+MH
+
+-
+
+MH
+
+-
+
+FH
+
+Persoon.Overlijden.Datum
+
+MH
+
+-
+
+MH
+
+-
+
+FH
+
+-
+
+PersoonAdres.Adres
+
+MH
+
+PersoonAdres.Adres.DatumAanvangAdreshouding
+
+PersoonNationaliteit.Nationaliteit
+
+MH
+
+-
+
+MH
+
+-
+
+MH
+
+-
+
+FH
+
+-
+
+MH
+
+-
+
+MH
+
+-
+
+FH
+
+-
+
+MH
+
+-
+
+FH
+
+-
+
+PersoonIndicaties.DerdeHeeftGezag
+PersoonIndicaties.OnderCuratele
+PersoonIndicaties.Verstrekkingsbeperking
+PersoonIndicaties.VastgesteldNietNederlander
+PersoonIndicaties.BehandeldAlsNederlander
+PersoonIndicaties.SignaleringMetBetrekkingTotReisdcu
+ment
+PersoonIndicaties.Staatloos
+PersoonIndicaties.VerblijfsrechtelijkePositie
+Persoon.Kind
+
+FH
+
+-
+
+Persoon.Kind.FamilierechtelijkeBetrekking.
+Relatie
+
+FH
+
+-
+
+Persoon.Kind.FamilierechtelijkeBetrekking.
+Ouder
+
+FH
+
+-
+
+Persoon.Kind.FamilierechtelijkeBetrekking.
+Ouder.Persoon.Identificatienummers
+
+MH
+
+-
+
+Persoon.Kind.FamilierechtelijkeBetrekking.
+Ouder.Persoon.SamengesteldeNaam
+
+MH
+
+-
+
+Persoon.Kind.FamilierechtelijkeBetrekking.
+Ouder.Persoon.Geboorte
+
+FH
+
+GerelateerdeOuder.Geboorte.Datum
+
+Persoon.Kind.FamilierechtelijkeBetrekking.
+Ouder.Persoon.Geslachtsaanduiding
+
+MH
+
+-
+
+Pagina 60 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+BRP Objecttype/Gegevensgroep
+
+Historie
+patroon
+
+Attributen met MaterieelAspect
+
+Persoon.Kind.FamilierechtelijkeBetrekking.
+Ouder.Ouderschap
+
+MH
+
+-
+
+Persoon.Kind.FamilierechtelijkeBetrekking.
+Ouder.OuderlijkGezag
+
+MH
+
+-
+
+Persoon.Ouder
+
+FH
+
+-
+
+Persoon.Ouder.FamilierechtelijkeBetrekking.
+Relatie
+
+FH
+
+-
+
+Persoon.Ouder.FamilierechtelijkeBetrekking.
+Kind
+
+FH
+
+-
+
+Persoon.Ouder.FamilierechtelijkeBetrekking.Kind.Perso
+on.Identificatienummers
+
+MH
+
+-
+
+Persoon.Ouder.FamilierechtelijkeBetrekking.
+Kind.Persoon.SamengesteldeNaam
+
+MH
+
+-
+
+Persoon.Ouder.FamilierechtelijkeBetrekking.
+Kind.Persoon.Geboorte
+
+FH
+
+GerelateerdeKind.Geboorte.Datum
+
+Persoon.Ouder.Ouderschap
+
+MH
+
+-
+
+FH
+
+-
+
+FH
+
+Huwelijk.Relatie.DatumAanvang
+
+Persoon.Partner
+Persoon.Partner.Huwelijk(GeregistreerdPartnerschap).Relatie
+
+Huwelijk.Relatie.DatumEinde
+GeregistreerdPartnerschap.Relatie.DatumAanvang
+GeregistreerdPartnerschap.Relatie.DatumEinde
+
+Persoon.Partner.Huwelijk(GeregistreerdPartnerschap).Partner
+
+FH
+
+-
+
+Persoon.Partner.Huwelijk(GeregistreerdPartnerschap).Partner Persoon.Identificatienummers
+
+MH
+
+-
+
+Persoon.Partner.Huwelijk(GeregistreerdPartnerschap).Partner Persoon.SamengesteldeNaam
+
+MH
+
+-
+
+Persoon.Partner.Huwelijk(GeregistreerdPartnerschap).Partner Persoon.Geboorte
+
+FH
+
+GerelateerdeOuder.Geboorte.Datum
+
+Persoon.Partner.Huwelijk(GeregistreerdPartnerschap).Partner Persoon.Geslachtsaanduiding
+
+MH
+
+-
+
+Persoon.Migratie
+
+MH
+
+-
+
+Persoon.Verblijfsrecht
+
+FH
+
+PersoonVerblijfsrecht.Verblijfsrecht.DatumAanvang
+PersoonVerblijfsrecht.Verblijfsrecht.DatumVoorzienEinde
+
+Persoon.Reisdocument.Reisdocument
+
+FH
+
+PersoonReisdocument.DatumIngangDocument
+PersoonReisdocument.DatumEindeDocument
+PersoonReisdocument.DatumInhoudingVermissing
+
+Persoon.UitsluitingKiesrecht
+Persoon.DeelnameEUVerkiezingen
+
+FH
+
+Persoon.UitsluitingKiesrecht.DatumVoorzienEinde
+
+FH
+
+Persoon.DeelnameEUVerkiezingen.Datum
+AanleidingAanpassing
+Persoon.DeelnameEUVerkiezingen.DatumVoorzienEindeUit
+sluiting
+
+Persoon.Persoonskaart
+PersoonVerificatie.Verificatie
+PersoonOnderzoek.Onderzoek
+
+FH
+
+-
+
+FH
+
+PersoonVerificatie.Verificatie.Datum
+
+FH
+
+PersoonOnderzoek.Onderzoek.datumAanvang
+PersoonOnderzoek.Onderzoek.DatumEinde
+
+PersoonOnderzoek.GegevenInOnderzoek
+
+Geen
+
+-
+
+Pagina 61 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Bijlage B - Extra elementen StUF BG
+
+In deze bijlage zijn de extra elementen binnen StUF BG opgenomen, inclusief de aanduiding of deze
+gevuld worden bij de transformatie vanuit BRPXML:
+StUF BG – Extra elementen
+
+Entiteittype
+
+Bic
+
+NPS
+
+Iban
+
+NPS
+
+Locatiebeschrijving correspondentie adres
+
+NPS
+
+Einddatum uitsluiting europees kiesrecht
+Einddatum uitsluiting kiesrecht
+
+Vulling vanuit BRP
+Geen transformatie vanuit BRP mogelijk
+Geen transformatie vanuit BRP mogelijk
+Geen transformatie vanuit BRP mogelijk
+
+NPS
+
+Persoon.UitsluitingKiesrecht.DatumVoorzienEinde
+
+NPS
+
+Persoon.DeelnameEUVerkiezingen.DatumVoorzienEindeUitsluiting
+
+De gehele lijst ExtraElementen vanuit een StUF BG-invalshoek nader af te stemmen tussen
+opdrachtnemer en VNG-KING.
+
+Pagina 62 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Bijlage C – Peildatums BRP
+
+Onderstaand zijn de Peildatums opgenomen die op de PersoonsLijst kunnen voorkomen en gebruikt
+kunnen worden voor het ‘opknippen’ van BRPXML Volledigberichten naar één of meerdere StUF BG
+Lk01-berichten:
+
+Pagina 63 van 64
+
+Status Concept | Detailontwerp Transformatie BRPXML naar StUF BG 0310 | 2 augustus 2017
+
+Vervolg:
+
+Pagina 64 van 64
+
+

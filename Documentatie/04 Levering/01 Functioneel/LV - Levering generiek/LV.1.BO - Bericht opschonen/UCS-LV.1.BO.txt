@@ -1,0 +1,247 @@
+UCS LV.1.BO – Bericht opschonen
+Versie
+
+2.0
+
+Datum
+
+13 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+24-11-2016
+
+0.1
+
+Eerste opzet
+
+oBRP
+
+25-11-2016
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+13-12-2016
+
+0.3
+
+AD aangepast ((*) verwijderd)
+
+oBRP
+
+15-02-2017
+
+1.0
+
+UC’s en regels omgehangen in BMR. Versie document
+gereed.
+
+oBRP
+
+13-07-2017
+
+2.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS LV.1.BO – Bericht opschonen
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Bericht opschonen .................................................................................................... 4
+2.1
+2.2
+
+3
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+Openstaande punten .............................................................................................................3
+
+Activiteitendiagram ...............................................................................................................4
+Beschrijving van de stappen ...................................................................................................4
+
+Ontwerpbeslissingen ................................................................................................ 6
+
+Status: Definitief, versie: 2.0
+
+Pagina 2 van 6
+
+UCS LV.1.BO – Bericht opschonen
+
+1 Inleiding
+1.1
+
+Doel
+
+Na het filteren in de voorgaande stappen kunnen er lege groepen of niet relevante verwijzingen in
+het bericht ontstaan. Ook zijn er een aantal regels voor de sortering van groepen en objecten. Het
+doel van dit document is te beschrijven welke stappen er gezet worden om een bericht op te
+schonen voordat het geleverd kan worden.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de stappen om het bericht op te schonen. In Hoofdstuk 3 staan de Use Case
+specifieke ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijze BRP
+
+Operatie BRP
+
+-
+
+-
+
+1.4
+
+Openstaande punten
+•
+
+Sortering van objecten: voor een aantal objecttypen is bepaald in welke volgorde de
+objecten van dat type in een bericht moeten komen. Dit wordt beschreven door regel
+R1805. Maar deze regel legt niet alle volgorde van objecten vast. Zo is niet beschreven in
+welke volgorde kinderen, ouders, huwelijken en geregistreerde partnerschappen in de
+berichten dienen te komen. Je zou kunnen beargumenteren dat dit voor een machinemachine interface er niet toe doet, ook omdat de volgorde binnen een XML berciht
+betekenisloos is. Maar in de praktijk zijn er wel degelijk een aantal redenen om wel te
+kiezen voor een vast sortering:
+o Testbaarheid. Tools voor automatische regressie testen hebben er problemen meer
+om te zien dat een bericht ongewijzigd is wanneer de sortering niet stabiel is
+(bijvoorbeeld omdat wordt gesorteerd op een betekenisloze sleutel)
+o Leesbaarheid. Voor het debuggen van mogelijke problemen is het erg prettig als
+berichten een vaste interne structuur en sortering hebben.
+o Verwerkbaarheid. Bij het verwerken van berichten kan het toch prettig zijn om te
+weten dat de objecten in een vaste volgorde langs komen.
+Zeker op grond van het eerste punt is het aan te raden om een vaste sortering van
+objecten wel te implementeren (voor een redelijk gedetailleerd voorstel van hoe die
+sortering er uit kan zien, zie brp-voortbrenging\05 WITROOD\01 Analyses Openstaande
+Issues\Analyse GDT bevindingen leveringsfunctionaliteit).
+
+Status: Definitief, versie: 2.0
+
+Pagina 3 van 6
+
+UCS LV.1.BO – Bericht opschonen
+
+2 Bericht opschonen
+Het opschonen van het bericht kent een aantal stappen, deze staan in het activiteitendiagram.
+In de paragraaf daarna worden de stappen stuk voor stuk beschreven. Voor een meer
+gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden wordt verwezen
+naar de aan deze Use Case gekoppelde regels in BMR.
+
+2.1
+
+Activiteitendiagram
+
+2.2
+
+Beschrijving van de stappen
+
+In deze paragraaf worden de stappen in het activiteitendiagram beschreven.
+
+1. Bericht consistent maken (LV.1.BO.CM)
+Deze filtering betreft voornamelijk het verwijderen van elementen die niet (meer) relevant zijn
+(door vorige filterstappen):
+•
+•
+•
+•
+•
+
+Een bericht bevat alleen onderzoeken die verwijzen naar ontbrekende, aanwezige en
+geautoriseerde gegevens.
+Er worden geen onderzoeken geleverd die geen enkele verwijzing overhouden.
+Alleen acties die verantwoording vormen voor inhoudelijke- of onderzoeksgroepen worden
+meegeleverd.
+Alleen bronnen waarnaar daadwerkelijk wordt verwezen worden meegeleverd.
+Alleen administratieve handelingen waarnaar daadwerkelijk wordt verwezen worden als
+verantwoording geleverd.
+
+2. Bericht structuur opschonen (LV.1.BO.SO)
+
+Status: Definitief, versie: 2.0
+
+Pagina 4 van 6
+
+UCS LV.1.BO – Bericht opschonen
+
+Deze filterstap betreft het opschonen van bericht structuur elementen:
+•
+•
+
+Een BRP bericht bevat geen lege containers.
+Het systeem logt de situatie “bericht bevat geen gegevens”
+
+3. Gegevens in bericht sorteren (LV.1.BO.GS)
+Gegevens in het bericht worden gesorteerd. Er zijn regels voor:
+•
+•
+•
+
+het sorteren van verantwoording in een bericht;
+de volgorde van meervoudig voorkomende objecten in een bericht;
+de volgorde historie in een bericht.
+
+Status: Definitief, versie: 2.0
+
+Pagina 5 van 6
+
+UCS LV.1.BO – Bericht opschonen
+
+3 Ontwerpbeslissingen
+Er zijn geen Use Case specifieke ontwerpbeslissingen.
+
+Status: Definitief, versie: 2.0
+
+Pagina 6 van 6
+
+

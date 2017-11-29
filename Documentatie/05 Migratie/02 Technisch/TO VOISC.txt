@@ -1,0 +1,1957 @@
+Technisch ontwerp VOISC
+
+2.6
+
+Datum
+Status
+
+30-06-2017
+Definitief
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+Inhoudsopgave
+1
+
+INLEIDING ................................................................................................................................................5
+1.1
+1.2
+1.3
+
+2
+
+Beknopte omschrijving ..........................................................................................................................5
+Referenties .............................................................................................................................................6
+Leeswijzer .............................................................................................................................................6
+
+CONTEXT ..................................................................................................................................................7
+2.1 Ontwerpbeslissingen..............................................................................................................................7
+2.1.1
+Communicatie.................................................................................................................................7
+2.1.2
+Fout bericht uit VOISC...................................................................................................................7
+2.1.3
+Status overgangen ..........................................................................................................................8
+2.1.4
+Configuratie ...................................................................................................................................8
+2.1.5
+Maven Structuur .............................................................................................................................9
+
+3
+
+FUNCTIES ................................................................................................................................................10
+3.1 Ontvangen berichten van ISC ..............................................................................................................10
+3.1.1
+Functionaliteit ..............................................................................................................................10
+3.1.2
+Preconditie ...................................................................................................................................10
+3.1.3
+Postconditie ..................................................................................................................................10
+3.1.4
+Structuur .......................................................................................................................................10
+3.1.5
+Implementatie ...............................................................................................................................10
+3.1.5.1
+
+Ontvangen berichten van ISC .................................................................................................................. 10
+
+3.1.6
+Ontwerpbeslissingen ....................................................................................................................10
+3.2 Versturen berichten naar ISC ..............................................................................................................11
+3.2.1
+Functionaliteit ..............................................................................................................................11
+3.2.2
+Preconditie ...................................................................................................................................11
+3.2.3
+Postconditie ..................................................................................................................................11
+3.2.4
+Structuur .......................................................................................................................................11
+3.2.5
+Implementatie ...............................................................................................................................11
+3.2.5.1
+3.2.5.2
+
+Versturen berichten naar ISC ................................................................................................................... 11
+NonDeliveryReport .................................................................................................................................. 11
+
+3.2.6
+Ontwerpbeslissingen ....................................................................................................................12
+3.3 Ontvangen berichten van GBA mailbox..............................................................................................13
+3.3.1
+Functionaliteit ..............................................................................................................................13
+3.3.2
+Preconditie ...................................................................................................................................13
+3.3.3
+Postconditie ..................................................................................................................................13
+3.3.4
+Structuur .......................................................................................................................................13
+3.3.5
+Implementatie ...............................................................................................................................13
+3.3.5.1
+3.3.5.2
+3.3.5.3
+3.3.5.4
+
+Ontvangen berichten van GBA mailbox .................................................................................................. 13
+Foutherstel ............................................................................................................................................... 13
+DeliveryReport......................................................................................................................................... 13
+StatusResult ............................................................................................................................................. 14
+
+3.3.6
+Ontwerpbeslissingen ....................................................................................................................14
+3.4 Versturen berichten naar GBA mailbox ..............................................................................................15
+3.4.1
+Functionaliteit ..............................................................................................................................15
+3.4.2
+Preconditie ...................................................................................................................................15
+3.4.3
+Postconditie ..................................................................................................................................15
+3.4.4
+Structuur .......................................................................................................................................15
+3.4.5
+Implementatie ...............................................................................................................................15
+3.4.5.1
+3.4.5.2
+3.4.5.3
+
+Versturen berichten naar GBA mailbox ................................................................................................... 15
+Foutmelding ............................................................................................................................................. 15
+Foutherstel ............................................................................................................................................... 16
+
+3.4.6
+Ontwerpbeslissingen ....................................................................................................................16
+3.5 Schonen van informatie .......................................................................................................................17
+3.5.1
+Functionaliteit ..............................................................................................................................17
+3.5.2
+Preconditie ...................................................................................................................................17
+Pagina 2 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+3.5.3
+3.5.4
+3.5.5
+3.5.5.1
+
+Postconditie ..................................................................................................................................17
+Structuur .......................................................................................................................................17
+Implementatie ...............................................................................................................................17
+Schonen verzonden berichten .................................................................................................................. 17
+
+3.5.6
+Ontwerpbeslissingen ....................................................................................................................17
+3.6 Foutherstel berichten ...........................................................................................................................18
+3.6.1
+Functionaliteit ..............................................................................................................................18
+3.6.2
+Preconditie ...................................................................................................................................18
+3.6.3
+Postconditie ..................................................................................................................................18
+3.6.4
+Structuur .......................................................................................................................................18
+3.6.5
+Implementatie ...............................................................................................................................18
+3.6.5.1
+
+Foutherstel berichten ................................................................................................................................ 18
+
+3.6.6
+Ontwerpbeslissingen ....................................................................................................................18
+3.7 Aanmelden en wachtwoord wijzigingen .............................................................................................19
+3.7.1
+Functionaliteit ..............................................................................................................................19
+3.7.2
+Preconditie ...................................................................................................................................19
+3.7.3
+Postconditie ..................................................................................................................................19
+3.7.4
+Structuur .......................................................................................................................................19
+3.7.5
+Implementatie ...............................................................................................................................19
+3.7.5.1
+3.7.5.2
+
+Aanmelden en wachtwoord wijzigingen .................................................................................................. 19
+Foutherstel ............................................................................................................................................... 19
+
+3.7.6
+Ontwerpbeslissingen ....................................................................................................................19
+3.8 Blokkeren van GBA mailboxen ..........................................................................................................20
+3.8.1
+Functionaliteit ..............................................................................................................................20
+3.8.2
+Preconditie ...................................................................................................................................20
+3.8.3
+Postconditie ..................................................................................................................................20
+3.8.4
+Structuur .......................................................................................................................................20
+3.8.5
+Implementatie ...............................................................................................................................20
+3.8.5.1
+
+Blokkeren van GBA mailboxen ............................................................................................................... 20
+
+3.8.6
+Ontwerpbeslissingen ....................................................................................................................20
+3.9 Archivering ..........................................................................................................................................21
+3.9.1
+Functionaliteit ..............................................................................................................................21
+3.9.2
+Preconditie ...................................................................................................................................21
+3.9.3
+Postconditie ..................................................................................................................................21
+3.9.4
+Structuur .......................................................................................................................................21
+3.9.5
+Implementatie ...............................................................................................................................21
+3.9.5.1
+
+3.9.6
+4
+
+GEGEVENSMODELLEN .......................................................................................................................23
+4.1
+4.2
+
+5
+
+Datamodel ...........................................................................................................................................23
+Queue bericht ......................................................................................................................................24
+
+OPMERKINGEN .....................................................................................................................................25
+5.1.1
+5.1.2
+5.1.3
+
+6
+
+Verzenden aan een gemeente in het BRP stelsel ..........................................................................25
+Ontvangen ‘oude’ berichten na overgaan van gemeente naar BRP stelsel ..................................25
+Fouten uit VOISC naar ISC..........................................................................................................25
+
+BIJLAGE A: JMX INTERFACE ...........................................................................................................26
+6.1
+6.2
+
+7
+
+Versturen van archiefverzoeken ............................................................................................................... 21
+
+Ontwerpbeslissingen ....................................................................................................................22
+
+Voisc....................................................................................................................................................26
+Register ................................................................................................................................................27
+
+BIJLAGE B: CONFIGURATIE .............................................................................................................28
+
+Pagina 3 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+06-02-2014
+17-02-2014
+18-02-2014
+
+0.1
+0.2
+1.0
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+11-4-2014
+
+1.0
+
+15-4-2014
+28-04-2014
+06-05-2014
+10-06-2014
+11-06-2014
+04-09-2014
+18-03-2015
+20-03-2015
+28-07-2015
+28-09-2015
+06-10-2015
+03-12-2015
+
+1.1
+1.2
+1.3
+1.4
+1.5
+1.6
+1.7
+1.8
+2.0
+2.1
+2.2
+2.3
+
+22-01-2016
+
+2.4
+
+26-07-2016
+
+2.5
+
+30-06-2017
+
+2.6
+
+Initiële versie
+Aanpassingen n.a.v. review
+Toevoegen bekende aandachtsgebieden en
+definitief maken
+Omgevormd naar technisch ontwerp
+template
+Aanpassingen n.a.v. review
+Aanpassingen n.a.v. cross-team review.
+Error status wordt ook opgeschoond.
+Aanpassing versienummers referenties
+Aanpassing module- en packagenamen
+Definitief gemaakt voor release 2.2
+Aanpassing voor release 3.1
+Aanpassingen n.a.v. review
+Versie aangemaakt voor release 3.1
+Referenties bijgewerkt
+Bijwerken nav ISC refactor
+Opnemen archief functie; bijwerken
+configuratie
+Nalopen voor release; kleine fouten
+bijwerken; JMX bijwerken
+Configuratie bijwerken; kleine fouten
+bijwerken
+Bijwerken archivering
+
+Operatie BRP
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+BRP
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+06-02-2014
+15-4-2014
+25-04-2014
+
+0.1
+1.0
+1.1
+
+Initiële versie
+Inhoudelijke review
+Inhoudelijke review cross-team
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+20-03-2015
+
+1.7
+
+Review
+
+Operatie BRP
+
+Pagina 4 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Het component VOISC verzorgt de communicatie tussen het component ISC en de GBA mailbox.
+Het is de plaats waar het GBA mailbox specifieke protocol SPD is geïmplementeerd (zoals
+beschreven in het [LO]).
+
+Pagina 5 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+1.2
+
+Referenties
+#
+[LO]
+
+Document
+Logisch Ontwerp
+
+Organisatie
+Agentschap
+BPR
+
+[SAD]
+
+OperatieBRP
+
+[ISC]
+
+Software Architecture Document
+Migratiesoftware BRP
+Technisch ontwerp ISC
+
+[ROUTERING]
+
+Technisch ontwerp Routering
+
+OperatieBRP
+
+Versie
+3.9
+
+Datum
+31-01-2015
+
+OperatieBRP
+
+Nota: versienummers van ‘interne’ documenten worden niet opgenomen. Deze dienen consistent
+te zijn.
+
+1.3
+
+Leeswijzer
+De opzet is dusdanig dat eerst de context, overkoepelende en algemene zaken worden
+besproken (hoofdstuk 2). Vervolgens wordt er stilgestaan bij alle implementaties van de
+functionaliteiten die in VOISC voorkomen (hoofdstuk 3). Voor het bespreken van de
+functionaliteiten is gekozen om de opzet per functionaliteit hetzelfde te houden. Dit houdt in dat
+er per functionaliteit gesproken wordt over:
+
+➢
+➢
+➢
+➢
+➢
+
+De functionaliteit; een beschrijving van wat de functionaliteit inhoudt.
+Preconditie; indien van toepassing de geldende preconditie.
+Postconditie; indien van toepassing de geldende postconditie.
+De structuur; een beschrijving van het package/de packages waar de implementatie staat.
+De implementatie; een beschrijving van belangrijke implementatie specifieke zaken en
+klassen.
+➢ Ontwerpbeslissingen; een beschrijving van de ontwerpbeslissingen die ten grondslag
+liggen van de gekozen implementatie.
+Eventueel nog uit te zoeken punten of onduidelijkheden zullen worden besproken in het laatste
+hoofdstuk (hoofdstuk 4). Tenslotte verschaffen Bijlage A en Bijlage B nog extra informatie met
+betrekking tot beschikbare JMX operaties en de configuratie.
+
+Pagina 6 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+2
+
+Context
+
+In [SAD] is aangegeven in welke omgeving VOISC opereert. In de hier onderstaande afbeelding
+is ter illustratie de omgeving weergegeven, in de paragraaf ‘4.1.7 View-deel 5: Verzend &
+Ontvangst Interstelsel Communicatie (VOISC)’ van het [SAD] kan meer detailinformatie
+hieromtrent worden gevonden.
+
+Dit document richt zich alleen op de zaken binnen VOISC. De functionaliteit van het VOISC
+component kan worden opgedeeld in vijf verschillende taken:
+➢
+➢
+➢
+➢
+➢
+
+Het
+Het
+Het
+Het
+Het
+
+ontvangen van berichten van ISC
+versturen van berichten naar ISC
+ontvangen van berichten van de GBA mailbox
+versturen van berichten naar de GBA mailbox
+opschonen van verwerkte gegevens en het herstellen van foutsituaties
+
+2.1
+
+Ontwerpbeslissingen
+
+2.1.1
+
+Communicatie
+De VOISC maakt gebruik van JMS-queues, die beschikbaar worden gesteld door [ROUTERING]
+om berichten te versturen naar en te ontvangen van ISC.
+Queue
+Doel
+voisc.verzenden
+Het verzenden van berichten naar ISC
+voisc.ontvangst
+Het ontvangen van berichten van ISC
+Zie 4.2 voor de berichtenstructuur.
+De communicatie richting de GBA Mailboxen gebeurt via het SPD protocol waarbij elke GBA partij
+zijn eigen mailbox heeft. VOISC gebruikt de mailbox tabel (zie 4.1) om de juiste instantie en
+mailboxnummer op te zoeken bij de desbetreffende mailbox om deze te benaderen.
+
+2.1.2
+
+Fout bericht uit VOISC
+Wanneer er een fout optreedt binnen de VOISC, dan wordt er naar ISC een Pf99-bericht
+gestuurd met daarin de functionele melding van de opgetreden fout. Dit Pf99-bericht is niet
+gedefinieerd in het [LO] en wordt enkel gebruikt tussen de VOISC en het ISC component.
+Pagina 7 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+2.1.3
+
+Status overgangen
+VOISC maakt in de taken gebruik van de volgende statussen en overgangen voor berichten.
+Als een bericht succesvol van de queue/mailbox wordt gehaald krijgt deze de beginstatus
+(RECEIVED_FROM_*). Bij normaal verloop zal een bericht via de ‘In verwerking’ status
+uiteindelijk verwerkt worden en de eindstatus krijgen (SENT_TO_*).
+
+Tevens zijn er nog een tweetal andere statussen (ERROR en PROCESSED_IMMEDIATELY). Dit
+zijn eind statussen welke kunnen worden toegekend aan berichten die van de ISC queue worden
+gelezen maar niet goed bevonden zijn om de status RECEIVED_FROM_ISC te krijgen door
+functionele of technische fouten.
+
+2.1.4
+
+Configuratie
+De VOISC is instelbaar. Middels een configuratie bestand (genaamd voisc-runtime.properties)
+kun je verschillende configuratie instellen voor de VOISC. Zie Bijlage B: Configuratie voor de
+mogelijke instellingen.
+
+Pagina 8 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+2.1.5
+
+Maven Structuur
+Het onderstaande overzicht toont de Maven structuur en geeft aan waar elk project voor wordt
+gebruikt.
+Project
+Subproject
+Beschrijving
+migr-voisc
+voisc root.
+migr-voisc-database
+Hierin wordt alle communicatie met de
+voisc database afgehandeld.
+migr-voisc-spd
+Hierin wordt alle communicatie met de
+mailbox server afgehandeld (middels spd
+protocol).
+migr-voisc-runtime
+Levert de uitvoerbare voisc instantie op.
+Bevat de automatische jobs, JMS listener
+en alle andere functionaliteit om de
+berichten te routeren.
+
+Pagina 9 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+3
+
+Functies
+
+3.1
+
+Ontvangen berichten van ISC
+
+3.1.1
+
+Functionaliteit
+Berichten van de ISC queue (voisc.verzenden) worden opgeslagen in de database van VOISC.
+
+3.1.2
+
+Preconditie
+
+•
+3.1.3
+
+Postconditie
+
+•
+•
+3.1.4
+
+Er staat een bericht op de ISC queue (voisc.verzenden)
+
+Het bericht staat niet meer op de ISC queue (voisc.verzenden)
+Het bericht is toegevoegd in de database met status ‘RECEIVED_FROM_ISC’
+
+Structuur
+
+Package
+nl.bzk.migratiebrp.voisc
+
+3.1.5
+
+Implementatie
+
+3.1.5.1
+
+Ontvangen berichten van ISC
+
+Omschrijving
+Package waarin specifieke implementaties voor de
+VOISC staan.
+
+Class
+IscberichtListener
+Via een listening mechanisme (JMS listener) controleert de VOISC Applicatie of er berichten
+staan op de ISC queue (voisc.verzenden). Indien er berichten worden aangetroffen worden deze
+van de queue gelezen en opgeslagen in de tabel BERICHT met de status ‘RECEIVED_FROM_ISC’.
+Bij fouten, zoals geen recipient, originator of een ongeldig bericht, wordt er in de ‘bericht’-tabel
+een bericht toegevoegd met status ‘RECEIVED_FROM_MAILBOX’ en wordt de status van het
+oorspronkelijke bericht op ‘PROCESSED_IMMEDIATELY’ gezet.
+
+3.1.6
+
+Ontwerpbeslissingen
+Indien er bij de verwerking zich technische fouten voordoen, wordt het bericht opgeslagen met
+de opgetreden fout(en) en status ‘ERROR’.
+
+Pagina 10 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+3.2
+
+Versturen berichten naar ISC
+
+3.2.1
+
+Functionaliteit
+Berichten in de database van VOISC met de status ‘RECEIVED_FROM_MAILBOX’ worden op de
+ISC queue (voisc.ontvangst) geplaatst.
+
+3.2.2
+
+Preconditie
+
+•
+3.2.3
+
+Postconditie
+
+•
+•
+3.2.4
+
+Er staat een bericht in de database met status ‘RECEIVED_FROM_MAILBOX’
+
+Het bericht staat op de ISC queue (voisc.ontvangst)
+De status van het bericht in de database is gewijzigd naar ‘SENT_TO_ISC’
+
+Structuur
+
+Package
+nl.bzk.migratiebrp.voisc
+
+3.2.5
+
+Implementatie
+
+3.2.5.1
+
+Versturen berichten naar ISC
+
+Omschrijving
+Package waarin specifieke implementaties voor de
+VOISC staan.
+
+Class
+VersturenNaarIscJob
+Periodiek (instelbaar) controleert de VOISC Applicatie of er berichten in de tabel BERICHT staan
+die verstuurd moeten worden naar ISC (status ‘RECEIVED_FROM_MAILBOX’). Indien er berichten
+zijn aangetroffen worden er per periode maximaal 100 berichten geselecteerd. Voor al deze
+berichten wordt geprobeerd de status te wijzigen naar ‘SENDING_TO_ISC’.
+Indien dit slaagt zal elk bericht vervolgens op de queue van ISC (voisc.ontvangst) worden
+geplaatst. Na het plaatsen van het bericht op de queue zal de status worden gewijzigd naar
+‘SENT_TO_ISC’.
+
+3.2.5.2
+
+NonDeliveryReport
+Indien het te verwerken bericht een NonDeliveryReport bericht is zal de VOISC proberen te
+correleren aan het oorspronkelijke verstuurde bericht door middel van het
+DispatchSequenceNumber. Samen met de reden waarom het oorspronkelijke bericht niet kon
+worden afgeleverd zal de VOISC dit naar ISC sturen. Dit bericht wordt ook geregistreerd in de
+tabel BERICHT. Indien het oorspronkelijke bericht niet gevonden kan worden, zal een
+waarschuwing worden gelogd en zal VOISC het NonDeliveryReport bericht negeren.
+Zie 3.3.5.3 voor meer informatie hoe de VOISC omgaat met het ontvangen van een
+NonDeliveryReport.
+
+Pagina 11 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+3.2.6
+
+Ontwerpbeslissingen
+Het wijzigen van de status is geïmplementeerd met ‘optimistic’ locking (met behulp van de
+version kolom). Hierdoor kan het voorkomen dat een ander proces (andere instantie van VOISC)
+de status reeds heeft gewijzigd en het bericht niet meer door deze applicatie instantie verstuurd
+hoeft te worden.
+Door deze locking is het mogelijk om meerder instanties van de VOISC naast elkaar te laten
+werken.
+
+Pagina 12 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+3.3
+
+Ontvangen berichten van GBA mailbox
+
+3.3.1
+
+Functionaliteit
+Periodiek (instelbaar) maakt de VOISC Applicatie verbinding met de GBA mailbox(en) om te
+controleren of er te ontvangen berichten zijn. Indien er berichten beschikbaar zijn worden deze
+gelezen en opgeslagen in de tabel BERICHT met de status ‘RECEIVED_FROM_MAILBOX’.
+
+3.3.2
+
+Preconditie
+
+•
+3.3.3
+
+Postconditie
+
+•
+•
+3.3.4
+
+Er staat een bericht in de mailbox
+
+Het bericht staat in de database met status ‘RECEIVED_FROM_MAILBOX’
+Er is een archief verzoek verstuurd voor het ontvangen bericht (zie paragraaf 0)
+
+Structuur
+
+Package
+nl.bzk.migratiebrp.voisc
+
+3.3.5
+
+Implementatie
+
+3.3.5.1
+
+Ontvangen berichten van GBA mailbox
+
+Omschrijving
+Package waarin specifieke implementaties voor de
+VOISC staan.
+
+Class
+VerzendenEnOntvangenMailboxJob
+Periodiek (instelbaar) maakt de VOISC Applicatie verbinding met de GBA mailbox(en) (zie
+configuratie) om te controleren of er te ontvangen berichten zijn (SPD functie: ListMessages.)
+Indien er berichten beschikbaar zijn worden deze gelezen (SPD functie: GetMessage) en
+opgeslagen in de tabel BERICHT met de status ‘RECEIVED_FROM_MAILBOX’.
+
+3.3.5.2
+
+Foutherstel
+Indien tussen het lezen van het bericht (SPD functie: GetMessage) en het opslaan van het
+bericht in de database een systeem fout optreedt kan het voorkomen dat een bericht op de GBA
+mailbox staat aangemerkt als gelezen, maar niet is opgeslagen in de BERICHT tabel. Om deze
+fout te ondervangen wordt het laatste succesvol gelezen MSSequenceNumber opgeslagen in de
+tabel MAILBOX. Dit laatst succesvol gelezen MSSequenceNumber wordt gebruikt om met
+ListMessages commando de juiste berichten (FromMSSequenceNumber in combinatie met
+MSStatus ‘012’) te selecteren onafhankelijk of de berichten eerder zijn gelezen.
+
+3.3.5.3
+
+DeliveryReport
+Bij het niet kunnen afleveren van een bericht (door de GBA mailbox server) na het versturen van
+een bericht wordt een DeliveryReport verstuurd aan de oorspronkelijke verzender van het
+bericht. In dit DeliveryReport wordt een reden gegeven waarom het bericht niet afgeleverd kon
+worden en de referentie van het oorspronkelijke bericht (DispatchSequenceNumber). Dit bericht
+wordt gewoon opgeslagen met de status RECEIVED_FROM_MAILBOX.
+Pagina 13 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+Zie 3.2.5.2 voor hoe een NonDeliveryReport naar ISC wordt gestuurd.
+
+3.3.5.4
+
+StatusResult
+Een StatusResult wordt in principe niet gebruikt in het GBA netwerk (bron [LO]). Indien een
+StatusResult bericht wordt ontvangen wordt dit genegeerd.
+
+3.3.6
+
+Ontwerpbeslissingen
+Binnen deze functionaliteit zijn geen aanvullende ontwerpbeslissingen.
+
+Pagina 14 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+3.4
+
+Versturen berichten naar GBA mailbox
+
+3.4.1
+
+Functionaliteit
+Periodiek (tegelijk met het ontvangen van berichten) controleert de VOISC Applicatie of er
+berichten in de tabel BERICHT staan om te versturen (status ‘RECEIVED_FROM_ISC’). Voor al
+deze berichten wordt geprobeerd de status te wijzigen naar ‘SENDING_TO_MAILBOX. Indien dit
+slaagt zal het bericht vervolgens worden verstuurd naar de GBA mailbox. Na het versturen van
+het bericht wordt de status gewijzigd naar ‘SENT_TO_MAILBOX’.
+
+3.4.2
+
+Preconditie
+
+•
+3.4.3
+
+Postconditie
+
+•
+•
+•
+3.4.4
+
+Er staat een bericht in de database met status ‘RECEIVED_FROM_ISC’
+
+Het bericht staat in de database met status ‘SENT_TO_MAILBOX’
+Er is een archief verzoek verstuurd voor het verstuurde bericht (zie paragraaf 0)
+Het bericht staat in de betreffende GBA mailbox
+
+Structuur
+
+Package
+nl.bzk.migratiebrp.voisc
+
+3.4.5
+
+Implementatie
+
+3.4.5.1
+
+Versturen berichten naar GBA mailbox
+
+Omschrijving
+Package waarin specifieke implementaties voor de
+VOISC staan.
+
+Class
+VerzendenEnOntvangenMailboxJob
+Periodiek (tegelijk met het ontvangen van berichten) controleert de VOISC Applicatie of er
+berichten in de tabel BERICHT staan om te versturen (status ‘RECEIVED_FROM_ISC’). Voor al
+deze berichten wordt geprobeerd de status te wijzigen naar ‘SENDING_TO_MAILBOX. Indien dit
+slaagt zal het bericht vervolgens worden verstuurd naar de GBA mailbox (SPD functie:
+PutMessage). Hier zal ook gecontroleerd worden of een mailbox tijdelijk is geblokkeerd, zie 3.8.
+Na het versturen van het bericht wordt de status gewijzigd naar ‘SENT_TO_MAILBOX’ en zal het
+door de GBA mailbox uitgegeven DispatchSequenceNumber worden opgeslagen bij het bericht.
+Nota: het wijzigen van de status is geïmplementeerd met ‘optimistic’ locking (met behulp van de
+version kolom). Hierdoor kan het voorkomen dat een ander proces (andere instantie van VOISC)
+de status reeds heeft gewijzigd en het bericht niet meer door deze applicatie instantie verstuurd
+hoeft te worden.
+
+3.4.5.2
+
+Foutmelding
+Indien het versturen van het bericht (direct) resulteert in een foutmelding van de GBA mailbox
+(in de PutMessageConfirmation) zal VOISC de status bijwerken naar ‘SENT_TO_MAILBOX’ en zal
+een naar ISC te versturen foutbericht (gecorreleerd aan het message-id van het oorspronkelijk
+te versturen bericht) registreren in de tabel BERICHT.
+
+Pagina 15 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+3.4.5.3
+
+Foutherstel
+Indien tussen (of tijdens) het versturen van het bericht (SPD functie: PutMessage) en het
+bijwerken van de status van de database een systeemfout optreedt zal het bericht in de
+database geregistreerd blijven met de status ‘SENDING_TO_MAILBOX’. Een van de
+schoningsprocessen zal detecteren dat een bericht met de status ‘SENDING_TO_MAILBOX’ te
+lang (instelbaar) in verwerking staat en zal automatisch de status ‘terug’-zetten naar
+‘RECEIVED_FROM_ISC’. Dit zal er toe leiden dat het bericht opnieuw verstuurd wordt naar de
+GBA mailbox. Dit kan eventueel leiden tot dubbel verstuurde berichten. Echter omdat het LO3
+berichten protocol voorschrijft dat ontvangers van berichten om moeten kunnen gaan met
+dubbel verstuurde berichten is er gekozen voor het eventueel dubbel versturen van berichten in
+tegenstelling tot het eventueel niet versturen van berichten.
+
+3.4.6
+
+Ontwerpbeslissingen
+Als gevolg van de beperking dat er slechts één connectie simultaan naar een mailbox mag zijn, is
+de configuratie van de VOISC dusdanig dat meerdere VOISC instanties elk een deel van de
+mailboxen beheren. In deze configuratie mag, over de instanties heen, geen overlap zitten
+omdat het dan mogelijk zou kunnen zijn dat er alsnog meerdere connecties naar dezelfde
+mailbox worden opgezet. Indien onjuist geconfigureerd zal de instantie niet juist starten.
+
+Pagina 16 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+3.5
+
+Schonen van informatie
+
+3.5.1
+
+Functionaliteit
+Om de omvang van de VOISC database niet te groot te laten worden is er voor gekozen om
+berichten automatisch te schonen na het succesvol ‘door’-sturen van berichten.
+Ook ten behoeve van foutherstel wordt een ‘verzenden’ status na een bepaalde tijd ‘terug’-gezet
+naar ‘te verzenden’.
+
+3.5.2
+
+Preconditie
+
+•
+•
+•
+•
+•
+3.5.3
+
+Postconditie
+
+•
+3.5.4
+
+Er staan berichten in de database van VOISC met de status ‘SENT_TO_ISC’
+Er staan berichten in de database van VOISC met de status ‘SENT_TO_MAILBOX’
+Er staan berichten in de database van VOISC met de status ‘IGNORED’
+Er staan berichten in de database van VOISC met de status ‘PROCESSED_IMMEDIATELY’
+Er staan berichten in de database van VOISC met de status ‘ERROR’
+
+De betreffende berichten uit de preconditie zijn verwijderd uit de database
+
+Structuur
+Package
+nl.bzk.migratiebrp.voisc.jobs
+
+3.5.5
+
+Implementatie
+
+3.5.5.1
+
+Schonen verzonden berichten
+
+Omschrijving
+Package waarin specifieke implementaties voor het
+opschonen en herstellen van berichten staan.
+
+Class
+OpschonenVerwerkteBerichtenJob
+Periodiek (instelbaar) worden berichten, op basis van de datum verzending en een instelbare
+periode, met de status ‘SENT_TO_MAILBOX’, ‘SENT_TO_ISC’, ‘IGNORED’,
+‘PROCESSED_IMMEDIATELY’ of ‘ERROR’ verwijderd uit de tabel BERICHT.
+3.5.6
+
+Ontwerpbeslissingen
+Binnen deze functionaliteit zijn geen aanvullende ontwerpbeslissingen.
+
+Pagina 17 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+3.6
+
+Foutherstel berichten
+
+3.6.1
+
+Functionaliteit
+Om de omvang van de VOISC database niet te groot te laten worden is er voor gekozen om
+berichten automatisch te schonen na het succesvol ‘door’-sturen van berichten.
+Ook ten behoeve van foutherstel wordt een ‘verzenden’ status na een bepaalde tijd ‘terug’-gezet
+naar ‘te verzenden’.
+
+3.6.2
+
+Preconditie
+
+•
+•
+3.6.3
+
+Postconditie
+
+•
+
+3.6.4
+
+Er staan berichten in de database van VOISC met de status ‘SENDING_TO_ISC’
+Er staan berichten in de database van VOISC met de status ‘SENDING_TO_MAILBOX’
+
+De status van de betreffende berichten uit de preconditie is aangepast naar de status
+‘RECEIVED_FROM_ISC ‘ respectievelijk ‘RECEIVED_FROM_MAILBOX’
+
+Structuur
+
+Package
+nl.bzk.migratiebrp.voisc.jobs
+
+3.6.5
+
+Implementatie
+
+3.6.5.1
+
+Foutherstel berichten
+
+Omschrijving
+Package waarin specifieke implementaties voor het
+opschonen en herstellen van berichten staan.
+
+Class
+HerstelStatusBerichtenJob
+Periodiek (instelbaar) worden berichten, op basis van de datum verwerking en een instelbare
+periode, met de status ‘SENDING_TO_MAILBOX’ of ‘SENDING_TO_ISC’ bijgewerkt naar
+respectievelijk de status ‘RECEIVED_FROM_ISC’ en ‘RECEIVED_FROM_MAILBOX’.
+3.6.6
+
+Ontwerpbeslissingen
+Binnen deze functionaliteit zijn geen aanvullende ontwerpbeslissingen.
+
+Pagina 18 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+3.7
+
+Aanmelden en wachtwoord wijzigingen
+
+3.7.1
+
+Functionaliteit
+Bij het aanmelden bij de GBA mailbox zal het wachtwoord gebruikt worden dat is opgeslagen in
+de tabel MAILBOX. Indien de datum laatste wijziging wachtwoord een bepaalde (instelbare)
+periode overschrijdt dan zal een nieuw wachtwoord voor de GBA mailbox worden gegenereerd,
+worden toegekend aan de GBA mailbox en opgeslagen worden in de database.
+
+3.7.2
+
+Preconditie
+
+•
+3.7.3
+
+Postconditie
+
+•
+•
+3.7.4
+
+De datum laatste wijziging van een gebruikt wachtwoord overschrijdt de periode
+
+Er is een nieuwe wachtwoord toegekend
+Het wachtwoord is in de database gewijzigd
+
+Structuur
+Package
+nl.bzk.migratiebrp.voisc
+
+3.7.5
+
+Implementatie
+
+3.7.5.1
+
+Aanmelden en wachtwoord wijzigingen
+
+Omschrijving
+Package waarin specifieke implementaties voor de
+VOISC staan.
+
+Class
+VoiscMailboxImpl
+Bij het aanmelden bij de GBA mailbox (SPD functie: LogonRequest) zal het wachtwoord gebruikt
+worden dat is opgeslagen in de tabel MAILBOX. Indien de datum laatste wijziging wachtwoord
+een bepaalde (instelbare) periode overschrijdt dan zal een nieuw wachtwoord voor de GBA
+mailbox worden gegenereerd, worden toegekend aan de GBA mailbox (SPD functie:
+ChangePasswordRequest) en opgeslagen worden in de database.
+3.7.5.2
+
+Foutherstel
+Indien na het wijzigen van het wachtwoord, maar voor het opslaan van het wachtwoord in de
+database een systeemfout optreedt dan zal het nieuwe wachtwoord verloren gaan. Dit zal op
+volgende aanmeldpogingen resulteren in een fout (LogonResult in LogonConfirmation is ongelijk
+aan ‘OK’). De technisch beheerder zal dan contact op moeten nemen met de GBA mailbox
+beheerder om een nieuw wachtwoord toegekend te krijgen en zal dit moeten registreren in de
+tabel MAILBOX.
+
+3.7.6
+
+Ontwerpbeslissingen
+Binnen deze functionaliteit zijn geen aanvullende ontwerpbeslissingen.
+
+Pagina 19 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+3.8
+
+Blokkeren van GBA mailboxen
+
+3.8.1
+
+Functionaliteit
+Met een blokkering wordt aangegeven dat een GBA mailbox ‘verwacht’ tijdelijk niet bereikbaar is.
+Het versturen van berichten aan die gemeente wordt tijdelijk niet uitgevoerd. Dit betekent dus
+dat bij het versturen van een bericht namens instantie X aan instantie Y moet worden bekeken
+of instantie Y is geblokkeerd.
+
+3.8.2
+
+Preconditie
+
+•
+3.8.3
+
+Postconditie
+
+•
+3.8.4
+
+De mailbox van instantie Y is geblokkeerd
+
+Berichten verzonden namens instantie X aan instantie Y worden niet verstuurd
+
+Structuur
+Package
+nl.bzk.migratiebrp.voisc
+
+3.8.5
+
+Implementatie
+
+3.8.5.1
+
+Blokkeren van GBA mailboxen
+
+Omschrijving
+Package waarin specifieke implementaties voor de
+VOISC staan.
+
+Class
+VoiscMailboxImpl
+Met een blokkering, datum_start_blokkering en datum_einde_blokkering in de tabel MAILBOX,
+wordt aangegeven dat een GBA mailbox ‘verwacht’ tijdelijk niet bereikbaar is. Het versturen van
+berichten aan die gemeente wordt tijdelijk niet uitgevoerd. Dit betekent dus dat bij het versturen
+van een bericht namens instantie X aan instantie Y moet worden bekeken of instantie Y is
+geblokkeerd.
+3.8.6
+
+Ontwerpbeslissingen
+Als een mailbox geblokkeerd is zullen de verwerkte berichten voor die mailbox terug in de status
+RECEIVED_FROM_ISC worden gezet. Hierdoor zal bij de volgende batch opnieuw een poging
+worden gewaagd deze berichten te versturen, net zo lang tot de mailbox gedeblokkeerd is.
+
+Pagina 20 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+3.9
+
+Archivering
+
+3.9.1
+
+Functionaliteit
+Alle verzonden en ontvangen berichten dienen te worden gearchiveerd in het bericht archief in
+de BRP. Hiertoe wordt in VOISC tijdens het versturen en ontvangen van berichten een
+archiefverzoek verzonden. Dit archiefverzoek wordt verwerkt door vervolgens de BRP
+Synchronisatie Service en de GBA archivering Route.
+
+3.9.2
+
+Preconditie
+
+•
+3.9.3
+
+Postconditie
+
+•
+3.9.4
+
+Is een bericht verstuurd naar of ontvangen van de GBA mailbox
+
+Er is een archiefverzoek verstuurd (naar de BRP Synchronisatie Service)
+
+Structuur
+Package
+nl.bzk.migratiebrp.voisc
+
+3.9.5
+
+Implementatie
+
+3.9.5.1
+
+Versturen van archiefverzoeken
+
+Omschrijving
+Package waarin specifieke implementaties voor de
+VOISC staan.
+
+Class
+VoiscQueueImpl (archiveerBericht)
+Er wordt een ArchiveerInBrpVerzoek opgebouwd op basis van het (ontvangen of verstuurde)
+bericht. Dit verzoek wordt vervolgens op de archivering queue geplaatst.
+De elementen van het ArchiveerInBrpVerzoek worden als volgt gevuld voor ontvangen
+berichten:
+
+•
+•
+•
+
+Ontvangende partij: ‘199902’ (partijcode van Migratievoorzieningen)
+Zendende systeem: ‘GBANetwerk’
+Zendende partij: Gemeente- of afnemercode
+
+De elementen van het ArchiveerInBrpVerzoek worden als volgt gevuld voor verstuurde
+berichten:
+
+•
+•
+•
+
+Ontvangende partij: Gemeente- of afnemercode
+Zendende systeem: ‘Migratievoorzieningen’
+Zendende partij: ‘199902’ (partijcode van Migratievoorzieningen)
+
+De elementen van het ArchiveerInBrpVerzoek worden als volgt gevuld voor alle berichten:
+
+Pagina 21 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+•
+•
+•
+
+3.9.6
+
+Referentienummer: message-id (eref)
+Cross referentienummer: correlation-id (bref)
+Data: bericht inhoud
+
+Ontwerpbeslissingen
+Binnen deze functionaliteit zijn geen aanvullende ontwerpbeslissingen.
+
+Pagina 22 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+4
+
+Gegevensmodellen
+
+4.1
+
+Datamodel
+Voor de VOISC tabellen hebben we het onderstaand ERD.
+
+Hieronder worden een aantal velden uitgebreider omschreven:
+BERICHT
+Kolom
+Id
+
+Omschrijving
+Technische sleutel
+
+Originator
+
+Verzendende partij (GBA mailbox nummer)
+
+Recipient
+
+Ontvangende partij (GBA mailbox nummer)
+
+Status
+
+Status
+
+Bericht data
+
+De inhoudelijke bericht data
+
+Message-id
+
+Eigen referentie (bericht-id)
+
+Correlatie-id
+
+Bericht referentie (correlatie-id)
+
+Tijdstip ontvangst
+
+Tijdstip ontvangst van het bericht door VOISC
+
+Tijdstip mailbox
+
+Tijdstip van verwerking zoals gemeld door de GBA mailbox
+
+Tijdstip in verwerking
+
+Tijdstip dat VOISC het bericht gaat verwerken
+
+Tijdstip verzonden
+
+Tijdstip dat het bericht verzonden is naar de GBA mailbox of
+ISC
+
+Dispatch sequence number
+
+Uniek nummer voor het bericht uitgegeven bij het versturen of
+lezen naar de GBA mailbox (PutMessageConfirmation)
+
+Non delivery reason
+
+Reden waarom een bericht niet afgeleverd kan worden
+
+Notification type
+
+Notificatie type
+
+Version
+
+Technische locking kolom
+
+Pagina 23 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+4.2
+
+MAILBOX
+Kolom
+Id
+
+Omschrijving
+Technische sleutel
+
+Instantietype
+
+Instantie type (Gemeente/Afnemer/Centrale instantie)
+
+Instantiecode
+
+Instantie code (LO3 Gemeentecode/Afnemercode/Centrale
+mailbox)
+
+Mailboxnr
+
+GBA mailbox nummer
+
+Mailboxpwd
+
+GBA mailbox wachtwoord
+
+Limitnumber
+
+Maximaal aantal op te halen berichten per list (171)
+
+Blokkering start datum
+
+Start blokkering gebruik GBA mailbox
+
+Blokkering eind datum
+
+Einde blokkering gebruik GBA mailbox
+
+Laatste wijziging wachtwoord
+
+Datum laatste wijziging wachtwoord
+
+Laatst gelezen bericht
+
+Laatst succesvol gelezen MSSequenceNumber van de GBA
+mailbox (gebruikt voor foutherstel)
+
+Queue bericht
+De VOISC maakt gebruik van de volgende berichtstructuur:
+JMS BERICHT (TextMessage)
+Property
+Omschrijving
+iscBerichtReferentie
+Bericht referentie (bericht-id) [ISC]
+iscCorrelatieReferentie
+
+Correlatie referentie (correlatie-id) [ISC]
+
+voaOriginator
+
+Verzendende partij (instantiecode)
+
+voaRecipient
+
+Ontvangende partij (instantiecode)
+
+voaMsSequenceNumber
+
+Ontvangen MsSequenceNumber (enkel bij berichten van VOISC
+naar ISC)
+
+Pagina 24 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+5
+
+Opmerkingen
+
+5.1.1
+
+Verzenden aan een gemeente in het BRP stelsel
+De VOISC bevat geen controle of de ontvangende partij zich in het BRP of GBA stelsel bevindt.
+Deze controle wordt als overbodig gezien omdat:
+➢
+➢
+
+5.1.2
+
+Het bericht (via de GBA mailbox) weer terugkomt en dus niet verloren gaat
+Controles in de ISC processen voorkomen dat deze situatie zich überhaupt voordoet.
+
+Ontvangen ‘oude’ berichten na overgaan van gemeente naar BRP stelsel
+De VOISC bevat geen controle dat een ontvangen bericht voor een gemeente in het BRP stelsel
+is verstuurd nadat de gemeente is overgegaan naar het BRP stelsel.
+Deze controle wordt als overbodig gezien omdat:
+➢
+➢
+
+5.1.3
+
+Het bericht niet verloren gaat omdat het wordt verstuurd naar ISC
+Aangenomen wordt dat deze situatie zich niet voordoet omdat tijdens de overgang naar
+het BRP stelsel de mailbox volledig verwerkt dient te worden.
+
+Fouten uit VOISC naar ISC
+Op dit moment wordt er een Vb01 (vrij bericht) verstuurd vanuit de VOISC naar ISC in het geval
+dat er een fout opgetreden is. Dit dient nog aangepast te worden naar een ‘nieuw’ LO3-bericht:
+Pf99 dat soortgelijk is aan het Vb01. ISC kan hiermee detecteren dat er een fout is opgetreden
+waardoor er niet een cyclisch fout-doorstuur-proces wordt gestart. Let wel, het Pf99 is geen
+officieel LO3-bericht volgens [LO] maar wordt alleen binnen ISC gebruikt.
+
+Pagina 25 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+6
+
+Bijlage A: JMX interface
+
+Ten behoeve van remote access is een JMX interface beschikbaar waarmee enkele handelingen
+uitgevoerd kunnen worden
+De standaard JMX voorziening van Java wordt gebruikt om de JMX interface beschikbaar te
+stellen. Om hier mee te kunnen verbinden worden bij het opstarten van de applicatie de
+volgende systeem instellingen (properties) gebruikt.
+Instelling
+
+Waarde
+
+Omschrijving
+
+com.sun.management.jmxremote
+
+Indicatie om aan te geven dat de
+JMX interface wordt gebruikt
+com.sun.management.jmxremote.port
+1099
+Poort voor JMX
+com.sun.management.jmxremote.rmi.port
+1099
+Poort voor RMI
+com.sun.management.jmxremote.ssl
+false
+Indicatie om aan te geven dat geen
+SSL wordt gebruikt
+com.sun.management.jmxremote.authenticate false
+Indicatie om aan te geven dat geen
+authenticatie wordt gebruikt
+com.sun.management.jmxremote.local.only
+false
+Indicatie om aan te geven dat niet
+enkel lokaal verbonden mag worden
+Nota: de poort instellingen kunnen veranderd worden indien deze poorten reeds gebruikt worden
+door een andere applicatie.
+
+6.1
+
+Voisc
+nl.bzk.migratiebrp.voisc:name=VOISC
+Operatie
+
+Parameters
+
+Omschrijving
+
+berichtenVerzendenNaarIsc
+
+-
+
+berichtenVerzendenNaarEnOntvangenVanMailbox
+
+-
+
+opschonenVoiscBerichten
+
+-
+
+herstellenVoiscBerichten
+
+-
+
+afsluiten
+isGestart
+
+-
+
+isMailboxGestart
+
+-
+
+startMailbox
+
+-
+
+stopMailbox
+
+-
+
+isIscVersturenGestart
+
+-
+
+startIscVersturenGestart
+
+-
+
+stopIscVersturenGestart
+
+-
+
+Verstuur berichten van VOISC
+naar ISC.
+Verstuur berichten van VOISC
+naar mailbox en ontvang
+berichten van mailbox.
+Opschonen verzonden
+berichten.
+Herstellen in verwerking
+zijnde berichten.
+Deze VOISC instantie afsluiten
+Indicatie of de applicatie
+gestart is.
+Indicatie of het versturen en
+ontvangen van berichten van
+de mailbox gestart is.
+Start versturen en ontvangen
+van berichten van de mailbox.
+Stop versturen en ontvangen
+van berichten van de mailbox.
+Indicatie of het versturen van
+berichten naar ISC gestart is.
+Start versturen van berichten
+naar ISC
+Stop versturen van berichten
+naar ISC
+
+Pagina 26 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+isIscOntvangenGestart
+
+-
+
+Indicatie of het ontvangen
+van berichten van ISC gestart
+is.
+startIscOntvangen
+Start ontvangen ISC berichten
+stopIscOntvangen
+Stop ontvangen ISC berichten
+getAantalIscOntvangenVerwerkers
+Geef het maximum aantal
+verwerkers voor ISC berichten
+setAantalIscOntvangenVerwerkers
+aantal
+Zet het maximum aantal
+verwerkers voor ISC berichten
+Nota: momenteel is de verwerking van berichten van de mailbox en het versturen van berichten
+naar ISC aan elkaar gekoppeld en niet los te stoppen of te starten.
+Class
+VoiscJmx
+VoiscJmxImpl
+
+6.2
+
+Register
+Aangezien VOISC gebruik maakt van de algemene bibliotheek voor het gebruik van registers (zie
+[ROUTERING]), zijn de JMX interfaces hiervoor ook beschikbaar.
+nl.bzk.migratiebrp.voisc:name=GEMEENTE
+Operatie
+
+Parameters
+
+Omschrijving
+
+refreshRegister
+clearRegister
+
+-
+
+isGestart
+
+-
+
+start
+stop
+
+-
+
+Register opnieuw opvragen
+Cache legen (zodat bij het volgende gebruik het
+register opnieuw wordt opgevraagd)
+Geeft aan of register berichten worden
+ontvangen
+Start met het ontvangen van register berichten
+Stop met het ontvangen van register berichten
+
+Pagina 27 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+7
+
+Bijlage B: Configuratie
+
+De volgende instellingen zijn beschikbaar in het configuratie bestand ‘voisc-runtime.properties’:
+Instelling
+
+Standaard
+waarde
+
+Omschrijving
+
+voisc.database.driver
+
+org.postgresql.xa
+.PGXADataSource
+
+JDBC XA DataSource class om verbinding te maken
+met de database
+
+voisc.database.host
+
+localhost
+
+Servernaam van de database
+
+voisc.database.port
+
+5432
+
+Port waarop de database luistert
+
+voisc.database.name
+
+voisc
+
+Database naam voor de VOISC database
+
+voisc.database.username
+
+postgres
+
+Gebruikersnaam om verbinding te maken met de
+database
+
+voisc.database.password
+
+postgres
+
+Wachtwoord om verbinding te maken met de database
+
+voisc.database.minpool
+
+3
+
+Minimum aantal verbindingen naar de database
+
+voisc.database.maxpool
+
+20
+
+Maximum aantal verbindingen naar de database
+
+mailbox.host
+
+localhost
+
+Hostnaam van de GBA mailbox
+
+mailbox.portnummer
+
+1212
+
+Poort van de GBA mailbox
+
+mailbox.ssl.key.password
+
+Wachtwoord van de private key van het client
+certificaat die gebruikt wordt bij het opzetten van een
+SSL verbinding naar de GBA mailbox
+
+mailbox.ssl.keystore.password
+
+Wachtwoord van de Java Keystore waarin de private
+key is opgeslagen
+
+mailbox.ssl.truststore.password
+
+Wachtwoord van de Java Keystore waarin de public key
+van de GBA mailbox server is opgeslagen
+
+voisc.mailboxen
+
+Te bedienen GBA mailboxen:
+➢ Indien leeg: alle GBA mailboxen
+(gemeenten,centraal)
+➢ Indien gevuld met negatieve nummers: alle
+mailboxen (gemeenten,centraal), behalve de
+genoemde
+Indien gevuld met postieve nummers: de genoemde
+GBA mailboxen
+Schema (unix-like cron expressie) waarop het
+versturen van berichten naar ISC wordt uitgevoerd
+
+voisc.job.isc.cron
+
+0/5 * * * * ?
+
+voisc.job.mailbox.cron
+
+0/5 * * * * ?
+
+voisc.job.opschonen.cron
+
+0 0 0/1 * * ?
+
+Schema (unix-like cron expressie) waarop het schonen
+van berichten wordt uitgevoerd
+
+voisc.job.opschonen.wachttijd
+
+75
+
+Uren waarmee wordt berekend of een verzonden
+bericht wordt geschoond. Een verzonden bericht wordt
+verwijderd indien die is verstuurd op een dag *voor*
+de dag die wordt aangegeven door de huidige
+systeemtijd min het aan geconfigureerd uren.
+
+voisc.job.herstellen.cron
+
+0 0 0/1 * * ?
+
+Schema (unix-like cron expressie) waarop het
+
+➢
+
+Schema (unix-like cron expressie) waarop het
+versturen naar en ontvangen van berichten bij
+de GBA mailboxen wordt uitgevoerd
+
+Pagina 28 van 29
+
+Definitief | 2.6 | Technisch ontwerp VOISC | 30-06-2017
+
+Instelling
+
+Standaard
+waarde
+
+Omschrijving
+herstellen van berichten wordt uitgevoerd
+
+voisc.job.herstellen.wachttijd
+
+6
+
+Aantal uren waarna een in verwerking bericht wordt
+hersteld.
+
+routering.activemq.url
+
+tcp://localhost:6
+1616
+
+Host (en poort) voor verbinding naar de queues
+
+voisc.queue.receivetimeout
+
+30000
+
+Aantal milliseconden om maximaal te wachten voor het
+ontvangen van een queue bericht.
+
+voisc.queue.minpool
+
+3
+
+Minimum aantal verbinding naar ISC
+
+voisc.queue.maxpool
+
+20
+
+Maximum aantal verbindingen naar ISC
+
+routering.queue.voisc.verzenden
+
+voisc.verzenden
+
+Queue-naam voor het verzenden van berichten naar
+ISC
+
+routering.queue.voisc.ontvangst
+
+voisc.ontvangst
+
+Queue-naam voor het ontvangen van berichten van
+ISC
+
+routering.queue.archivering
+
+archivering
+
+Queue-naam voor het versturen van archief verzoeken
+
+routering.topic.gemeente.register
+
+gemeente.register
+
+Topic voor het ontvangen van het gemeenteregister
+
+routering.queue.gemeente.register
+
+gemeente.verzoek
+
+Queue-naam voor het opvragen van het
+gemeenteregister
+
+start.check.mailbox
+
+true
+
+Indicatie of bij het opstarten van VOISC de verbinding
+met de GBA mailbox gecontroleerd moet worden
+
+start.check.config
+
+true
+
+Indicatie of bij het opstarten van VOISC de configuratie
+(en daarvoor het ophalen van het gemeenteregister)
+gecontroleerd moet worden
+
+atomikos.max.timeout
+
+300
+
+Maximale timeout voor transacties (in seconden)
+
+atomikos.default.timeout
+
+10
+
+Standaard timeout voor transacties (in seconden)
+
+atomikos.max.actives
+
+50
+
+Maximaal aantal actieve transacties
+
+atomikos.unique.name
+
+voisc-runtime
+
+Unique naam van de applicatie instantie voor
+transacties
+
+atomikos.base.dir
+
+work/atomikos
+
+Werk directory (moet persistent zijn) voor
+transactiemanagement
+
+Pagina 29 van 29
+
+

@@ -1,0 +1,210 @@
+UCS SL.1.MSP – Maak selectieresultaat personen
+Versie
+
+1.0
+
+Datum
+
+12 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+08-03-2017
+
+0.1
+
+Eerste opzet
+
+oBRP
+
+13-03-2017
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+12-07-2017
+
+1.0
+
+Definitief gemaakt. Hfd. openstaande punten toegevoegd.
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS SL.1.MSP – Maak selectieresultaat personen
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Maak selectieresultaatset personen .......................................................................... 4
+2.1
+2.2
+
+Activiteitendiagram ...............................................................................................................4
+Beschrijving van de stappen ...................................................................................................4
+
+3
+
+Ontwerpbeslissingen ................................................................................................ 6
+
+4
+
+Openstaande punten ................................................................................................. 7
+
+Status: Definitief, versie: 1.0
+
+Pagina 2 van 7
+
+UCS SL.1.MSP – Maak selectieresultaat personen
+
+1 Inleiding
+1.1
+
+Doel
+
+De persoonsbeelden van de geselecteerde personen bij een selectiedienst die geleverd dienen te
+worden, worden in één of meerdere selectieresultaatsets geplaatst.
+Deze Use Case beschrijft hoe de selectieresultaatsets (de bestanden) met persoonsgegevens
+worden samengesteld.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de stappen met betrekking tot het maken van de selectieresultaat sets. In
+Hoofdstuk 3 staan de Use Case specifieke ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 1.0
+
+Pagina 3 van 7
+
+UCS SL.1.MSP – Maak selectieresultaat personen
+
+2 Maak selectieresultaatset personen
+Het maken van een selectieresultaatset kent een aantal stappen, deze staan in het
+activiteitendiagram. Deze stappen worden per geselecteerd persoon doorlopen.
+In de paragraaf daarna worden de stappen stuk voor stuk beschreven. Voor een meer
+gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden wordt verwezen
+naar de aan deze Use Case gekoppelde regels in BMR.
+
+2.1
+
+Activiteitendiagram
+
+2.2
+
+Beschrijving van de stappen
+
+In deze paragraaf worden de stappen in het activiteitendiagram beschreven.
+
+1. Bepaal set (SL.1.MSP.BS)
+In deze stap wordt gecontroleerd of er reeds een selectieresultaat set aanwezig is waar de
+geselecteerde persoon geplaatst kan worden.
+Wanneer er reeds een selectieresultaat set aanwezig is wordt er gecontroleerd of de geselecteerde
+persoon hierbij geplaatst kan worden. Dit is afhankelijk van de instellingen bij de selectiedienst.
+In deze instellingen staat mogelijk aangegeven wat de maximale grootte is van een
+selectieresultaat set en/of het maximaal aantal personen dat er in een selectieresultaat set
+geplaatst mogen worden.
+Wanneer de geselecteerde persoon niet in een bestaande set geplaatst kan worden of wanneer er
+nog geen selectieresultaat set aanwezig is dan wordt in de volgende stap een nieuwe
+selectieresultaat set gemaakt.
+2. Maak nieuwe set (SL.1.MSP.MN)
+•
+Er wordt een nieuwe selectieresultaat set gemaakt waarbij in de naam (van het bestand)
+wordt weergegeven om welke selectie het gaat en wat het volgnummer is van het bestand.
+•
+De selectiekenmerken in de selectieresultaat set worden gevuld.
+•
+De selectieresultaat set wordt op een door de beheerder te configureren locatie geplaatst.
+
+3. Plaats persoon (SL.1.MSP.PP)
+
+Status: Definitief, versie: 1.0
+
+Pagina 4 van 7
+
+UCS SL.1.MSP – Maak selectieresultaat personen
+
+In deze stap wordt de geselecteerde persoon aan de selectieresultaat set toegevoegd.
+Hier is geen aparte regel voor gespecificeerd in BMR.
+
+Status: Definitief, versie: 1.0
+
+Pagina 5 van 7
+
+UCS SL.1.MSP – Maak selectieresultaat personen
+
+3 Ontwerpbeslissingen
+Er zijn geen Use Case specifieke ontwerpbeslissingen.
+
+Status: Definitief, versie: 1.0
+
+Pagina 6 van 7
+
+UCS SL.1.MSP – Maak selectieresultaat personen
+
+4 Openstaande punten
+•
+
+Bepaal set (SL.1.MSP.BS
+Welke waarden worden aangehouden wanneer deze maxima niet in de instellingen staan?
+Stellen we een maximum grootte en/of aantal personen vanuit de BRP?
+
+Status: Definitief, versie: 1.0
+
+Pagina 7 van 7
+
+

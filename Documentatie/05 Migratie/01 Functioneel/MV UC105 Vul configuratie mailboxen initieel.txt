@@ -1,0 +1,480 @@
+UC105 Vul configuratie mailboxen initieel
+
+0.4
+
+Datum
+Status
+
+11-12-2015
+Definitief
+
+Definitief | 0.4 | UC105 Vul configuratie mailboxen initieel | 11-12-2015
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................6
+2.1
+
+3
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................5
+PRECONDITIE ........................................................................................................................................5
+POSTCONDITIE......................................................................................................................................5
+REGULIER VERLOOP ..............................................................................................................................6
+
+SPECIAL REQUIREMENTS ..............................................................................................................7
+3.1 ALGEMEEN .............................................................................................................................................7
+3.2 MODEL GBA .........................................................................................................................................7
+3.2.1 lo3_mailbox ...............................................................................................................................7
+3.2.2 spg_mailbox ..............................................................................................................................7
+3.3 MODEL MIGRATIEVOORZIENING ..........................................................................................................8
+3.3.1 lo3_mailbox ...............................................................................................................................8
+3.3.2 mig_verzender ..........................................................................................................................8
+3.4 INITIËLE VULLING .................................................................................................................................8
+3.4.1 Verzendende instanties toevoegen aan lo3_mailbox .................................................8
+3.4.2 Mailboxnummers en instanties toevoegen aan lo3_mailbox ..................................9
+3.4.3 Instanties toevoegen aan mig_verzender ......................................................................9
+3.5 WACHTWOORDEN .................................................................................................................................9
+3.6 MSSEQUENCENUMBER ........................................................................................................................9
+
+4
+
+OPMERKINGEN ..................................................................................................................................10
+
+Modernisering GBA
+
+Pagina 2 van 10
+
+Definitief | 0.4 | UC105 Vul configuratie mailboxen initieel | 11-12-2015
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+05-10-2015
+08-10-2015
+03-12-2015
+
+0.1
+0.2
+0.3
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+11-12-2015
+
+0.4
+
+Initiële versie
+Reviewcommentaar verwerkt
+Opmerking opgenomen over ontbrekende
+attributen lo3_mailbox
+Toelichting aangepast. Functioneel is er niets
+gewijzigd.
+
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+08-10-2015
+
+0.1
+
+Review
+
+Operatie BRP
+
+Modernisering GBA
+
+Pagina 3 van 10
+
+Definitief | 0.4 | UC105 Vul configuratie mailboxen initieel | 11-12-2015
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+In LO3 wordt gebruik gemaakt van een mailprotocol om berichten te versturen en te ontvangen.
+Elke partij die berichten ontvangt en/of verstuurt heeft een eigen mailboxnummer. Elk
+mailboxnummer is toegekend aan een mailboxinstantie. Alleen via de toegekende
+mailboxinstantie kunnen partijen met hun mailboxnummer verbinden om berichten te versturen
+en te ontvangen. In de praktijk zijn er ongeveer 10 mailboxinstanties waar alle (meer dan 1500)
+mailboxnummers aan zijn toegekend.
+De configuratie van mailboxinstanties en mailboxnummers, zal uit GBA-V eenmalig overgenomen
+worden (initieel gevuld). De wijze waarop de configuratie is vastgelegd in de migratievoorziening
+wijkt echter af.
+Deze use case beschrijft op welke wijze de configuratie van mailboxinstanties en
+mailboxnummers uit GBA-V, initieel gevuld dient te worden in de migratievoorziening.
+Meer informatie over de werking van het mailprotocol is te vinden in het [LO] (Hoofdstuk IV.3
+Functionele beschrijving van het netwerk).
+Meer informatie over de technische implementatie van het mailprotocol in de migratievoorziening
+is te vinden in [TOI] en [TOV].
+
+Modernisering GBA
+
+Pagina 4 van 10
+
+Definitief | 0.4 | UC105 Vul configuratie mailboxen initieel | 11-12-2015
+
+1.2
+
+1.3
+
+Referenties
+#
+[LO]
+
+Document
+Logisch Ontwerp
+
+Organisatie
+-
+
+Versie
+3.9
+
+Datum
+31-01-2015
+
+[TOI]
+
+MV TO ISC
+
+Operatie BRP
+
+-
+
+-
+
+[TOV]
+
+MV TO VOISC
+
+Operatie BRP
+
+-
+
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Modernisering GBA
+
+Pagina 5 van 10
+
+Definitief | 0.4 | UC105 Vul configuratie mailboxen initieel | 11-12-2015
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+1. De migratievoorziening vult lo3_mailbox met de verzendende instanties uit spg_mailbox van
+GBA-V (AS: 3.4.1)
+2. De migratievoorziening vult lo3_mailbox van de migratievoorziening met de mailboxnummers
+en instantiecodes uit lo3_mailbox van GBA-V (AS: 3.4.2)
+3. De migratievoorziening vult mig_verzender van de migratievoorziening met de instantiecodes
+en verzendende instanties van lo3_mailbox en spg_mailbox van GBA-V (AS: 3.4.3)
+4. De use case eindigt.
+
+Modernisering GBA
+
+Pagina 6 van 10
+
+Definitief | 0.4 | UC105 Vul configuratie mailboxen initieel | 11-12-2015
+
+3
+
+Special requirements
+
+3.1
+
+Algemeen
+
+Gemeenten, afnemers en de centrale voorziening (GBA-V, migratievoorziening) communiceren
+met elkaar. Hierbij wordt gebruik gemaakt van het sPd-protocol waarbij berichten via mailboxen
+worden verstuurd en ontvangen. Meer informatie hierover is te vinden in het [LO] (IV
+Communicatie: Netwerk en alternatieve media).
+In GBA-V is de informatie van de mailboxen vastgelegd in twee tabellen:
+• spg_mailbox: de informatie van de mailboxen die GBA-V gebruikt om berichten te versturen
+en te ontvangen
+• lo3_mailbox: de mailboxen die afnemers en gemeenten gebruiken om berichten te versturen
+en te ontvangen, waarbij is vastgelegd via welke mailbox van GBA-V een afnemer of
+gemeente berichten kan ontvangen.
+In de migratievoorziening is de informatie van de mailboxen ook in twee tabellen vastgelegd,
+maar anders:
+• lo3_mailbox: de informatie van de mailboxen van de migratievoorziening, afnemers en
+gemeenten om berichten te versturen en te ontvangen.
+• mig_verzender: hierin is vastgelegd via welke mailbox van de migratievoorziening een
+afnemer of gemeente berichten kan ontvangen
+
+3.2
+
+Model GBA
+
+3.2.1
+
+lo3_mailbox
+Attribuut
+lo3_mailbox_nummer
+spg_mailbox_instantie
+
+soort_instantie
+code_instantie
+blokkade_start_dt
+blokkade_einde_dt
+mutatie_dt
+
+3.2.2
+
+Toelichting
+Het nummer van de mailbox welke bestaat uit
+zeven cijfers.
+Een verwijzing naar de daadwerkelijk mailbox
+die gebruikt wordt om berichten te verzenden
+en te ontvangen.
+Het soort mailbox. A = afnemer, G =
+Gemeente.
+De code van de mailboxinstantie. Het
+mailboxnummer is hier van afgeleid.
+Datum waarop de mailbox is geblokkeerd
+Datum waarop de blokkade van de mailbox is
+beëindigd.
+Datum waarop de regel voor het laatst is
+gemuteerd.
+
+spg_mailbox
+
+Attribuut
+spg_mailbox_instantie
+
+Modernisering GBA
+
+Toelichting
+Code die gebruikt wordt in
+lo3_mailbox.code_instantie om een
+mailboxnummer aan een mailboxinstantie te
+
+Pagina 7 van 10
+
+Definitief | 0.4 | UC105 Vul configuratie mailboxen initieel | 11-12-2015
+
+spg_mailbox_nummer
+
+3.3
+
+Model migratievoorziening
+
+3.3.1
+
+lo3_mailbox
+
+Attribuut
+instantietype
+
+instantiecode
+mailboxnr
+mailboxpwd
+
+limitnumber
+blokkering_start_dt
+blokkering_eind_dt
+laatste_wijziging_pwd_dt
+laatste_msseqnumber
+blokkade_bericht_nrs
+deblokkade_toestand
+indicatie_mailbox_actief
+
+3.3.2
+
+koppelen.
+Het nummer van de mailbox welke bestaat uit
+zeven cijfers.
+
+Toelichting
+Geeft aan wat voor soort mailbox dit is. A =
+Afnemer, G = Gemeente, C =
+migratievoorziening.
+De code van de mailboxinstantie. Het
+mailboxnummer is hier van afgeleid.
+Het nummer van de mailbox welke altijd
+bestaat uit zeven cijfers.
+Het wachtwoord van de mailbox. Wordt alleen
+gevuld indien het een mailbox van de centrale
+voorziening betreft.
+Maximum aantal berichten dat in één list
+request opgehaald kan worden.
+Datum waarop de mailbox is geblokkeerd.
+Datum waarop de blokkade van de mailbox is
+beëindigd.
+De datum waarop het wachtwoord voor het
+laatst is gewijzigd.
+Dit is het MsSequenceNumber van het laatste
+succesvolle uitgelezen bericht.
+De berichtnummers van uitgaande berichten
+die geblokkeerd worden.
+De toestand die de geblokkeerde berichten
+krijgen als de blokkade wordt opgeheven.
+Indicatie of de mailbox actief is. Wordt niet
+meer gebruikt.
+
+mig_verzender
+
+GBA
+instantiecode
+verzendende_instantiecode
+
+Toelichting
+De code van de mailboxinstantie.
+De code van de mailboxinstantie die gebruikt
+wordt door de migratievoorziening voor het
+verzenden en ontvangen van berichten.
+
+3.4
+
+Initiële vulling
+
+3.4.1
+
+Verzendende instanties toevoegen aan lo3_mailbox
+Migratievoorziening
+instantietype
+
+Modernisering GBA
+
+GBA
+‘C’
+
+Pagina 8 van 10
+
+Definitief | 0.4 | UC105 Vul configuratie mailboxen initieel | 11-12-2015
+
+instantiecode
+
+mailboxnr
+mailboxpwd
+limitnumber
+blokkering_start_dt
+blokkering_eind_dt
+laatste_wijziging_pwd_dt
+laatste_msseqnumber
+
+3.4.2
+
+Mailboxnummers en instanties toevoegen aan lo3_mailbox
+Migratievoorziening
+instantietype
+instantiecode
+mailboxnr
+mailboxpwd
+limitnumber
+blokkering_start_dt
+blokkering_eind_dt
+laatste_wijziging_pwd_dt
+laatste_msseqnumber
+
+3.4.3
+
+GBA
+lo3_mailbox.soort_instantie
+lo3_mailbox.code_instantie
+lo3_mailbox.lo3_mailbox_nummer
+<leeg>
+171
+lo3_mailbox.blokkade_start_dt
+lo3_mailbox.blokkade_einde_dt
+<leeg>
+<leeg>
+
+Instanties toevoegen aan mig_verzender
+Migratievoorziening
+instantiecode
+verzendende_instantiecode
+
+3.5
+
+De instantiecode wordt niet overgenomen uit
+spg_mailbox. In plaats daarvan wordt
+spg_mailbox.spg_mailbox_nummer gebruikt.
+spg_mailbox.spg_mailbox_nummer
+<leeg>
+171
+<leeg>
+<leeg>
+<leeg>
+<leeg>
+
+GBA
+lo3_mailbox.code_instantie
+spg_mailbox.spg_mailbox_nummer waarbij
+spg_mailbox.spg_mailbox_instantie
+overeenkomt met
+lo3_mailbox.spg_mailbox_instantie.
+
+Wachtwoorden
+De wachtwoorden voor de verzendende instanties (lo3_mailbox.mailboxpwd) worden op een
+later moment handmatig toegevoegd.
+
+3.6
+
+MSSequenceNumber
+Het MSSequenceNumber moet op een later moment handmatig aangepast worden naar de juiste
+waarde.
+
+Modernisering GBA
+
+Pagina 9 van 10
+
+Definitief | 0.4 | UC105 Vul configuratie mailboxen initieel | 11-12-2015
+
+4
+
+Opmerkingen
+
+Er zijn een aantal attributen die niet geconverteerd worden uit de lo3_mailbox tabel omdat
+hiervoor geen functionaliteit is voorzien in de BRP:
+• blokkade_bericht_nrs
+• deblokkade_toestand
+• indicatie_mailbox_actief
+
+Modernisering GBA
+
+Pagina 10 van 10
+
+

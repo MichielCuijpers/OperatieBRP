@@ -1,0 +1,213 @@
+UCS SA.1.BPB – Bepaal persoonsbeeld voor
+expressie-evaluatie
+Versie
+
+1.0
+
+Datum
+
+12 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+10-03-2017
+
+0.1
+
+Eerste concept
+
+oBRP
+
+15-03-2017
+
+0.2
+
+Aangepast nav geknipte LV.1.BPB
+
+oBRP
+
+04-04-2017
+
+0.3
+
+De persoonsbeelden voor expressiebepaling behouden de
+hele ‘geldige’ (niet-vervallen) laag, niet alleen de actuele
+(niet-beeindigde) groepen.
+
+oBRP
+
+12-07-2017
+
+1.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS SA.1.BPB – Bepaal persoonsbeeld voor expressie-evaluatie
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Bepaal persoonsbeeld voor expressie-evaluatie ....................................................... 4
+2.1
+2.2
+
+3
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Activiteitendiagram ...............................................................................................................4
+Beschrijving van de stappen ...................................................................................................4
+
+Ontwerpbeslissingen ................................................................................................ 6
+
+Status: Definitief, versie: 1.0
+
+Pagina 2 van 6
+
+UCS SA.1.BPB – Bepaal persoonsbeeld voor expressie-evaluatie
+
+1 Inleiding
+1.1
+
+Doel
+
+Als er naar aanleiding van een Administratie Handeling een leveringsdienst uitgevoerd moet
+worden, dan moeten er meestal één of meer expressies geëvalueerd worden. Hiervoor is het nodig
+om bij een administratieve handeling de persoonsbeelden te bepalen van zowel de situatie net voor
+de handeling (‘oud’) als net na de handeling (‘nieuw’), bijvoorbeeld om vast te stellen of de
+persoon in/uit doelbinding is gegaan, of er voldaan is aan een attenderingscriterium of dat er in de
+handeling een verstrekkingsbeperking is ingesteld.
+In deze Use Case wordt beschreven langs welke stappen en regels het systeem deze
+persoonsbeelden afleidt.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de stappen met betrekking tot het maken van het persoonsbeeld voor en na
+de administratieve handeling. In Hoofdstuk 3 staan de Use Case specifieke ontwerpbeslissingen
+beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 1.0
+
+Pagina 3 van 6
+
+UCS SA.1.BPB – Bepaal persoonsbeeld voor expressie-evaluatie
+
+2 Bepaal persoonsbeeld voor expressie-evaluatie
+Het bepalen van het persoonsbeeld voor en na de administratieve handeling kent een aantal
+stappen, deze staan in het activiteitendiagram.
+In de paragraaf daarna worden de stappen stuk voor stuk beschreven. Voor een meer
+gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden wordt verwezen
+naar de aan deze Use Case gekoppelde regels in BMR.
+
+2.1
+
+Activiteitendiagram
+
+2.2
+
+Beschrijving van de stappen
+
+In deze paragraaf worden de stappen in het activiteitendiagram beschreven.
+
+1. Strip toekomstige handelingen (LV.1.BPB.STH )
+
+Status: Definitief, versie: 1.0
+
+Pagina 4 van 6
+
+UCS SA.1.BPB – Bepaal persoonsbeeld voor expressie-evaluatie
+
+Als de handeling die nu onderhanden is niet de laatste is (ofwel de levering loopt achter op
+de bijhouding bij deze persoon) dan wordt eerst de persoonslijst (nog inclusief de volledige
+formele en materiële historie) gereconstrueerd zoals die was direct na het doorvoeren van
+de onderhanden handeling. Als er geen toekomstige handelingen aanwezig zijn bij de
+persoon dan kan deze stap worden overgeslagen.
+Omdat LO3 bijhoudingen door de migratievoorziening worden vastgehouden tot alle
+voorgaande handelingen geleverd zijn, kunnen de toekomstige handelingen alleen BRP
+handelingen zijn. Deze maken altijd een ‘nette’ formele historie aan waardoor het ook
+inderdaad mogelijk is om deze stap uit te voeren.
+
+2. Bepaal persoonsbeeld nieuw (LV1.PBP.BPN)
+Deze stap behoudt alleen de geldige gegevens van de persoon door alle groepsvoorkomens
+die vervallen zijn te verwijderen. Dit levert het ‘nieuwe’ persoonsbeeld op dat bijvoorbeeld
+gebruikt kan worden om te bepalen of de persoon aan de populatiebeperking van de
+gebruikte autorisatie voldoet.
+
+3. Bepaal persoonsbeeld oud (LV1.PBP.BPO)
+Deze stap bepaalt welke gegevens actueel geldig waren voordat de onderhanden handeling
+werd doorgevoerd. Daarbij moet ook expliciet rekening worden gehouden met LO3
+bijhouding die door de migratievoorziening zijn doorgevoerd. Hierdoor kan het voorkomen
+dat groepsvoorkomens met een IndicatieMutatieLevering, die juridisch gezien geen
+onderdeel zijn van de actuele persoonslijst (en waarvan de inhoud niet geleverd wordt),
+wel gebruikt moeten worden in het oude persoonsbeeld zoals dat gebruikt wordt in
+expressie-evaluaties.
+Het kan zijn dat het oude persoonsbeeld helemaal leeg is (bijvoorbeeld na een eerste
+inschrijving)
+
+Status: Definitief, versie: 1.0
+
+Pagina 5 van 6
+
+UCS SA.1.BPB – Bepaal persoonsbeeld voor expressie-evaluatie
+
+3 Ontwerpbeslissingen
+Er zijn geen Use Case specifieke ontwerpbeslissingen.
+
+Status: Definitief, versie: 1.0
+
+Pagina 6 van 6
+
+

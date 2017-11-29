@@ -1,0 +1,647 @@
+Aspectbeschrijving – Generieke berichtstructuur
+Versie
+
+0.3
+
+Datum
+
+06 juni 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+17-08-2016
+
+0.1
+
+Initiële opzet
+
+Operatie BRP
+
+25-01-2017
+
+0.2
+
+Technische sleutel vervangen door kunstmatige sleutel
+
+Operatie BRP
+
+06-06-2017
+
+0.3
+
+Aangevuld met relevant delen uit FO – Levering
+
+Operatie BRP
+
+Aspectbeschrijving – Generieke berichtstructuur
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+
+2
+
+Doel ....................................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Berichtsoorten en berichttypen ................................................................................. 4
+2.1
+Berichtsoorten ......................................................................................................................4
+2.2
+Berichttypen.........................................................................................................................4
+2.2.1
+Verzoekberichten ..............................................................................................................4
+2.2.2
+Resultaatberichten ............................................................................................................4
+2.2.3
+Notificatieberichten ...........................................................................................................5
+
+3
+
+Inhoud van berichten ................................................................................................ 6
+3.1
+Generieke berichtdelen ..........................................................................................................6
+3.2
+Datums en tijdstippen in berichten ..........................................................................................7
+3.2.1
+Datums ...........................................................................................................................7
+3.2.2
+Tijdstippen .......................................................................................................................8
+
+4
+
+Kunstmatige sleutels ................................................................................................ 9
+
+Status: Concept, versie: 0.3
+
+Pagina 2 van 9
+
+Aspectbeschrijving – Generieke berichtstructuur
+
+1 Inleiding
+1.1
+
+Doel
+
+Het doel van dit document een beknopte beschrijving van de generieke berichtstructuur. Een
+volledige beschrijving van de berichtstructuur kan gevonden worden in het Logisch Ontwerp
+Basisregistratie Personen [1].
+
+1.2
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Logisch Ontwerp Basisregistratie Personen
+
+Operatie BRP
+
+-
+
+-
+
+Status: Concept, versie: 0.3
+
+Pagina 3 van 9
+
+Aspectbeschrijving – Generieke berichtstructuur
+
+2 Berichtsoorten en berichttypen
+2.1
+
+Berichtsoorten
+
+De BRP kent een aantal berichtsoorten die gebruikt worden in de communicatie met de
+verschillende diensten die worden geboden. Deze berichtsoorten zijn van het type Verzoek,
+Resultaat of Notificatie. De verschillende diensten worden ontsloten via het koppelvlak levering of
+bijhouding. Vrijwel alle berichten worden gebruikt in de communicatie met en specifieke dienst die
+via het bijhouding óf levering koppelvlak worden ontsloten. Alleen het Vrij bericht wordt bij beide
+koppelvlakken gebruikt. In onderstaande tabel is weergegeven welke berichtsoorten er zijn, van
+welk type deze is en via welk koppelvlak deze gebruikt kan worden.
+Berichtsoort
+
+Type
+
+Koppelvlak
+
+Afnemerindicatiebericht
+Afnemerindicatieresultaatbericht
+
+Verzoek
+Resultaat
+
+Levering
+Levering
+
+Bevragingsbericht
+Bevragingsresultaatbericht
+
+Verzoek
+Resultaat
+
+Levering
+Levering
+
+Bijhoudingsbericht
+Bijhoudingsresultaatbericht
+
+Verzoek
+Resultaat
+
+Bijhouding
+Bijhouding
+
+Bijhoudingsnotificatiebericht
+
+Notificatie
+
+Bijhouding
+
+Mutatiebericht
+
+Notificatie
+
+Levering
+
+Selectieresultaatbericht
+
+Resultaat
+
+Levering
+
+Synchronisatieverzoekbericht
+Synchronisatieverzoekresultaatbericht
+
+Verzoek
+Resultaat
+
+Levering
+Levering
+
+Volledig bericht
+
+Notificatie
+
+Levering
+
+Vrij bericht
+
+Notificatie
+
+Levering / Bijhouding
+
+De uitwisseling van berichten van de typen Verzoek en Resultaat worden geïnitieerd door de
+partijen die aangesloten zijn op de BRP. Dit betreft synchroon berichtenverkeer, waarbij de
+verzoekende partij wacht op antwoord van de centrale voorzieningen. Op een Verzoek volgt direct
+een Resultaat.
+De centrale voorzieningen ondersteunen ook asynchroon berichtenverkeer voor de afhandeling van
+berichten van het type Notificatie waarbij geen direct antwoord volgt. Het initiatief ligt ofwel bij de
+BRP ofwel bij de partijen die aangesloten zijn op de centrale voorzieningen.
+
+2.2
+
+Berichttypen
+
+In de vorige paragraaf zijn de berichtsoorten toegekend aan een bepaald berichttype. De volgende
+waarden worden onderkend:
+2.2.1
+
+Verzoekberichten
+
+Een verzoekbericht is een verzoek van een afnemer dat synchroon door de centrale voorzieningen
+wordt afgehandeld. De verzoekberichten zijn van het berichttype ‘verzoek’ en per use case van een
+verschillende berichtsoort.
+2.2.2
+
+Resultaatberichten
+
+Een resultaatbericht is het resultaat van een verzoek dat door de centrale voorzieningen aan de
+
+Status: Concept, versie: 0.3
+
+Pagina 4 van 9
+
+Aspectbeschrijving – Generieke berichtstructuur
+
+verzendende partij wordt geretourneerd. De inhoud hiervan kan sterk variëren en is afhankelijk
+van het specifieke verzoek en het verwerkingsresultaat hiervan door de centrale voorzieningen.
+2.2.3
+
+Notificatieberichten
+
+Een notificatiebericht is een notificatie dat op initiatief van de centrale voorzieningen of een
+geautoriseerde partij dat asynchroon wordt verstuurd. Binnen het koppelvlak Bijhouding is dat
+bijvoorbeeld het bijhoudingsnotificatiebericht. Voorbeelden binnen het koppelvlak Levering zijn
+volledig bericht en mutatiebericht.
+Die laatste twee nemen in het koppelvlak een belangrijke rol in. Daarom beschrijven de
+onderstaande paragrafen de belangrijkste eigenschappen van deze notificatieberichten:
+2.2.3.1
+
+Volledig berichten
+
+Met een Volledig bericht brengen de centrale voorzieningen afnemers op de hoogte van de
+geregistreerde persoonsgegevens. Dit gebeurt bijvoorbeeld na het plaatsen van een
+afnemerindicatie, na het indienen van een synchronisatieverzoek, als een persoon op basis van een
+algoritmisch bepaling toetreedt tot de groep van te volgen personen van een afnemer of als een
+afnemer op basis van een algoritmische bepaling door de centrale voorzieningen wordt
+geattendeerd.
+Een Volledig bericht bevat altijd gegevens van de persoonslijst van één persoon.
+2.2.3.2
+
+Mutatieberichten
+
+Met een Mutatiebericht brengen de centrale voorzieningen afnemers op de hoogte van nieuwe
+en/of gewijzigde persoonsgegevens. Uit het mutatiebericht is af te leiden welke wijzigingen op de
+persoonsgegevens hebben plaatsgevonden. Dit gebeurt voor alle personen die in de groep van te
+volgen personen van een afnemer zijn opgenomen; hetzij vanwege een geplaatste
+afnemerindicatie hetzij vanwege een algoritmische bepaling.
+Mutatieberichten kunnen gegevens over persoonslijsten van meerdere personen bevatten. Als de
+gegevens van meerdere persoonslijsten worden geraakt door een administratieve handeling,
+worden de gewijzigde gegevens van deze personen in 1 Mutatiebericht aan de afnemer gestuurd.
+
+Status: Concept, versie: 0.3
+
+Pagina 5 van 9
+
+Aspectbeschrijving – Generieke berichtstructuur
+
+3 Inhoud van berichten
+3.1
+
+Generieke berichtdelen
+
+Alle berichtsoorten zijn gestructureerd met generieke berichtdelen. De volgende generieke
+berichtdelen worden onderkent:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Stuurgegevens
+Parameters
+Zoekcriteria
+Resultaat
+Meldingen
+Personen
+Administratieve handeling
+Gedeblokkeerde meldingen
+Bronnen
+Acties en bronverwijzingen
+Bijgehouden personen
+Bijgehouden documenten
+Bijhoudingsplan
+Bijhoudingsplanpersonen
+Gesynchroniseerde personen
+Stamgegevens
+
+Deze generiek berichtdelen kunnen in meerdere berichtsoorten gebruikt worden. In onderstaande
+figuren is te zien hoe de berichtsoorten gestructureerd zijn met de generiek generieke
+berichtdelen. De vulling van de generieke berichtdelen wordt beschreven in paragraaf 8.3.4 van
+het Logisch Ontwerp Basisregistratie Personen [1].
+Afnemerindicatie
+bericht
+
+Bevragingsbericht
+
+Bijhoudingsbericht
+
+Synchronisatieverzoek
+bericht
+
+Stuurgegevens
+
+Stuurgegevens
+
+Stuurgegevens
+
+Stuurgegevens
+
+Parameters
+
+Parameters
+
+Parameters
+
+Parameters
+
+Administratieve
+handeling
+
+Zoekcriteria
+
+Administratieve
+handeling
+
+Zoekcriteria
+
+Acties
+
+Gedeblokkeerde
+meldingen
+
+Persoon
+Bronnen
+
+Acties
+Bronverwijzingen
+
+Persoon
+Relatie
+
+Figuur 1 Berichtsamenstelling per berichtsoort van het berichttype Verzoek
+
+Status: Concept, versie: 0.3
+
+Pagina 6 van 9
+
+Aspectbeschrijving – Generieke berichtstructuur
+
+Afnemerindicatieresultaatbericht
+
+Bevragingsresultaat
+bericht
+
+Bijhoudingsresultaat
+bericht
+
+Stuurgegevens
+
+Stuurgegevens
+
+Stuurgegevens
+
+Stuurgegevens
+
+Stuurgegevens
+
+Resultaat
+
+Resultaat
+
+Resultaat
+
+Resultaat
+
+Resultaat
+
+Meldingen
+
+Meldingen
+
+Meldingen
+
+Meldingen
+
+Meldingen
+
+Administratieve
+handeling
+
+Personen
+
+Administratieve
+handeling
+
+Personen
+
+Gesynchroniseerde
+personen
+
+Selectieresultaat
+bericht
+
+Gedeblokkeerde
+meldingen
+
+Bijgehouden personen
+
+Synchronisatieverzoekresultaatbericht
+
+Stamgegevens
+
+Bijgehouden personen
+
+Bijgehouden
+documenten
+Bijhoudingsplan
+
+Bijhoudingsplanpersonen
+
+Figuur 2 Berichtsamenstelling per berichtsoort van het berichttype Resultaat
+Bijhoudingsnotificatie
+bericht
+
+Mutatiebericht
+
+Volledigbericht
+
+Vrij bericht
+
+Stuurgegevens
+
+Stuurgegevens
+
+Stuurgegevens
+
+Stuurgegevens
+
+Parameters
+
+Parameters
+
+Parameters
+
+Parameters
+
+Administratieve
+handeling
+
+Meldingen
+
+Meldingen
+
+Inhoud
+
+Administratieve
+handeling
+
+Administratieve
+handeling
+
+Bijgehouden personen
+
+Bijgehouden personen
+
+Bijhoudingsplan
+
+Bijhoudingsplan
+personen
+
+Figuur 3 Berichtsamenstelling per berichtsoort van het berichttype Notificatie
+Legenda
+Berichtdeel (verplicht)
+
+Berichtdeel (optioneel)
+
+Hiërarchie
+berichtdelen
+...
+...
+
+3.2
+
+Datums en tijdstippen in berichten
+
+BRP conformeert zich aan de stelselbrede standaard voor berichten, die overigens nog in de
+kinderschoenen staat. Dit is voornamelijk relevant voor het formaat van datums en tijdstippen in
+de berichten.
+
+3.2.1
+
+Datums
+
+Datumwaarden worden opgenomen in het formaat ‘JJJJ-MM-DD’. Als een datum geheel of
+gedeeltelijk onbekend is dan gelden de volgende formaten:
+
+Status: Concept, versie: 0.3
+
+Pagina 7 van 9
+
+Aspectbeschrijving – Generieke berichtstructuur
+
+JJJJ-MM als de dag van de maand onbekend is
+JJJJ als zowel de maand als de dag onbekend is
+0000 als ook het jaartal niet bekend is.
+Met:
+- JJJJ
+
+Jaar
+
+- MM
+
+Maand
+
+- DD
+
+Dag van de maand
+
+3.2.2
+
+Tijdstippen
+
+In de stelselstandaard voor berichten zijn twee formaten toegestaan:
+1: JJJJ-MM-DDTuu:mm:ss.ddd+0X:00
+2: JJJJ-MM-DDTuu:mm:ss.dddZ
+De vetgedrukte tekens (‘-‘, ‘T’,`Z’, ‘:’, ‘.’, ‘+’ en ‘00’) bevatten vaste waarden in het formaat.
+- JJJJ
+
+Jaar
+
+- MM
+
+Maand
+
+- DD
+
+Dag van de maand
+
+-T
+
+Vaste aanduiding ‘T’ (time)
+
+- uu
+
+Uur van de dag
+
+- mm
+
+Minuten van het uur
+
+- ss
+
+Seconden van de minuut
+
+- ddd
+
+Duizendsten van een seconde
+
+- ‘+0X:00’
+
+Nederlandse tijdzone; X bevat afhankelijk van winter- of zomertijd respectievelijk
+de waarde ‘1’ of ‘2’.
+
+-Z
+
+Aanduiding ‘Zulu’ tijd (UTC).
+
+Tijdstippen kunnen niet geheel of gedeeltelijk onbekend zijn. Het systeem hanteert intern en in
+uitvoerberichten ’Zulu’ tijd (UTC). Gebruikers van de BRP mogen beide formaten gebruiken.
+
+Status: Concept, versie: 0.3
+
+Pagina 8 van 9
+
+Aspectbeschrijving – Generieke berichtstructuur
+
+4 Kunstmatige sleutels
+Kunstmatige sleutels worden gebruikt als één van de verwijsmechanismen in de berichten. Een
+volledige beschrijving van alle gebruikte verwijsmechanismen die in de berichten worden gebruikt
+staat in paragraaf 8.3.5 van het Logisch Ontwerp Basisregistratie Personen [1].
+Kunstmatige sleutels zijn objectsleutels of voorkomensleutels en verwijzen respectievelijk naar een
+instantie van een objecttype of een voorkomen van een gegevensgroep.
+Om oneigenlijk gebruik1 te voorkomen wordt de objectsleutel van een instantie van het objecttype
+Persoon gemaskeerd en heeft deze een tijdelijk karakter. Indien een geautoriseerde partij een
+nieuwe object sleutel nodig heeft voor gebruik in het bijhoudingsproces kan deze via een van de
+bevragingsberichten van de centrale voorzieningen worden verkregen.
+Verwijzingen op basis van object sleutels en voorkomensleutels worden gebruikt voor verwijzingen
+naar instanties van objecttypen en/of voorkomens van gegevensgroepen die bijgehouden
+worden/zijn, die in onderzoek staan en die geleverd worden of geregistreerde
+verantwoordingsgegevens (Administratieve handeling, Actie, Bronnen) vanuit gegevensgroepen.
+
+1
+
+Onder oneigenlijk gebruik wordt het opslaan van kunstmatige sleutels door externe systemen verstaan. De kunstmatige
+sleutel kan dan een sterkere sleutel worden dan de functionele sleutel (BSN en A-nummer voor een persoon). Dit wordt
+met maskering en het tijdelijk karakter van de objectsleutel die en instantie van een persoon aanwijst voorkomen.
+
+Status: Concept, versie: 0.3
+
+Pagina 9 van 9
+
+

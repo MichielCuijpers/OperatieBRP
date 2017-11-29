@@ -1,0 +1,578 @@
+UCS SL.0.VA - Selectiedienst met verwijdering
+afnemerindicatie
+Versie
+
+1.0
+
+Datum
+
+12 juli 2017
+
+Status
+
+Definitief
+
+Locatie
+
+Documenthistorie
+Datum
+23-03-2017
+
+Versie Beschrijving
+
+Auteur
+
+0.1
+
+oBRP
+
+Initiële opzet
+
+31-03-2017
+
+0.3
+
+Gebruik maken van generieke LV.1.VA; AD en UCM hierop
+aangepast inclusief de toelichting
+
+oBRP
+
+03-04-2017
+
+0.4
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+11-04-2017
+
+0.5
+
+SL.1.SP is een apart document geworden en bevat nu ook
+selectiecriteria op basis van een invoerbestand.
+
+oBRP
+
+08-05-2017
+
+0.6
+
+Wijzigen selectietaak toegevoegd
+
+oBRP
+
+09-05-2017
+
+0.7
+
+Registreren uitvoerdatum bij de selectietaak
+
+oBRP
+
+10-05-2017
+
+0.8
+
+Foutje in de flow in het AD weggewerkt
+
+oBRP
+
+11-05-2017
+
+0.9
+
+Ontwerpbeslissing toegevoegd
+
+oBRP
+
+18-05-2017
+
+0.10
+
+Er zat een foutje in het UCM, is aangepast
+
+oBRP
+
+08-06-2017
+
+0.11
+
+Totale populatiebeperking moet bij deze soort
+selectiedienst buiten beschouwing worden gelaten.
+
+oBRP
+
+13-06-2017
+
+0.12
+
+Ontwerpbeslissing toegevoegd
+
+oBRP
+
+12-07-2017
+
+1.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+0.3
+
+Interne review
+
+UCS SL.0.VA - Selectiedienst met verwijdering afnemerindicatie
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Invoer ....................................................................................................................... 5
+2.1
+2.2
+2.3
+
+3
+
+Beschrijving .........................................................................................................................6
+Schematische weergave.........................................................................................................6
+Beschrijving activiteitendiagram .............................................................................................7
+Bedrijfsregels .......................................................................................................................8
+
+Uitvoer ...................................................................................................................... 9
+4.1
+4.2
+4.3
+
+5
+
+Beschrijving .........................................................................................................................5
+Verzoekbericht .....................................................................................................................5
+Bijzonderheden.....................................................................................................................5
+
+Verwerking ............................................................................................................... 6
+3.1
+3.2
+3.3
+3.4
+
+4
+
+Doel ....................................................................................................................................3
+Functionele context ...............................................................................................................3
+Referenties ..........................................................................................................................3
+
+Beschrijving .........................................................................................................................9
+Selectieresultaatset Totalen ...................................................................................................9
+Volledig bericht .....................................................................................................................9
+
+Ontwerpbeslissingen .............................................................................................. 10
+
+Status: Definitief, versie: 1.0
+
+Pagina 2 van 10
+
+UCS SL.0.VA - Selectiedienst met verwijdering afnemerindicatie
+
+1 Inleiding
+1.1
+
+Doel
+
+Een selectiedienst met verwijdering afnemerindicatie geeft de mogelijkheid om in één keer bij de
+geselecteerde personen afnemerindicaties te verwijderen.
+Een afnemer kan deze selectiedienst gebruiken om een groot aantal afnemerindicaties te
+verwijderen bijvoorbeeld als een wettelijke taak bij een afnemer komt te vervallen.
+Er wordt geen selectieresultaatset met persoonsgegevens verstrekt zoals bij een standaard
+selectiedienst. Er wordt wel altijd een selectieresultaatset Totalen klaargezet met de
+samenvattende gegevens van deze selectiedienst.
+Afhankelijk van de instellingen van de betreffende selectiedienst kunnen er wel asynchroon volledig
+berichten gestuurd worden van de personen waarbij een afnemerindicatie is verwijderd.
+Indien bij een geselecteerd persoon geen afnemerindicatie aanwezig is en er dus geen
+afnemerindicatie verwijderd kan worden met deze selectiedienst dan leidt dit niet tot een
+fout(melding). Er wordt ook geen volledig bericht van de betreffende persoon verstuurd (deze
+wordt alleen verstuurd indien er een afnemerindicatie verwijderd wordt met deze dienst en dit bij
+de instelling van de dienst zo staat aangegeven).
+Wanneer met deze selectiedienst afnemerindicaties worden verwijderd en volledig berichten
+verstuurd worden dan wordt er ook geprotocolleerd. Er worden immers persoonsgegevens
+geleverd.
+Deze Use Case beschrijft de verwerking van een selectiedienst met verwijdering afnemerindicaties.
+
+1.2
+
+Functionele context
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitdiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer Levering
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 1.0
+
+Pagina 3 van 10
+
+UCS SL.0.VA - Selectiedienst met verwijdering afnemerindicatie
+
+2
+
+Aspectbeschrijving Berichtstructuur
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 1.0
+
+Pagina 4 van 10
+
+UCS SL.0.VA - Selectiedienst met verwijdering afnemerindicatie
+
+2 Invoer
+2.1
+
+Beschrijving
+
+Om de selectiedienst met verwijdering afnemerindicatie te kunnen uitvoeren zijn er gegevens nodig
+van de betreffende ingerichte selectiedienst (Dienst van het soort selectie), autorisatie van de
+partij en gegevens met betrekking tot de uit te voeren selectietaak. Deze gegevens kunnen gezien
+worden als de invoergegevens van deze dienst. De dienst selectiedienst met verwijdering
+afnemerindicatie kent geen verzoekbericht.
+
+2.2
+
+Verzoekbericht
+
+Niet van toepassing
+
+2.3
+
+Bijzonderheden
+
+De volgende gegevens zijn van belang voor de juiste verwerking van de selectiedienst met
+verwijdering afnemerindicatie.
+
+Selectiedienst instellingen
+Bij de selectiedienst staat het selectiecriterium waaraan een geselecteerd persoon moet voldoen.
+In de instellingen van de selectiedienst kan aangegeven worden dat de partij na het verwijderen
+van de afnemerindicaties per persoon asynchroon een volledig bericht wil ontvangen.
+
+Inperken persoonsbeeld
+Met behulp van de autorisatie die is vastgelegd bij Dienstbundel\Groep en
+Dienstbundel\Groep\Attribuut (behorende bij de betreffende selectiedienst) worden de eventueel te
+leveren volledig berichten ingeperkt.
+
+Selectietaak
+Gegevens rondom de selectietaak worden apart geadministreerd. Veelal met behulp van de
+beheerapplicatie. In de BRP wordt de identificatie van een selectietaak meegegeven in het
+selectieresultaatbericht. Ook zal vanuit de BRP de status van de selectietaak tijdens of na de
+verwerking van de selectiedienst bijgewerkt worden.
+
+Status: Definitief, versie: 1.0
+
+Pagina 5 van 10
+
+UCS SL.0.VA - Selectiedienst met verwijdering afnemerindicatie
+
+3 Verwerking
+3.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft de verwerking van de selectiedienst met verwijdering afnemerindicatie.
+
+3.2
+
+Schematische weergave
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitendiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+In het diagram is alleen de happy flow weergegeven. Foutafhandeling is hier niet opgenomen,
+controles staan beschreven in de begeleidende tekst in de volgende paragraaf of in de
+aangeroepen Use Cases.
+
+Status: Definitief, versie: 1.0
+
+Pagina 6 van 10
+
+UCS SL.0.VA - Selectiedienst met verwijdering afnemerindicatie
+
+3.3
+
+Beschrijving activiteitendiagram
+
+De verwerking van de selectiedienst met verwijdering afnemerindicatie bestaat uit een aantal
+volgordelijke stappen die uitgevoerd worden. Elke toegelichte stap is terug te vinden in het
+activiteitendiagram in de vorige paragraaf.
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de aan de specificatie van de Use Cases en de aan de Use Cases gekoppelde
+regels in BMR.
+
+•
+
+SL.1.SP – Selecteer personen
+Aan de hand van het selectiecriterium bij de Dienst en/of eventueel een invoerbestand met
+een lijst met Administratienummers of Burgerservicenummers, worden de juiste personen
+geselecteerd. Opgeschort wegens foutief of gewist worden niet geselecteerd. De personen
+met een verstrekkingsbeperking voor de betreffende partij worden bij deze dienst niet
+uitgesloten uit de selectie. Het is wel mogelijk om een afnemerindicatie te verwijderen bij
+een persoon die een verstrekkingsbeperking heeft voor de betreffende partij.
+
+•
+
+SL.1.MST – Maak selectieresultaat totalen
+Nadat alle personen zijn geselecteerd wordt er een selectieresultaatset totalen gemaakt en
+geplaatst. In deze selectieresultaatset worden de selectiekenmerken gevuld en de
+samenvattende gegevens van de selectietaak. Zoals het totaal aantal geselecteerde
+personen.
+Merk op dat het aantal geselecteerde personen in het bestand wordt opgenomen. Dit aantal
+hoeft niet overeen te komen met het aantal verwijderde afnemerindicaties. Wanneer er bij
+een geselecteerd persoon geen afnemerindicatie bestaat kan deze ook niet verwijderd
+worden.
+De selectieresultaatset totalen wordt op een door de beheerder te configureren plaats
+neergezet.
+
+•
+
+SL.1.PA.WS – Wijzig status selectietaak
+Wanneer de selectie van personen is uitgevoerd wijzigt de status van de selectietaak en de
+uitvoerdatum wordt geregistreerd bij de selectietaak.
+
+De volgende stappen worden per geselecteerd persoon doorlopen.
+
+•
+
+SL.1.CA.CAA – Controleer aanwezigheid afnemerindicatie
+Wanneer er geen afnemerindicatie aanwezig is bij de geselecteerde persoon dan stopt in
+principe de verwerking. Echter in de stap SL.1.VA.VVA-Verwerken verwijderen
+afnemerindicatie wordt er nog wel een logregel weggeschreven.
+
+•
+
+LV.1.VA – Verwijder afnemerindicatie
+In deze stap wordt de afnemerindicatie daadwerkelijk verwijderd (vervallen). Het
+verwijderen van een afnemerindicatie is het vullen van het tijdstip vervallen van de groep
+Persoon\Afnemerindicatie met de systeem datum en tijd.
+Wanneer het verwijderen van de afnemerindicatie faalt dan wordt dit in de functionele log
+weggeschreven.
+
+•
+
+SL.1.VA.VVA – Verwerken verwijderen afnemerindicatie
+Er wordt een volledig bericht verzonden indien wordt voldaan aan alle onderstaande
+voorwaarden:
+o De afnemerindicatie is verwijderd in deze stap;
+o Er geldt geen verstrekkingsbeperking bij de betreffende persoon voor deze partij;
+o De indicator ‘Verzend volledig bericht bij wijziging afnemerindicatie na selectie’ is
+gelijk aan ‘Ja’.
+
+Status: Definitief, versie: 1.0
+
+Pagina 7 van 10
+
+UCS SL.0.VA - Selectiedienst met verwijdering afnemerindicatie
+
+Het samenstellen en versturen van het Volledig bericht vindt in de volgende stappen
+plaats.
+•
+
+LV.1.SPL – Samenstellen persoonslijst
+Er wordt een volledige persoonslijst samengesteld in de BRP van de persoon waarbij een
+afnemerindicatie is verwijderd. In deze stap wordt er ook gefilterd op de grens van deze
+persoonslijst.
+
+•
+
+LV.1.AFB – Autorisatiefilter bericht
+De in de vorige stap samengestelde persoonslijst wordt in deze stap vervolgens gefilterd op
+autorisatie op historie, verantwoording, onderzoek, inhoudelijke groepen en attributen.
+
+•
+
+LV.1.VPB – Verwerk persoon bericht
+Er wordt vervolgens een verwerk persoon bericht samengesteld. In dit geval wordt een
+volledig bericht gemaakt. In deze stap wordt het bericht begrenst op datum aanvang
+materiële periode van de afnemerindicatie en worden de stuurgegevens van het
+asynchrone bericht gevuld.
+
+•
+
+LV.1.BO – Bericht opschonen
+Na het filteren in de voorgaande stappen kunnen er lege groepen of niet relevante
+verwijzingen in het bericht ontstaan. In deze stap wordt ook de sortering van groepen en
+objecten bepaald.
+
+•
+
+LV.1.PB – Protocolleer bericht
+Alle leveringen waarin persoonsgegevens zijn opgenomen (zoals een volledig bericht)
+moeten worden geprotocolleerd alvorens de levering aan afnemers mag plaatsvinden.
+Wanneer de dienst wordt uitgevoerd voor een afnemer dan moeten, alvorens het volledig
+bericht verzonden wordt, de reeds aangemaakte levering in de protocolleringsadministratie
+worden vastgelegd.
+Wanneer de dienst ten behoeve van bijhouders wordt uitgevoerd dan is protocollering niet
+nodig.
+
+•
+
+3.4
+
+LV.1.VE – Verzend Bericht
+Tot slot wordt het asynchrone volledige bericht verzonden en gearchiveerd (LV.1.AB).
+Echter indien het niet mogelijk is om een levering te protocolleren dan mogen er geen
+gegevens geleverd worden.
+
+Bedrijfsregels
+
+Voor een toelichting op de verschillende soorten bedrijfsregels, de meldingsniveaus, de toepassing
+en werking ervan in het bijhoudingsproces, wordt verwezen naar de daartoe opgestelde
+Aspectbeschrijving Controles [3].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels, verwerkingslogica en definitieregels zijn opgenomen de bijlage: SL.0.VA – Bijlage
+Selectiedienst met verwijdering afnemerindicatie.doc.
+
+Status: Definitief, versie: 1.0
+
+Pagina 8 van 10
+
+UCS SL.0.VA - Selectiedienst met verwijdering afnemerindicatie
+
+4 Uitvoer
+4.1
+
+Beschrijving
+
+Dit proces levert een selectieresultaatset totalen met de samenvattende gegevens van de
+uitgevoerde selectietaak.
+De selectieresultaatset wordt op een door de beheerder te configureren locatie geplaatst.
+Wanneer een afnemerindicatie is verwijderd met deze selectiedienst en de instelling van de
+selectiedienst laat het toe, dan wordt er asynchroon een volledig bericht verstuurd per persoon
+waarbij de afnemerindicatie is verwijderd.
+Voor de volledige beschrijving en inhoud van het volledig bericht en het bestand
+selectieresultaatset totalen, wordt verwezen naar Aspectbeschrijving Generieke Berichtstructuur
+[2] en de bijlage: SL.0.VA – Bijlage Selectiedienst met verwijdering afnemerindicatie.doc.
+
+4.2
+
+Selectieresultaatset Totalen
+
+Selectiekenmerken
+soortSelectieresultaatSet
+Dit wordt bij deze selectiedienst altijd gevuld met:
+o Resultaatset totalen; hier worden de totalen van de uitgevoerde selectie in
+geplaatst. Dit soort bevat geen persoonsgegevens.
+VolgnummerSelectieresultaatSet
+Deze parameter geeft het volgnummer van de betreffende selectieresultaatset weer. Aangezien bij
+de selectiedienst met plaatsing afnemerindicatie altijd maar één selectieresultaat set wordt
+gegenereerd zal dit altijd ‘1’ zijn.
+soortSelectie
+De soort selectiedienst waartoe de uitgevoerde selectietaak behoord.
+In dit geval altijd gevuld met:
+o Selectie met verwijdering afnemerindicatie
+leveringsautorisatieIdentificatie
+De leveringsautorisatie waarop de selectie betrekking heeft.
+dienstIdentificatie
+De identificatie van de Dienst.
+selectietaakIdentificatie
+De identificatie van de uitgevoerde selectietaak.
+selectieDatum
+De datum waarop de selectierun is uitgevoerd.
+Resultaat
+•
+aantalSelectieresultaatPersonen; het aantal personen dat is geselecteerd;
+•
+aantalSelectieresultaatSets; het aantal selectieresultaatsets waaruit het resultaat bestaat
+(inclusief de Resultaatset totalen). In dit geval altijd één omdat er geen andere
+selectieresultaatsets worden geleverd.
+
+4.3
+
+Volledig bericht
+
+Na het succesvol verwijderen van een afnemerindicatie wordt asynchroon voor de betreffende
+persoon een volledig bericht aan de afnemer gezonden.
+
+Status: Definitief, versie: 1.0
+
+Pagina 9 van 10
+
+UCS SL.0.VA - Selectiedienst met verwijdering afnemerindicatie
+
+5 Ontwerpbeslissingen
+•
+
+•
+
+•
+
+Controle van de autorisatie en de selectietaak gebeurd bij het opstarten van de selectierun.
+Wanneer tijdens het uitvoeren van de selectierun autorisatie of de betreffende selectietaak
+wijzigt heeft dit geen gevolgen voor de lopende selectierun en de daarbij horende
+selectietaken.
+De eventuele ‘datum einde volgen’ bij een afnemerindicatie wordt buiten beschouwing
+gelaten bij de controle op het wel of niet versturen van een volledig bericht na een
+selectiedienst met verwijdering afnemerindicatie. Wanneer een afnemerindicatie een
+‘datum einde volgen’ in het verleden heeft wordt er wel een volledig bericht verstuurd
+wanneer de afnemerindicatie met deze dienst is verwijderd en in de dienst is aangegeven
+dat de afnemer een volledig bericht wenst te ontvangen.
+Een selectietaak wordt uitgevoerd op een replica van de database. Op de replica worden
+personen geselecteerd maar het daadwerkelijk verwijderen van de afnemerindicatie vindt
+plaats op de master database. Wanneer met de selectiedienst met verwijdering
+afnemerindicaties personen zijn geselecteerd op de replica maar op de master blijkt een
+nieuwe versie van de persoon te staan dan wordt de afnemerindicatie toch verwijderd. Er
+wordt niet opnieuw gecontroleerd of de persoon voldoet aan de selectiecriteria en de
+voorgenomen verwijdering van de afnemerindicatie wordt uitgevoerd.
+
+Status: Definitief, versie: 1.0
+
+Pagina 10 van 10
+
+

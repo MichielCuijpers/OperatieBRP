@@ -1,0 +1,492 @@
+Technisch ontwerp BRP Bijhouden
+
+Versie 0.1
+
+Datum
+Status
+
+02-03-2017
+Concept
+
+Concept | 0.1 | Technisch ontwerp BRP Bijhouden | 02-03-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .................................................................................................................................................4
+1.1
+1.2
+1.3
+
+SCOPE .....................................................................................................................................................4
+REFERENTIES ..........................................................................................................................................4
+LEESWIJZER ............................................................................................................................................4
+
+2
+
+CONTEXT ...................................................................................................................................................5
+
+3
+
+MODULES ..................................................................................................................................................6
+3.1
+3.2
+3.3
+3.4
+3.5
+3.6
+
+BRP KOPPELVLAK (BRP-BIJHOUDING-DELIVERY-WS) .............................................................................6
+GBA KOPPELVLAK (BRP-BIJHOUDING-DELIVERY-GBA) ...........................................................................7
+DATA ACCESS (BRP-BIJHOUDING-DELIVERY-DAL) ..................................................................................7
+XML PARSER (BRP-BIJHOUDING-SERVICE-PARSER) ................................................................................7
+VERWERKING (BRP-BIJHOUDING-SERVICE-VERWERK) ............................................................................7
+MODEL (BRP-BIJHOUDING-DOMAIN-MODEL) ...........................................................................................8
+
+4
+
+MODEL .......................................................................................................................................................9
+
+5
+
+PROCESSEN.............................................................................................................................................10
+
+6
+
+ONTWERPBESLISSINGEN ...................................................................................................................11
+6.1
+6.2
+6.3
+6.4
+6.5
+
+MINIMALISEER AFHANKELIJKHEDEN MET SPECIFIEKE IMPLEMENTATIES...............................................11
+GEBRUIK RESOURCES NIET LANGER DAN NODIG ....................................................................................11
+TRANSACTIE MANAGEMENT ..................................................................................................................11
+HIBERNATE ...........................................................................................................................................11
+IMPLEMENTATIE KEUZES .......................................................................................................................11
+
+Operatie BRP
+
+Pagina 2 van 11
+
+Concept | 0.1 | Technisch ontwerp BRP Bijhouden | 02-03-2017
+
+Documenthistorie
+Versiehistorie
+Versienummer
+0.1
+
+Reviewhistorie
+Versienummer
+0.1
+
+Operatie BRP
+
+Datum
+
+Auteur
+
+Aanpassingen
+
+02-03-2017
+
+Operatie BRP
+
+Eerste opzet.
+
+Datum
+
+Namen
+
+14-03-2017
+
+Operatie BRP
+
+Pagina 3 van 11
+
+Concept | 0.1 | Technisch ontwerp BRP Bijhouden | 02-03-2017
+
+1
+
+Inleiding
+
+Dit document dient ter onderbouwing en uitleg van de software die is ontwikkeld voor de
+functionaliteit van de Bijhouding zoals deze is beschreven in het Use Case Model (UCM) [5].
+De lezer dient bekend te zijn met de inhoud van het Software Architectuur Document (SAD) [1]
+en is voornamelijk bedoeld voor software ontwikkelaars.
+1.1
+
+Scope
+De inhoud van dit document richt zich op het ‘gat’ tussen het SAD en de broncode. Het is niet de
+bedoeling om informatie uit het SAD of broncode in dit document de dupliceren. Het is voor de
+lezer daarom belangrijk om bij het lezen van dit document kennis te hebben van het SAD en
+toegang te hebben tot de broncode zodat deze drie in samenhang kunnen worden bestudeerd.
+Het ‘gat’ waar dit document zich op richt is het volgende:
+•
+
+software van alleen de Bijhouding (exclusief bericht ontwerp en database ontwerp);
+
+•
+
+het waarom achter de broncode;
+
+•
+
+de kaders waarbinnen de software is ontwikkeld;
+
+Het technisch ontwerp van de berichten in de vorm van XSD’s [2] en het ontwerp van de BRP
+database [3] worden elk in een eigen document beschreven en vallen buiten de scope van dit
+document.
+1.2
+
+Referenties
+#
+1
+2
+3
+4
+5
+6
+
+Document
+SAD BRP Voorziening
+Technisch ontwerp Berichten
+Technisch ontwerp Database
+Technisch ontwerp BRP Leveren
+UCM BY.0 - Bijhouding
+UCS-BY.1.ON - Ontrelateren
+
+Versie
+
+Datum
+
+Tabel 1 Lijst met referenties naar andere documenten
+1.3
+
+Leeswijzer
+Deze paragraaf beschrijft de hoofdstukken uit het technisch ontwerp om de lezer te
+ondersteunen bij het vinden van de juiste informatie.
+•
+•
+•
+•
+•
+•
+
+Hoofdstuk 1 (Inleiding) beschrijft het doel en scope van dit document en welke
+informatie men in dit document kan vinden.
+Hoofdstuk 2 (Context) maakt inzichtelijk wat de context van de Bijhouding is en maakt
+een link met het Software Architectuur Document (SAD).
+Hoofdstuk 3 (Modules) beschrijft de verschillende modules van Bijhouding, gelaagdheid
+en relevantie classes.
+Hoofdstuk 4 (Model) bevat een toelichting op het domein model van de Bijhouding
+software.
+Hoofdstuk 5 (Processen) beschrijft de processen die binnen de Bijhouding worden
+uitgevoerd.
+Hoofdstuk 6 (Ontwerpbeslissingen) somt de ontwerpbeslissingen op voor Bijhouding als
+aanvulling op het SAD.
+
+Operatie BRP
+
+Pagina 4 van 11
+
+Concept | 0.1 | Technisch ontwerp BRP Bijhouden | 02-03-2017
+
+2
+
+Context
+
+De bijhouding software zorgt ervoor dat persoonsgegevens worden bijgehouden in de BRP
+database. Hiervoor biedt de bijhouding twee koppelvlakken, één koppelvlak voor BRP
+bijhoudingen en één voor GBA bijhoudingen. Het koppelvlak voor BRP bijhoudingen verwerkt
+berichten van de burgerzaken modulen op synchrone wijze d.m.v. een SOAP webservice. Ter
+ondersteuning van de verwerking van toevallige gebeurtenissen in de migratievoorziening
+kunnen zogenaamde GBA bijhoudingen op asynchrone wijze worden verwerkt d.m.v. JMS
+queues.
+De door de bijhouding gemaakte notificatieberichten worden aan de Verzending aangeboden
+door deze op de daarvoor bestemde JMS queue te plaatsen. Het versturen van deze
+notificatieberichten wordt vervolgens afgehandeld door het Verzending component [4].
+Deze wijze waarop de bijhouding gaat archiveren staat nog ter discussie en is daarom hier niet
+beschreven.
+Onderstaande afbeelding toont de bijhouding in de context zoals deze hierboven beschreven is.
+
+Afbeelding 1: Context Bijhouding Software
+Deze afbeelding is een vereenvoudigde weergave van de bijhouding software in haar context en
+maakt geen onderscheidt tussen modules (logische groepering van broncode) en componenten
+(runtime gedrag). Deze worden in meer details beschreven in hoofdstuk 3 (Modules).
+
+Operatie BRP
+
+Pagina 5 van 11
+
+Concept | 0.1 | Technisch ontwerp BRP Bijhouden | 02-03-2017
+
+3
+
+Modules
+
+De bijhouding software is verdeeld over verschillende modules op een zodanige wijze dat de
+broncode die bij elkaar hoort, gegroepeerd en gescheiden is van de andere broncode. De
+modules zijn verdeeld in verschillende lagen waarbij modules binnen één laag van elkaar
+afhankelijk mogen zijn. Daarnaast mag een module ook afhankelijk zijn van een module in de
+laag eronder. Dit is schematisch weergegeven in afbeelding 2.
+
+Afbeelding 2: Lagen architectuur van de Bijhouding software
+De delivery laag bevat modules met afhankelijkheden van specifieke technologieën waar
+onderliggende lagen niet van afhankelijk willen zijn. Bijvoorbeeld Apache CXF voor JAX-WS,
+Hibernate als object relational mapping (ORM) technologie en Apache ActiveMQ als middleware
+implementatie. De service laag bevat de applicatie services van de bijhouding. De onderste laag
+bestaat uit de domain laag. Hierin bevinden zich de modules met de kern logica van het
+systeem. Voor de bijhouding bestaat deze logica uit validatie van berichten en verwerking in de
+database.
+Het doel van deze opsplitsing in modules is het beteugelen van de complexiteit van de software
+door het groot stuk software op te splitsen in kleinere (minder complexe) stukken. Ook wel
+bekend als “separation of concerns”. Door bovendien de extra gelaagdheid te introduceren
+ontstaat een nog betere scheiding van verantwoordelijkheden en worden afhankelijkheden met
+externe technologieën beter beheersbaar. Zo wordt het bijvoorbeeld erg eenvoudig om
+bedrijfsregels te unit testen in de domain modules zonder dat er kennis nodig is van JAX-WS,
+ORM of andere specifieke technologieën.
+Van de verschillende modules volgt hieronder een beschrijving van hun verantwoordelijkheden.
+3.1
+
+BRP koppelvlak (brp-bijhouding-delivery-ws)
+Deze module is verantwoordelijk voor het ontvangen en verwerken van SOAP berichten met BRP
+XML als body. Deze webservice is gebouwd met JAX-WS en Apache CXF. Er wordt gebruik
+gemaakt van de brp-bijhouding-service-parser module om binnenkomende BRP XML berichten
+om te zetten in objecten uit het domein model en omgekeerd. Verdere verwerking van het
+
+Operatie BRP
+
+Pagina 6 van 11
+
+Concept | 0.1 | Technisch ontwerp BRP Bijhouden | 02-03-2017
+
+bijhoudingsvoorstel wordt afgehandeld door de brp-bijhouding-service-verwerk module die door
+deze module wordt aangeroepen. Het bouwen van deze module met Apache Maven levert een
+WAR-bestand op dat gedeployed kan worden binnen een Apache Tomcat server.
+3.2
+
+GBA koppelvlak (brp-bijhouding-delivery-gba)
+Het GBA koppelvlak lijkt erg veel op het BRP koppelvlak maar biedt geen SOAP interface. In
+plaats daarvan worden de BRP XML berichten van een queue gelezen en wordt het antwoord
+bericht op een antwoord queue weggeschreven.
+
+3.3
+
+Data Access (brp-bijhouding-delivery-dal)
+Deze module bevat een JPA implementatie op basis van Hibernate voor de bijhouding entiteiten
+uit het model. Deze implementatie is gescheiden van het model zodat deze geen kennis heeft
+van hoe entiteiten gelezen en opgeslagen worden.
+
+3.4
+
+XML Parser (brp-bijhouding-service-parser)
+Voor het mappen van BRP XML berichten op objecten uit het bijhouding model is een parser
+gemaakt o.b.v. de StAX parser. Deze module bevat ook een writer die de bijhouding objecten
+kan terug vertalen naar XML.
+
+3.5
+
+Verwerking (brp-bijhouding-service-verwerk)
+De verschillende applicatie services van de bijhouding horen in deze module thuis. De bijhouding
+software kent de volgende applicatie services:
+
+3.5.1
+
+AutorisatieService
+Controleert of er een geldige toegang bijhoudingsautorisatie bestaat voor de verzendende partij
+die het bijhoudingsvoorstel heeft ingediend.
+Input:
+Output:
+
+3.5.2
+
+BijhoudingAntwoordBerichtService
+Maakt het antwoord bericht voor de bijhouding service.
+Input:
+Output:
+
+3.5.3
+
+Het BijhoudingVerzoekBericht.
+Het BijhoudingAntwoordBericht.
+
+BijhoudingsplanService
+Deze service maakt het bijhoudingsplan o.b.v. het ontvangen verzoek bericht.
+Input:
+Output:
+
+3.5.5
+
+Het BijhoudingVerzoekBericht, de lijst met meldingen, administratieve handeling en
+bijhoudingsplan context
+Het BijhoudingAntwoordBericht.
+
+BijhoudingService
+Deze service biedt twee methodes voor het verwerken van een BijhoudingVerzoekBericht, één
+methode voor het verwerken van een bericht dat is binnengekomen op het BRP koppelvlak en de
+andere methode voor een bericht dat is binnengekomen op het GBA koppelvlak.
+Input:
+Output:
+
+3.5.4
+
+Het BijhoudingVerzoekBericht.
+Een lijst met meldingen. Een lege lijst betekent dat er geen autorisatie fouten zijn
+opgetreden. Een gevulde lijst betekent dat de verwerking niet door mag gaan.
+
+Het BijhoudingVerzoekBericht.
+De BijhoudingsplanContext.
+
+MutatieNotificatieService
+Deze service verstuurt het bijhouding notificatiebericht.
+
+Operatie BRP
+
+Pagina 7 van 11
+
+Concept | 0.1 | Technisch ontwerp BRP Bijhouden | 02-03-2017
+
+Input:
+Output:
+
+3.5.6
+
+OntrelateerService
+Deze service voert de ontrelateer functionaliteit[6] uit.
+Input:
+Output:
+
+3.5.7
+
+De BijhoudingsplanContext en BijhoudingVerzoekBericht.
+Geen output.
+
+ValidatieService
+Deze service wordt gebruikt om het BijhoudingVerzoekBericht te valideren. Daarnaast biedt deze
+service functionaliteit om aan de hand van een lijst meldingen te bepalen of de verwerking door
+mag gaan en wat het hoogste melding niveau is.
+Input:
+Output:
+
+3.6
+
+Het BijhoudingsplanNotificatieBericht.
+Geen output.
+
+Het BijhoudingVerzoekBericht.
+Een lijst met 0, 1 of meerdere meldingen.
+
+Model (brp-bijhouding-domain-model)
+Deze module bevat de kern functionaliteit van de bijhouding. Deze domein classes bestaan
+vooral uit representaties van de bericht elementen en de bijbehorende functionaliteit om de
+bericht elementen te valideren en te verwerken.
+Vanwege het grote aantal bedrijfsregels is gekozen voor een model waarin deze bedrijfsregels
+makkelijk kunnen worden uitgedrukt. Mede om deze reden heeft de bijhouding een specifiek
+model waarin elke element bij een bijhouding verzoek bericht wordt gemapped op een specifieke
+Java class waarin vervolgens de functionaliteit m.b.t. dit element kan worden toegevoegd. Op
+deze manier zit de controle van gegevens letterlijk op de gegevens zelf. In hoofdstuk 4 (Model)
+wordt het model in detail toeglicht.
+
+Operatie BRP
+
+Pagina 8 van 11
+
+Concept | 0.1 | Technisch ontwerp BRP Bijhouden | 02-03-2017
+
+4
+
+Model
+
+TODO: Class model van de bijhouding toelichten.
+
+Operatie BRP
+
+Pagina 9 van 11
+
+Concept | 0.1 | Technisch ontwerp BRP Bijhouden | 02-03-2017
+
+5
+
+Processen
+
+TODO: component & connector view.
+
+Operatie BRP
+
+Pagina 10 van 11
+
+Concept | 0.1 | Technisch ontwerp BRP Bijhouden | 02-03-2017
+
+6
+
+Ontwerpbeslissingen
+
+Hier staan ontwerpbeslissingen gedocumenteerd die gelden voor de alle modules binnen de
+bijhouding software. Deze ontwerpbeslissingen kunnen per module worden aangevuld met
+additionele ontwerpbeslissingen.
+6.1
+
+Minimaliseer afhankelijkheden met specifieke implementaties
+Voorkom onnodige afhankelijkheden met implementaties. Declareer velden bijvoorbeeld als List
+in plaats van ArrayList en gebruik javax.inject.Inject in plaats van
+org.springframework.beans.factory.annotation.Autowired.
+
+6.2
+
+Gebruik resources niet langer dan nodig
+TODO
+
+6.3
+
+Transactie management
+De scope van een transactie is gedefinieerd op de services. TODO Atomikos / etc.
+
+6.4
+
+Hibernate
+TODO
+
+6.5
+
+Implementatie keuzes
+
+6.5.1
+
+Spring
+Als basis framework voor het opzetten van de componenten wordt Spring gebruikt.
+
+6.5.1.1
+
+Spring IoC (dependency injection)
+Implementatie van services en repositories wordt m.b.v. Spring IoC geïnjecteerd.
+
+6.5.1.2
+
+Spring AOP voor transaction management
+Transaction management is geregeld m.b.v. Spring; methodes die in een transactie moeten
+worden uitgevoerd zijn geannoteerd met de @Transactional annotatie van Spring.
+
+6.5.1.3
+
+Spring core (jdbc template)
+Voor de interactie met de database gebruikt deze sub-module het JDBC template van Spring.
+
+6.5.1.4
+
+Spring JMS (jms)
+Voor het versturen van berichten naar de berichtenmakelaar wordt gebruik gemaakt van een
+JMS template.
+
+6.5.2
+
+Configuratie
+De module is op de volgende manieren te configureren: TODO
+
+Operatie BRP
+
+Pagina 11 van 11
+
+

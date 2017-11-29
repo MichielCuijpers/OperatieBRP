@@ -1,0 +1,213 @@
+UCS LV.1.CPI – Controleer persoonsselectie
+identiteitsnummer
+Versie
+
+2.0
+
+Datum
+
+13 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+03-12-2016
+
+0.1
+
+Eerste opzet
+
+oBRP
+
+07-12-2016
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+13-12-2016
+
+0.3
+
+AD aangepast ((*) verwijderd)
+
+oBRP
+
+13-02-2017
+
+1.0
+
+UC aangemaakt in BMR, regels omgehangen. Versie
+document gereed.
+
+oBRP
+
+31-03-2017
+
+1.1
+
+Gewijzigde definitie gemaskeerde object sleutel
+
+oBRP
+
+13-07-2017
+
+2.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS LV.1.CPI – Controleer persoonsselectie identiteitsnummer
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Controleer persoonsselectie identiteitsnummer ........................................................ 4
+2.1
+2.2
+
+3
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Activiteitendiagram ...............................................................................................................4
+Beschrijving van de stappen ...................................................................................................4
+
+Ontwerpbeslissingen ................................................................................................ 6
+
+Status: Definitief, versie: 2.0
+
+Pagina 2 van 6
+
+UCS LV.1.CPI – Controleer persoonsselectie identiteitsnummer
+
+1 Inleiding
+1.1
+
+Doel
+
+Bepaalde diensten zijn bedoeld voor één persoon. De verwerking kan alleen doorgang vinden
+indien ook precies 1 persoon geselecteerd is met het opgegeven identiteitsnummer
+(burgeservicenummer, administratienummer, of persoonsobjectsleutel).
+Het doel van dit document is te beschrijven welke controles er zijn van deze persoonsselectie.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de stappen van de persoonsselectie controle. In hoofdstuk 3 staan de Use
+Case specifieke ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 2.0
+
+Pagina 3 van 6
+
+UCS LV.1.CPI – Controleer persoonsselectie identiteitsnummer
+
+2 Controleer persoonsselectie identiteitsnummer
+Het controleren van de persoonsselectie kent een aantal stappen. Deze staan in het
+activiteitendiagram.
+In de paragraaf daarna worden de stappen stuk voor stuk beschreven. Voor een meer
+gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden wordt verwezen
+naar de aan deze Use Case gekoppelde regels in BMR.
+
+2.1
+
+Activiteitendiagram
+
+2.2
+
+Beschrijving van de stappen
+
+In deze paragraaf worden de stappen in het activiteitendiagram beschreven.
+1. Controleer kunstmatige sleutel (LV.1.CPI.CKS)
+Controle of de kunstmatige sleutel waarmee een persoon in het inkomende bericht wordt
+geïdentificeerd de geldigheidsduur niet heeft overschreden.
+
+2. Controleer selectie persoon (LV.1.CPI.CSP)
+Het opgegeven identificerend gegeven moet tot precies één te leveren persoon leiden binnen
+de totale populatiebeperking van de verzoekende partij. De persoon moet een ingeschrevene
+zijn en mag niet vervallen zijn.
+
+3. Geen verstrekkingsbeperking (LV.1.CPI.GV)
+
+Status: Definitief, versie: 2.0
+
+Pagina 4 van 6
+
+UCS LV.1.CPI – Controleer persoonsselectie identiteitsnummer
+
+Een leveringsverzoek waarbij persoonsgegevens moeten worden geleverd of een
+afnemerindicatie moet worden geplaatst, wordt niet verwerkt als de persoon een
+verstrekkingsbeperking heeft geldend voor de verzoekende partij.
+
+Status: Definitief, versie: 2.0
+
+Pagina 5 van 6
+
+UCS LV.1.CPI – Controleer persoonsselectie identiteitsnummer
+
+3 Ontwerpbeslissingen
+•
+
+Personen die vervallen zijn met nadere bijhoudingsaard ‘Foutief’ zijn in het geheel niet
+meer te benaderen via het leveringskoppelvlak; het systeem reageert in essentie alsof die
+personen niet (meer) bestaan. Het raadplegen van deze personen kan alleen nog via de
+beheerorganisatie.
+
+Status: Definitief, versie: 2.0
+
+Pagina 6 van 6
+
+

@@ -1,0 +1,1160 @@
+UCS BY.1.ON – Ontrelateren
+Versie
+
+2.15
+
+Datum
+
+28 juni 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+09-08-2016
+
+2.0
+
+Nieuwe opzet
+
+Operatie BRP
+
+10-08-2016
+
+2.1
+
+Reviewcommentaar verwerkt
+
+Operatie BRP
+
+11-08-2016
+
+2.2
+
+2e reviewcommentaar verwerkt
+
+Operatie BRP
+
+12-08-2016
+
+2.3
+
+Reviewcommentaar verwerkt
+
+Operatie BRP
+
+25-08-2016
+
+2.4
+
+Bijwerken van ‘Afgeleiden administratief’ toegevoegd
+
+Operatie BRP
+
+31-08-2016
+
+2.5
+
+Reviewcommentaar verwerkt
+
+Operatie BRP
+
+05-09-2016
+
+2.6
+
+“Uitgesloten gerelateerde” vervangen door “Uitgesloten
+persoon”
+
+Operatie BRP
+
+06-09-2016
+
+2.7
+
+Aanmaken van kopie-persoon generiek gemaakt (n.a.v.
+nieuw reviewcommentaar).
+
+Operatie BRP
+
+27-09-2016
+
+2.8
+
+Naam van kop “reviewhistorie” aangepast.
+Referenties bijgewerkt
+
+Operatie BRP
+
+28-09-2016
+
+2.9
+
+Trigger ‘Verhuizing naar GBA’ verwijderd. Wordt volledig
+getriggerd vanuit ISC-koppelvlak
+
+Operatie BRP
+
+03-10-2016
+
+2.10
+
+Trigger ‘Verhuizing naar GBA’ teruggezet en aangepast
+vanwege de aanroep van ISC-koppelvlak
+
+Operatie BRP
+
+04-10-2016
+
+2.11
+
+Reviewcommentaar verwerkt.
+
+Operatie BRP
+
+31-10-2016
+
+2.12
+
+Reviewcommentaar verwerkt
+
+Operatie BRP
+
+25-11-2016
+
+2.13
+
+Term ISC vervangen door migratievoorziening
+
+Operatie BRP
+
+21-02-2017
+
+2.14
+
+Situatie rondom RNI verduidelijkt
+
+Operatie BRP
+
+28-06-2017
+
+2.15
+
+Fragment verwijderd uit 3.1 dat (ten onrechte) aangeeft
+dat de paragraaf zich tot H/GP-relaties beperkt
+
+Operatie BRP
+
+Reviewhistorie
+Versie Review
+2.0
+
+Operatie BRP
+
+2.1
+
+Operatie BRP
+
+2.2
+
+Operatie BRP
+
+2.5
+
+Operatie BRP
+
+2.7
+
+Operatie BRP
+
+UCS BY.1.ON – Ontrelateren
+
+2.10
+
+Operatie BRP
+
+Status: Definitief, versie: 2.15
+
+Pagina 2 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 4
+1.1
+1.2
+1.3
+
+2
+
+Doel ....................................................................................................................................4
+Leeswijzer ............................................................................................................................4
+Referenties ..........................................................................................................................4
+
+Relaties en Ontrelateren ........................................................................................... 5
+2.1
+Over relaties ........................................................................................................................5
+2.2
+Principes bij het ontrelateren ..................................................................................................5
+2.2.1
+Huwelijk en Geregistreerd Partnerschap ..............................................................................5
+2.2.2
+Familierechtelijke betrekking ..............................................................................................6
+
+3
+
+Procesbeschrijving .................................................................................................... 8
+3.1
+Bepalen van de te ontrelateren relaties ....................................................................................9
+3.2
+Wijze van ontrelateren...........................................................................................................9
+3.2.1
+Ontrelateren van een Huwelijk / Geregistreerd partnerschap ..................................................9
+3.2.2
+Ontrelateren van een Familierechtelijke betrekking ............................................................. 11
+
+4
+
+Generieke stappen .................................................................................................. 16
+4.1
+4.2
+4.3
+
+5
+
+Ontwerpbeslissingen .............................................................................................. 19
+5.1
+5.2
+5.3
+5.4
+5.5
+
+6
+
+Aanmaken verantwoordingsinformatie ................................................................................... 16
+Kopie-persoon aanmaken..................................................................................................... 17
+Personen markeren als bijgehouden ...................................................................................... 17
+
+Gewijzigde objectsleutels ..................................................................................................... 19
+Nieuwe systeem-AH en -actie ............................................................................................... 19
+Transactionele verwerking.................................................................................................... 19
+Mutatieleveringen ............................................................................................................... 19
+Naamswijziging ingeschrevene ............................................................................................. 20
+
+Casussen ................................................................................................................. 21
+6.1
+Huwelijk/Geregistreerd partnerschap ..................................................................................... 21
+6.2
+Familierechtelijke betrekking: voorbeeld 1 - Mutatie van persoonslijst Kind-betrokkene met 1
+Ouder-betrokkene ........................................................................................................................... 22
+6.3
+Familierechtelijke betrekking: voorbeeld 2 - Mutatie van persoonslijst Kind-betrokkene met meer
+dan 1 Ouder-betrokkene .................................................................................................................. 24
+6.4
+Familierechtelijke betrekking: voorbeeld 3 - Mutatie van persoonslijst Ouder-betrokkene............. 26
+
+Status: Definitief, versie: 2.15
+
+Pagina 3 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+1 Inleiding
+1.1
+
+Doel
+
+Ontrelateren is het uit elkaar trekken van een symmetrisch vastgelegde relatie in 2 (of meer)
+asymmetrische relaties. Hierdoor wordt asymmetrische vastlegging mogelijk gemaakt.
+Verschillende bijhoudingspartijen kunnen op die manier onafhankelijk van elkaar een
+bijhoudingsvoorstel verwerken.
+Het doel van dit document is te beschrijven hoe bij een inkomend bijhoudingsvoorstel bepaald
+wordt welke relaties, die zijn vastgelegd tussen personen in het bijhoudingsplan, ontrelateerd
+moeten worden en hoe deze relaties daadwerkelijk in de database ontrelateerd worden.
+Het ontrelateren kan gezien worden als een generieke noodzakelijke stap die uitgevoerd moet
+worden voordat het daadwerkelijke bijhoudingsvoorstel verwerkt kan worden. Het ontrelateren en
+de daadwerkelijke verwerking van het bijhoudingsvoorstel zijn daarom onlosmakelijk met elkaar
+verbonden. Om die reden moeten beide processen ook in één transactie wordt verwerkt: beide
+processen worden òf allebei succesvol verwerkt òf, wanneer er een foutsituatie optreedt, beide niet
+verwerkt.
+
+1.2
+
+Leeswijzer
+
+In hoofdstuk 2 wordt in grote lijnen uitgelegd wat ontrelateren inhoudt. In hoofdstuk 3 wordt het
+proces van ontrelateren in detail uitgelegd. Voor de generieke delen in dit proces wordt hier
+verwezen naar paragrafen in hoofdstuk 4. Hoofdstuk 5 bevat een opsomming van de
+ontwerpbeslissingen. Hoofdstuk 6 tenslotte bevat een aantal casussen die het ontrelateer-proces
+verder toelichten.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Logisch Ontwerp Basisregistratie Personen
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+UC301 Verwerk vervolginschrijving van BRP naar GBA
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 2.15
+
+Pagina 4 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+2 Relaties en Ontrelateren
+2.1
+
+Over relaties
+
+In paragraaf 3.2 van Logisch Ontwerp Basisregistratie Personen [1] worden de type relaties,
+Huwelijk, Geregistreerd Partnerschap en Familierechtelijke Betrekking, en de karakteristieken
+hiervan beschreven.
+Daarnaast wordt beschreven dat de centrale voorzieningen ondersteuning bieden voor de
+vastlegging van gegevens over dezelfde relatie, die – gezien vanuit verschillend perspectief – niet
+(geheel) aan elkaar gelijk zijn (paragraaf 3.2.4. van Logisch Ontwerp Basisregistratie Personen
+[1]).
+Hiermee wordt bedoeld dat gegevens asymmetrisch vastgelegd worden. Om dit mogelijk te maken
+is (vaak) een ontrelateer-actie noodzakelijk om een symmetrische relatie uit elkaar te trekken in
+een (of meer) asymmetrische relaties.
+
+2.2
+
+Principes bij het ontrelateren
+
+Omdat de karakteristieken van de relaties verschillend zijn, heeft dit ook invloed op de manier
+waarop de verschillende typen relaties ontrelateerd worden.
+2.2.1
+
+Huwelijk en Geregistreerd Partnerschap
+
+Bij een huwelijk en een geregistreerd partnerschap zijn de betrokkenheden van beide personen
+(partners) even sterk. Je kunt dus niet zeggen dat een huwelijk meer toebehoort aan één van de
+partners. Om die reden is er voor gekozen om bij dit type relatie de oude relatie te laten vervallen
+en 2 nieuwe relaties aan te maken:
+
+Piet
+(i)
+
+P
+
+Huwelijk
+
+P
+
+Marie
+(i)
+
+Ontrelateren
+
+P
+
+Huwelijk
+
+P
+
+Marie
+(p)
+
+Piet
+(i)
+
+P
+
+Huwelijk
+
+P
+
+Marie
+(i)
+
+Piet
+(p)
+
+P
+
+Huwelijk
+
+P
+
+Figuur 1 - Ontrelateren van een huwelijk
+Bovenstaande afbeelding geeft beknopt weer wat het ontrelateren van een huwelijk (of
+geregistreerd partnerschap) inhoudt. Rode items zijn nieuwe (kopie-)items en blauwe items met
+een rode streep vervallen naar de historie.
+
+Status: Definitief, versie: 2.15
+
+Pagina 5 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+Naast dat het oude huwelijk komt te vervallen en 2 nieuwe huwelijken worden aangemaakt, wordt
+ook van elke partner een kopie-persoon (pseudo-persoon) aangemaakt. Elk van deze kopiepersonen wordt via een nieuwe betrokkenheid aan een nieuw huwelijk gekoppeld samen met 1 van
+de andere hoofdpersonen uit het oorspronkelijke huwelijk. Hierdoor is elk van de oorspronkelijke
+partners verbonden met een pseudo-persoon en heeft een wijziging op de persoonslijst op de ene
+partner geen gevolgen voor de persoonslijst van de andere partner. M.a.w. er is nu sprake van
+asymmetrische vastlegging.
+2.2.2
+
+Familierechtelijke betrekking
+
+Bij een familierechtelijke betrekking is de betrokkenheid van het kind onlosmakelijk verbonden met
+de relatie. De ouder-betrokkenheden kunnen door de tijd heen wijzigen, maar de kindbetrokkenheid verandert niet.
+Vanwege dit uitgangspunt blijft bij het ontrelateren de oorspronkelijke relatie bestaan en
+gekoppeld aan de kind-betrokkenheid. Voor de ouder-betrokkenheid wordt een nieuwe relatie
+aangemaakt. In onderstaand voorbeeld wordt ervan uitgegaan dat alleen Maria ontrelateerd wordt.
+In paragraaf 6.2 wordt deze casus toegelicht.
+
+Figuur 2 - Ontrelateren van een familierechtelijke betrekking
+In bovenstaande figuur zijn de rode items weer nieuwe voorkomens en geven de blauwe items met
+een rode streep erdoor aan dat ze vervallen naar de historie.
+
+Status: Definitief, versie: 2.15
+
+Pagina 6 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+Duidelijk te zien is dat de oorspronkelijke relatie gekoppeld blijft aan het kind en dat er een kopiepersoon via een nieuwe betrokkenheid gekoppeld wordt aan deze relatie. Daarnaast wordt aan de
+oorspronkelijke ouder een kopie-relatie en kopie-kind, via nieuwe betrokkenheden, gekoppeld.
+De persoonslijsten van het oorspronkelijke kind en de oorspronkelijke ouder zijn nu van elkaar
+ontkoppeld en kunnen asymmetrisch bijgehouden worden.
+
+Kind vs. Ouder als Hoofdpersoon
+Wanneer het Kind de hoofdpersoon is in het bijhoudingsvoorstel wordt de familierechtelijke
+betrekking (mogelijk) anders verwerkt dan wanneer een Ouder hoofdpersoon is.
+Wanneer een ouder hoofdpersoon is, dan heeft dit (mogelijk) alleen gevolgen voor de persoonslijst
+van de ouder en voor de persoonslijst van het kind. De familierechtelijke betrekking valt dan na
+ontrelateren uiteen in 2 relaties.
+Wanneer echter het kind hoofdpersoon is, dan heeft dit (mogelijk) gevolgen voor de persoonslijst
+van het kind en de persoonslijsten van alle ouders. De familierechtelijke betrekking valt dan na
+ontrelateren uiteen in 2 of meer relaties. In paragraaf 6.3 wordt deze casus toegelicht.
+In het volgende hoofdstuk wordt stap voor stap en in detail beschreven hoe het ontrelateren in zijn
+werk gaat.
+
+Status: Definitief, versie: 2.15
+
+Pagina 7 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+3 Procesbeschrijving
+Om te bepalen of er relaties zijn die ontrelateerd moeten worden zijn er diverse ‘triggers’ van
+belang:
+1. De bijhouding van een symmetrische relatie kan slechts voor een deel van de betrokkenen
+direct worden doorgevoerd.
+Dit heeft één van de volgende oorzaken:
+o In het bijhoudingsplan is minimaal 1 persoon opgenomen met bijhoudingssituatie
+‘Opnieuw Indienen’ (de bijhoudingspartij fiatteert niet automatisch);
+o In het bijhoudingsplan is minimaal 1 persoon opgenomen met bijhoudingssituatie
+‘Uitgesloten persoon’ (de bijhoudingspartij heeft aangegeven dat het
+bijhoudingsvoorstel alleen voor enkele personen doorgevoerd moet worden);
+o In het bijhoudingsplan is minimaal 1 persoon opgenomen met bijhoudingssituatie
+‘Opgeschort’ (een gerelateerde ingezetene is overleden).
+Daarnaast moet er minimaal één persoon in het bijhoudingsplan opgenomen zijn met
+bijhoudingssituatie ‘Indiener is bijhoudingspartij’, ‘Automatische fiat’ of ‘mededeling’.
+Er wordt dus niet ontrelateerd als de verwerking van een bijhoudingsvoorstel volledig wordt
+uitgesteld (dus als het voor geen enkele persoon direct kan worden verwerkt). Ontrelateren
+gebeurt uitsluitend als het noodzakelijk is voor de verwerking. Voorbeeld: Voltrekking
+huwelijk in gemeente A, terwijl de partners in gemeente B wonen en die gemeente fiatteert
+het bijhoudingsvoorstel niet automatisch. Het bijhoudingsvoorstel leidt dan voor geen
+enkele persoon direct tot bijhouding. Er wordt alleen een bijhoudingsnotificatie naar
+gemeente B gestuurd.
+2. Overgang van de bijhouding naar het GBA-stelsel of het RNI.
+Wanneer een persoon van een BRP- naar een GBA-gemeente verhuist, vindt vanaf dat
+moment de bijhouding van de persoon (weer) in de GBA plaats. Omdat de GBA geen
+symmetrische relaties kent, moeten eerst alle symmetrische relaties waarin de persoon
+betrokken is worden ontrelateerd. Daarna kan pas de verhuizing worden verwerkt.
+Ook wanneer een persoon overgaat naar het RNI moeten eerst alle symmetrische relaties
+waarin de persoon betrokken is worden ontrelateerd.
+NB Bij een verhuizing naar een GBA-gemeente wordt de aanvraag ingediend bij die GBA
+gemeente. De verhuizing wordt uitgevoerd binnen de GBA voorzieningen en de
+migratievoorziening. Eén van de verantwoordelijkheden van de migratievoorziening is het
+‘triggeren’ van het ontrelateer-proces (UCS BY.1.ON) binnen de BRP. Zie voor meer
+informatie UC301 Verwerk vervolginschrijving van BRP naar GBA [2].
+Wanneer een persoon overgaat naar het RNI (emigratie) wordt de aanvraag ingediend door
+de huidige (BRP-)gemeente. Het ontrelateer-proces wordt dan door de BRP geïnitieerd.
+3. Op het moment dat een persoon volledig wordt opgeschort i.v.m. ‘Fout’.
+Een persoon wordt volledig opgeschort als zijn registratie foutief is. Dit is bijvoorbeeld het
+geval wanneer een persoon ten onrechte is opgevoerd en/of nooit opgenomen had mogen
+worden in de BRP of van de persoon twee persoonslijsten aanwezig zijn waarvan er slechts
+een bewaard mag blijven. In dat geval krijgt die persoon de nadere bijhoudingsaard ‘Fout’.
+Deze persoon kan echter op een persoonslijst voorkomen van een andere persoon. Als de
+relatie tussen deze andere persoon en de persoon met indicatie ‘Fout’ bovendien
+symmetrisch is vastgelegd dan blijft deze persoon een rol spelen in alle afhandelingen die
+de persoonslijst raken van die andere persoon.
+Van een persoon met indicatie ‘Fout’ zou men eigenlijk willen dat hij/zij geen rol speelt bij
+afhandelingen die de persoonslijst raken van een andere persoon. Immers, de persoon had
+niet mogen bestaan en gegevens van die persoon mogen ook niet meer wordt aangepast.
+
+Status: Definitief, versie: 2.15
+
+Pagina 8 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+Daarom is besloten dat op het moment dat een persoon de nadere bijhoudingsaard ‘Fout’
+krijgt, direct alle relaties waarin de persoon betrokken is, ontrelateerd moeten worden.
+NB De administratieve handelingen waarmee een persoon volledig wordt opgeschort i.v.m.
+‘Fout’ zijn:
+o
+o
+
+3.1
+
+Verwijdering persoon (10002)
+Correctie dubbele inschrijving (10004)
+
+Bepalen van de te ontrelateren relaties
+
+Per bovengenoemde trigger kunnen de te ontrelateren relaties als volgt bepaald worden:
+1. Bijhouding kan voor slechts een deel van de betrokkenen direct worden doorgevoerd
+o Elk huwelijk en geregistreerd partnerschap tussen een ‘Hoofdpersoon’ (R1287) van
+de administratieve handeling (AH) en een andere persoon1 uit het bijhoudingsplan,
+o Elke familierechtelijke betrekking waarin een ‘Hoofdpersoon’ (R1287) van de AH en
+een andere persoon uit het bijhoudingsplan als kind en ouder zijn betrokken,
+waarvoor geldt dat de AH voor de ene persoon wel kan worden verwerkt en voor de andere
+persoon niet.
+2. Verhuizing naar GBA-gemeente of RNI
+Alle relaties waarin de betrokkene (altijd 1 bij verhuizing) voorkomt in het bijhoudingsplan
+en waarin minimaal één andere ‘ingeschrevene’ betrokken is.
+3. Een persoon wordt volledig opgeschort i.v.m. ‘Fout’
+Alle relaties waarin de betreffende persoon betrokken is in het bijhoudingsplan en minimaal
+één andere ‘ingeschrevene’ is betrokken.
+
+3.2
+
+Wijze van ontrelateren
+
+In de vorige paragraaf is beschreven welke relaties ontrelateerd moeten worden. In deze paragraaf
+wordt per type relatie beschreven hoe deze ontrelateerd moet worden.
+De verwerking van een bijhoudingsvoorstel kan leiden tot het automatisch ontrelateren van
+meerdere relaties. Het kunnen er maximaal even veel zijn als het aantal relaties waarin de
+hoofdpersonen van het bijhoudingsvoorstel als betrokkene voorkomen.
+3.2.1
+
+Ontrelateren van een Huwelijk / Geregistreerd partnerschap
+
+In de paragraaf wordt beschreven hoe een relatie van het soort huwelijk of geregistreerd
+partnerschap wordt ontrelateerd. We gaan uit van de situatie waarin Piet en Marie met elkaar
+getrouwd zijn. De verantwoordingsinformatie is hierbij aan het huwelijk gekoppeld:
+
+Het ontrelateerproces doorloopt de volgende stappen:
+
+1
+
+Dit kan een Hoofdpersoon of een gerelateerde persoon zijn.
+
+Status: Definitief, versie: 2.15
+
+Pagina 9 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+1. Opzetten verantwoordingsinformatie
+Zie paragraaf 4.1 voor de (generieke) werking van deze stap waar beschreven is hoe de
+verantwoordings-objecten worden aangemaakt. Voor de overzichtelijkheid zijn in de
+onderstaande afbeeldingen deze verantwoordings-objecten niet ingetekend.
+2. Nieuwe relaties aanmaken
+Er worden twee nieuwe relaties (inclusief elk twee nieuwe partner-betrokkenheden)
+aangemaakt van dezelfde soort als de te ontrelateren relatie. Daarbij wordt het actuele
+voorkomen van Relatie.Standaard van de te ontrelateren relatie overgenomen naar beide
+nieuwe relaties.
+
+NB In bovenstaande figuur worden Piet en Marie opgeslagen in het objecttype Persoon. Het
+Huwelijk in het objecttype Relatie en de betrokkenheden in het objecttype Betrokkenheid.
+3. Nieuwe personen aanmaken
+Van beide betrokkenen partners wordt een kopie-persoon (pseudo) aangemaakt. Zie paragraaf
+4.2 en onderdeel ‘Kopie van Partner’ voor de (generieke) werking van deze stap.
+
+4. Personen aan de nieuwe relaties koppelen
+Aan de ene nieuwe relatie worden als partners gekoppeld: één betrokken ingeschrevene van
+de te ontrelateren relatie en de gemaakte kopie (van het soort ‘Pseudo-persoon’) van de
+andere betrokkene. Aan de andere nieuwe relatie worden de andere ingeschrevene gekoppeld
+en de kopie (van het soort ‘Pseudo-persoon’) van de andere betrokkene.
+
+Status: Definitief, versie: 2.15
+
+Pagina 10 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+5. Bestaande relatie laten vervallen
+Relatie.Standaard van de te ontrelateren relatie en Betrokkenheid.Identiteit van de
+bijbehorende betrokkenheden vervallen naar de formele historie.
+
+6. Personen markeren als bijgehouden
+De (ingeschreven) personen die bij te ontrelateren relatie betrokken waren voordat in de
+vorige stap de betrokkenheid verviel, moeten worden gemarkeerd als bijgehouden. Zie 4.3
+voor de (generieke) werking van deze stap.
+Toelichting: De relatie die ontrelateerd gaat worden heeft per definitie 2 ingeschrevenen als
+partners. Zie ook casus 6.1.
+
+3.2.2
+
+Ontrelateren van een Familierechtelijke betrekking
+
+In deze paragraaf wordt beschreven hoe een relatie van het soort familierechtelijke betrekking
+wordt ontrelateerd. We gaan uit van de situatie waarin Josef en Maria gezamenlijk een kind
+genaamd Peter hebben. De verantwoordingsinformatie is hierbij aan de familierechtelijke
+betrekking gekoppeld.
+
+Status: Definitief, versie: 2.15
+
+Pagina 11 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+Het ontrelateerproces doorloopt de volgende stappen:
+1. Opzetten verantwoordingsinformatie
+Zie paragraaf 4.1 voor de (generieke) werking van deze stap waar beschreven is hoe de
+verantwoordings-objecten worden aangemaakt. Voor de overzichtelijkheid zijn in de
+onderstaande afbeeldingen deze verantwoordings-objecten niet ingetekend.
+Verdere verwerking
+In paragraaf 2.2.2 is beschreven dat er een verschil is in verwerking als het Kind hoofdpersoon is
+of als een Ouder hoofdpersoon is in het bijhoudingsvoorstel. Dit heeft gevolgen voor het aantal
+keren dat de stappen 2 t/m 9 doorlopen worden:
+
+•
+
+•
+
+Indien de ‘Hoofdpersoon’ (R1287) van het bijhoudingsvoorstel de kind-betrokkene is dan
+worden onderstaande stappen uitgevoerd voor iedere ouder-betrokkene waarvan het
+bijhoudingsplan de verwerking niet toestaat (bijhoudingssituatie is ongelijk ‘Indiener is
+bijhoudingspartij’ EN ongelijk ‘Automatische fiat’). Zie ook casus 6.2 en 6.3;
+Anders worden onderstaande stappen uitgevoerd voor de ouder-betrokkene(n) die
+‘Hoofdpersoon’ (R1287) is/zijn van het bijhoudingsvoorstel en waarvoor bovendien geldt dat
+het bijhoudingsplan de verwerking voor het kind wel toestaat, maar voor de ouder niet of vice
+versa. Zie ook casus 6.4.
+
+Acties t.b.v. de persoonlijst van de Kind-betrokkene
+NB Bij de Kind-betrokkene wordt een kopie-ouder-betrokkene aangemaakt.
+2. Nieuwe persoon aanmaken
+Van de ouder-betrokkene wordt een kopie-persoon (pseudo) aangemaakt. Zie paragraaf 4.2 en
+onderdeel ‘Kopie van Ouder’ voor de (generieke) werking van deze stap.
+
+3. Nieuwe Ouder betrokkenheid aanmaken en aan bestaande Relatie koppelen
+Er wordt een nieuwe ouder-betrokkenheid aangemaakt en gekoppeld aan de te ontrelateren
+relatie en de nieuwe persoon. De actuele voorkomens van de groepen Ouder.Ouderschap en
+Ouder.Ouderlijk gezag worden gekopieerd van de ouder-betrokkenheid van de te ontrelateren
+relatie naar de nieuwe ouder-betrokkenheid (inclusief de Datum aanvang geldigheid).
+
+Status: Definitief, versie: 2.15
+
+Pagina 12 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+Acties t.b.v. de persoonlijst van de ouder-betrokkene
+NB Bij de Ouder-betrokkene wordt een kopie-kind-betrokkene aangemaakt.
+4. Nieuwe Persoon aanmaken:
+Van de kind-betrokkene wordt een kopie-persoon (pseudo) aangemaakt. Zie paragraaf 4.2 en
+onderdeel ‘Kopie van Kind’ voor de (generieke) werking van deze stap.
+
+5. Nieuwe Relatie aanmaken
+Er wordt een nieuwe relatie aangemaakt van de soort ‘FRB’). Daarbij wordt het actuele
+voorkomen van Relatie.Standaard van de te ontrelateren relatie overgenomen naar de nieuwe
+relatie.
+
+Status: Definitief, versie: 2.15
+
+Pagina 13 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+6. Nieuwe Kind betrokkenheid aanmaken en aan nieuwe Relatie koppelen
+Er wordt een nieuwe kind-betrokkenheid aangemaakt en gekoppeld aan de nieuwe relatie en
+aan de nieuwe kind-betrokkene.
+
+7. Nieuwe Ouder betrokkenheid aanmaken en aan nieuwe Relatie koppelen
+Er wordt een nieuwe ouder-betrokkenheid aangemaakt en gekoppeld aan de nieuwe relatie en
+aan de ouder-betrokkene van de te ontrelateren relatie. De actuele voorkomens van de
+groepen Ouder.Ouderschap en Ouder.Ouderlijk gezag worden gekopieerd van de ouderbetrokkenheid van de te ontrelateren relatie naar de nieuwe ouder-betrokkenheid (inclusief de
+Datum aanvang geldigheid).
+
+Status: Definitief, versie: 2.15
+
+Pagina 14 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+8. Bestaande Ouder betrokkenheid laten vervallen
+De oorspronkelijke ouder-betrokkenheid vervalt naar de formele historie.
+
+9. Personen markeren als bijgehouden
+De kind-betrokkene van de ontrelateerde relatie en de ouder-betrokkene waarvan in de vorige
+stap de betrokkenheid is vervallen moeten worden gemarkeerd als bijgehouden.
+Zie 4.3 voor de (generieke) verwerking van deze stap.
+
+Status: Definitief, versie: 2.15
+
+Pagina 15 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+4 Generieke stappen
+In dit hoofdstuk worden de stappen beschreven die generiek zijn voor het ontrelateren van alle
+typen relaties. Voorgaande hoofdstuk bevat verwijzingen naar paragrafen in dit hoofdstuk.
+
+4.1
+
+Aanmaken verantwoordingsinformatie
+
+Door het ontrelateren worden nieuwe voorkomens aangemaakt en andere vervallen naar de
+historie. Hiervoor worden aparte verantwoordings-objecten aangemaakt:
+1. Systeemhandeling en systeemactie aanmaken
+Er wordt een Administratieve handeling van het soort ‘Ontrelateren’ aangemaakt en een
+daaraan gekoppelde Actie van het soort ‘Ontrelateren’ en met 'BRP Voorziening' als partij.
+
+2. Bronverwijzingen overnemen naar systeemactie
+Er wordt een kopie-voorkomen gemaakt van de Actie \ Bron (mogelijk meerdere) die via de
+actuele Actie gekoppeld is aan de te ontrelateren relatie. Deze wordt/worden gekoppeld aan de
+nieuw aangemaakte systeemactie (‘Ontrelateren’). Omdat de Actie \ Bron ook verwijzingen
+bevat naar Document-voorkomens en Rechtsgrond-voorkomens, worden deze verwijzingen ook
+gekopieerd. Let wel: er worden geen kopieën gemaakt van de Document-voorkomens en
+Rechtsgrond-voorkomens. Er worden links gelegd naar bestaande Document-voorkomens en
+Rechtsgrond-voorkomens.
+
+Toelichting:
+• In bovenstaande afbeeldingen is huwelijksrelatie als voorbeeld genomen. Voor geregistreerd
+partnerschap en familierechtelijke betrekking geldt hetzelfde.
+
+Status: Definitief, versie: 2.15
+
+Pagina 16 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+•
+•
+
+4.2
+
+Voorkomens die tijdens het ontrelateer-proces ontstaan krijgen als Tijdstip registratie de
+systeemdatum/tijd en als Actie inhoud een verwijzing naar de aangemaakte actie van het soort
+‘Ontrelateren’.
+Voorkomens die door het ontrelateerproces vervallen, krijgen als Tijdstip verval de
+systeemdatum/tijd en als Actie verval een verwijzing naar de aangemaakte actie van het soort
+‘Ontrelateren’. De Nadere aanduiding verval blijft leeg.
+
+Kopie-persoon aanmaken
+
+Het aanmaken van een kopie-persoon (Partner, Ouder, Kind) gaat als volgt:
+Van de persoon wordt een kopie-persoon aangemaakt van het soort ‘Pseudo-persoon’.
+De over te nemen actuele voorkomens staan in onderstaande tabel (1e kolom). De kopie-persoon
+krijgt Persoon.Afgeleid? = 'N', omdat van een ‘Pseudo-persoon’ alleen de Samengestelde Naam
+wordt vastgelegd en geen Voornaam- en Geslachtsnaam-voorkomens.
+Voor de nieuw aangemaakte voorkomens van groepen met materiële historie wordt de Datum
+aanvang geldigheid gezet volgens onderstaande tabel (2e kolom). Als niet aan de genoemde
+voorwaarde voldaan is, dan wordt de Datum aanvang geldigheid van de betreffende groep van de
+oorspronkelijke persoon overgenomen.
+Over te nemen
+voorkomens
+
+Datum aanvang geldigheid = (*)
+
+Kopie van
+partner
+
+Persoon.Identificatienummers,
+Persoon.Samengestelde naam,
+Persoon.Geslachtsaanduiding,
+Persoon.Geboorte
+
+Relatie.Datum aanvang, mits
+Relatie.Datum aanvang >
+Datum aanvang geldigheid
+
+Kopie van ouder
+
+Persoon.Identificatienummers,
+Persoon.Samengestelde naam,
+Persoon.Geslachtsaanduiding,
+Persoon.Geboorte
+
+Ouder.Ouderschap.Datum aanvang geldigheid, mits
+Ouder.Ouderschap.Datum aanvang geldigheid >
+Datum aanvang geldigheid
+
+Kopie van kind
+
+Persoon.Identificatienummers,
+Persoon.Samengestelde naam,
+Persoon.Geboorte2
+
+Ouder.Ouderschap.Datum aanvang geldigheid, mits
+Ouder.Ouderschap.Datum aanvang geldigheid >
+Datum aanvang geldigheid
+
+(*) Toelichting:
+Voor de afleiding Datum aanvang geldigheid geldt dat bij Pseudo-personen geen gegevens
+vastgelegd mogen worden met een KALENDERDATUM kleiner dan de aanvangsdatum van de
+relatie.
+
+4.3
+
+Personen markeren als bijgehouden
+
+Ingeschrevenen die door het ontrelateer-proces zijn bijgehouden moeten als zodanig worden
+gemarkeerd, zodat het leveringskoppelvlak weet voor welke personen er mutatieberichten moeten
+worden verstuurd.
+Dit gebeurt door een nieuw voorkomen van de groep ‘Afgeleid administratief’ aan te maken voor
+deze personen.
+
+2
+
+Bij het ontrelateren van een familierechtelijke betrekking wordt de groep Geslachtsaanduiding niet overgenomen naar
+een nieuwe persoon van het soort ‘Pseudo-persoon’ als het een Kind betreft. Deze beslissing geldt in aanvulling op de regel
+dat bij levering van een PL de geslachtsaanduiding van kinderen wordt weggefilterd. Deze maakt juridisch namelijk geen
+onderdeel uit van de PL.
+
+Status: Definitief, versie: 2.15
+
+Pagina 17 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+Het nieuwe voorkomen van de groep ‘Afgeleid administratief’ wordt met de volgende gegevens
+geregistreerd:
+•
+
+Administratieve handeling: de systeemhandeling uit stap 1.
+
+•
+
+Tijdstip laatste wijziging: de systeemdatum/tijd.
+
+•
+
+Sorteervolgorde: waarde ‘1’.
+
+•
+
+Tijdstip laatste wijziging GBA-systematiek: waarde overnemen van het voorkomen van
+‘Afgeleid administratief’ dat door registratie van het nieuwe voorkomen komt te vervallen.
+
+•
+
+Actie inhoud: de systeemactie uit stap 1.
+
+Status: Definitief, versie: 2.15
+
+Pagina 18 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+5 Ontwerpbeslissingen
+5.1
+
+Gewijzigde objectsleutels
+
+Bij de verwerking van de AH die de aanleiding gaf tot het ontrelateren, is een belangrijk
+aandachtspunt dat de voorkomens en/of objecten waar in het bijhoudingsvoorstel aan wordt
+gerefereerd, door het ontrelateren misschien zijn vervallen. Het kan dus zijn dat het
+bijhoudingsvoorstel op (andere) kopie-voorkomens en/of -objecten, die door het ontrelateren zijn
+ontstaan, uitgevoerd moet worden. In de casussen in het volgende hoofdstuk zijn ook de
+(gewijzigde) objectsleutels aangegeven.
+
+5.2
+
+Nieuwe systeem-AH en -actie
+
+Voor elke te ontrelateren relatie wordt één extra systeem-AH (‘Ontrelateren’3) en systeemactie
+(‘Ontrelateren’) aangemaakt. Een familierechtelijke betrekking die ontrelateerd wordt leidt dus in
+totaal tot één extra systeemhandeling en -actie en niet tot één per nieuwe ontstane
+familierechtelijke betrekkking. Merk op dat dit ook geldt als sprake is van meer dan een ouderbetrokkene (zie paragraaf 6.3).
+Motivatie: Het ontrelateren vindt per relatie plaats. Door bij het ontrelateren van een relatie één
+systeem-AH en -actie te gebruiken blijven alle nieuw aangemaakte relaties, betrokkenheden en
+personen bij elkaar die uit het ontrelateren van die ene relatie zijn voortgekomen.
+
+5.3
+
+Transactionele verwerking
+
+Het ontrelateren van 1 of meer relaties en de AH die aanleiding gaf tot ontrelateren zijn
+onlosmakelijk met elkaar verbonden. Dat betekent dat alle acties in zijn geheel moeten worden
+uitgevoerd of in zijn geheel niet (rollback).
+Dit voorkomt dat andere processen / AH-en tussentijds ‘vat krijgen’ op een ontrelateerde relatie,
+voordat de AH, die aanleiding gaf tot het ontrelateren, kan worden verwerkt.
+Bovendien voorkomt dit dat als de verwerking van de ontrelateer-handeling is geslaagd, maar de
+verwerking van de eigenlijke AH binnen dezelfde transactie niet, dat de bijhouder bij een eventuele
+2e poging mogelijk een ander bijhoudingsvoorstel moeten indienen, omdat door het ontrelateren de
+structuur van de data is veranderd.
+
+5.4
+
+Mutatieleveringen
+
+Omdat het ontrelateren en de AH die aanleiding gaf tot het ontrelateren in één transactie verwerkt
+worden, moeten de mutatieberichten pas verstuurd worden als de transactie volledig is afgerond.
+Dit voorkomt dat wanneer de transactie halverwege teruggedraaid wordt, vanwege een fout tijdens
+verwerking, dat de mutatieberichten al verstuurd zijn.
+Tevens moeten de mutatieberichten met betrekking tot het ontrelateren als eerste verstuurd
+worden en daarna pas de mutatieberichten (in de juiste volgorde) met betrekking tot de
+oorspronkelijke AH. Hiermee wordt voorkomen dat de ontvanger verwijzingen naar voorkomens
+geleverd krijgt waarvan hij niet wist dat die al bestonden.
+Het mutatiebericht n.a.v. de opvolgende AH binnen een ontrelateer-transactie moet er uit zien als
+een regulier mutatiebericht voor de betreffende AH. Het levert altijd berichten op met een
+structuur en inhoud die een afnemer (in een ander geval) ook zou ontvangen als er niet eerst
+ontrelateerd hoeft te worden.
+NB Bovenstaande valt niet binnen de scope van Bijhoudingen, maar binnen de scope van
+Leveringen.
+
+3
+
+Systeemhandeling ‘Ontrelateren’ voldoet niet aan de naamgevingconventies. Deze is dan ook nog niet definitief.
+
+Status: Definitief, versie: 2.15
+
+Pagina 19 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+5.5
+
+Naamswijziging ingeschrevene
+
+Een wijziging van de geslachtsnaam kan bij een aantal administratieve handelingen als nevenactie
+worden opgenomen. Dat is bijvoorbeeld het geval bij de handeling ‘Ontbinding huwelijk in
+Nederland’. Als de naamswijziging betrekking heeft op een ingeschreven gerelateerde dan wordt in
+het bericht de nieuwe ‘Geslachtsnaamcomponent’ voor de ingeschrevene opgegeven. Als na
+ontrelateren de naamswijziging moet worden toegepast op een pseudo-persoon die door het
+ontrelateren is ontstaan, dan doet zich het probleem voor dat de naamswijziging moet worden
+verwerkt in de ‘Samengestelde naam’ van de pseudo-persoon. Om een nieuw voorkomen van de
+Samengestelde naam te maken zijn naast de geslachtsnaam ook ‘Voornamen’, ‘Adellijke titels’ en
+‘Predicaten’ nodig. Omdat in het bijhoudingsbericht voor de naamswijziging alleen de
+Geslachtsnaamcomponent is opgenomen, zullen de overige gegevens moeten worden
+overgenomen uit de bestaande (en meest actuele) ‘Samengestelde naam’.
+
+Status: Definitief, versie: 2.15
+
+Pagina 20 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+6 Casussen
+In dit hoofdstuk wordt aan de hand van voorbeelden toegelicht hoe ontrelateren in zijn werk gaat.
+
+6.1
+
+Huwelijk/Geregistreerd partnerschap
+
+Stel dat van de ingeschrevenen Piet en Marie de scheiding is uitgesproken en dat ze in
+verschillende gemeenten wonen. Stel ook dat de woongemeente van Piet een symmetrisch
+bijhoudingsvoorstel indient om de ontbinding van het huwelijk in de BRP te verwerken en dat de
+gemeente van Marie dit niet fiatteert. Dan moet de relatie eerst worden ontrelateerd, waarna de
+ontbindingsgegevens voor Piet kunnen worden vastgelegd. De gemeente van Marie ontvangt een
+bijhoudingsnotificatie en dient zelf een bijhoudingsvoorstel in om de ontbinding ook vanuit Marie
+vast te leggen.
+Zie in het volgende schema waar de gegevenswijzigingen plaatsvinden (rood = nieuw/gewijzigd;
+doorgehaald = vervallen).
+
+De eerste stap is het ontrelateren van de relatie, hetgeen voor relaties van het soort
+Huwelijk/Geregistreerd partnerschap (H/GP) het volgende inhoudt:
+
+Status: Definitief, versie: 2.15
+
+Pagina 21 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+1. Er wordt een nieuwe AH van het soort ‘Ontrelateren’ aangemaakt met partij ‘BRP Voorziening’
+en één actie waarmee de nieuwe entiteiten worden aangemaakt (actie inhoud) en waarmee de
+oude vervallen (actie verval).
+2. De te ontrelateren H/GP-relatie en zijn betrokkenheden vervallen naar de formele historie.
+3. Er worden twee nieuwe relaties (met betrokkenheden) gemaakt van dezelfde soort als de in
+stap 1 vervallen relatie. Daarbij worden de actuele gegevens uit de groep Standaard van de
+vervallen relatie gekopieerd naar de nieuwe relaties. De verwijzingen naar brondocument
+worden ook meegenomen naar de nieuwe relaties.
+4. Aan de ene nieuwe relatie worden als partner-betrokkenen gekoppeld: de ene ingeschrevene
+(Piet) en een nieuwe persoon van het soort ‘Pseudo-persoon’ met een kopie van de actuele
+gegevens van de groepen Identificatienummers, Samengestelde naam, Geslachtsaanduiding en
+Geboorte van de andere ingeschrevene (Marie).
+5. Aan de andere nieuwe relatie worden analoog aan de voorgaande stap als partner-betrokkenen
+gekoppeld: de ingeschrevene (Marie) die niet aan de relatie in stap 3 is gekoppeld en een
+nieuwe persoon van het soort ‘Pseudo-persoon’ met een kopie van de actuele gegevens van de
+groepen Identificatienummers, Samengestelde naam, Geslachtsaanduiding en Geboorte van de
+andere ingeschrevene (Piet).
+Nadat de relatie is ontrelateerd dient de AH nog te worden verwerkt die de aanleiding tot het
+ontrelateren vormde. In dit geval wordt de ontbinding voor Piet dus vastgelegd.
+
+6.2
+
+Familierechtelijke betrekking: voorbeeld 1 - Mutatie van persoonslijst
+Kind-betrokkene met 1 Ouder-betrokkene
+
+Het ontrelateren van een familierechtelijke betrekking wordt aan de hand van het volgende
+voorbeeld geïllustreerd. Ingeschrevene Peter Peeters is een kind van de ingeschrevenen Maria en
+Josef. Ieder van hen woont in een andere gemeente. De geslachtsnaam van Peter wordt gewijzigd
+van Peeters in Pieters. De woongemeente van Peter stuurt een bijhoudingsvoorstel in voor zijn
+geslachtsnaamwijziging. Bij het bepalen van het bijhoudingsplan worden naast Peter ook zijn
+ouders daarin opgenomen, omdat de geslachtsnaam van Peter ook op hun persoonslijst staat. Stel
+dat de gemeente van Josef deze wijziging automatisch fiatteert, maar de gemeente van Maria niet.
+De familierechtelijke betrekking van Peter moet dan worden ontrelateerd voor Maria, zodat de
+geslachtsnaamwijziging van Peter geen effect heeft op de persoonslijst van Maria.
+
+Status: Definitief, versie: 2.15
+
+Pagina 22 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+Schematisch gebeurt er het volgende:
+
+Het ontrelateren van een familierechtelijke betrekking verschilt van het ontrelateren van een H/GPrelatie, omdat het aantal betrokkenen kan verschillen en omdat een familierechtelijke betrekking
+onlosmakelijk is verbonden met de kind-betrokkene. Bij bijhouding aan de kant van de kindbetrokkene – zoals in dit voorbeeld – vindt het volgende plaats:
+1. Analoog aan het ontrelateren van een H/GP-relatie wordt een systeem-AH ‘Ontrelateren’ als
+verantwoording gebruikt voor de nieuwe en de vervallen entiteiten.
+
+Status: Definitief, versie: 2.15
+
+Pagina 23 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+2. Voor elke ouder-betrokkene op wiens persoonslijst de bijhouding van de gegevens van de kindbetrokkene niet zichtbaar mogen zijn:
+a. De betrokkenheid van de betreffende ouder-betrokkene met de te ontrelateren
+relatie vervalt naar de formele historie.
+b. Er wordt een nieuwe persoon van het soort ‘Pseudo-persoon’ gemaakt met een
+kopie van de actuele gegevens van de groepen Identificatienummers,
+Samengestelde naam, Geslachtsaanduiding en Geboorte van de betreffende ouderbetrokkene (Maria).
+c. Er wordt een nieuwe ouder-betrokkenheid gemaakt bij de familierechtelijke
+betrekking voor de in stap 2.b aangemaakte persoon, met een kopie van de
+gegevens uit de groepen Ouderschap en Ouderlijk gezag van de in stap 2.a
+vervallen betrokkenheid.
+d. Er wordt een nieuwe persoon van het soort ‘Pseudo-persoon’ gemaakt met een
+kopie van de actuele gegevens van de groepen Identificatienummers,
+Samengestelde naam en Geboorte van de kind-betrokkene (Peter).4
+e. Er wordt een nieuwe familierechtelijke betrekking gemaakt met als kindbetrokkene de in stap 2.d gemaakte persoon en als ouder-betrokkene de persoon
+waarvan in stap 2.a de betrokkenheid is vervallen. Hierbij worden de groepen
+Ouderschap en Ouderlijk gezag van de in stap 2.a vervallen betrokkenheid naar de
+nieuwe ouder-betrokkenheid gekopieerd.
+Het resultaat is dat de bij te houden ingeschreven kind-betrokkene alleen nog in dezelfde
+familierechtelijke betrekking zit met de ingeschreven ouder-betrokkenen op wiens persoonslijst de
+bijhouding van de kind-betrokkene zichtbaar mag zijn. De overige ouder-betrokkenen zijn
+gekoppeld aan een nieuwe familierechtelijke betrekking met een kopie van het oude ‘kind-beeld’ en
+de wijziging van de gegevens van het ingeschreven kind raakt hen dus niet.
+Dit voorbeeld laat zien dat om een familierechtelijke betrekking te kunnen ontrelateren, je niet
+alleen moet weten welke relatie het betreft, maar ook moet weten voor welke betrokkene(n) de
+relatie moet worden ontrelateerd. Dat is een verschil met het ontrelateren van een H/GP-relatie.
+Daarbij is het voldoende om te weten welke relatie het betreft om het ontrelateren uit te kunnen
+uitvoeren. Al deze informatie wordt overigens uit het bijhoudingsplan afgeleid.
+Na het ontrelateren moet de AH nog worden verwerkt die de aanleiding tot het ontrelateren
+vormde, in dit geval de geslachtsnaamwijziging. Hierbij geldt hetzelfde als na het ontrelateren van
+een H/GP-relatie: het kan zijn dat de bijhouding moet worden doorgevoerd op een object dat door
+het ontrelateren in de plaats is gekomen van het object dat in het bijhoudingsvoorstel wordt
+aangewezen (zie ook paragraaf 5.1). In de hierboven genoemde voorbeelden van
+geslachtsnaamwijziging is dat overigens niet het geval en wordt de bijhouding doorgevoerd op de
+ingeschreven persoon en niet op een nieuw gemaakte persoon van het soort ‘Pseudo-persoon’.
+
+6.3
+
+Familierechtelijke betrekking: voorbeeld 2 - Mutatie van persoonslijst
+Kind-betrokkene met meer dan 1 Ouder-betrokkene
+
+Het diagram hierna laat zien hoe het ontrelateren van een familierechtelijke betrekking werkt bij de
+bijhouding van een kind, waarbij meerdere ouder-betrokkenen buiten de bijhouding moeten
+blijven. In dit voorbeeld fiatteren de gemeenten van Maria en Moniek niet automatisch de
+naamswijziging van Peter.
+Omdat een persoon van het soort ‘Pseudo-persoon’ niet als betrokkene in meerdere relaties mag
+voor komen, wordt voor beide ouder-betrokkenen (Maria en Moniek) een nieuwe familierechtelijke
+betrekking gemaakt met daarin een eigen kopie van het ingeschreven kind (Peter) als betrokken
+persoon van het soort ‘Pseudo-persoon’.
+
+4
+
+Geslachtsaanduiding wordt dus niet overgenomen als het een kind betreft.
+
+Status: Definitief, versie: 2.15
+
+Pagina 24 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+Status: Definitief, versie: 2.15
+
+Pagina 25 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+6.4
+
+Familierechtelijke betrekking: voorbeeld 3 - Mutatie van persoonslijst
+Ouder-betrokkene
+
+Een variant doet zich voor als de bijhouding aan de kant van een ouder-betrokkene zit.
+Bijvoorbeeld wijziging van de geslachtsnaam van Maria die niet wordt gefiatteerd door de
+gemeente van Peter. Dan verloopt het ontrelateren bijna hetzelfde, met als verschil dat stap 1 van
+het algoritme bij ‘Familierechtelijke betrekking voorbeeld 1’ van paragraaf 6.2 dan luidt: ‘Voor de
+ouder-betrokkene die de hoofdpersoon is van het bijhoudingsvoorstel’. Het resultaat is dan dat de
+bij te houden ingeschreven ouder-betrokkene aan een nieuwe familierechtelijke betrekking is
+gekoppeld met een kopie van oude ‘kind-beeld’, zodat de ingeschreven kind-betrokkene niet door
+de bijhouding van de ouder wordt geraakt.
+
+Status: Definitief, versie: 2.15
+
+Pagina 26 van 27
+
+UCS BY.1.ON – Ontrelateren
+
+Om het voorbeeld uit te breiden: stel dat Josef en Maria getrouwd zijn. Josef wordt dan geraakt
+door de naamswijziging van Maria. Als zijn gemeente automatisch fiatteert of hij woont in dezelfde
+gemeente als Maria, dan zal de naamswijziging van zijn echtgenote automatisch op zijn PL worden
+doorgevoerd. Echter, als de gemeente van Josef de naamswijziging niet automatisch fiatteert, dan
+zal ook het huwelijk eerst ontrelateerd moeten worden. Binnen dezelfde transactie worden dan dus
+eerst 2 ontrelateer-AH-en verwerkt (FRB + Huwelijk), voordat de naamswijziging van Maria kan
+worden doorgevoerd. Dit wordt allemaal bepaald aan de hand van het bijhoudingsplan dat voor de
+naamswijziging wordt bepaald. Daarin komen dan Maria (‘indiener is bijhoudingspartij’), Peter
+(‘opnieuw indienen’) en Josef (‘opnieuw indienen’) voor. Voor Peter en Josef mag de
+naamswijziging van Maria dus niet worden doorgevoerd. Omdat Peter kind is van Maria moet dan
+de familierechtelijke betrekking worden ontrelateerd en aangezien Josef partner is van Maria moet
+ook het huwelijk worden ontrelateerd.
+Als Maria daarnaast ook nog een aantal ontbonden huwelijken zou hebben en niet alle gemeenten
+van de ex-partners fiatteren automatisch, dan moeten er zelfs nog meer huwelijken ontrelateerd
+worden.
+Kortom, de verwerking van een bijhoudingsvoorstel kan leiden tot het automatisch ontrelateren
+van meerdere relaties. Het kunnen er maximaal even veel zijn als het aantal relaties waarin de
+hoofdpersonen van het bijhoudingsvoorstel als betrokkene voorkomen.
+
+Status: Definitief, versie: 2.15
+
+Pagina 27 van 27
+
+

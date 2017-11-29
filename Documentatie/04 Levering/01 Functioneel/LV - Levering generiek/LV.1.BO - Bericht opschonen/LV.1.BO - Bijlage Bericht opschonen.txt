@@ -1,0 +1,451 @@
+LV.1.BO - Bijlage Bericht opschonen
+Versie: Werk
+Gegenereerd op: 13 juli 2017
+Status: Definitief
+
+1 Regels voor usecase LV.1.BO.CM - Bericht consistent maken
+1.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1540
+
+3
+
+'Inhoudelijke groep'
+
+R1541
+
+2
+
+'Verantwoordingsgroep'
+
+R1543
+
+4
+
+'Onderzoeksgroep'
+
+1.2
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1551
+
+2
+
+Alleen Acties die verantwoording vormen voor inhoudelijke-of
+onderzoeksgroepen meeleveren
+
+R1552
+
+2
+
+Alleen de Administratieve handelingen waarnaar daadwerkelijk wordt
+verwezen als verantwoording leveren.
+
+R1561
+
+4
+
+Een bericht bevat alleen onderzoeken naar ontbrekende gegevens en naar
+gegevens die ook aanwezig zijn in het bericht
+
+R1563
+
+2
+
+Geen lege onderzoeken leveren
+
+R2015
+
+1
+
+Alleen bronnen waarnaar daadwerkelijk wordt verwezen meeleveren
+
+2 Regels voor usecase LV.1.BO.SO - Berichtstructuur
+opschonen
+2.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1622
+
+3
+
+Het systeem logt de situatie 'bericht bevat geen gegevens'
+
+R1980
+
+1
+
+Een BRP bericht bevat geen lege containers
+
+3 Regels voor usecase LV.1.BO.GS - Gegevens in bericht
+sorteren
+3.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1804
+
+5
+
+Sortering verantwoording in een bericht
+
+R1805
+
+5
+
+Volgorde van meervoudig voorkomende objecten in een bericht
+
+R1806
+
+3
+
+Volgorde historie in een bericht
+
+4 Uitwerking regels
+R1540
+'Inhoudelijke groep'
+Definitie:
+
+Inhoudelijke groepen zijn groepen van de Persoonslijst die bij de Persoon horen. Dit
+zijn alle groepen onder Objecttypen Persoon, Persoon \ Adres, Persoon \
+Geslachtsnaamcomponent, Persoon \ Indicatie, Persoon \ Nationaliteit, Persoon \
+Reisdocument, Persoon \ Verificatie, Persoon \ Verstrekkingsbeperking, Persoon \
+Voornaam, Persoon \ Buitenlands persoonsnummer, Relatie (soorten Huwelijk en
+Geregistreerd partnerschap) en Betrokkenheid (rol Ouder).
+(Dit zijn dus de groepen uit het persoonsdeel van het bericht over de persoon, in
+tegenstelling tot de groepen uit bijvoorbeeld het verantwoordingsdeel en het
+onderzoeksdeel)
+
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R1541
+'Verantwoordingsgroep'
+Definitie:
+
+Verantwoordingsgroepen zijn groepen van de Persoonslijst die de verantwoording
+van de 'Inhoudelijke groep' (R1540) vormen. Dit zijn groepen onder de Objecttypen
+Administratieve handeling, Actie, Actie \ Bron, Document, Gedeblokkeerde melding
+en de koppelingen tussen die Objecttypen.
+(Dit zijn dus de groepen uit het verantwoordingsdeel van het bericht over de
+persoon)
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1543
+'Onderzoeksgroep'
+Definitie:
+
+Een Onderzoeksgroep is een groep die gegevens bevat omtrent onderzoeken op bij
+de Persoon aanwezige of ontbrekende gegevens. We hebben het hier altijd over de
+aan de Persoon gerelateerde Onderzoeken. Dus de Persoon \ Onderzoek gegevens,
+die direct gerelateerd zijn aan de uitgangspersoon.
+Voor het 'Onderzoeksdeel' worden de volgende begrippen gehanteerd:
+• Onderzoeksdeel: het deel binnen het bericht, dat informatie bevat over de
+onderzoeken.
+• Onderzoek: Binnen het onderzoeksdeel komen de 'Onderzoeken' voor, die de
+o.a. de Onderzoek.Datum aanvang, Onderzoek.Status en eventueel
+Onderzoek.Datum einde van het onderzoek bevatten
+• Gegeven in onderzoek: Als onderdeel van 'Onderzoek', zijn de in het onderzoek
+betrokken gegevens vastgelegd in Gegeven in onderzoek. Deze geeft aan
+welke gegevens (Gegeven in onderzoek.Element en optioneel: Gegeven in
+onderzoek.Object sleutel gegeven en Gegeven in onderzoek.Voorkomen sleutel
+gegeven) in het Onderzoek zijn betrokken.
+• Persoon \ Adres.Persoon aangetroffen op adres? valt ook onder het
+onderzoekdeel. Bijzonder aan dit attribuut is dat deze geen onderdeel is van
+Onderzoek of Gegeven in onderzoek, maar van Persoon \ Adres.
+Een onderzoeksgroep gedraagt zich verder hetzelfde als een Inhoudelijke groep, er
+is dus sprake van een afgeleid administratief en verantwoording d.m.v. een
+administratieve handeling met acties en bronnen.
+
+(Het betreft hier de groepen uit het Onderzoeksdeel van het bericht, deze hebben
+betrekking op de onderzoeken op persoonsgegevens, in tegenstelling tot de
+groepen uit bijvoorbeeld het Verantwoordingsdeel en het Persoonsdeel)
+Versie:
+
+4
+
+Soort:
+
+Definitieregel
+
+R1551
+Alleen Acties die verantwoording vormen voor inhoudelijke-of onderzoeksgroepen
+meeleveren
+Definitie:
+
+In het resultaat van een levering mogen geen 'Verantwoordingsgroep' (R1541) met
+een 'Actie' worden opgenomen waarnaar geen enkele verwijzing (meer) bestaat
+vanuit een 'Inhoudelijke groep' (R1540) of een 'Onderzoeksgroep' (R1543) in
+hetzelfde resultaat.
+(Toelichting: dit betekent dat wanneer een Actie alleen groepen heeft geraakt die
+door autorisatie of een ander filtermechanisme niet (meer) in het bericht worden
+opgenomen, de Actie dus niets meer 'verantwoordt' en zelf ook uit het bericht
+verwijderd moet worden).
+
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R1552
+Alleen de Administratieve handelingen waarnaar daadwerkelijk wordt verwezen als
+verantwoording leveren.
+Definitie:
+
+In het resultaat van een levering mogen geen 'Verantwoordingsgroep' (R1541)
+'Administratieve handeling' en onderliggende groepen Actie \ Bron en Document
+worden opgenomen als er binnen die Administratieve handeling geen enkele Actie
+voorkomt waarvoor een verwijzing bestaat vanuit een 'Inhoudelijke groep' (R1540)
+uit hetzelfde resultaat.
+
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R1561
+Een bericht bevat alleen onderzoeken naar ontbrekende gegevens en naar gegevens die ook
+aanwezig zijn in het bericht
+Definitie:
+
+Een bericht bevat alleen voorkomens van Gegeven in onderzoek waarbij:
+Gegeven in onderzoek verwijst naar een gegeven dat ook aanwezig is in het
+bericht:
+(Gegeven in onderzoek.Object sleutel gegeven en/of Gegeven in
+onderzoek.Voorkomen sleutel gegeven verwijst naar een object of groep
+die (na filtering op autorisatie en historie) in het bericht aanwezig is)
+OF
+Het een onderzoek betreft naar een ontbrekend gegeven:
+(Gegeven in onderzoek.Object sleutel gegeven is leeg
+EN
+Gegeven in onderzoek.Voorkomen sleutel gegeven is leeg).
+
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+R1563
+Geen lege onderzoeken leveren
+Definitie:
+
+In het te leveren resultaat mogen geen lege Onderzoeken voorkomen. Dat wil
+zeggen: als er bij een Onderzoek geen enkel te leveren Gegeven in onderzoek meer
+aanwezig is, dan dient de hele groep uit het resultaat verwijderd te worden.
+Als er geen enkele Groep Onderzoek meer resteert, dan zal het Onderzoeksdeel
+binnen het bericht niet meer aanwezig zijn.
+Zie ook 'Onderzoeksgroep' (R1543) voor de definitie van de "Onderzoeksgroep" en
+de daarin gehanteerde begrippen.
+
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R1622
+Het systeem logt de situatie 'bericht bevat geen gegevens'
+Definitie:
+
+Indien het systeem een bericht verstuurt naar een Partij en er is geen enkel
+gegeven geautoriseerd, dan dient een logregel weggeschreven te worden.
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+Meldingstekst:
+
+Leveringsautorisatie fout geconfigureerd: bericht bevat geen gegevens.
+
+Loggingsniveau:
+
+Illegale poging
+
+R1804
+Sortering verantwoording in een bericht
+Definitie:
+
+De gewenste sortering voor verantwoordingsinformatie is als volgt:
+• Administratieve handeling zijn aflopend gesorteerd op TijdstipRegistratie en
+daarbinnen oplopend op Id (dus de meest recente handeling bovenaan in het
+bericht)
+• Actie \ Bron (binnen die handelingen) en Actie\Bronnen zijn als volgt
+gesorteerd: Eerst Administratieve handeling \ Bron.Document, oplopend
+gesorteerd op Id, daarna Administratieve handeling \ Bron.Rechtsgrond,
+oplopend gesorteerd op Id, daarna Administratieve handeling \
+Bron.Rechtsgrondomschrijving, gesorteerd op alfabetische volgorde van die
+omschrijving.
+• Actie zijn aflopend gesorteerd op TijdstipRegistratie en daarbinnen oplopend op
+Id.
+
+Versie:
+
+5
+
+Soort:
+
+Verwerkingslogica
+
+R1805
+Volgorde van meervoudig voorkomende objecten in een bericht
+Definitie:
+
+Een aantal objecten kunnen bij een Persoon gelijktijdig meermalen aanwezig zijn,
+zoals voornamen en nationaliteiten. In uitgaande berichten moeten we deze
+gegevens zo sorteren, dat gegevens die logisch bij elkaar horen ook bij elkaar
+blijven. Pas daarbinnen moeten we de normale sortering op groepen toepassen,
+zoals beschreven in R1806 - Volgorde historie in een bericht.
+Dit betekent dat de volgende objecttypen eerst (oplopend) gesorteerd worden op de
+bijbehorende logische kenmerken:
+
+•
+•
+•
+•
+•
+•
+•
+•
+
+Persoon \ Geslachtsnaamcomponent op Persoon \
+Geslachtsnaamcomponent.Volgnummer
+Persoon \ Indicatie op Persoon \ Indicatie.Soort
+Persoon \ Nationaliteit op Persoon \ Nationaliteit.Nationaliteit
+Onderzoek op Onderzoek.Datum aanvang
+Gegeven in onderzoek op Gegeven in onderzoek.ID (aflopend)
+Persoon \ Verificatie op Persoon \ Verificatie.Partij en daarbinnen op Persoon \
+Verificatie.Soort
+Persoon \ Voornaam op Persoon \ Voornaam.Volgnummer
+Persoon \ Buitenlands persoonsnummer op Persoon \ Buitenlands
+persoonsnummer.Autoriteit van afgifte en daarbinnen op Persoon \ Buitenlands
+persoonsnummer.Nummer
+
+Overige objecten worden gesorteerd op Object.ID (aflopend).
+Dit met volgende sorteer-regels:
+• Onbekende delen (00) in een datum worden gesorteerd volgens de normale
+systematiek voor getallen
+Versie:
+
+5
+
+Soort:
+
+Verwerkingslogica
+
+R1806
+Volgorde historie in een bericht
+Definitie:
+
+Als van een groep een repeterende voorkomens van materiele en/of formele
+historie is opgenomen in een bericht, dan is de sortering als volgt:
+Als sorteervolgorde van actuele/historische verschijningen van een gegevensgroep:
+a) Verwerkingssoort - Volgens logica sorteren verwerkingssoort
+b) "Datum\Tijd verval" - Aflopend
+c) DatumAanvangGeldigheid - Aflopend
+d) DatumEindeGeldigheid - Aflopend
+e) "Datum\Tijd registratie" - Aflopend
+Dit met volgende sorteer-regels:
+• Verwerkingssoort in de volgorde Identificatie, Toevoeging, Wijziging, Verval,
+Verwijdering, Referentie
+• "Datum\Tijd verval" als eerste sorteerelement om zo de materiële en formele
+historie te scheiden
+• 'aflopend' om meest actuele situatie vooraan te hebben
+• indien "Datum\Tijd verval" en DatumEindeGeldigheid niet zijn gevuld, dan
+wordt hiervoor ten behoeve van de sortering de 'eeuwigheidswaarde' genomen
+(voor DatumEindeGeldigheid dus 99991231)
+• Onbekende delen (00) in een datum worden gesorteerd volgens de normale
+systematiek voor getallen
+• "Datum\Tijd registratie" speelt in de sortering alleen maar een rol bij groepen
+met alleen formele historie
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R1980
+Een BRP bericht bevat geen lege containers
+Definitie:
+
+Een BRP bericht bevat geen lege containers.
+
+Dat wil zeggen dat als een bericht een container zou bevatten die geen enkel object
+bevat, deze container niet moet worden aangemaakt (dan wel moet worden
+weggefilterd uit het resultaat)
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2015
+Alleen bronnen waarnaar daadwerkelijk wordt verwezen meeleveren
+Definitie:
+
+In het verantwoordingsgedeelte van een levering mogen onder een Administratieve
+handeling geen bronnen (d.w.z. Document of Rechtsgrond) worden opgenomen
+waarnaar geen enkele verwijzing (meer) bestaat vanuit een Actie \ Bron binnen
+dezelfde bovenliggende Administratieve handeling.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+

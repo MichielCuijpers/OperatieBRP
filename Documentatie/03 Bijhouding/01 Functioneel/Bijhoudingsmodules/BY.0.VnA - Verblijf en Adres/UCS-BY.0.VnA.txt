@@ -1,0 +1,4784 @@
+UCS BY.0.VnA - Verblijf en Adres
+Versie
+
+0.60
+
+Datum
+
+12 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+20-08-2016
+
+0.1
+
+Initiële opzet
+
+Operatie BRP
+
+29-08-2016
+
+0.2
+
+Review verwerkt
+
+Operatie BRP
+
+09-09-2016
+
+0.3
+
+- Reden verstrekkingsbeperking toegevoegd.
+- Actie ‘Registratie adres’ aangepast.
+- Functionele context ‘Wijziging adres infrastructureel’
+toegevoegd.
+- Functionele context ‘Verhuizing intergemeentelijk’
+aangepast.
+- Ontwerpbeslissingen toegevoegd.
+
+Operatie BRP
+
+13-09-2016
+
+0.4
+
+In Hoofdstuk 10 wijziging verblijfsrecht opgenomen. En de
+bijbehorende acties in hoofdstuk 13.
+
+Operatie BRP
+
+19-09-2016
+
+0.5
+
+Review commentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+20-09-2016
+
+0.6
+
+In Hoofdstuk 9 wijziging BVP opgenomen. En de
+bijbehorende acties in hoofdstuk 13.
+
+Operatie BRP
+
+21-09-2016
+
+0.7
+
+Review commentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+21-09-2016
+
+0.8
+
+ISC-handeling(en) toegevoegd
+
+Operatie BRP
+
+23-09-2016
+
+0.9
+
+Review commentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+23-09-2016
+
+0.10
+
+Review commentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+27-09-2016
+
+0.11
+
+Review commentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+28-09-2016
+
+0.12
+
+- Verstrekkingsbeperking verwijderd bij Wijziging adres
+infrastructureel.
+- Naam ‘ISC Verhuizing intergemeentelijk’ vervangen door
+‘GBA – Verhuizing intergemeentelijk GBA naar BRP’.
+
+Operatie BRP
+
+30-09-2016
+
+0.13
+
+Review commentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+03-10-2016
+
+0.14
+
+Titel van document gewijzigd.
+Referenties bijgewerkt
+
+Operatie BRP
+
+04-10-2016
+
+0.15
+
+Review commentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+19-10-2016
+
+0.16
+
+In hoofdstuk 4 Verhuizing naar buitenland opgenomen. En
+de bijbehorende acties in hoofdstuk 15.
+
+Operatie BRP
+
+26-10-2016
+
+0.17
+
+Review commentaar Operatie BRP:
+Bij Wijziging Adres Infra verandert Soort adres
+niet.
+Adres.DAG = Actie.DAG
+Verplichtheid Bron verwijderd bij Actie ‘Registratie
+adres’ in hoofdstuk 15.
+
+Operatie BRP
+
+26-10-2016
+
+0.18
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+UCS BY.0.VnA - Verblijf en Adres
+
+01-11-2016
+
+0.19
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+02-11-2016
+
+0.20
+
+Review Operatie BRP verwerkt (adreswijzigingen).
+Tevens AH ‘Wijziging gemeente infrastructureel’ naar dit
+document verplaatst. Stond eerst in de module Bijzondere
+Bijhouding.
+
+Operatie BRP
+
+15-11-2016
+
+0.21
+
+Review Operatie BRP verwerkt.
+Formaat Functionele context afgestemd op werkwijze LO.
+
+Operatie BRP
+
+25-11-2016
+
+0.22
+
+Tabel met BZVU en plaatsonafhankelijke bijhouding
+toegevoegd.
+Term ISC vervangen door migratievoorziening
+
+Operatie BRP
+
+29-11-2016
+
+0.23
+
+Reviewcommentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+12-01-2017
+
+0.24
+
+Persoon.Verstrekkingsbeperking vervangen door
+Persoon.Volledige verstrekkingsbeperking
+
+Operatie BRP
+
+16-01-2017
+
+0.25
+
+Versie 0.24 teruggedraaid, maar wel andere typos in
+verstrekkingsbeperking verbeterd.
+
+Operatie BRP
+
+17-01-2017
+
+0.26
+
+-
+
+18-01-2017
+
+0.27
+
+-
+
+-
+
+Beëindiging bvp: voorkomensleutel niet in bericht, maar Operatie BRP
+afleiden
+Registratie migratie: afleiding DAG toegevoegd
+Opmerking over uitfasering attribuut Gemeentedeel
+toegevoegd
+Afleiding attribuut Persoon aangetroffen op adres?
+toegevoegd bij Verhuizing binnengemeentelijk en
+intergemeentelijk
+Review commentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+20-01-2017
+
+0.28
+
+Review commentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+27-01-2017
+
+0.29
+
+-
+
+Operatie BRP
+
+-
+
+Voetnoot omtrent infrastructurele wijziging in Appendix
+A toegevoegd
+Opmerking m.b.t. afleiding Bijhouding.Datum aanvang
+geldigheid toegevoegd.
+
+01-02-2017
+
+0.30
+
+Terminologie en afkortingen rond plaatsonafhankelijke
+bijhouding aangepast. Plaatsonafhankelijke bijhouding is in
+strijd met de wet.
+
+Operatie BRP
+
+15-02-2017
+
+0.31
+
+Constatering verblijf kind en Constatering verblijf kind met
+erkenning na geboorte toegevoegd. Acties toegevoegd
+m.b.t. deze handelingen.
+
+Operatie BRP
+
+21-02-2017
+
+0.32
+
+Review Operatie BRP verwerkt en Constatering verblijf kind
+met erkenning na geboorte verwijderd.
+
+Operatie BRP
+
+27-02-2017
+
+0.33
+
+Review Operatie BRP verwerkt.
+
+Operatie BRP
+
+28-02-2017
+
+0.34
+
+Reviewcommentaar n.a.v. grooming Operatie BRP verwerkt. Operatie BRP
+
+10-03-2017
+
+0.35
+
+AH’s Vestiging niet-ingeschrevene en niet-ingezetene
+toegevoegd.
+
+Operatie BRP
+
+13-03-2017
+
+0.36
+
+Review commentaar Operatie BRP m.b.t. Vestiging nietingeschrevene en Vestiging niet-ingezetene verwerkt.
+
+Operatie BRP
+
+15-03-2017
+
+0.37
+
+Afleiding voor ‘Vertrokken onbekend waarheen’ aangepast in Operatie BRP
+hoofdstuk 4.
+
+15-03-2017
+
+0.38
+
+- Review commentaar Operatie BRP m.b.t. Vestiging nietingeschrevene en Vestiging niet-ingezetene verwerkt.
+
+Status: Definitief, versie: 0.60
+
+Operatie BRP
+
+Pagina 2 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+- Opmerking toegevoegd aan AH Wijziging adres
+infrastructureel m.b.t. locatie ten opzichte van adres dat
+geen aanleiding is voor een infrastructurele wijziging.
+22-03-2017
+
+0.39
+
+Vestiging niet-ingeschrevene aangepast m.b.t. zwakke
+adoptie en onderzoek. Vestiging niet-ingezetene aangepast
+m.b.t. onderzoek.
+
+Operatie BRP
+
+23-03-2017
+
+0.40
+
+Hoofdstuk 10 Wijziging gemeente infrastructureel bij
+overledene toegevoegd. Actie Registratie bijhouding
+toegevoegd in hoofdstuk 17.
+
+Operatie BRP
+
+24-03-2017
+
+0.41
+
+Review commentaar Operatie BRP (Vestiging nietingeschrevene i.v.m. zwakke adoptie) verwerkt
+
+Operatie BRP
+
+29-03-2017
+
+0.42
+
+Review commentaar Operatie BRP (Wijziging gemeente
+infrastructureel bij overledene) verwerkt
+
+Operatie BRP
+
+30-03-2017
+
+0.43
+
+Bij Vestiging niet-ingezetene mag de groep Inschrijving niet
+worden gewijzigd.
+
+Operatie BRP
+
+05-04-2017
+
+0.44
+
+Logica toegevoegd hoe te bepalen welk type Nederlands
+adres van toepassing is
+
+Operatie BRP
+
+19-04-2017
+
+0.45
+
+De actie registratie Nationaliteit toegevoegd.
+
+Operatie BRP
+
+08-05-2017
+
+0.46
+
+Registratie Migratie weer toegevoegd bij generieke acties.
+
+Operatie BRP
+
+11-05-2017
+
+0.47
+
+AH Verhuizing binnengemeentelijk in nieuw format verwerkt
+en beschreven.
+
+Operatie BRP
+
+12-05-2017
+
+0.48
+
+Basale tekst voor correctiehandelingen opgenomen
+
+Operatie BRP
+
+18-05-2017
+
+0.49
+
+Correctie adres, Correctie migratie en Correctie BVP
+definitief gemaakt en bijbehorende acties opgenomen.
+
+Operatie BRP
+
+22-05-2017
+
+0.50
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+24-05-2017
+
+0.51
+
+Correctie verblijfsrecht definitief gemaakt en bijbehorende
+acties opgenomen.
+
+Operatie BRP
+
+29-05-2017
+
+0.52
+
+Review Operatie BRP verwerkt.
+
+Operatie BRP
+
+01-06-2017
+
+0.53
+
+Review Operatie BRP verwerkt.
+
+Operatie BRP
+
+06-06-2017
+
+0.54
+
+Review Operatie BRP verwerkt.
+
+Operatie BRP
+
+07-06-2017
+
+0.55
+
+Modulecode aangepast van VA naar VnA
+
+Operatie BRP
+
+12-06-2017
+
+0.56
+
+Resterende handelingen in nieuw formaat omgezet
+
+Operatie BRP
+
+14-06-2017
+
+0.57
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+19-06-2017
+
+0.58
+
+Naderere bijhoudingsaard ‘Overleden’ verwijderd bij
+Wijziging gemeente infrastructureel, Verhuizing
+intergemeentelijk en Verhuizing naar buitenland.
+
+Operatie BRP
+
+28-06-2017
+
+0.59
+
+Document aangepast m.b.t. documentatierichtlijnen.
+
+Operatie BRP
+
+12-07-2017
+
+0.60
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+Status: Definitief, versie: 0.60
+
+Pagina 3 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+Reviewhistorie
+Versie Review
+0.1
+
+Operatie BRP
+
+0.3
+
+Operatie BRP
+
+0.4
+
+Operatie BRP
+
+0.6
+
+Operatie BRP
+
+0.7
+
+Operatie BRP
+
+0.8
+
+Operatie BRP
+
+0.14
+
+Operatie BRP
+
+0.16
+
+Operatie BRP
+
+0.18
+
+Operatie BRP
+
+0.20
+
+Operatie BRP
+
+0.22
+
+Operatie BRP
+
+0.23
+
+Operatie BRP
+
+0.31
+
+Operatie BRP
+
+0.32
+
+Operatie BRP (Constatering verblijf kind)
+
+0.35
+
+Operatie BRP
+
+0.37
+
+Operatie BRP (Vestiging niet-ingeschrevene en Vestiging niet-ingezetene)
+
+0.39
+
+Operatie BRP (Vestiging niet-ingeschrevene i.v.m. zwakke adoptie)
+
+0.40
+
+Operatie BRP (Wijziging gemeente infrastructureel bij overledene)
+
+0.46
+
+Operatie BRP
+
+0.49
+
+Operatie BRP (Correctie adres, Correctie migratie, Correctie BVP)
+
+0.50
+
+Operatie BRP (Correctie adres, Correctie migratie, Correctie BVP)
+
+0.52
+
+Operatie BRP (Correctie verblijfsrecht)
+
+0.53
+
+Operatie BRP (Correctie verblijfsrecht)
+
+0.56
+
+Operatie BRP (Handelingen in nieuw formaat)
+
+Status: Definitief, versie: 0.60
+
+Pagina 4 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 9
+1.1
+1.2
+1.3
+1.4
+1.5
+1.5.1
+1.5.2
+1.5.3
+
+2
+
+Doel ....................................................................................................................................9
+Leeswijzer ............................................................................................................................9
+Referenties ..........................................................................................................................9
+Use case model .................................................................................................................. 11
+Adres ................................................................................................................................ 11
+Adressoorten .................................................................................................................. 11
+Indeling ......................................................................................................................... 11
+Geldigheidsperiode.......................................................................................................... 12
+
+Verhuizing binnengemeentelijk .............................................................................. 13
+2.1
+Functionele context ............................................................................................................. 13
+2.1.1
+Brondocumenten ............................................................................................................ 13
+2.1.2
+Betrokken personen ........................................................................................................ 13
+2.1.3
+Proces ........................................................................................................................... 13
+2.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 13
+2.1.5
+Vastgelegde gegevens ..................................................................................................... 13
+2.2
+Specifieke verwerking.......................................................................................................... 13
+2.3
+Aanvullende informatie voor LO en HUP ................................................................................. 14
+
+3
+
+Verhuizing intergemeentelijk .................................................................................. 15
+3.1
+3.1.1
+3.1.2
+3.1.3
+3.1.4
+3.1.5
+3.2
+3.3
+3.4
+
+4
+
+Functionele context ............................................................................................................. 15
+Brondocumenten ............................................................................................................ 15
+Betrokken personen ........................................................................................................ 15
+Proces ........................................................................................................................... 15
+Bijhoudings(voorstel)partijen ........................................................................................... 15
+Vastgelegde gegevens ..................................................................................................... 16
+Verhuizingen van en naar een GBA-gemeente ........................................................................ 16
+Specifieke verwerking.......................................................................................................... 16
+Aanvullende informatie voor LO en HUP ................................................................................. 17
+
+Verhuizing naar buitenland ..................................................................................... 18
+4.1
+Functionele context ............................................................................................................. 18
+4.1.1
+Brondocumenten ............................................................................................................ 18
+4.1.2
+Betrokken personen ........................................................................................................ 18
+4.1.3
+Proces ........................................................................................................................... 18
+4.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 18
+4.1.5
+Vastgelegde gegevens ..................................................................................................... 19
+4.2
+Specifieke verwerking.......................................................................................................... 19
+4.3
+Aanvullende informatie voor LO en HUP ................................................................................. 20
+
+5
+
+Vestiging niet-ingeschrevene .................................................................................. 21
+5.1
+Functionele context ............................................................................................................. 21
+5.1.1
+Brondocumenten ............................................................................................................ 21
+5.1.2
+Betrokken personen ........................................................................................................ 21
+5.1.3
+Proces ........................................................................................................................... 21
+5.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 21
+5.1.5
+Vastgelegde gegevens ..................................................................................................... 21
+5.2
+Specifieke verwerking.......................................................................................................... 22
+5.3
+Aanvullende informatie voor LO en HUP ................................................................................. 23
+
+6
+
+Vestiging niet-ingezetene ....................................................................................... 24
+6.1
+Functionele context ............................................................................................................. 24
+6.1.1
+Brondocumenten ............................................................................................................ 24
+6.1.2
+Betrokken personen ........................................................................................................ 24
+6.1.3
+Proces ........................................................................................................................... 24
+
+Status: Definitief, versie: 0.60
+
+Pagina 5 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+6.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 24
+6.1.5
+Vastgelegde gegevens ..................................................................................................... 25
+6.2
+Specifieke verwerking.......................................................................................................... 25
+6.3
+Aanvullende informatie voor LO en HUP ................................................................................. 26
+
+7
+
+Constatering verblijf kind ....................................................................................... 27
+7.1
+Functionele context ............................................................................................................. 27
+7.1.1
+Brondocumenten ............................................................................................................ 27
+7.1.2
+Betrokken personen ........................................................................................................ 27
+7.1.3
+Proces ........................................................................................................................... 27
+7.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 27
+7.1.5
+Vastgelegde gegevens ..................................................................................................... 28
+7.2
+Specifieke verwerking.......................................................................................................... 28
+7.3
+Aanvullende informatie voor LO en HUP ................................................................................. 29
+
+8
+
+Wijziging adres infrastructureel .............................................................................. 30
+8.1
+Functionele context ............................................................................................................. 30
+8.1.1
+Brondocumenten ............................................................................................................ 30
+8.1.2
+Betrokken personen ........................................................................................................ 30
+8.1.3
+Proces ........................................................................................................................... 30
+8.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 30
+8.1.5
+Vastgelegde gegevens ..................................................................................................... 30
+8.2
+Specifieke verwerking.......................................................................................................... 30
+8.3
+Aanvullende informatie voor LO en HUP ................................................................................. 31
+
+9
+
+Wijziging gemeente infrastructureel ....................................................................... 32
+9.1
+Functionele context ............................................................................................................. 32
+9.1.1
+Brondocumenten ............................................................................................................ 32
+9.1.2
+Betrokken personen ........................................................................................................ 32
+9.1.3
+Proces ........................................................................................................................... 32
+9.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 32
+9.1.5
+Vastgelegde gegevens ..................................................................................................... 32
+9.2
+Specifieke verwerking.......................................................................................................... 32
+9.3
+Aanvullende informatie voor LO en HUP ................................................................................. 33
+
+10
+
+Wijziging gemeente infrastructureel bij overledene ............................................... 34
+
+10.1
+Functionele context ............................................................................................................. 34
+10.1.1
+Brondocumenten ........................................................................................................ 34
+10.1.2
+Betrokken personen .................................................................................................... 34
+10.1.3
+Proces ....................................................................................................................... 34
+10.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 34
+10.1.5
+Vastgelegde gegevens ................................................................................................. 34
+10.2
+Specifieke verwerking.......................................................................................................... 34
+
+11
+
+Wijziging bijzondere verblijfsrechtelijke positie ..................................................... 35
+
+11.1
+Functionele context ............................................................................................................. 35
+11.1.1
+Brondocumenten ........................................................................................................ 35
+11.1.2
+Betrokken personen .................................................................................................... 35
+11.1.3
+Proces ....................................................................................................................... 35
+11.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 35
+11.1.5
+Vastgelegde gegevens ................................................................................................. 35
+11.2
+Specifieke verwerking.......................................................................................................... 35
+
+12
+
+Wijziging verblijfsrecht ........................................................................................... 36
+
+12.1
+Functionele context ............................................................................................................. 36
+12.1.1
+Brondocumenten ........................................................................................................ 36
+12.1.2
+Betrokken personen .................................................................................................... 36
+12.1.3
+Proces ....................................................................................................................... 36
+12.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 37
+12.1.5
+Vastgelegde gegevens ................................................................................................. 37
+12.2
+Specifieke verwerking.......................................................................................................... 37
+
+Status: Definitief, versie: 0.60
+
+Pagina 6 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+12.3
+
+13
+
+Aanvullende informatie voor LO en HUP ................................................................................. 37
+
+Correctie adres ....................................................................................................... 38
+
+13.1
+Functionele context ............................................................................................................. 38
+13.1.1
+Brondocumenten ........................................................................................................ 38
+13.1.2
+Betrokken personen .................................................................................................... 38
+13.1.3
+Proces ....................................................................................................................... 38
+13.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 38
+13.1.5
+Vastgelegde gegevens ................................................................................................. 38
+13.2
+Specifieke verwerking.......................................................................................................... 38
+
+14
+
+Correctie migratie ................................................................................................... 40
+
+14.1
+Functionele context ............................................................................................................. 40
+14.1.1
+Brondocumenten ........................................................................................................ 40
+14.1.2
+Betrokken personen .................................................................................................... 40
+14.1.3
+Proces ....................................................................................................................... 40
+14.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 40
+14.1.5
+Vastgelegde gegevens ................................................................................................. 40
+14.2
+Specifieke verwerking.......................................................................................................... 40
+
+15
+
+Correctie verblijfsrecht ........................................................................................... 41
+
+15.1
+Functionele context ............................................................................................................. 41
+15.1.1
+Brondocumenten ........................................................................................................ 41
+15.1.2
+Betrokken personen .................................................................................................... 41
+15.1.3
+Proces ....................................................................................................................... 41
+15.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 41
+15.1.5
+Vastgelegde gegevens ................................................................................................. 41
+15.2
+Specifieke verwerking.......................................................................................................... 41
+15.3
+Aanvullende informatie voor LO en HUP ................................................................................. 41
+
+16
+
+Correctie bijzondere verblijfsrechtelijke positie...................................................... 43
+
+16.1
+Functionele context ............................................................................................................. 43
+16.1.1
+Brondocumenten ........................................................................................................ 43
+16.1.2
+Betrokken personen .................................................................................................... 43
+16.1.3
+Proces ....................................................................................................................... 43
+16.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 43
+16.1.5
+Vastgelegde gegevens ................................................................................................. 43
+16.2
+Specifieke verwerking.......................................................................................................... 43
+
+17
+
+Speciale handeling t.b.v. de migratievoorziening .................................................... 44
+
+17.1
+
+18
+
+Aandachtspunten bij verwerking van GBA-handelingen ............................................................ 45
+
+GBA - Verhuizing intergemeentelijk GBA naar BRP ................................................. 46
+
+18.1
+Functionele context ............................................................................................................. 46
+18.1.1
+Brondocumenten ........................................................................................................ 46
+18.1.2
+Betrokken personen .................................................................................................... 46
+18.1.3
+Proces ....................................................................................................................... 46
+18.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 46
+18.1.5
+Vastgelegde gegevens ................................................................................................. 46
+18.2
+Specifieke verwerking.......................................................................................................... 46
+
+19
+
+Acties ...................................................................................................................... 47
+
+19.1
+19.2
+19.3
+19.4
+19.5
+19.6
+19.7
+19.8
+19.9
+
+Registratie adres................................................................................................................. 47
+Registratie verstrekkingsbeperking ........................................................................................ 47
+Registratie verblijfsrecht ...................................................................................................... 47
+Registratie bijzondere verblijfsrechtelijke positie ..................................................................... 47
+Beëindiging bijzondere verblijfsrechtelijke positie .................................................................... 48
+Registratie ingezetene ......................................................................................................... 48
+Registratie identificatienummers (hoofdpersoon) .................................................................... 51
+Beëindiging nationaliteit....................................................................................................... 51
+Registratie staatloos ............................................................................................................ 51
+
+Status: Definitief, versie: 0.60
+
+Pagina 7 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+19.10
+19.11
+19.12
+19.13
+19.14
+19.15
+19.16
+19.17
+19.18
+19.19
+19.20
+19.21
+19.22
+19.23
+19.24
+19.25
+
+Registratie geboorte ............................................................................................................ 51
+Registratie geslachtsaanduiding ............................................................................................ 52
+Registratie geslachtsnaam ................................................................................................... 52
+Registratie voornaam .......................................................................................................... 53
+Registratie ouder ................................................................................................................ 53
+Registratie bijhouding .......................................................................................................... 54
+Registratie nationaliteit ........................................................................................................ 54
+Registratie migratie ............................................................................................................. 55
+Correctieverval Adres .......................................................................................................... 55
+Correctieverval Adres .......................................................................................................... 55
+Correctieverval Migratie ....................................................................................................... 55
+Correctieregistratie Migratie ................................................................................................. 55
+Correctieverval Bijzondere verblijfsrechtelijk positie ................................................................ 55
+Correctieregistratie Bijzondere verblijfsrechtelijk positie........................................................... 56
+Correctieverval Verblijfsrecht ................................................................................................ 56
+Correctieregistratie Verblijfsrecht .......................................................................................... 56
+
+20
+
+Ontwerpbeslissingen .............................................................................................. 57
+
+21
+
+Openstaande punten ............................................................................................... 59
+
+22
+
+Appendix A – Aangever adreshouding vs. Reden wijziging ..................................... 60
+
+23
+
+Appendix B – BZVU en toegestane indienende partijen ........................................... 61
+
+Status: Definitief, versie: 0.60
+
+Pagina 8 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+1 Inleiding
+1.1
+
+Doel
+
+De module ‘Verblijf en Adres’ bevat administratieve handelingen waarmee de verblijfsgegevens van
+een ingeschrevene worden bijgehouden: inschrijving, herschrijving, adres, migratie, verblijfsrecht
+en bijzondere verblijfsrechtelijke positie. Het doel van dit document is om de afhandeling van deze
+handelingen te beschrijven.
+
+1.2
+
+Leeswijzer
+
+Per administratieve handeling wordt de functionele context en specifieke verwerking beschreven.
+De functionele context beschrijft de situatie waarin de administratieve handeling van toepassing is.
+In de specifieke verwerking wordt beschreven welke acties relevant zijn voor de administratieve
+handeling en wordt per actie eventuele specifieke functionaliteit binnen de context van de
+handeling benoemd. Voor de definitie van het invoerbericht en bedrijfsregels die bij een
+administratieve handeling horen wordt verwezen naar de relevante hoofdstukken in ‘UCS BY.0.VnA
+- Bijlage Actualiseer infrastructurele wijziging’ [5], ‘UCS BY.0.VnA - Bijlage Registreer
+verblijfsrecht’ [6], ‘UCS BY.0.VnA - Bijlage Registreer verhuizing’ [7], ‘UCS BY.0.VnA - Bijlage
+Registreer verblijf’ [11], ‘UCS BY.0.VnA - Bijlage Corrigeer adres’ [15], ‘UCS BY.0.VnA - Bijlage
+Corrigeer verblijfsrecht’ [16], ‘UCS BY.0.VnA – Bijlage Registreer immigratie’ [17], ‘UCS BY.0.VnA Bijlage Registreer verhuizing’ [18]. Verder wordt de peildatum voor regels met een tijdsaspect
+gedefinieerd.
+De beschrijving van de generieke functionaliteit van de acties staat beschreven in hoofdstuk 19.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Logisch Ontwerp Basisregistratie Personen
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Ontwerpaspecten Verblijf en Adres
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Besluitenlijst Afstemmingsoverleg Verblijf en Adres
+
+Operatie BRP
+
+-
+
+-
+
+4
+
+Aspectbeschrijving – Controles
+
+Operatie BRP
+
+-
+
+-
+
+5
+
+UCS BY.0.VnA - Bijlage Actualiseer infrastructurele
+wijziging
+
+Operatie BRP
+
+-
+
+-
+
+6
+
+UCS BY.0.VnA - Bijlage Registreer verblijfsrecht
+
+Operatie BRP
+
+-
+
+-
+
+7
+
+UCS BY.0.VnA - Bijlage Registreer verhuizing
+
+Operatie BRP
+
+-
+
+-
+
+8
+
+UCS BY.0.AV – Afhandelen verzoek
+
+Operatie BRP
+
+-
+
+-
+
+9
+
+UCS BY.0.VB – Verwerk bijhoudingsvoorstel
+
+Operatie BRP
+
+-
+
+-
+
+10
+
+Aspectbeschrijving – Naamopbouw
+
+Operatie BRP
+
+-
+
+-
+
+11
+
+UCS-BY.0.VnA - Bijlage Registreer verblijf
+
+Operatie BRP
+
+-
+
+-
+
+12
+
+Aspectbeschrijving – Gerelateerden en
+Identificatienummers (@ToDo)
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 0.60
+
+Pagina 9 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+13
+
+Aspectbeschrijving – Corrigeren
+
+Operatie BRP
+
+-
+
+-
+
+14
+
+UCS BY.1.ON – Ontrelateren
+
+Operatie BRP
+
+-
+
+-
+
+15
+
+UCS BY.0.VnA - Bijlage Corrigeer adres
+
+Operatie BRP
+
+-
+
+-
+
+16
+
+UCS BY.0.VnA - Bijlage Corrigeer verblijfsrecht
+
+Operatie BRP
+
+-
+
+-
+
+17
+
+UCS BY.0.VnA – Bijlage Registreer immigratie
+
+Operatie BRP
+
+-
+
+-
+
+18
+
+UCS BY.0.VnA - Bijlage Registreer verhuizing
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 0.60
+
+Pagina 10 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+1.4
+
+Use case model
+
+In onderstaand use case model staan alle administratieve handelingen voor de module Verblijf en
+Adres. Hierin is te zien dat alle administratieve handelingen subtype zijn van het supertype
+‘Afhandeling verzoek’. De laatste beschrijft de generieke afhandeling van een verzoek wat relevant
+is voor de verwerking van alle handelingen.
+
+1.5
+1.5.1
+
+Adres
+Adressoorten
+
+Een persoon heeft één adres. Dit is een woonadres in Nederland, een briefadres in Nederland of
+een woonadres in het buitenland. Woonadres en briefadres zijn beide adressoorten.
+Het woonadres is het adres waar de persoon woont. Woont iemand op meerdere adressen dan
+geldt het adres waar hij naar verwachting gedurende een half jaar het meest zal overnachten. Is
+aan de hand van het voorgaande nog niet vast te stellen waar iemand woont (bijvoorbeeld omdat
+hij nergens 'woont'), dan geldt het adres waar betrokkene naar verwachting gedurende drie
+maanden ten minste twee derde van de tijd zal overnachten.
+Als de persoon geen woonadres heeft dan kan een briefadres (postadres) worden gebruikt. Dit kan
+bijvoorbeeld ook als de persoon in een zorginstelling, blijf-van-mijn-lijfhuis of een gevangenis zit.
+1.5.2
+
+Indeling
+
+Adressen kunnen ook ingedeeld worden in typen adressen. Een adres is een Nederlands of een
+buitenlands adres. Een Nederlands adres is een BAG-adres of een Niet-BAG-adres. Een Niet-BAGadres valt tenslotte weer uiteen in een Niet-BAG-adres met locatieomschrijving en een Niet-BAGadres met openbare ruimte.
+Om te bepalen welk type Nederlands adres van toepassing is wordt per adrestype bepaald of het
+opgegeven adres aan de voorwaarden van dat type adres voldoet. Dit gebeurt in de volgende
+volgorde: BAG-adres, Niet-BAG-adres met openbare ruimte, Niet-BAG-adres met
+locatieomschrijving.
+Adressen worden vastgelegd met behulp van de attributen die in een aantal combinaties worden
+gebruikt, afhankelijk van het type adres, zoals beschreven in paragraaf 7.4.8.1 Vastlegging
+adresgegevens in Logisch Ontwerp Basisregistratie Personen [1].
+
+Status: Definitief, versie: 0.60
+
+Pagina 11 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+NB Het attribuut ‘Gemeentedeel’ staat wel in Logisch Ontwerp Basisregistratie Personen [1]
+genoemd als onderdeel van een adres, maar is voor bijhoudingen uitgefaseerd. Het komt dus niet
+voor in de bijhoudingsberichten en wordt leeg gelaten bij de registratie van een adres.
+1.5.3
+
+Geldigheidsperiode
+
+De geldigheidsperioden van adressen (in de groep Adres) zijn aansluitend en bevat geen ‘gaten’.
+D.w.z. wanneer een persoon verhuist valt het einde van de geldigheidsperiode van zijn oude adres
+samen met de ingangsdatum van zijn nieuwe adres.
+Mogelijke uitzondering vormt hierop het geval dat de persoon emigreert. De datum van 1e verblijf
+wordt dan in de groep Migratie geregistreerd. Wanneer op een later tijdstip het definitieve
+buitenlandse adres bekend wordt, wordt deze weer geregistreerd in de groep Adres. In de groep
+Adres is dan een gat ontstaan omdat het 1e verblijf in de groep Migratie staat geregistreerd. Dit
+definitieve adres in het buitenland wordt geregistreerd door de Minister (RNI).
+Indien het definitieve buitenlandse adres met eenzelfde datum aanvang geldigheid wordt
+geregistreerd als het adres van 1e verblijf in het buitenland in de groep Migratie dan ontstaat er
+geen ‘gat’ in de groep Adres.
+De BRP staat niet toe dat een persoon op één dag tweemaal een verhuizing doorgeeft. Is dit toch
+nodig dan moet dit opgelost worden middels een correctie of de tweede verhuizing moet een dag
+later worden ingevoerd.
+
+Status: Definitief, versie: 0.60
+
+Pagina 12 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+2 Verhuizing binnengemeentelijk
+2.1
+
+Functionele context
+
+De administratieve handeling ‘Verhuizing binnengemeentelijk’ wordt gebruikt om een
+adreswijziging van één ingezetene te registreren, waarbij het oude en het nieuwe adres in dezelfde
+gemeente liggen. Ook een 'verhuizing' van of naar een briefadres wordt met deze handeling
+bijgehouden. Hierbij wijzigt het soort adres.
+De betrokken burger of een daartoe bevoegde aangever doet aangifte van verblijf en adres 'in
+persoon', Het adres kan echter ook ambtshalve worden gewijzigd. Aangifte in persoon kan worden
+gedaan door de betrokken ingezetene zelf of door diens partner, inwonend ouder, meerderjarig
+inwonend kind, gezaghouder, meerderjarige gemachtigde, verzorger of door het hoofd van een
+instelling waar de ingezetene verblijft. In de BRP wordt alleen de 'hoedanigheid' van de aangever
+geregistreerd, niet welke persoon aangifte heeft gedaan. Bovenstaande combinaties van reden
+wijziging en aangever zijn in Appendix A – Aangever adreshouding vs. Reden wijziging in
+tabelvorm samengevat.
+Tegelijk met de adreswijziging kan ook een wijziging verstrekkingsbeperking worden geregistreerd.
+Door het direct registreren van de aantekening met betrekking tot de verstrekkingsbeperking
+wordt voorkomen dat voor de persoon ongewenste mutatieberichten of volledigberichten naar
+afnemers verstuurd worden.
+Alleen personen waarbij de naderere bijhoudingsaard ‘Actueel’ of ‘Overleden’1 is kunnen worden
+bijgehouden.
+2.1.1
+•
+
+Brondocumenten
+
+Verzoek verstrekkingsbeperking
+
+2.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon (Ingezetene)
+
+2.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [8].
+2.1.4
+•
+
+Bijhoudings(voorstel)partijen
+
+De bijhoudingspartij van de ingezetene
+
+2.1.5
+•
+•
+
+Vastgelegde gegevens
+
+Adres
+Verstrekkingsbeperking
+
+2.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie adres
+De volgende attributen worden afgeleid vastgelegd en komen dus niet voor in het bericht:
+Persoon \ Adres.Standaard
+Element
+
+1
+
+Afleiding
+
+Als het te registreren feit voor het overlijden van de persoon heeft plaatsgevonden wordt dit feit geregistreerd.
+
+Status: Definitief, versie: 0.60
+
+Pagina 13 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+Gemeente
+
+‘Persoon \ Adres.Gemeente’ van het voorkomen dat door deze
+registratie komt te vervallen.
+
+Persoon aangetroffen op adres?
+
+<leeg>
+
+Hierboven zijn alleen de elementen beschreven die specifiek zijn voor deze handeling. Voor de
+generieke elementen wordt verwezen naar paragraaf 19.1.
+•
+
+Nevenactie Registratie verstrekkingsbeperking (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang adreshouding’.
+
+2.3
+
+Aanvullende informatie voor LO en HUP
+
+Met de bevraging ‘Medebewoners van persoon’2 kan de bijhouder potentiële medeverhuizers
+achterhalen.
+
+2
+
+Op basis van BSN nummer van de persoon kunnen met deze bevraging de andere bewoners op hetzelfde adres worden
+opgevraagd. Vervolgens kunnen deze personen ook verhuisd worden door de AH ‘Verhuizing binnengemeentelijk’.
+
+Status: Definitief, versie: 0.60
+
+Pagina 14 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+3 Verhuizing intergemeentelijk
+3.1
+
+Functionele context
+
+Doel van de administratieve handeling ‘Verhuizing intergemeentelijk’ is de registratie van de
+wijziging van het adres van een ingezetene waarbij het oude en het nieuwe adres in verschillende
+gemeenten zijn gelegen.
+De betrokken burger of een daartoe bevoegde aangever doet aangifte van verblijf en adres 'in
+persoon', het adres kan echter ook ambtshalve worden gewijzigd. Aangifte in persoon kan worden
+gedaan door de betrokken ingezetene zelf of door diens partner, inwonend ouder, meerderjarig
+inwonend kind, gezaghouder, meerderjarige gemachtigde, verzorger of door het hoofd van een
+instelling waar de ingezetene verblijft. In de BRP wordt alleen de 'hoedanigheid' van de aangever
+geregistreerd, niet welke persoon aangifte heeft gedaan. Bovenstaande combinaties van reden
+wijziging en aangever zijn in Appendix A – Aangever adreshouding vs. Reden wijziging in
+tabelvorm samengevat.
+Tegelijk met de adreswijziging kan ook een wijziging verstrekkingsbeperking worden geregistreerd.
+Door het direct registreren van de aantekening met betrekking tot de verstrekkingsbeperking
+wordt voorkomen dat voor de persoon ongewenste mutatieberichten of volledigberichten naar
+afnemers verstuurd worden.
+Alleen personen waarbij de naderere bijhoudingsaard ‘Actueel’ is kunnen worden bijgehouden.
+3.1.1
+•
+
+Verzoek verstrekkingsbeperking
+
+3.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+Hoofdpersoon (Ingezetene)
+
+3.1.3
+
+Proces
+
+In onderstaande sequence-diagram is aangegeven hoe op berichtniveau een verhuizing van BRP
+gemeente 1 naar BRP gemeente 2 verloopt:
+
+De verhuizing wordt aangemeld door de nieuwe gemeente (BRP gemeente 2). De BRP Centrale
+Voorzieningen verwerkt dit bericht en verstuurt een bijhoudingsnotificatie met bijhoudingssituatie
+‘Mededeling’ naar de oude(!) gemeente. De nieuwe gemeente ontvangt, zoals bij de verwerking
+van elk bijhoudingsvoorstel, synchroon een bijhoudingsresultaatbericht ‘Verwerkt’.
+3.1.4
+•
+
+Bijhoudings(voorstel)partijen
+
+De gemeente waar de ingezetene gevestigd wordt
+
+Status: Definitief, versie: 0.60
+
+Pagina 15 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+3.1.5
+•
+•
+•
+
+3.2
+
+Vastgelegde gegevens
+
+Bijhouding
+Adres
+Verstrekkingsbeperking
+
+Verhuizingen van en naar een GBA-gemeente
+
+Bovenstaande sequence-diagram geldt ten dele ook voor een verhuizing van een GBA-gemeente
+naar een BRP-gemeente. De verwerking wordt onderbroken na het opstellen van het
+bijhoudingsplan en het versturen van de bijhoudingsnotificatie naar de migratievoorziening. Dit is
+verder uitgewerkt in hoofdstuk 17 en 18.
+Een verhuizing van een BRP-gemeente naar een GBA-gemeente wordt volledig uitgevoerd binnen
+de migratievoorziening is daarom geen onderdeel van deze use case specificatie.
+
+3.3
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie adres
+De volgende attributen worden afgeleid vastgelegd en komen dus niet voor in het bericht:
+Persoon.Bijhouding
+Element
+
+Afleiding
+
+Bijhoudingsaard
+
+Overnemen van het voorkomen dat door deze actie komt te vervallen.
+In feite blijft de waarde ‘Ingezetene’.
+
+Nadere bijhoudingsaard
+
+Overnemen van het voorkomen dat door deze actie komt te vervallen.
+In feite blijft de waarde ‘Actueel’.
+
+Partij code
+
+Persoon \ Adres.Gemeente.Partij
+
+Persoon \ Adres
+Element
+
+Afleiding
+
+Persoon aangetroffen op adres?
+
+<leeg>
+
+Hierboven zijn alleen de elementen beschreven die specifiek zijn voor deze handeling. Voor de
+generieke elementen wordt verwezen naar paragraaf 19.1.
+NB In tegenstelling tot paragraaf 2.4 Historie in UCS BY.0.VB – Verwerk bijhoudingsvoorstel
+[9] moet voor de groep ‘Bijhouding’ bij deze specifieke AH de ‘Datum Aanvang Geldigheid’
+afgeleid worden van ‘Persoon \ Adres.Datum aanvang adreshouding’.
+Opmerking: Bovenstaande beschrijft de huidige situatie waarbij het RNI aansluit via het GBAkoppelvlak en als ‘speciale gemeente’ wordt gezien. Niet-ingezetenen komen via migratie in de
+BRP, waarbij een Nederlands adres in de attributen voor een buitenlands adres terecht komt.
+Zodra het RNI aansluit op het bijhoudingskoppelvlak zullen ook niet-ingezetenen via dit
+koppelvlak geregistreerd worden. Het Nederlandse adres zal dan in de juiste attributen
+geplaatst worden. De NadereBijhoudingsaard wordt in dat geval ‘Bijzondere status’.
+
+Persoon \ Adres.Standaard
+Geen bijzonderheden voor deze actie
+
+Status: Definitief, versie: 0.60
+
+Pagina 16 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+•
+
+Nevenactie Registratie verstrekkingsbeperking (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang adreshouding’.
+
+3.4
+
+Aanvullende informatie voor LO en HUP
+
+Met de bevraging ‘Medebewoners van persoon’ kan de bijhouder potentiële medeverhuizers
+achterhalen.
+
+Status: Definitief, versie: 0.60
+
+Pagina 17 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+4 Verhuizing naar buitenland
+4.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Verhuizing naar buitenland’ is de registratie van het
+vertrek van één ingezetene naar het buitenland.
+Aanleiding is een aangifte van verblijf en adres 'in persoon', namelijk door de betrokken burger zelf
+of een daartoe bevoegde aangever. Het vertrek kan echter ook ambtshalve worden geregistreerd,
+bijvoorbeeld als uit onderzoek is gebleken dat de ingezetene naar een (onbekende) bestemming
+buiten Nederland is vertrokken.
+Aangifte in persoon kan worden gedaan door de betrokken ingezetene zelf of door diens partner,
+inwonend ouder, meerderjarig inwonend kind, gezaghouder, meerderjarige gemachtigde, verzorger
+of door het hoofd van een instelling waar de ingezetene verblijft. In de BRP wordt alleen de
+'hoedanigheid' van de aangever geregistreerd, niet welke persoon aangifte heeft gedaan.
+Tegelijk met de verhuizing kan ook een wijziging verstrekkingsbeperking worden geregistreerd.
+Door het direct registreren van de aantekening met betrekking tot de verstrekkingsbeperking
+wordt voorkomen dat voor de persoon ongewenste mutatieberichten of volledigberichten naar
+afnemers verstuurd worden.
+Alleen personen waarbij de naderere bijhoudingsaard ‘Actueel’ is kunnen worden bijgehouden.
+4.1.1
+•
+
+Verzoek verstrekkingsbeperking
+
+4.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+Hoofdpersoon (Ingezetene)
+
+4.1.3
+
+Proces
+
+In het volgende sequence-diagram is aangegeven hoe op berichtniveau verhuizen naar het
+buitenland verloopt. Omdat de persoon naar het buitenland verhuist vindt registratie als nietingezetene plaats. Er wordt daarvoor een notificatie naar de migratievoorziening verstuurd. Mocht
+er bij de verwerking hiervan iets fout gaan dan krijgt de indienende gemeente een foutbericht.
+
+4.1.4
+•
+
+Bijhoudings(voorstel)partijen
+
+De gemeente waar de ingezetene gevestigd was.
+
+Status: Definitief, versie: 0.60
+
+Pagina 18 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+4.1.5
+•
+•
+•
+•
+•
+
+Vastgelegde gegevens
+
+Migratie
+Deelname EU verkiezingen
+Bijhouding
+Adres
+Verstrekkingsbeperking
+
+4.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Registratie migratie
+De volgende attributen worden afgeleid vastgelegd en komen dus niet voor in het bericht:
+•
+
+•
+
+•
+
+Persoon.Migratie
+Bij de registratie van deze groep komt een eventueel bestaande niet-vervallen voorkomen
+van ‘Persoon.Migratie’ te vervallen. Hierbij is de volgende afleiding toepassing:
+Element
+
+Afleiding
+
+Soort migratie
+
+‘Emigratie’
+
+Persoon.Deelname EU verkiezingen
+Als een bestaand niet-vervallen voorkomen van ‘Persoon.Deelname EU verkiezingen’ staat
+geregistreerd, dan komt dat voorkomen van ‘Persoon.Deelname EU verkiezingen’ als volgt
+afgeleid te vervallen:
+Element
+
+Afleiding
+
+Tijdstip verval
+
+Persoon.Migratie.Tijdstip registratie
+
+Actie verval
+
+Persoon.Migratie.Actie inhoud
+
+Persoon.Bijhouding
+Als een actuele ‘Persoon.Bijhouding’ staat geregistreerd met ‘Bijhoudingsaard’ gelijk aan
+‘Ingezetene’, dan wordt voor de Persoon de volgende ‘Persoon.Bijhouding’ afgeleid
+geregistreerd:
+Element
+
+Afleiding
+
+Bijhoudingsaard
+
+‘Niet ingezetene’
+
+NadereBijhoudingsaard
+
+•
+•
+•
+
+•
+
+‘Vertrokken onbekend waarheen’ als Land/gebied migratie
+‘Onbekend’ is én ‘Reden wijziging migratie’ ‘Ambtshalve’ is,
+‘Bijzondere status’ als ‘Reden wijziging migratie’ ‘Ministerieel
+besluit’ is,
+anders ‘Emigratie’
+
+Bijhoudingspartij
+
+‘Minister’
+
+Datum aanvang geldigheid
+
+Persoon.Migratie.Datum aanvang geldigheid
+
+Datum einde geldigheid
+
+leeg (want het is een actualisatie)
+
+Actie inhoud
+
+Persoon.Migratie.Actie inhoud
+
+Persoon \ Adres.Standaard
+Als een actueel niet beëindigd voorkomen van ‘Persoon \ Adres.Standaard’ staat
+geregistreerd, dan wordt dat voorkomen van ‘Persoon \ Adres.Standaard’ als volgt afgeleid
+beëindigd:
+
+Status: Definitief, versie: 0.60
+
+Pagina 19 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+Element
+
+Afleiding
+
+Datum einde geldigheid
+
+Persoon.Migratie.Datum aanvang geldigheid
+
+Actie aanpassing geldigheid
+
+Persoon.Migratie.Actie inhoud
+
+Hierboven zijn alleen de elementen beschreven die specifiek zijn voor deze handeling. Voor de
+generieke elementen wordt verwezen naar paragraaf 19.1.
+•
+
+Nevenactie Registratie verstrekkingsbeperking (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’ van de groep ‘Migratie’.
+
+4.3
+
+Aanvullende informatie voor LO en HUP
+
+Met de bevraging ‘Geef medebewoners van persoon’ kan de bijhouder potentiële mede emigranten
+achterhalen.
+
+Status: Definitief, versie: 0.60
+
+Pagina 20 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+5 Vestiging niet-ingeschrevene
+5.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Vestiging niet-ingeschrevene’ is het registreren van een
+persoon in de BRP die zich voor het eerst in Nederland vestigt3.
+De persoon die zich vestigt kan ook een kind betreffen waarbij sprake is van een in het buitenland
+uitgesproken zogenaamde ‘zwakke’ adoptie. Bij de registratie worden naast de oorspronkelijke
+ouder(s) ook de adoptie-ouder(s) opgenomen.
+De aangifte kan in persoon worden gedaan of ambtshalve. Aangifte in persoon kan worden gedaan
+door de betrokken ingezetene zelf, door diens partner, inwonend ouder, meerderjarig inwonend
+kind, gezaghouder, meerderjarige gemachtigde, verzorger of door het hoofd van een instelling
+waar de ingezetene verblijft. In de BRP wordt alleen de 'hoedanigheid' van de aangever
+geregistreerd, niet welke persoon aangifte heeft gedaan.
+Tegelijk met de inschrijving kan ook een verstrekkingsbeperking worden geregistreerd. Door het
+direct registreren van de aantekening met betrekking tot de verstrekkingsbeperking wordt
+voorkomen dat voor de persoon ongewenste mutatieberichten of volledigberichten naar afnemers
+verstuurd worden.
+5.1.1
+•
+•
+
+Voor het opnemen van de immigratiegegevens en de adresgegevens is de ‘aangifte van verblijf
+en adres’ zelf de bron waaraan deze gegevens worden ontleend;
+Voor alle op te nemen gegevens van deze persoon geldt dat daarvoor brondocumenten moeten
+worden overgelegd.
+
+5.1.2
+•
+•
+
+Brondocumenten
+
+Betrokken personen
+
+De persoon die zich vestigt
+Maximaal 4 Ouder(s)4, waarvan er maximaal één een OUWKIG is. Tevens kan een ouder
+onbekend of juridisch afwezig zijn.
+
+5.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [8].
+5.1.4
+•
+
+De gemeente waar de persoon zich vestigt/woont of een briefadres houdt.
+
+5.1.5
+•
+•
+•
+•
+•
+•
+•
+•
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Identificatienummers
+Naam (voornamen, geslachtsnaamcomponent, samengestelde naam en naamgebruik, waarbij
+de laatste 2 groepen worden afgeleid)
+Geboorte
+Geslacht
+Inschrijving en bijhouding (beide worden afgeleid)
+Adres
+Migratie (alleen het vorige land van verblijf wordt geregistreerd)
+Nationaliteit(en)5 of Staatloosheid6
+
+3
+
+Niet eerder in de BRP/GBA stond ingeschreven.
+Onder de term ouder wordt begrepen de OUWKIG, de NOUWKIG alsmede de ouder van wie niet bekend is of deze een
+OUWKIG of een NOUWKIG is.
+5 In tegenstelling tot sterke adoptie wordt bij zwakke adoptie de Nederlandse nationaliteit niet ontleend aan de
+adoptieouder(s). Daarom wordt in deze administratieve handeling daar ook niet op gecontroleerd.
+4
+
+Status: Definitief, versie: 0.60
+
+Pagina 21 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+•
+•
+•
+
+5.2
+
+Bijzondere verblijfsrechtelijke positie
+Verstrekkingsbeperking
+Familierechtelijke betrekking inclusief eventuele betrokkenheden ouder/OUWKIG en
+NOUWKIG7. Vanwege zwakke adoptie kunnen er tot 4 ouders worden geregistreerd. Maximaal
+1 daarvan is de OUWKIG.
+Let op: Wanneer de ouder/OUWKIG of NOUWKIG als pseudo-persoon wordt vastgelegd dan
+worden de volgende 4 groepen vastgelegd: Identificatienummers (optioneel), Samengestelde
+naam, Geboorte en Geslachtsaanduiding.
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie geboorte
+Geen bijzonderheden voor deze actie.
+
+•
+
+Nevenactie Registratie geslachtsaanduiding
+Geen bijzonderheden voor deze actie.
+
+•
+
+Nevenactie Registratie geslachtsnaam
+Geen bijzonderheden voor deze actie.
+
+•
+
+Nevenactie Registratie voornaam (optioneel)
+Geen bijzonderheden voor deze actie.
+
+•
+
+Nevenactie Registratie identificatienummers
+Geen bijzonderheden voor deze actie.
+
+•
+
+Nevenactie Registratie ouder (optioneel)
+Vanwege zwakke adoptie kunnen er tot 4 ouders worden geregistreerd. Maximaal 1 daarvan is
+de OUWKIG.
+
+•
+
+Nevenactie Registratie adres
+De volgende attributen worden afgeleid vastgelegd en komen dus niet voor in het bericht:
+Persoon.Bijhouding
+Element
+
+Afleiding
+
+Bijhoudingsaard
+
+‘Ingezetene’
+
+Nadere bijhoudingsaard
+
+‘Actueel’
+
+Partijcode
+
+Persoon \ Adres.Gemeente.Partij
+
+Persoon.Inschrijving
+Element
+
+Afleiding
+
+Datum inschrijving
+
+Actie.Datum aanvang geldigheid
+
+Versienummer
+
+1
+
+Datum/tijdstempel
+
+Systeem datum/tijd
+
+6
+
+Indien de nationaliteit niet direct kan worden vastgesteld wordt de nationaliteit ‘onbekend’. In uitzonderlijke situaties kan
+er sprake zijn van staatloosheid.
+7 Indien er sprake is van symmetrische verwerking dan zijn deze gegevens ook zichtbaar op de persoonslijsten van de
+ouders.
+
+Status: Definitief, versie: 0.60
+
+Pagina 22 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+Hierboven zijn alleen de elementen beschreven die specifiek zijn voor deze handeling. Voor de
+generieke elementen wordt verwezen naar paragraaf 19.1.
+•
+
+Nevenactie Registratie migratie
+De volgende attributen worden afgeleid vastgelegd en komen dus niet voor in het bericht:
+Persoon.Migratie
+Bij de registratie van deze groep komt een eventueel bestaande niet-vervallen voorkomen
+van Persoon.Migratie te vervallen. Hierbij is de volgende afleiding toepassing:
+Element
+
+Afleiding
+
+Soort migratie
+
+‘Immigratie’
+
+•
+
+Nevenactie Registratie nationaliteit (optioneel)
+Geen bijzonderheden voor deze actie.
+
+•
+
+Nevenactie Registratie staatloos (optioneel)
+Geen bijzonderheden voor deze actie.
+
+•
+
+Nevenactie Registratie verstrekkingsbeperking (optioneel)
+Geen bijzonderheden voor deze actie.
+
+•
+
+Nevenactie Registratie bijzondere verblijfsrechtelijke positie (optioneel)
+Geen bijzonderheden voor deze actie.
+
+Bij deze administratieve handeling worden voor het controleren van de regels met een tijdsaspect
+2 peildatums gebruikt: een peildatum met betrekking tot de geboorte en een peildatum m.b.t. de
+inschrijving.
+De ‘peildatum’ is ‘Datum geboorte’ voor de volgende acties:
+•
+
+Registratie geboorte
+
+NB De acties ‘Registratie geslachtsaanduiding’, ‘Registratie geslachtsnaam’, ‘Registratie voornaam’,
+‘Registratie ouder’, ‘Registratie nationaliteit’ en ‘Registratie staatloos’ staan hier niet vermeld
+omdat de ‘Datum aanvang geldigheid’ van de betreffende groepen na ‘Datum geboorte’ kunnen
+liggen.
+De ‘peildatum’ is ‘Datum aanvang adreshouding’ (is de datum van inschrijving) voor de overige
+acties.
+
+5.3
+
+Aanvullende informatie voor LO en HUP
+•
+
+•
+
+Met deze administratieve handeling wordt een beperkte set van gegevens vastgelegd
+(zoals de naam-, geboorte-, oudergegevens, gegevens over het land van herkomst en het
+huidig adres). De overige gegevens, zoals buitenlands persoonsnummer, huwelijken,
+kinderen, historische namen en historische nationaliteiten worden, indien van toepassing,
+vervolgens met elementaire administratieve handelingen vastgelegd.
+De persoon die zich vestigt kan zijn opgenomen als gerelateerde persoon bij een al
+ingeschrevene. Deze pseudo-persoon kan ook een A-nr en/of een BSN hebben, zie
+Aspectbeschrijving – Gerelateerden en Identificatienummers [12] voor meer uitleg. In dat
+geval moeten identificatienummers opgenomen worden bij de in te schrijven persoon.
+
+Status: Definitief, versie: 0.60
+
+Pagina 23 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+6 Vestiging niet-ingezetene
+6.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Vestiging niet-ingezetene’ is het registreren van een
+persoon als ingezetene in de BRP voor situaties waarbij:
+•
+
+de persoon zich vestigt in Nederland en als niet-ingezetene is ingeschreven in de BRP. In
+het eerste geval is de nadere bijhoudingsaard gevuld met de ‘R’ van ‘Rechtstreeks
+ingezetene’. In het tweede geval is de nadere bijhoudingsaard gevuld met de ‘E’ van
+‘Emigratie’, ‘M’ van ‘Ministerieel Besluit’ of ‘V’ van ‘Vertrokken onbekend waarheen’.
+
+De persoon die zich vestigt kan zijn opgenomen als gerelateerde persoon bij een al ingeschrevene.
+Er zijn twee typen van een niet-ingezeten persoon:
+•
+•
+
+Rechtstreeks niet-ingezetene: persoon die rechtstreeks in de RNI ingeschreven is. Bij deze
+niet-ingezetenen staan geen ouders, partners en kinderen geregistreerd;
+Voormalig (niet-overleden) ingezetene: persoon die eerder als ingezetene geregistreerd is
+geweest. Bij deze niet-ingezetenen kunnen relaties zijn opgenomen (ouders, partners of
+kinderen). Omdat bij deze ingezetenen al ouders geregistreerd kunnen zijn, is het niet
+toegestaan dat nogmaals ouders worden geregistreerd.
+
+De aangifte kan in persoon worden gedaan of ambtshalve. Aangifte in persoon kan worden gedaan
+door de betrokken ingezetene zelf of door diens partner, inwonend ouder, meerderjarig inwonend
+kind, gezaghouder, meerderjarige gemachtigde, verzorger of door het hoofd van een instelling
+waar de ingezetene verblijft. In de BRP wordt alleen de 'hoedanigheid' van de aangever
+geregistreerd, niet welke persoon aangifte heeft gedaan.
+Tegelijk met de inschrijving kan ook een verstrekkingsbeperking worden geregistreerd. Door het
+direct registreren van de aantekening met betrekking tot de verstrekkingsbeperking wordt
+voorkomen dat voor de persoon ongewenste mutatieberichten of volledigberichten naar afnemers
+verstuurd worden.
+6.1.1
+•
+•
+
+Brondocumenten
+
+Voor het opnemen van de immigratiegegevens en de adresgegevens is de ‘aangifte van verblijf
+en adres’ zelf de bron waaraan deze gegevens worden ontleend;
+Voor alle nieuw op te nemen of te wijzigen gegevens van deze persoon geldt dat daarvoor
+brondocumenten moeten worden overgelegd.
+
+6.1.2
+
+Betrokken personen
+
+Als het een vestiging van een rechtstreeks niet-ingezetene betreft zijn de volgende personen
+betrokken:
+•
+•
+•
+
+De persoon die zich vestigt
+Ouder / OUWKIG (optioneel)
+Ouder / NOUWKIG (optioneel)
+
+Als het een vestiging van een voormalig ingezetene betreft zijn de volgende personen betrokken:
+•
+
+De persoon die zich vestigt
+
+6.1.3
+
+Proces
+
+Vooraf is gecontroleerd of de persoon al is ingeschreven en is geconstateerd dat hij/zij als nietingezetene is opgenomen in de BRP.
+6.1.4
+•
+
+Bijhoudings(voorstel)partijen
+
+Woongemeente of gemeente waar de persoon een briefadres houdt.
+
+Status: Definitief, versie: 0.60
+
+Pagina 24 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+6.1.5
+•
+•
+•
+•
+•
+•
+
+•
+
+6.2
+
+Vastgelegde gegevens
+
+Bijhouding
+Adres
+Migratie (alleen het vorige land van verblijf wordt geregistreerd)
+Bijzondere verblijfsrechtelijke positie
+Verstrekkingsbeperking
+Familierechtelijke betrekking inclusief eventuele betrokkenheden OUWKIG en NOUWKIG 8.
+Vanwege zwakke adoptie kunnen er tot 4 ouders worden geregistreerd. Maximaal 1 daarvan is
+de OUWKIG.
+Wanneer de OUWKIG of NOUWKIG als pseudo-persoon wordt vastgelegd dan worden de
+volgende 4 groepen vastgelegd: Identificatienummers (optioneel), Samengestelde naam,
+Geboorte en Geslachtsaanduiding.
+Let op: Voor voormalig ingezetenen mogen geen ouders geregistreerd worden.
+Verificatiegegevens vervallen naar de formele historie.
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie adres
+De volgende attributen worden afgeleid vastgelegd en komen dus niet voor in het bericht:
+Persoon.Bijhouding
+Element
+
+Afleiding
+
+Bijhoudingsaard
+
+‘Ingezetene’
+
+Nadere bijhoudingsaard
+
+‘Actueel’
+
+Partijcode
+
+Persoon \ Adres.Gemeente.Partij
+
+Persoon \ Verificatie
+Alle niet-vervallen voorkomens van deze groep komen te vervallen.
+Hierboven zijn alleen de elementen beschreven die specifiek zijn voor deze handeling. Voor de
+generieke elementen wordt verwezen naar paragraaf 19.1.
+•
+
+Nevenactie Registratie migratie
+De volgende attributen worden afgeleid vastgelegd en komen dus niet voor in het bericht:
+Persoon.Migratie
+Bij de registratie van deze groep komt een eventueel bestaande niet-vervallen voorkomen
+van ‘Persoon.Migratie’ te vervallen. Hierbij is de volgende afleiding toepassing:
+Element
+
+Afleiding
+
+Soort
+
+‘Immigratie’
+
+•
+
+Nevenactie Registratie ouder (n.v.t. voor rechtstreeks niet-ingezetenen, anders
+optioneel)
+Vanwege zwakke adoptie kunnen er tot 4 ouders worden geregistreerd. Maximaal 1 daarvan is
+de OUWKIG.
+
+•
+
+Nevenactie Registratie verstrekkingsbeperking (optioneel)
+Geen bijzonderheden voor deze actie.
+
+8
+
+Indien er sprake is van symmetrische verwerking dan zijn deze gegevens ook zichtbaar op de persoonslijsten van de
+ouders.
+
+Status: Definitief, versie: 0.60
+
+Pagina 25 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+•
+
+Nevenactie Registratie bijzondere verblijfsrechtelijke positie (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang adreshouding’ van de groep ‘Adres’.
+
+6.3
+
+Aanvullende informatie voor LO en HUP
+
+Bij deze administratieve handeling wordt een beperkte set van gegevens vastgelegd, zoals
+immigratie- en adresgegevens. De overige gegevens, zoals buitenlands persoonsnummer,
+huwelijken, kinderen, historische namen en historische of nieuwe nationaliteiten, worden met
+elementaire administratieve handelingen later vastgelegd of gewijzigd.
+
+Status: Definitief, versie: 0.60
+
+Pagina 26 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+7 Constatering verblijf kind
+7.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Constatering verblijf kind’ is het registreren van een
+geborene in de BRP voor situaties waarbij:
+•
+•
+
+•
+
+•
+•
+
+de geboorte in Nederland heeft plaats gevonden,
+en de OUWKIG:
+o geen ingezetene is op de geboortedatum (de OUWKIG kan wel als niet-ingezetene
+geregistreerd zijn). Let op: een overleden persoon staat geregistreerd als ‘ingezetene’
+maar is formeel geen ‘ingezetene’. Er moet hier ook naar de nadere bijhoudingsaard
+(ongelijk ‘Overleden’) worden gekeken;
+o of ontbreekt (het kan voorkomen dat een kind conform vreemd recht geen juridische
+ouder heeft)9;
+o of onbekend is (naar Nederlands recht heeft een kind altijd een moeder10.
+en de NOUWKIG:
+o een ingezetene, niet-ingezetene of niet-ingeschrevene is11;
+o of ontbreekt;
+o of onbekend is;
+en de inschrijving direct plaatsvindt na de geboorte (het kind heeft dus nooit in het buitenland
+gewoond);
+een eventuele erkenning of naamskeuze heeft plaatsgevonden.
+
+De inschrijving vindt plaats op basis van een ‘aangifte verblijf en adres’.
+Tegelijk met de inschrijving kan ook een verstrekkingsbeperking12 worden verwerkt. Door het
+direct registreren van de aantekening met betrekking tot de verstrekkingsbeperking is deze
+meteen van toepassing en word ongewenste levering van gegevens aan afnemers voorkomen.
+7.1.1
+•
+•
+
+De bron voor de administratieve handeling is een Nederlandse Geboorteakte (met eventuele
+latere vermelding).
+Voor aan te vullen gegevens van deze persoon geldt dat daarvoor brondocumenten moeten
+worden overlegd.
+
+7.1.2
+•
+•
+•
+
+Brondocumenten
+
+Betrokken personen
+
+Kind
+OUWKIG (optioneel)
+NOUWKIG (optioneel)
+
+7.1.3
+
+Proces
+
+De aangifte kan worden gedaan door de ouder, gezaghouder, meerderjarige gemachtigde,
+verzorger, door het hoofd van een instelling of ambtshalve. In de BRP wordt alleen de
+'hoedanigheid' van de aangever geregistreerd, niet welke persoon aangifte heeft gedaan.
+De woongemeente van het kind dient het bijhoudingsvoorstel in.
+De geboortegemeente mag géén bijhoudingsvoorstel aanbieden, behalve als de geboortegemeente
+ook de woongemeente van het kind is.
+7.1.4
+•
+
+Bijhoudings(voorstel)partijen
+
+Woongemeente van het kind
+
+9
+
+Er wordt géén betrokkenheid vastgelegd bij de familierechtelijke betrekking
+Er wordt wél een betrokkenheid vastgelegd maar zonder verwijzing naar een persoon
+11 De situatie waarbij wél de NOUWKIG bekend is en niet de OUWKIG staan we, hoewel dit sporadisch zal voorkomen, toe.
+12 Volledig of specifiek
+10
+
+Status: Definitief, versie: 0.60
+
+Pagina 27 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+7.1.5
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+7.2
+
+Vastgelegde gegevens
+
+Identificatienummers
+Naam (voornamen, geslachtsnaamcomponent, samengestelde naam en naamgebruik. Waarbij
+samengestelde naam en naamgebruik worden afgeleid)
+Geboorte
+Geslachtsaanduiding
+Inschrijving en bijhouding
+Adres
+Nationaliteit(en) of Staatloosheid13
+Bijzondere verblijfsrechtelijke positie (afgeleid van ouders)
+Verstrekkingsbeperking
+Familierechtelijke betrekking inclusief eventuele betrokkenheden OUWKIG en NOUWKIG.
+Wanneer de OUWKIG of NOUWKIG als pseudo-persoon wordt vastgelegd dan worden de
+volgende 4 groepen vastgelegd: Identificatienummers (optioneel), Samengestelde naam,
+Geboorte en Geslachtsaanduiding.
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie ingezetene
+Geen bijzonderheden voor deze actie.
+
+•
+
+Nevenactie Registratie identificatienummers
+Geen bijzonderheden voor deze actie.
+
+•
+
+Nevenactie Registratie adres
+De volgende attributen worden afgeleid vastgelegd en komen dus niet voor in het bericht:
+Persoon.Bijhouding
+Element
+
+Afleiding
+
+Bijhoudingsaard
+
+‘Ingezetene’
+
+Nadere bijhoudingsaard
+
+‘Actueel’
+
+Partijcode
+
+Persoon \ Adres.Gemeente.Partij
+
+Persoon.Inschrijving (Kind)
+Element
+
+Afleiding
+
+Datum inschrijving
+
+Actie.Datum aanvang geldigheid
+
+Versienummer
+
+1
+
+Datum/tijdstempel
+
+Systeem datum/tijd
+
+Hierboven zijn alleen de elementen beschreven die specifiek zijn voor deze handeling. Voor de
+generieke elementen wordt verwezen naar paragraaf 19.1.
+•
+
+Nevenactie Registratie nationaliteit (optioneel)
+Geen bijzonderheden voor deze actie.
+
+13
+
+Indien de nationaliteit niet direct kan worden vastgesteld wordt de nationaliteit ‘onbekend’. In uitzonderlijke situaties
+kan er sprake zijn van staatloosheid.
+
+Status: Definitief, versie: 0.60
+
+Pagina 28 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+•
+
+Nevenactie Registratie staatloos (optioneel)
+Geen bijzonderheden voor deze actie.
+
+•
+
+Nevenactie Registratie verstrekkingsbeperking (optioneel)
+Geen bijzonderheden voor deze actie.
+
+Bij deze administratieve handeling worden voor het controleren van de regels met een tijdsaspect
+2 peildatums gebruikt: een peildatum met betrekking tot de geboorte en een peildatum m.b.t. de
+inschrijving.
+De ‘peildatum’ is ‘Datum geboorte’ voor de volgende acties:
+•
+•
+•
+
+Registratie ingezetene
+Registratie nationaliteit
+Registratie staatloos
+
+De ‘peildatum’ is ‘Datum aanvang adreshouding’ (is de datum van inschrijving) voor de volgende
+acties:
+•
+•
+•
+
+7.3
+
+Registratie adres
+Registratie identificatienummers
+Registratie verstrekkingsbeperking
+
+Aanvullende informatie voor LO en HUP
+
+Bij deze administratieve handeling wordt een beperkte set van gegevens vastgelegd zoals die
+geldig zijn op het tijdstip van registratie. De overige gegevens, zoals bijvoorbeeld de historische
+naam vanaf de geboortedatum tot de datum erkenning bij geboorte, buitenlands persoonsnummer,
+worden met elementaire administratieve handelingen vastgelegd.
+
+Status: Definitief, versie: 0.60
+
+Pagina 29 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+8 Wijziging adres infrastructureel
+8.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Wijziging adres infrastructureel’ is de registratie van de
+wijziging van het adres van één ingezetene als gevolg van een binnengemeentelijke
+infrastructurele wijziging waarbij het oude en het nieuwe adres in dezelfde gemeente zijn gelegen.
+Aanleiding is een binnengemeentelijke infrastructurele wijziging. Onder binnengemeentelijke
+infrastructurele wijzigingen worden de volgende gebeurtenissen verstaan:
+•
+•
+•
+•
+•
+•
+•
+•
+
+wijziging in de ‘Afgekorte naam openbare ruimte’;
+wijziging in de ‘Naam openbare ruimte’;
+hernummering (huisnummer, huisletter, en huisnummertoevoeging, incl. splitsen en
+samenvoegen van panden);
+postcodewijziging;
+woonplaatsnaamwijziging;
+wijziging in de (BAG) ‘Identificatiecode adresseerbaar object’;
+wijziging in de (BAG) ‘Identificatiecode nummeraanduiding’;
+wijziging in ‘Locatieomschrijving’.
+
+‘Locatie ten opzichte van adres’ ontbreekt in bovenstaande opsomming omdat deze geen
+aanleiding geeft tot een infrastructurele wijziging. Het kan echter wel onderdeel uitmaken van het
+nieuwe op te geven adres.
+Kenmerkend voor infrastructurele wijzigingen is dat het adres van de betrokken persoon wijzigt
+zonder dat er fysiek wordt verhuisd.
+Alleen personen waarbij de naderere bijhoudingsaard ‘Actueel’ of ‘Overleden’ is kunnen worden
+bijgehouden.
+8.1.1
+
+Brondocumenten
+
+Brondocumenten zijn niet van toepasing.
+8.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon (Ingezetene)
+
+8.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [8].
+8.1.4
+
+Bijhoudings(voorstel)partijen
+
+De bijhoudingspartij van de hoofdpersoon
+8.1.5
+•
+
+8.2
+
+Vastgelegde gegevens
+
+Adres
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie adres
+De volgende gegevens worden afgeleid geregistreerd en komen dus niet voor in het bericht:
+Persoon \ Adres.Standaard
+Element
+
+Status: Definitief, versie: 0.60
+
+Afleiding
+
+Pagina 30 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+Soort
+
+Overnemen uit het voorkomen dat door deze actie komt te vervallen.
+Oftewel adressoort wijzigt niet bij infrastructurele wijzigingen.
+
+Gemeente
+
+Persoon \ Adres.Gemeente van het voorkomen dat door deze
+registratie komt te vervallen.
+
+Aangever adreshouding
+
+<leeg>
+
+Reden wijziging
+
+‘I’ (Infrastructureel)
+
+Datum aanvang adreshouding
+
+Overnemen uit het voorkomen dat door deze actie komt te vervallen.
+(Datum aanvang adreshouding wijzigt niet bij infrastructurele
+wijzigingen).14
+
+Persoon aangetroffen op
+adres?
+
+Overnemen uit het voorkomen dat door deze actie komt te vervallen.
+
+Hierboven zijn alleen de elementen beschreven die specifiek zijn voor deze handeling. Voor de
+generieke elementen wordt verwezen naar paragraaf 19.1.
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’ van de actie.
+
+8.3
+
+Aanvullende informatie voor LO en HUP
+
+Het is niet mogelijk gelijktijdig een verstrekkingsbeperking vast te leggen omdat het verzoek niet
+afkomstig is van de persoon zelf.
+
+14
+
+Dit is een andere werking dan bij LO GBA. Daar werd de ‘Datum aanvang adreshouding’ wel aangepast. Dit wordt echter
+beschouwd als een ‘weeffout’ in LO GBA. In LO BRP wordt dit verbeterd.
+
+Status: Definitief, versie: 0.60
+
+Pagina 31 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+9 Wijziging gemeente infrastructureel
+9.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Wijziging gemeente infrastructureel’ is de registratie
+van de wijziging van de bijhoudingspartij en eventueel het adres van één persoon als gevolg van
+een intergemeentelijke infrastructurele wijziging.
+Aanleiding is een intergemeentelijke infrastructurele wijziging. Onder intergemeentelijke
+infrastructurele wijzigingen worden de volgende gebeurtenissen verstaan:
+•
+•
+•
+•
+
+gemeentenaamswijziging;
+grenscorrectie waarbij de betrokken gemeenten blijven bestaan;
+samenvoeging van gemeenten waarbij een of meerdere gemeenten verdwijnen;
+opdeling van een gemeente in een aantal nieuwe gemeenten.
+
+Kenmerkend voor infrastructurele wijzigingen is dat het adres van de betrokken persoon wijzigt
+zonder dat er fysiek wordt verhuisd.
+Alleen personen waarbij de naderere bijhoudingsaard ‘Actueel’ is kunnen worden bijgehouden.
+9.1.1
+
+Brondocumenten
+
+Brondocumenten zijn niet van toepasing.
+9.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon (Ingezetene)
+
+9.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [8].
+9.1.4
+
+Bijhoudings(voorstel)partijen
+
+De partij die deze handeling mag uitvoeren is de gemeente van het nieuwe adres.
+9.1.5
+•
+•
+
+9.2
+
+Vastgelegde gegevens
+
+Bijhouding
+Adres
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie adres
+De volgende gegevens worden afgeleid geregistreerd en komen dus niet voor in het bericht:
+Persoon.Bijhouding
+Element
+
+Afleiding
+
+Bijhoudingsaard
+
+Overnemen van het voorkomen dat door deze actie komt te vervallen (in
+feite blijft de waarde ‘Ingezetene’).
+
+Nadere bijhoudingsaard
+
+Overnemen van het voorkomen dat door deze actie komt te vervallen (in
+feite blijft de waarde ‘Actueel’ of ‘Overleden’).
+
+Partij code
+
+Persoon\ Adres.Gemeente.Partij
+
+Status: Definitief, versie: 0.60
+
+Pagina 32 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+NB In tegenstelling tot paragraaf 2.4 Historie in UCS BY.0.VB – Verwerk bijhoudingsvoorstel
+[9] moet voor de groep Bijhouding bij deze specifieke AH de ‘Datum Aanvang Geldigheid’
+afgeleid worden van ‘Persoon \ Adres.Datum aanvang adreshouding’.
+Persoon \ Adres.Standaard
+Element
+
+Afleiding
+
+Soort
+
+Overnemen uit het voorkomen dat door deze actie komt te vervallen.
+Oftewel adres soort wijzigt niet bij infrastructurele wijzigingen.
+
+Aangever adreshouding
+
+<leeg>
+
+Reden wijziging
+
+‘I’ (Infrastructureel)
+
+Datum aanvang adreshouding
+
+Overnemen uit het voorkomen dat door deze actie komt te vervallen.
+Datum aanvang adreshouding wijzigt niet bij infrastructurele
+wijzigingen.15
+
+Persoon aangetroffen op
+adres?
+
+Overnemen uit het voorkomen dat door deze actie komt te vervallen.
+
+Hierboven zijn alleen de elementen beschreven die specifiek zijn voor deze handeling. Voor de
+generieke elementen wordt verwezen naar paragraaf 19.1.
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’ van de actie.
+
+9.3
+•
+
+•
+
+Aanvullende informatie voor LO en HUP
+Omdat de gemeente van de persoon wijzigt, maar niet op diens eigen verzoek, moet er
+gecontroleerd worden of de persoon een (specifieke) verstrekkingsbeperking heeft op basis van
+een gemeentelijke verordening van de oude gemeente. De nieuwe gemeente kan namelijk een
+andere verordening hebben waardoor de verordening van de oude gemeente na de wijziging
+niet meer geldig is. Indien dit het geval is moet het college de betreffende persoon
+aanschrijven met de vraag of deze verstrekkingsbeperking overgezet moet worden naar de
+nieuwe gemeente. Dit overzetten gebeurt middels de separate administratieve handeling
+‘Wijziging Verstrekkingsbeperking’.
+De reden dat een verstrekkingsbeperking niet bij een ‘Wijziging gemeente infrastructureel’ kan
+worden meegegeven is dat bij een gemeentelijke herindeling de adreswijzigingen door een
+geautomatiseerd batch-proces uitgevoerd wordt. Elke ingezetene kan in principe een andere
+verstrekkingsbeperking op basis van een gemeentelijke verordening hebben. Het overzetten
+van al deze verschillende verordeningen naar een andere verordening valt niet goed te
+automatiseren.
+De persoonslijsten van personen die zijn overleden na of op de feitdatum worden met de AH
+‘wijziging infrastructureel bij overledene’ gewijzigd.
+
+15
+
+Dit is een andere werking dan bij LO GBA. Daar werd de ‘Datum aanvang adreshouding’ wel aangepast. Dit wordt echter
+beschouwd als een ‘weeffout’ in LO GBA. In LO BRP wordt dit verbeterd.
+
+Status: Definitief, versie: 0.60
+
+Pagina 33 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+10 Wijziging gemeente infrastructureel bij overledene
+10.1 Functionele context
+Het doel van de administratieve handeling ‘Wijziging gemeente infrastructureel bij overledene’ is
+het registreren van de bijhoudingspartij van een persoon voor situaties waarbij:
+•
+•
+
+de persoon geregistreerd staat met een nadere bijhoudingsaard ‘Overleden’;
+de feitdatum op of na de datum van overlijden ligt.
+
+Deze handeling is een aanvulling op de handeling ‘Wijziging gemeente infrastructureel’. Met die
+handeling wordt het adres gewijzigd wat bij overledenen niet is toegestaan. Om de
+bijhoudingspartij dan bij infrastructurele wijzigingen toch aan te kunnen passen bestaat deze
+handeling.
+10.1.1 Brondocumenten
+N.v.t.
+10.1.2 Betrokken personen
+•
+
+De overleden persoon
+
+10.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS-BY.0.AV – Afhandeling verzoek [8].
+10.1.4 Bijhoudings(voorstel)partijen
+•
+
+De nieuwe Bijhoudingspartij
+
+10.1.5 Vastgelegde gegevens
+•
+
+Bijhouding
+
+10.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande actie.
+•
+
+Registratie bijhouding
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’ van de actie.
+
+Status: Definitief, versie: 0.60
+
+Pagina 34 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+11 Wijziging bijzondere verblijfsrechtelijke positie
+11.1 Functionele context
+Het doel van de administratieve handeling ‘Wijziging bijzondere verblijfsrechtelijke positie’ is de
+registratie van de verkrijging of beëindiging van de bijzondere verblijfsrechtelijke positie van een
+ingeschrevene.
+De Minister van Buitenlandse Zaken geeft bij de gemeente aan welke personen een bijzondere
+verblijfsrechtelijke positie hebben of waar deze is beëindigd.
+Alleen personen waarbij de naderere bijhoudingsaard ‘Actueel’ of ‘Overleden’ is kunnen worden
+bijgehouden.
+11.1.1 Brondocumenten
+•
+
+Mededeling Bijzondere Verblijfsrechtelijke Positie
+
+11.1.2 Betrokken personen
+•
+
+Hoofdpersoon (ingeschrevene)
+
+11.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [8].
+11.1.4 Bijhoudings(voorstel)partijen
+•
+
+De bijhoudingspartij van de persoon.
+
+11.1.5 Vastgelegde gegevens
+•
+
+Bijzondere verblijfsrechtelijke positie
+
+11.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties. Eén van
+deze acties moet aanwezig zijn en ze mogen niet beide tegelijk worden gebruikt.
+•
+•
+
+Hoofdactie Registratie bijzondere verblijfsrechtelijke positie (optioneel)
+Geen bijzonderheden voor deze actie.
+Hoofdactie Beëindiging bijzondere verblijfsrechtelijke positie (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling is de systeemdatum.
+
+Status: Definitief, versie: 0.60
+
+Pagina 35 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+12 Wijziging verblijfsrecht
+12.1 Functionele context
+Het doel van de administratieve handeling ‘Wijziging verblijfsrecht’ is de registratie van de
+verkrijging of wijziging van het verblijfsrecht van een ingeschrevene (ingezetene en nietingezetene) op grond van een mededeling van de minister van V&J.
+Als een persoon geen verblijfsrecht (meer) heeft, wordt dit expliciet geregistreerd met de
+aanduiding verblijfsrecht ‘geen verblijfstitel (meer)’.
+12.1.1 Brondocumenten
+•
+•
+
+Mededeling Minister inzake verblijfsrecht
+Overig
+
+12.1.2 Betrokken personen
+•
+
+Hoofdpersoon (ingezetene als bijhoudingspartij van de hoofdpersoon indient, ingeschrevene als
+Bijhoudingsvoorstelorgaan indient)
+
+12.1.3 Proces
+In onderstaande sequence-diagram is aangegeven hoe op berichtniveau wijziging verblijfsrecht
+voor een persoon in een BRP gemeente verloopt bij automatisch fiatteren en bij niet automatisch
+fiatteren.
+
+Status: Definitief, versie: 0.60
+
+Pagina 36 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+In onderstaande sequence-diagram is aangegeven hoe op berichtniveau wijziging verblijfsrecht
+verloopt als het om een persoon in het GBA/RNI stelsel gaat. De alternatieve flow toont een
+foutbericht dat door de migratievoorziening naar de IND wordt gestuurd als de Migratie Voorziening
+een fout bij de verwerking constateert.
+
+12.1.4 Bijhoudings(voorstel)partijen
+
+•
+•
+
+Bijhoudingspartij van de hoofdpersoon
+Partij met de rol Bijhoudingsvoorstelorgaan (IND)
+
+12.1.5 Vastgelegde gegevens
+•
+
+Verblijfsrecht
+
+12.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande actie.
+•
+
+Hoofdactie Registratie verblijfsrecht
+Met deze actie wordt het verkrijgen en wijzigen van het verblijfsrecht geregistreerd.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang verblijfsrecht’.
+
+12.3 Aanvullende informatie voor LO en HUP
+Gegevens met betrekking tot het verblijfsrecht kunnen uitsluitend worden ontleend aan een
+mededeling van de minister van Veiligheid en Justitie, in dit geval de Immigratie en
+Naturalisatiedienst (IND).
+
+Status: Definitief, versie: 0.60
+
+Pagina 37 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+13 Correctie adres
+13.1 Functionele context
+Het doel van de administratieve handeling ‘Correctie adres’ is het corrigeren van de actuele en
+materieel historische gegevens van het adres16 op de persoonslijst van de hoofdpersoon. Dit
+betreft zowel Nederlandse als buitenlandse adressen.
+Oorzaak voor het corrigeren van het adres kan bijvoorbeeld zijn dat:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+de persoon onterecht is verhuisd (verkeerde persoon);
+er een fout is gemaakt in de datum van verhuizing;
+de straatnaam, postcode, woonplaats, huisnummer of huisletter foutief is;
+de (BAG) ‘Identificatiecode adresseerbaar object’, de (BAG) ‘Identificatiecode
+nummeraanduiding’, ‘Locatieomschrijving’ of ‘Locatie ten opzichte van adres’ verkeerd is
+opgenomen;
+‘Persoon aangetroffen op adres?’ onterecht is geregistreerd;
+er een historisch adres ontbreekt en moet worden toegevoegd (dit kan ook een woonadres in
+het buitenland zijn);
+een historisch adres foutief is;
+soort adres foutief is;
+de persoon ten onrechte is geëmigreerd;
+er een foutieve waarde is opgenomen bij de aangever adreshouding;
+een onterechte of een foutief verwerkte infrastructurele wijziging.
+
+13.1.1 Brondocumenten
+Voor deze handeling zijn brondocumenten niet van toepassing.
+13.1.2 Betrokken personen
+•
+
+Hoofdpersoon (ingezetene)
+
+13.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS-BY.0.AV – Afhandeling verzoek [8].
+13.1.4 Bijhoudings(voorstel)partijen
+
+•
+
+Bijhoudingspartij van de hoofdpersoon
+
+13.1.5 Vastgelegde gegevens
+Met deze administratieve handeling kunnen bestaande voorkomens van de volgende groep naar de
+formele historie vervallen en kunnen nieuwe voorkomens worden geregistreerd:
+•
+
+Persoon \ Adres.Standaard
+
+13.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met minimaal één van de onderstaande
+acties:
+•
+•
+
+Correctieverval Adres (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieregistratie Adres (optioneel)
+Geen bijzonderheden voor deze actie.
+
+16
+
+Actualiseringshandelingen m.b.t. het adres kunnen leiden tot het afgeleid registreren van gegevens in de groep
+Bijhouding. Om fouten als gevolg van deze handelingen te corrigeren moeten ook gegevens in de groep Bijhouding worden
+gecorrigeerd. Zie hiervoor hoofdstuk 5 in Aspectbeschrijving – Corrigeren [13].
+
+Status: Definitief, versie: 0.60
+
+Pagina 38 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+De peildatum voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+Status: Definitief, versie: 0.60
+
+Pagina 39 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+14 Correctie migratie
+14.1 Functionele context
+Het doel van de administratieve handeling ‘Correctie migratie’ is het corrigeren van de actuele en
+materieel historische gegevens van de migratiegegevens17 op de persoonslijst van de
+hoofdpersoon. Dit betreft zowel het vertrek naar het buitenland (emigratie) als de vestiging in
+Nederland (immigratie).
+Oorzaak voor het corrigeren van de migratiegegevens kan bijvoorbeeld zijn dat:
+•
+•
+•
+•
+•
+•
+•
+
+de persoon is geëmigreerd naar een verkeerd land/gebied of geïmmigreerd uit een verkeerd
+land/gebied;
+er een fout is gemaakt in de datum van vertrek naar het buitenland;
+er een foutief gegeven is geregistreerd bij het eerste adres van verblijf in het buitenland;
+er een foutieve waarde is opgenomen bij de aangever adreshouding;
+er een fout is gemaakt in de datum aanvang verblijf in Nederland;
+ontbrekende migratiegegevens moeten worden toegevoegd;
+de persoon is ten onrechte geïmmigreerd.
+
+14.1.1 Brondocumenten
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [13].
+14.1.2 Betrokken personen
+•
+
+Hoofdpersoon (ingezetene)
+
+14.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [8].
+14.1.4 Bijhoudings(voorstel)partijen
+
+•
+
+Bijhoudingspartij van de hoofdpersoon
+
+14.1.5 Vastgelegde gegevens
+Met deze administratieve handeling kunnen bestaande voorkomens van de volgende groep naar de
+formele historie vervallen en kunnen nieuwe voorkomens worden geregistreerd:
+•
+
+Persoon.Migratie
+
+14.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met minimaal één van de onderstaande
+acties:
+•
+•
+
+Correctieverval Migratie (optioneel)
+Geen bijzonderheden voor deze actie.
+Correctieregistratie Migratie (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+17
+
+Actualiseringshandelingen m.b.t. het migratiegegevens kunnen leiden tot het afgeleid registreren van gegevens in de
+groep Bijhouding. Om fouten als gevolg van deze handelingen te corrigeren moeten ook gegevens in de groep Bijhouding
+worden gecorrigeerd. Zie hiervoor hoofdstuk 5 in Aspectbeschrijving – Corrigeren [13].
+
+Status: Definitief, versie: 0.60
+
+Pagina 40 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+15 Correctie verblijfsrecht
+15.1 Functionele context
+Het doel van de administratieve handeling ‘Correctie verblijfsrecht’ is het corrigeren van de
+verblijfsrechtgegevens op de persoonslijst van de hoofdpersoon.
+Oorzaak voor het corrigeren van de verblijfsrechtgegevens kan bijvoorbeeld zijn dat:
+•
+•
+
+Er ten onrechte verblijfsrecht bij een verkeerde persoon is opgenomen
+Er een foutieve waarde bij de gegevens van het verblijfsrecht is opgenomen
+
+15.1.1 Brondocumenten
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan 18. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [13].
+15.1.2 Betrokken personen
+•
+
+Hoofdpersoon (ingezetene als bijhoudingspartij van de hoofdpersoon indient, ingeschrevene19
+als Bijhoudingsvoorstelorgaan indient)
+
+15.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [8].
+15.1.4 Bijhoudings(voorstel)partijen
+
+•
+•
+
+Bijhoudingspartij van de hoofdpersoon
+Partij met de rol Bijhoudingsvoorstelorgaan (IND)
+
+15.1.5 Vastgelegde gegevens
+Met deze administratieve handeling vervalt een bestaand voorkomen van de onderstaande groep
+naar de formele historie en wordt er optioneel een nieuw voorkomen van deze groep geregistreerd:
+•
+
+Persoon.Verblijfsrecht
+
+15.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met minimaal één van de onderstaande
+acties:
+•
+•
+
+Correctieverval Verblijfsrecht
+Geen bijzonderheden voor deze actie.
+Correctieregistratie Verblijfsrecht (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+15.3 Aanvullende informatie voor LO en HUP
+•
+
+Wanneer in deze casus bij het laten vervallen (geen verblijfstitel meer) van het verblijfsrecht
+een fout is gemaakt, bijvoorbeeld in de datum wordt de fout hersteld door met Wijziging
+
+18
+
+Er moet altijd ‘Mededeling Minister inzake verblijfsrecht’ als brondocument worden opgenomen. De BRP heeft hier geen
+controles voor.
+19 Indien dit een niet-ingeschrevene betreft zal een bijhoudingsnotificatie aan de migratievoorziening worden verstuurd die
+deze terug stuurt naar de BRP-partij die de correctie indiende.
+
+Status: Definitief, versie: 0.60
+
+Pagina 41 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+•
+
+verblijfsrecht de gegevens opnieuw te registreren. Er is immers in deze casus géén actueel
+voorkomen dat kan worden hersteld.
+Wanneer het verblijfsrecht ten onrechte is gewijzigd in ‘geen verblijfstitel meer’ dient de
+bijhoudingspartij contact op te nemen met de IND en te vragen een nieuw
+bijhoudingsvoorstelbericht toe te zenden.
+
+Status: Definitief, versie: 0.60
+
+Pagina 42 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+16 Correctie bijzondere verblijfsrechtelijke positie
+16.1 Functionele context
+Het doel van de administratieve handeling ‘Correctie bijzondere verblijfsrechtelijk positie’ is het
+corrigeren van een ten onrechte opgenomen20 indicatie bijzondere verblijfsrechtelijk positie (BVP)
+of de verantwoording hiervan op de persoonslijst van de hoofdpersoon.
+16.1.1 Brondocumenten
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [13].
+16.1.2 Betrokken personen
+•
+
+Hoofdpersoon (ingezetene)
+
+16.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [8].
+16.1.4 Bijhoudings(voorstel)partijen
+
+•
+
+Bijhoudingspartij van de hoofdpersoon
+
+16.1.5 Vastgelegde gegevens
+Met deze administratieve handeling vervalt een bestaand voorkomen van de onderstaande groep
+naar de formele historie en wordt er optioneel een nieuw voorkomen van deze groep geregistreerd:
+•
+
+Persoon.Bijzondere verblijfsrechtelijke positie
+
+16.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met minimaal één van de onderstaande
+acties:
+•
+•
+
+Correctieverval Bijzondere verblijfsrechtelijk positie
+Geen bijzonderheden voor deze actie.
+Correctieregistratie Bijzondere verblijfsrechtelijk positie (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+20
+
+Een ten onrechte beëindigde BVP wordt opnieuw geregistreerd met de administratieve handeling ‘Wijziging bijzondere
+verblijfsrechtelijke positie’.
+
+Status: Definitief, versie: 0.60
+
+Pagina 43 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+17 Speciale handeling t.b.v. de migratievoorziening
+Deze module kent ook de handeling ‘GBA - Verhuizing intergemeentelijk GBA naar BRP’ die
+specifiek voor aanroep vanuit de migratievoorziening bedoeld is.
+Deze handeling is geen losstaande handeling. Het is een voortzetting van een eerdere handeling,
+namelijk ‘Verhuizing intergemeentelijk’, waarbij de oorspronkelijke gemeente een GBA-gemeente
+betreft.
+Onderstaand sequence-diagram geeft voor een ‘Verhuizing intergemeentelijk’ aan hoe deze
+handeling samenhangt met de vervolghandeling ‘GBA - Verhuizing intergemeentelijk GBA naar
+BRP’.
+
+Het schema geeft op berichtniveau aan hoe een verhuizing van een GBA-gemeente naar een BRPgemeente verloopt. Duidelijk te zien is dat de totale flow in drie delen gesplitst is:
+•
+
+•
+
+•
+
+De eerste flow betreft het insturen van een AH ‘Verhuizing intergemeentelijk’ door de
+BRP-gemeente waar de persoon heen verhuist. De BRP Centrale Voorzieningen
+constateert (in het bijhoudingsplan) dat de gemeente van herkomst een GBAgemeente betreft. Daarop stuurt het een bijhoudingsnotificatie met bijhoudingssituatie
+‘GBA’ naar de migratievoorziening. Naar de BRP gemeente wordt een resultaatbericht
+geretourneerd met als resultaat ‘(Deels) uitgesteld’. Voor de BRP gemeente is het
+eerste bericht nu afgehandeld, terwijl aan de zijde van de migratievoorziening de
+verhuiscyclus gestart wordt;
+De werking van de verhuiscyclus wordt hier niet verder gedetailleerd. Voor meer
+informatie wordt verwezen naar de documentatie van de migratievoorziening. De
+verhuiscyclus kan slagen of falen (zowel in technische als functionele zin). Als de
+verhuiscyclus slaagt wordt de AH ‘GBA - Verhuizing intergemeentelijk GBA naar BRP’
+opgestart. Als de verhuiscyclus faalt, zal de migratievoorziening deze AH niet
+opstarten. In plaats daarvan zal de migratievoorziening een Fout-bericht sturen naar
+de BRP-gemeente. In de afbeelding hierboven is dit aangegeven in de alternatieve flow
+Alt 1. Het is dan aan de BRP-gemeente om het probleem te onderzoeken en op te
+lossen;
+Het opstarten van de AH ‘GBA - Verhuizing intergemeentelijk GBA naar BRP’ houdt in
+dat dit bericht door de migratievoorziening naar de BRP Centrale Voorzieningen wordt
+gestuurd. Deze constateert (in het bijhoudingsplan) dat de verhuizing afkomstig is van
+de migratievoorziening en dat de verhuizing doorgevoerd kan worden. Na verwerking
+
+Status: Definitief, versie: 0.60
+
+Pagina 44 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+van de verhuizing stuurt het een bijhoudingsnotificatie met bijhoudingssituatie
+‘Mededeling’ naar de nieuwe(!) gemeente. Immers, deze gemeente had al in de
+eerste fase van het proces een resultaatbericht ontvangen en moet ingelicht worden
+dat de verhuizing uiteindelijk geslaagd is. Daarnaast wordt door de BRP Centrale
+Voorzieningen een resultaatbericht ‘Verwerkt’ teruggestuurd naar de
+migratievoorziening.
+Als de BRP-verwerking faalt, dan zal dit middels een resultaatbericht ‘Foutief’
+teruggekoppeld aan de migratievoorziening. De migratievoorziening stuurt dan een Foutbericht naar de BRP-gemeente. Door de BRP-voorzieningen wordt geen notificatie naar de
+BRP-gemeente verstuurd. In de afbeelding hierboven is dit aangegeven in de alternatieve
+flow Alt 2.
+Samenvattend:
+•
+•
+
+•
+
+•
+
+Notificatie met bijhoudingssituatie ‘GBA’ wordt verstuurd naar de oude bijhoudingspartij /
+migratievoorziening;
+Notificatie met bijhoudingssituatie ‘Mededeling’ wordt ter informatie verstuurd naar de
+nieuwe bijhoudingspartij, omdat het een voortzetting betreft van een eerder ‘(Deels)
+uitgesteld’ bijhoudingsvoorstel;
+De verhuiscyclus aan de zijde van de migratievoorziening kan falen (zowel technisch als
+functioneel). De migratievoorziening stuurt dan een Fout-bericht naar de nieuwe
+gemeente.
+De verwerking aan de BRP-zijde kan falen (zowel technisch als functioneel). De
+migratievoorziening stuurt dan een Fout-bericht naar de nieuwe gemeente. De BRP
+Centrale Voorzieningen stuurt in dat geval geen notificatie.
+
+17.1 Aandachtspunten bij verwerking van GBA-handelingen
+Voor de GBA-handeling geldt dat de verwerkingswijze uitsluitend ‘Bijhouding’ kan zijn.
+‘Prevalidatie’ is niet van toepassing op bijhoudingsberichten die worden ontvangen van de
+migratievoorziening.
+Bij deze handeling kunnen regels redundant zijn ten opzichte van de migratievoorziening. Meer
+achtergrondinformatie over de reden hiervan is te vinden in hoofdstuk ‘GBA handelingen’ van
+Aspectbeschrijving – Controles [4].
+Daarnaast worden de deblokkeerbare regels voor deze handeling anders verwerkt. Deblokkeerbare
+regels zijn voor GBA handelingen niet relevant en moeten niet gecontroleerd worden. De
+deblokkeerbare regels zijn te herkennen aan de ‘D’ in de kolom ‘Niveau’ (meldingsniveau). Meer
+achtergrondinformatie over de reden hiervan is te vinden in paragraaf ‘Deblokkeren van
+deblokkeerbare meldingen’ van Aspectbeschrijving – Controles [4].
+
+Status: Definitief, versie: 0.60
+
+Pagina 45 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+18 GBA - Verhuizing intergemeentelijk GBA naar BRP
+18.1 Functionele context
+Doel van de administratieve handeling ‘GBA - Verhuizing intergemeentelijk GBA naar BRP’ is de
+registratie van de wijziging van het adres van een ingezetene waarbij het oude en het nieuwe
+adres in verschillende gemeenten zijn gelegen. Het oude adres behoort tot een GBA-gemeente en
+het nieuwe adres tot een BRP-gemeente.
+De AH ‘GBA - Verhuizing intergemeentelijk GBA naar BRP’ is afkomstig van de migratievoorziening
+en het betreft een voortzetting van een eerder bij de BRP binnengekomen AH ‘Verhuizing
+intergemeentelijk’.
+De functionele context is verder gelijk aan die van Verhuizing intergemeentelijk (paragraaf 3.1).
+18.1.1 Brondocumenten
+•
+
+Verzoek verstrekkingsbeperking
+
+18.1.2 Betrokken personen
+•
+
+Hoofdpersoon (Ingezetene)
+
+18.1.3 Proces
+N.v.t.
+18.1.4 Bijhoudings(voorstel)partijen
+Niet van topassing.
+18.1.5 Vastgelegde gegevens
+•
+•
+•
+
+Bijhouding
+Adres
+Verstrekkingsbeperking
+
+18.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie adres
+Zie paragraaf 3.3.
+
+•
+
+Nevenactie Registratie verstrekkingsbeperking (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang adreshouding’.
+
+Status: Definitief, versie: 0.60
+
+Pagina 46 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+19 Acties
+De generieke functionaliteit van de relevante acties binnen de context van deze module is in dit
+hoofdstuk per actie beschreven.
+
+19.1 Registratie adres
+In de actie wordt de ingezetene bepaald en het nieuwe ‘Adres’ opgenomen inclusief de
+(hoedanigheid van de) aangever en de reden voor de wijziging.
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+Persoon \ Adres.Standaard
+De volgende attributen worden afgeleid vastgelegd en komen dus niet voor in het bericht:
+Element
+
+Afleiding
+
+Land/gebied
+
+‘Nederland’
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+19.2 Registratie verstrekkingsbeperking
+Met de actie wordt binnen een administratieve handeling een wijziging ten aanzien van de
+specifieke dan wel volledige verstrekkingsbeperking verwerkt. In geval van een specifieke
+verstrekkingsbeperking moet de derde (andere instellingen of personen naast overheidsorganen
+die gegevens verstrekt krijgen die zij nodig hebben voor de uitvoering van hun taken) worden
+geïdentificeerd.
+Specifieke verstrekkingsbeperkingen worden door de registratie van een volledige
+verstrekkingsbeperking beëindigd. En omgekeerd worden ook een volledige verstrekkingsbeperking
+beëindigd door de registratie van een specifieke verstrekkingsbeperking.
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+Persoon.Verstrekkingsbeperking (volledige verstrekkingsbeperking)
+Bij de registratie van deze groep komt elke eventueel bestaande niet-vervallen Persoon \
+Verstrekkingsbeperking.Identiteit te vervallen.
+
+•
+
+Persoon \ Verstrekkingsbeperking.Identiteit (specifieke verstrekkingsbeperking)
+Bij de registratie van deze groep komt een eventuele bestaand niet-vervallen
+Persoon.Verstrekkingsbeperking te vervallen.
+
+19.3 Registratie verblijfsrecht
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+Persoon.Verblijfsrecht
+Bij de registratie van deze groep komt een eventueel bestaand niet-vervallen voorkomen
+van Persoon.Verblijfsrecht te vervallen.
+
+19.4 Registratie bijzondere verblijfsrechtelijke positie
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+Persoon.Bijzondere verblijfsrechtelijke positie
+Bij de registratie van deze groep komt een eventueel bestaand niet-vervallen voorkomen
+van Persoon. Bijzondere verblijfsrechtelijke positie te vervallen.
+
+Status: Definitief, versie: 0.60
+
+Pagina 47 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+19.5 Beëindiging bijzondere verblijfsrechtelijke positie
+Met de actie komt een bestaand niet-vervallen voorkomen van de groep Persoon.Bijzondere
+verblijfsrechtelijke positie te vervallen.
+
+19.6 Registratie ingezetene
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+Relatie.Identiteit
+Deze groep wordt afgeleid geregistreerd.
+Element
+
+Afleiding
+
+Soort
+
+‘Familierechtelijke betrekking’
+
+•
+
+Relatie.Standaard
+Deze groep wordt afgeleid geregistreerd. Voor een relatie van het soort Familierechtelijke
+betrekking blijft de groep leeg.
+
+•
+
+Betrokkenheid.Identiteit (Kind)
+Deze groep wordt afgeleid geregistreerd. Een Betrokkenheid kan pas worden geregistreerd
+ná afgeleide registratie van Relatie en Persoon.
+
+•
+
+•
+
+•
+
+Element
+
+Afleiding
+
+Rol
+
+‘Kind’
+
+Persoon.Identiteit
+Deze groep wordt bij het kind geregistreerd.
+Element
+
+Afleiding
+
+Soort
+
+‘Ingeschrevene’
+
+Persoon.Geslachtsaanduiding
+Deze groep wordt bij het kind geregistreerd.
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon.Geboorte
+Deze groep wordt bij het kind geregistreerd.
+Element
+
+Afleiding
+
+Land/gebied geboorte
+
+‘Nederland’
+
+•
+
+Persoon \ Voornaam.Identiteit
+Deze groep wordt bij het kind geregistreerd. Indien er sprake is van een namenreeks
+ontbreekt de voornaam.
+
+•
+
+Persoon \ Voornaam.Standaard
+Deze groep wordt bij het kind geregistreerd. Indien er sprake is van een namenreeks
+ontbreekt de voornaam.
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Status: Definitief, versie: 0.60
+
+Pagina 48 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+•
+
+•
+
+•
+
+•
+
+•
+
+Persoon \ Geslachtsnaamcomponent.Identiteit
+Deze groep wordt bij het kind geregistreerd.
+Element
+
+Afleiding
+
+Volgnummer
+
+‘1’
+
+Persoon \ Geslachtsnaamcomponent.Standaard
+Deze groep wordt bij het kind geregistreerd.
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon.Samengestelde naam
+Deze groep wordt bij het kind geregistreerd.
+Element
+
+Afleiding
+
+Voornamen
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Voorvoegsel
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Scheidingsteken
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Geslachtsnaamstam
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Predicaat
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Adellijke titel
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Afgeleid?
+
+‘Ja’
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon.Naamgebruik
+Deze groep wordt afgeleid geregistreerd.
+Element
+
+Afleiding
+
+Naamgebruik
+
+‘Eigen’
+
+Voornamen naamgebruik
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Voorvoegsel naamgebruik
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Scheidingsteken naamgebruik
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Geslachtsnaamstam naamgebruik
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Predicaat naamgebruik
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Adellijke titel naamgebruik
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Naamgebruik afgeleid?
+
+‘Ja’
+
+Persoon.Bijzondere verblijfsrechtelijke positie
+Deze groep wordt afgeleid geregistreerd. Als bij minimaal één van de met deze actie te
+registreren ouders een Bijzondere verblijfsrechtelijke positie geregistreerd staat moet deze
+bij het kind worden overgenomen.
+
+Onderstaande groepen worden bij de ouder opgenomen. Dit kan een OUWKIG of een
+NOUWKIG zijn. In het bericht wordt hier geen onderscheid tussen gemaakt. In het bericht
+kunnen geen, een (OWKIG of NOUWKIG) of twee (OUWKIG en NOUWKIG) ouder aanwezig zijn.
+
+Status: Definitief, versie: 0.60
+
+Pagina 49 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+Alleen bij de ouders die in het bericht aanwezig zijn is afgeleide registratie van onderstaande
+groepen van toepassing.
+•
+
+•
+
+•
+
+•
+
+•
+
+21
+
+Betrokkenheid.Identiteit (OUWKIG, NOUWKIG)
+Deze groep wordt afgeleid geregistreerd. Een ‘Betrokkenheid’ kan pas worden
+geregistreerd ná afgeleide registratie van ‘Relatie’ en, indien bekend en niet-ingezeten,
+Pseudo-persoon.
+Het is mogelijk dat de OUWKIG of NOUWKIG onbekend21 is, dan wordt de ‘Betrokkenheid’
+geregistreerd zonder ‘Betrokkenheid.Persoon’. In het bericht zal de persoon dan ook
+ontbreken.
+Element
+
+Afleiding
+
+Rol
+
+‘Ouder’
+
+Ouder.Ouderschap (OUWKIG, NOUWKIG)
+Deze groep wordt bij de OUWKIG of NOUWKIG geregistreerd.
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon.Identiteit (OUWKIG, NOUWKIG)
+Deze groep wordt afgeleid geregistreerd. Deze groep is alleen van toepassing voor de
+ouder die geregistreerd wordt als een pseudo-persoon.
+Element
+
+Afleiding
+
+Soort
+
+‘Pseudo-persoon’
+
+Persoon. Identificatienummers (OUWKIG, NOUWKIG)
+Deze groep is alleen van toepassing voor de ouder die geregistreerd wordt als een pseudopersoon.
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon.Geslachtsaanduiding (OUWKIG, NOUWKIG)
+Deze groep is alleen van toepassing voor de ouder die geregistreerd wordt als een pseudopersoon.
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+•
+
+Persoon.Geboorte (OUWKIG, NOUWKIG)
+Deze groep is alleen van toepassing voor de ouder die geregistreerd wordt als een pseudopersoon.
+
+•
+
+Persoon.Samengestelde naam (OUWKIG, NOUWKIG)
+Deze groep is alleen van toepassing voor de ouder die geregistreerd wordt als een pseudopersoon.
+Element
+
+Afleiding
+
+Afgeleid
+
+‘Nee’
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Een onbekende NOUWKIG houdt in dat wel bekend is dat er een NOUWKIG is maar dat het niet bekend is wie dit is.
+
+Status: Definitief, versie: 0.60
+
+Pagina 50 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+19.7 Registratie identificatienummers (hoofdpersoon)
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+Persoon. Identificatienummers
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+19.8 Beëindiging nationaliteit
+Met de actie worden gegevens van de volgende groep beëindigd:
+•
+
+Persoon \ Nationaliteit. Standaard
+Element
+
+Afleiding
+
+Datum einde geldigheid
+
+Actie.Datum aanvang geldigheid
+
+19.9 Registratie staatloos
+•
+
+Persoon.Staatloos
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+19.10 Registratie geboorte
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+Relatie.Identiteit
+Deze groep wordt afgeleid geregistreerd.
+Element
+
+Afleiding
+
+Soort
+
+‘Familierechtelijke betrekking’
+
+•
+
+Relatie.Standaard
+Deze groep wordt afgeleid geregistreerd. Voor een ‘Relatie’ van het soort ‘Familierechtelijke
+betrekking’ blijft de groep leeg.
+
+•
+
+Betrokkenheid.Identiteit
+Deze groep wordt afgeleid geregistreerd. Een ‘Betrokkenheid’ kan pas worden
+geregistreerd ná afgeleide registratie van ‘Relatie’ en ‘Persoon’.
+
+•
+
+Element
+
+Afleiding
+
+Rol
+
+‘Kind’
+
+Persoon.Identiteit
+Deze groep wordt bij het kind geregistreerd.
+Element
+
+Afleiding
+
+Soort
+
+‘Ingeschrevene’
+
+Status: Definitief, versie: 0.60
+
+Pagina 51 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+•
+
+Persoon.Geboorte
+Deze groep wordt bij de persoon geregistreerd.
+
+19.11 Registratie geslachtsaanduiding
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+Persoon.Geslachtsaanduiding
+Deze groep wordt bij de persoon geregistreerd.
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+19.12 Registratie geslachtsnaam
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+•
+
+•
+
+Persoon \ Geslachtsnaamcomponent.Identiteit
+Deze groep wordt bij de persoon geregistreerd.
+Element
+
+Afleiding
+
+Volgnummer
+
+‘1’
+
+Persoon \ Geslachtsnaamcomponent.Standaard
+Deze groep wordt bij de persoon geregistreerd.
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon.Samengestelde naam
+Deze groep wordt bij de persoon geregistreerd.
+Element
+
+Afleiding
+
+Voornamen
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Voorvoegsel
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Scheidingsteken
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Geslachtsnaamstam
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Predicaat
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Adellijke titel
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Afgeleid?
+
+‘Ja’
+Als ‘Geslachtsnaam.Actie.Datum aanvang geldigheid’ >
+‘Voornaam.Actie.Datum aanvang geldigheid’ dan
+‘Geslachtsnaam.Actie.Datum aanvang geldigheid’
+anders
+
+Datum aanvang geldigheid
+
+‘Voornaam.Actie.Datum aanvang geldigheid’
+
+Let op: Alhoewel de acties ‘Registratie Geslachtsnaam’ en ‘Registratie Voornaam’ twee
+losstaande acties zijn, mag er geen materiële historie opgebouwd worden in de groep
+‘Samengestelde naam’.
+
+Status: Definitief, versie: 0.60
+
+Pagina 52 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+•
+
+Persoon.Naamgebruik
+Deze groep wordt afgeleid geregistreerd.
+Element
+
+Afleiding
+
+Naamgebruik
+
+‘Eigen’
+
+Voornamen naamgebruik
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Voorvoegsel naamgebruik
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Scheidingsteken
+naamgebruik
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Geslachtsnaamstam
+naamgebruik
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Predicaat naamgebruik
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Adellijke titel naamgebruik
+
+Algoritme, zie Aspectbeschrijving – Naamopbouw [10]
+
+Naamgebruik afgeleid?
+
+‘Ja’
+
+19.13 Registratie voornaam
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+Persoon \ Voornaam.Identiteit
+Deze groep wordt afgeleid geregistreerd. Indien er sprake is van een namenreeks
+ontbreekt de voornaam.
+
+•
+
+Persoon \ Voornaam.Standaard
+Deze groep wordt bij de persoon geregistreerd. Indien er sprake is van een namenreeks
+ontbreekt de voornaam.
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Let op: Deze actie beïnvloedt ook de groepen ‘Samengestelde naam’ en ‘Naamgebruik’.
+Omdat deze (optionele) actie altijd samen voorkomt met de actie ‘Registratie
+geslachtsnaam’, die ook deze groepen beïnvloedt, zijn deze groepen hier niet benoemd.
+
+19.14 Registratie ouder
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+•
+
+Betrokkenheid.Identiteit
+Deze groep wordt afgeleid geregistreerd. Een Betrokkenheid kan pas worden geregistreerd
+ná eventuele afgeleide registratie van (Pseudo-)Persoon.
+Element
+
+Afleiding
+
+Rol
+
+‘Ouder’
+
+Ouder.Ouderschap
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Status: Definitief, versie: 0.60
+
+Pagina 53 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+•
+
+•
+
+•
+
+Persoon.Identiteit
+Deze groep wordt afgeleid geregistreerd, indien één van de volgende groepen in het
+bericht aanwezig is.
+Element
+
+Afleiding
+
+Soort
+
+‘Pseudo-persoon’
+
+Persoon. Identificatienummers (optioneel)
+Deze groep is alleen van toepassing voor de ouder die geregistreerd wordt als een pseudopersoon.
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon.Geslachtsaanduiding
+Deze groep is alleen van toepassing voor de ouder die geregistreerd wordt als een pseudopersoon.
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+•
+
+Persoon.Geboorte
+Deze groep is alleen van toepassing voor de ouder die geregistreerd wordt als een pseudopersoon.
+
+•
+
+Persoon.Samengestelde naam
+Deze groep is alleen van toepassing voor de ouder die geregistreerd wordt als een pseudopersoon.
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Afgeleid
+
+‘Nee’
+
+19.15 Registratie bijhouding
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+Persoon.Bijhouding
+Element
+
+Afleiding
+
+Bijhoudingsaard
+
+Overnemen van het voorkomen dat door deze actie komt te vervallen.
+
+NadereBijhoudingsaard
+
+Overnemen van het voorkomen dat door deze actie komt te vervallen.
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+19.16 Registratie nationaliteit
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+Persoon \ Nationaliteit.Identiteit
+
+•
+
+Persoon \ Nationaliteit. Standaard
+Element
+
+Status: Definitief, versie: 0.60
+
+Afleiding
+
+Pagina 54 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+19.17 Registratie migratie
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+Persoon.Migratie
+Deze groep wordt bij de persoon geregistreerd.
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+19.18 Correctieverval Adres
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep van de persoon:
+•
+
+Persoon \ Adres.Standaard
+
+19.19 Correctieverval Adres
+Met de actie wordt een nieuw voorkomen van de volgende groep van de persoon geregistreerd:
+•
+
+Persoon \ Adres.Standaard
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Datum einde geldigheid
+
+Actie.Datum einde geldigheid (indien aanwezig)
+
+19.20 Correctieverval Migratie
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep van de persoon:
+•
+
+Persoon.Migratie
+
+19.21 Correctieregistratie Migratie
+Met de actie wordt een nieuw voorkomen van de volgende groep van de persoon geregistreerd:
+•
+
+Persoon.Migratie
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Datum einde geldigheid
+
+Actie.Datum einde geldigheid (indien aanwezig)
+
+19.22 Correctieverval Bijzondere verblijfsrechtelijk positie
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep van de persoon:
+•
+
+Persoon.Bijzondere verblijfsrechtelijk positie
+
+Status: Definitief, versie: 0.60
+
+Pagina 55 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+19.23 Correctieregistratie Bijzondere verblijfsrechtelijk positie
+Met de actie wordt een nieuw voorkomen van de volgende groep van de persoon geregistreerd:
+•
+
+Persoon.Bijzondere verblijfsrechtelijk positie
+
+19.24 Correctieverval Verblijfsrecht
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep van de persoon:
+•
+
+Persoon.Verblijfsrecht
+
+19.25 Correctieregistratie Verblijfsrecht
+Met de actie wordt een nieuw voorkomen van de volgende groep van de persoon geregistreerd:
+•
+
+Persoon.Verblijfsrecht
+
+Status: Definitief, versie: 0.60
+
+Pagina 56 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+20 Ontwerpbeslissingen
+1. Ontwerpaspecten Verblijf en Adres [2] 4.2 voetnoot 5: “Het kan voorkomen dat de twee
+ouders elk aangifte mogen doen over de verhuizing van hun kind. Als ze hiertoe gerechtigd
+zijn dan zal het college deze aangiften honoreren. De BRP-voorziening kan signaleren dat
+er herhaaldelijke verhuizingen plaatsvinden; het kan deze niet verhinderen.”
+Uitspraak: De BRP maakt geen controle hiervoor. Het is aan de bijhouder om te
+constateren dat herhaaldelijk het kind wordt verhuisd. Is wellicht een controle die in de
+BCM thuishoort.
+Daarnaast willen juristen niet dat voor duo-ouderschap 2 adressen worden geregistreerd in
+de BRP.
+2. Besluitenlijst Afstemmingsoverleg Verblijf en Adres [3]: “Het registreren van een PO box
+voor niet-ingezetenen is aanvaardbaar, in gevallen waarin er geen post wordt bezorgd op
+het woonadres (in afgelegen gebieden). Met daarbij dan wel de beschikbare informatie over
+het woonadres (geregistreerd wordt dan bijvoorbeeld Naam boerderij en
+postbusnummer).”
+Bovenstaande leidde tot de vraag of het dan nog wel woonadressen zijn? Zijn het wellicht
+correspondentie-adressen?
+Uitspraak: Het zijn woonadressen. Uiteindelijk gaat het erom dat de persoon te benaderen
+moet zijn via post. Bij voorkeur is dat het woonadres, maar in uitzonderlijke gevallen mag
+dit ook een postbus zijn. De BRP voert echter geen controles uit op het adres om te
+bepalen of er een postbus ingevoerd is.
+3. Persoonslijsten met nadere bijhoudingsaard ‘Fout’ kunnen niet verhuisd worden.
+4. “Wet BRP: artikelen voor module Verblijf en Adres: vestiging, verhuizing, vertrek”, artikel
+2.49 lid 4: “Het eerste lid, onderdelen a, b en d, en het tweede lid zijn van
+overeenkomstige toepassing op de in artikel 2.43 vermelde verplichting, met dien
+verstande dat, behoudens bij algemene maatregel van bestuur te bepalen gevallen, een
+ouder en zijn meerderjarige kind en echtgenoten dan wel geregistreerde partners voor
+elkaar slechts de aangifteplicht kunnen vervullen, indien:
+a. zij die verplichting ook voor zichzelf vervullen, en
+b. alle andere ingezetenen met hetzelfde woonadres die verplichting vervullen of die
+verplichting voor hen wordt vervuld.”
+Uitspraak: De BRP voert geen controles uit voor onderdelen a. en b. Per verhuizing kan
+maar 1 persoon tegelijk worden verhuisd. Er wordt wel gecontroleerd of de persoon wel in
+een bepaalde relatie betrokken is en of de persoon al dan niet meer- of minderjarig is.
+5. Puntadressen zijn niet toegestaan. De BRP voert hiervoor echter geen controle uit. Deze is
+wel aanwezig in de BCM. Tevens is het de verantwoordelijkheid van de gemeente om een
+leeg adres in onderzoek te plaatsen.
+Bij conversie van GBA naar BRP wordt een puntadres omgezet in lege waarden in de
+betreffende adres-attributen.
+6. De BRP staat niet toe als een persoon op één dag tweemaal een verhuizing doorgeeft. Is
+dit toch nodig dan moet dit opgelost worden middels een correctie of de tweede verhuizing
+moet een dag later worden ingevoerd.
+7. Na verhuizing moet een notificatie verstuurd worden naar de oude bijhoudingspartij.
+8. Moeten verstrekkingsbeperkingen en afnemersindicaties bij ‘Wijziging gemeente
+infrastructureel’ wijzigingen worden overgezet naar de nieuwe gemeente?
+Uitspraak: Nee, een gemeentelijke herindeling is een zeer omvangrijk proces dat meerdere
+maanden in beslag neemt. Bij alle werkzaamheden hoort ook het overzetten van
+
+Status: Definitief, versie: 0.60
+
+Pagina 57 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+verstrekkings-beperkingen en afnemerindicaties. BRP beheerders kunnen wel
+ondersteuning bieden door het maken van selecties en het zetten of wissen van indicaties,
+maar het is nodig dat hiervoor een automatisch proces wordt ingericht.
+9. Bij Vestiging niet-ingezetene vervallen Verificatiegegevens naar de formele historie.
+Enerzijds geldt dat deze gegevens niet meer zichtbaar mogen zijn voor de
+bijhoudingspartij. Anderzijds geldt dat binnen de BRP geen gegevens fysiek gewist worden.
+Daarom vervallen de gegevens naar de formele historie.
+10. Geen AH Constatering verblijf kind met erkenning na geboortedatum
+Analoog aan de AH ‘Geboorte in Nederland met erkenning na geboortedatum’ was de AH
+‘Constatering verblijf kind met erkenning na geboortedatum’ voorzien. Omdat de
+verwachting is dat deze handeling relatief weinig gebruikt zal worden is er besloten deze
+niet te realiseren.
+Het registreren van constatering verblijf kind met erkenning na geboortedatum kan met de
+AH ‘Constatering verblijf kind’ en losse elementaire handelingen voor ‘Naam’ en
+‘Nationaliteit’.
+11. Er worden geen controles uitgevoerd voor het juiste gebruik van ‘Nadere aanduiding verval’
+‘S’ (Strijdig met de openbare orde)
+Bij het corrigeren van gegevens is het mogelijk om groepen laten vervallen met de ‘Nadere
+aanduiding verval’ ‘S’ (Strijdig met de openbare orde). Bij sommige groepen zoals
+bijvoorbeeld adres is ‘Strijdig met de openbare orde’ echter niet van toepassing. Er is geen
+functionaliteit voorzien die het juiste gebruik hiervan controleert of afdwingt.
+
+Status: Definitief, versie: 0.60
+
+Pagina 58 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+21 Openstaande punten
+1. Met de handeling Verhuizing naar buitenland moet ook Vertrokken onbekend waarheen
+(VOW) geregistreerd kunnen worden. Er moet nog nagegaan worden of dit op juiste wijze
+in deze handeling en het bijbehorende bericht opgenomen is. Er moet namelijk onderscheid
+gemaakt kunnen worden tussen een persoon die VOW-er is, en een persoon die
+bijvoorbeeld een wereldreis gaat maken en zijn bestemming nog niet weet. Deze laatste
+persoon mag niet als VOW aangeduid wordt in de BRP.
+
+Status: Definitief, versie: 0.60
+
+Pagina 59 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+22 Appendix A – Aangever adreshouding vs. Reden wijziging
+In onderstaande tabel is aangegeven welke combinaties van ‘Aangever adreshouding’ en ‘Reden
+wijziging’ toegestaan zijn in de BRP. De BRP controleert op geldigheid van de opgegeven
+combinatie.
+
+Aangever (Code)
+
+Reden wijziging verblijf (Code)
+
+<geen waarde>
+
+A
+(Ambtshalve)
+
+<geen waarde>
+
+M
+(Ministerieel besluit)22
+
+G
+(Gezaghouder)
+
+P
+(Aangifte door persoon)
+
+H
+(Hoofdinstelling)
+
+P
+(Aangifte door persoon)
+
+I
+(Ingeschrevene)
+
+P
+(Aangifte door persoon)
+
+K
+(Meerderjarig inwonend kind voor ouder)
+
+P
+(Aangifte door persoon)
+
+M
+(Meerderjarig gemachtigde)
+
+P
+(Aangifte door persoon)
+
+O
+(Inwonende ouder voor meerderjarig kind)
+
+P
+(Aangifte door persoon)
+
+P
+(Echtgenoot/geregistreerd partner)
+
+P
+(Aangifte door persoon)
+
+V
+(Verzorger)
+
+P
+(Aangifte door persoon)
+
+<geen waarde>
+
+B
+(Technische wijzigingen i.v.m. BAG)23
+
+<geen waarde>
+
+I
+(Infrastructurele wijziging)24
+
+<geen waarde>
+
+?
+(Onbekend)25
+
+22
+
+Wordt niet via het bijhoudingskoppelvlak aangeboden, omdat het RNI nog niet aangesloten is
+Wordt niet via het bijhoudingskoppelvlak aangeboden. Betreft alleen historische data n.a.v. conversie naar BAG adressen
+in het verleden.
+24 Alleen van toepassing bij de AH’s Wijziging adres infrastructureel en Wijziging gemeente infrastructureel
+25 Niet toegestaan. Gebruikt voor Conversie.
+23
+
+Status: Definitief, versie: 0.60
+
+Pagina 60 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+23 Appendix B – BZVU en toegestane indienende partijen
+In onderstaande tabel staat per handeling aangegeven of het berichtelement BZVU (Bezien vanuit
+persoon) van toepassing is – inclusief motivatie – en de toegestane indienende partijen – ook
+inclusief motivatie.
+Wanneer BZVU niet van toepassing is zal het berichtelement niet aanwezig zijn in het bericht. Voor
+meer informatie over BZVU zie UCS BY.1.ON – Ontrelateren [14].
+Bij toegestane indienende partijen wordt vermeld of het bijhoudingsvoorstel (ook) door andere dan
+de eigen gemeente mag worden ingestuurd. In onderstaande tabel kan deze kolom de volgende
+waarden aannemen:
+•
+•
+•
+
+A(lle): het bijhoudingsvoorstel mag door elke bijhoudingspartij worden ingediend;
+H(uidige): het bijhoudingsvoorstel mag alleen door de huidige bijhoudingspartij worden
+ingediend;
+B(eperkt): het bijhoudingsvoorstel mag door een beperkt aantal bijhoudingspartijen
+worden ingediend. In de motivatie staat vermeld welke partijen dat zijn.
+
+Administratieve
+Handeling
+
+BZVU?
+
+Motivatie
+
+Toegestane
+indienende
+partij(en)
+
+Motivatie
+
+Verhuizing
+binnengemeentelijk
+
+N
+
+Heeft betrekking op de
+slechts 1 persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Verhuizing
+intergemeentelijk
+
+N
+
+Idem
+
+B
+
+Nieuwe bijhoudingspartij
+
+Verhuizing naar
+buitenland
+
+N
+
+Idem
+
+H
+
+Huidige bijhoudingspartij
+
+Vestiging nietingeschrevene
+
+N
+
+Idem. Er wordt een
+minimale persoonslijst
+aangelegd. Relaties worden
+met separate handelingen
+gelegd.
+
+H
+
+Huidige bijhoudingspartij
+
+Vestiging nietingezetene
+
+N
+
+Idem
+
+H
+
+Huidige bijhoudingspartij
+
+Constatering verblijf
+kind
+
+N
+
+Idem
+
+H
+
+Huidige bijhoudingspartij
+
+Wijziging adres
+infrastructureel
+
+N
+
+Heeft betrekking op de
+slechts 1 persoonslijst.
+
+H
+
+Huidige bijhoudingspartij.
+
+Wijziging gemeente
+infrastructureel
+
+N
+
+Idem
+
+B
+
+Nieuwe bijhoudingspartij.
+
+Wijziging bijzondere
+verblijfsrechtelijke
+positie
+
+N
+
+Idem
+
+H
+
+Huidige bijhoudingspartij.
+
+Wijziging verblijfsrecht
+
+N
+
+Idem
+
+B
+
+Huidige bijhoudingspartij en
+IND.
+
+H
+
+Huidige bijhoudingspartij
+
+Correctie adres
+Correctie migratie
+GBA – Verhuizing
+intergemeentelijk GBA
+
+Status: Definitief, versie: 0.60
+
+N
+
+Heeft betrekking op de
+slechts 1 persoonslijst.
+
+H
+
+(*)
+
+Nieuwe bijhoudingspartij
+
+Pagina 61 van 62
+
+UCS BY.0.VnA - Verblijf en Adres
+
+naar BRP
+
+Status: Definitief, versie: 0.60
+
+Pagina 62 van 62
+
+

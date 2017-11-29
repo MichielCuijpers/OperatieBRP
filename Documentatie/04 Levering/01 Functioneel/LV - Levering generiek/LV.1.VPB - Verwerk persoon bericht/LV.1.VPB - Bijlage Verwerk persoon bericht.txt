@@ -1,0 +1,172 @@
+LV.1.VPB - Bijlage Verwerk persoon bericht
+Versie: Werk
+Gegenereerd op: 21 juli 2017
+Status: Definitief
+
+1 Regels voor usecase LV.1.VPB.SS - Samenstellen
+stuurgegevens
+1.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1267
+
+3
+
+Vulling stuurgegevens in uitgaand bericht bij asynchroon leveringsbericht
+
+2 Regels voor usecase LV.1.VPB.FV - Toepassen filter verwerk
+persoon bericht
+2.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1544
+
+4
+
+Begrens het bericht op datum aanvang materiële periode
+
+3 Regels voor usecase LV.1.VPB.VA - Bepaal volgorde en
+aantal hoofdpersonen
+3.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1568
+
+2
+
+Volgorde personen in uitgaand bericht
+
+R1621
+
+3
+
+Logging aantal geleverde personen in volledigbericht of mutatiebericht
+
+4 Uitwerking regels
+R1267
+Vulling stuurgegevens in uitgaand bericht bij asynchroon leveringsbericht
+Definitie:
+
+Bij een asynchroon bericht aan een afnemer dienen de stuurgegevens in het
+leveringsbericht als volgt gevuld te worden:
+
+•
+•
+•
+
+•
+•
+
+Bericht.Zendende partij : '199903'
+Bericht.Zendende systeem : 'BRP'
+Bericht.Ontvangende partij : Partij \ Rol.Partij (Partijcode van de afnemer voor
+wie het bericht bedoeld is, bepaald via de Toegang
+leveringsautorisatie.Geautoriseerde van het Toegang leveringsautorisatie
+waarvoor geleverd wordt)
+Bericht.Referentienummer: unieke ID genereren
+Bericht.Datum/tijd verzending : Datum\tijd systeem bij aanmaken van het
+bericht inclusief de tijdzone (bijvoorbeeld: '2012-04-18T15:32:03.234+01:00')
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R1544
+Begrens het bericht op datum aanvang materiële periode
+Definitie:
+
+Indien een VolledigBericht of een MutatieBericht wordt aangemaakt voor een
+aanwezige Persoon \ Afnemerindicatie, en in die Afnemerindicatie is Persoon \
+Afnemerindicatie.Datum aanvang materiële periode gevuld, dan geldt dat bepaalde
+historische voorkomens van groepen uit de juridische persoonslijst niet geleverd
+worden:
+Van groepen die een materiële historie kennen, mogen alleen voorkomens waarbij
+geldt dat DatumEindeGeldigheid (voor Onderzoeken is dit Onderzoek.Datum einde)
+> Persoon \ Afnemerindicatie.Datum aanvang materiële periode in het Bericht
+worden opgenomen.
+Deze regel geldt voor zowel de inhoudelijke groepen als voor de
+onderzoeksgroepen.
+Toelichting:
+• Als Persoon \ Afnemerindicatie.Datum aanvang materiële periode leeg is, dan
+mogen dus alle voorkomens geleverd worden.
+• Als DatumEindeGeldigheid leeg is, dan mag dat voorkomen altijd geleverd
+worden.
+• Als DatumEindeGeldigheid geheel of gedeeltelijk onbekend is, dan dient de
+(reguliere) 'soepele' vergelijking gebruikt te worden: als de bovenstaande
+conditie mogelijk WAAR kan zijn, dan wordt het voorkomen in het bericht
+opgenomen.
+
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+R1568
+Volgorde personen in uitgaand bericht
+Definitie:
+
+Bij het opstellen van een Leverinsgsbericht waarin meerdere personen zijn
+opgenomen geldt het volgende:
+De volgorde van hoofdpersonen in het leveringsbericht wordt bepaald door het
+attribuut Persoon.Sorteervolgorde in de groep Persoon.Afgeleid administratief. In
+het bericht worden de Personen in oplopende Persoon.Sorteervolgorde opgenomen.
+
+Bij gelijke Persoon.Sorteervolgorde vindt sortering plaats op oplopende technische
+sleutel (ID) van het object Persoon.
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R1621
+Logging aantal geleverde personen in volledigbericht of mutatiebericht
+Definitie:
+
+Indien het systeem een Volledigbericht of Mutatiebericht verstuurt naar een
+Afnemer, dan dient in de logging het aantal geleverde (hoofd)personen vastgelegd
+te worden.
+(Indien simpel mogelijk op een manier waarop dit geëxtraheerd kan worden, zodat
+deze cijfers ook in een rapportage gebruikt kunnen worden)
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+Meldingstekst:
+
+Aantal geleverde personen in bericht.
+
+Loggingsniveau:
+
+Melding
+
+

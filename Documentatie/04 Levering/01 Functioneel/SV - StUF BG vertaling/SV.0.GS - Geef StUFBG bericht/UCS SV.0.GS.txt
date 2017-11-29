@@ -1,0 +1,609 @@
+UCS SV.0.GS – Geef StUF BG bericht
+Versie
+
+2.0
+
+Datum
+
+10 juli 2017
+
+Status
+
+Definitief
+
+Locatie
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+15-12-2016
+
+0.1
+
+Initiële versie
+
+oBRP
+
+13-01-2016
+
+0.2
+
+Interne review verwerkt
+
+oBRP
+
+17-01-2017
+
+1.0
+
+Interne review verwerkt
+Document definitief gemaakt
+
+oBRP
+
+14-02-2017
+
+1.1
+
+Wijziging naamgeving AL.1.VR naar LV.1.VR en AL.1.MR
+naar LV.1.MR
+
+oBRP
+
+20-02-2017
+
+1.2
+
+UCS-AL.1.AB -> UCS-LV.1.AB
+
+oBRP
+
+12-05-2017
+
+1.3
+
+Wijziging interface StUF BG Transformatiecomponent; voor
+goede afhandeling meldingen in het BRP-resultaatbericht
+(vulling referentieID/communicatieID) is volgnummer van
+het vertaalde bericht nodig
+
+oBRP
+
+01-06-2017
+
+1.4
+
+Referentietabel bijgewerkt
+
+oBRP
+
+05-07-2017
+
+1.5
+
+Leveringsautorisatie toegevoegd als parameter
+
+oBRP
+
+10-07-2017
+
+2.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+0.2
+
+Interne review
+
+1.0
+
+Interne review
+
+1.1
+
+Interne review
+
+1.2
+
+Geen; kleine aanpassing door steller zelf
+
+1.3
+
+Geen; kleine aanpassing door steller zelf
+
+1.4
+
+Geen; kleine aanpassing door steller zelf
+
+1.5
+
+Geen; kleine aanpassing door steller zelf
+
+UCS SV.0.GS - Geef StUF BG bericht
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Invoer ....................................................................................................................... 5
+2.1
+2.2
+2.3
+2.4
+
+3
+
+Beschrijving .........................................................................................................................5
+Verzoekbericht .....................................................................................................................5
+Specifieke toelichting op het verzoekbericht .............................................................................5
+Bijzonderheden.....................................................................................................................5
+
+Verwerking ............................................................................................................... 6
+3.1
+3.2
+3.3
+3.4
+3.5
+
+4
+
+Doel ....................................................................................................................................3
+Functionele context ...............................................................................................................3
+Referenties ..........................................................................................................................4
+Openstaande punten .............................................................................................................4
+
+Beschrijving .........................................................................................................................6
+Activiteitendiagram ...............................................................................................................6
+Beschrijving activiteitendiagram .............................................................................................8
+Bedrijfsregels ..................................................................................................................... 10
+Bijzonderheden................................................................................................................... 10
+
+Uitvoer .................................................................................................................... 11
+4.1
+Beschrijving ....................................................................................................................... 11
+4.2
+Resultaatbericht.................................................................................................................. 11
+4.2.1
+Toelichting op het resultaatbericht .................................................................................... 11
+
+5
+
+Ontwerpbeslissingen .............................................................................................. 12
+
+Status: Definitief, versie: 2.0
+
+Pagina 2 van 12
+
+UCS SV.0.GS - Geef StUF BG bericht
+
+1 Inleiding
+1.1
+
+Doel
+
+De dienst Geef StUF BG bericht geeft invulling aan de afspraken over het gebruik van de StUFberichtenstandaard [4] die programma Operatie BRP heeft gemaakt met de VNG (Vereniging
+Nederlandse Gemeenten).
+Met deze dienst is het voor de afnemer mogelijk om een ontvangen BRPXML mutatiebericht of
+volledig bericht te vertalen naar de landelijk vastgestelde berichtenstandaard StUF BG. Het is
+hierbij mogelijk dat de vertaling van het BRPXML mutatiebericht of volledig bericht leidt tot
+meerdere StUF BG-kennisgevingsberichten.
+De afnemer ontvangt direct (synchroon) een bevestiging van de berichtvertaling. Indien de
+vertaling succesvol is verlopen, bevat het resultaatbericht ook de naar StUF BG vertaalde
+bericht(en).
+Met deze vertaalde berichten kan de afnemer vervolgens de eigen administratie bijwerken.
+
+1.2
+
+Functionele context
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitdiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+
+Voor de vertaling van een BRPXML mutatiebericht of volledig bericht naar StUF BG wordt binnen de
+dienst Geef StUF BG bericht gebruik gemaakt van een externe component; de zogenaamde ‘StUF
+BG Transformatiecomponent’1.
+
+1
+
+Deze component is door een 3e partij gerealiseerd en wordt opgeleverd als een executable JAR met embedded TomCat.
+De StUF BG Transformatiecomponent draait als zelfstandige component in het systeemlandschap
+Status: Definitief, versie: 2.0
+
+Pagina 3 van 12
+
+UCS SV.0.GS - Geef StUF BG bericht
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving Generieke Berichtstructuur
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+4
+
+StUF BG Berichtenstandaard
+
+VNG/KING
+
+0301/25
+0310/25
+
+07-2016
+
+(http://gemmaonline.nl/index.php/StUF_Berichtenstandaard en
+http://gemmaonline.nl/index.php/Sectormodel_Basisgegevens:_StUF-BG)
+
+1.4
+
+Openstaande punten
+
+Deze Use Case bestaat uit een wrapper en een extrern aan te besteden component, de Stuf-BG
+transformatiecomponent. De wrapper is gerealiseerd maar de externe component niet.
+
+Status: Definitief, versie: 2.0
+
+Pagina 4 van 12
+
+UCS SV.0.GS - Geef StUF BG bericht
+
+2 Invoer
+2.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft het verzoekbericht waarmee de afnemer een BRPXML mutatiebericht of
+volledig bericht kan vertalen naar een of meer StUF BG-kennisgevingsberichten.
+
+2.2
+
+Verzoekbericht
+
+De structuur van het verzoekbericht staat beschreven in Aspectbeschrijving Generieke
+berichtstructuur [2]. De inhoud van het verzoekbericht is opgenomen in bijlage: SV.0.GS – Bijlage
+Geef StUF BG bericht.doc.
+
+2.3
+
+Specifieke toelichting op het verzoekbericht
+
+Toelichting op het verzoekbericht van deze dienst.
+Stuurgegevens
+Van een ingevoerd bericht worden stuurgegevens Zendende partij, het Zendende systeem, een
+Referentienummer en het Tijdstip vastgelegd en meegeleverd als onderdeel van het
+verzoekbericht.
+Parameters
+In het bericht wordt de leveringsautorisatie, waarbinnen een vertaal verzoek wordt gedaan,
+geïdentificeerd door de Leveringsautorisatieidentificatie.
+De dienst kent verder nog twee parameters; dit zijn:
+1. Versie StUF BG; hiermee wordt aangegeven volgens welke StUF BG-versie het BRPXMLbericht moet worden vertaald;
+2. Soort bericht vertaling; hiermee wordt aangegeven welke berichtsoort voor vertaling wordt
+aangeboden.
+Te vertalen bericht
+De inhoud (body) van het BRPXML bericht zijnde een mutatiebericht of een volledig bericht, dat
+moet worden vertaald.
+
+2.4
+
+Bijzonderheden
+
+Niet van toepassing.
+
+Status: Definitief, versie: 2.0
+
+Pagina 5 van 12
+
+UCS SV.0.GS - Geef StUF BG bericht
+
+3 Verwerking
+3.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft de verwerking van het verzoekbericht waarmee de afnemer een BRPXML
+mutatiebericht of volledig bericht kan laten vertalen naar StUF BG.
+
+3.2
+
+Activiteitendiagram
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitendiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+Activiteitendiagram met de verwerking van een verzoek tot het vertalen van een BRPXML
+mutatiebericht of volledig bericht naar StUF BG. In het diagram is alleen de happy flow
+weergegeven. Foutafhandeling is hier niet opgenomen.
+De XSD-validatie van het verzoekbericht en invoercontrole’s staan beschreven in de begeleidende
+tekst in de volgende paragraaf of in de aangeroepen Use Cases.
+
+Status: Definitief, versie: 2.0
+
+Pagina 6 van 12
+
+UCS SV.0.GS - Geef StUF BG bericht
+
+Status: Definitief, versie: 2.0
+
+Pagina 7 van 12
+
+UCS SV.0.GS - Geef StUF BG bericht
+
+3.3
+
+Beschrijving activiteitendiagram
+
+De verwerking van het ontvangen verzoekbericht bestaat uit een aantal volgordelijke stappen die
+uitgevoerd worden. In de onderstaande toelichtende tekst zijn de stappen onderverdeeld in ‘XSD
+controle’, ‘Controle invoer’, ‘Verwerking’ en ‘Uitvoer’. Elke toegelichte stap is terug te vinden in het
+activiteitendiagram in de vorige paragraaf.
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de aan de Use Cases gekoppelde regels in BMR.
+
+XSD controle
+•
+
+LV.1.XV – XSD validatie
+Het inkomende verzoek wordt gevalideerd door deze te controleren tegen het bij het
+verzoek behorende XSD-schema (XML Schema Definition). Als er een XSD fout wordt
+geconstateerd, dan wordt er direct een technische foutmelding teruggegeven aan de
+zendende applicatie.
+
+Controle invoer
+•
+
+LV.1.AB – Archiveer bericht
+Draagt zorg voor de archivering van het technisch verwerkbare inkomende verzoekbericht
+en van de uitgaande berichten (het resultaatbericht).
+
+•
+
+LV.1.AL – Autorisatie levering
+Het inkomende verzoek wordt gecontroleerd op geldigheid van leveringsautorisatie en
+dienst autorisatie.
+
+•
+
+SV.1.GS.CI – Controleer inhoud
+Vervolgens wordt gecontroleerd of de dienst specifieke invoergegevens juist zijn. Deze
+controle bevat de volgende onderdelen:
+✓
+✓
+✓
+✓
+
+Bestaat de inhoud van parameter Versie StUF BG en is deze geldig op
+systeemdatum
+Bestaat de inhoud van parameter Vertaling berichtsoort BRP en is deze geldig op
+systeemdatum
+Is het ter vertaling meegegeven BRPXML mutatiebericht of volledig bericht XSDvalide
+Is het ter vertaling meegegeven BRPXML mutatiebericht of volledig bericht van de
+berichtsoort zoals meegegeven in de parameter Vertaling berichtsoort BRP.
+
+Verwerking
+•
+
+SV.1.GS.VBB – Vertaal BRPXML-bericht via ‘StUF BG Transformatiecomponent’
+Na het goed doorlopen van alle controles wordt voor de berichtvertaling de externe ‘StUF
+BG Transformatiecomponent’ aangeroepen.
+Bij de aanroep worden de volgende gegevens via de API (Application Programming
+Interface) doorgegeven:
+1. Versie StUF BG
+2. Vertaling berichtsoort BRP
+3. Te vertalen bericht
+
+Status: Definitief, versie: 2.0
+
+Pagina 8 van 12
+
+UCS SV.0.GS - Geef StUF BG bericht
+
+Na uitvoering van de vertaling wordt de API door de ‘StUF BG Transformatiecomponent’
+gevuld met het resultaat hiervan:
+1. Resultaat verwerking (verplicht; waarde “Geslaagd” of “Foutief”)
+2. Melding (meerdere mogelijk, optioneel):
+▪
+Volgnummer bericht; het volgnummer van het
+bericht waarop de melding betrekking heeft. Indien het een blokkerende
+melding betreft en er geen vertaald bericht is aangemaakt, wordt de waarde
+‘0’ gevuld.
+▪
+Regelcode; de code van de regel die geschonden is, zoals toegekend door de
+‘StUF BG Transformatiecomponent’
+▪
+Soortnaam; waarde “Waarschuwing” of “Fout”
+▪
+Meldingtekst; zelfverklarende tekst vanuit ‘StUF BG
+Transformatiecomponent’
+3. Vertaalde bericht (meerdere mogelijk, optioneel)
+Dit resultaat wordt verwerkt in het resultaatbericht van de dienst (zie LV.1.MR).
+Ongeacht het resultaat worden altijd alle meldingen vanuit de ‘StUF BG
+Transformatiecomponent’ opgenomen in het resultaatbericht. In geval van een succesvolle
+verwerking (“Geslaagd”) kunnen dit alleen meldingen van de soort “Waarschuwing” zijn.
+De meldingen vanuit de ‘StUF BG Transformatiecomponent’ worden als volgt in het
+resultaatbericht opgenomen:
+1. Regelcode:
+▪
+Indien soortnaam gelijk aan “Waarschuwing”, dan BRP-codering: “R2445”
+▪
+Indien soortnaam gelijk aan “Fout”, dan BRP-codering: “R2446”
+2. Soortnaam:
+▪
+Waarde ‘StUF BG Transformatiecomponent’ overnemen (gelijk aan BRP-waarden)
+3. Meldingtekst; concatenatie van:
+▪
+<Regelcode ‘StUF BG Transformatiecomponent’>
+▪
+“-“
+▪
+<Meldingtekst ‘StUF BG Transformatiecomponent’>
+Uitvoer
+•
+
+LV.1.MR – Maak resultaatbericht
+Het verwerkingsresultaat (“Geslaagd” of “Foutief”) wordt samen met eventuele meldingen
+in een synchroon resultaatbericht opgenomen.
+Het verwerkingsresultaat van de dienst wordt hierbij bepaald door:
+1. het resultaat van de stap ‘Controle invoer’ en
+2. het resultaat van de stap ‘Verwerking’; dit is het resultaat van de aanroep van de
+‘StUF BG Transformatiecomponent’.
+In geval van een succesvolle verwerking (“Geslaagd”) worden de vertaalde StUF BGkennisgevingsberichten in dezelfde volgorde zoals ontvangen van de ‘StUF BG
+Transformatiecomponent’ in het resultaatbericht opgenomen.
+
+•
+
+LV.1.VR – Verzend resultaatbericht
+Vervolgens wordt het resultaatbericht afgeleverd aan de indiener van het verzoekbericht.
+Het resultaatbericht wordt gearchiveerd (LV.1.AB).
+
+Status: Definitief, versie: 2.0
+
+Pagina 9 van 12
+
+UCS SV.0.GS - Geef StUF BG bericht
+
+3.4
+
+Bedrijfsregels
+
+Voor een toelichting op de verschillende soorten bedrijfsregels, de meldingsniveaus, de toepassing
+en werking ervan in het proces, wordt verwezen naar de daartoe opgestelde Aspectbeschrijving
+Controles [3].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels en definitieregels zijn opgenomen de bijlage: SV.0.GS – Bijlage Geef StUF BG
+bericht.doc.
+
+3.5
+
+Bijzonderheden
+
+Niet van toepassing.
+
+Status: Definitief, versie: 2.0
+
+Pagina 10 van 12
+
+UCS SV.0.GS - Geef StUF BG bericht
+
+4 Uitvoer
+4.1
+
+Beschrijving
+
+Dit proces levert altijd direct een resultaatbericht. Na een succesvolle vertaling van het BRPXML
+mutatiebericht of volledig bericht bevat dit resultaatbericht tevens een of meer StUF BGkennisgevingsberichten.
+
+4.2
+
+Resultaatbericht
+
+In antwoord op de aanroep van de dienst ontvangt de afnemer een synchroon resultaatbericht.
+Voor de volledige beschrijving en inhoud van het resultaatbericht wordt verwezen naar
+Aspectbeschrijving Generieke Berichtstructuur [2] en de bijlage: SV.0.GS – Bijlage Geef StUF BG
+bericht.doc.
+4.2.1
+
+Toelichting op het resultaatbericht
+
+Stuurgegevens
+Van het bericht worden stuurgegevens Zendende partij, het Zendende systeem, een
+Referentienummer, een Crossreferentienummer (referentienummer uit de stuurgegevens van het
+Verzoekbericht) en het Tijdstip vastgelegd en meegeleverd als onderdeel van het resultaatbericht.
+Resultaat
+Het resultaat van de Verwerking kan de waarde “Geslaagd” of “Foutief” aannemen. Daarachter
+wordt aangegeven wat het Hoogste Meldingsniveau is, dat is aangetroffen tijdens de uitgevoerde
+controles. De ernst wordt uitgedrukt in het meldingsniveau; algemene waarden in aflopende
+hoogte zijn:
+Fout
+Deblokkeerbaar
+Waarschuwing
+Informatie2
+Voor de dienst Geef StUF BG bericht geldt dat alleen de waarden “Fout” en “Waarschuwing”
+kunnen voorkomen.
+Meldingen
+In het bericht zijn de Regels opgenomen die gecontroleerd zijn voor uitvoering van de dienst zelf,
+met daarbij aangegeven welke Soort melding (informatief, waarschuwing, deblokkeerbaar, fout) en
+de Melding zelf, die in tekst aangeeft wat er op basis van de gecontroleerde regel is geconstateerd.
+Daarnaast kunnen meldingen voorkomen die door de ‘StUF BG Transformatiecomponent’ zijn
+gevonden. De inhoud hiervan wordt één-op-één doorgegeven via de regelcodes R2445
+(Waarschuwingen) en R2446 (Fouten). Zie ook paragraaf 3.3.
+Vertaalde bericht
+Een BRPXML mutatiebericht of volledig bericht kan na vertaling leiden tot een of meer StUF BGkennisgevingsberichten. Ieder StUF BG-kennisgevingsbericht wordt apart in het resultaatbericht
+opgenomen; dit betekent dat het resultaatbericht uit een lijst van vertaalde berichten kan bestaan.
+De volgorde van verwerking van deze vertaalde berichten door de afnemer wordt bepaald door de
+‘StUF BG Transformatiecomponent’. Het eerste bericht in de lijst dienst als eerste te worden
+verwerkt, het tweede bericht als tweede enz.
+
+2
+
+Dit meldingsniveau wordt momenteel nog niet gehanteerd, maar is gereserveerd voor toekomstig gebruik.
+
+Status: Definitief, versie: 2.0
+
+Pagina 11 van 12
+
+UCS SV.0.GS - Geef StUF BG bericht
+
+5 Ontwerpbeslissingen
+Niet van toepassing.
+
+Status: Definitief, versie: 2.0
+
+Pagina 12 van 12
+
+

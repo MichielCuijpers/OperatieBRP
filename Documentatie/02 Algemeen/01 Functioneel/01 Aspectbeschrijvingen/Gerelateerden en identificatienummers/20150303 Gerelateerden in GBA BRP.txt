@@ -1,0 +1,138 @@
+Gerelateerden in GBA-V/BRP: is persoon zelf wél of niet ingeschreven? Hoe moet je dat als
+‘gebruiker’ interpreteren, welke conclusies kun je trekken.
+
+Bij gerelateerde ontbreekt het A-nummer én BSN nummer.
+•
+•
+•
+
+De gerelateerde woonde nooit gelijktijdig met de persoon in dezelfde gemeente. De
+gegevens zijn ontleend aan de PK bij conversie
+of het betreft een registratie van een rechtsfeit met een persoon die niet in de gemeente
+woonde op dat moment (en van wie ook geen binnengemeentelijke PL* aanwezig was)
+De gerelateerde zelf heeft nooit ingeschreven gestaan (b.v. de ouders van een op 1 oktober
+1994 honderd jarige; een eerdere echtgenoot die bij conversie al was overleden e.d.)
+
+Bij gerelateerde is het A-nummer wél opgenomen en het BSN nummer
+niet.
+•
+•
+
+De gerelateerde woonde ooit in dezelfde gemeente maar is vóór de initiële vulling van het
+SofiNummer in 1995 vertrokken naar een andere gemeente, overleden of geëmigreerd.
+De gerelateerde woonde ooit in dezelfde gemeente maar is vóór 1 oktober 1994 vertrokken
+uit de gemeente of overleden. Het is een ‘binnengemeentelijke PL’.
+
+Bij gerelateerde is het BSN nummer opgenomen en het A-nummer
+niet.
+•
+•
+
+Hier moet sprake zijn van een fout. Als de relatie gelegd is door opnemen van het BSN dan
+moet ook het A-nummer zijn opgenomen.
+oBRP Hier kan sprake van zijn als in de duale periode het BSN nummer wordt meegeleverd in
+de mededeling (dat is een wettelijke verplichting in de Wet BRP) en het BSN nummer zou in
+de bijhouding BRP opgenomen worden bij de gegevens over de gerelateerde (de kluizenaar).
+De ‘kluizenaar’ heeft een eigen PL in de BRP.
+
+Bij gerelateerde is zowel het A-nummer als het BSN nummer
+opgenomen.
+•
+•
+•
+
+De gerelateerde woonde ooit of woont nu in dezelfde gemeente als de persoon zelf, ná
+initiële vulling van het Sofinummer in 1995.
+De gerelateerde woonde ooit in dezelfde gemeente ná initiële vulling van het Sofinummer
+maar is inmiddels een niet-ingezetene (overleden of geëmigreerd).
+De gerelateerde komt zelf als ingeschrevene niet voor in de BRP. De initiële vulling van h et
+SoFinummer is ook gedaan op opgeschorte persoonslijsten (geconstateerd door Migratie).
+
+•
+
+•
+
+oBRP: De gerelateerde kan in dezelfde gemeente woonachtig zijn of zijn geweest maar komt
+zowel als persoon als ‘kluizenaar’ voor in de BRP zolang de relatielegging niet heeft
+plaatsgevonden.
+oBRP: De gerelateerde is in de duale periode na aansluiting van de gemeente als bijhouder
+gerelateerd met de ingeschrevene persoon zelf.
+
+Hoe is zichtbaar wanneer de ‘persoon’ en de ‘gerelateerde’ aan elkaar
+gekoppeld zijn?
+•
+
+•
+•
+
+Bij de conversie van de PK naar de PL is het Anummer van de gerelateerde die in dezelfde
+gemeente woonachtig was rechtstreeks opgenomen door de relaties bij conversie direct te
+leggen (conversievoorschrift) bij de conversiegemeente.
+Bij de registratie van het rechtsfeit waardoor de relatie ontstond en beiden woonden in
+dezelfde gemeente (bijv. huwelijk/geboorte).
+Bij vestiging van een gerelateerde in dezelfde woongemeente als persoon zelf is de relatie
+gelegd en het A-nummer of het A-nummer en het Sofi-nummer of later BSN nummer is
+opgenomen. Er ontstaat als gevolg van het leggen van de relatie altijd een historische
+categorie op de GBA-PL (zie tekst LO GBA).
+
+*Binnengemeentelijke PL: een tijdens de conversie aangelegde PL of vóór 1 oktober 1994 van een
+andere gemeente ontvangen persoonslijst van een persoon die op 1 oktober 1994 niet meer
+woonachtig was in de gemeente. Deze binnengemeentelijke PL verving bij de voorbereiding op de
+invoering van de GBA bij een groot aantal gemeenten voor een periode de PK. De bijhouding van de
+PK mocht worden stopgezet op voorwaarde dat de gegevens konden en kunnen worden ontleend
+aan de PL.
+Voor een groot deel van de PL-en die wél tot de GBA behoren geldt dat een deel van de inhoud is
+‘afgeschermd’. Deze PL-en zijn dus deels binnengemeentelijk. Dit betreft vooral adreshistorie van
+voor 1 oktober 1994 of van vóór de datum eerste inschrijving in de GBA.
+
+In het Logisch Ontwerp GBA is over de relatielegging en het zoeken
+naar gerelateerden het volgende opgenomen:
+3.1.6.1 Zoeken naar gerelateerden
+Bij iedere inschrijving dient gecontroleerd te worden of er gerelateerden van de betrokkene in
+de gemeente zijn ingeschreven. Ook het omgekeerde geldt, namelijk dat van alle overige in de
+gemeente ingeschreven personen wordt nagegaan of de nieuw ingeschrevene op de één of
+andere wijze aan die persoon gerelateerd is.
+Zoeken naar gerelateerden dient ook te gebeuren indien er bij een ingeschrevene één of meer
+van de gegevens in de groepen 01.01 Identificatienummers, 01.02 Naam, 01.03 Geboorte en/of
+01.04 Geslacht geactualiseerd worden. Dit zoeken dient om vast te stellen of er na de
+genoemde actualiseringen nieuwe gerelateerden bepaald kunnen worden.
+Twee personen worden beschouwd als gerelateerden als de inhoud van de rubrieken uit de
+
+groepen Identificatienummers, Naam, Geboorte en Geslacht uit categorie 01 van de ene PL
+gelijk is aan de inhoud van de rubrieken uit de overeenkomstige groepen uit één van de
+categorieën 02, 03, 05 of 09 van een andere PL. De vergelijking op de inhoud van rubrieken uit
+groep 01 wordt uitsluitend uitgevoerd op rubrieken die op beide PL-en voorkomen. De
+vergelijking op de inhoud van rubrieken uit de groepen 02, 03 en 04 wordt uitsluitend uitgevoerd
+op alle rubrieken uit alleen die groepen die op beide PL-en voorkomen, waarbij geldt dat alle
+rubrieken in deze groepen gelijk moeten zijn.
+Benadrukt wordt dat het hier gaat om een minimum eis. Met name in het geval dat een
+vergelijking van gegevens meerdere kandidaten oplevert, moet bepaald worden wie feitelijk de
+gerelateerde is.
+3.1.6.2 Aanvullen gerelateerdengegevens
+Wanneer één of meer gerelateerden gevonden zijn, worden de gerelateerdengegevens
+aangevuld. Het gaat hierbij om gegevens uit de groepen 01 Identificatienummers, 03 Geboorte
+en/of 04 Geslacht uit categorie 01 van de ene PL, die nog niet bij de gerelateerde in de
+categorie 02, 03, 05 of 09 voorkwamen en dus niet in de bovengenoemde vergelijking zijn
+meegenomen. Deze aanvullingen worden uitgevoerd door middel van het wijzigen van de
+betreffende groep. Indien de groep 03 Geboorte in categorie 01 uitsluitend standaardwaarden
+bevat, worden de geboortegegevens niet aangevuld in de categorieën 02, 03 en 09.
+In de categorie 02, 03, 05 of 09, die ontstaat bij het aanvullen van de gerelateerdengegevens,
+krijgen de elementen in de groepen 82, 85 en 86 de volgende waarden:
+• 82.10 = de code van de gemeente die de procedure uitvoert
+• 82.20 = de datum waarop de gegevens worden opgenomen
+• 82.30 = "PL gerelateerde"
+• 85.10 = de datum waarop de gegevens worden opgenomen
+• 86.10 = de datum waarop de gegevens worden opgenomen.
+
+Wijziging in een identificatienummer
+Na het bekend worden van het A-nummer en/of burgerservicenummer van de ouder (b.v. door
+de controle op het voorkomen van gerelateerden) of bij wijziging van het A-nummer en/of
+burgerservicenummer van de ouder worden de volgende groepen gewijzigd:
+02.01 Identificatienummers
+02.82 Document
+02.85 Geldigheid
+02.86 Opneming
+Voor deze actualisering geldt dat deze ook kan worden uitgevoerd terwijl de bijhouding van de
+PL is opgeschort.
+
+

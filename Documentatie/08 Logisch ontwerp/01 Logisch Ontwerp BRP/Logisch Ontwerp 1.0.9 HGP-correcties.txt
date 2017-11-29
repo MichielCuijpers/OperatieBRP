@@ -1,0 +1,3208 @@
+Concept | | juni 2017
+
+A.1
+
+Module Huwelijk en Geregistreerd partnerschap
+Tekst t/m C.9.11 is gelijk gebleven (versie 1.08), hieronder volgt de nieuwe tekst
+voor C.9.12 t/m C.9.19
+
+A.1.1
+
+Wijziging partnergegevens huwelijk
+Beschrijving
+Deze administratieve handeling heeft tot doel om de persoonsgegevens van een in
+de huwelijksrelatie betrokken partner te kunnen wijzigen. Deze wijziging kan
+uitsluitend betrekking hebben op de bij de ingezetene hoofdpersoon als
+huwelijkspartner betrokken en geregistreerde persoonsgegevens.
+Als de partner in de huwelijksrelatie is opgenomen als ingeschrevene, dan zal
+alvorens de partnergegevens kunnen worden gewijzigd, de betreffende partner in de
+relatie worden ontrelateerd (zie voor meer informatie paragraaf 4.10.2) en dus als
+pseudo-persoon worden opgenomen in de huwelijksrelatie.
+Vervolgens kunnen dan de wijzigingen op de persoonsgegevens van de partner die
+(nu) voorkomt als een pseudo-persoon worden doorgevoerd.
+
+INVOER
+Gebruik bijhoudingsbericht
+Naast de algemeen geldende regels voor het gebruik van het bijhoudingsbericht
+zoals beschreven in paragraaf C.2.1 geldt dat voor deze specifieke administratieve
+handeling het volgende:
+• De actie Registratie identificatienummers gerelateerde. Met deze actie kunnen
+de elementen in de groep Identificatienummers voor de huwelijkspartner
+worden gewijzigd.
+
+•
+
+De actie Registratie samengestelde naam gerelateerde. Met deze actie kunnen
+de elementen in de groep Samengestelde naam voor de huwelijkspartner
+worden gewijzigd.
+•
+De actie Registratie geboorte gerelateerde. Met deze actie kunnen de elementen
+in de groep Geboorte voor de huwelijkspartner worden gewijzigd.
+•
+De actie Registratie geslachtsaanduiding gerelateerde. Met deze actie kunnen de
+elementen in de groep Geslachtsaanduiding voor de huwelijkspartner worden
+gewijzigd.
+Voor alle bovenstaande acties geldt dat een opgaaf van een brondocument, dat de
+aanleiding is voor de wijziging moet worden opgegeven.
+Inhoud bijhoudingsbericht
+Actualiseer huwelijk en geregistreerd partnerschap
+(bhg_hgpActualiseerHuwelijkGeregistreerdPartnerschap)
+Stuurgegevens
+
+Kardinaliteit
+
+1
+
+Zendende partij, Zendende systeem, Referentienummer, Datum/tijd verzending
+
+Parameters
+Verwerkingswijze
+
+1
+
+Concept | | juni 2017
+
+Wijziging partnergegevens huwelijk
+Gedeblokkeerde meldingen
+
+0..1
+
+Gedeblokkeerde melding
+
+1..n
+
+Bronnen
+
+1
+
+Bron
+
+1..n
+
+Document
+
+1
+
+Acties
+
+1
+
+Registratie identificatienummers gerelateerde
+Bronnen
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Huwelijk
+
+1
+
+Betrokkenheden
+Partner
+Persoon
+Identificatienummers
+Registratie samengestelde naam gerelateerde
+Bronnen
+
+1
+1
+0..1
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Huwelijk
+
+1
+
+Betrokkenheden
+Partner
+Persoon
+Samengestelde naam
+Registratie geboorte gerelateerde
+
+Persoon
+
+1
+
+1..n
+
+Persoon
+
+Bron
+
+1
+
+1
+
+Bron
+
+Bronnen
+
+0..1
+1
+
+Bron
+
+Pagina 2 van 35
+
+1
+
+1
+1
+1
+1
+0..1
+1
+1..n
+1
+
+Concept | | juni 2017
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Huwelijk
+
+1
+
+Betrokkenheden
+Partner
+Persoon
+Geboorte
+Registratie geslachtsaanduiding gerelateerde
+Bronnen
+
+1
+1
+1
+1
+0..1
+1
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Huwelijk
+
+1
+
+Betrokkenheden
+Partner
+Persoon
+Geslachtsaanduiding
+
+1
+1
+1
+1
+
+VERWERKING
+Het bijhoudingsbericht wordt verwerkt zoals is beschreven in Bijlage B –
+Berichtafhandeling. De controleregels die van toepassing zijn op de administratieve
+handeling van dit specifieke bijhoudingsbericht zijn hieronder opgenomen en
+opgedeeld volgens de in het bijhoudingsbericht opgenomen acties.
+De in de overzichten opgenomen controleregels zijn terug te vinden in Bijlage F –
+Controleregels. In deze bijlage zijn bij het regelnummer de regeldefinities en de van
+toepassing zijnde meldingsteksten opgenomen.
+Actie Registratie identificatienummers gerelateerde
+Code Niveau Omschrijving
+R1845 F
+
+In het bijhoudingsbericht gerelateerde objectsleutels en voorkomensleutels
+moeten verwijzen naar gerelateerde objecten en voorkomens in de BRP
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+R2653 F
+
+Datum aanvang geldigheid moet op of na de aanvang van de relatie liggen.
+
+R2654 F
+
+De relatie met de gerelateerde moet actueel zijn.
+
+R2784 F
+
+Datum aanvang geldigheid van identificatienummers, samengestelde naam en
+geslachtsaanduiding moeten overeen komen.
+
+Actie Registratie samengestelde naam gerelateerde
+
+Concept | | juni 2017
+
+Code Niveau Omschrijving
+R1845 F
+
+In het bijhoudingsbericht gerelateerde objectsleutels en voorkomensleutels
+moeten verwijzen naar gerelateerde objecten en voorkomens in de BRP
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+R2653 F
+
+Datum aanvang geldigheid moet op of na de aanvang van de relatie liggen.
+
+R2654 F
+
+De relatie met de gerelateerde moet actueel zijn.
+
+R2739 W
+
+Waarschuwing: Naamswijziging pseudo (ex)partner werkt niet door in
+Naamgebruik hoofdpersoon
+
+R2784 F
+
+Datum aanvang geldigheid van identificatienummers, samengestelde naam en
+geslachtsaanduiding moeten overeen komen.
+
+Actie Registratie geboorte gerelateerde
+Code Niveau Omschrijving
+R1845 F
+
+In het bijhoudingsbericht gerelateerde objectsleutels en voorkomensleutels
+moeten verwijzen naar gerelateerde objecten en voorkomens in de BRP
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+R2654 F
+
+De relatie met de gerelateerde moet actueel zijn.
+
+R2784 F
+
+Datum aanvang geldigheid van identificatienummers, samengestelde naam en
+geslachtsaanduiding moeten overeen komen.
+
+Actie Registratie geslachtsaanduiding gerelateerde
+Code Niveau Omschrijving
+R1845 F
+
+In het bijhoudingsbericht gerelateerde objectsleutels en voorkomensleutels
+moeten verwijzen naar gerelateerde objecten en voorkomens in de BRP
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+R2653 F
+
+Datum aanvang geldigheid moet op of na de aanvang van de relatie liggen.
+
+R2654 F
+
+De relatie met de gerelateerde moet actueel zijn.
+
+R2784 F
+
+Datum aanvang geldigheid van identificatienummers, samengestelde naam en
+geslachtsaanduiding moeten overeen komen.
+
+Resultaat ná de (bericht)verwerking
+Als aan alle voorwaarden voor stap 6 (verwerken administratieve handeling) in
+Bijlage B – Berichtafhandeling is voldaan, dan registreren de centrale voorzieningen
+de doorgevoerde wijzigingen op de persoonsgegevens van de gerelateerde pseudopersoon in de huwelijksrelatie.
+Actie Registratie identificatienummers gerelateerde
+Met de actie worden gegevens in de volgende groep geregistreerd:
+• Identificatienummers
+Actie Registratie samengestelde naam gerelateerde
+Met de actie worden gegevens in de volgende groep geregistreerd:
+•
+Samengestelde naam
+Actie Registratie geboorte gerelateerde
+Met de actie worden gegevens in de volgende groep geregistreerd:
+•
+Geboorte
+
+Pagina 4 van 35
+
+Concept | | juni 2017
+
+Actie Registratie geslachtsaanduiding gerelateerde
+Met de actie worden gegevens in de volgende groep geregistreerd:
+•
+Geslachtsaanduiding
+
+UITVOER
+De partij die de administratieve handeling Wijziging partnergegevens huwelijk ter
+verwerking aanbiedt, ontvangt altijd een bijhoudingsresultaatbericht retour (zie
+tevens stap 7 ‘Maak resultaatbericht’ in Bijlage B – Berichtafhandeling).
+Indien volgens de informatie in het bijhoudingsplan1 (ook) andere
+bijhoudingsverantwoordelijke colleges bij de bijhouding moeten worden betrokken,
+worden tevens bijhoudingsnotificatieberichten aan deze
+bijhoudingsverantwoordelijke colleges verzonden.
+Het doel en de werking van het bijhoudingsplan en het verzenden van
+bijhoudingsnotificatieberichten door de centrale voorzieningen op basis van de
+inhoud van het bijhoudingsplan is uitgelegd in paragraaf 4.4.5. Voor de inhoud van
+het bijhoudingsresultaatbericht en het bijhoudingsnotificatiebericht, zie paragraaf
+C.4Fout! Verwijzingsbron niet gevonden. van deze bijlage.
+
+A.1.2
+
+Wijziging partnergegevens geregistreerd partnerschap
+Beschrijving
+Deze administratieve handeling heeft tot doel om de persoonsgegevens van een in
+de geregistreerd partnerschapsrelatie betrokken partner te kunnen wijzigen. Deze
+wijziging kan uitsluitend betrekking hebben op de bij de ingezetene hoofdpersoon
+als geregistreerd partnerschapspartner betrokken en geregistreerde
+persoonsgegevens.
+Als de partner in de geregistreerd partnerschapsrelatie is opgenomen als
+ingeschrevene, dan zal alvorens de partnergegevens kunnen worden gewijzigd, de
+betreffende partner in de relatie worden ontrelateerd (zie voor meer informatie
+paragraaf 4.10.2) en dus als pseudo-persoon worden opgenomen in de
+geregistreerd partnerschapsrelatie.
+Vervolgens kunnen dan de wijzigingen op de persoonsgegevens van de partner die
+(nu) voorkomt als een pseudo-persoon worden doorgevoerd.
+
+INVOER
+Gebruik bijhoudingsbericht
+Naast de algemeen geldende regels voor het gebruik van het bijhoudingsbericht
+zoals beschreven in paragraaf C.2.1 geldt dat voor deze specifieke administratieve
+handeling het volgende:
+•
+De actie Registratie identificatienummers gerelateerde. Met deze actie kunnen
+de elementen in de groep Identificatienummers voor de geregistreerd
+partnerschapspartner worden gewijzigd.
+•
+De actie Registratie samengestelde naam gerelateerde. Met deze actie kunnen
+de elementen in de groep Samengestelde naam voor de geregistreerd
+partnerschapspartner worden gewijzigd.
+
+1
+
+Voor uitleg over de toepassing van het bijhoudingsplan, zie paragraaf 4.4.5.
+
+Concept | | juni 2017
+
+•
+
+De actie Registratie geboorte gerelateerde. Met deze actie kunnen de elementen
+in de groep Geboorte voor de geregistreerd partnerschapspartner worden
+gewijzigd.
+•
+De actie Registratie geslachtsaanduiding gerelateerde. Met deze actie kunnen de
+elementen in de groep Geslachtsaanduiding voor de geregistreerd
+partnerschapspartner worden gewijzigd.
+Voor alle bovenstaande acties geldt dat een opgaaf van een brondocument, dat de
+aanleiding is voor de wijziging moet worden opgegeven.
+Inhoud bijhoudingsbericht
+Actualiseer huwelijk en geregistreerd partnerschap
+(bhg_hgpActualiseerHuwelijkGeregistreerdPartnerschap)
+Stuurgegevens
+
+Kardinaliteit
+
+1
+
+Zendende partij, Zendende systeem, Referentienummer, Datum/tijd verzending
+
+Parameters
+
+1
+
+Verwerkingswijze
+
+Wijziging partnergegevens geregistreerd partnerschap
+Gedeblokkeerde meldingen
+
+0..1
+
+Gedeblokkeerde melding
+
+1..n
+
+Bronnen
+
+1
+
+Bron
+
+1..n
+
+Document
+
+1
+
+Acties
+
+1
+
+Registratie identificatienummers gerelateerde
+Bronnen
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Geregistreerd partner
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+Persoon
+Identificatienummers
+Registratie samengestelde naam gerelateerde
+Bronnen
+Bron
+
+0..1
+1
+
+Bron
+
+Pagina 6 van 35
+
+1
+
+1
+1
+1
+0..1
+1
+1..n
+
+Concept | | juni 2017
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Geregistreerd partner
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+Persoon
+Samengestelde naam
+Registratie geboorte gerelateerde
+Bronnen
+
+1
+1
+1
+0..1
+1
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Geregistreerd partner
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+Persoon
+Geboorte
+Registratie geslachtsaanduiding gerelateerde
+Bronnen
+
+1
+1
+1
+0..1
+1
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Geregistreerd partner
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+Persoon
+Geslachtsaanduiding
+
+1
+1
+1
+
+VERWERKING
+Het bijhoudingsbericht wordt verwerkt zoals is beschreven in Bijlage B –
+Berichtafhandeling. De controleregels die van toepassing zijn op de administratieve
+
+Concept | | juni 2017
+
+handeling van dit specifieke bijhoudingsbericht zijn hieronder opgenomen en
+opgedeeld volgens de in het bijhoudingsbericht opgenomen acties.
+De in de overzichten opgenomen controleregels zijn terug te vinden in Bijlage F –
+Controleregels. In deze bijlage zijn bij het regelnummer de regeldefinities en de van
+toepassing zijnde meldingsteksten opgenomen.
+Actie Registratie identificatienummers gerelateerde
+Code Niveau Omschrijving
+R1845 F
+
+In het bijhoudingsbericht gerelateerde objectsleutels en voorkomensleutels
+moeten verwijzen naar gerelateerde objecten en voorkomens in de BRP
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+R2653 F
+
+Datum aanvang geldigheid moet op of na de aanvang van de relatie liggen.
+
+R2654 F
+
+De relatie met de gerelateerde moet actueel zijn.
+
+R2784 F
+
+Datum aanvang geldigheid van identificatienummers, samengestelde naam en
+geslachtsaanduiding moeten overeen komen.
+
+Actie Registratie samengestelde naam gerelateerde
+Code Niveau Omschrijving
+R1845 F
+
+In het bijhoudingsbericht gerelateerde objectsleutels en voorkomensleutels
+moeten verwijzen naar gerelateerde objecten en voorkomens in de BRP
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+R2653 F
+
+Datum aanvang geldigheid moet op of na de aanvang van de relatie liggen.
+
+R2654 F
+
+De relatie met de gerelateerde moet actueel zijn.
+
+R2739 W
+
+Waarschuwing: Naamswijziging pseudo (ex)partner werkt niet door in
+Naamgebruik hoofdpersoon
+
+R2784 F
+
+Datum aanvang geldigheid van identificatienummers, samengestelde naam en
+geslachtsaanduiding moeten overeen komen.
+
+Actie Registratie geboorte gerelateerde
+Code Niveau Omschrijving
+R1845 F
+
+In het bijhoudingsbericht gerelateerde objectsleutels en voorkomensleutels
+moeten verwijzen naar gerelateerde objecten en voorkomens in de BRP
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+R2654 F
+
+De relatie met de gerelateerde moet actueel zijn.
+
+R2784 F
+
+Datum aanvang geldigheid van identificatienummers, samengestelde naam en
+geslachtsaanduiding moeten overeen komen.
+
+Actie Registratie geslachtsaanduiding gerelateerde
+Code Niveau Omschrijving
+
+Pagina 8 van 35
+
+R1845 F
+
+In het bijhoudingsbericht gerelateerde objectsleutels en voorkomensleutels
+moeten verwijzen naar gerelateerde objecten en voorkomens in de BRP
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+R2653 F
+
+Datum aanvang geldigheid moet op of na de aanvang van de relatie liggen.
+
+R2654 F
+
+De relatie met de gerelateerde moet actueel zijn.
+
+R2784 F
+
+Datum aanvang geldigheid van identificatienummers, samengestelde naam en
+geslachtsaanduiding moeten overeen komen.
+
+Concept | | juni 2017
+
+Resultaat ná de (bericht)verwerking
+Als aan alle voorwaarden voor stap 6 (verwerken administratieve handeling) in
+Bijlage B – Berichtafhandeling is voldaan, dan registreren de centrale voorzieningen
+de doorgevoerde wijzigingen op de persoonsgegevens van de gerelateerde pseudopersoon in de geregistreerd partnerschapsrelatie.
+Actie Registratie identificatienummers gerelateerde
+Met de actie worden gegevens in de volgende groep geregistreerd:
+•
+Identificatienummers
+Actie Registratie samengestelde naam gerelateerde
+Met de actie worden gegevens in de volgende groep geregistreerd:
+•
+Samengestelde naam
+Actie Registratie geboorte gerelateerde
+Met de actie worden gegevens in de volgende groep geregistreerd:
+•
+Geboorte
+Actie Registratie geslachtsaanduiding gerelateerde
+Met de actie worden gegevens in de volgende groep geregistreerd:
+•
+Geslachtsaanduiding
+
+UITVOER
+De partij die de administratieve handeling Wijziging partnergegevens geregistreerd
+partnerschap ter verwerking aanbiedt, ontvangt altijd een
+bijhoudingsresultaatbericht retour (zie tevens stap 7 ‘Maak resultaatbericht’ in
+Bijlage B – Berichtafhandeling).
+Indien volgens de informatie in het bijhoudingsplan2 (ook) andere
+bijhoudingsverantwoordelijke colleges bij de bijhouding moeten worden betrokken,
+worden tevens bijhoudingsnotificatieberichten aan deze
+bijhoudingsverantwoordelijke colleges verzonden.
+Het doel en de werking van het bijhoudingsplan en het verzenden van
+bijhoudingsnotificatieberichten door de centrale voorzieningen op basis van de
+inhoud van het bijhoudingsplan is uitgelegd in paragraaf 4.4.5. Voor de inhoud van
+het bijhoudingsresultaatbericht en het bijhoudingsnotificatiebericht, zie paragraaf
+C.4Fout! Verwijzingsbron niet gevonden. van deze bijlage.
+
+A.1.3
+
+Ongedaanmaking huwelijk
+Beschrijving
+Deze administratieve handeling heeft tot doel om een huwelijk te laten vervallen,
+inclusief de bijbehorende partner-betrokkenheden en groepen van een eventueel
+betrokken pseudo-persoon.
+Voorbeelden van situaties waarin deze handeling kan worden toegepast:
+•
+het huwelijk is ten onrechte opgenomen.
+•
+de verkeerde persoon is als partner bij het huwelijk opgenomen.
+•
+de huwelijksakte is doorgehaald.
+2
+
+Voor uitleg over de toepassing van het bijhoudingsplan, zie paragraaf 4.4.5.
+
+Concept | | juni 2017
+
+•
+een geregistreerd partnerschap is ten onrechte als een huwelijk opgenomen.
+De eventuele geslachtsnaam die is gewijzigd als gevolg van het huwelijk blijft door
+deze handeling ongewijzigd. Deze moet zo nodig met een andere administratieve
+handeling gecorrigeerd worden.
+
+INVOER
+Gebruik bijhoudingsbericht
+Naast de algemeen geldende regels voor het gebruik van het bijhoudingsbericht
+zoals beschreven in paragraaf C.2.1 geldt dat voor deze specifieke administratieve
+handeling de volgende actie verplicht is op te geven:
+• Verval huwelijk. Deze actie wijst het huwelijk aan, dat als vervallen moet
+worden geregistreerd. Hiermee wordt het huwelijk ongedaan gemaakt.
+•
+Het opgeven van een Nadere aanduiding verval is optioneel. Als deze is
+opgegeven wordt deze vastgelegd bij alle voorkomens (van groepen) die door
+deze administratieve handeling vervallen. Indien de Nadere aanduiding verval
+gelijk is aan “S” (Strijdig met de openbare orde), moet ter verantwoording
+hiervan als bron een rechtsgrond worden opgenomen.
+Inhoud bijhoudingsbericht
+Corrigeer huwelijk en geregistreerd partnerschap
+(bhg_hgpCorrigeerHuwelijkGeregistreerdPartnerschap)
+Stuurgegevens
+
+Kardinaliteit
+
+1
+
+Zendende partij, Zendende systeem, Referentienummer, Datum/tijd verzending
+
+Parameters
+
+1
+
+Verwerkingswijze
+
+Ongedaanmaking huwelijk
+Bezien vanuit personen
+Persoon
+Gedeblokkeerde meldingen
+Gedeblokkeerde melding
+
+1
+0..1
+1
+0..1
+1..n
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Document
+Acties
+
+0..1
+1
+
+Verval huwelijk
+
+1
+
+Nadere aanduiding verval
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Huwelijk
+
+Pagina 10 van 35
+
+1
+
+Concept | | juni 2017
+
+VERWERKING
+Het bijhoudingsbericht wordt verwerkt zoals is beschreven in Bijlage B –
+Berichtafhandeling. De controleregels die van toepassing zijn op de administratieve
+handeling van dit specifieke bijhoudingsbericht zijn hieronder opgenomen en
+opgedeeld volgens de in het bijhoudingsbericht opgenomen acties.
+De in de overzichten opgenomen controleregels zijn terug te vinden in Bijlage F –
+Controleregels. In deze bijlage zijn bij het regelnummer de regeldefinities en de van
+toepassing zijnde meldingsteksten opgenomen.
+Hoofdactie Verval huwelijk
+Code Niveau Omschrijving
+R1861 F
+
+Een H/GP mag alleen door betrokken gemeenten worden bijgehouden
+
+R2214 F
+
+Onderdeel "bezien vanuit persoon" moet geldige personen bevatten
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+Resultaat ná de (bericht)verwerking
+Als aan alle voorwaarden voor stap 6 (verwerken administratieve handeling) in
+Bijlage B – Berichtafhandeling is voldaan, dan registreren de centrale voorzieningen
+de doorgevoerde actie op de huwelijksrelatie.
+Actie Verval huwelijk
+Met de actie vervallen de volgende groepen naar de formele historie:
+•
+Relatie
+•
+Betrokkenheden bij de betreffende relatie
+•
+Pseudo-persoon (indien aanwezig) bij de betreffende relatie
+De volgende bij de relatie behorende IST-gegevens worden (indien aanwezig)
+verwijderd:
+•
+Stapel \ Relatie
+•
+Stapel
+•
+Stapel voorkomen
+
+UITVOER
+De partij die de administratieve handeling Ongedaanmaking huwelijk ter verwerking
+aanbiedt, ontvangt altijd een bijhoudingsresultaatbericht retour (zie tevens stap 7
+‘Maak resultaatbericht’ in Bijlage B – Berichtafhandeling).
+Indien volgens de informatie in het bijhoudingsplan3 (ook) andere
+bijhoudingsverantwoordelijke colleges bij de bijhouding moeten worden betrokken,
+worden tevens bijhoudingsnotificatieberichten aan deze
+bijhoudingsverantwoordelijke colleges verzonden.
+Het doel en de werking van het bijhoudingsplan en het verzenden van
+bijhoudingsnotificatieberichten door de centrale voorzieningen op basis van de
+inhoud van het bijhoudingsplan is uitgelegd in paragraaf 4.4.5. Voor de inhoud van
+het bijhoudingsresultaatbericht en het bijhoudingsnotificatiebericht, zie paragraaf
+C.4Fout! Verwijzingsbron niet gevonden. van deze bijlage.
+
+3
+
+Voor uitleg over de toepassing van het bijhoudingsplan, zie paragraaf 4.4.5.
+
+Concept | | juni 2017
+
+A.1.4
+
+Ongedaanmaking geregistreerd partnerschap
+Beschrijving
+Deze administratieve handeling heeft tot doel om een geregistreerd partnerschap te
+laten vervallen, inclusief de bijbehorende partner-betrokkenheden en groepen van
+een eventueel betrokken pseudo-persoon.
+Voorbeelden van situaties waarin deze handeling kan worden toegepast:
+•
+het geregistreerd partnerschap is ten onrechte opgenomen.
+•
+de verkeerde persoon is als partner bij het geregistreerd partnerschap
+opgenomen.
+•
+de akte van het geregistreerd partnerschap is doorgehaald.
+•
+een huwelijk is ten onrechte als een geregistreerd partnerschap opgenomen.
+De eventuele geslachtsnaam die is gewijzigd als gevolg van het huwelijk blijft door
+deze handeling ongewijzigd. Deze moet zo nodig met een andere administratieve
+handeling gecorrigeerd worden.
+
+INVOER
+Gebruik bijhoudingsbericht
+Naast de algemeen geldende regels voor het gebruik van het bijhoudingsbericht
+zoals beschreven in paragraaf C.2.1 geldt dat voor deze specifieke administratieve
+handeling de volgende actie verplicht is op te geven:
+•
+Verval geregistreerd partnerschap. Deze actie wijst het geregistreerd
+partnerschap aan, dat als vervallen moet worden geregistreerd. Hiermee wordt
+het geregistreerd partnerschap ongedaan gemaakt.
+•
+Het opgeven van een Nadere aanduiding verval is optioneel. Als deze is
+opgegeven wordt deze vastgelegd bij alle voorkomens (van groepen) die door
+deze administratieve handeling vervallen. Indien de Nadere aanduiding verval
+gelijk is aan “S” (Strijdig met de openbare orde), moet ter verantwoording
+hiervan als bron een rechtsgrond worden opgenomen.
+Inhoud bijhoudingsbericht
+Corrigeer huwelijk en geregistreerd partnerschap
+(bhg_hgpCorrigeerHuwelijkGeregistreerdPartnerschap)
+Stuurgegevens
+
+Kardinaliteit
+
+1
+
+Zendende partij, Zendende systeem, Referentienummer, Datum/tijd verzending
+
+Parameters
+
+1
+
+Verwerkingswijze
+
+Ongedaanmaking geregistreerd partnerschap
+Bezien vanuit personen
+Persoon
+Gedeblokkeerde meldingen
+Gedeblokkeerde melding
+Bronnen
+
+Pagina 12 van 35
+
+1
+0..1
+1
+0..1
+1..n
+0..1
+
+Concept | | juni 2017
+
+Bron
+
+1..n
+
+Document
+Acties
+
+0..1
+1
+
+Verval geregistreerd partnerschap
+
+1
+
+Nadere aanduiding verval
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Geregistreerd partnerschap
+
+1
+
+VERWERKING
+Het bijhoudingsbericht wordt verwerkt zoals is beschreven in Bijlage B –
+Berichtafhandeling. De controleregels die van toepassing zijn op de administratieve
+handeling van dit specifieke bijhoudingsbericht zijn hieronder opgenomen en
+opgedeeld volgens de in het bijhoudingsbericht opgenomen acties.
+De in de overzichten opgenomen controleregels zijn terug te vinden in Bijlage F –
+Controleregels. In deze bijlage zijn bij het regelnummer de regeldefinities en de van
+toepassing zijnde meldingsteksten opgenomen.
+Hoofdactie Verval geregistreerd partnerschap
+Code Niveau Omschrijving
+R1861 F
+
+Een H/GP mag alleen door betrokken gemeenten worden bijgehouden
+
+R2214 F
+
+Onderdeel "bezien vanuit persoon" moet geldige personen bevatten
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+Resultaat ná de (bericht)verwerking
+Als aan alle voorwaarden voor stap 6 (verwerken administratieve handeling) in
+Bijlage B – Berichtafhandeling is voldaan, dan registreren de centrale voorzieningen
+de doorgevoerde actie op de geregistreerd partnerschapsrelatie.
+Actie Verval geregistreerd partnerschap
+Met de actie vervallen de volgende groepen naar de formele historie:
+•
+Relatie
+•
+Betrokkenheden bij de betreffende relatie
+•
+Pseudo-persoon (indien aanwezig) bij de betreffende relatie
+De volgende bij de relatie behorende IST-gegevens worden (indien aanwezig)
+verwijderd:
+•
+Stapel \ Relatie
+•
+Stapel
+•
+Stapel voorkomen
+
+UITVOER
+De partij die de administratieve handeling Ongedaanmaking geregistreerd
+partnerschap ter verwerking aanbiedt, ontvangt altijd een
+
+Concept | | juni 2017
+
+bijhoudingsresultaatbericht retour (zie tevens stap 7 ‘Maak resultaatbericht’ in
+Bijlage B – Berichtafhandeling).
+Indien volgens de informatie in het bijhoudingsplan4 (ook) andere
+bijhoudingsverantwoordelijke colleges bij de bijhouding moeten worden betrokken,
+worden tevens bijhoudingsnotificatieberichten aan deze
+bijhoudingsverantwoordelijke colleges verzonden.
+Het doel en de werking van het bijhoudingsplan en het verzenden van
+bijhoudingsnotificatieberichten door de centrale voorzieningen op basis van de
+inhoud van het bijhoudingsplan is uitgelegd in paragraaf 4.4.5. Voor de inhoud van
+het bijhoudingsresultaatbericht en het bijhoudingsnotificatiebericht, zie paragraaf
+C.4Fout! Verwijzingsbron niet gevonden. van deze bijlage.
+
+A.1.5
+
+Correctie huwelijk
+Beschrijving
+Deze administratieve handeling heeft tot doel om de gegevens van een huwelijk te
+corrigeren.
+Voorbeelden van situaties waarin deze handeling kan worden toegepast:
+•
+de datum aanvang of datum einde is niet correct.
+•
+het laten herleven van een ontbonden huwelijk na (bijvoorbeeld) een
+vernietiging van een nietigverklaring of vernietiging van een ontbinding.
+Het volgende kan met deze administratieve handeling niet worden gecorrigeerd: de
+soort relatie, de betrokkenheden en de persoonsgegevens van betrokken partners.
+De geregistreerde gegevens bij een ongedaan gemaakt huwelijk kunnen ook niet
+met deze administratieve handeling worden gecorrigeerd.
+
+INVOER
+Gebruik bijhoudingsbericht
+Naast de algemeen geldende regels voor het gebruik van het bijhoudingsbericht
+zoals beschreven in paragraaf C.2.1 geldt dat voor deze specifieke administratieve
+handeling het volgende:
+•
+De actie Correctieverval relatie. Deze actie wijst het huwelijk aan, dat als
+vervallen moet worden geregistreerd.
+•
+Bij de actie Correctieverval relatie is het opgeven van een Nadere aanduiding
+verval optioneel. Indien de Nadere aanduiding verval gelijk is aan “S” (Strijdig
+met de openbare orde), moet ter verantwoording hiervan als bron een
+rechtsgrond worden opgenomen.
+•
+De actie Correctieregistratie relatie. Deze actie draagt zorg voor de registratie
+van een nieuw voorkomen van de groep Relatie met alle daarbinnen opgegeven
+elementen.
+Inhoud bijhoudingsbericht
+Corrigeer huwelijk en geregistreerd partnerschap
+(bhg_hgpCorrigeerHuwelijkGeregistreerdPartnerschap)
+Stuurgegevens
+
+4
+
+Pagina 14 van 35
+
+Voor uitleg over de toepassing van het bijhoudingsplan, zie paragraaf 4.4.5.
+
+Kardinaliteit
+
+1
+
+Concept | | juni 2017
+
+Zendende partij, Zendende systeem, Referentienummer, Datum/tijd verzending
+
+Parameters
+
+1
+
+Verwerkingswijze
+
+Correctie huwelijk
+Bezien vanuit personen
+Persoon
+
+1
+0..1
+1
+
+Gedeblokkeerde meldingen
+Gedeblokkeerde melding
+Bronnen
+
+0..1
+1..n
+1
+
+Bron
+
+1..n
+
+Document
+Acties
+
+0..1
+1
+
+Correctieverval relatie
+
+1
+
+Nadere aanduiding verval
+
+Bronnen
+Bron
+Huwelijk
+Relatie
+Correctieregistratie relatie
+Bronnen
+Bron
+Huwelijk
+Relatie
+
+1
+1..n
+1
+1
+1
+1
+1..n
+1
+1
+
+VERWERKING
+Het bijhoudingsbericht wordt verwerkt zoals is beschreven in Bijlage B –
+Berichtafhandeling. De controleregels die van toepassing zijn op de administratieve
+handeling van dit specifieke bijhoudingsbericht zijn hieronder opgenomen en
+opgedeeld volgens de in het bijhoudingsbericht opgenomen acties.
+De in de overzichten opgenomen controleregels zijn terug te vinden in Bijlage F –
+Controleregels. In deze bijlage zijn bij het regelnummer de regeldefinities en de van
+toepassing zijnde meldingsteksten opgenomen.
+Actie Correctieverval relatie
+Code Niveau Omschrijving
+R1861 F
+
+Een H/GP mag alleen door betrokken gemeenten worden bijgehouden
+
+R2214 F
+
+Onderdeel "bezien vanuit persoon" moet geldige personen bevatten
+
+Concept | | juni 2017
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+Actie Correctieregistratie relatie
+Code Niveau Omschrijving
+R1861 F
+
+Een H/GP mag alleen door betrokken gemeenten worden bijgehouden
+
+R1878 F
+
+Correctie beëindigingsgegevens alleen mogelijk als de relatie al beëindigd was
+
+R2214 F
+
+Onderdeel "bezien vanuit persoon" moet geldige personen bevatten
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2477 F
+
+Bij nietigverklaring moet datum einde gelijk zijn aan datum aanvang
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+Resultaat ná de (bericht)verwerking
+Als aan alle voorwaarden voor stap 6 (verwerken administratieve handeling) in
+Bijlage B – Berichtafhandeling is voldaan, dan registreren de centrale voorzieningen
+de doorgevoerde acties op de huwelijksrelatie.
+Actie Correctieverval relatie
+Met de actie vervalt het aangewezen voorkomen van de volgende groep naar de
+formele historie:
+•
+Relatie
+Actie Correctieregistratie relatie
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+Relatie
+De gegevens met betrekking tot de aanvang en het eventuele einde van de relatie
+worden in één keer vastgelegd.
+Voor beide acties geldt dat de volgende bij de relatie behorende IST-gegevens
+worden (indien aanwezig) verwijderd:
+•
+Stapel \ Relatie
+•
+Stapel
+•
+Stapel voorkomen
+
+UITVOER
+De partij die de administratieve handeling Correctie huwelijk ter verwerking
+aanbiedt, ontvangt altijd een bijhoudingsresultaatbericht retour (zie tevens stap 7
+‘Maak resultaatbericht’ in Bijlage B – Berichtafhandeling).
+Indien volgens de informatie in het bijhoudingsplan5 (ook) andere
+bijhoudingsverantwoordelijke colleges bij de bijhouding moeten worden betrokken,
+worden tevens bijhoudingsnotificatieberichten aan deze
+bijhoudingsverantwoordelijke colleges verzonden.
+Het doel en de werking van het bijhoudingsplan en het verzenden van
+bijhoudingsnotificatieberichten door de centrale voorzieningen op basis van de
+inhoud van het bijhoudingsplan is uitgelegd in paragraaf 4.4.5. Voor de inhoud van
+het bijhoudingsresultaatbericht en het bijhoudingsnotificatiebericht, zie paragraaf
+C.4Fout! Verwijzingsbron niet gevonden. van deze bijlage.
+
+5
+
+Pagina 16 van 35
+
+Voor uitleg over de toepassing van het bijhoudingsplan, zie paragraaf 4.4.5.
+
+Concept | | juni 2017
+
+A.1.6
+
+Correctie geregistreerd partnerschap
+Beschrijving
+Deze administratieve handeling heeft tot doel om de gegevens van een
+geregistreerd partnerschap te corrigeren.
+Voorbeelden van situaties waarin deze handeling kan worden toegepast:
+•
+de datum aanvang of datum einde is niet correct.
+•
+het laten herleven van een beëindigd geregistreerd partnerschap na
+(bijvoorbeeld) een vernietiging van een nietigverklaring of vernietiging van een
+beëindiging.
+Het volgende kan met deze administratieve handeling niet worden gecorrigeerd: de
+soort relatie, de betrokkenheden en de persoonsgegevens van betrokken partners.
+De geregistreerde gegevens bij een ongedaan gemaakt geregistreerd partnerschap
+kunnen ook niet met deze administratieve handeling worden gecorrigeerd.
+
+INVOER
+Gebruik bijhoudingsbericht
+Naast de algemeen geldende regels voor het gebruik van het bijhoudingsbericht
+zoals beschreven in paragraaf C.2.1 geldt dat voor deze specifieke administratieve
+handeling het volgende:
+•
+De actie Correctieverval relatie. Deze actie wijst het geregistreerd partnerschap
+aan, dat als vervallen moet worden geregistreerd.
+•
+Bij de actie Correctieverval relatie is het opgeven van een Nadere aanduiding
+verval optioneel. Indien de Nadere aanduiding verval gelijk is aan “S” (Strijdig
+met de openbare orde), moet ter verantwoording hiervan als bron een
+rechtsgrond worden opgenomen.
+•
+De actie Correctieregistratie relatie. Deze actie draagt zorg voor de registratie
+van een nieuw voorkomen van de groep Relatie met alle daarbinnen opgegeven
+elementen.
+Inhoud bijhoudingsbericht
+Corrigeer huwelijk en geregistreerd partnerschap
+(bhg_hgpCorrigeerHuwelijkGeregistreerdPartnerschap)
+Stuurgegevens
+
+Kardinaliteit
+
+1
+
+Zendende partij, Zendende systeem, Referentienummer, Datum/tijd verzending
+
+Parameters
+
+1
+
+Verwerkingswijze
+
+Correctie geregistreerd partnerschap
+Bezien vanuit personen
+Persoon
+Gedeblokkeerde meldingen
+Gedeblokkeerde melding
+Bronnen
+
+1
+0..1
+1
+0..1
+1..n
+1
+
+Concept | | juni 2017
+
+Bron
+
+1..n
+
+Document
+Acties
+
+0..1
+1
+
+Correctieverval relatie
+
+1
+
+Nadere aanduiding verval
+
+Bronnen
+Bron
+Geregistreerd partnerschap
+Relatie
+Correctieregistratie relatie
+Bronnen
+Bron
+Geregistreerd partnerschap
+Relatie
+
+1
+1..n
+1
+1
+1
+1
+1..n
+1
+1
+
+VERWERKING
+Het bijhoudingsbericht wordt verwerkt zoals is beschreven in Bijlage B –
+Berichtafhandeling. De controleregels die van toepassing zijn op de administratieve
+handeling van dit specifieke bijhoudingsbericht zijn hieronder opgenomen en
+opgedeeld volgens de in het bijhoudingsbericht opgenomen acties.
+De in de overzichten opgenomen controleregels zijn terug te vinden in Bijlage F –
+Controleregels. In deze bijlage zijn bij het regelnummer de regeldefinities en de van
+toepassing zijnde meldingsteksten opgenomen.
+Actie Correctieverval relatie
+Code Niveau Omschrijving
+R1861 F
+
+Een H/GP mag alleen door betrokken gemeenten worden bijgehouden
+
+R2214 F
+
+Onderdeel "bezien vanuit persoon" moet geldige personen bevatten
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+Actie Correctieregistratie relatie
+Code Niveau Omschrijving
+R1861 F
+
+Een H/GP mag alleen door betrokken gemeenten worden bijgehouden
+
+R1878 F
+
+Correctie beëindigingsgegevens alleen mogelijk als de relatie al beëindigd
+was
+
+R2214 F
+
+Onderdeel "bezien vanuit persoon" moet geldige personen bevatten
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2477 F
+
+Bij nietigverklaring moet datum einde gelijk zijn aan datum aanvang
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+Resultaat ná de (bericht)verwerking
+Pagina 18 van 35
+
+Concept | | juni 2017
+
+Als aan alle voorwaarden voor stap 6 (verwerken administratieve handeling) in
+Bijlage B – Berichtafhandeling is voldaan, dan registreren de centrale voorzieningen
+de doorgevoerde acties op de geregistreerd partnerschapsrelatie.
+Actie Correctieverval relatie
+Met de actie vervalt het aangewezen voorkomen van de volgende groep naar de
+formele historie:
+•
+Relatie
+Actie Correctieregistratie relatie
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+Relatie
+De gegevens met betrekking tot de aanvang en het eventuele einde van de relatie
+worden in één keer vastgelegd.
+Voor beide acties geldt dat de volgende bij de relatie behorende IST-gegevens
+worden (indien aanwezig) verwijderd:
+•
+Stapel \ Relatie
+•
+Stapel
+•
+Stapel voorkomen
+
+UITVOER
+De partij die de administratieve handeling Correctie geregistreerd partnerschap ter
+verwerking aanbiedt, ontvangt altijd een bijhoudingsresultaatbericht retour (zie
+tevens stap 7 ‘Maak resultaatbericht’ in Bijlage B – Berichtafhandeling).
+Indien volgens de informatie in het bijhoudingsplan6 (ook) andere
+bijhoudingsverantwoordelijke colleges bij de bijhouding moeten worden betrokken,
+worden tevens bijhoudingsnotificatieberichten aan deze
+bijhoudingsverantwoordelijke colleges verzonden.
+Het doel en de werking van het bijhoudingsplan en het verzenden van
+bijhoudingsnotificatieberichten door de centrale voorzieningen op basis van de
+inhoud van het bijhoudingsplan is uitgelegd in paragraaf 4.4.5. Voor de inhoud van
+het bijhoudingsresultaatbericht en het bijhoudingsnotificatiebericht, zie paragraaf
+C.4Fout! Verwijzingsbron niet gevonden. van deze bijlage.
+
+A.1.7
+
+Correctie partnergegevens huwelijk
+Beschrijving
+Deze administratieve handeling heeft tot doel om de gegevens van een gerelateerde
+partner in een huwelijk te corrigeren. De gerelateerde partner kan een
+ingeschrevene of pseudo-persoon betreffen. Als de partner in de huwelijksrelatie is
+opgenomen als ingeschrevene, dan zal alvorens de partnergegevens kunnen worden
+gecorrigeerd, de betreffende partner in de relatie worden ontrelateerd (zie voor
+meer informatie paragraaf 4.10.2) en dus als pseudo-persoon worden opgenomen in
+de huwelijksrelatie.
+Vervolgens kunnen dan de correcties op de persoonsgegevens van de partner die
+(nu) voorkomt als een pseudo-persoon worden doorgevoerd.
+
+6
+
+Voor uitleg over de toepassing van het bijhoudingsplan, zie paragraaf 4.4.5.
+
+Concept | | juni 2017
+
+INVOER
+Gebruik bijhoudingsbericht
+Naast de algemeen geldende regels voor het gebruik van het bijhoudingsbericht
+zoals beschreven in paragraaf C.2.1 geldt dat voor deze specifieke administratieve
+handeling het volgende:
+•
+De actie Correctieverval identificatienummers. Deze actie laat de bij de
+gerelateerde partner opgenomen groep Identificatienummers vervallen.
+•
+Bij de actie Correctieverval identificatienummers is het opgeven van een Nadere
+aanduiding verval optioneel. Indien de Nadere aanduiding verval gelijk is aan
+“S” (Strijdig met de openbare orde), moet ter verantwoording hiervan als bron
+een rechtsgrond worden opgenomen.
+•
+De actie Correctieregistratie identificatienummers. Deze actie draagt zorg voor
+de registratie van een nieuw voorkomen van de groep Identificatienummers bij
+de gerelateerde partner.
+•
+De actie Correctieverval samengestelde naam gerelateerde. Deze actie laat de
+bij de gerelateerde partner opgenomen groep Samengestelde naam vervallen.
+•
+Bij de actie Correctieverval samengestelde naam gerelateerde is het opgeven
+van een Nadere aanduiding verval optioneel. Indien de Nadere aanduiding verval
+gelijk is aan “S” (Strijdig met de openbare orde), moet ter verantwoording
+hiervan als bron een rechtsgrond worden opgenomen.
+•
+De actie Correctieregistratie samengestelde naam gerelateerde. Deze actie
+draagt zorg voor de registratie van een nieuw voorkomen van de groep
+Samengestelde naam bij de gerelateerde partner.
+•
+De actie Correctieverval geboorte gerelateerde. Deze actie laat de bij de
+gerelateerde partner opgenomen groep Geboorte vervallen.
+•
+Bij de actie Correctieverval geboorte gerelateerde is het opgeven van een
+Nadere aanduiding verval optioneel. Indien de Nadere aanduiding verval gelijk is
+aan “S” (Strijdig met de openbare orde), moet ter verantwoording hiervan als
+bron een rechtsgrond worden opgenomen.
+•
+De actie Correctieregistratie geboorte gerelateerde. Deze actie draagt zorg voor
+de registratie van een nieuw voorkomen van de groep Geboorte bij de
+gerelateerde partner.
+•
+De actie Correctieverval geslachtsaanduiding gerelateerde. Deze actie laat de bij
+de gerelateerde partner opgenomen groep Geslachtsaanduiding vervallen.
+•
+Bij de actie Correctieverval geslachtsaanduiding gerelateerde is het opgeven van
+een Nadere aanduiding verval optioneel. Indien de Nadere aanduiding verval
+gelijk is aan “S” (Strijdig met de openbare orde), moet ter verantwoording
+hiervan als bron een rechtsgrond worden opgenomen.
+•
+De actie Correctieregistratie geslachtsaanduiding gerelateerde. Deze actie draagt
+zorg voor de registratie van een nieuw voorkomen van de groep
+Geslachtsaanduiding bij de gerelateerde partner.
+Inhoud bijhoudingsbericht
+Corrigeer huwelijk en geregistreerd partnerschap
+(bhg_hgpCorrigeerHuwelijkGeregistreerdPartnerschap)
+Stuurgegevens
+
+Kardinaliteit
+
+1
+
+Zendende partij, Zendende systeem, Referentienummer, Datum/tijd verzending
+
+Parameters
+Verwerkingswijze
+
+Pagina 20 van 35
+
+1
+
+Concept | | juni 2017
+
+Correctie partnergegevens huwelijk
+Gedeblokkeerde meldingen
+
+1
+0..1
+
+Gedeblokkeerde melding
+
+1..n
+
+Bronnen
+
+1
+
+Bron
+
+1..n
+
+Document
+
+0..1
+
+Acties
+
+1
+
+Correctieverval identificatienummers gerelateerde
+
+0..n
+
+Nadere aanduiding verval
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Huwelijk
+
+1
+
+Betrokkenheden
+Partner
+Persoon
+Identificatienummers
+Correctieregistratie identificatienummers gerelateerde
+
+1
+1
+1
+1
+0..n
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Huwelijk
+
+1
+
+Betrokkenheden
+Partner
+Persoon
+Identificatienummers
+Correctieverval samengestelde naam gerelateerde
+
+1
+1
+1
+1
+0..n
+
+Nadere aanduiding verval
+
+Bronnen
+
+0..1
+
+Concept | | juni 2017
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Huwelijk
+
+1
+
+Betrokkenheden
+Partner
+Persoon
+Samengestelde naam
+Correctieregistratie samengestelde naam gerelateerde
+
+1
+1
+1
+1
+0..n
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Huwelijk
+
+1
+
+Betrokkenheden
+Partner
+Persoon
+Samengestelde naam
+Correctieverval geboorte gerelateerde
+
+1
+1
+1
+1
+0..1
+
+Nadere aanduiding verval
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Huwelijk
+
+1
+
+Betrokkenheden
+Partner
+Persoon
+Geboorte
+Correctieregistratie geboorte gerelateerde
+
+Pagina 22 van 35
+
+1
+1
+1
+1
+0..1
+
+Concept | | juni 2017
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Huwelijk
+
+1
+
+Betrokkenheden
+Partner
+Persoon
+Geboorte
+Correctieverval geslachtsaanduiding gerelateerde
+
+1
+1
+1
+1
+0..n
+
+Nadere aanduiding verval
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Huwelijk
+
+1
+
+Betrokkenheden
+Partner
+Persoon
+Geslachtsaanduiding
+Correctieregistratie geslachtsaanduiding gerelateerde
+
+1
+1
+1
+1
+0..n
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Huwelijk
+
+1
+
+Betrokkenheden
+Partner
+Persoon
+Geslachtsaanduiding
+
+1
+1
+1
+1
+
+Concept | | juni 2017
+
+VERWERKING
+Het bijhoudingsbericht wordt verwerkt zoals is beschreven in Bijlage B –
+Berichtafhandeling. De controleregels die van toepassing zijn op de administratieve
+handeling van dit specifieke bijhoudingsbericht zijn hieronder opgenomen en
+opgedeeld volgens de in het bijhoudingsbericht opgenomen acties.
+De in de overzichten opgenomen controleregels zijn terug te vinden in Bijlage F –
+Controleregels. In deze bijlage zijn bij het regelnummer de regeldefinities en de van
+toepassing zijnde meldingsteksten opgenomen.
+Actie Correctieverval identificatienummers gerelateerde
+Code Niveau Omschrijving
+R1610 F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve
+handeling aanbieden
+
+R1836 F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+R2521 F
+
+Alle acties moeten betrekking hebben op dezelfde gerelateerde persoon
+
+R2526 F
+
+Tijdlijncontrole groep Geboorte
+
+R2530 F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+Actie Correctieregistratie identificatienummers gerelateerde
+Code Niveau Omschrijving
+R1610 F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve
+handeling aanbieden
+
+R1836 F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+R2521 F
+
+Alle acties moeten betrekking hebben op dezelfde gerelateerde persoon
+
+R2526 F
+
+Tijdlijncontrole groep Geboorte
+
+R2528 F
+
+Datum einde geldigheid van de actie moet na datum aanvang van de actie
+liggen
+
+R2530 F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+Actie Correctieverval samengestelde naam gerelateerde
+Code Niveau Omschrijving
+
+Pagina 24 van 35
+
+R1610 F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve
+handeling aanbieden
+
+R1836 F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+R2521 F
+
+Alle acties moeten betrekking hebben op dezelfde gerelateerde persoon
+
+R2526 F
+
+Tijdlijncontrole groep Geboorte
+
+R2530 F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+Concept | | juni 2017
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+Actie Correctieregistratie samengestelde naam gerelateerde
+Code Niveau Omschrijving
+R1610 F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve
+handeling aanbieden
+
+R1836 F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+R2521 F
+
+Alle acties moeten betrekking hebben op dezelfde gerelateerde persoon
+
+R2526 F
+
+Tijdlijncontrole groep Geboorte
+
+R2530 F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2535 F
+
+Datum einde geldigheid van de actie moet op of na datum aanvang van de
+actie liggen
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+R2739 W
+
+Waarschuwing: Naamswijziging pseudo (ex)partner werkt niet door in
+Naamgebruik hoofdpersoon
+
+Actie Correctieverval geboorte gerelateerde
+Code Niveau Omschrijving
+R1610 F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve
+handeling aanbieden
+
+R1836 F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+R2521 F
+
+Alle acties moeten betrekking hebben op dezelfde gerelateerde persoon
+
+R2526 F
+
+Tijdlijncontrole groep Geboorte
+
+R2530 F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+Actie Correctieregistratie geboorte gerelateerde
+Code Niveau Omschrijving
+R1610 F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve
+handeling aanbieden
+
+R1836 F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+R2521 F
+
+Alle acties moeten betrekking hebben op dezelfde gerelateerde persoon
+
+R2526 F
+
+Tijdlijncontrole groep Geboorte
+
+R2530 F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+Actie Correctieverval geslachtsaanduiding gerelateerde
+Code Niveau Omschrijving
+R1610 F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve
+handeling aanbieden
+
+Concept | | juni 2017
+
+R1836 F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+R2521 F
+
+Alle acties moeten betrekking hebben op dezelfde gerelateerde persoon
+
+R2526 F
+
+Tijdlijncontrole groep Geboorte
+
+R2530 F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+Actie Correctieregistratie geslachtsaanduiding gerelateerde
+Code Niveau Omschrijving
+R1610 F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve
+handeling aanbieden
+
+R1836 F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+R2521 F
+
+Alle acties moeten betrekking hebben op dezelfde gerelateerde persoon
+
+R2526 F
+
+Tijdlijncontrole groep Geboorte
+
+R2528 F
+
+Datum einde geldigheid van de actie moet na datum aanvang van de actie
+liggen
+
+R2530 F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+Resultaat ná de (bericht)verwerking
+Als aan alle voorwaarden voor stap 6 (verwerken administratieve handeling) in
+Bijlage B – Berichtafhandeling is voldaan, dan registreren de centrale voorzieningen
+de doorgevoerde acties op de huwelijksrelatie.
+Actie Correctieverval identificatienummers gerelateerde
+Met de actie vervalt het aangewezen voorkomen van de volgende groep naar de
+formele historie:
+•
+Identificatienummers
+Actie Correctieregistratie identificatienummers gerelateerde
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+Identificatienummers
+Actie Correctieverval samengestelde naam gerelateerde
+Met de actie vervalt het aangewezen voorkomen van de volgende groep naar de
+formele historie:
+•
+Samengestelde naam
+Actie Correctieregistratie samengestelde naam gerelateerde
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+Samengestelde naam
+Actie Correctieverval geboorte gerelateerde
+Met de actie vervalt het aangewezen voorkomen van de volgende groep naar de
+formele historie:
+•
+Geboorte
+Pagina 26 van 35
+
+Concept | | juni 2017
+
+Actie Correctieregistratie geboorte gerelateerde
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+Geboorte
+Actie Correctieverval geslachtsaanduiding gerelateerde
+Met de actie vervalt het aangewezen voorkomen van de volgende groep naar de
+formele historie:
+•
+Geslachtsaanduiding
+Actie Correctieregistratie geslachtsaanduiding gerelateerde
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+Geslachtsaanduiding
+Voor alle bovenstaande acties geldt dat de volgende bij de relatie behorende ISTgegevens worden (indien aanwezig) verwijderd:
+•
+Stapel \ Relatie
+•
+Stapel
+•
+Stapel voorkomen
+
+UITVOER
+De partij die de administratieve handeling Correctie partnergegevens huwelijk ter
+verwerking aanbiedt, ontvangt altijd een bijhoudingsresultaatbericht retour (zie
+tevens stap 7 ‘Maak resultaatbericht’ in Bijlage B – Berichtafhandeling).
+Indien volgens de informatie in het bijhoudingsplan7 (ook) andere
+bijhoudingsverantwoordelijke colleges bij de bijhouding moeten worden betrokken,
+worden tevens bijhoudingsnotificatieberichten aan deze
+bijhoudingsverantwoordelijke colleges verzonden.
+Het doel en de werking van het bijhoudingsplan en het verzenden van
+bijhoudingsnotificatieberichten door de centrale voorzieningen op basis van de
+inhoud van het bijhoudingsplan is uitgelegd in paragraaf 4.4.5. Voor de inhoud van
+het bijhoudingsresultaatbericht en het bijhoudingsnotificatiebericht, zie paragraaf
+C.4Fout! Verwijzingsbron niet gevonden. van deze bijlage.
+
+A.1.8
+
+Correctie partnergegevens geregistreerd partnerschap
+Beschrijving
+Deze administratieve handeling heeft tot doel om de gegevens van een gerelateerde
+partner in een geregistreerd partnerschap te corrigeren. De gerelateerde partner
+kan een ingeschrevene of pseudo-persoon betreffen. Als de partner in de
+geregistreerd partnerschapsrelatie is opgenomen als ingeschrevene, dan zal
+alvorens de partnergegevens kunnen worden gecorrigeerd, de betreffende partner in
+de relatie worden ontrelateerd (zie voor meer informatie paragraaf 4.10.2) en dus
+als pseudo-persoon worden opgenomen in de geregistreerd partnerschapsrelatie.
+Vervolgens kunnen dan de correcties op de persoonsgegevens van de partner die
+(nu) voorkomt als een pseudo-persoon worden doorgevoerd.
+
+INVOER
+7
+
+Voor uitleg over de toepassing van het bijhoudingsplan, zie paragraaf 4.4.5.
+
+Concept | | juni 2017
+
+Gebruik bijhoudingsbericht
+Naast de algemeen geldende regels voor het gebruik van het bijhoudingsbericht
+zoals beschreven in paragraaf C.2.1 geldt dat voor deze specifieke administratieve
+handeling het volgende:
+•
+De actie Correctieverval identificatienummers gerelateerde. Deze actie laat de
+bij de gerelateerde partner opgenomen groep Identificatienummers vervallen.
+•
+Bij de actie Correctieverval identificatienummers gerelateerde is het opgeven
+van een Nadere aanduiding verval optioneel. Indien de Nadere aanduiding verval
+gelijk is aan “S” (Strijdig met de openbare orde), moet ter verantwoording
+hiervan als bron een rechtsgrond worden opgenomen.
+•
+De actie Correctieregistratie identificatienummers gerelateerde. Deze actie
+draagt zorg voor de registratie van een nieuw voorkomen van de groep
+Identificatienummers bij de gerelateerde partner.
+•
+De actie Correctieverval samengestelde naam gerelateerde. Deze actie laat de
+bij de gerelateerde partner opgenomen groep Samengestelde naam vervallen.
+•
+Bij de actie Correctieverval samengestelde naam gerelateerde is het opgeven
+van een Nadere aanduiding verval optioneel. Indien de Nadere aanduiding verval
+gelijk is aan “S” (Strijdig met de openbare orde), moet ter verantwoording
+hiervan als bron een rechtsgrond worden opgenomen.
+•
+De actie Correctieregistratie samengestelde naam gerelateerde. Deze actie
+draagt zorg voor de registratie van een nieuw voorkomen van de groep
+Samengestelde naam bij de gerelateerde partner.
+•
+De actie Correctieverval geboorte gerelateerde. Deze actie laat de bij de
+gerelateerde partner opgenomen groep Geboorte vervallen.
+•
+Bij de actie Correctieverval geboorte gerelateerde is het opgeven van een
+Nadere aanduiding verval optioneel. Indien de Nadere aanduiding verval gelijk is
+aan “S” (Strijdig met de openbare orde), moet ter verantwoording hiervan als
+bron een rechtsgrond worden opgenomen.
+•
+De actie Correctieregistratie geboorte gerelateerde. Deze actie draagt zorg voor
+de registratie van een nieuw voorkomen van de groep Geboorte bij de
+gerelateerde partner.
+•
+De actie Correctieverval geslachtsaanduiding gerelateerde. Deze actie laat de bij
+de gerelateerde partner opgenomen groep Geslachtsaanduiding vervallen.
+•
+Bij de actie Correctieverval geslachtsaanduiding gerelateerde is het opgeven van
+een Nadere aanduiding verval optioneel. Indien de Nadere aanduiding verval
+gelijk is aan “S” (Strijdig met de openbare orde), moet ter verantwoording
+hiervan als bron een rechtsgrond worden opgenomen.
+•
+De actie Correctieregistratie geslachtsaanduiding gerelateerde. Deze actie draagt
+zorg voor de registratie van een nieuw voorkomen van de groep
+Geslachtsaanduiding bij de gerelateerde partner.
+Inhoud bijhoudingsbericht
+Corrigeer huwelijk en geregistreerd partnerschap
+(bhg_hgpCorrigeerHuwelijkGeregistreerdPartnerschap)
+Stuurgegevens
+
+Kardinaliteit
+
+1
+
+Zendende partij, Zendende systeem, Referentienummer, Datum/tijd verzending
+
+Parameters
+
+1
+
+Verwerkingswijze
+
+Correctie partnergegevens geregistreerd partnerschap
+Pagina 28 van 35
+
+1
+
+Concept | | juni 2017
+
+Gedeblokkeerde meldingen
+
+0..1
+
+Gedeblokkeerde melding
+
+1..n
+
+Bronnen
+
+1
+
+Bron
+
+1..n
+
+Document
+
+0..1
+
+Acties
+
+1
+
+Correctieverval identificatienummers gerelateerde
+
+0..n
+
+Nadere aanduiding verval
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Geregistreerd partnerschap
+Betrokkenheden
+Partner
+Persoon
+Identificatienummers
+Correctieregistratie identificatienummers gerelateerde
+
+1
+1
+1
+1
+1
+0..n
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Geregistreerd partnerschap
+Betrokkenheden
+Partner
+Persoon
+Identificatienummers
+Correctieverval samengestelde naam gerelateerde
+
+1
+1
+1
+1
+1
+0..n
+
+Nadere aanduiding verval
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Concept | | juni 2017
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Geregistreerd partnerschap
+Betrokkenheden
+Partner
+Persoon
+Samengestelde naam
+Correctieregistratie samengestelde naam gerelateerde
+
+1
+1
+1
+1
+1
+0..n
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Geregistreerd partnerschap
+Betrokkenheden
+Partner
+Persoon
+Samengestelde naam
+Correctieverval geboorte gerelateerde
+
+1
+1
+1
+1
+1
+0..1
+
+Nadere aanduiding verval
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Geregistreerd partnerschap
+Betrokkenheden
+Partner
+Persoon
+Geboorte
+Correctieregistratie geboorte gerelateerde
+Bronnen
+
+Pagina 30 van 35
+
+1
+1
+1
+1
+1
+0..1
+0..1
+
+Concept | | juni 2017
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Geregistreerd partnerschap
+Betrokkenheden
+Partner
+Persoon
+Geboorte
+Correctieverval geslachtsaanduiding gerelateerde
+
+1
+1
+1
+1
+1
+0..n
+
+Nadere aanduiding verval
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Geregistreerd partnerschap
+Betrokkenheden
+Partner
+Persoon
+Geslachtsaanduiding
+Correctieregistratie geslachtsaanduiding gerelateerde
+
+1
+1
+1
+1
+1
+0..n
+
+Bronnen
+
+0..1
+
+Bron
+
+1..n
+
+Persoon
+
+1
+
+Betrokkenheden
+
+1
+
+Partner
+
+1
+
+Geregistreerd partnerschap
+Betrokkenheden
+Partner
+Persoon
+Geslachtsaanduiding
+
+1
+1
+1
+1
+1
+
+Concept | | juni 2017
+
+VERWERKING
+Het bijhoudingsbericht wordt verwerkt zoals is beschreven in Bijlage B –
+Berichtafhandeling. De controleregels die van toepassing zijn op de administratieve
+handeling van dit specifieke bijhoudingsbericht zijn hieronder opgenomen en
+opgedeeld volgens de in het bijhoudingsbericht opgenomen acties.
+De in de overzichten opgenomen controleregels zijn terug te vinden in Bijlage F –
+Controleregels. In deze bijlage zijn bij het regelnummer de regeldefinities en de van
+toepassing zijnde meldingsteksten opgenomen.
+Actie Correctieverval identificatienummers gerelateerde
+Code Niveau Omschrijving
+R1610 F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve
+handeling aanbieden
+
+R1836 F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+R2521 F
+
+Alle acties moeten betrekking hebben op dezelfde gerelateerde persoon
+
+R2526 F
+
+Tijdlijncontrole groep Geboorte
+
+R2530 F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+Actie Correctieregistratie identificatienummers gerelateerde
+Code Niveau Omschrijving
+R1610 F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve
+handeling aanbieden
+
+R1836 F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+R2521 F
+
+Alle acties moeten betrekking hebben op dezelfde gerelateerde persoon
+
+R2526 F
+
+Tijdlijncontrole groep Geboorte
+
+R2528 F
+
+Datum einde geldigheid van de actie moet na datum aanvang van de actie
+liggen
+
+R2530 F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+Actie Correctieverval samengestelde naam gerelateerde
+Code Niveau Omschrijving
+
+Pagina 32 van 35
+
+R1610 F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve
+handeling aanbieden
+
+R1836 F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+R2521 F
+
+Alle acties moeten betrekking hebben op dezelfde gerelateerde persoon
+
+R2526 F
+
+Tijdlijncontrole groep Geboorte
+
+R2530 F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+Concept | | juni 2017
+
+Actie Correctieregistratie samengestelde naam gerelateerde
+Code Niveau Omschrijving
+R1610 F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve
+handeling aanbieden
+
+R1836 F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+R2521 F
+
+Alle acties moeten betrekking hebben op dezelfde gerelateerde persoon
+
+R2526 F
+
+Tijdlijncontrole groep Geboorte
+
+R2530 F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2535 F
+
+Datum einde geldigheid van de actie moet op of na datum aanvang van de
+actie liggen
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+R2739 W
+
+Waarschuwing: Naamswijziging pseudo (ex)partner werkt niet door in
+Naamgebruik hoofdpersoon
+
+Actie Correctieverval geboorte gerelateerde
+Code Niveau Omschrijving
+R1610 F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve
+handeling aanbieden
+
+R1836 F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+R2521 F
+
+Alle acties moeten betrekking hebben op dezelfde gerelateerde persoon
+
+R2526 F
+
+Tijdlijncontrole groep Geboorte
+
+R2530 F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+Actie Correctieregistratie geboorte gerelateerde
+Code Niveau Omschrijving
+R1610 F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve
+handeling aanbieden
+
+R1836 F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+R2521 F
+
+Alle acties moeten betrekking hebben op dezelfde gerelateerde persoon
+
+R2526 F
+
+Tijdlijncontrole groep Geboorte
+
+R2530 F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+Actie Correctieverval geslachtsaanduiding gerelateerde
+Code Niveau Omschrijving
+R1610 F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve
+handeling aanbieden
+
+R1836 F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+Concept | | juni 2017
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+R2521 F
+
+Alle acties moeten betrekking hebben op dezelfde gerelateerde persoon
+
+R2526 F
+
+Tijdlijncontrole groep Geboorte
+
+R2530 F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+Actie Correctieregistratie geslachtsaanduiding gerelateerde
+Code Niveau Omschrijving
+R1610 F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve
+handeling aanbieden
+
+R1836 F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+R2465 W
+
+Melding verwijdering IST-gegevens
+
+R2486 F
+
+Alle acties moeten betrekking hebben op dezelfde relatie
+
+R2521 F
+
+Alle acties moeten betrekking hebben op dezelfde gerelateerde persoon
+
+R2526 F
+
+Tijdlijncontrole groep Geboorte
+
+R2528 F
+
+Datum einde geldigheid van de actie moet na datum aanvang van de actie
+liggen
+
+R2530 F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2536 F
+
+Minimaal één hoofdpersoon moet een ingezetene zijn
+
+R2577 F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+Resultaat ná de (bericht)verwerking
+Als aan alle voorwaarden voor stap 6 (verwerken administratieve handeling) in
+Bijlage B – Berichtafhandeling is voldaan, dan registreren de centrale voorzieningen
+de doorgevoerde acties op de geregistreerd partnerschapsrelatie.
+Actie Correctieverval identificatienummers gerelateerde
+Met de actie vervalt het aangewezen voorkomen van de volgende groep naar de
+formele historie:
+•
+Identificatienummers
+Actie Correctieregistratie identificatienummers gerelateerde
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+Identificatienummers
+Actie Correctieverval samengestelde naam gerelateerde
+Met de actie vervalt het aangewezen voorkomen van de volgende groep naar de
+formele historie:
+•
+Samengestelde naam
+Actie Correctieregistratie samengestelde naam gerelateerde
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+Samengestelde naam
+Actie Correctieverval geboorte gerelateerde
+Met de actie vervalt het aangewezen voorkomen van de volgende groep naar de
+formele historie:
+•
+Geboorte
+Actie Correctieregistratie geboorte gerelateerde
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+Pagina 34 van 35
+
+Concept | | juni 2017
+
+•
+
+Geboorte
+
+Actie Correctieverval geslachtsaanduiding gerelateerde
+Met de actie vervalt het aangewezen voorkomen van de volgende groep naar de
+formele historie:
+•
+Geslachtsaanduiding
+Actie Correctieregistratie geslachtsaanduiding gerelateerde
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+Geslachtsaanduiding
+Voor alle bovenstaande acties geldt dat de volgende bij de relatie behorende ISTgegevens worden (indien aanwezig) verwijderd:
+•
+Stapel \ Relatie
+•
+Stapel
+•
+Stapel voorkomen
+
+UITVOER
+De partij die de administratieve handeling Correctie partnergegevens geregistreerd
+partnerschap ter verwerking aanbiedt, ontvangt altijd een
+bijhoudingsresultaatbericht retour (zie tevens stap 7 ‘Maak resultaatbericht’ in
+Bijlage B – Berichtafhandeling).
+Indien volgens de informatie in het bijhoudingsplan8 (ook) andere
+bijhoudingsverantwoordelijke colleges bij de bijhouding moeten worden betrokken,
+worden tevens bijhoudingsnotificatieberichten aan deze
+bijhoudingsverantwoordelijke colleges verzonden.
+Het doel en de werking van het bijhoudingsplan en het verzenden van
+bijhoudingsnotificatieberichten door de centrale voorzieningen op basis van de
+inhoud van het bijhoudingsplan is uitgelegd in paragraaf 4.4.5. Voor de inhoud van
+het bijhoudingsresultaatbericht en het bijhoudingsnotificatiebericht, zie paragraaf
+C.4Fout! Verwijzingsbron niet gevonden. van deze bijlage.
+
+8
+
+Voor uitleg over de toepassing van het bijhoudingsplan, zie paragraaf 4.4.5.
+
+

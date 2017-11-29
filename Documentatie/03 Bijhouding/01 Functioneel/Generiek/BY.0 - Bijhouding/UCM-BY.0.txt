@@ -1,0 +1,513 @@
+UCM BY.0 - Bijhouding
+Versie
+
+0.8
+
+Datum
+
+13 juli 2016
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+05-09-2016
+
+0.1
+
+Initiële versie
+
+Operatie BRP
+
+23-09-2016
+
+0.2
+
+Hoofdstukindeling aangepast
+
+Operatie BRP
+
+27-09-2016
+
+0.3
+
+Reviewcommentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+07-11-2016
+
+0.4
+
+Afspraken m.b.t. use case diagrammen opgenomen in par.
+2.1
+
+Operatie BRP
+
+26-04-2016
+
+0.5
+
+•
+•
+
+Operatie BRP
+
+31-05-2016
+
+0.6
+
+Codes van enkele modules bijgewerkt.
+Header en footer opgenomen.
+
+Operatie BRP
+
+21-06-2016
+
+0.7
+
+Document aangepast m.b.t. documentatierichtlijnen.
+
+Operatie BRP
+
+13-07-2017
+
+0.8
+
+Administratieve handelingen per module bijgewerkt
+
+Operatie BRP
+
+Reviewhistorie
+Versie Reviewer
+0.2
+
+Operatie BRP
+
+Afkortingen van modules bijgewerkt
+AH’s bijgewerkt
+
+UCM BY.0 - Bijhouding
+
+Inhoudsopgave
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Use Case Model ......................................................................................................... 4
+2.1
+
+3
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Afspraken over Use Case Modellen ..........................................................................................4
+
+Bijhoudingsmodulen ................................................................................................. 5
+3.1
+3.2
+3.3
+3.4
+3.5
+3.6
+3.7
+3.8
+3.9
+3.10
+3.11
+
+BY.0.AFS – Afstamming .........................................................................................................6
+BY.0.NnG – Naam en Geslacht ................................................................................................6
+BY.0.DVM – Document, verzoek en mededeling ........................................................................7
+BY.0.HGP – Huwelijk en Geregistreerd partnerschap..................................................................7
+BY.0.VnA – Verblijf en Adres ..................................................................................................8
+BY.0.NAT – Nationaliteit .........................................................................................................8
+BY.0.RDO – Reisdocument .....................................................................................................9
+BY.0.OVL – Overlijden ...........................................................................................................9
+BY.0.BZB – Bijzondere bijhouding ...........................................................................................9
+BY.0.VKZ – Verkiezingen ..................................................................................................... 10
+BY.0.ONZ – Onderzoek ........................................................................................................ 10
+
+Status: Definitief, versie: 0.8
+
+Pagina 2 van 10
+
+UCM BY.0 - Bijhouding
+
+1 Inleiding
+1.1
+
+Doel
+
+Dit document geeft een overzicht van de use cases van het koppelvlak bijhouding.
+
+1.2
+
+Leeswijzer
+
+Het koppelvlak bijhouding bevat alle administratieve handelingen waarmee de gegevens van
+personenlijsten in de BRP geactualiseerd en gecorrigeerd kunnen worden. Deze administratieve
+handelingen zijn gegroepeerd in modulen. Aan alle administratieve handelingen ligt een generieke
+stappenplan ten grondslag, welke staat beschreven in hoofdstuk 2.
+Daarnaast geeft dit document een overzicht van de onderkende modulen en de daarin opgenomen
+administratieve handelingen. Dit staat beschreven in hoofdstuk 3.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Status: Definitief, versie: 0.8
+
+Organisatie
+
+Versie
+
+Datum
+
+Pagina 3 van 10
+
+UCM BY.0 - Bijhouding
+
+2 Use Case Model
+Onderstaande figuur geeft aan op welke wijze de administratieve handelingen worden verwerkt
+door de centrale voorzieningen.
+
+Figuur 1 Use case module
+Er bestaan meer dan 100 administratieve handelingen, vandaar dat deze niet allemaal zijn
+opgenomen in het Use Case Model van Figuur 1. De overige administratieve handelingen zijn
+opgenomen als ‘<overige administratieve handelingen>’. Het volledige overzicht van alle
+administratieve handelingen is opgenomen in hoofdstuk 3.
+Voor het verwerken van alle administratieve handelingen geldt dat dezelfde stappen doorlopen
+moeten worden. In de use case ‘BY.0.AV – Afhandelen verzoek’ staan deze generieke stappen
+beschreven. Deze stappen vormen te samen een synchroon proces dat begint met het ontvangen
+van een bijhoudingsbericht van een bijhouder en eindigt met het versturen van het resultaat van
+deze bijhouding, het bijhoudingsresultaatbericht, aan deze bijhouder. Ondersteunend aan deze use
+case is de use case ‘BY.0.VZ Verzend bijhoudingsnotifcatiebericht’. Deze verstuurt als gevolg van
+een bijhouding eventuele bijhoudingsnotificatieberichten aan andere bijhouders die betrokken zijn
+in de bijhouding. Een ander bijhouder is betrokken als een persoonslijst wijzigt waarvan zij de
+bijhouder is.
+
+2.1
+
+Afspraken over Use Case Modellen
+
+Binnen de ontwerpdocumenten zijn de volgende afspraken gemaakt omtrent het gebruik van use
+case diagrammen:
+-
+
+Use
+Use
+Een
+Een
+
+cases die maar op één plaats gebruikt worden, hebben een groene kleur;
+cases die op meerdere plaatsen gebruikt worden, hebben een oranje kleur;
+actor aan de linkerzijde van de systeemgrens is initiator (trigger);
+actor aan de rechterzijde van de systeemgrens ontvanger.
+
+Status: Definitief, versie: 0.8
+
+Pagina 4 van 10
+
+UCM BY.0 - Bijhouding
+
+3 Bijhoudingsmodulen
+Zoals al eerder aangegeven is er sprake van meer dan 100 administratieve handelingen. Deze zijn,
+voor het overzicht, thematisch gegroepeerd in bijhoudingsmodulen. In Figuur 2 hieronder zijn deze
+bijhoudingsmodulen benoemd.
+Alle specifieke administratieve handelingen zijn feitelijk een subtype van use case ‘BY.0.AV’. In
+essentie zijn er dus meer dan 100 specifieke use cases voor deze administratieve handelingen. We
+hebben er echter voor gekozen om de beschrijving van deze handelingen te bundelen per module.
+In deze module beschrijvingen wordt van iedere administratieve handeling beschreven wanneer
+deze gebruikt dient te/mag worden, welke gegevens met het systeem uitgewisseld worden, hoe
+deze in een bericht zijn vormgegeven, welke specifieke controles er worden uitgevoerd en of er
+nog bijzonderheden zijn bij de verwerking van de gegevens. Denk bij dit laatste aan instructies
+voor de verwerking van de gegevens waaronder ook instructies voor het afleiden van gegevens.
+
+Figuur 2 Bijhoudingsmodulen
+
+Status: Definitief, versie: 0.8
+
+Pagina 5 van 10
+
+UCM BY.0 - Bijhouding
+
+3.1
+
+BY.0.AFS – Afstamming
+
+De module ‘Afstamming’ bevat administratieve handelingen waarmee gegevens rond de
+familierechtelijke betrekking van een ingeschrevene worden bijgehouden.
+
+Administratieve handelingen
+Geboorte in Nederland
+Geboorte in Nederland met erkenning op
+geboortedatum
+Geboorte in Nederland met erkenning na
+geboortedatum
+Erkenning
+Vernietiging erkenning
+Vaststelling ouderschap
+Ontkenning ouderschap
+Adoptie
+Omzetting adoptie
+Wijziging kindgegevens
+Wijziging oudergegevens
+Correctie geboorte
+Correctie afstamming
+Correctie kindgegevens
+Correctie oudergegevens
+GBA - Geboorte in Nederland
+GBA - Geboorte in Nederland met erkenning op
+geboortedatum
+GBA - Geboorte in Nederland met erkenning na
+geboortedatum
+GBA - Erkenning
+GBA - Vernietiging erkenning
+GBA - Vaststelling ouderschap
+GBA - Ontkenning ouderschap
+GBA - Adoptie
+GBA – Toevoeging kindgegevens
+GBA – Aanvulling A-nummer en BSN
+GBA – Aanvulling BSN
+
+3.2
+
+BY.0.NnG – Naam en Geslacht
+
+De module ‘Naam en Geslacht’ bevat administratieve handelingen en acties waarmee de
+naamgegevens (‘geslachtsnaam’, ‘voornaam’, ‘samengestelde naam’), gewenst naamgebruik en de
+geslachtsaanduiding van een ingeschrevene worden bijgehouden.
+
+Administratieve handelingen
+Wijziging naam
+Wijziging geslachtsaanduiding
+Wijziging naamgebruik
+Correctie naam
+
+Status: Definitief, versie: 0.8
+
+Pagina 6 van 10
+
+UCM BY.0 - Bijhouding
+
+Correctie geslachtsaanduing
+Correctie naamgebruik
+GBA - Wijziging geslachtsnaam
+GBA - Wijziging voornaam
+GBA - Wijziging geslachtsaanduiding
+
+3.3
+
+BY.0.DVM – Document, verzoek en mededeling
+
+De module ‘Document, verzoek en mededeling’ bevat handelingen en acties die verantwoord
+worden door een verzoek van de ingeschrevene of een mededeling van een derde.
+
+Administratieve handelingen
+Wijziging verstrekkingsbeperking
+Correctie verstrekkingsbeperking
+Wijziging gezag
+Correctie gezag
+Wijziging curatele
+Correctie curatele
+Overschrijving geslacht en naam na geslachtswijziging
+Overschrijving partnergegevens na geslachtswijziging
+Overschrijving kindgegevens na geslachtswijziging
+Overschrijving oudergegevens na geslachtswijziging
+Verwijdering kindgegevens na adoptie
+Verwijdering gegevens na adoptie
+
+3.4
+
+BY.0.HGP – Huwelijk en Geregistreerd partnerschap
+
+De module ‘Huwelijk en Geregistreerd partnerschap’ bevat handelingen en acties waarmee de
+gegevens rond een huwelijk of geregistreerd partnerschap worden bijgehouden.
+
+Administratieve handelingen
+Voltrekking huwelijk in Nederland
+Ontbinding huwelijk in Nederland
+Voltrekking huwelijk in buitenland
+Ontbinding huwelijk in buitenland
+Aangaan geregistreerd partnerschap in Nederland
+Beëindiging geregistreerd partnerschap in Nederland
+Aangaan geregistreerd partnerschap in buitenland
+Beëindiging geregistreerd partnerschap in buitenland
+Omzetting geregistreerd partnerschap in huwelijk
+Nietigverklaring huwelijk in Nederland
+Nietigverklaring geregistreerd partnerschap in
+Nederland
+Wijziging partnergegevens huwelijk
+Wijziging partnergegevens geregistreerd partnerschap
+Ongedaanmaking huwelijk
+
+Status: Definitief, versie: 0.8
+
+Pagina 7 van 10
+
+UCM BY.0 - Bijhouding
+
+Ongedaanmaking geregistreerd partnerschap
+Correctie huwelijk
+Correctie geregistreerd partnerschap
+Correctie partnergegevens huwelijk
+Correctie partnergegevens geregistreerd partnerschap
+GBA - Voltrekking huwelijk in Nederland
+GBA - Ontbinding huwelijk in Nederland
+GBA - Aangaan geregistreerd partnerschap in
+Nederland
+GBA - Beëindiging geregistreerd partnerschap in
+Nederland
+GBA - Omzetting geregistreerd partnerschap in
+huwelijk
+
+3.5
+
+BY.0.VnA – Verblijf en Adres
+
+De module ‘Verblijf en Adres’ bevat handelingen en acties waarmee de verblijfsgegevens van een
+ingeschrevene worden bijgehouden: ‘adres’, ‘migratie’, ‘verblijfsrecht’ en ‘bijzondere
+verblijfsrechtelijke positie’.
+
+Administratieve handelingen
+Vestiging niet-ingeschrevene
+Constatering verblijf kind
+Vestiging niet-ingezetene
+Verhuizing binnengemeentelijk
+Verhuizing intergemeentelijk
+Wijziging gemeente infrastructureel
+Wijziging gemeente infrastructureel bij overledene
+Wijziging adres infrastructureel
+Verhuizing naar buitenland
+Correctie adres
+Correctie migratie
+Wijziging verblijfsrecht
+Correctie verblijfsrecht
+Wijziging bijzondere verblijfsrechtelijke positie
+Correctie bijzondere verblijfsrechtelijke positie
+GBA – Verhuizing intergemeentelijk GBA naar BRP
+
+3.6
+
+BY.0.NAT – Nationaliteit
+
+De module ‘Nationaliteit’ bevat handelingen en acties waarmee de Nederlandse of vreemde
+nationaliteit(en) van een ingeschrevene worden bijgehouden inclusief de indicaties staatloos,
+behandeld als Nederlander en vastgesteld niet-Nederlander.
+
+Administratieve handelingen
+Verkrijging Nederlandse nationaliteit
+Verlies Nederlandse nationaliteit
+
+Status: Definitief, versie: 0.8
+
+Pagina 8 van 10
+
+UCM BY.0 - Bijhouding
+
+Verkrijging vreemde nationaliteit
+Verlies vreemde nationaliteit
+Beëindiging bijhouding vreemde nationaliteit
+Correctie nationaliteit
+Wijziging indicatie nationaliteit
+Correctie indicatie nationaliteit
+
+3.7
+
+BY.0.RDO – Reisdocument
+
+De module ‘Reisdocument’ bevat handelingen en acties waarmee gegevens rond verkrijging en
+onttrekking van reisdocumenten van een ingeschrevene worden bijgehouden.
+
+Administratieve handelingen
+Verkrijging reisdocument
+Onttrekking reisdocument
+Signalering reisdocument
+Correctie reisdocument
+
+3.8
+
+BY.0.OVL – Overlijden
+
+De module ‘Overlijden’ bevat handelingen en acties waarmee gegevens van het overlijden van een
+ingeschrevene worden bijgehouden.
+
+Administratieve handelingen
+Overlijden in Nederland
+Overlijden in buitenland
+Correctie overlijden
+GBA - Overlijden in Nederland
+
+3.9
+
+BY.0.BZB – Bijzondere bijhouding
+
+De module ‘Bijzondere bijhouding’ bevat enkele handelingen en acties die een meer administratief
+karakter hebben en niet direct geassocieerd kunnen worden met een (levens)gebeurtenis (als
+aanleiding voor een bijhouding).
+
+Administratieve handelingen
+Wijziging identificatienummers
+Wijziging nummerverwijzing
+Correctie nummerverwijzing
+Wijziging buitenlands persoonsnummer
+Correctie buitenlands persoonsnummer
+Opschorting bijhouding persoonsgegevens reden foutief
+Wijziging documentindicatie
+Correctie documentindicatie
+Correctie inschrijving
+
+Status: Definitief, versie: 0.8
+
+Pagina 9 van 10
+
+UCM BY.0 - Bijhouding
+
+Correctie bijhouding
+Correctie persoonskaart
+GBA – Wissen persoon
+
+3.10 BY.0.VKZ – Verkiezingen
+De module ‘Verkiezingen’ bevat handelingen en acties waarmee gegevens rond de (uitsluiting van)
+deelname aan verkiezingen worden bijgehouden.
+
+Administratieve handelingen
+Wijziging uitsluiting kiesrecht
+Wijziging deelname EU verkiezingen
+Correctie kiesrecht
+
+3.11 BY.0.ONZ – Onderzoek
+De module ‘Onderzoek’ bevat handelingen en acties waarmee gegevens met betrekking tot het
+starten, wijzigen of beëindigen van een onderzoek worden bijgehouden.
+
+Administratieve handeling
+Aanvang onderzoek
+Registratie niet aangetroffen op adres
+Beëindiging onderzoek
+Wijziging onderzoek
+Correctie onderzoek
+
+Status: Definitief, versie: 0.8
+
+Pagina 10 van 10
+
+

@@ -1,0 +1,528 @@
+Applicatielandschap Basisregistratie Personen
+Basisplaat met informatiestromen
+
+Toelichting
+
+V0.67 – 18 juli 2017
+
+De plaat toont een moment opname. Er wordt nog volop aan allerlei onderdelen gewerkt. Als gevolg hiervan zal de indeling op
+diverse plaatsen ongetwijfeld nog gaan veranderen.
+
+Deze plaat toont welke applicaties en datastores betrokken zijn bij de verschillende informatiestromen. De informatiestromen
+beginnen bij de diverse koppelvlakken aan de randen van de plaat. Onder een applicatie verstaan we alle zelfstandige processen
+zoals webservices, interne services et cetera. Onder een datastore verstaan we databases, queue’s et cetera.
+
+Beheerder
+
+Keuzes
+
+Beheerapplicaties
+
+De richting van de informatiestromen wordt bepaald door de essentie van de informatiestroom. Bij een bijhouding gaan de
+persoonsgegevens het systeem in en bij een levering gaan de persoonsgegevens het systeem uit.
+
+BRP Beheerapplicatie
+Inrichting partijen
+
+Stamgegevens
+
+Bij de database tonen we alleen de informatiestromen die gericht zijn op persoonsgegevens. We tonen dus geen
+informatiestromen voor autorisatiegegevens etc.
+
+Inzage
+
+ISC console
+
+De plaat toont de mogelijkheden van deployment. Niet de concrete deployment.
+Inzage Logs
+
+- De bevragingswebservice kan meerdere malen uitgerold worden. We tonen één webservice en maken duidelijk dat deze
+meervoudig uitgerold kan worden.
+
+Bewaking
+
+- Bij het uitvoeren van bevragingen dient gebruikt gemaakt te worden van tenminste één aparte replica database. We tonen
+één aparte replica en maken duidelijk dat het er meer kunnen worden.
+
+Centrale Voorzieningen (CV’s)
+Basisregistratie Personen
+
+- Bij het uitvoeren van selecties dient gebruik gemaakt te worden van een aparte replica database. We tonen een aparte
+replica database t.b.v. selecties.
+
+T
+JConsole
+
+T
+
+T
+GBA-V
+
+Bij de kleurcodering is het doel van de applicatie of de datastore leidend en niet de technische realisatie. Het kan dus zijn dat een
+applicatie gerealiseerd is met behulp van BRP code en toch blauw is afgebeeld omdat deze bedoeld is voor de duale periode.
+
+Protocol
+
+GGO Viewer
+
+Berichtarchief
+
+Log
+
+Op de plaat zijn diverse testtools afgebeeld. Deze zijn duidelijk gemarkeerd (zie legenda). Deze tools zijn formeel geen onderdeel
+van het op te leveren systeem.
+Om een overvloed aan lijnen te voorkomen zijn verbindingen naar archivering, logging, protocollering, vrije berichten et cetera
+niet getekend.
+
+?
+T
+
+Onderdelen uit de infrastructuur zoals firewalls, loadbalancers, offloaders en mailboxservers zijn niet afgebeeld.
+Viewer
+
+De nog niet gerealiseerde onderdelen zijn grijs en doorschijnend afgebeeld.
+
+Logging
+Syslog
+
+Initiële vulling
+
+Door te voeren verbeteringen
+Passages die hierboven blauw gemarkeerd zijn, moeten nog worden verwerkt in de plaat.
+Initiële vulling naar BRP
+
+Initiële vulling naar BRP
+response
+
+?
+
+Initiële vulling naar LO3
+response
+
+SYNC t.b.v. IV
+heen-conversie
+
+Ontwerp nog
+aanpassen ivm
+schaalbaarheid
+
+?
+
+Ontwerp nog
+aanpassen ivm
+schaalbaarheid
+
+SYNC t.b.v. IV
+terug-conversie
+
+JMX protocol wordt door alle services
+ondersteund.
+
+Deze interne services worden vanuit diverse andere (web)services aangeroepen.
+
+Initiele vulling naar LO3
+
+Naar LO3
+
+Onderhoud
+afnemerindicaties
+
+Gemeenten als
+bijhouder
+Burgerzaken Modulen
+
+Koppelvlak Bijhouding
+BRP
+
+01 Afstamming
+
+Afstamming
+
+Master
+
+Bijhouding
+Mutatielevering
+
+02 Naam en geslacht
+
+Naam en geslacht
+
+03 Documenten en
+verzoeken
+
+Documenten, verzoeken
+en mededelingen
+
+04 Huwelijk en
+partnerschap
+
+Huwelijk en geregistreerd
+partnerschap
+
+05 Migratie
+
+Verblijf en adres
+
+06 Nationaliteit
+
+Nationaliteit
+
+Te verzenden
+leveringsberichten
+
+Synchronisatie
+
+Bijhoudingsnotificaties
+Adm.handelingen
+publicatie
+
+Adm.handelingen
+queue
+
+Verzending
+bijhoudingsnotificaties
+
+07 Reisdocument
+
+Reisdocumenten
+
+Koppelvlak Levering
+BRP
+
+09 Overlijden
+
+Overlijden
+
+Bevraging
+
+10 Overig
+
+Bijzondere bijhouding
+
+11 Onderzoek
+
+Verkiezingen
+
+Verzending
+leveringsberichten
+
+T
+
+Afnemers
+incl. gemeenten
+Afnemersysteem BRP
+
+Synchronisatie
+Afnemerindicatie
+
+Afnemersysteem GBA
+
+Mutatielevering
+Sync. Persoon
+
+13 Verkiezingen
+
+Onderzoek
+
+Sync. Stamgegeven
+GBA Toevalligegeb.
+Vrij bericht
+
+Vrij bericht queue
+Vrij bericht
+
+Bijhouding GBA
+
+?
+
+Gemeenten als
+bijhouder
+
+Attendering
+Selectie
+
+GBA Toevalligegeb.
+antwoorden
+
+Burgerzaken Modulen
+12 Verkiezingen
+
+Vrij bericht
+
+?
+Bevraging t.b.v.
+Bijhouding
+
+Bevraging
+GBA Afnemerindicatie
+
+CRIB
+* Allle modulen *
+
+Zie Koppelvlak Bijhouding.
+
+Bevraging
+
+IND
+Deze queue’s en topics worden door
+meerdere migratie componenten gebruikt.
+
+08 Rijbewijs
+
+Indigo
+
+Raad voor de
+rechtspraak
+T
+Vullen mailbox
+
+Gezagsregister
+
+Curateleregister
+
+Gemeente register
+
+Afnemerindicatie GBA
+
+GBA Afnemerindicatie
+antwoorden
+
+Gemeente verzoek
+
+GBA Adhoc
+Persoonsvraag verzoeken
+
+Autorisatie register
+
+Selectie
+
+Koppelvlak Levering
+GBA
+
+Selectie
+maak resultaat
+
+Bevraging GBA
+Selectie
+taak
+
+Bevraging
+
+GBA Adhoc Persoonsvr.
+antwoorden
+
+ISC DB
+
+Selectie verwerker
+
+VOISC Ontvangst
+VOISC
+
+Selectie
+Selectie
+schrijf taak
+
+SYNC
+
+ISC
+
+Mededelingen
+VOISC Verzenden
+
+Sync Antwoord
+
+Spontane mutaties
+
+GBA Vrije berichten
+
+Sync Verzoek
+
+Aanpalende systemen
+(incl. BV-BSN, TMV)
+
+Afnemerindicatie
+
+Koppelvlak Bijhouding
+GBA
+Synchronisatie
+
+Beheerder
+
+Bevraging (Adhoc)
+Autorisatie verzoek
+
+Mailbox simulator
+
+GBA-systeem
+
+GBA-systeem
+
+Selectie
+
+Replicatie van master
+
+VOISC DB
+
+Replicatie van master
+
+Selectie
+taak resultaat
+
+T
+
+Gemeenten als
+bijhouder
+
+?
+
+Alle selectie services
+
+Selectie schrijver
+
+Filesysteem voor
+output
+
+Vrij bericht
+
+Vrije berichten GBA
+
+Vrije berichten
+
+ABO’s
+Levering
+
+ABO-systeem
+
+Selectie
+afnemerindicatie taak
+
+GBA Vrije berichten
+antwoord
+
+Selectie protocollering
+
+RNI-systeem
+Loketgemeenten
+
+Selectie
+afnemerindicatie
+
+GBA Notificaties
+Archivering
+GBA Leveringen
+
+Rapportage
+Replicatie van master
+
+Rapportage demo
+(Pentaho)
+
+T
+
+Legenda
+Koppelvlakken
+
+Rapportageapplicaties
+
+Kwaliteitsmonitor
+
+BRP Informatiestroom
+
+Systeem
+
+Systeem van belanghebbende.
+
+GBA Informatiestroom
+
+Systeem
+
+Systeem van belanghebbende
+met GBA\LO 3 koppelvlak.
+
+Module
+
+Module binnen systeem.
+
+Beheerder.
+
+Applicatie
+
+Systeem van beheerder.
+
+Module
+
+Module binnen systeem.
+
+Koppelvlak
+Module
+
+Koppelvlak
+Module
+
+Relationele database
+
+Koppelvlak /
+Applicatie etc
+
+Bulk replicatie
+
+Out of scope
+
+Route
+
+NoSQL database
+
+Out of scope
+
+Applicatie(module)
+
+NoSQL
+
+Testtooling
+
+Standaard software
+
+Queue
+
+Batch proces
+
+Topic
+
+De Basisregistratie Personen.
+Modern koppelvlak.
+Module binnen koppelvlak.
+
+GBA\LO 3 koppelvlak.
+Module binnen koppelvlak.
+
+Comitted Streaming replicatie
+Streaming replicatie
+
+Algemeen
+
+T
+Basisregistratie
+
+Extern benaderbare
+service
+Intern benaderbare
+service
+
+Beheerder
+Beheerder
+
+Replicatie van data
+
+Data
+
+Applicatie
+
+Belanghebbende.
+
+Partij
+
+Rapportage tools
+
+Informatiestromen
+
+

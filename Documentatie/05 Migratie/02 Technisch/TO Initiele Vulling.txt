@@ -1,0 +1,1649 @@
+Technisch ontwerp Initiële Vulling
+
+Versie 2.9
+
+Datum
+Status
+
+20-04-2017
+Definitief
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................5
+1.1
+1.2
+1.3
+
+2
+
+CONTEXT .................................................................................................................................................7
+2.1
+2.2
+
+3
+
+SCOPE ...................................................................................................................................................5
+REFERENTIES ........................................................................................................................................5
+LEESWIJZER ..........................................................................................................................................5
+MODULE VIEW.......................................................................................................................................7
+COMPONENT EN CONNECTOR VIEW .....................................................................................................8
+
+ONTWERPBESLISSINGEN ..............................................................................................................9
+3.1 MINIMALISEER AFHANKELIJKHEDEN MET SPECIFIEKE IMPLEMENTATIES...........................................9
+3.2 GEBRUIK RESOURCES NIET LANGER DAN NODIG ...............................................................................9
+3.3 GELAAGDHEID.......................................................................................................................................9
+3.4 TRANSACTIE MANAGEMENT ..................................................................................................................9
+3.5 JDBC ....................................................................................................................................................9
+3.6 DATABASE KOPPELING .........................................................................................................................9
+3.7 IMPLEMENTATIE KEUZES ....................................................................................................................10
+3.7.1 Spring .........................................................................................................................................10
+3.7.2 Configuratie .............................................................................................................................10
+
+4
+
+MODULES ..............................................................................................................................................11
+4.1 NAARBRP ...........................................................................................................................................11
+4.1.1 Module structuur ....................................................................................................................11
+4.1.2 Package structuur ..................................................................................................................11
+4.1.3 Ontwerpbeslissingen.............................................................................................................11
+4.2 NAARLO3 ...........................................................................................................................................11
+4.2.1 Module structuur ....................................................................................................................11
+4.2.2 Package structuur ..................................................................................................................11
+4.2.3 Ontwerpbeslissingen.............................................................................................................11
+4.3 LOGGING .............................................................................................................................................11
+4.3.1 Module structuur ....................................................................................................................12
+4.3.2 Package structuur ..................................................................................................................12
+4.3.3 Ontwerpbeslissingen.............................................................................................................12
+4.4 NAARISC ............................................................................................................................................12
+4.4.1 Script ..........................................................................................................................................12
+4.5 NAARVOISC ......................................................................................................................................13
+4.5.1 Script ..........................................................................................................................................13
+
+5
+
+PROCESSEN .........................................................................................................................................14
+5.1 CREËREN INITIËLE VULLING TABELLEN .............................................................................................14
+5.2 TABELLEN UC102 VUL AUTORISATIETABELREGELS IN BRP INITIEEL ...........................................14
+5.2.1 initvul.initvullingresult_aut ................................................................................................14
+5.3 TABELLEN UC103 VUL AFNEMERSINDICATIES IN BRP INITIEEL ...................................................16
+5.3.1 initvul.initvullingresult_afnind ..........................................................................................16
+5.3.2 initvul.initvullingresult_afnind_stapel ............................................................................16
+5.3.3 initvul.initvullingresult_afnind_regel ..............................................................................17
+5.4 TABELLEN UC104 VUL PROTOCOLLERING IN BRP INITIEEL ..........................................................17
+5.4.1 initvul.initvullingresult_protocollering............................................................................17
+5.4.2 initvul.initvullingresult_protocollering_activiteit ........................................................18
+5.4.3 initvul.initvullingresult_protocollering_brp_dienst ....................................................19
+5.4.4 initvul.initvullingresult_protocollering_brp_pers .......................................................19
+5.4.5 initvul.initvullingresult_protocollering_brp_toeglevaut ...........................................19
+5.4.6 initvul.initvullingresult_protocollering_dienst .............................................................19
+
+Operatie BRP
+
+Pagina 2 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+5.4.7 initvul.initvullingresult_protocollering_toeglevaut ....................................................20
+5.5 LEZEN GBA-V DATABASE EN VULLEN QUEUE BRP SYNCHRONISATIE SERVICE...........................20
+5.5.1 Input / Output.........................................................................................................................20
+5.6 LEZEN BRP DATABASE EN VULLEN QUEUE BRP SYNCHRONISATIE SERVICE ................................21
+5.6.1 Input / Output.........................................................................................................................21
+5.7 VERWERKEN VAN ANTWOORDBERICHTEN VAN DE BRP SYNCHRONISATIE SERVICE ....................21
+5.7.1 Input / Ouput ..........................................................................................................................21
+
+Operatie BRP
+
+Pagina 3 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+Documenthistorie
+Versiehistorie
+Versienummer
+
+Datum
+
+Aanpassingen
+
+Auteur
+
+0.1
+1.0
+1.1
+1.2
+
+01-05-2014
+12-05-2014
+10-05-2014
+17-05-2014
+
+operatie
+operatie
+operatie
+operatie
+
+1.3
+1.4
+
+24-06-2014
+17-09-2014
+
+2.0
+2.1
+2.2
+
+28-07-2015
+28-09-2015
+28-10-2015
+
+2.3
+
+02-02-2015
+
+2.4
+2.5
+2.6
+
+16-09-2016
+14-10-2016
+17-02-2017
+
+2.7
+2.8
+
+29-03-2017
+19-04-2017
+
+2.9
+3.0
+
+20-04-2017
+12-05-2017
+
+Initiële versie
+Review commentaar verwerkt.
+Package wijzigingen verwerkt.
+Verbeterpunten zijn verwerkt in de
+code.
+Package wijzigingen verwerkt.
+Definitief gemaakt t.b.v. release
+2.2.
+Aanpassingen t.b.v. Release 3.1
+Referenties bijgewerkt
+Toevoegen componenten NaarISC
+en NaarVOISC
+Verwijzingen naar interne
+documenten verwijderd en versie
+aangepast
+UC104 verwerkt.
+Navulling UC104 verwerkt.
+Bijwerken document n.a.v.
+wijzigingen in IV programmatuur
+en nalopen o.b.v.
+documentatierichtlijnen
+Verwerken review I&T
+Tabellen en foutcodes initiële
+vulling toegevoegd.
+Reviewcommentaar verwerkt
+Toelichting op tabel
+initvullingresult_protocollering_acti
+viteit aangepast
+
+BRP
+BRP
+BRP
+BRP
+
+operatie BRP
+operatie BRP
+operatie BRP
+operatie BRP
+operatie BRP
+operatie BRP
+
+operatie BRP
+operatie BRP
+operatie BRP
+
+operatie BRP
+operatie BRP
+operatie BRP
+operatie BRP
+
+Reviewhistorie
+Versienummer
+
+Datum
+
+Namen
+
+0.1
+
+07-05-2014
+
+operatie BRP
+
+2.2
+
+29-10-2015
+
+operatie BRP
+
+2.6
+
+29-03-2017
+
+operatie BRP
+
+2.8
+
+20-04-2017
+
+operatie BRP
+
+Operatie BRP
+
+Pagina 4 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+1
+
+Inleiding
+
+Dit document dient ter onderbouwing en uitleg van de software die is ontwikkeld voor de
+functionaliteit van de initiële vulling zoals deze is beschreven in de use cases [1,2,3,4].
+De lezer dient bekend te zijn met de inhoud van het Software Architectuur Document (SAD) [6]
+en is voornamelijk bedoeld voor software ontwikkelaars.
+1.1
+
+Scope
+De inhoud van dit document richt zich op het “gat” tussen het SAD [6] en de broncode. Het is
+niet de bedoeling om informatie uit het SAD [6] of broncode in dit document de dupliceren. Het
+is voor de lezer daarom belangrijk om bij het lezen van dit document kennis te hebben van het
+SAD [6] en toegang te hebben tot de broncode zodat deze drie in samenhang kunnen worden
+bestudeerd.
+Het “gat” waar dit document zich op richt is het volgende:
+•
+
+software van alleen de initiële vulling;
+
+•
+
+het waarom achter de broncode;
+
+•
+
+de kaders waarbinnen de software is ontwikkeld.
+
+De initiële vulling maakt gebruik van de BRP Synchronisatie Service en Conversie functionaliteit.
+Deze zijn binnen het SAD [6] geïdentificeerd als op zichzelf staande modules en worden hier dus
+niet beschreven. Voor een beschrijving van deze modules kan het SAD [6] of het relevante
+technische ontwerp [7,8] worden geraadpleegd.
+1.2
+
+Referenties
+#
+[1]
+[2]
+
+Document
+Use case UC101 Vul persoonsgegevens in BRP initieel
+Use case UC102 Vul autorisatietabelregels in BRP
+initieel
+Use case UC103 Vul afnemersindicaties in BRP initieel
+Use case UC104 Vul protocollering in BRP initieel
+Use case UC105 Vul configuratie mailboxen initieel
+Software Architecture Document Migratiesoftware BRP
+Technisch ontwerp Synchronisatie Service
+Technisch ontwerp Conversie
+postgres_fdw(https://www.postgresql.org/docs/9.5/st
+atic/postgres-fdw.html)
+
+[3]
+[4]
+[5]
+[6]
+[7]
+[8]
+[9]
+
+Organisatie
+OperatieBRP
+OperatieBRP
+
+Versie
+
+Datum
+
+OperatieBRP
+OperatieBRP
+OperatieBRP
+OperatieBRP
+OperatieBRP
+OperatieBRP
+OperatieBRP
+
+Tabel 1 Lijst met referenties naar andere documenten
+1.3
+
+Leeswijzer
+Deze paragraaf beschrijft de hoofdstukken uit het technisch ontwerp om de lezer te
+ondersteunen bij het vinden van de juiste informatie.
+•
+•
+•
+•
+
+Hoofdstuk 1 (“Inleiding”) beschrijft het doel en scope van dit document en welke
+informatie men in dit document kan vinden.
+Hoofdstuk 2 (“Context”) maakt inzichtelijk wat de context van de initiële vulling is en
+maakt een link met het Software Architectuur Document (SAD [6]).
+Hoofdstuk 3 (“Ontwerpbeslissingen”) somt de ontwerpbeslissingen op voor initiële vulling
+als aanvulling op het SAD [6].
+Hoofdstuk 4 (“Modules”) beschrijft de verschillende sub-modules van initiële vulling,
+gelaagdheid en relevantie classes.
+
+Operatie BRP
+
+Pagina 5 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+•
+
+Hoofdstuk 5 (“Processen”) beschrijft de processen die binnen de sub-modules worden
+uitgevoerd.
+
+Operatie BRP
+
+Pagina 6 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+2
+
+Context
+
+De initiële vulling module zorgt ervoor dat de centrale BRP-voorziening wordt gevuld met
+persoonsgegevens afkomstig uit het GBA-v systeem.
+Daarnaast wordt deze module tijdens de ontwikkeling van de migratievoorziening gebruikt om
+gegevens te verzamelen omtrent de kwaliteit van de conversie van persoonsgegevens.
+Om de initiële vulling software in zijn context te plaatsen is gebruikt gemaakt van twee
+diagrammen uit het SAD [6]. De module view toont de opdeling in software sub-modules en hun
+onderlinge afhankelijkheden qua software bibliotheken. Het tweede diagram toont een
+component en connector diagram die de initiële vulling uitlegt als een aantal runtime
+componenten met onderlinge communicatiestromen. Voor verdere uitleg dient het SAD [6] te
+worden geraadpleegd.
+2.1
+
+Module view
+
+Afbeelding 1 Module View Initiële Vulling (Overgenomen uit het SAD [6])
+Op basis van bovenstaande uitleg zou men geen verbindingslijn verwachten tussen logging submodule van initiële vulling en de sync module in de module view. Dat deze toch bestaat komt
+doordat de conversie software de inhoud van de stamtabellen en conversietabellen uit de BRP
+database nodig heeft. Deze implementatie wordt runtime geïnjecteerd in de conversiesoftware.
+De externe afhankelijkheden van de initiële vulling module met andere modules bestaan uit:
+1. conversie: methodes voor het parsen en valideren (syntax en precondities) van LO3
+persoonslijsten, autorisaties, afnemersindicaties en protocollering;
+
+Operatie BRP
+
+Pagina 7 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+2. isc: het gebruik van classes uit het berichten-model voor het uitwisselen van berichten
+via JMS berichten queues;
+3. synchronisatie: het gebruik van de conversietabellen via de synchronisatie module die
+nodig zijn voor het uitvoeren van de preconditie controles.
+2.2
+
+Component en connector view
+
+Afbeelding 2 Component & connector view Initiële vulling (Overgenomen uit SAD [6])
+De initiële vulling bestaat uit een viertal Java applicaties, die via een berichtenmakelaar met
+elkaar communiceren, en een tweetal SQL scripts, waarmee de configuratie wordt overgenomen
+naar de migratiesoftware. Eén van deze Java applicaties is de Synchronisatie Service; deze valt
+buiten de scope van dit document en wordt beschreven in Technisch ontwerp Synchronisatie
+Service [7], maar wordt voor de overzichtelijkheid wel getoond in de component & connector
+view.
+
+Operatie BRP
+
+Pagina 8 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+3
+
+Ontwerpbeslissingen
+
+Hier staan ontwerpbeslissingen gedocumenteerd die gelden voor alle sub-modules van initiële
+vulling. Deze ontwerpbeslissingen kunnen per module worden aangevuld met additionele
+ontwerpbeslissingen.
+3.1
+
+Minimaliseer afhankelijkheden met specifieke implementaties
+Voorkom onnodige afhankelijkheden met implementaties. Declareer velden bijvoorbeeld als List
+in plaats van ArrayList en gebruik javax.inject.Inject in plaats van
+org.springframework.beans.factory.annotation.Autowired.
+
+3.2
+
+Gebruik resources niet langer dan nodig
+Bij het versturen van JMS berichten wordt gebruik gemaakt van de
+java.util.concurrent.ThreadPoolExecutor en een java.util.concurrent.LinkedBlockingQueue die de
+thread voor het lezen van brongegevens ontkoppeld van de thread voor het versturen van JMS
+berichten. De LinkedBlockingQueue zorgt ervoor dat de volgorde van berichten gehandhaafd
+blijft d.m.v. een FIFO verwerkingsvolgorde. Dit heeft als voordeel dat de database connectie niet
+onnodig lang ‘open’ staat doordat gewacht wordt op het versturen van JMS berichten terwijl uit
+de BRP database gelezen wordt.
+
+3.3
+
+Gelaagdheid
+Om de koppeling tussen classes in de sub-modules te beperken zijn de classes in lagen
+opgedeeld. Hierbij geldt het principe dat classes alleen gebruik mogen maken van classes uit
+dezelfde laag of de laag direct hieronder. Uitzonderingen hierop zijn domein classes die vanuit
+alle lagen gebruikt mogen worden en expliciete ‘callback’ mechanismen om vanuit lagere layers
+te communiceren met hogere layers. Hierbij volgt deze module de principes zoals deze zijn
+beschreven in de implementation view van het SAD [6].
+
+3.4
+
+Transactie management
+De scope van een transactie is gedefinieerd op de repository methodes en niet op de services. In
+tegenstelling tot de scope van de transacties omhoog te brengen naar de services en gebruik te
+maken van gedistribueerde transacties is hier gekozen voor de eenvoudige en best presterende
+oplossing. De betrouwbaarheid van de applicatie heeft hieronder te lijden omdat de uitvoering
+van een service operatie niet meer atomair is. Dit nadeel is voor initiële vulling echter goed op te
+vangen doordat in het geval van excepties het resultaat niet mag worden vertrouwd en de
+initiële vulling opnieuw moet worden gestart.
+
+3.5
+
+JDBC
+Gezien de interactie met de database en de minimale hoeveelheid logica in de applicatielaag is
+gekozen om geen gebruik te maken van een Object Relational Mapping (ORM) tool zoals
+Hibernate. De SQL wordt ingelezen in de repository implementaties en met behulp van een
+Spring JDBC template uitgevoerd op de database.
+
+3.6
+
+Database koppeling
+Voor het vullen van de initiële vulling tabel voor protocollering data is de beslissing gemaakt om
+de benodigde data uit de GBA-V database te verrijken met data uit de BRP database. Hiervoor is
+gekozen om gebruik te maken van de PostgreSQL extensie genaamd `postgres_fdw` [9]. Deze
+extensie maakt het mogelijk om vanuit de GBA-V database de externe BRP database te
+benaderen als zijnde een lokaal schema. Hiervoor is het nodig om de externe BRP schemas en
+tabel definities te importeren en een mapping te maken voor de externe BRP database gebruiker
+waarin de authenticatie gegevens liggen vastgelegd.
+
+Operatie BRP
+
+Pagina 9 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+3.7
+
+Implementatie keuzes
+
+3.7.1
+
+Spring
+Als basis framework voor het opzetten van de componenten wordt Spring gebruikt.
+
+3.7.1.1
+
+Spring IoC (dependency injection)
+Implementatie van services en repositories wordt m.b.v. Spring IoC geïnjecteerd.
+
+3.7.1.2
+
+Spring AOP voor transaction management
+Transaction management is geregeld m.b.v. Spring; methodes die in een transactie moeten
+worden uitgevoerd zijn geannoteerd met de @Transactional annotatie van Spring.
+
+3.7.1.3
+
+Spring core (jdbc template)
+Voor de interactie met de database gebruikt deze sub-module het JDBC template van Spring.
+
+3.7.1.4
+
+Spring JMS (jms)
+Voor het versturen van berichten naar de berichtenmakelaar wordt gebruik gemaakt van een
+JMS template.
+
+3.7.2
+
+Configuratie
+De module is op de volgende manieren te configureren:
+
+3.7.2.1
+
+Command-line argumenten
+Bij het starten van componenten kunnen command-line argumenten worden opgegeven. Hierbij
+wordt gebruikt gemaakt van apache.commons.cli voor het parsen van argumenten en het tonen
+van foutmeldingen bij incorrect gebruik van argumenten. Deze argumenten bepalen het gedrag
+van het component. Deze staan verder beschreven in het hoofdstuk 5 (“Processen”).
+
+3.7.2.2
+
+Configuratie bestand
+Eén van de argumenten die moet worden opgegeven is de naam en locatie van een
+configuratiebestand. Dit bestand bevat informatie om verbinding(en) met de database(s) en
+berichtenmakelaar op te zetten. Dit bestand heeft het formaat van een Java properties bestand.
+
+Operatie BRP
+
+Pagina 10 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+4
+
+Modules
+
+De initiële vulling module bestaat uit vijf sub-modules die hieronder staan beschreven. Per submodule wordt de structuur beschreven. Daarnaast worden relevante classes en
+ontwerpbeslissingen toegelicht.
+4.1
+
+NaarBRP
+De NaarBRP sub-module is een op zichzelf staande Java applicatie die door een beheerder wordt
+gestart.
+
+4.1.1
+
+Module structuur
+De broncode van de sub-module te vinden in de volgende Maven projecten:
+•
+
+4.1.2
+
+migr-init-naarbrp
+
+Package structuur
+De broncode is over de volgende packages verdeeld van nl.bzk.migratiebrp:
+•
+•
+•
+•
+•
+
+init.naarbrp, root package voor deze sub-module, bevat de Main class;
+init.naarbrp.service, bevat de service logica;
+init.naarbrp.repository, bevat de repository die gebruikt worden vanuit de service laag;
+init.naarbrp.domein, bevat domein classes;
+init.naarbrp.verwerker, bevat de callback classes om berichten te versturen.
+
+4.1.3
+
+Ontwerpbeslissingen
+Bij het ontwikkelen van deze module zijn geen keuzes gemaakt die niet in lijn liggen met de
+algemene ontwerpbeslissingen.
+
+4.2
+
+NaarLO3
+De NaarLO3 sub-module is een op zichzelf staande Java applicatie die door een beheerder wordt
+gestart.
+
+4.2.1
+
+Module structuur
+De broncode van de sub-module te vinden in de volgende Maven projecten:
+•
+
+4.2.2
+
+migr-init-naarlo3
+
+Package structuur
+De broncode is over de volgende packages verdeeld van nl.bzk.migratiebrp:
+•
+•
+•
+
+init.naarlo3, root package voor deze sub-module, bevat de Main class;
+init.naarlo3.service, bevat de service logica;
+init.naarlo3.repository, bevat de repository die gebruikt worden vanuit de service laag.
+
+4.2.3
+
+Ontwerpbeslissingen
+Bij het ontwikkelen van deze module zijn geen keuzes gemaakt die niet in lijn liggen met de
+algemene ontwerpbeslissingen.
+
+4.3
+
+Logging
+De Logging sub-module is iets anders qua ontwerp dan de andere sub-modules omdat hier, bij
+de terugconversie van persoonslijsten, ook een verschillenanalyse wordt uitgevoerd. De
+verschillenanalyse vergelijkt voor een administratienummer de oorspronkelijke LO3 persoonslijst
+met het resultaat van de terug-conversie van de persoon uit de BRP die ontstaan is na heenconversie. Deze functionaliteit wordt gebruikt om te analyseren welke informatie verloren gaat
+
+Operatie BRP
+
+Pagina 11 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+bij de conversie van persoonsgegevens. Omdat tijdens het converteren van LO3 persoonslijsten
+naar BRP personen de oorspronkelijke LO3 herkomst bij de BRP gegevens wordt opgeslagen kan
+er tijdens de verschillenanalyse een precieze match gemaakt worden tussen LO3 en uit BRP
+afkomstige gegevens.
+4.3.1
+
+Module structuur
+De broncode van de sub-module te vinden in de volgende Maven projecten:
+•
+•
+•
+
+4.3.2
+
+migr-init-logging-model
+migr-init-logging-runtime
+migr-init-logging-verschilanalyse
+
+Package structuur
+De broncode is over de volgende packages verdeeld van nl.bzk.migratiebrp:
+•
+•
+•
+•
+•
+•
+•
+
+logging.runtime, root package voor deze sub-module, bevat de Main class;
+logging.runtime.listeners, bevat de MessageListeners classes die binnenkomende
+berichten van de logging queue verwerken;
+logging.runtime.service, bevat de service interface, implementatie en ondersteuning
+logica;
+logging.runtime.repository, bevat de repository interfaces die gebruikt worden vanuit de
+service laag;
+logging.verschilanalyse.analyse, bevat business logica ter voor verschil analyse;
+logging.verschilanalyse.service, bevat de service interface en implementatie;
+logging.model, bevat het model voor logging.
+
+De listener classes en bijbehorende handlers verwerken binnenkomende berichten. Dit zijn
+antwoord berichten van de Synchronisatie Service [7]. Dit kunnen berichten zijn die betrekking
+hebben op het resultaat van een synchronisatie naar BRP of het resultaat van een lees verzoek
+uit de BRP (terugconversie).
+De listeners delegeren de daadwerkelijke verwerking naar de handlers die vervolgens de service
+LoggingService aanroepen. De implementatie hiervoor wordt d.m.v. Spring geïnjecteerd. Deze
+implementatie maakt gebruik van business logica voor de verschilanalyse en gebruikt
+repositories voor het lezen en schrijven van de initiële vulling database.
+4.3.3
+
+Ontwerpbeslissingen
+Bij het ontwikkelen van deze module is een afwijkende keuze gemaakt die hier verder wordt
+toegelicht.
+
+4.3.3.1
+
+Hibernate (JPA)
+Voor de interactie met de database gebruikt deze sub-module Hibernate als ORM tool.
+
+4.4
+
+NaarISC
+De NaarISC component bestaat uit een SQL-script waarmee gegevens uit GBA-v worden
+geëxtraheerd om tijdens de installatie van de ISC component te worden gebruikt om de
+relevante configuratie in ISC uit te voeren.
+
+4.4.1
+
+Script
+•
+
+sql/extract-isc-verzender.sql
+
+De uitvoer van dit script resulteert in de SQL statements die dienen te worden uitgevoerd bij de
+installatie van ISC.
+
+Operatie BRP
+
+Pagina 12 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+Nota: de installatie van ISC bevat ook een ‘eerste versie’ van de configuratie die wordt
+bijgewerkt met deze resulterende statements. Dit is gedaan om enerzijds de installatie van ISC
+‘compleet’ te laten zijn en anderzijds om het testen van het ISC component niet afhankelijk te
+maken van de initiële vulling.
+4.5
+
+NaarVOISC
+De NaarVOISC component bestaat uit een SQL-script waarmee gegevens uit GBA-v worden
+geëxtraheerd om tijdens de installatie van de VOISC component te worden gebruikt om de
+relevante configuratie in VOISC uit te voeren.
+
+4.5.1
+
+Script
+•
+
+sql/extract-voisc-mailbox.sql
+
+De uitvoer van dit script resulteert in de SQL statements die dienen te worden uitgevoerd bij de
+installatie van VOISC.
+Nota: de installatie van VOISC bevat ook een ‘eerste versie’ van de configuratie die wordt
+bijgewerkt dit deze resulterende statements. Dit is gedaan om enerzijds de installatie van VOISC
+‘compleet’ te laten zijn en anderzijds om het testen van het VOISC component niet afhankelijk te
+maken van de initiële vulling.
+
+Operatie BRP
+
+Pagina 13 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+5
+
+Processen
+
+Initiële vulling bestaat uit twee processen namelijk heen-conversie en terug-conversie. Deze
+processen staan in het SAD [6] beschreven en worden hier niet verder beschreven. Dit hoofdstuk
+gaat in op de deelprocessen binnen de verschillende sub-modules.
+5.1
+
+Creëren initiële vulling tabellen
+Voordat de initiële vulling uitgevoerd kan worden dienen de benodigde tabellen te worden
+aangemaakt. Hiervoor dienen de volgende scripts uitgevoerd te worden:
+
+•
+•
+
+<migr-init-naarbrp>/sql/createInitVullingTables.sql
+<migr-init-naarbrp>/sql/init_lo3_database.sql
+
+Deze scripts bevatten respectievelijk de DDL om de tabellen voor de initiële vulling en de
+database koppeling (benodigd voor de initiële vulling van protocollering) te maken.
+
+5.2
+
+Tabellen UC102 Vul autorisatietabelregels in BRP initieel
+
+5.2.1
+
+initvul.initvullingresult_aut
+De onderstaande tabel wordt gevuld met de autorisatietabelregels zoals die gevonden worden in
+GBA-V.
+Attribuut
+autorisatie_id
+
+Type
+bigint
+
+afnemer_code
+
+bigint
+
+afnemer_naam character
+
+varying(80)
+
+indicatie_geheimhouding
+
+smallint
+
+verstrekkings_beperking
+
+smallint
+
+conditionele_verstrekking
+
+smallint
+
+spontaan_medium
+
+character(1)
+
+selectie_soort
+
+smallint
+
+bericht_aand
+
+smallint
+
+eerste_selectie_datum
+
+integer
+
+selectie_periode
+
+integer
+
+selectie_medium
+
+character(1)
+
+pl_plaatsings_bevoegdheid
+
+smallint
+
+adres_vraag_bevoegdheid
+
+smallint
+
+Operatie BRP
+
+Toelichting
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+
+Pagina 14 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+adhoc_medium
+
+character(1)
+
+adres_medium
+
+character(1)
+
+tabel_regel_start_datum
+
+integer
+
+tabel_regel_eind_datum
+
+integer
+
+sleutel_rubrieken
+
+text
+
+spontaan_rubrieken
+
+text
+
+voorwaarde_regel_spontaan
+
+character
+varying(4096)
+text
+
+selectie_rubrieken
+voorwaarde_regel_selectie
+adhoc_rubrieken
+voorwaarde_regel_adhoc
+adres_rubrieken
+voorwaarde_regel_adres
+afnemers_verstrekkingen
+conversie_resultaat
+conversie_melding
+
+5.2.1.1
+
+character
+varying(4096)
+text
+character
+varying(4096)
+text
+character
+varying(20)
+text
+
+Eventuele foutcode wanneer
+conversie_resultaat de waarde ‘FOUT’ bevat
+(zie 5.2.1.2).
+
+initvul.initvullingresult_aut.conversie_resultaat
+conversie_resultaat
+TE_VERZENDEN
+VERZONDEN
+TOEGEVOEGD
+FOUT
+
+5.2.1.2
+
+character
+varying(4096)
+text
+
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+Overgenomen uit de autorisatietabelregel
+zoals in GBA-V geregistreerd.
+De status van de verwerking (zie 5.2.1.1).
+
+Toelichting
+Het bericht dient nog verzonden te worden.
+Het bericht is verzonden.
+Het resultaat van de verwerking is dat de autorisatie is toegevoegd.
+Er is iets fout gegaan het de autorisatieregel is niet toegevoegd (zie
+5.2.1.2).
+
+initvul.initvullingresult_aut.conversie_melding
+conversie_melding
+AUT001
+AUT002
+AUT003
+AUT004
+AUT005
+AUT006
+AUT007
+AUT008
+
+Operatie BRP
+
+Toelichting
+Autorisaties: Afnemersindicatie is verplicht.
+Autorisaties: Ingangsdatum mag niet (gedeeltelijk) onbekend zijn.
+Autorisaties: Ingangsdatum is verplicht.
+Autorisaties: Afnemersnaam is verplicht.
+Autorisaties: Verstrekkingsbeperking is verplicht.
+Autorisaties: De einddatum mag niet voor de begindatum liggen.
+Autorisaties: Er kan geen expressie gevonden worden voor de
+sleutelrubriek.
+Autorisaties: Er kan geen (conv.convlo3)rubriek gevonden worden voor
+
+Pagina 15 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+AUT009
+AUT010
+AUT011
+AUT012
+AUT013
+AUT014
+
+de filterrubriek.
+Autorisaties: De voorwaarde op aantekening (15.42.10) is omgezet naar
+een standaard waarde.
+Autorisaties: De voorwaarde op blokkering (07.66.20) is omgezet naar
+een standaard waarde.
+Autorisaties: Einddatum mag niet (gedeeltelijk) onbekend zijn.
+Autorisaties: Er mogen niet meerdere lege einddatums binnen een stapel
+van een autorisatie zijn voor een afnemer.
+Autorisaties: plaatsingsbevoegd
+Autorisaties: partij kan niet gevonden worden obv afnemersindicatie.
+
+5.3
+
+Tabellen UC103 Vul afnemersindicaties in BRP initieel
+
+5.3.1
+
+initvul.initvullingresult_afnind
+
+5.3.1.1
+
+Attribuut
+pl_id
+
+Type
+
+a_nr
+bericht_resultaat
+
+bigint
+character
+varying(20)
+
+Toelichting
+Het bericht dient nog verzonden te worden.
+Het bericht is verzonden.
+Het bericht is verwerkt.
+
+Attribuut
+pl_id
+stapel_nr
+
+Type
+bigint
+smallint
+
+conversie_resultaat
+
+character
+varying(20)
+text
+
+Toelichting
+De GBA-V persoonsidentificatie.
+Het GBA-V-stapelnummer van de
+afnemersindicatie.
+De status van de verwerking (zie 5.3.2.1).
+Eventuele foutcode wanneer
+conversie_resultaat de waarde ‘FOUT’ bevat
+(zie 5.3.2.2).
+
+initvul.initvullingresult_afnind_stapel.conversie_resultaat
+conversie_resultaat
+TE_VERWERKEN
+TOEGEVOEGD
+FOUT
+
+5.3.2.2
+
+Het a-nummer van de gevonden persoon.
+De status van de verwerking (zie 5.3.1.1).
+
+initvul.initvullingresult_afnind_stapel
+
+conversie_melding
+
+5.3.2.1
+
+Toelichting
+De GBA-V persoonsidentificatie.
+
+initvul.initvullingresult_afnind.bericht_resultaat
+bericht_resultaat
+TE_VERZENDEN
+VERZONDEN
+VERWERKT
+
+5.3.2
+
+bigint
+
+Toelichting
+Wanneer de stapel nog verwerkt moet worden.
+Wanneer het is gelukt om de stapel toe te voegen.
+Wanneer het toevoegen van de stapel niet is gelukt. De reden hiervan
+wordt gemeld in conversie_melding (zie 5.3.2.2).
+
+initvul.initvullingresult_afnind_stapel.conversie_melding
+conversie_melding
+
+Operatie BRP
+
+Toelichting
+
+Pagina 16 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+AFN001
+AFN002
+AFN003
+AFN008
+AFN004
+AFN005
+AFN006
+AFN007
+AFN009
+AFN010
+AFN011
+
+5.3.3
+
+Afnemersindicaties: a-nummer is verplicht.
+Afnemersindicaties: stapel zonder afnemersindicatie.
+Afnemersindicaties: ingangsdatum mag niet (gedeeltelijk) onbekend
+zijn.
+Afnemersindicaties: beëindiging (lege categorie) kan niet gekoppeld
+worden aan een (nog niet beëindigde) start (gevulde categorie).
+Afnemersindicaties: meerdere stapels met dezelfde afnemersindicatie;
+deze stapel wordt genegeerd.
+Afnemersindicaties: stapel met meerdere verschillende
+afnemersindicaties.
+Afnemersindicaties: historie binnen stapel is ongeldig. Actuele categorie
+geeft geen levering aan; volledige stapel wordt genegeerd.
+Afnemersindicaties: historie binnen stapel is ongeldig. Actuele categorie
+geeft levering aan; enkel actuele categorie wordt geconverteerd.
+Afnemersindicaties: persoon niet gevonden op basis van a-nummer.
+Afnemersindicaties: partij niet gevonden op basis van afnemersindicatie.
+Afnemersindicaties: geen leveringsautorisatie gevonden voor partij.
+
+initvul.initvullingresult_afnind_regel
+Attribuut
+pl_id
+stapel_nr
+
+Type
+bigint
+smallint
+
+volg_nr
+
+smallint
+
+afnemer_code
+geldigheid_start_datum
+
+bigint
+integer
+
+Toelichting
+De GBA-V persoonsidentificatie.
+Het GBA-V-stapelnummer van de
+afnemersindicatieregel.
+Het GBA-V-volgnummer van de
+afnemersindicatieregel.
+De code van de afnemer.
+De start datum van de afnemersindicatieregel.
+
+5.4
+
+Tabellen UC104 Vul protocollering in BRP initieel
+
+5.4.1
+
+initvul.initvullingresult_protocollering
+Attribuut
+activiteit_id
+pers_id
+bijhouding_opschort_reden
+toeganglevsautorisatie_id
+
+Type
+bigint
+integer
+character
+varying(1)
+integer
+
+toeganglevsautorisatie_count
+
+smallint
+
+dienst_id
+start_dt
+
+integer
+timestamp without
+time zone
+timestamp without
+time zone
+character
+varying(200)
+text
+
+laatste_actie_dt
+conversie_resultaat
+foutmelding
+
+5.4.1.1
+
+Toelichting
+Het ID van de gevonden GBA-V-activiteit.
+De gevonden BRP-persoonsidentificatie.
+De reden waarom de gevonden persoon is
+opgeschort.
+Het ID van de gevonden
+toegangsleveringsautorisatie.
+Het aantal gevonden
+toegangsleveringsautorisaties.
+De gevonden dienst.
+De start datum van de gevonden GBA-Vactiviteit.
+De datum van de laatste actie van de
+gevonden GBA-V-activiteit.
+De status van de verwerking (zie 0).
+Eventuele foutmelding wanneer
+conversie_resultaat de waarde ‘FOUT’
+bevat (zie 5.4.1.2).
+
+initvul.initvullingresult_protocollering.conversie_resultaat
+
+Operatie BRP
+
+Pagina 17 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+conversie_resultaat
+TE_VERZENDEN
+VERZONDEN
+OK
+FOUT
+
+5.4.1.2
+
+Toelichting
+Wanneer een bericht nog verzonden moet worden
+Wanneer een bericht is verzonden
+Wanneer het toevoegen van de protocolgegevens is gelukt
+Wanneer het toevoegen van de protocolgegevens niet is gelukt. De
+reden hiervan wordt gemeld in foutmelding (zie 5.4.1.2).
+
+initvul.initvullingresult_protocollering.foutmelding
+foutmelding
+Er zijn meerdere Toegang leveringsautorisaties
+gevonden
+Toegang leveringsautorisatie kan niet gevonden
+worden
+Dienst kan niet gevonden worden
+Persoon is opgeschort met reden 'F'
+Persoon is opgeschort met reden 'W'
+Persoon kan niet gevonden worden
+
+5.4.2
+
+Toelichting
+-
+
+initvul.initvullingresult_protocollering_activiteit
+Deze tabel bevat een tussenresultaat.
+Attribuut
+activiteit_id
+communicatie_partner
+laatste_actie_dt
+
+Type
+bigint
+integer
+integer
+
+start_dt
+
+dienst_selectie
+dienst_details_persoon
+
+timestamp with
+time zone
+timestamp with
+time zone
+boolean
+boolean
+
+dienst_mutatielevering
+
+boolean
+
+dienst_attendering
+dienst_plaatsen_afnind
+
+boolean
+boolean
+
+a_nr
+bijhouding_opschort_reden
+
+bigint
+character
+varying(1)
+
+laatste_actie_tijdstip
+
+Operatie BRP
+
+Toelichting
+Het ID van de gevonden GBA-V-activiteit.
+De code van de afnemer aan wie is verstrekt
+De datum van de laatste actie van de
+gevonden GBA-V-activiteit.
+De start datum van de gevonden GBA-Vactiviteit.
+Het tijdstip van de laatste actie van de
+gevonden GBA-V-activiteit.
+Of er een dienst Selectie verwacht wordt.
+Of er een dienst Geef details persoon
+verwacht wordt.
+Of er een dienst Mutatielevering verwacht
+wordt.
+Of er een dienst Attendering verwacht wordt.
+Of er een dienst Plaatsen / Verwijderen
+afnemersindicatie verwacht wordt.
+Het a-nummer van de gevonden persoon.
+De reden waarom een persoon is opgeschort.
+
+Pagina 18 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+5.4.3
+
+5.4.4
+
+initvul.initvullingresult_protocollering_brp_dienst
+Attribuut
+dienst_id
+toeganglevsautorisatie_id,
+
+Type
+integer
+integer
+
+dienst_selectie
+dienst_details_persoon
+
+boolean
+boolean
+
+dienst_mutatielevering
+dienst_attendering
+dienst_plaatsen_afnind
+
+boolean
+boolean
+boolean
+
+initvul.initvullingresult_protocollering_brp_pers
+Attribuut
+id
+anr
+
+5.4.5
+
+5.4.6
+
+Toelichting
+Het ID van de gevonden dienst.
+Het ID van de gevonden
+toegangsleveringsautorisatie.
+Of er een dienst Selectie is gevonden.
+Of er een dienst Geef details persoon is
+gevonden.
+Of er een dienst Mutatielevering is gevonden.
+Of er een dienst Attendering is gevonden.
+Of er een dienst Plaatsen / Verwijderen
+afnemersindicatie is gevonden.
+
+Type
+integer
+bigint
+
+Toelichting
+De gevonden BRP-persoonsidentificatie.
+Het a-nummer van de gevonden persoon.
+
+initvul.initvullingresult_protocollering_brp_toeglevaut
+Attribuut
+id
+
+Type
+integer
+
+partij_code
+
+integer
+
+datingang
+
+integer
+
+dateinde
+
+integer
+
+Toelichting
+Het ID van de gevonden
+toegangsleveringsautorisatie.
+De partijcode van de gevonden
+toegangsleveringsautorisatie.
+Datum ingang van de gevonden
+toegangsleveringsautorisatie.
+Datum einde van de gevonden
+toegangsleveringsautorisatie.
+
+initvul.initvullingresult_protocollering_dienst
+Attribuut
+activiteit_id
+toeganglevsautorisatie_id
+
+Type
+bigint
+integer
+
+toeganglevsautorisatie_count
+
+bigint
+
+dienst_selectie_id
+dienst_details_persoon_id
+
+integer
+integer
+
+dienst_mutatielevering_id
+
+integer
+
+dienst_attendering_id
+dienst_plaatsen_afnind_id
+
+integer
+integer
+
+Operatie BRP
+
+Toelichting
+Het ID van de gevonden GBA-V-activiteit.
+Het ID van de gevonden
+toegangsleveringsautorisatie.
+Het aantal leveringsautorisaties dat gevonden
+is.
+Het ID van de gevonden dienst Selectie.
+Het ID van de gevonden dienst Geef details
+persoon.
+Het ID van de gevonden dienst
+Mutatielevering is gevonden.
+Het ID van de gevonden dienst Attendering.
+Het ID van de gevonden dienst Plaatsen /
+Verwijderen afnemersindicatie.
+
+Pagina 19 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+5.4.7
+
+initvul.initvullingresult_protocollering_toeglevaut
+Attribuut
+activiteit_id
+dienst_selectie
+dienst_details_persoon
+
+Type
+bigint
+boolean
+boolean
+
+dienst_mutatielevering
+dienst_attendering
+dienst_plaatsen_afnind
+
+boolean
+boolean
+boolean
+
+toeganglevsautorisatie_id
+
+integer
+
+toeganglevsautorisatie_count
+
+bigint
+
+Toelichting
+Het ID van de gevonden GBA-V-activiteit.
+Of er een dienst Selectie is gevonden.
+Of er een dienst Geef details persoon is
+gevonden.
+Of er een dienst Mutatielevering is gevonden.
+Of er een dienst Attendering is gevonden.
+Of er een dienst Plaatsen / Verwijderen
+afnemersindicatie is gevonden.
+Het ID van de gevonden
+toegangsleveringsautorisatie.
+Het aantal leveringsautorisaties dat gevonden
+is.
+
+5.5
+
+Lezen GBA-V database en vullen queue BRP Synchronisatie Service
+De eerste stap van de heen-conversie bestaat uit het lezen van LO3 gegevens uit de GBA-V
+database en het plaatsen van synchronisatieberichten met daarin de LO3 berichten op de
+synchronisatie queue.
+
+5.5.1
+
+Input / Output
+De NaarBRP sub-module kan verschillende taken uitvoeren en doet dit op basis van argumenten
+die worden meegegeven bij het uitvoeren van de Java applicatie. De volgende argumenten
+worden ondersteund:
+•
+•
+•
+•
+
+•
+
+•
+
+•
+
+•
+
+•
+
+laad_pers, vult die initiële vulling tabellen die nodig zijn voor het initieel vullen van
+personen met LO3 berichten uit de GBA-V database;
+laad_aut, vult die initiële vulling tabellen die nodig zijn voor het initieel vullen van
+autorisatieregels met autorisatieregels uit de GBA-V;
+laad_afn, vult de initiële vulling tabellen die nodig zijn voor het initieel vullen van
+afnemerindicaties met afnemerindicaties uit de GBA-V database;
+laad_prot, vult de initiële vulling tabel die nodig is voor het initieel vullen van
+protocollering data uit de GBA-V database. Optioneel is een argument mee te geven die
+specificeert vanaf welke datum de protocollering data geladen dient te worden;
+sync_pers, leest de te verwerken LO3 berichten uit de initiële vulling tabellen en maakt
+hier ‘SynchroniseerNaarBrpVerzoekBericht’-en van en zet deze op de queue voor de BRP
+SynchronisatieService;
+sync_aut, leest de te verwerken autorisatieregels uit de initiële vulling tabellen en maakt
+hier ‘AutorisatieBericht’-en van en zet deze op de queue voor de BRP
+SynchronisatieService;
+sync_afn, leest de te verwerken afnemerindicaties uit de initiële vulling tabellen en
+maakt hier ‘AfnemersindicatiesBericht’-en van en zet deze op de queue voor de BRP
+SynchronisatieService;
+sync_prot, leest de te verwerken protocollering data uit de initiële vulling tabel en maakt
+hier ‘ProtocolleringBericht’-en van en zet deze op de queue voor de BRP
+SynchronisatieService;
+excelvulling, leest een directory met daarin persoonslijsten in excel (test) formaat en
+maakt hiervan ‘SynchroniseerNaarBrpVerzoekBericht’-en en zet deze op de queue voor
+de BRP SynchronisatieService.
+
+Het argument ‘excelvulling’ is een alternatief voor ‘laad_pers’ en bestaat enkel voor test
+doeleinden en maakt ook de initiële vulling tabellen voor personen aan. Daarnaast geldt dat
+voordat een ‘sync_X’ kan worden uitgevoerd eerst de corresponderende ‘laad_X’ moet zijn
+uitgevoerd, anders zullen de tabellen leeg zijn en worden er geen gegevens verwerkt.
+
+Operatie BRP
+
+Pagina 20 van 21
+
+Definitief | 2.9 | Technisch ontwerp Initiële Vulling | 20-04-2017
+
+Bovenstaande argumenten corresponderen met methodes van de InitieleVullingService die
+vanuit de Main class wordt aangeroepen afhankelijk van de meegegeven parameter.
+De bericht classes komen uit de migr-isc-bericht module en worden ook gebruikt door de BRP
+Synchronisatie Service om de berichten te lezen. Dit verklaart ook de afhankelijkheid met ISC.
+5.6
+
+Lezen BRP database en vullen queue BRP Synchronisatie Service
+De eerste stap van de terug-conversie, die enkel wordt uitgevoerd voor persoonslijsten, bestaat
+uit het lezen van administratienummers van ingeschreven personen in de BRP database. Voor elk
+administratienummer wordt een ‘LeesUitBrpVerzoekBericht’ bericht op de BRP Synchronisatie
+Service queue gezet.
+Er bestaat dus alleen terug-conversie voor persoonsgegevens en niet voor autorisatieregels en
+afnemerindicaties.
+
+5.6.1
+
+Input / Output
+Als input dient een BRP database met personen en als output levert dit proces een verzameling
+‘LeesUitBrpVerzoekBericht’-en.
+
+5.7
+
+Verwerken van antwoordberichten van de BRP Synchronisatie Service
+De hierboven beschreven processen hebben als output JMS berichten die op de queue van de
+BRP Synchronisatie Service worden geplaatst. Deze berichten worden opgepakt door deze
+service en verwerkt. Het resultaat van deze verwerking wordt op twee resultaat queues geplaatst
+van de BRP Synchronisatie Service. Het logging proces leest berichten van deze queues en
+verwerkt deze vervolgens.
+
+5.7.1
+
+Input / Ouput
+De input van dit proces bestaat uit antwoordberichten van de BRP Synchronisatie Service. Dit
+kunnen de volgende berichten zijn:
+1. Resultaat queue voor SynchroniseerNaarBrpVerzoekBericht, AutorisatieBericht en
+AfnemersindicatiesBericht en ProtocolleringBericht
+a. SynchroniseerNaarBrpAntwoordBericht, werkt de initiële vulling tabellen voor
+personen bij met het resultaat van de verwerking;
+b. AutorisatieAntwoordBericht, werkt de initiële vulling tabellen voor
+autorisatieregels bij met het resultaat van de verwerking;
+c. AfnemersindicatiesAntwoordBericht, werkt de initiële vulling tabellen voor
+afnemerindicaties bij met het resultaat van de verwerking;
+d. ProtocolleringAntwoordBericht, werkt de initiële vulling tabellen voor
+protocollering bij met het resultaat van de verwerking.
+2. Resultaat queue voor LeesUitBrpVerzoekBericht
+a. LeesUitBrpAntwoordBericht, slaat het resultaat van de terug-conversie van een
+BRP persoon naar een LO3 persoonslijst op in de IV database en voert daarnaast
+een verschillenanalyse uit tussen de oorspronkelijke LO3 persoonslijst en het
+resultaat van de terugconversie. Het resultaat van de verschilanalyse wordt ook
+opgeslagen in de IV database;
+
+Operatie BRP
+
+Pagina 21 van 21
+
+

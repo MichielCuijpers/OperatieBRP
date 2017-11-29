@@ -1,0 +1,301 @@
+Ber
+
+Dyn
+Dyn
+
+OGM A03 Verantwoording - Bronnen
+
+Ber > Ber
+
+* s1
+
+Release 59
+
+* s2
+
+ID
+
+BerID
+
+*i
+
+BerPers
+
+TsReg
+
+Ts
+
+* s2
+
+Srt >
+
+SrtBer
+
+.
+
+TsReg Ts
+
+Richting >
+
+Richting
+
+*
+
+Pers > Pers *
+
+ZendendePartij >
+
+Partij
+
+.
+
+ZendendeSysteem
+
+SysteemNaam
+
+.
+
+OntvangendePartij >
+
+Partij
+
+.
+
+Referentienr
+
+Referentienr
+
+. s1
+
+CrossReferentienr
+
+Referentienr
+
+.
+
+TsVerzending
+
+Ts
+
+.
+
+TsOntv
+
+Ts
+
+.
+
+Verwerkingswijze >
+
+Verwerkingswijze
+
+.
+
+Rol >
+
+Rol
+
+.
+
+SrtSynchronisatie >
+
+SrtSynchronisatie
+
+.
+
+AdmHnd
+
+Dyn
+
+ID
+
+AdmHndID
+
+*i
+
+Srt >
+
+SrtAdmHnd
+
+*
+
+Partij >
+
+Partij
+
+*
+
+ToelichtingOntlening Ontleningstoelichting .
+TsReg
+
+Ts
+
+* s2 s4
+
+TsLev
+
+Ts
+
+. s1
+
+StatusLev >
+
+StatusLevAdmHnd
+
+* s3
+
+Levsautorisatie >
+
+Levsautorisatie
+
+.
+
+Dienst >
+
+Dienst
+
+.
+
+ID
+
+Verwerking >
+
+Verwerkingsresultaat
+
+.
+
+AdmHnd > AdmHnd
+
+Bijhouding >
+
+Bijhresultaat
+
+.
+
+Regel >
+
+HoogsteMeldingsniveau > SrtMelding
+
+AdmHndGedeblokkeerdeRegel
+
+Dyn
+
+AdmHndGedeblokkeerdeMeldingI
+
+*i
+*
+
+Regel
+
+*
+
+.
+
+AdmHnd >
+
+AdmHnd
+
+.
+
+Data
+
+Berdata
+
+.
+
+Actie
+
+Dyn
+
+ID
+
+ActieID
+
+*i
+
+Srt >
+
+SrtActie
+
+*
+
+AdmHnd >
+
+AdmHnd
+
+*
+
+Partij >
+
+Partij
+
+*
+
+TsReg
+
+Ts
+
+ActieBron
+
+*
+
+DatOntlening DatEvtDeelsOnbekend .
+
+Dyn
+
+ID
+
+ActieBronID
+
+*i
+
+Actie >
+
+Actie
+
+* u1
+
+Doc >
+
+Doc
+
+. u1
+
+Rechtsgrond >
+
+Rechtsgrond
+
+. u1
+
+Rechtsgrondoms OmsEnumeratiewaarde . u1
+
+Doc
+
+Dyn
+
+ID
+
+DocID
+
+*i
+
+Srt >
+
+SrtDoc
+
+*
+
+Aktenr Aktenr
+Oms
+
+DocOms
+
+Partij > Partij
+
+.
+.
+*
+
+17-7-2017
+
+

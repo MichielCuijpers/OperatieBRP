@@ -1,0 +1,219 @@
+migr-init-naarbrp
+(iv-naarbrp-afnemersindicatierun
+iv-naarbrp-autorisatierun
+iv-naarbrp-persoonrun
+iv-naarbrp-afnemersindicatiecreate
+iv-naarbrp-autorisatiecreate
+iv-naarbrp-persooncreate
+iv-naarbrp-protocolleringcreate
+iv-naarbrp-protocolleringrun)
+
+JDBC
+
+migr-synchronisatie-runtime
+(naarbrp)
+(iv-synchronisatienaarbrp)
+
+JMS
+HornetQ
+(iv-hornetq)
+
+JMS
+JMS
+
+GBA-V DB /
+IV DB
+(migrgbavdatabase)
+
+Database
+Queue
+
+JMS
+migr-init-logging
+(iv-logging)
+
+JDBC
+
+migr-synchronisatie-runtime
+(naarlo3)
+(iv-synchronisatienaarlo3)
+
+migr-init-naarlo3
+(iv-naarlo3-persoonterug)
+
+*.zip
+
+brp-afnemerindicatie
+brp-messagebroker
+(brpQ
+messagebroker)
+
+brp-beheer
+
+Service deployed in
+Tomcat, verbindt met
+database (JDBC)
+Service via
+commandline,
+verbindt met queue
+(JMS)
+
+*.war
+
+JMS
+
+Asynchroon
+
+17.000.000 / jr
+MQ database <Q>
+(brpactivemqdatabase)
+brp-synchronisatie
+
+Asynchroon
+
+Niet toegewezen containers:
+iv-naarisc-create
+iv-naarisc-run
+iv-naarvoisc-create
+iv-naarvoisc-run
+
+20.000.000 / jr
+brp-protocollering
+
+Bijhouders
+
+Synchroon
+
+brp-archivering
+
+P
+
+12.000.000 / jr
+15 / sec
+(verdubbeld ivm
+prevalidatie)
+
+A
+brp-bevraging
+
+BRP database
+(brp-databasekern)
+
+brp-verzending
+
+400.000.000 / jr
+
+ISC
+
+logging-elasticsearch
+logging-kibana
+logging-logstash
+
+brp-vrijbericht
+
+brp-selectie
+brp-selectie-afnemerindicatie
+brp-selectie-protocollering
+brp-selectie-schrijver
+brp-selectie-protocollering
+brp-selectie-verwerker
+
+Archivering DB <A>
+(brparchiveringdatabas
+e)
+
+migr-sync-runtime
+(isc-synchronisatie)
+
+Asynchroon
+
+600.000.000 / jr
+
+Protocollering DB
+<P>
+(brpprotocolleringdata
+base)
+
+brp-mutatielevering
+
+ISC
+
+Afnemers
+
+brp-sleutelbos
+
+brp-bijhouding
+
+brp-afnemerindicatie-gba
+
+Synchroon
+
+500.000.000 / jr
+120 / sec
+
+brp-admhnd-publicatie
+
+relateren
+
+Grote berichten
+brp-selectie
+brp-selectie-afnemerindicatie
+brp-selectie-protocollering
+brp-selectie-schrijver
+brp-selectie-protocollering
+brp-selectie-verwerker
+
+brp-bevraging-gba
+ISC
+
+Mailbox
+server
+
+SPd
+
+Horizontaal
+schaalbaar
+(binnen 1
+datacentrum)
+
+migr-voisc-runtime
+(isc-voisc)
+
+?
+25000 / uur
+
+JMS
+
+migr-routeringruntime
+(isc-routering)
+
+JMS
+
+200.000.000 / jr
+
+migr-isc-runtime
+(isc-isc)
+
+JDBC
+
+JDBC
+
+JMX
+
+VOISC DB
+(isc-voiscdatabase)
+
+Routering DB
+(iscrouteringdatabase)
+
+migr-isc-console
+(isc-iscconsole)
+
+JDBC
+
+ISC DB
+(isc-iscdatabase)
+
+JDBC
+
+

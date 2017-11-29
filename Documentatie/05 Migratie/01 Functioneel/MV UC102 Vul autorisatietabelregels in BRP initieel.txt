@@ -1,0 +1,2351 @@
+Use case 102 Vul autorisatietabelregels in BRP
+initieel
+
+4.6
+
+Datum
+Status
+
+22-05-2017
+Definitief
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................5
+1.1
+1.2
+
+2
+
+REFERENTIES ........................................................................................................................................5
+PRECONDITIES ......................................................................................................................................5
+
+AUTORISATIETABELREGELS ........................................................................................................6
+2.1 LEESWIJZER ........................................................................................................................................11
+2.2 VOLGORDE VAN VERWERKING AUTORISATIETABELREGELS .............................................................11
+2.3 VERSCHILLEN MET GBA-V ................................................................................................................11
+2.4 PARTIJ .................................................................................................................................................12
+2.5 PARTIJ / ROL ......................................................................................................................................12
+2.6 TOEGANG LEVERINGSAUTORISATIE...................................................................................................12
+2.7 LEVERINGSAUTORISATIE ....................................................................................................................14
+2.8 DIENSTBUNDEL ...................................................................................................................................15
+2.9 DIENST ................................................................................................................................................16
+2.9.1 Mogelijke diensten.................................................................................................................17
+2.10 AUTORISATIE TEN BEHOEVE VAN DIENST OPVRAGEN PL ............................................................18
+2.10.1 Toegang leveringsautorisatie.........................................................................................18
+2.10.2 Leveringsautorisatie ..........................................................................................................18
+2.10.3 Dienstbundel ........................................................................................................................19
+2.10.4 Dienst .....................................................................................................................................19
+2.10.5 Dienstbundel \ LO3 Rubriek ...........................................................................................19
+
+3
+
+FILTERRUBRIEKEN ..........................................................................................................................20
+3.1
+
+4
+
+DIENSTBUNDEL \ LO3 RUBRIEK .......................................................................................................20
+
+SLEUTELRUBRIEKEN ......................................................................................................................21
+4.1
+4.2
+
+BRP EXPRESSIE ..................................................................................................................................21
+TE CONVERTEREN SLEUTELRUBRIEKEN .............................................................................................21
+
+5
+
+ACTIES ....................................................................................................................................................24
+
+6
+
+VOORWAARDEREGELS ..................................................................................................................25
+
+7
+
+FOUTAFHANDELING .......................................................................................................................26
+
+8
+
+OPMERKINGEN ..................................................................................................................................27
+8.1
+
+OPENSTAANDE PUNTEN ......................................................................................................................27
+
+Operatie BRP
+
+Pagina 2 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+30-01-2014
+
+0.1
+
+Operatie BRP
+
+27-03-2014
+21-05-2014
+
+0.2
+1.1
+
+23-05-2014
+26-05-2014
+
+1.2
+1.3
+
+27-05-2014
+
+1.4
+
+25-06-2014
+
+1.5
+
+16-03-2015
+
+1.6
+
+24-03-2015
+
+1.7
+
+10-04-2015
+16-04-2015
+23-04-2015
+
+1.8
+1.9
+1.91
+
+29-05-2015
+
+2.1
+
+04-06-2015
+
+2.2
+
+24-06.2015
+26-06-2015
+
+2.3
+2.4
+
+04-08-2015
+
+3.0
+
+01-09-2015
+07-10-2015
+
+3.1
+3.2
+
+27-11-2015
+02-12-2015
+11-12-2015
+
+3.3
+3.4
+3.5
+
+04-01-2016
+
+3.6
+
+Documentatie uit de Wiki overgezet naar dit
+document
+Wijzigingen BMR 29 doorgevoerd
+Mapping van autorisatietabelregels naar
+abonnementen aangepast
+Opmerking review verwerkt
+Kanaal is aangepast (alleen nog maar ‘LO3’).
+Deze aanpassing is verwerkt.
+• Indicatie verstrekkingsbeperking wordt nu
+ook geconverteerd (partij)
+• Sector is verwijderd uit partij
+• Model BMR is verwijderd en inleiding
+aangepast met uitleg en versienummer
+van BMR waarop de specificaties
+gebaseerd zijn.
+• Sleutelrubrieken aangepast
+• Diverse wijzigingen BMR 32 verwerkt
+• Diverse opmerkingen verwerkt
+• BMR 35 en 36 verwerkt:
+o Protocolleringsniveau aangepast
+o Expressies vervangen met
+Abonnement / LO3 Rubriek
+• BRP stamtabellen verwijderd, die waren
+dubbel opgenomen
+• Reviewcommentaar verwerkt
+• Wijziging in abonnement doorgevoerd
+waarbij rekening gehouden wordt met
+niet volledig te converteren
+voorwaarderegels.
+• Ontbrekende sleutelrubrieken toegevoegd
+• Issue met volgnummer opgelost
+• Vertaling van de voorwaarderegels die in
+de autorisaties voorkomen in een bijlage
+beschreven [VWR]
+• Verwijzing naar bijlage met de vertaling
+van de voorwaarderegel opgenomen
+• Nadere populatiebeperking en conversie
+voorwaarderegel uitvoeriger beschreven
+• Sleutelrubrieken aangepast die functies
+gebruiken
+• Ontbrekende sleutelrubrieken toegevoegd
+Definitief gemaakt ten behoeve van release
+3.1
+• Versie aangemaakt voor release 3.1
+• Sleutelrubriek mag niet meer leeg als er
+iets met afnemersindicatie gedaan wordt
+• Reviewopmerkingen T&A verwerkt
+• Autorisatietabel tabel in het kader van lo
+3.9 verwijderd
+• BMR 44 verwerkt
+• Reviewcommentaar verwerkt
+• Reviewcommentaar verwerkt (minor
+changes)
+• Leveren op basis van afnemersindicatie nu
+
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+
+Operatie BRP
+
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Pagina 3 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+•
+07-01-2016
+
+3.7
+
+•
+
+03-02-2016
+
+3.8
+
+•
+
+24-02-2016
+11-04-2016
+02-02-2017
+21-02-2017
+
+3.9
+4.0
+4.1
+4.2
+
+•
+•
+•
+•
+
+22-03-2017
+13-04-2017
+19-05-2017
+22-05-2017
+20-07-2017
+
+4.3
+4.4
+4.5
+4.6
+4.7
+
+•
+•
+•
+•
+•
+
+altijd aanmaken indien medium
+spontaan is gevuld
+Datum ingang moest Datum einde zijn om
+te bepalen of een regel actueel is (typo)
+Partij.Soort wordt nu leeggelaten en de rol
+Afnemer wordt alleen toegevoegd als
+deze nog niet bestaat.
+Situatie waarbij dienst plaatsen
+afnemersindicatie wel bestaat maar
+spontaan niet, beschreven. Dit dient
+gelogd te worden.
+Changes BMR 45 verwerkt (partij)
+95.12 bij vulling van Partij opgenomen
+Referenties bijgewerkt
+Aanpassingen vanwege
+documentatierichtlijnen
+BMR 56 wijzigingen van selectie
+Tekstuele bevindingen opgelost
+Opvragen PL autorisatie toegevoegd
+Reviewcommentaar verwerkt
+Vulling Selectie gecompleteerd
+(Leverwijze selectie)
+
+Operatie BRP
+
+Operatie BRP
+
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+23-05-2014
+
+1.1
+
+Review
+
+Operatie BRP
+
+24-03-2015
+
+1.6
+
+Review
+
+Operatie BRP
+
+27-11-2015
+
+3.3
+
+Review
+
+Operatie BRP
+
+22-05-2017
+
+4.5
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 4 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+1
+
+Inleiding
+
+Dit document beschrijft op welke wijze autorisatietabelregels (tabel 35) geconverteerd dienen te
+worden naar het autorisatiemodel van de BRP. Het autorisatiemodel van de BRP is beschreven in
+het [BMR].
+Bij de conversie wordt in eerste instantie tabel 35 in CSV-formaat gehanteerd [TAB35]. De
+definitieve input moeten de GBA-V tabellen worden omdat dit de bron is die daadwerkelijk
+gebruikt wordt om afnemers te bedienen. Theoretisch zou deze af kunnen wijken van de
+gepubliceerde tabel 35 in CSV-formaat.
+1.1
+
+1.2
+
+Referenties
+#
+[TAB35]
+
+Document
+http://www.rijksdienstvooridentiteitsgegeve
+ns.nl/dsresource?objectid=49387&type=org
+
+Organisatie
+RvIG
+
+Versie
+-
+
+Datum
+01-08-2015
+
+[BMR]
+
+Gegevenswoordenboek BRP
+
+OperatieBRP
+
+-
+
+-
+
+[LO]
+
+Logisch Ontwerp GBA
+
+RvIG
+
+3.10
+
+08-10-2016
+
+[CONV]
+
+Documentatie bidirectionele conversie
+
+OperatieBRP
+
+-
+
+-
+
+[UC103]
+
+MV UC103 Vul afnemersindicaties in BRP
+initieel
+
+Operatie BRP
+
+-
+
+-
+
+[VWR]
+
+MV UC102 Vertaling voorwaarderegel.xlsx
+
+Operatie BRP
+
+-
+
+-
+
+Precondities
+De te converteren autorisatietabelregels dienen te voldoen aan de volgende voorwaarden:
+• Datum ingang en Datum einde moeten volledig zijn en bevatten een jaar, maand en dag (niet
+gedeeltelijk onbekend), Datum einde mag ook leeg zijn.
+• Datum ingang moet voor of gelijk aan Datum einde zijn
+• Alle rubrieken in de autorisatietabelregel die geconverteerd worden naar een verplicht
+attribuut in het BRP-model, moeten gevuld zijn.
+Indien een autorisatietabelregel niet voldoet aan de voorwaarden dient dit gelogd te worden (zie
+ook hoofdstuk over Foutafhandeling).
+
+Operatie BRP
+
+Pagina 5 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+2
+
+Autorisatietabelregels
+
+In de onderstaande tabel zijn de rubrieken opgesomd die in de autorisatietabelregels voor
+komen en welke ergens in het model van de BRP terecht moeten komen. Er zijn een aantal
+rubrieken die niet geconverteerd zullen worden.
+
+Rubriek
+95.10
+95.20
+99.98
+
+Naam
+Afnemersindicatie
+Afnemernaam
+Datum ingang
+
+99.99
+
+Datum einde
+
+95.11
+
+Aantekening
+
+95.12
+
+Indicatie
+geheimhouding
+
+95.13
+
+Verstrekkingsbeperking
+
+Toelichting LO
+De afnemersindicatie
+De naam van de afnemer
+Met ingang van deze datum is de
+tabelregel geldig.
+Tot deze datum is de tabelregel
+geldig.
+Een opsomming van aantekeningen.
+Deze rubriek wordt gebruikt om op
+de PL voorkomende aantekeningen
+om te zetten naar
+afnemersindicaties. Een aantekening
+wordt gerepresenteerd door middel
+van een afnemersaanduiding
+die gedefinieerd is in tabel 55
+(element 93.10). Deze kan gevolgd
+worden door de wildcard ‘/*’ of een
+reeks tekens, opgebouwd conform
+de syntax van het element tekst
+zoals beschreven in paragraaf 5.2.3.
+Indien deze indicatie ‘aan’ staat
+(waarde ‘1’) en de afnemer behoort
+tot de afnemers waarvoor de burger
+om geheimhouding heeft verzocht
+(zie rubriek 07.70.10), zullen er
+geen gegevens verstrekt worden.
+Deze rubriek kan de waarde ‘0’, ‘1’
+en ‘2’ hebben, die het volgende
+betekenen:
+
+Toelichting
+Wordt niet
+geconverteerd.
+
+-
+
+-
+
+0 = aan een burger desgevraagd
+inzage geven in de op zijn PL
+opgenomen afnemersindicatie van
+de afnemer en aan de burger
+desgevraagd melden welke
+verstrekkingen er zijn gedaan aan
+de afnemer, en geen beperkingen
+met betrekking tot het zichtbaar en
+beschikbaar zijn van deze informatie
+voor gemeentefunctionarissen;
+1 = aan een burger desgevraagd
+inzage geven in de op zijn PL
+opgenomen afnemersindicatie van
+de afnemer en aan de burger
+desgevraagd melden welke
+verstrekkingen er zijn gedaan aan
+de afnemer, en deze informatie
+slechts zichtbaar en beschikbaar
+maken voor
+gemeentefunctionarissen die daar
+
+Operatie BRP
+
+Pagina 6 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+Rubriek
+
+Naam
+
+95.40
+
+Rubrieknummer
+spontaan
+
+95.41
+
+Voorwaarderegel
+spontaan
+
+95.42
+
+Sleutelrubriek
+
+95.43
+
+Conditionele
+verstrekking
+
+95.44
+
+Medium spontaan
+
+Operatie BRP
+
+Toelichting LO
+expliciet voor zijn geautoriseerd;
+2 = aan een burger geen inzage
+geven in de op zijn PL opgenomen
+afnemersindicatie van de afnemer
+en aan de burger niet melden welke
+verstrekkingen er zijn gedaan aan
+de afnemer, en deze informatie
+slechts zichtbaar en beschikbaar
+maken voor
+gemeentefunctionarissen die daar
+expliciet voor zijn geautoriseerd.
+Een opsomming van
+rubrieknummers van de gegevens
+die spontaan verstrekt moeten
+worden.
+De voorwaarden waaraan een PL
+moet voldoen om in aanmerking te
+komen voor het automatisch
+plaatsen van een afnemersindicatie
+op de persoonslijst, dan wel voor
+het versturen van een conditionele
+gegevensverstrekking. Bij het
+vergelijken van de PL met de
+voorwaarderegel spontaan worden
+categorieën waarin element 84.10,
+Indicatie onjuist is opgenomen,
+uitgesloten.
+Een opsomming van
+rubrieknummers van de gegevens
+die, indien één of meerdere van die
+gegevens wijzigen in een PL en de
+PL na wijziging aan de in de
+voorwaarderegel spontaan vervatte
+voorwaarden voldoet, aanleiding zijn
+om over te gaan tot het automatisch
+plaatsen van een afnemersindicatie
+op de persoonslijst dan wel het
+versturen van een conditionele
+gegevensverstrekking.
+Conditionele verstrekking geeft aan
+of er voor de afnemer automatisch
+een afnemersindicatie geplaatst
+moet worden op de persoonslijst
+(waarde is ‘0’) of dat er aan de
+afnemer een conditionele
+gegevensverstrekking moet worden
+gedaan (waarde is ‘1’), indien één of
+meerdere sleutelrubrieken wijzigen
+op een PL en de PL na wijziging aan
+de in de voorwaarderegel spontaan
+vervatte voorwaarden voldoet.
+Het medium voor de spontane
+gegevensverstrekking is in principe
+het GBA-netwerk. In dat geval wordt
+in deze rubriek de waarde ‘N’
+opgenomen. Als de afnemer
+bevoegd is om met de diverse
+gemeenten in contact te treden om
+het te gebruiken medium (netwerk
+of een van de in paragraaf IV.9
+
+Toelichting
+
+-
+
+-
+
+-
+
+-
+
+Is in de BRP altijd
+‘N’.
+
+Pagina 7 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+Rubriek
+
+Naam
+
+95.50
+
+Rubrieknummer
+selectie
+
+95.51
+
+Voorwaarderegel
+selectie
+
+95.52
+
+Selectiesoort
+
+95.53
+
+Berichtaanduiding
+
+95.54
+
+Eerste selectiedatum
+
+95.55
+
+Selectieperiode
+
+95.56
+
+Medium selectie
+
+Operatie BRP
+
+Toelichting LO
+genoemde alternatieve media) voor
+spontane gegevensverstrekking te
+bepalen, bevat deze rubriek de
+waarde ‘A’. In geval van
+gemeentedeelwijzigingen en
+intergemeentelijke infrastructurele
+wijzigingen (zie paragraaf 7.6) is de
+gemeente bevoegd om met een
+afnemer af te spreken dat bij de
+spontane gegevensverstrekking
+gebruik wordt gemaakt van een van
+de in paragraaf IV.9 genoemde
+alternatieve media.
+Een opsomming van
+rubrieknummers van de gegevens
+die verstrekt moeten worden bij een
+selectie waarbij geen
+afnemersindicaties op
+persoonslijsten geplaatst worden.
+De voorwaarden waaraan een PL
+moet voldoen om voor
+selectieplaatsing of
+selectieverstrekking in aanmerking
+te komen. Bij het vergelijken van de
+PL met de voorwaarderegel selectie
+worden categorieën waarin element
+84.10, Indicatie onjuist is
+opgenomen, uitgesloten.
+Selectiesoort geeft aan of voor de
+betreffende afnemer
+afnemersindicaties worden geplaatst
+op de geselecteerde PL-en (waarde
+is ‘1’), of dat van de geselecteerde
+PL-en de afnemersindicatie van de
+afnemer logisch (waarde is ‘2’) of
+voorwaardelijk fysiek (waarde is ‘3’)
+of onvoorwaardelijk fysiek (waarde
+is ‘4’) verwijderd moet worden.
+Deze aanduiding geeft aan hetzij of
+er bij het uitvoeren van een selectie
+met plaatsen afnemersindicatie op
+persoonslijsten voor een afnemer
+vulberichten (Ag11-berichten) aan
+die afnemer verstrekt moeten
+worden (waarde is ‘1’) hetzij of er
+bij het uitvoeren van een selectie
+(logisch of fysiek) verwijderen
+afnemersindicatie van
+persoonslijsten voor een afnemer
+selectieverstrekkingen (Sv01berichten) aan die afnemer verstrekt
+moeten worden (waarde is ‘1’).
+De datum waarop de selectie voor
+het eerst uitgevoerd moet worden.
+De periode in maanden tussen twee
+opvolgende selecties. Indien de
+selectieperiode niet voorkomt,
+betreft het een eenmalige selectie.
+Het medium voor selecties is in
+principe het GBA-netwerk. In dat
+geval wordt in deze rubriek de
+
+Toelichting
+
+-
+
+-
+
+Wanneer waarde ‘0’
+dan standaard
+selectie zonder
+plaatsen of
+verwijderen van
+afnemersindicatie.
+
+Wanneer waarde ‘0’
+worden er geen
+berichten verstuurd.
+
+-
+
+-
+
+Pagina 8 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+Rubriek
+
+Naam
+
+95.60
+
+Rubrieknummer ad hoc
+
+95.61
+
+Voorwaarderegel ad
+hoc
+
+Toelichting LO
+waarde ‘N’ opgenomen. Als de
+afnemer bevoegd is om met de
+diverse gemeenten in contact te
+treden om het te gebruiken medium
+(netwerk of een van de in paragraaf
+IV.9 genoemde alternatieve media)
+voor selecties te bepalen, bevat
+deze rubriek de waarde ‘A’.
+Een opsomming van
+rubrieknummers van de gegevens
+die verstrekt mogen worden bij een
+ad hoc gegevensverstrekking.
+De voorwaarden waaraan een PL
+moet voldoen om:
+
+Toelichting
+
+-
+
+-
+
+- in aanmerking te komen voor ad
+hoc gegevensverstrekking;
+- het ad hoc plaatsen van de
+afnemersindicatie op de
+persoonslijst toe te staan;
+- het beantwoorden van ad hoc
+adresvragen toe te staan.
+
+95.62
+
+Plaatsingsbevoegdheid
+persoonslijst
+
+95.63
+
+Afnemersverstrekking
+
+95.66
+
+Adresvraag
+bevoegdheid
+
+95.67
+
+Medium ad hoc
+
+Operatie BRP
+
+Bij het vergelijken van de PL met de
+voorwaarderegel ad hoc worden
+categorieën waarin element 84.10,
+Indicatie onjuist is opgenomen,
+uitgesloten.
+Plaatsingsbevoegdheid geeft de
+bevoegdheid aan (waarde ‘1’) van
+de betreffende afnemer om ad hoc
+afnemersindicaties op
+persoonslijsten te plaatsen, mits de
+PL voldoet aan de voorwaarderegel
+ad hoc.
+Een opsomming van
+afnemersindicaties, anders dan die
+van de betreffende afnemer zelf,
+waarvan aan die afnemer gemeld
+mag worden dat ze op de PL
+voorkomen.
+Adresbevoegdheid geeft de
+bevoegdheid aan (waarde ‘1’) van
+de betreffende afnemer om door
+middel van ad hoc adresvragen
+gegevens te vragen van
+ingeschrevenen op een adres, mits
+de PL van één van die
+ingeschrevenen voldoet aan de
+voorwaarderegel ad hoc.
+Het medium voor ad hoc
+verstrekkingen is in principe het
+GBA-netwerk. In dat geval wordt in
+deze rubriek de waarde ‘N’
+opgenomen. Als de afnemer
+bevoegd is om met de diverse
+gemeenten in contact te treden om
+het te gebruiken medium (netwerk
+
+-
+
+Wordt niet
+geconverteerd.
+
+-
+
+Is in de BRP altijd
+‘N’.
+
+Pagina 9 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+Rubriek
+
+Naam
+
+95.70
+
+Rubrieknummer
+adresgeoriënteerd
+
+95.71
+
+Voorwaarderegel
+adresgeoriënteerd
+
+95.73
+
+Medium
+adresgeoriënteerd
+
+Operatie BRP
+
+Toelichting LO
+of een van de in paragraaf IV.9
+genoemde alternatieve media) voor
+ad hoc verstrekkingen te bepalen,
+bevat deze rubriek de waarde ‘A’.
+Een opsomming van
+rubrieknummers van de gegevens
+die verstrekt moeten worden bij
+adresgeoriënteerde
+gegevensverstrekking.
+De voorwaarden waaraan een PL
+moet voldoen om in aanmerking te
+komen voor adresgeoriënteerde
+gegevensverstrekking. Bij het
+vergelijken van de PL met de
+voorwaarderegel adresgeoriënteerd
+worden categorieën waarin element
+84.10, Indicatie onjuist is
+opgenomen, uitgesloten.
+Het medium voor
+adresgeoriënteerde
+gegevensverstrekkingen is in
+principe het GBAnetwerk. In dat
+geval wordt in deze rubriek de
+waarde ‘N’ opgenomen. Als de
+afnemer bevoegd is om met de
+diverse gemeenten in contact te
+treden om het te gebruiken medium
+(netwerk of een van de in paragraaf
+IV.9 genoemde alternatieve media)
+voor adresgeoriënteerde
+gegevensverstrekkingen te bepalen,
+bevat deze rubriek de waarde ‘A’.
+
+Toelichting
+
+Wordt niet
+geconverteerd.
+
+Wordt niet
+geconverteerd.
+
+Wordt niet
+geconverteerd.
+
+Pagina 10 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+2.1
+
+Leeswijzer
+Wanneer bij Waarde een tekst staat tussen quotes (‘), wordt daarmee de daadwerkelijke waarde
+bedoeld.
+Soms wordt de Waarde <geen waarde> ingevuld. In die gevallen wordt bedoeld dat er niets
+ingevuld hoeft te worden.
+Wanneer Waarde een rubriek bevat wordt verwezen naar een te converteren rubriek uit de
+autorisatietabelregel.
+Verplichte attributen zijn gemarkeerd met een sterretje ( * ).
+Alle andere Waarden verwijzen naar een BRP gegevenselement of een waarde uit een stamtabel.
+
+2.2
+
+Volgorde van verwerking autorisatietabelregels
+De autorisatietabelregels dienen in de volgende volgorde verwerkt te worden:
+• Eerst de autorisatietabelregels waarbij 99.99 Datum einde niet is gevuld.
+• Daarna de overige autorisatietabelregels aflopend gesorteerd op 99.99 Datum einde.
+De volgorde van verwerking zorgt ervoor dat de meest actuele Leveringsautorisatie een naam
+krijgt zonder volgnummer (par. 2.7).
+
+2.3
+
+Verschillen met GBA-V
+De volgende zaken die wel in GBA-V worden ondersteund, worden niet meer in de BRP
+ondersteund:
+• Het medium A/N voor de verschillende diensten. Dit is altijd hetzelfde (N).
+• De dienst adresgeoriënteerd.
+
+Operatie BRP
+
+Pagina 11 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+2.4
+
+Partij
+In de autorisatietabelregels is 95.10 Afnemersindicatie het identificerende gegeven voor partijen.
+Er kunnen meerdere autorisatietabelregels voorkomen met dezelfde 95.10 Afnemersindicatie.
+Hiervan mag één autorisatietabelregel actueel zijn (99.99 Datum einde niet gevuld). Bij de
+overige autorisatietabelregels van die partij dient 99.99 Datum einde wel gevuld te zijn.
+Partij hoeft niet initieel gevuld te worden omdat deze onderdeel is van het [BMR]. Bij het vullen
+van de autorisaties dient, daar waar dat nodig is, op basis van 95.10 Afnemersindicatie de partij
+gezocht te worden in Partij.Code. Indien een partij niet gevonden kan worden dient dit gelogd te
+worden.
+Indien de partij gevonden kan worden en 95.12 Indicatie geheimhouding is gelijk aan ‘1’ dan
+dient Partij.Verstrekkingsbeperking mogelijk? Van de gevonden partij met ‘Ja’ gevuld te worden.
+Indien 95.12 Indicatie geheimhouding ongelijk is aan ‘1’ dient Partij.Verstrekkingsbeperking
+mogelijk? Leeg te worden/zijn.
+
+2.5
+
+Partij / Rol
+Zonder deze rol kan een partij niet aan een Toegang leveringsautorisatie gekoppeld worden.
+Attribuut
+Identiteit
+ID*
+Partij*
+Rol*
+
+Standaard
+Datum ingang*
+
+Datum einde
+
+2.6
+
+Waarde
+
+Toelichting
+
+Max(ID) + 1
+Partij.ID
+Rol.‘Afnemer’
+
+Deze waarde wordt automatisch gegenereerd.
+Alle partijen krijgen de rol Afnemer. De rol dient
+alleen toegevoegd te worden als de partij nog
+geen rol Afnemer kent.
+
+99.98 Datum
+ingang
+
+Wanneer een afnemer meerdere
+autorisatietabelregels heeft dient 99.98 Datum
+ingang van de oudste autorisatietabelregel
+gebruikt te worden.
+
+<geen waarde>
+
+-
+
+Toegang leveringsautorisatie
+Voor elke autorisatietabelregel wordt één Toegang leveringsautorisatie gemaakt. Met behulp van
+Toegang leveringsautorisatie krijgen partijen toegang tot een Leveringsautorisatie. In de BRP is
+het mogelijk om meerdere partijen toegang te geven tot dezelfde Leveringsautorisatie. Dit is
+echter niet van toepassing bij de initiële vulling van de autorisatietabelregels.
+Attribuut
+Identiteit
+ID*
+
+Waarde
+
+Toelichting
+
+Max(ID) + 1
+
+Geautoriseerde*
+Leveringsautorisatie*
+Ondertekenaar
+Transporteur
+Standaard
+Datum ingang*
+Datum einde
+
+Partij \ Rol.ID
+Leveringsautorisatie.ID
+<geen waarde>
+<geen waarde>
+
+Deze waarde wordt automatisch
+gegenereerd.
+-
+
+99.98 Datum ingang
+99.99 Datum einde
+
+-
+
+Operatie BRP
+
+Pagina 12 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+Nadere
+populatiebeperking
+Afleverpunt
+Geblokkeerd?
+
+Operatie BRP
+
+<geen waarde>
+
+-
+
+<geen waarde>
+<geen waarde>
+
+-
+
+Pagina 13 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+2.7
+
+Leveringsautorisatie
+Voor elke autorisatietabelregel wordt één Leveringsautorisatie gemaakt. Door middel van de
+aangemaakte Toegang leveringsautorisatie krijgt een partij toegang tot de Leveringsautorisatie.
+
+Attribuut
+
+Waarde
+
+Toelichting
+
+Identiteit
+ID*
+
+Max(ID) + 1
+
+Deze waarde wordt automatisch
+gegenereerd.
+
+Stelsel*
+
+Stelsel.‘GBA’
+
+-
+
+Modelautorisatie?*
+
+‘Nee’
+
+-
+
+Naam*
+
+95.10 Afnemersindicatie of,
+95.10 Afnemersindicatie
++ <spatie>
++ ‘(‘
++ <volgnummer>
++ ‘)’
+
+Naam dient uniek te zijn. Een
+afnemersindicatie kan in meerdere
+autorisatietabelregels voorkomen.
+Daarom wordt een volgnummer
+toegevoegd aan de naam wanneer de
+naam reeds bestaat. Wanneer de
+naam nog niet bestaat krijg deze
+geen volgnummer. Het volgnummer
+begint bij 1.
+
+Protocolleringsniveau*
+
+Protocolleringsniveau.’Geen
+beperking’ of,
+Protocolleringsniveau.’Geheim’
+
+Als 95.13 Verstrekkingsbeperking ==
+0 of 1 dan Protocolleringsniveau.Geen
+beperking of,
+als 95.13 Verstrekkingsbeperking ==
+2 dan Protocolleringsniveau.Geheim
+
+Alias soort
+administratieve
+handeling leveren*
+
+‘ Ja’
+
+-
+
+Datum ingang*
+
+99.98 Datum ingang
+
+-
+
+Datum einde
+
+99.99 Datum einde
+
+-
+
+Populatiebeperking
+
+<geen waarde>
+
+-
+
+Toelichting
+
+<geen waarde>
+
+-
+
+Geblokkeerd
+
+<geen waarde>
+
+-
+
+Standaard
+
+Operatie BRP
+
+Pagina 14 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+2.8
+
+Dienstbundel
+Een Leveringsautorisatie kan uit geen of meer Dienstbundels bestaan. Een Dienstbundel kan
+geen of meer Diensten bevatten. De Dienstbundel is in de BRP geïntroduceerd om het beheer
+van Diensten te vereenvoudigen. De voorwaarderegel (Nadere populatiebeperking) geldt voor
+alle Diensten van de Dienstbundel. Dit model sluit goed aan bij de structuur van de
+autorisatietabelregel.
+Voor elke dienst (Ad Hoc, Selectie, Spontaan) in de autorisatietabelregel wordt één dienstbundel
+gemaakt indien Medium is gevuld.
+Attribuut
+
+Waarde
+
+Toelichting
+
+ID*
+
+Max(ID) + 1
+
+Deze waarde wordt automatisch
+gegenereerd.
+
+Leveringsautorisatie*
+
+Leveringsautorisatie.ID
+
+-
+
+Naam*
+
+‘Spontaan’ of,
+‘Selectie’ of,
+‘Ad hoc’
+
+Als 95.44 Medium spontaan == A of N
+dan ‘Spontaan’, of
+Als 95.56 Medium selectie == A of N dan
+‘Selectie’, of
+Als 95.67 Medium ad hoc == A of N dan
+‘Ad hoc’
+
+Datum ingang*
+
+99.98 Datum ingang
+
+-
+
+Datum einde
+
+99.99 Datum einde
+
+-
+
+Nadere
+populatiebeperking
+
+95.41 Voorwaarderegel
+spontaan of,
+95.51 Voorwaarderegel
+selectie of,
+95.61 Voorwaarderegel
+ad hoc
+
+Hier dient de (deels) geconverteerde
+voorwaarderegel gevuld te worden (zie
+ook hoofdstuk 6).
+
+Nadere
+populatiebeperking
+volledig geconverteerd?
+
+<geen waarde> of,
+‘Nee’
+
+Wanneer een voorwaarderegel niet
+volledig geconverteerd kon worden, ‘Nee’
+anders <leeg> (zie ook hoofdstuk 6).
+
+Toelichting
+
+<geen waarde> of,
+de originele
+voorwaarderegel
+
+Indien de voorwaarderegel niet volledig
+geconverteerd kon worden dient hier de
+originele LO3 voorwaarderegel
+opgenomen te worden. Kon de
+voorwaarderegel wel volledig
+geconverteerd worden dan <leeg>.
+
+Geblokkeerd?
+
+<geen waarde>
+
+-
+
+Identiteit
+
+Standaard
+
+Operatie BRP
+
+Als 95.44 Medium spontaan == A of N
+dan 95.41 Voorwaarderegel spontaan, of
+Als 95.56 Medium selectie == A of N dan
+95.51 Voorwaarderegel selectie, of
+Als 95.67 Medium ad hoc == A of N dan
+95.61 Voorwaarderegel ad hoc
+
+Pagina 15 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+2.9
+
+Dienst
+Een Dienstbundel kan uit geen of meer Diensten bestaan. Welke Diensten worden gemaakt
+hangt af van de vulling van de autorisatietabelregel (par. 2.9.1).
+Attribuut
+
+Waarde
+
+Toelichting
+
+ID*
+
+Max(ID) + 1
+
+Deze waarde wordt automatisch
+gegenereerd.
+
+Dienstbundel*
+
+Dienstbundel.ID
+
+-
+
+Soort
+
+Zie toelichting.
+
+Wat opgenomen dient te worden is
+beschreven in par. 2.9.1.
+
+Effect afnemersindicatie
+
+Zie toelichting.
+
+Wat opgenomen dient te worden is
+beschreven in par. 2.9.1.
+
+Datum ingang*
+
+99.98 Datum ingang
+
+-
+
+Datum einde
+
+99.99 Datum einde
+
+-
+
+Geblokkeerd?
+
+<geen waarde>
+
+-
+
+<geen waarde> of,
+95.42 Sleutelrubriek
+
+Hierin worden de sleutelrubrieken
+gevuld. Hoe dit plaats vindt is
+beschreven in hoofdstuk 4.
+
+Eerste selectiedatum
+
+95.54 Eerste
+selectiedatum
+
+Als Medium selectie (95.56) == A of
+N dan 95.54 Eerste selectiedatum,
+anders
+<geen waarde>
+
+Selectieperiode in maanden
+
+95.55
+Selectieperiode
+
+Als Medium selectie (95.56) == A of
+N dan 95.55 Selectieperiode, anders
+<geen waarde>
+
+Soort selectie *
+
+95.52 Selectiesoort
+
+Als Soortselectie (95.52) == 1 dan
+‘Selectie met plaatsen
+afnemerindicatie’, of
+Als Soortselectie (95.52) == 2, 3 of 4
+dan ‘Selectie met verwijdering
+afnemerindicatie’, of
+Anders dan ‘Standaard selectie’
+
+Historievorm selectie *
+
+‘MaterieelFormeel’
+
+-
+
+Selectieresultaat controleren? *
+
+‘Nee’
+
+-
+
+Verzend volledig bericht bij
+plaatsing afnemerindicatie na
+selectie?
+
+95.53
+Berichtaanduiding
+
+Als Berichtaanduiding (95.53) == 1
+dan ‘Ja’, anders ‘Nee’.
+
+Leverwijze selectie
+
+95.56 Medium
+selectie
+
+Als Medium selectie (95.56) == A
+dan ‘Standaard’, of
+Als Medium selectie (95.56) == N
+dan ‘Bericht’
+
+Identiteit
+
+Standaard
+
+Attendering
+Attenderingscriterium
+
+Selectie
+
+Operatie BRP
+
+Pagina 16 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+2.9.1
+
+Mogelijke diensten
+In de onderstaande tabel is beschreven wanneer een dienst aangemaakt dient te worden, met
+welke Dienst.Soort en indien van toepassing met welke Dienst.Effect afnemersindicatie. De
+verschillende GBA-diensten zijn met een andere kleur aangeduid om de leesbaarheid te
+vergroten.
+Autorisatietabelregel
+Medium spontaan (95.44) = A/N, en
+Conditioneel (95.43) = 0
+Medium spontaan (95.44) = A/N
+
+Dienstbundel
+Spontaan
+
+Medium spontaan (95.44) = A/N, en
+Conditioneel (95.43) = 1
+Medium selectie (95.56) = A/N, en
+Selectiesoort (95.52) = 1
+Medium selectie (95.56) = A/N, en
+Selectiesoort (95.52) = 2/3/4
+Medium selectie (95.56) = A/N, en
+Selectiesoort (95.52) = 0
+Medium ad hoc (95.67) = A/N
+Medium ad hoc (95.67) = A/N
+Medium ad hoc (95.67) = A/N, en
+Adresvraagbevoegdheid (95.66) = 1
+Medium ad hoc (95.67) = A/N, en
+Adresvraagbevoegdheid (95.66) = 1
+Medium ad hoc (95.67) = A/N, en
+Plaatsingsbevoegd (95.62) = 1
+Medium ad hoc (95.67) = A/N, en
+Plaatsingsbevoegd (95.62) = 1
+
+Spontaan
+
+Spontaan
+
+Selectie
+
+Dienst
+Soort = Attendering, en
+Effect afnemersindicatie = Plaatsing
+Soort = Mutatielevering op basis van
+afnemersindicatie
+Soort = Attendering
+
+Selectie
+
+Soort = Selectie, en
+Effect afnemersindicatie = Plaatsing
+Soort = Selectie, en
+Effect afnemersindicatie = Verwijdering
+Soort = Selectie
+
+Ad hoc
+Ad hoc
+Ad hoc
+
+Soort = Zoek persoon
+Soort = Geef details persoon
+Soort = Zoek persoon op adresgegevens
+
+Ad hoc
+Ad hoc
+
+Soort = Geef medebewoners van
+persoon
+Soort = Plaatsen afnemersindicatie
+
+Ad hoc
+
+Soort = Verwijderen afnemersindicatie
+
+Selectie
+
+Als na het maken van een leveringsautorisatie wel een dienstbundel ad hoc bestaat met een
+dienst van het soort Plaatsen afnemersindicatie maar er bestaat geen dienstbundel met het soort
+dienst Mutatielevering op basis van afnemersindicatie dient dit gelogd te worden. De reden
+hiervan is dat, conform het [LO], na het plaatsen van een afnemersindicatie de filterrubrieken
+van de dienst Mutatielevering op basis van afnemersindicatie gebruikt dienen te worden om het
+Ag01-bericht op te stellen. Als die dienst niet bestaat kan dat bericht ook niet geleverd worden.
+
+Operatie BRP
+
+Pagina 17 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+2.10
+
+Autorisatie ten behoeve van dienst Opvragen PL
+In de GBA kunnen gemeenten (en RNI) gebruikmaken van de dienst Opvragen PL zoals dat in
+[LO] beschreven is (par. C.7.4). De autorisatie voor deze dienst wijkt af van de overige diensten
+in de GBA. Er dient daarom bij de initiële vulling van autorisatietabelregels een aparte autorisatie
+voor deze partijen aangemaakt te worden.
+Er dient een aparte leveringsautorisatie gemaakt te worden als een partij aan de volgende
+criteria voldoet:
+• De partij heeft een 35.95.10 afnemersindicatie die kleiner is dan 200000, en
+• de partij komt in de BRP voor, en
+• de partij in de BRP heeft een Partij / Rol.Rol die gelijk is aan ‘Bijhoudingsorgaan College’ of
+‘Bijhoudingsorgaan Minister’
+In de volgende paragrafen is beschreven op welke wijze de leveringsautorisatie aangemaakt
+dient te worden. Hierbij worden alleen de voor de autorisatie relevante attributen beschreven.
+De overige attributen dienen leeg gelaten te worden.
+
+2.10.1
+
+Toegang leveringsautorisatie
+Attribuut
+Identiteit
+ID*
+Geautoriseerde*
+Leveringsautorisatie*
+Standaard
+Datum ingang*
+Datum einde
+
+2.10.2
+
+Waarde
+
+Toelichting
+
+Max(ID) + 1
+Partij \ Rol.ID
+Leveringsautorisatie.ID
+
+Deze waarde wordt automatisch gegenereerd.
+-
+
+99.98 Datum ingang
+99.99 Datum einde
+
+-
+
+Leveringsautorisatie
+Attribuut
+
+Waarde
+
+Toelichting
+
+Identiteit
+ID*
+
+Max(ID) + 1
+
+Deze waarde wordt automatisch
+gegenereerd.
+
+Stelsel*
+
+Stelsel.‘GBA’
+
+-
+
+Modelautorisatie?*
+
+‘Nee’
+
+-
+
+Naam*
+
+95.10 Afnemersindicatie
++ <spatie>
++ ‘Opvragen PL’ of,
+95.10 Afnemersindicatie
++ <spatie>
++ ‘Opvragen PL’
++ <spatie>
++ '('
++ <volgnummer>
++ ')'
+
+Naam dient uniek te zijn. Een
+afnemersindicatie kan in meerdere
+autorisatietabelregels voorkomen.
+Daarom wordt een volgnummer
+toegevoegd aan de naam wanneer de
+naam reeds bestaat. Wanneer de naam
+nog niet bestaat krijg deze geen
+volgnummer. Het volgnummer begint
+bij 1.
+
+Protocolleringsniveau*
+
+Protocolleringsniveau.'Geen
+beperking'
+
+-
+
+Alias soort
+administratieve
+
+‘Ja’
+
+-
+
+Standaard
+
+Operatie BRP
+
+Pagina 18 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+handeling leveren*
+
+2.10.3
+
+Datum ingang*
+
+99.98 Datum ingang
+
+-
+
+Datum einde
+
+99.99 Datum einde
+
+-
+
+Dienstbundel
+Attribuut
+
+Waarde
+
+Toelichting
+
+ID*
+
+Max(ID) + 1
+
+Deze waarde wordt automatisch
+gegenereerd.
+
+Leveringsautorisatie*
+
+Leveringsautorisatie.ID
+
+-
+
+Naam*
+
+‘Opvragen PL’
+
+-
+
+Datum ingang*
+
+99.98 Datum ingang
+
+-
+
+Datum einde
+
+99.99 Datum einde
+
+-
+
+Nadere
+populatiebeperking
+
+‘WAAR’
+
+Identiteit
+
+Standaard
+
+2.10.4
+
+Dienst
+Attribuut
+
+Waarde
+
+Toelichting
+
+ID*
+
+Max(ID) + 1
+
+Deze waarde wordt automatisch gegenereerd.
+
+Dienstbundel*
+
+Dienstbundel.ID
+
+-
+
+Soort*
+
+‘Zoek persoon’
+
+-
+
+Datum ingang*
+
+99.98 Datum ingang
+
+-
+
+Datum einde
+
+99.99 Datum einde
+
+-
+
+Identiteit
+
+Standaard
+
+2.10.5
+
+Dienstbundel \ LO3 Rubriek
+De partij dient voor alle mogelijke LO3-rubrieken geautoriseerd te zijn. Het is voor deze
+autorisatie daarom niet nodig om de partij voor alle LO3-rubrieken apart te autoriseren.
+
+Operatie BRP
+
+Pagina 19 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+3
+
+Filterrubrieken
+
+In een autorisatietabelregel wordt beschreven welke rubrieken een afnemer mag ontvangen
+(filterrubriek). In de BRP dienen deze rubrieken vastgelegd te worden in Dienstbundel \ LO3
+Rubriek. De beschikbare rubrieken kunnen worden opgezocht aan de hand van de ‘naam’ in de
+stamtabel Conversie LO3 Rubriek welke door de BRP wordt gevuld.
+
+3.1
+
+Dienstbundel \ LO3 Rubriek
+Attribuut
+
+Waarde
+
+Toelichting
+
+ID*
+
+Max(ID) + 1
+
+Deze waarde wordt
+automatisch gegenereerd.
+
+Dienstbundel*
+
+Dienstbundel.ID
+
+-
+
+Rubriek*
+
+Conversie LO3 Rubriek.ID
+
+-
+
+Identiteit
+
+Operatie BRP
+
+Pagina 20 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+4
+
+Sleutelrubrieken
+
+Wanneer er in een autorisatietabelregel sprake is van sleutelrubrieken (rubriek 35.95.42 is
+gevuld) dient in de BRP bij de diensten van Dienst.Soort = Attendering het Attenderingscriterium
+gevuld te worden (zie ook paragraaf 2.9).
+4.1
+
+BRP expressie
+De waarde van attenderingscriterium dient een BRP expressie te zijn waarin de verschillende
+sleutelrubrieken opgesomd zijn. Omdat de BRP geen rubrieken kent maar attributen dient een
+vertaling plaats te vinden van rubrieken naar attributen. Hoe een rubriek zich vertaald naar een
+BRP attribuut is te vinden de tabel in paragraaf 4.2.
+De expressie die in het attenderingscriterium gebruikt dient te worden voor een enkel attribuut
+ziet er als volgt uit:
+GEWIJZIGD(oud, nieuw, [<attribuut>])
+Voorbeeld:
+GEWIJZIGD(oud, nieuw, [geboorte.datum])
+Indien er meerdere attributen van toepassing zijn dient gebruik gemaakt te worden van de OF
+operator:
+GEWIJZIGD(oud, nieuw, [<attribuut>]) OF GEWIJZIGD(oud, nieuw, [<attribuut>]) …
+Voorbeeld:
+GEWIJZIGD(oud, nieuw, [geboorte.datum]) OF GEWIJZIGD(oud, nieuw, [overlijden.datum])
+
+Wanneer een attribuut als lijst voorkomt in de BRP ziet de expressie er anders uit:
+GEWIJZIGD(oud, nieuw, [<attribuut lijst>], [<attribuut>])
+Voorbeeld:
+GEWIJZIGD(oud, nieuw, [nationaliteiten], [nationaliteit])
+4.2
+
+Te converteren sleutelrubrieken
+In de onderstaande tabel is een overzicht te vinden van de sleutelrubrieken die in de
+autorisatietabelregels voorkomen en die geconverteerd dienen te worden.
+Rubriek
+01.01.10
+
+Categorie
+Persoon
+
+Naam
+A-nummer
+
+01.01.20
+
+Persoon
+
+BSN
+
+01.02.20
+
+Persoon
+
+Adellijke
+titel/predikaat
+
+01.03.10
+
+Persoon
+
+Geboortedatum
+
+Operatie BRP
+
+BRP expressie
+GEWIJZIGD(oud, nieuw,
+[identificatienummers.administratienumm
+er])
+GEWIJZIGD(oud, nieuw,
+[identificatienummers.
+burgerservicenummer])
+GEWIJZIGD(oud, nieuw,
+[samengestelde_naam.adellijke_titel]) OF
+GEWIJZIGD(oud, nieuw,
+[samengestelde_naam.predicaat])
+GEWIJZIGD(oud, nieuw,
+
+Pagina 21 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+01.04.10
+
+Persoon
+
+Geslachtsaanduiding
+
+01.85.10
+
+Persoon
+
+Ingangsdatum
+geldigheid
+
+02.62.10
+
+Ouder 1
+
+Datum ingang
+familierechtelijke
+betrekking
+
+03.62.10
+
+Ouder 2
+
+Datum ingang
+familierechtelijke
+betrekking
+
+04.05.10
+
+Nationaliteit
+
+Nationaliteit
+
+04.65.10
+
+Nationaliteit
+
+Aanduiding bijzonder
+Nederlanderschap
+
+04.82.30
+
+Nationaliteit
+
+Beschrijving
+document
+
+04.85.10
+
+Nationaliteit
+
+Ingangsdatum
+geldigheid
+
+05.06.10
+
+Huwelijk
+
+Datum
+huwelijkssluiting/aan
+gaan geregistreerd
+partnerschap
+
+06.08.10
+
+Overlijden
+
+Datum overlijden
+
+07.67.20
+
+Inschrijving
+
+07.68.10
+
+Inschrijving
+
+Omschrijving reden
+opschorting
+bijhouding
+Datum eerste
+inschrijving GBA/RNI
+
+Operatie BRP
+
+[geboorte.datum])
+GEWIJZIGD(oud, nieuw,
+[geslachtsaanduiding.geslachtsaanduiding
+])
+GEWIJZIGD(oud, nieuw,
+[identificatienummers.datum_aanvang_ge
+ldigheid]) OF
+GEWIJZIGD(oud, nieuw,
+[samengestelde_naam.datum_aanvang_g
+eldigheid]) OF
+GEWIJZIGD(oud, nieuw,
+[geslachtsaanduiding.datum_aanvang_gel
+digheid]) OF
+GEWIJZIGD(oud, nieuw,
+[nummerverwijzing.datum_aanvang_geldi
+gheid])
+GEWIJZIGD(GERELATEERDE_BETROKKEN
+HEDEN(oud,"KIND","FAMILIERECHTELIJKE
+_BETREKKING","OUDER"),
+GERELATEERDE_BETROKKENHEDEN(nieu
+w,"KIND","FAMILIERECHTELIJKE_BETREK
+KING","OUDER"),
+[ouderschap.datum_aanvang_geldigheid])
+GEWIJZIGD(GERELATEERDE_BETROKKEN
+HEDEN(oud,"KIND","FAMILIERECHTELIJKE
+_BETREKKING","OUDER"),
+GERELATEERDE_BETROKKENHEDEN(nieu
+w,"KIND","FAMILIERECHTELIJKE_BETREK
+KING","OUDER"),
+[ouderschap.datum_aanvang_geldigheid])
+GEWIJZIGD(oud, nieuw, [nationaliteiten],
+[nationaliteit])
+GEWIJZIGD(oud, nieuw,
+[indicatie.behandeld_als_nederlander]) OF
+GEWIJZIGD(oud, nieuw,
+[indicatie.vastgesteld_niet_nederlander])
+GEWIJZIGD(oud, nieuw,
+[indicatie.bijzondere_verblijfsrechtelijke_p
+ositie])
+GEWIJZIGD(oud, nieuw, [nationaliteiten],
+[datum_aanvang_geldigheid]) OF
+GEWIJZIGD(oud, nieuw,
+[indicatie.behandeld_als_nederlander.datu
+m_aanvang_geldigheid]) OF
+GEWIJZIGD(oud, nieuw,
+[indicatie.vastgesteld_niet_nederlander.da
+tum_aanvang_geldigheid]) OF
+GEWIJZIGD(oud, nieuw,
+[indicatie.staatloos.datum_aanvang_geldi
+gheid])
+GEWIJZIGD(HUWELIJKEN(oud),
+HUWELIJKEN(nieuw), [datum_aanvang])
+OF
+GEWIJZIGD(PARTNERSCHAPPEN(oud),
+PARTNERSCHAPPEN(nieuw),
+[datum_aanvang])
+GEWIJZIGD(oud, nieuw,
+[overlijden.datum])
+GEWIJZIGD(oud, nieuw,
+[bijhouding.nadere_bijhoudingsaard])
+GEWIJZIGD(oud, nieuw,
+[inschrijving.datum])
+
+Pagina 22 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+08.09.10
+
+Verblijfplaats
+
+08.09.20
+
+Verblijfplaats
+
+Gemeente van
+inschrijving
+Datum inschrijving
+
+GEWIJZIGD(oud, nieuw,
+[bijhouding.bijhoudingspartij])
+GEWIJZIGD(oud, nieuw,
+[bijhouding.datum_aanvang_geldigheid])
+GEWIJZIGD(oud, nieuw, [adressen],
+[soort])
+GEWIJZIGD(oud, nieuw, [adressen],
+[datum_aanvang_geldigheid])
+GEWIJZIGD(ALS(oud.migratie.soort="E",o
+ud.migratie.land_gebied,NULL),
+ALS(nieuw.migratie.soort="E",nieuw.migr
+atie.land_gebied,NULL))
+
+08.10.10
+
+Verblijfplaats
+
+Functie adres
+
+08.10.30
+
+Verblijfplaats
+
+08.13.10
+
+Verblijfplaats
+
+Datum aanvang
+adreshouding
+Land waarnaar
+vertrokken
+
+08.13.20
+
+Verblijfplaats
+
+Datum aanvang
+adres buitenland
+
+GEWIJZIGD(ALS(oud.migratie.soort="E",o
+ud.migratie.datum_aanvang_geldigheid,N
+ULL),
+ALS(nieuw.migratie.soort="E",nieuw.migr
+atie.datum_aanvang_geldigheid,NULL))
+
+08.14.10
+
+Verblijfplaats
+
+Land vanwaar
+ingeschreven
+
+GEWIJZIGD(ALS(oud.migratie.soort="I",o
+ud.migratie.land_gebied,NULL),
+ALS(nieuw.migratie.soort="I",nieuw.migra
+tie.land_gebied,NULL))
+
+08.14.20
+
+Verblijfplaats
+
+Datum vestiging in
+Nederland
+
+GEWIJZIGD(ALS(oud.migratie.soort="I",o
+ud.migratie.datum_aanvang_geldigheid,N
+ULL),
+ALS(nieuw.migratie.soort="I",nieuw.migra
+tie.datum_aanvang_geldigheid,NULL))
+
+08.85.10
+
+Verblijfplaats
+
+Ingangsdatum
+geldigheid
+
+GEWIJZIGD(oud, nieuw, [adressen],
+[datum_aanvang_geldigheid]) OF
+GEWIJZIGD(oud, nieuw,
+[bijhouding.datum_aanvang_geldigheid])
+OF GEWIJZIGD(oud, nieuw,
+[migratie.datum_aanvang_geldigheid])
+
+09.03.10
+
+Kind
+
+Geboortedatum
+
+10.39.10
+
+Verblijfstitel
+
+12.35.70
+
+Reisdocument
+
+Aanduiding
+verblijfstitel
+Aanduiding
+inhouding dan wel
+vermissing
+Nederlands
+reisdocument
+
+GEWIJZIGD(KINDEREN(oud),
+KINDEREN(nieuw), [geboorte.datum])
+GEWIJZIGD(oud, nieuw,
+[verblijfsrecht.aanduiding])
+GEWIJZIGD(oud, nieuw,
+[reisdocumenten],
+[aanduiding_inhouding_vermissing])
+
+Let op: Bij de vertaling van rubriek 04.82.30 (Nationaliteit.Beschrijving document) wordt ervan
+uitgegaan dat er ‘PROBAS’ in de omschrijving voorkomt.
+
+Operatie BRP
+
+Pagina 23 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+5
+
+Acties
+
+De wijze waarop acties gevuld dienen te worden is hetzelfde als hoe dat gedaan wordt met
+persoon en is uitgebreid beschreven in het [CONV] van de persoon.
+
+Operatie BRP
+
+Pagina 24 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+6
+
+Voorwaarderegels
+
+In bijlage [VWR] is aan de hand van voorbeelden te vinden op welke wijze de GBA
+voorwaarderegel vertaald wordt naar BRP expressies. Het eerste tabblad laat zien hoe de diverse
+operatoren vertaald worden en hoe omgegaan dient te worden met gegevens die meerdere
+voorkomens (stapels) kunnen bevatten. Het tweede tabblad geeft een overzicht van alle
+rubrieken die in de voorwaarderegels voorkomen. Per rubriek is aangegeven hoe vaak deze
+voorkomt en in welk deel van de autorisatie (Spontaan, Selectie en Ad Hoc). Deze aantallen zijn
+gebaseerd op de tabel 35 van 2015-02-06. Verder is voor elke rubriek waar dat mogelijk is,
+aangegeven wat de BRP expressie hiervan is. In het laatste tabblad zijn een aantal niet zo voor
+de hand liggende gevallen beschreven.
+Alle delen van de voorwaarderegel die geconverteerd kunnen worden, dienen geconverteerd te
+worden. Delen die niet geconverteerd kunnen worden dienen tussen dubbele blokhaken in de
+geconverteerde voorwaarderegel opgenomen te worden.
+Als bijvoorbeeld de volgende voorwaarderegel niet volledig geconverteerd kan worden:
+KNV 07.67.10 ENVWD 01.01.20#01.02.20 GDA
+resulteert dat in de volgende niet volledig geconverteerde voorwaarderegel:
+bijhouding.nadere_bijhoudingsaard = "A" EN [[01.01.20#01.02.20 GDA]]
+In het groen is gemarkeerd wat wel geconverteerd kan worden. In het bruin is gemarkeerd wat
+niet geconverteerd kan worden.
+
+Operatie BRP
+
+Pagina 25 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+7
+
+Foutafhandeling
+
+Wanneer er tijdens de conversie een fout optreedt, dient hiervan een melding gelogd te worden.
+In deze melding dient te staan wat de fout is geweest en bij welke autorisatietabelregel de fout
+is opgetreden. Als er een fout in een autorisatietabelregel is opgetreden dient de verwerking van
+eventuele overige autorisatietabelregels hervat te worden.
+
+Operatie BRP
+
+Pagina 26 van 27
+
+Definitief | 4.6 | Use case 102 Vul autorisatietabelregels in BRP initieel | 22-05-2017
+
+8
+
+Opmerkingen
+
+8.1
+
+Openstaande punten
+Selecties zijn nog niet volledig uitgewerkt. Dit zal waarschijnlijk nog tot een aantal aanpassingen
+leiden.
+
+Operatie BRP
+
+Pagina 27 van 27
+
+

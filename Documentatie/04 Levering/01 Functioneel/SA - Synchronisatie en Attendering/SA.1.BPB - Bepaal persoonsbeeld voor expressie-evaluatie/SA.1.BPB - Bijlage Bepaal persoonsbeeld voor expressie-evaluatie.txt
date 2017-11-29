@@ -1,0 +1,498 @@
+SA.1.BPB - Bijlage Bepaal persoonsbeeld voor
+expressie-evaluatie
+Versie: Werk
+Gegenereerd op: 21 juli 2017
+Status: Definitief
+
+1 Regels voor usecase SA.1.BPB - Bepaal persoonsbeeld voor
+expressie-evaluatie
+1.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1540
+
+3
+
+'Inhoudelijke groep'
+
+R1541
+
+2
+
+'Verantwoordingsgroep'
+
+R1543
+
+4
+
+'Onderzoeksgroep'
+
+R1556
+
+5
+
+Gereconstrueerde persoon na de onderhanden Administratieve handeling
+(strippen latere handelingen)
+
+R1998
+
+5
+
+'Volledig persoon'
+
+2 Regels voor usecase SA.1.BPB.STH - Strip toekomstige
+handelingen
+2.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1540
+
+3
+
+'Inhoudelijke groep'
+
+R1541
+
+2
+
+'Verantwoordingsgroep'
+
+R1543
+
+4
+
+'Onderzoeksgroep'
+
+R1556
+
+5
+
+Gereconstrueerde persoon na de onderhanden Administratieve handeling
+(strippen latere handelingen)
+
+R1998
+
+5
+
+'Volledig persoon'
+
+3 Regels voor usecase SA.1.BPB.BPN - Bepaal persoonsbeeld
+'nieuw'
+3.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1540
+
+3
+
+'Inhoudelijke groep'
+
+R1541
+
+2
+
+'Verantwoordingsgroep'
+
+R1543
+
+4
+
+'Onderzoeksgroep'
+
+R1556
+
+5
+
+Gereconstrueerde persoon na de onderhanden Administratieve handeling
+(strippen latere handelingen)
+
+R1998
+
+5
+
+'Volledig persoon'
+
+3.2
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2550
+
+3
+
+Reconstructie persoonsbeeld 'nieuw' ten behoeve van expressies
+
+4 Regels voor usecase SA.1.BPB.BPO - Bepaal persoonbeeld
+'oud'
+4.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1540
+
+3
+
+'Inhoudelijke groep'
+
+R1541
+
+2
+
+'Verantwoordingsgroep'
+
+R1543
+
+4
+
+'Onderzoeksgroep'
+
+R1556
+
+5
+
+Gereconstrueerde persoon na de onderhanden Administratieve handeling
+(strippen latere handelingen)
+
+R1998
+
+5
+
+'Volledig persoon'
+
+R2185
+
+1
+
+'GecombineerdeActieVerval'
+
+4.2
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2551
+
+4
+
+Reconstructie persoonsbeeld 'oud' ten behoeve van expressies
+
+5 Uitwerking regels
+R1540
+'Inhoudelijke groep'
+Definitie:
+
+Inhoudelijke groepen zijn groepen van de Persoonslijst die bij de Persoon horen. Dit
+zijn alle groepen onder Objecttypen Persoon, Persoon \ Adres, Persoon \
+Geslachtsnaamcomponent, Persoon \ Indicatie, Persoon \ Nationaliteit, Persoon \
+Reisdocument, Persoon \ Verificatie, Persoon \ Verstrekkingsbeperking, Persoon \
+Voornaam, Persoon \ Buitenlands persoonsnummer, Relatie (soorten Huwelijk en
+Geregistreerd partnerschap) en Betrokkenheid (rol Ouder).
+(Dit zijn dus de groepen uit het persoonsdeel van het bericht over de persoon, in
+tegenstelling tot de groepen uit bijvoorbeeld het verantwoordingsdeel en het
+onderzoeksdeel)
+
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R1541
+'Verantwoordingsgroep'
+Definitie:
+
+Verantwoordingsgroepen zijn groepen van de Persoonslijst die de verantwoording
+van de 'Inhoudelijke groep' (R1540) vormen. Dit zijn groepen onder de Objecttypen
+Administratieve handeling, Actie, Actie \ Bron, Document, Gedeblokkeerde melding
+en de koppelingen tussen die Objecttypen.
+(Dit zijn dus de groepen uit het verantwoordingsdeel van het bericht over de
+persoon)
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1543
+'Onderzoeksgroep'
+Definitie:
+
+Een Onderzoeksgroep is een groep die gegevens bevat omtrent onderzoeken op bij
+de Persoon aanwezige of ontbrekende gegevens. We hebben het hier altijd over de
+aan de Persoon gerelateerde Onderzoeken. Dus de Persoon \ Onderzoek gegevens,
+die direct gerelateerd zijn aan de uitgangspersoon.
+Voor het 'Onderzoeksdeel' worden de volgende begrippen gehanteerd:
+• Onderzoeksdeel: het deel binnen het bericht, dat informatie bevat over de
+onderzoeken.
+• Onderzoek: Binnen het onderzoeksdeel komen de 'Onderzoeken' voor, die de
+o.a. de Onderzoek.Datum aanvang, Onderzoek.Status en eventueel
+Onderzoek.Datum einde van het onderzoek bevatten
+• Gegeven in onderzoek: Als onderdeel van 'Onderzoek', zijn de in het onderzoek
+betrokken gegevens vastgelegd in Gegeven in onderzoek. Deze geeft aan
+welke gegevens (Gegeven in onderzoek.Element en optioneel: Gegeven in
+onderzoek.Object sleutel gegeven en Gegeven in onderzoek.Voorkomen sleutel
+gegeven) in het Onderzoek zijn betrokken.
+• Persoon \ Adres.Persoon aangetroffen op adres? valt ook onder het
+onderzoekdeel. Bijzonder aan dit attribuut is dat deze geen onderdeel is van
+Onderzoek of Gegeven in onderzoek, maar van Persoon \ Adres.
+Een onderzoeksgroep gedraagt zich verder hetzelfde als een Inhoudelijke groep, er
+is dus sprake van een afgeleid administratief en verantwoording d.m.v. een
+administratieve handeling met acties en bronnen.
+
+(Het betreft hier de groepen uit het Onderzoeksdeel van het bericht, deze hebben
+betrekking op de onderzoeken op persoonsgegevens, in tegenstelling tot de
+groepen uit bijvoorbeeld het Verantwoordingsdeel en het Persoonsdeel)
+Versie:
+
+4
+
+Soort:
+
+Definitieregel
+
+R1556
+Gereconstrueerde persoon na de onderhanden Administratieve handeling (strippen latere
+handelingen)
+Definitie:
+
+Deze regel beschrijft de reconstructie van het beeld van een Persoon zoals de
+situatie is geweest direct na het doorvoeren van de 'onderhanden' Administratieve
+handeling op die Persoon. Deze reconstructie houdt in dat groepen die na die
+onderhanden Administratieve handeling geldig waren maar later zijn vervallen, weer
+geldig worden gemaakt. Groepen die pas later zijn geregistreerd, worden
+verwijderd.
+
+Input voor de reconstructie zijn:
+1.
+2.
+
+Een persoon inclusief de voor de levering van zijn persoonslijst relevante
+Betrokkenheid, Relatie en gerelateerde personen, met alle historie.
+Een verwijzing naar de onderhanden Administratieve handeling, die voorkomt
+in de groep Persoon.Afgeleid administratief van die Persoon.
+
+De reconstructie verloopt via de volgende stappen:
+1.
+2.
+
+3.
+4.
+5.
+
+Ga voor de reconstructie initieel uit van (een kopie van) de 'Volledig persoon'
+(R1998) (alle groepen en objecttypen).
+Bepaal de 'latere handelingen': de Administratieve handelingen in de groep
+Persoon.Afgeleid administratief later zijn doorgevoerd dan de onderhanden
+handeling, aan de hand van Persoon.Tijdstip laatste wijziging.
+Bepaal de 'latere acties': Alle Acties die bij die 'latere handelingen' horen.
+Verwijder alle latere aangemaakte voorkomens van groepen: (ActieInhoud is
+een 'latere actie') OF (ActieAanpassingGeldigheid is een 'latere actie').
+Maak voor alle groepen in het beeld waar ActieVerval een 'latere actie' is de
+attributen Datum\Tijd verval en ActieVerval leeg.
+
+Toelichting:
+• De laatste stap (schrappen van het verval) is in principe buiten de scope. Het
+team kijkt of we deze meenemen (mogelijk besparen we op testen als we deze
+stap toch bouwen, omdat het resultaatbericht stabieler wordt) Zie JIRA
+TEAMBRP-1900.
+• Het attribuut NadereAanduidingVerval wordt daarbij niet geschrapt, omdat we
+wettelijk verplicht zijn aan te geven dat een gegeven onjuist is gebleken. Dit
+moet voorkomen dat een afnemer actie gaat ondernemen op grond van een
+gegeven waarvan op het moment van leveren al bekend is dat dit later onjuist
+is gebleken.
+• Een 'latere handeling"' zal altijd een BRP handeling zijn, omdat de
+migratievoorziening geen handelingen doorvoert voordat alle eerdere
+handelingen geleverd zijn.
+Versie:
+
+5
+
+Soort:
+
+Definitieregel
+
+R1998
+'Volledig persoon'
+Definitie:
+
+Een volledig Persoon is het complete beeld van de persoon zoals deze in de BRP is
+geadministreerd. Het gaat om de administratie van alle gegevens (Element) van het
+Element.Soort 'Attribuut' met Element.Autorisatie: 'Optioneel', 'Via
+groepsautorisatie', 'Verplicht', 'Aanbevolen', 'Uitzondering' en
+'Bijhoudingsgegevens'.
+Een volledig persoon bevat attributen uit:
+Inhoudelijke groepen ('Inhoudelijke groep' (R1540))
+Verantwoordingsgroepen ('Verantwoordingsgroep' (R1541))
+De verantwoordingsinformatie betreft alle Administratieve handeling die de
+Persoonslijst van de hoofdpersoon hebben bijgehouden of hebben geleid tot een
+mutatie van het onderzoeksdeel ('Onderzoeksgroep' (R1543)). Dit betreft alle
+Administratieve handelingen die voorkomen in de groep Persoon.Afgeleid
+administratief van de hoofdpersoon. Ook de Actie en Actie \ Bron die bij die
+Administratieve handelingen horen, worden opgenomen.
+Onderzoeksgroepen ('Onderzoeksgroep' (R1543))
+De gegevens uit Onderzoek, die betrekking hebben op de te leveren Persoon
+moeten worden opgenomen. Het betreft altijd aan de Persoon gerelateerde
+Onderzoeken. Dus de Persoon \ Onderzoek gegevens, die gerelateerd zijn aan de
+persoon.
+
+Versie:
+
+5
+
+Soort:
+
+Definitieregel
+
+R2185
+'GecombineerdeActieVerval'
+Definitie:
+
+GecombineerdeActieVerval is gelijk aan:
+• ActieVerval als ActieVervalLeveringMutatie geen waarde heeft
+• ActieVervalLeveringMutatie als deze wel een waarde heeft
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2550
+Reconstructie persoonsbeeld 'nieuw' ten behoeve van expressies
+Definitie:
+
+Voor de evaluatie van expressies moet gebruikt worden gemaakt van de actuele,
+niet vervallen gegevens zoals die nu op de persoon geldig zijn (bij een levering naar
+aanleiding van een verzoekbericht) of zoals die na de onderhanden handeling geldig
+zijn (bij een levering naar aanleiding van een Administratieve handeling).
+Dit persoonsbeeld dient als volgt te worden bepaald:
+1: Indien de levering gebeurt naar aanleiding van een Administratieve handeling:
+
+•
+
+Pas eerst Gereconstrueerde persoon na de onderhanden
+Administratieve handeling (strippen latere handelingen) (R1556) toe.
+
+2: De volgende groepsvoorkomens maken dan deel uit van het 'nieuwe'
+persoonsbeeld:
+
+•
+
+Toelichting:
+
+Het voorkomen is niet vervallen (actieVerval is leeg)
+
+•
+
+Het kan zijn dat er in de context geen sprake is van een 'onderhanden
+Administratieve handeling'. Bijvoorbeeld als bij een verzoekbericht Geef details
+persoon moet worden gecontroleerd of de gevraagde persoon voldoet aan de
+populatiebeperking. In dat geval is de eerste stap niet van toepassing.
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R2551
+Reconstructie persoonsbeeld 'oud' ten behoeve van expressies
+Definitie:
+
+Voor de bepaling van wat gewijzigd is in een Administratieve handeling kan het
+nodig zijn om te bepalen wat de actuele, niet vervallen gegevens waren voordat de
+onderhanden handeling werd doorgevoerd. Deze bepaling gaat als volgt:
+
+1: Pas eerst Gereconstrueerde persoon na de onderhanden Administratieve
+handeling (strippen latere handelingen) (R1556) toe.
+
+2: De volgende groepsvoorkomens maken dan deel uit van het 'oude'
+persoonsbeeld:
+
+•
+
+Het voorkomen is niet nu ontstaan (actieInhoud verwijst niet naar een Actie
+van de onderhanden Administratieve handeling EN AanpassingGeldigheid
+verwijst niet naar een Actie van de onderhanden Administratieve handeling)
+
+EN
+
+•
+
+Het voorkomen is nu vervallen ('GecombineerdeActieVerval' (R2185)
+verwijst naar een Actie van de onderhanden Administratieve
+handeling)
+
+OF
+
+•
+
+Het voorkomen is niet vervallen ('GecombineerdeActieVerval' (R2185)
+is leeg)
+
+De volgende stappen zijn slechts voor uitzonderingsgevallen uit LO3 bijhoudingen:
+3: Indien er meer dan één voorkomen van een groep overblijft met
+IndicatieMutatieLevering = 'WAAR' , behoud dan daarvan alleen de voorkomens met
+de hoogste waarde van tijdstipRegistratie
+4: Verwijder de voorkomens met IndicatieMutatieLevering <> 'WAAR' waarbij in
+dezelfde groep ook een voorkomen met IndicatieMutatieLevering = 'WAAR' bestaat
+met dezelfde DatumAanvangGeldigheid.
+5: Verwijder de voorkomens met IndicatieMutatieLevering = 'WAAR' waarbij in
+dezelfde groep ook een voorkomen met IndicatieMutatieLevering <> 'WAAR'
+bestaat met een latere DatumAanvangGeldigheid.
+
+Toelichting:
+• Deze regel maakt gebruik van de 'GecombineerdeActieVerval' (R2185) zodat
+ook bij het leveren van een LO3 bijhouding het correcte 'oude' beeld bepaald
+
+•
+
+wordt. Bij een BRP bijhouding zal de actieVervalCombinatie altijd gelijk zijn aan
+de actieVerval.
+'GecombineerdeActieVerval' (R2185) kan ook leeg zijn (namelijk als actieVerval
+en actieVervalLeveringMutatie beide leeg zijn).
+
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+

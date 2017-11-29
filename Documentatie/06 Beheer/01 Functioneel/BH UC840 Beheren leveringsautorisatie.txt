@@ -1,0 +1,1082 @@
+UC840 Beheren leveringsautorisatie
+
+1.7
+
+Datum
+Status
+
+28-03-2017
+Definitief
+
+Definitief | 1.7 | UC840 Beheren leveringsautorisatie | 28-03-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................6
+2.1
+2.2
+2.3
+2.4
+2.5
+2.6
+2.7
+2.8
+2.9
+2.10
+2.11
+2.12
+
+3
+
+REGULIER VERLOOP: ZOEKEN LEVERINGSAUTORISATIE ....................................................................6
+ALTERNATIEF VERLOOP: TOEVOEGEN LEVERINGSAUTORISATIE........................................................6
+ALTERNATIEF VERLOOP: WIJZIGEN LEVERINGSAUTORISATIE ...........................................................6
+ALTERNATIEF VERLOOP: TOEVOEGEN TOEGANG LEVERINGSAUTORISATIE.......................................6
+ALTERNATIEF VERLOOP: WIJZIGEN TOEGANG LEVERINGSAUTORISATIE ..........................................6
+ALTERNATIEF VERLOOP: TOEVOEGEN DIENSTBUNDEL .......................................................................7
+ALTERNATIEF VERLOOP: WIJZIGEN DIENSTBUNDEL...........................................................................7
+ALTERNATIEF VERLOOP: TOEVOEGEN DIENST ....................................................................................7
+ALTERNATIEF VERLOOP: WIJZIGEN DIENST ........................................................................................7
+ALTERNATIEF VERLOOP: TOEVOEGEN GROEP..................................................................................7
+ALTERNATIEF VERLOOP: WIJZIGEN GROEP MET ATTRIBUTEN ........................................................8
+ALTERNATIEF VERLOOP: VERWIJDEREN GROEP MET ATTRIBUTEN .................................................8
+
+AANVULLENDE SPECIFICATIES .................................................................................................9
+3.1
+3.2
+3.3
+3.4
+3.5
+3.6
+3.7
+3.8
+3.9
+3.10
+3.11
+3.12
+3.13
+3.14
+3.15
+3.16
+3.17
+3.18
+3.19
+3.20
+3.21
+
+4
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................5
+PRECONDITIE ........................................................................................................................................5
+POSTCONDITIE......................................................................................................................................5
+
+ZOEKEN LEVERINGSAUTORISATIE .......................................................................................................9
+TONEN ZOEKRESULTATEN LEVERINGSAUTORISATIE ..........................................................................9
+TOEVOEGEN LEVERINGSAUTORISATIE.................................................................................................9
+WIJZIGEN LEVERINGSAUTORISATIE ..................................................................................................10
+LIJST VAN TOEGANG LEVERINGSAUTORISATIE .................................................................................10
+TOEVOEGEN TOEGANG LEVERINGSAUTORISATIE..............................................................................10
+WIJZIGEN TOEGANG LEVERINGSAUTORISATIE .................................................................................11
+LIJST VAN DIENSTBUNDEL .................................................................................................................11
+TOEVOEGEN DIENSTBUNDEL ..............................................................................................................11
+WIJZIGEN DIENSTBUNDEL..............................................................................................................12
+LIJST VAN DIENST ...........................................................................................................................12
+TOEVOEGEN DIENST .......................................................................................................................12
+WIJZIGEN DIENST ...........................................................................................................................13
+LIJST VAN DIENSTBUNDEL \ GROEP .............................................................................................14
+TOEVOEGEN DIENSTBUNDEL \ GROEP ..........................................................................................14
+WIJZIGEN DIENSTBUNDEL \ GROEP EN ATTRIBUUT ....................................................................15
+LIJST VAN DIENSTBUNDEL \ GROEP \ ATTRIBUUT ......................................................................16
+DETAILS VAN DIENSTBUNDEL \ LO3 RUBRIEK (LIJST) ...............................................................16
+BEDRIJFSREGELS ALGEMEEN ..........................................................................................................16
+BEDRIJFSREGELS BRP AUTORISATIE ............................................................................................16
+BEDRIJFSREGELS GBA AUTORISATIE............................................................................................16
+
+OPMERKINGEN ..................................................................................................................................17
+
+Operatie BRP
+
+Pagina 2 van 17
+
+Definitief | 1.7 | UC840 Beheren leveringsautorisatie | 28-03-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+08-03-2015
+17-03-2015
+30-03-2015
+
+0.1
+0.2
+0.3
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+31-03-2015
+25-06-2015
+
+0.4
+1.0
+
+26-02-2016
+09-03-2016
+
+1.1
+1.2
+
+23-05-2016
+
+1.3
+
+16-06-2016
+08-07-2016
+17-10-2016
+
+1.4
+1.5
+1.6
+
+28-03-2017
+
+1.7
+
+Initiële versie
+Reviewcommentaar verwerkt
+• Bedrijfsregels opgenomen
+• Soort abonnement opgenomen
+• Volledig geconverteerd opgenomen
+• Volledig geconverteerd ook voor Nadere
+populatiebeperking opgenomen
+Reviewcommentaar verwerkt
+Definitief gemaakt ten behoeve van release
+3.1
+Verwijzing naar BMR-versie verwijderd
+BMR 44 en 45 verwerkt
+Requirements opgenomen tbv van beheer
+van groepen en elementen.
+Lijst van Dienstbundel / Groep toegevoegd
+Populatie volledig geconverteerd verwijderd
+Bevindingen na oplevering Carice verwerkt
+Reviewcommentaar verwerkt
+Bedrijfsregels op datum ingang en einde
+toegevoegd
+Selectiegegevens BMR 56 toegevoegd
+
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+16-03-2015
+
+0.1
+
+Review
+
+Operatie BRP
+
+31-03-2015
+
+0.3
+
+Review
+
+Operatie BRP
+
+10-06-2016
+
+1.3
+
+Review
+
+Operatie BRP
+
+08-07-2016
+
+1.4
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 17
+
+Definitief | 1.7 | UC840 Beheren leveringsautorisatie | 28-03-2017
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Een overeenkomst tussen Afnemers van de BRP enerzijds, en de eigenaar van de BRP
+anderzijds, op basis waarvan Afnemers persoonsgegevens vanuit de BRP mag ontvangen (Bron:
+[BMR]).
+Leveringsautorisatie is een dynamisch stamgegeven en wordt beschreven in het [BMR]:
+AutAut.Leveringsautorisatie.
+In dit document wordt beschreven op welke wijze leveringsautorisaties beheerd worden (zoeken,
+wijzigen, toevoegen).
+
+Operatie BRP
+
+Pagina 4 van 17
+
+Definitief | 1.7 | UC840 Beheren leveringsautorisatie | 28-03-2017
+
+1.2
+
+1.3
+
+Referenties
+#
+[BMR]
+
+Document
+https://www.modernodam.nl/bmr
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+[UC102]
+
+MV UC102 Vul autorisatietabelregels
+in BRP initieel.doc
+
+Operatie BRP
+
+-
+
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 5 van 17
+
+Definitief | 1.7 | UC840 Beheren leveringsautorisatie | 28-03-2017
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop: zoeken leveringsautorisatie
+1. De beheerder meldt het systeem een leveringsautorisatie te zoeken (AV: 2.2)
+2. Het systeem toont de beheerder zoekcriteria waarmee leveringsautorisaties gezocht kunnen
+worden
+3. De beheerder voert een of meer zoekcriteria in (AS: 3.1)
+4. Het systeem zoekt op basis van de zoekcriteria naar leveringsautorisaties
+5. Het systeem toont de gevonden leveringsautorisaties (AS: 3.2)
+6. De use case eindigt. (AV: 2.3)
+
+2.2
+
+Alternatief verloop: toevoegen leveringsautorisatie
+1. De beheerder meldt het systeem een leveringsautorisatie toe te voegen
+2. Het systeem toont de in te vullen details van de leveringsautorisatie (AS:3.3, 3.20, 3.21)
+3. De beheerder voert de details in
+4. Het systeem controleert de details
+5. Het systeem legt de details vast
+6. De use case gaat verder bij stap 2 van 2.3
+
+2.3
+
+Alternatief verloop: wijzigen leveringsautorisatie
+1. De beheerder selecteert een leveringsautorisatie
+2. Het systeem toont de details van de geselecteerde leveringsautorisatie (AS:3.4, 3.20, 3.21)
+3. Het systeem toont een lijst van toegang leveringsautorisatie van de geselecteerde
+leveringsautorisatie (AS:3.5)
+4. Het systeem toont een lijst van dienstbundels van de geselecteerde leveringsautorisatie (AS:
+3.8)
+5. De beheerder wijzigt de details van de leveringsautorisatie (AV: 2.4, 2.5)
+6. Het systeem controleert de details van de leveringsautorisatie
+7. Het systeem legt de details vast
+8. Het systeem toont de eerdere lijst van gevonden leveringsautorisaties
+9. De use case eindigt.
+
+2.4
+
+Alternatief verloop: toevoegen toegang leveringsautorisatie
+1. De beheerder meldt het systeem om een toegang leveringsautorisatie toe te voegen
+2. Het systeem toont de details van de toegang leveringsautorisatie (AS: 3.6)
+3. De beheerder voert de details in
+4. Het systeem controleert de details
+5. Het systeem legt de details vast
+6. De use case gaat verder bij stap 2 van 2.3
+
+2.5
+
+Alternatief verloop: wijzigen toegang leveringsautorisatie
+1. De beheerder selecteert een toegang leveringsautorisatie
+2. Het systeem toont de details van de geselecteerde toegang leveringsautorisatie (AS: 3.7)
+3. De beheerder wijzigt de details van de toegang leveringsautorisatie (AV: 2.6, 2.7)
+4. Het systeem controleert de details
+5. Het systeem legt de details vast
+6. De use case gaat verder bij stap 2 van 2.3
+
+Operatie BRP
+
+Pagina 6 van 17
+
+Definitief | 1.7 | UC840 Beheren leveringsautorisatie | 28-03-2017
+
+2.6
+
+Alternatief verloop: toevoegen dienstbundel
+1. De beheerder meldt het systeem een dienstbundel toe te voegen
+2. Het systeem toont de details van de dienstbundel (AS: 3.9)
+3. De beheerder voert de details in
+4. Het systeem controleert de ingevoerde details
+5. Het systeem legt de details vast
+6. De use case gaat verder bij stap 2 van 2.7
+
+2.7
+
+Alternatief verloop: wijzigen dienstbundel
+1. De beheerder selecteert een dienstbundel
+2. Het systeem toont de details van de geselecteerde dienstbundel (AS: 3.10)
+3. Het systeem toont een lijst van diensten (AS: 3.11)
+4. Het systeem toont een lijst van groepen en bijbehorende elementen (AS: 3.14)
+5. Het systeem toont een lijst van LO3 Rubrieken (AS: 3.18)
+6. De beheerder wijzigt de details (AV: 2.8, 2.9, 2.10, 2.11, 2.12)
+7. Het systeem controleert de ingevoerde details
+8. Het systeem legt de ingevoerde details vast
+9. De use case gaat verder bij stap 2 van 2.3
+
+2.8
+
+Alternatief verloop: toevoegen dienst
+1. De beheerder meldt het systeem een dienst toe te voegen
+2. Het systeem toont de details van dienst (AS: 3.12)
+3. De beheerder wijzigt de details
+4. Het systeem controleert de details
+5. Het systeem legt de details vast
+6. De use case gaat verder bij stap 2 van 2.7
+
+2.9
+
+Alternatief verloop: wijzigen dienst
+1. De beheerder selecteert een dienst
+2. Het systeem toont de details van de geselecteerde dienst (AS: Fout! Verwijzingsbron niet
+gevonden.)
+3. De beheerder wijzigt de details
+4. Het systeem controleert de details
+5. Het systeem legt de details vast
+6. De use case gaat verder bij stap 2 van 2.7
+
+2.10
+
+Alternatief verloop: toevoegen groep
+1. De beheerder meldt het systeem een groep toe te voegen
+2. Het systeem toont de details van de groep (AS: 3.15)
+3. De beheerder wijzigt de details
+4. Het systeem controleert de details
+5. Het systeem legt de ingevoerde details
+6. De use case gaat verder bij stap 2 van 2.11
+
+Operatie BRP
+
+Pagina 7 van 17
+
+Definitief | 1.7 | UC840 Beheren leveringsautorisatie | 28-03-2017
+
+2.11
+
+Alternatief verloop: wijzigen groep met attributen
+1. De beheerder selecteert een te wijzigen groep met attributen
+2. Het systeem toont de details van groep (AS: 3.16)
+3. Het systeem toont een lijst van te selecteren attributen van de groep (AS:3.17)
+4. De beheerder wijzigt de details en selecteert de gewenste attributen
+5. Het systeem controleert de details en attributen
+6. Het systeem legt de details en attributen vast
+7. De use case gaat verder bij stap 2 van 2.7
+
+2.12
+
+Alternatief verloop: verwijderen groep met attributen
+1. De beheerder selecteert een te verwijderen groep met attributen
+2. Het systeem vraagt om een bevestiging
+3. De beheerder bevestigt
+4. Het systeem verwijdert de groep en attributen
+5. De use case gaat verder bij stap 2 van 2.7
+
+Operatie BRP
+
+Pagina 8 van 17
+
+Definitief | 1.7 | UC840 Beheren leveringsautorisatie | 28-03-2017
+
+3
+
+Aanvullende specificaties
+
+3.1
+
+Zoeken leveringsautorisatie
+Op de basis van de onderstaande gegevens kunnen Leveringsautorisaties gevonden worden.
+Naam
+Stelsel
+Modelautorisatie?
+Naam
+Geblokkeerd?
+Geautoriseerde
+Ondertekenaar
+Transporteur
+Dienstbundel
+Soort dienst
+Datum ingang
+Datum einde
+
+3.2
+
+Toelichting
+Leveringsautorisatie.Stelsel
+Leveringsautorisatie.Modelautorisatie?
+Leveringsautorisatie.Naam
+Leveringsautorisatie.Geblokkeerd?
+Toegang leveringsautorisatie.Geautoriseerde.Partij.Naam of
+Toegang leveringsautorisatie.Geautoriseerde.Partij.Code
+Toegang leveringsautorisatie.Ondertekenaar.Naam of
+Toegang leveringsautorisatie.Ondertekenaar.Code
+Toegang leveringsautorisatie.Transporteur.naam of
+Toegang leveringsautorisatie.Transporteur.Code
+Dienstbundel.Naam
+Dienst.Soort
+Leveringsautorisatie.Datum ingang
+Leveringsautorisatie.Datum einde
+
+Tonen zoekresultaten leveringsautorisatie
+De onderstaande gegevens worden in het zoekresultaat van Leveringsautorisaties getoond.
+Naam
+ID
+Stelsel
+Modelautorisatie?
+Naam
+Geblokkeerd?
+Datum ingang
+Datum einde
+
+3.3
+
+Toelichting
+Leveringsautorisatie.ID
+Leveringsautorisatie.Stelsel
+Leveringsautorisatie.Modelautorisatie?
+Leveringsautorisatie.Naam
+Leveringsautorisatie.Geblokkeerd?
+Leveringsautorisatie.Datum ingang
+Leveringsautorisatie.Datum einde
+
+Toevoegen leveringsautorisatie
+In de onderstaande tabel is te vinden welke gegevens van Leveringsautorisatie getoond worden.
+Naam
+Stelsel
+Modelautorisatie?
+Naam
+Protocolleringsniveau
+Alias soort administratieve
+handeling leveren?
+Datum ingang
+Datum einde
+Populatiebeperking
+Toelichting
+
+Operatie BRP
+
+Toelichting
+Leveringsautorisatie.Stelsel
+Leveringsautorisatie.Modelautorisatie?
+Leveringsautorisatie.Naam
+Leveringsautorisatie.Protocolleringsniveau
+Leveringsautorisatie.Alias soort administratieve handeling leveren?
+Leveringsautorisatie.Datum ingang, dient voor Datum einde te
+liggen indien aanwezig
+Leveringsautorisatie.Datum einde, dient na Datum ingang te liggen
+indien aanwezig
+Leveringsautorisatie.Populatiebeperking
+Leveringsautorisatie.Toelichting
+
+Pagina 9 van 17
+
+Definitief | 1.7 | UC840 Beheren leveringsautorisatie | 28-03-2017
+
+Geblokkeerd?
+
+3.4
+
+Leveringsautorisatie.Geblokkeerd?
+
+Wijzigen leveringsautorisatie
+In de onderstaande tabel is te vinden welke gegevens van Leveringsautorisatie getoond worden.
+Naam
+ID
+Stelsel
+Modelautorisatie?
+Naam
+Protocolleringsniveau
+Alias soort administratieve
+handeling leveren?
+Datum ingang
+Datum einde
+Populatiebeperking
+Toelichting
+Geblokkeerd?
+
+3.5
+
+Toelichting
+Leveringsautorisatie.ID alleen tonen, niet te wijzigen
+Leveringsautorisatie.Stelsel
+Leveringsautorisatie.Modelautorisatie?
+Leveringsautorisatie.Naam
+Leveringsautorisatie.Protocolleringsniveau
+Leveringsautorisatie.Alias soort administratieve handeling leveren?
+Leveringsautorisatie.Datum ingang, dient voor Datum einde te
+liggen indien aanwezig
+Leveringsautorisatie.Datum einde, dient na Datum ingang te liggen
+indien aanwezig
+Leveringsautorisatie.Populatiebeperking
+Leveringsautorisatie.Toelichting
+Leveringsautorisatie.Geblokkeerd?
+
+Lijst van toegang leveringsautorisatie
+In de onderstaande tabel is te vinden welke gegevens in de lijst van Toegang
+leveringsautorisatie getoond worden.
+Naam
+ID
+Geautoriseerde
+Ondertekenaar
+Transporteur
+Datum ingang
+Datum einde
+Geblokkeerd
+
+Toelichting
+Toegang leveringsautorisatie.ID
+Toegang leveringsautorisatie.Geautoriseerde.Partij.Naam
+Toegang leveringsautorisatie.Ondertekenaar.Naam
+Toegang leveringsautorisatie.Transporteur.Naam
+Toegang leveringsautorisatie.Datum ingang
+Toegang leveringsautorisatie.Datum einde
+Toegang leveringsautorisatie.Geblokkeerd
+
+De lijst is standaard gesorteerd op Datum ingang en Datum einde van nieuw naar oud.
+3.6
+
+Toevoegen toegang leveringsautorisatie
+Naam
+Geautoriseerde
+Ondertekenaar
+Transporteur
+Datum ingang
+Datum einde
+Nadere populatiebeperking
+Afleverpunt
+Geblokkeerd?
+
+Operatie BRP
+
+Toelichting
+Toegang leveringsautorisatie.Geautoriseerde.Partij.Naam
+Toegang leveringsautorisatie.Ondertekenaar.Naam
+Toegang leveringsautorisatie.Transporteur.Naam
+Toegang leveringsautorisatie.Datum ingang, dient voor Datum
+einde te liggen indien aanwezig
+Toegang leveringsautorisatie.Datum einde, dient na Datum ingang
+te liggen indien aanwezig
+Toegang leveringsautorisatie.Nadere populatiebeperking
+Toegang leveringsautorisatie.Afleverpunt
+Toegang leveringsautorisatie.Geblokkeerd?
+
+Pagina 10 van 17
+
+Definitief | 1.7 | UC840 Beheren leveringsautorisatie | 28-03-2017
+
+3.7
+
+Wijzigen toegang leveringsautorisatie
+Naam
+ID
+Geautoriseerde
+Ondertekenaar
+Transporteur
+Datum ingang
+Datum einde
+Nadere populatiebeperking
+Afleverpunt
+Geblokkeerd?
+
+3.8
+
+Toelichting
+Toegang leveringsautorisatie.ID alleen tonen, niet te wijzigen
+Toegang leveringsautorisatie.Geautoriseerde.Partij.Naam
+Toegang leveringsautorisatie.Ondertekenaar.Naam
+Toegang leveringsautorisatie.Transporteur.Naam
+Toegang leveringsautorisatie.Datum ingang, dient voor Datum
+einde te liggen indien aanwezig
+Toegang leveringsautorisatie.Datum einde, dient na Datum ingang
+te liggen indien aanwezig
+Toegang leveringsautorisatie.Nadere populatiebeperking
+Toegang leveringsautorisatie.Afleverpunt
+Toegang leveringsautorisatie.Geblokkeerd?
+
+Lijst van dienstbundel
+In de onderstaande tabel is te vinden welke gegevens in de lijst van Dienstbundel getoond
+worden.
+Naam
+ID
+Naam
+Datum ingang
+Datum einde
+Geblokkeerd?
+
+Toelichting
+Dienstbundel.ID
+Dienstbundel.Naam
+Dienstbundel.Datum ingang
+Dienstbundel.Datum einde
+Dienstbundel.Geblokkeerd?
+
+Standaard is de lijst gesorteerd op Dienstbundel.Geblokkeerd? (‘Ja’ eerst) en Dienstbundel.Naam
+(alfabetisch).
+
+3.9
+
+Toevoegen dienstbundel
+In de onderstaande tabel is te vinden welke gegevens bij het toevoegen van Dienstbundel
+getoond worden.
+Naam
+Naam
+Datum ingang
+Datum einde
+Nadere populatiebeperking
+Toelichting
+Geblokkeerd?
+
+Operatie BRP
+
+Toelichting
+Dienstbundel.Naam
+Dienstbundel.Datum ingang, dient voor Datum einde te liggen
+indien aanwezig
+Dienstbundel.Datum einde, dient na Datum ingang te liggen indien
+aanwezig
+Dienstbundel.Nadere populatiebeperking
+Dienstbundel.Toelichting
+Dienstbundel.Geblokkeerd?
+
+Pagina 11 van 17
+
+Definitief | 1.7 | UC840 Beheren leveringsautorisatie | 28-03-2017
+
+3.10
+
+Wijzigen dienstbundel
+In de onderstaande tabel is te vinden welke gegevens bij het wijzigen van Dienstbundel getoond
+worden.
+Naam
+ID
+Naam
+Datum ingang
+Datum einde
+Nadere populatiebeperking
+Nadere populatiebeperking
+volledig geconverteerd?
+Toelichting
+Geblokkeerd?
+
+3.11
+
+Toelichting
+Dienstbundel.ID, alleen tonen, niet te wijzigen
+Dienstbundel.Naam
+Dienstbundel.Datum ingang, dient voor Datum einde te liggen
+indien aanwezig
+Dienstbundel.Datum einde, dient na Datum ingang te liggen indien
+aanwezig
+Dienstbundel.Nadere populatiebeperking
+Dienstbundel.Nadere populatiebeperking volledig geconverteerd?
+Dienstbundel.Toelichting
+Dienstbundel.Geblokkeerd?
+
+Lijst van dienst
+In de onderstaande tabel is te vinden welke gegevens in de lijst van Dienst getoond worden.
+Naam
+ID
+Soort
+Effect afnemersindicatie
+Datum ingang
+Datum einde
+Geblokkeerd?
+
+Toelichting
+Dienst.ID
+Dienst.Soort
+Dienst.Effect afnemersindicatie
+Dienst.Datum ingang
+Dienst.Datum einde
+Dienst.Geblokkeerd?
+
+Standaard is de lijst gesorteerd op Dienstbundel.Geblokkeerd?, Dienstbundel.Soort en
+Dienstbundel.Datum ingang.
+
+3.12
+
+Toevoegen dienst
+In de onderstaande tabel is te vinden welke gegevens bij het toevoegen van Dienst getoond
+worden.
+Naam
+Identiteit
+Soort
+Effect afnemersindicatie
+Standaard
+Datum ingang
+Datum einde
+Geblokkeerd?
+Attendering
+Attenderingscriterium
+Selectie
+Soort selectie
+Eerste selectiedatum
+
+Operatie BRP
+
+Toelichting
+Dienst.Soort
+Dienst.Effect afnemersindicatie
+Dienst.Datum ingang, dient voor Datum einde te liggen
+indien aanwezig
+Dienst.Datum einde, dient na Datum ingang te liggen
+indien aanwezig
+Dienst.Geblokkeerd?
+Dienst.Attenderingscriterium
+Dienst.Soort selectie
+Dienst.Eerste selectiedatum
+
+Pagina 12 van 17
+
+Definitief | 1.7 | UC840 Beheren leveringsautorisatie | 28-03-2017
+
+Selectieinterval
+Eenheid selectieinterval
+Nadere selectiecriterium
+Selectie peilmoment materieel
+Selectie peilmoment materieel
+resultaat
+Selectie peilmoment formeel
+resultaat
+Historievorm selectie
+Selectieresultaat controleren?
+Maximaal aantal personen per
+selectiebestand
+Maximale grootte selectiebestand
+Verzend volledig bericht bij
+plaatsing afnemerindicatie na
+selectie?
+Leverwijze selectie
+
+3.13
+
+Dienst.Selectieinterval
+Dienst.Eenheid selectieinterval
+Dienst.Nadere selectiecriterium
+Dienst.Selectie peilmoment materieel
+Dienst.Selectie peilmoment materieel resultaat
+Dienst.Selectie peilmoment formeel resultaat
+Dienst.Historievorm selectie
+Dienst.Selectieresultaat controleren?
+Dienst.Maximaal aantal personen per selectiebestand
+Dienst.Maximale grootte selectiebestand
+Dienst.Verzend volledig bericht bij plaatsing
+afnemerindicatie na selectie?
+Dienst.Leverwijze selectie
+
+Wijzigen dienst
+In de onderstaande tabel is te vinden welke gegevens bij het wijzigen van Dienst getoond
+worden.
+Naam
+Identiteit
+ID
+Soort
+Effect afnemersindicatie
+Standaard
+Datum ingang
+Datum einde
+Geblokkeerd?
+Attendering
+Attenderingscriterium
+Selectie
+Soort selectie
+Eerste selectiedatum
+Selectieinterval
+Eenheid selectieinterval
+Nadere selectiecriterium
+Selectie peilmoment materieel
+Selectie peilmoment materieel
+resultaat
+Selectie peilmoment formeel
+resultaat
+Historievorm selectie
+Selectieresultaat controleren?
+Maximaal aantal personen per
+selectiebestand
+Maximale grootte selectiebestand
+Verzend volledig bericht bij
+plaatsing afnemerindicatie na
+selectie?
+
+Operatie BRP
+
+Toelichting
+Dienst.ID alleen tonen, niet te wijzigen
+Dienst.Soort
+Dienst.Effect afnemersindicatie
+Dienst.Datum ingang, dient voor Datum einde te liggen
+indien aanwezig
+Dienst.Datum einde, dient na Datum ingang te liggen
+indien aanwezig
+Dienst.Geblokkeerd?
+Dienst.Attenderingscriterium
+Dienst.Soort selectie
+Dienst.Eerste selectiedatum
+Dienst.Selectieinterval
+Dienst.Eenheid selectieinterval
+Dienst.Nadere selectiecriterium
+Dienst.Selectie peilmoment materieel
+Dienst.Selectie peilmoment materieel resultaat
+Dienst.Selectie peilmoment formeel resultaat
+Dienst.Historievorm selectie
+Dienst.Selectieresultaat controleren?
+Dienst.Maximaal aantal personen per selectiebestand
+Dienst.Maximale grootte selectiebestand
+Dienst.Verzend volledig bericht bij plaatsing
+afnemerindicatie na selectie?
+
+Pagina 13 van 17
+
+Definitief | 1.7 | UC840 Beheren leveringsautorisatie | 28-03-2017
+
+Leverwijze selectie
+
+3.14
+
+Dienst.Leverwijze selectie
+
+Lijst van Dienstbundel \ Groep
+In de onderstaande tabel is te vinden welke gegevens getoond worden in de lijst van
+Dienstbundel /Groep.
+Naam
+ID
+Groep
+Formele historie?
+Materiële historie?
+Verantwoording?
+
+3.15
+
+Toelichting
+Dienstbundel
+Dienstbundel
+Dienstbundel
+Dienstbundel
+Dienstbundel
+
+\
+\
+\
+\
+\
+
+Groep.ID
+Groep.Groep
+Groep.Formele historie?
+Groep.Materiële historie?
+Groep.Verantwoording?
+
+Toevoegen Dienstbundel \ Groep
+In de onderstaande tabel is te vinden welke gegevens bij het toevoegen van Dienstbundel \
+Groep getoond worden.
+Naam
+Groep
+Formele historie?
+Materiële historie?
+Verantwoording?
+
+Operatie BRP
+
+Toelichting
+Dienstbundel
+Dienstbundel
+Dienstbundel
+Dienstbundel
+
+\
+\
+\
+\
+
+Groep.Groep
+Groep.Formele historie?
+Groep.Materiële historie?
+Groep.Verantwoording?
+
+Pagina 14 van 17
+
+Definitief | 1.7 | UC840 Beheren leveringsautorisatie | 28-03-2017
+
+3.16
+
+Wijzigen Dienstbundel \ Groep en Attribuut
+In de onderstaande tabel is te vinden welke gegevens bij het toevoegen van Dienstbundel \
+Groep getoond worden.
+Naam
+ID
+Groep
+Formele historie?
+Materiële historie?
+Verantwoording?
+Attributen
+
+Toelichting
+Dienstbundel \ Groep.ID, alleen tonen, niet wijzigen
+Dienstbundel \ Groep.Groep
+Dienstbundel \ Groep.Formele historie?
+Dienstbundel \ Groep.Materiële historie?
+Dienstbundel \ Groep.Verantwoording?
+Dienstbundel \ Groep \ Attribuut, een lijst van alle te selecteren
+attributen van de geselecteerde groep
+
+Een afnemer mag alleen geautoriseerd worden voor formele historie in een groep als deze
+geautoriseerd is voor materiële historie van die groep.
+
+Operatie BRP
+
+Pagina 15 van 17
+
+Definitief | 1.7 | UC840 Beheren leveringsautorisatie | 28-03-2017
+
+3.17
+
+Lijst van Dienstbundel \ Groep \ Attribuut
+Elk attribuut dat bij een groep hoort kan gevonden worden aan de hand van Element.Groep.
+Van elk attribuut wordt Element.Element naam getoond en de Element.Autorisatie. Alleen de
+attributen met de volgende Element.Autorisatie worden getoond:
+•
+•
+•
+•
+•
+•
+
+Niet verstrekken
+Optioneel
+Verplicht
+Aanbevolen
+Bijhoudingsgegevens
+Uitzondering
+
+Het is aan de beheerder om voor elke autorisatie de juiste attributen te selecteren.
+De lijst is oplopend gesorteerd op Element.Volgnummer. Elk attribuut kan geselecteerd of
+verwijderd worden.
+3.18
+
+Details van Dienstbundel \ LO3 rubriek (lijst)
+Tot een dienstbundel kunnen geen of meerdere LO3 rubrieken behoren. De beheerder kan
+rubrieken aan een dienstbundel toevoegen of verwijderen. Hiervoor dient de beheerder in tekst
+de lijst van rubrieken in te voeren welke gescheiden zijn door een hash (#):
+<rubriek>#<rubriek>#<rubriek>…
+Voorbeeld:
+01.03.10#19.89.30#07.67.10
+Het systeem controleert of de ingevoerde tekst voldoet aan het hierboven beschreven formaat
+en of de ingevoerde rubrieken geldig zijn. Daarna worden deze door het systeem vertaald en
+opgeslagen in de structuur van Dienstbundel \ LO3 Rubriek.
+
+3.19
+
+Bedrijfsregels algemeen
+
+• Nergens mag een (gedeeltelijk) onbekende datum gebruikt worden.
+
+3.20
+
+Bedrijfsregels BRP autorisatie
+Indien Leveringsautorisatie.Stelsel = ’BRP’ dan is het niet mogelijk om Dienstbundel / LO3
+Rubriek te selecteren.
+
+3.21
+
+Bedrijfsregels GBA autorisatie
+Indien Leveringsautorisatie.Stelsel = ’GBA’ dan gelden de volgende regels:
+• Het is niet mogelijk om Dienstbundel / Attribuut en Dienstbundel / Groep te selecteren.
+• Alleen de diensten zoals die beschreven zijn in [UC102] kunnen geselecteerd worden.
+
+Operatie BRP
+
+Pagina 16 van 17
+
+Definitief | 1.7 | UC840 Beheren leveringsautorisatie | 28-03-2017
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 17 van 17
+
+

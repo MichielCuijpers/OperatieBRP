@@ -1,0 +1,1100 @@
+UCS BY.0.ONZ - Onderzoek
+Versie
+
+0.10
+
+Datum
+
+27 juni 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+27-03-2017
+
+0.1
+
+Initiële versie.
+
+Operatie BRP
+
+31-3-2017
+
+0.2
+
+•
+•
+•
+
+1e versie van de AH’s Aanvang, Wijziging en Beëindigen Operatie BRP
+onderzoek toegevoegd incl. bijbehorende acties.
+Appendix A gevuld
+UCM toegevoegd
+
+05-04-2017
+
+0.3
+
+Interne review Operatie BRP verwerkt
+
+Operatie BRP
+
+11-04-2017
+
+0.4
+
+•
+•
+•
+
+Operatie BRP
+
+•
+•
+
+Review Operatie BRP verwerkt
+Besluiten uit Ontwerpsessie van 11-04-2017 verwerkt
+Handeling en actie Registratie niet aangetroffen op
+adres toegevoegd
+Handeling en acties Correctie onderzoek toegevoegd
+Interne review Operatie BRP verwerkt
+
+20-04-2017
+
+0.5
+
+Interne review Operatie BRP verwerkt
+
+Operatie BRP
+
+25-04-2017
+
+0.6
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+26-04-2017
+
+0.7
+
+Interne review Operatie BRP verwerkt
+
+Operatie BRP
+
+22-05-2017
+
+0.8
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+01-06-2017
+
+0.9
+
+Review Oranje verwerkt
+
+Operatie BRP
+
+27-06-2017
+
+0.10
+
+Document aangepast m.b.t. documentatierichtlijnen.
+
+Operatie BRP
+
+UCS BY.0.ONZ - Onderzoek
+
+Reviewhistorie
+Versie Review
+0.2
+
+Operatie BRP
+
+0.3
+
+Operatie BRP
+
+0.4
+
+Operatie BRP
+
+0.5
+
+Operatie BRP
+
+0.7
+
+Operatie BRP
+
+0.8
+
+Operatie BRP
+
+Status: Definitief, versie: 0.10
+
+Pagina 2 van 16
+
+UCS BY.0.ONZ - Onderzoek
+
+Inhoudsopgave
+
+1
+
+Inleiding ..................................................................................................................... 5
+1.1
+1.2
+1.3
+1.4
+1.5
+
+2
+
+Doel ........................................................................................................................................5
+Leeswijzer ...............................................................................................................................5
+Referenties ..............................................................................................................................5
+Use case model ........................................................................................................................6
+Wat houdt onderzoek in.............................................................................................................6
+
+Aanvang onderzoek .................................................................................................... 7
+2.1 Functionele context ...................................................................................................................7
+2.1.1 Brondocumenten ...............................................................................................................7
+2.1.2 Betrokken personen ...........................................................................................................7
+2.1.3 Proces ..............................................................................................................................7
+2.1.4 Bijhoudings(voorstel)partijen ..............................................................................................7
+2.1.5 Vastgelegde gegevens ........................................................................................................7
+2.2 Specifieke verwerking ...............................................................................................................8
+
+3
+
+Wijziging onderzoek ................................................................................................... 9
+3.1 Functionele context ...................................................................................................................9
+3.1.1 Brondocumenten ...............................................................................................................9
+3.1.2 Betrokken personen ...........................................................................................................9
+3.1.3 Proces ..............................................................................................................................9
+3.1.4 Bijhoudings(voorstel)partijen ..............................................................................................9
+3.1.5 Vastgelegde gegevens ........................................................................................................9
+3.2 Specifieke verwerking ...............................................................................................................9
+
+4
+
+Beëindiging onderzoek ............................................................................................. 10
+4.1 Functionele context ................................................................................................................. 10
+4.1.1 Brondocumenten ............................................................................................................. 10
+4.1.2 Betrokken personen ......................................................................................................... 10
+4.1.3 Proces ............................................................................................................................ 10
+4.1.4 Bijhoudings(voorstel)partijen ............................................................................................ 10
+4.1.5 Vastgelegde gegevens ...................................................................................................... 10
+4.2 Specifieke verwerking ............................................................................................................. 10
+
+5
+
+Registratie niet aangetroffen op adres ..................................................................... 11
+5.1 Functionele context ................................................................................................................. 11
+5.1.1 Brondocumenten ............................................................................................................. 11
+5.1.2 Betrokken personen ......................................................................................................... 11
+5.1.3 Proces ............................................................................................................................ 11
+5.1.4 Bijhoudings(voorstel)partijen ............................................................................................ 11
+5.1.5 Vastgelegde gegevens ...................................................................................................... 11
+5.2 Specifieke verwerking ............................................................................................................. 11
+
+6
+
+Correctie onderzoek ................................................................................................. 12
+6.1 Functionele context ................................................................................................................. 12
+6.1.1 Brondocumenten ............................................................................................................. 12
+6.1.2 Betrokken personen ......................................................................................................... 12
+6.1.3 Proces ............................................................................................................................ 12
+6.1.4 Bijhoudings(voorstel)partijen ............................................................................................ 12
+6.1.5 Vastgelegde gegevens ...................................................................................................... 12
+6.2 Specifieke verwerking ............................................................................................................. 13
+
+7
+
+Acties ....................................................................................................................... 14
+7.1
+7.2
+7.3
+
+Registratie aanvang onderzoek ................................................................................................. 14
+Registratie wijziging onderzoek ................................................................................................ 14
+Registratie beëindiging onderzoek............................................................................................. 14
+
+Status: Definitief, versie: 0.10
+
+Pagina 3 van 16
+
+UCS BY.0.ONZ - Onderzoek
+
+7.4
+7.5
+7.6
+7.7
+
+Registratie aangetroffen op adres ............................................................................................. 15
+Verval onderzoek .................................................................................................................... 15
+Correctieverval onderzoek ....................................................................................................... 15
+Correctieregistratie onderzoek .................................................................................................. 15
+
+Appendix A – BZVU en toegestane indienende partijen .................................................. 16
+
+Status: Definitief, versie: 0.10
+
+Pagina 4 van 16
+
+UCS BY.0.ONZ - Onderzoek
+
+1 Inleiding
+1.1
+
+Doel
+
+De module ‘Onderzoek’ bevat handelingen en acties waarmee een onderzoek naar de gegevens op
+een persoonslijst kan worden gestart, gewijzigd, afgesloten of gecorrigeerd. Naast een onderzoek
+naar opgenomen persoonsgegevens is ook een onderzoek naar niet opgenomen (d.w.z.
+ontbrekende) gegevens mogelijk. Specifiek voor adresonderzoeken is er daarnaast een aparte
+handeling waarmee geregistreerd kan worden dat een persoon niet op het adres is aangetroffen.
+Het doel van dit document is om de afhandeling van deze handelingen te beschrijven.
+
+1.2
+
+Leeswijzer
+
+Per administratieve handeling wordt de functionele context en specifieke verwerking beschreven.
+De functionele context beschrijft de situatie waarin de administratieve handeling van toepassing is.
+Verder wordt de ‘peildatum’ voor regels met een tijdsaspect gedefinieerd.
+In de specifieke verwerking wordt beschreven welke acties relevant zijn voor de administratieve
+handeling en wordt per actie eventuele specifieke functionaliteit binnen de context van de
+handeling benoemd.
+Voor de definitie van het invoerbericht en bedrijfsregels die bij een administratieve handeling horen
+wordt verwezen naar de relevante hoofdstukken in ‘UCS BY.0.ONZ - Bijlage Registreer onderzoek’
+[1] en ‘UCS BY.0.ONZ - Bijlage Corrigeer onderzoek’ [6].
+De beschrijving van de generieke functionaliteit van de acties staat beschreven in hoofdstuk 7.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+UCS BY.0.ONZ - Bijlage Registreer onderzoek
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving - Onderzoek
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving - Formele en Materiële Historie
+
+Operatie BRP
+
+-
+
+-
+
+4
+
+Architectuur Basisregistratie Personen
+
+Operatie BRP
+
+-
+
+-
+
+5
+
+ASP – Corrigeren
+
+Operatie BRP
+
+-
+
+-
+
+6
+
+UCS BY.0.ONZ – Bijlage Corrigeer onderzoek
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 0.10
+
+Pagina 5 van 16
+
+UCS BY.0.ONZ - Onderzoek
+
+1.4
+
+Use case model
+
+In onderstaand use case model staan alle administratieve handelingen voor de module Onderzoek.
+Hierin is te zien dat alle administratieve handelingen subtype zijn van het supertype ‘Afhandeling
+verzoek’. De laatste beschrijft de generieke afhandeling van een verzoek zoals relevant is voor de
+verwerking van alle handelingen.
+
+1.5
+
+Wat houdt onderzoek in
+
+Wanneer wordt getwijfeld aan de juistheid van gegevens die in de BRP zijn opgenomen kan de
+verantwoordelijke bijhoudingspartij besluiten om de gegevens in onderzoek te plaatsen. Als de
+gegevens aan afnemers geleverd worden, wordt de aanduiding dat de gegevens in onderzoek staan
+meegeleverd. Voor meer informatie zie paragraaf 5.4 ‘Onderzoek, verificatie en terugmelding’ van
+Architectuur Basisregistratie Personen [4].
+Zodra de twijfel omtrent de gegevens die in onderzoek staan is weggenomen – door middel van
+een correctie of nadat is vastgesteld dat het gegeven/de gegevens juist zijn – neemt de
+verantwoordelijke bijhoudingspartij in de BRP op dat het onderzoek is afgerond.
+Naast een onderzoek naar in de BRP opgenomen persoonsgegevens is het ook mogelijk om aan te
+geven dat er een onderzoek is naar niet opgenomen (d.w.z. ontbrekende) gegevens. Hiervan kan
+bijvoorbeeld sprake zijn als er een vermoeden bestaat dat een persoon gehuwd is, maar het
+huwelijk niet in de BRP is opgenomen. Dit onderzoeksgegeven wordt niet geleverd maar is wel
+zichtbaar voor de bijhouder.
+Voor meer informatie over de modellering en werking van onderzoek zie Aspectbeschrijving Onderzoek [2].
+
+Status: Definitief, versie: 0.10
+
+Pagina 6 van 16
+
+UCS BY.0.ONZ - Onderzoek
+
+2 Aanvang onderzoek
+2.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Aanvang onderzoek’ is het registreren van een nieuw
+onderzoek naar (opgenomen of ontbrekende) gegevens op de persoonslijst in de BRP. Een
+bijhouder kan een onderzoek starten naar aanleiding van een terugmelding van een andere partij
+of naar aanleiding van eigen twijfel over de betreffende gegevens.
+Bij de start van een onderzoek geeft de bijhouder de ‘Datum aanvang’ en optioneel een
+‘Omschrijving’ op. Bovendien moet er minimaal één gegeven in onderzoek worden geplaatst. Ten
+aanzien van de gegevens die in onderzoek worden geplaatst wordt gecontroleerd of de partij die
+dat doet de bijhoudingsverantwoordelijke is. Verder gelden er beperkingen met betrekking tot
+welke gegevens in onderzoek kunnen worden geplaatst. Alleen de gegevens van de juridische
+persoonslijst kunnen in onderzoek worden geplaatst. De volgende gegevens kunnen niet in
+onderzoek worden geplaatst:
+•
+
+Onderzoeksgegevens zelf, te weten:
+o Objecttype ‘Onderzoek’ en onderliggende attributen
+o Objecttype ‘Gegeven in onderzoek’ en onderliggende attributen
+
+•
+
+(Gegevens van) voorkomens die naar de formele historie zijn vervallen
+
+•
+
+Objecttype ‘Persoon \ Verificatie’ en onderliggende attributen
+
+•
+
+Objecttype ‘Persoon \ Afnemerindicatie’ en onderliggende attributen
+
+•
+
+Verantwoordingsgegevens, te weten:
+o ‘Tijdstip registratie’ van alle groepen
+o ‘Actie inhoud’ van alle groepen
+o ‘Actie aanpassing geldigheid’ van alle groepen met materiële historie
+o Groep ‘Afgeleid administratief’ en onderliggende attributen
+NB ‘Tijdstip verval’ en ‘Nadere aanduiding verval’ mogen ook niet in onderzoek worden
+geplaatst, maar dat wordt al afgedekt doordat (gegevens van) vervallen voorkomens
+niet in onderzoek mogen worden geplaatst.
+
+•
+
+‘Administratienummer’ van een persoon (alleen in de duale periode). Van gerelateerden
+mag wel het Administratienummer in onderzoek worden gezet. Van hen mag het immers
+ook gecorrigeerd worden en van hoofdpersonen gedurende de duale periode niet.
+
+Zodra een onderzoek in de BRP is aangemaakt krijgt het automatisch de status ‘In uitvoering’.
+2.1.1
+
+Brondocumenten
+
+Voor onderzoekshandelingen geldt dat alle soorten brondocumenten worden toegestaan.
+Zie paragraaf 2.3.1 van Aspectbeschrijving – Onderzoek [2].
+2.1.2
+•
+
+Hoofdpersoon (ingezetene)
+
+2.1.3
+•
+
+Betrokken personen
+
+Proces
+
+Geen bijzonderheden
+
+2.1.4
+
+Bijhoudings(voorstel)partijen
+
+Alleen de bijhoudingspartij van de hoofdpersoon kan een onderzoek aanvangen.
+2.1.5
+•
+
+Vastgelegde gegevens
+
+Onderzoek
+o Datum aanvang
+
+Status: Definitief, versie: 0.10
+
+Pagina 7 van 16
+
+UCS BY.0.ONZ - Onderzoek
+
+•
+
+o Omschrijving (optioneel)
+o Status
+Gegeven in onderzoek
+o Element
+o Object sleutel gegeven (optioneel)
+o Voorkomen sleutel gegeven (optioneel)
+
+‘Object sleutel gegeven’ en ‘Voorkomen sleutel’ gegeven sluiten elkaar uit binnen een ‘Gegeven in
+onderzoek’.
+Bij een onderzoek naar een ontbrekend gegeven wordt van het ‘Gegeven in onderzoek’ alleen
+‘Element’ opgenomen.
+
+2.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie aanvang onderzoek
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang’.
+
+Status: Definitief, versie: 0.10
+
+Pagina 8 van 16
+
+UCS BY.0.ONZ - Onderzoek
+
+3 Wijziging onderzoek
+3.1
+
+Functionele context
+
+In paragraaf 2.2 van Aspectbeschrijving – Onderzoek [2] staat toegelicht dat de scope van een
+onderzoek niet mag wijzigen. Er is daarom geen mogelijkheid om expliciet nieuwe gegevens aan
+een bestaand onderzoek toe te voegen. Met de administratieve handeling ‘Wijziging onderzoek’ is
+het alleen mogelijk om de status van het onderzoek te wijzigen. Hierna wordt per status van het
+onderzoek aangegeven wat de toegestane status wijzigingen zijn:
+•
+
+‘In uitvoering’: De status kan worden gewijzigd in ‘Gestaakt’.
+
+•
+
+‘Gestaakt’: De status kan worden gewijzigd in ‘In uitvoering’.
+
+•
+
+‘Afgesloten’: De status kan niet gewijzigd worden.
+
+Een onderzoek kan in de status ‘Gestaakt’ worden gezet om uit te drukken dat het onderzoek stil
+ligt. Dat doet zich bijvoorbeeld voor als gewacht wordt op niet eenvoudig te verkrijgen stukken uit
+het buitenland. Het onderzoek wordt dan niet afgesloten (en misschien wel nooit), omdat nog
+steeds aan de juistheid van de gegevens wordt getwijfeld.
+Indien gegevens niet correct zijn kunnen deze door middel van de administratieve handeling
+‘Correctie onderzoek’ gecorrigeerd worden.
+3.1.1
+
+Brondocumenten
+
+Voor onderzoeksafdelingen geldt dat alle soorten brondocumenten worden toegestaan.
+Zie paragraaf 2.3.1 van Aspectbeschrijving – Onderzoek [2].
+3.1.2
+•
+
+De persoon waar het onderzoek betrekking op heeft (‘Onderzoek.Persoon’).
+
+3.1.3
+•
+
+Betrokken personen
+
+Proces
+
+Geen bijzonderheden
+
+3.1.4
+
+Bijhoudings(voorstel)partijen
+
+Alleen de bijhoudingspartij van de persoon waar het onderzoek betrekking op heeft kan een
+onderzoek wijzigen.
+3.1.5
+•
+
+3.2
+
+Vastgelegde gegevens
+
+Onderzoek
+o Status
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie wijziging onderzoek
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang’.
+
+Status: Definitief, versie: 0.10
+
+Pagina 9 van 16
+
+UCS BY.0.ONZ - Onderzoek
+
+4 Beëindiging onderzoek
+4.1
+
+Functionele context
+
+Zodra de twijfel omtrent de gegevens die in onderzoek staan is weggenomen – door middel van
+een correctie of nadat is vastgesteld dat het gegeven/de gegevens juist zijn – sluit de
+verantwoordelijke bijhoudingspartij het onderzoek in de BRP.
+Het afsluiten van een onderzoek is altijd een expliciete actie van de gebruiker door middel van de
+administratieve handeling ‘Beëindiging onderzoek’. De BRP start of sluit nooit automatisch een
+onderzoek. Een onderzoek wordt altijd in zijn geheel afgesloten en kan niet voor een deel van de
+gegevens die in onderzoek staan worden afgesloten, zie ontwerpbeslissing 1 van
+Aspectbeschrijving – Onderzoek [2]. Een eenmaal afgesloten onderzoek kan uitsluitend met de
+administratieve handeling ‘Correctie onderzoek’ worden heropend. Voor meer informatie zie
+hoofdstuk 6.
+4.1.1
+
+Brondocumenten
+
+Voor onderzoekshandelingen geldt dat alle soorten brondocumenten worden toegestaan.
+Zie paragraaf 2.3.1 van Aspectbeschrijving – Onderzoek [2].
+4.1.2
+•
+
+De persoon waar het onderzoek betrekking op heeft (‘Onderzoek.Persoon’).
+
+4.1.3
+•
+
+Betrokken personen
+
+Proces
+
+Geen bijzonderheden
+
+4.1.4
+
+Bijhoudings(voorstel)partijen
+
+Alleen de bijhoudingspartij van de persoon waar het onderzoek betrekking op heeft kan een
+onderzoek beëindigen.
+4.1.5
+•
+
+4.2
+
+Vastgelegde gegevens
+
+Onderzoek
+o Datum einde
+o Status
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie einde onderzoek
+Geen bijzonderheden voor deze actie
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum einde’.
+
+Status: Definitief, versie: 0.10
+
+Pagina 10 van 16
+
+UCS BY.0.ONZ - Onderzoek
+
+5 Registratie niet aangetroffen op adres
+5.1
+
+Functionele context
+
+Met deze handeling wordt vastgelegd dat een persoon niet aangetroffen is op zijn actuele
+Nederlandse woonadres. Om dit vast te kunnen leggen moet er een openstaand onderzoek bij het
+actuele Nederlandse woonadres in de BRP zijn opgenomen. Eenmaal vastgelegd kan de registratie
+van deze indicator niet meer met een actualisatie aangepast worden. Indien het onjuist was kan dit
+wel hersteld worden met de administratieve handeling ‘Correctie adres’.
+De controle of een persoon aangetroffen is op zijn adres wordt in een laat stadium van het
+onderzoek uitgevoerd en alleen geregistreerd als de bijhouder hier zeker van is.
+5.1.1
+
+Brondocumenten
+
+Voor onderzoekshandelingen geldt dat alle soorten brondocumenten worden toegestaan.
+Zie paragraaf 2.3.1 van Aspectbeschrijving – Onderzoek [2].
+5.1.2
+•
+5.1.3
+•
+
+Betrokken personen
+Hoofdpersoon (ingezetene)
+Proces
+
+Geen bijzonderheden
+
+5.1.4
+
+Bijhoudings(voorstel)partijen
+
+Alleen de bijhoudingspartij van de hoofdpersoon kan registreren dat de persoon niet op het adres
+is aangetroffen.
+5.1.5
+•
+
+Vastgelegde gegevens
+
+Persoon \ Adres
+o Persoon aangetroffen op adres? (altijd met waarde ‘Nee’)
+
+5.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie aangetroffen op adres 1
+Geen bijzonderheden voor deze actie
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’.
+
+1
+
+De naam van de handeling (Registratie niet aangetroffen op adres) en de actie (Registratie aangetroffen op
+
+adres) wijken van elkaar af. Dit komt omdat de naam van de administratieve handeling aansluit op een
+gebeurtenis in de werkelijke wereld. In dit geval is geconstateerd dat een persoon niet is aangetroffen op het
+adres waarop deze is ingeschreven. De naam van de actie wordt in de meeste gevallen gebaseerd op de
+onderliggende gegevens die vastgelegd worden. Dit betreft dan een object, een gegevensgroep of in dit geval
+een specifiek element binnen een groep; te weten ‘Persoon aangetroffen op adres?’. In geval van actie die
+meerdere objecten/gegevensgroepen raken (de zogenaamde samengestelde acties) wordt hiervan afgeweken;
+bv. in het geval van ‘Registratie geborene’ bij de administratieve handeling 'Geboorte in Nederland’.
+
+Status: Definitief, versie: 0.10
+
+Pagina 11 van 16
+
+UCS BY.0.ONZ - Onderzoek
+
+6 Correctie onderzoek
+6.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Correctie onderzoek’ is het corrigeren van de gegevens
+van een onderzoek of het geheel laten vervallen van een onderzoek.
+Voorbeelden van situaties waarin deze handeling kan worden toegepast:
+•
+•
+•
+•
+•
+
+Het onderzoek is ten onrechte geregistreerd;
+De aanvangs- en/of beëindigingsdatum van het onderzoek is niet correct;
+Het onderzoek is ten onrechte afgesloten;
+De omschrijving van het onderzoek is niet correct;
+De status is niet correct.
+
+Met deze handeling is het mogelijk om een heel onderzoek te laten vervallen (‘Onderzoek’ en
+onderliggende ‘Gegevens in onderzoek’). Daarnaast is het mogelijk om de gegevens van een
+‘Onderzoek’ te corrigeren. Dit laatste houdt in dat de ‘Datum aanvang’, ‘Datum einde’,
+‘Omschrijving’ en ‘Status’ gecorrigeerd kunnen worden. Het objecttype ‘Gegeven in onderzoek’ kan
+niet gecorrigeerd worden omdat dan de semantische scope van het onderzoek zou worden
+aangepast. Het wijzigen van de scope van het onderzoek is conform ontwerpbeslissing 1 van
+Aspectbeschrijving – Onderzoek [2] niet toegestaan. Als een ‘Gegeven in onderzoek’ niet juist is
+dan dient dat te worden hersteld door het hele onderzoek (inclusief de ‘Gegevens in onderzoek’) te
+laten vervallen en een nieuw onderzoek te starten.
+6.1.1
+
+Brondocumenten
+
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [5].
+6.1.2
+•
+6.1.3
+•
+6.1.4
+
+Betrokken personen
+De persoon waar het onderzoek betrekking op heeft (‘Onderzoek.Persoon’).
+Proces
+Geen bijzonderheden
+Bijhoudings(voorstel)partijen
+
+Alleen de bijhoudingspartij van de persoon waar het onderzoek betrekking op heeft kan het
+onderzoek corrigeren.
+6.1.5
+
+Vastgelegde gegevens
+
+Indien een onderzoek geheel vervalt, door middel van de actie ‘Verval onderzoek’, vervallen van
+het betreffende onderzoek alle bestaande voorkomens van de volgende groepen naar de formele
+historie:
+•
+•
+
+Onderzoek.Standaard
+Gegeven in onderzoek.Identiteit
+
+Indien het onderzoek gecorrigeerd wordt, door middel van de acties ‘Correctieverval onderzoek’ en
+‘Correctieregistratie onderzoek’, vervalt respectievelijk een bestaand voorkomen van de volgende
+groep naar de formele historie en wordt er een nieuw voorkomen van deze groep geregistreerd:
+•
+
+Onderzoek.Standaard
+
+Optioneel kan bij het laten vervallen van een voorkomen een Nadere aanduiding verval worden
+vastgelegd. Indien de ‘Nadere aanduiding verval’ gelijk is aan ‘S’ (Strijdig met de openbare orde),
+moet ter verantwoording hiervan als bron een rechtsgrond worden opgenomen waarvoor geldt dat
+deze leidt tot strijdigheid.
+
+Status: Definitief, versie: 0.10
+
+Pagina 12 van 16
+
+UCS BY.0.ONZ - Onderzoek
+
+6.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+•
+•
+
+Verval Onderzoek
+Geen bijzonderheden voor deze actie
+Correctieverval onderzoek
+Geen bijzonderheden voor deze actie
+Correctieregistratie onderzoek
+Geen bijzonderheden voor deze actie
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+Status: Definitief, versie: 0.10
+
+Pagina 13 van 16
+
+UCS BY.0.ONZ - Onderzoek
+
+7 Acties
+De generieke functionaliteit van de relevante acties binnen de context van deze module is in dit
+hoofdstuk per actie beschreven.
+Per actie worden de gegevensgroepen en attributen beschreven die bijgehouden worden. Dit
+betreft niet alleen de gegevensgroepen zoals deze in het bijhoudingsbericht zijn opgenomen, maar
+ook de afgeleide verwerkingen door de BRP zelf.
+Alleen de attributen waarvan de waarden worden afgeleid zijn expliciet benoemd. De attributen
+zoals die in het bericht per actie en per gegevensgroep zijn opgenomen worden niet expliciet in dit
+hoofdstuk herhaald.
+Daarnaast wordt de werking van de formele en materiële historie niet expliciet benoemd. Voor
+meer informatie hierover zie Aspectbeschrijving - Formele en Materiële Historie [3].
+
+7.1
+
+Registratie aanvang onderzoek
+
+Met deze actie wordt het onderzoek gestart. De gegevens van de volgende groepen worden
+geregistreerd:
+•
+•
+
+•
+
+7.2
+
+Onderzoek.Identiteit
+Onderzoek.Standaard
+De volgende gegevens worden als volgt afgeleid geregistreerd.
+Element
+
+Afleiding
+
+Status
+
+“In uitvoering”
+
+Gegeven in onderzoek.Identiteit
+De volgende gegevens worden als volgt afgeleid geregistreerd.
+Element
+
+Afleiding
+
+Onderzoek
+
+Afgeleid van Onderzoek.ID
+
+Registratie wijziging onderzoek
+
+Met deze actie kan alleen de ‘Status’ gewijzigd worden. De gegevens van de volgende groep
+worden geregistreerd:
+•
+
+7.3
+
+Onderzoek.Standaard
+De ‘Status’ wordt overgenomen uit het bericht. De overige gegevens worden overgenomen
+van het voorkomen dat door deze actie vervalt.
+
+Registratie beëindiging onderzoek
+
+Met deze actie wordt het onderzoek afgesloten. De gegevens van de volgende groep worden
+geregistreerd:
+•
+
+Onderzoek.Standaard
+De volgende gegevens worden als volgt afgeleid.
+Element
+
+Afleiding
+
+Omschrijving
+
+Overnemen van het voorkomen dat door deze Actie vervalt.
+
+Datum aanvang
+
+Overnemen van het voorkomen dat door deze Actie vervalt.
+
+Status
+
+‘Afgesloten’
+
+Status: Definitief, versie: 0.10
+
+Pagina 14 van 16
+
+UCS BY.0.ONZ - Onderzoek
+
+7.4
+
+Registratie aangetroffen op adres
+
+Met deze actie wordt vastgelegd dat een persoon niet op zijn actuele woonadres in Nederland
+aangetroffen is. De gegevens van de volgende groep worden geregistreerd:
+•
+
+7.5
+
+Adres.Standaard
+‘Persoon aangetroffen op adres?’ en ‘Datum aanvang geldigheid’ worden uit het bericht
+overgenomen. De overige gegevens worden overgenomen van het voorkomen dat door
+deze actie vervalt. Het betreft altijd het actuele adres van de persoon.
+
+Verval onderzoek
+
+Het verval wordt geregistreerd van de voorkomens van de volgende groep van het in het bericht
+aangewezen onderzoek:
+•
+
+Onderzoek.Standaard
+
+De aan het onderzoek gekoppelde voorkomens van de groep ‘Gegeven in onderzoek.Identiteit’
+komen ook te vervallen.
+
+7.6
+
+Correctieverval onderzoek
+
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep:
+•
+
+7.7
+
+Onderzoek.Standaard
+
+Correctieregistratie onderzoek
+
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+
+Onderzoek.Standaard
+
+Status: Definitief, versie: 0.10
+
+Pagina 15 van 16
+
+UCS BY.0.ONZ - Onderzoek
+
+Appendix A – BZVU en toegestane indienende partijen
+In onderstaande tabel staat per handeling aangegeven of het berichtelement BZVU (Bezien vanuit
+persoon) van toepassing is – inclusief motivatie – en de toegestane indienende partijen – ook
+inclusief motivatie.
+Wanneer BZVU niet van toepassing is zal het berichtelement niet aanwezig zijn in het bericht.
+Bij toegestane indienende partijen wordt vermeld of het bijhoudingsvoorstel (ook) door andere dan
+de eigen gemeente mag worden ingestuurd. In onderstaande tabel kan deze kolom de volgende
+waarden aannemen:
+•
+•
+•
+
+A(lle): het bijhoudingsvoorstel mag door elke bijhoudingspartij worden ingediend;
+H(uidige): het bijhoudingsvoorstel mag alleen door de huidige bijhoudingspartij worden
+ingediend;
+B(eperkt): het bijhoudingsvoorstel mag door een beperkt aantal bijhoudingspartijen
+worden ingediend. In de motivatie staat vermeld welke partijen dat zijn.
+
+Administratieve
+Handeling
+
+BZVU?
+
+Motivatie
+
+Toegestane
+indienende
+partij(en)
+
+Motivatie
+
+Aanvang onderzoek
+
+Nee
+
+Onderzoek heeft altijd
+betrekking op één
+persoonslijst
+
+H
+
+Onderzoek mag alleen door
+de huidige bijhoudingspartij
+gestart worden.
+
+Wijziging onderzoek
+
+Nee
+
+Onderzoek heeft altijd
+betrekking op één
+persoonslijst
+
+H
+
+Onderzoek mag alleen door
+de huidige bijhoudingspartij
+gewijzigd worden.
+
+Beëindiging
+onderzoek
+
+Nee
+
+Onderzoek heeft altijd
+betrekking op één
+persoonslijst
+
+H
+
+Onderzoek mag alleen door
+de huidige bijhoudingspartij
+beëindigd worden.
+
+Registratie niet
+aangetroffen op
+adres
+
+Nee
+
+Onderzoek heeft altijd
+betrekking op één
+persoonslijst
+
+H
+
+Onderzoek mag alleen door
+de huidige bijhoudingspartij
+bijgehouden worden.
+
+Correctie onderzoek
+
+Nee
+
+Onderzoek heeft altijd
+betrekking op één
+persoonslijst
+
+H
+
+Onderzoek mag alleen door
+de huidige bijhoudingspartij
+gecorrigeerd worden.
+
+Status: Definitief, versie: 0.10
+
+Pagina 16 van 16
+
+

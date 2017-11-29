@@ -1,0 +1,899 @@
+UC101 Vul persoonsgegevens in BRP initieel
+
+2.9
+
+Datum
+Status
+
+13-04-2017
+Definitief
+
+Definitief | 2.9| UC101 Vul persoonsgegevens in BRP initieel | 13-04-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1 BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+1.1.1 User story ...................................................................................................................................4
+1.2 REFERENTIES ........................................................................................................................................5
+1.3 PRECONDITIE ........................................................................................................................................5
+
+2
+
+VERLOOP .................................................................................................................................................6
+2.1 REGULIER VERLOOP ..............................................................................................................................6
+2.1.1 Proces 1: Aanleveren bronberichten voor initiële vulling .........................................6
+2.1.2 Proces 2: Verwerken aangeleverde bronberichten voor initiële vulling ..............7
+2.2 ALTERNATIEF VERLOOP ........................................................................................................................7
+2.2.1 Conversiefout ............................................................................................................................7
+2.2.2 Persoonsgegevens al in BRP ................................................................................................7
+2.3 POSTCONDITIES ...................................................................................................................................7
+
+3
+
+SPECIALE REQUIREMENTS ...........................................................................................................8
+3.1 OORSPRONKELIJKE NIET GECONVERTEERDE GEGEVENS OPVRAAGBAAR ..........................................8
+3.2 INITIËLE VULLING EN PERMANENTE SYNCHRONISATIE ......................................................................8
+3.3 SAMENSTELLING INITIËLE VULLING ....................................................................................................8
+3.3.1 Selectie van bronberichten en meta data ......................................................................8
+3.3.2 Vorm en inhoud ........................................................................................................................8
+3.4 CONVERTEREN PL.................................................................................................................................9
+3.5 LOGGING .............................................................................................................................................10
+3.6 LOGGEN BIJZONDERE SITUATIES ......................................................................................................11
+3.7 PROCESSEN, PARALLELLISATIE EN HERSTARTBAARHEID .................................................................11
+3.7.1 Procesverloop ..........................................................................................................................11
+3.7.2 Parallellisatie............................................................................................................................12
+3.7.3 Herstartbaarheid....................................................................................................................12
+
+4
+
+OPMERKINGEN ..................................................................................................................................13
+
+Operatie BRP
+
+Pagina 2 van 13
+
+Definitief | 2.9| UC101 Vul persoonsgegevens in BRP initieel | 13-04-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+20-12-2011
+17-08-2012
+27-08-2012
+
+0.1
+0.2
+0.3
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+07-09-2012
+26-09-2012
+
+0.4
+0.5
+
+30-10-2013
+
+0.6
+
+14-11-2013
+
+1.0
+
+17-09-2014
+
+1.1
+
+19-09-2014
+
+1.2
+
+28-07-2015
+04-09-2015
+18-11-2015
+
+2.0
+2.1
+2.2
+
+29-1-2016
+27-01-2017
+30-01-2017
+02-02-2017
+
+2.3
+2.4
+2.5
+2.6
+
+21-02-2017
+
+2.7
+
+23-02-2017
+13-04-2017
+
+2.8
+2.9
+
+Initieel
+Wijzigingen n.a.v. workshop initiële vulling
+Samenvoegen "samenstellen, inlezen en
+verwerken" document.
+Reviewcommentaar verwerkt
+Aanpassingen in precondities, herindeling
+enkele paragrafen
+Bijlage 1 verwijderd, Referenties naar
+andere documenten geactualiseerd
+Reviewcommentaar verwerkt
+Status van document gewijzigd in ‘Definitief
+voor release 2.1.01’
+Document definitief gemaakt voor release
+2.2
+Paragraaf 6.2: issue mbt stamtabellen BRP
+verwijderd.
+Referenties geactualiseerd
+Versie aangemaakt voor release 3.1
+Referenties bijgewerkt agv LO 3.9
+INTEST-1250: in paragraaf 5.4 beschreven
+hoe omgaan wordt met berichten van voor
+de in productie name van LO 3.9
+Referenties aangepast
+Document opgeschoond
+Reviewcommentaar verwerkt
+Mogelijkheid tot ingeven van selectiecriteria
+verwijderd. Referenties bijgewerkt
+Aanpassingen vanwege
+documentatierichtlijnen
+Controleren op PRE061 toegevoegd
+Verwerken reviewcommentaar
+documentatierichtlijnen
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+29-08-2012
+30-08-2012
+30-10-2013
+30-01-2017
+11-04-2017
+
+0.3
+0.3
+0.6
+0.7
+0.8
+
+Review
+Review
+Review
+Review
+Review
+
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+
+Operatie BRP
+
+product owner
+development
+product owner, developmentteam
+op documentatierichtlijnen
+
+BRP
+BRP
+BRP
+BRP
+BRP
+
+Pagina 3 van 13
+
+Definitief | 2.9| UC101 Vul persoonsgegevens in BRP initieel | 13-04-2017
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Dit document beschrijft de use case voor het initieel vullen van BRP (de centrale voorziening in
+het BRP-stelsel) met persoonsgegevens uit de GBA-V (de centrale verstrekking component
+binnen het LO3 stelsel).
+Bij de start van de initiële vulling is de uitgangssituatie een gevulde GBA-V en een lege BRP. Alle
+persoonsgegevens worden op dat moment bijgehouden in het LO3 stelsel, onder
+verantwoordelijkheid van gemeenten en RNI. Na het initieel vullen zijn alle persoonsgegevens uit
+GBA-V opgenomen in BRP, uitgezonderd PL-en die opgeschort zijn met reden ‘W’.
+Het initieel vullen van BRP is onderdeel van het synchroon maken en houden van
+persoonsgegevens in GBA-V en BRP gedurende de implementatieperiode. De persoonsgegevens
+voor de initiële vulling worden verkregen uit een kopie van de productiedatabase van GBA-V.
+Hieruit wordt alle persoonslijsten (PL-en) geselecteerd en wordt het bronbericht (Lg01 of La01)
+waaruit die PL is ontstaan aan de berichtenadministratie ontleend en opgenomen in de initiële
+vulling. Dit betreft de samenstelling van de initiële vulling.
+Vervolgens worden de bronberichten in de initiële vulling geconverteerd en gebruikt om BRP
+initieel te vullen. Dit betreft de verwerking van de initiële vulling.
+
+Het initieel vullen van BRP valt daarmee uiteen in twee (proces) stappen die volgordelijk
+uitgevoerd dienen te worden:
+1. samenstellen initiële vulling.
+2. verwerken initiële vulling.
+De twee (proces)stappen kunnen onafhankelijk van elkaar gestart worden.
+Zodra vanuit ‘samenstellen initiële vulling’ het eerste bronbericht is toegevoegd aan de initiële
+vulling dan kan dat verwerkt worden door proces ‘verwerken initiële vulling’.
+
+1.1.1
+
+User story
+• Als ISC-beheerder wil ik de BRP initieel vullen met de persoonsgegevens uit GBA-V.
+• Als ISC-beheerder wil ik dat persoonsgegevens die bij de initiële vulling niet geconverteerd
+kunnen worden, gestructureerd gelogd worden met een specifieke reden van uitval, zodat
+verklaard kan worden waarom deze persoonsgegevens niet in BRP opgenomen zijn.
+• Als ISC-beheerder wil ik dat bijzondere situaties bij de conversie van LO3 naar BRP
+gestructureerd gelogd worden, zodat het conversieresultaat in het algemeen en verschillen
+tussen 'bron en terugconversie', beter verklaard kunnen worden.
+
+Operatie BRP
+
+Pagina 4 van 13
+
+Definitief | 2.9| UC101 Vul persoonsgegevens in BRP initieel | 13-04-2017
+
+1.2
+
+1.3
+
+Referenties
+#
+
+Document
+
+Organisatie
+
+Versie
+
+Datum
+
+[LO-GBA]
+
+Logisch Ontwerp GBA
+
+RvIG
+
+3.10
+
+08-10-2016
+
+[BI-CONV]
+
+Documentatie bidirectionele conversie
+
+Operatie BRP
+
+-
+
+-
+
+Preconditie
+• Er is een kopie van de GBA-V-database beschikbaar voor ISC t.b.v. het samenstellen van de
+initiële vulling.
+• De persoonsgegevens uit GBAV-V voldoen aan baseline 1.
+• De permanente synchronisatie van LO3 naar BRP is actief.
+• De persoonsgegevens in BRP zijn leeg1, de BRP-stamtabellen (landelijke tabellen) zijn wel
+gevuld.
+
+1 Uitzondering is de situatie waarin het proces van initiële vulling na een onderbreking herstart wordt.
+
+Operatie BRP
+
+Pagina 5 van 13
+
+Definitief | 2.9| UC101 Vul persoonsgegevens in BRP initieel | 13-04-2017
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+In het regulier verloop is de interactie van de actor met het systeem eerst globaal beschreven.
+Daarna zijn deze stappen meer gedetailleerd in paragrafen uitgewerkt en wordt indien nodig
+verwezen naar aanvullende informatie in hoofdstuk 7. Deze use case start wanneer de ISCbeheerder de opdracht krijgt de initiële vulling uit te voeren.
+De initieel vullen van BRP bestaat uit 2 processen:
+• Proces 1: Aanleveren bronberichten voor initiële vulling. Het systeem selecteert uit de GBAV-kopie de berichten voor de initiële vulling
+• Proces 2: Verwerken aangeleverde bronberichten voor initiële vulling. Het systeem verwerkt
+de aangeleverde bronberichten tot persoonsgegevens in BRP.
+Deze twee processtappen kunnen parallel worden uitgevoerd (zie par. 3.7).
+Nadat deze 2 processen volledig zijn uitgevoerd, kunnen rapportages met tellingen worden
+gegenereerd.
+
+2.1.1
+
+Proces 1: Aanleveren bronberichten voor initiële vulling
+In de eerste stap in het globaal verloop wordt de initiële vulling samengesteld. Het samenstellen
+vindt volgens het volgende scenario plaats:
+
+{Start samenstellen initiële vulling}
+1. De ISC-beheerder geeft de samenstelling van de initiële vulling te willen starten.
+{Selecteer PL-en}
+2. Het systeem selecteert alle PL-en die in de GBA-V-database zijn opgenomen met
+uitzonderling van PL-en waarvan de reden opschorting is gevuld met waarde ‘W’ of
+de status is gevuld met de waarde ‘Dubbel BSN’ (zie par. 3.3).
+{Samenstellen initiële vulling}
+3. Het systeem levert van elke geselecteerde PL uit GBA-V het bijbehorende bronbericht.
+{Metagegevens leveren}
+4. Het systeem vult het bronbericht (Lg01 of La01) aan met meta gegevens (zie par.3.3).
+
+Operatie BRP
+
+Pagina 6 van 13
+
+Definitief | 2.9| UC101 Vul persoonsgegevens in BRP initieel | 13-04-2017
+
+2.1.2
+
+Proces 2: Verwerken aangeleverde bronberichten voor initiële vulling
+De verwerking vindt plaats per bronbericht dat door Proces 1 is aangeleverd. Zodra een
+bronbericht beschikbaar is, kan deze verwerkt worden. Het is niet nodig te wachten tot de gehele
+initiële vulling is samengesteld. Het verwerken houdt in dat de persoonsgegevens in het
+bronbericht worden geconverteerd naar BRP-formaat en vervolgens worden toegevoegd in BRP.
+Het verwerken van de initiële vulling vindt volgens het volgende scenario plaats:
+{Start verwerken initiële vulling}
+1. De ISC-beheerder geeft aan de initiële vulling te willen verwerken.
+{Selecteer de bronberichten}
+2. Het systeem selecteert alle niet-verwerkte bronberichten en doorloopt per geselecteerd
+bronbericht stap 3 t/m 6.
+{Converteer bronbericht}
+3. Het systeem converteert de persoonsgegevens in het bronbericht naar BRP-formaat (Zie
+par. 3.4).
+{Persoonsgegevens toevoegen in BRP}
+4. Het systeem voegt de geconverteerde persoonsgegevens toe in BRP.
+{Registreer de synchronisatie in BRP}
+5. Het systeem registreert het bronbericht (Lg01/La01) waarmee de persoonsgegevens zijn
+toegevoegd in BRP (zie par. 3.3).
+{Log de verwerking van de initiële vulling}
+6. Het systeem logt het resultaat verwerking van de elk bronbericht (zie par.3.5).
+
+2.2
+
+Alternatief verloop
+In het alternatief verloop wordt de interactie van de actor met het systeem beschreven wanneer
+deze interactie afwijkt van het regulier verloop. Indien nodig staat in hoofdstuk aanvullende
+informatie
+
+2.2.1
+
+Conversiefout
+Als op {Converteer bronbericht} blijkt dat het bronbericht niet succesvol geconverteerd kan
+worden dan stopt de verwerking van dit bronbericht en wordt de specifieke fout reden gelogd
+(zie par. 3.5).
+
+2.2.2
+
+Persoonsgegevens al in BRP
+Als op {Persoonsgegevens toevoegen in BRP} wordt geconstateerd dat deze
+persoonsgegevens al eerder in BRP zijn opgenomen, dan stopt de verwerking van dit bronbericht
+en wordt deze fout gelogd (zie par.3.5).
+
+2.3
+
+Postcondities
+• De BRP is initieel gevuld met persoonsgegevens uit GBA-V.
+• Alle geselecteerde bronberichten zijn opgenomen in de registratie.
+• De uitkomsten van de verwerking is gelogd, zodat er tellingen rapportages gemaakt kunnen
+worden.
+
+Operatie BRP
+
+Pagina 7 van 13
+
+Definitief | 2.9| UC101 Vul persoonsgegevens in BRP initieel | 13-04-2017
+
+3
+
+Speciale Requirements
+
+3.1
+
+Oorspronkelijke niet geconverteerde gegevens opvraagbaar
+Zodra een nieuw LO3 bronbericht naar BRP wordt geconverteerd wordt het geregistreerde LO3
+bronbericht daarmee overschreven. Zodoende is van elke persoon waarvoor een conversie van
+LO3 naar BRP heeft plaatsgevonden, het laatste bronbericht opvraagbaar door de beheerder.
+Ook na de implementatieperiode.
+Het LO3 bronbericht wordt gerelateerd aan de Persoon in de BRP-database.
+
+3.2
+
+Initiële vulling en permanente synchronisatie
+Voordat de initiële vulling wordt gestart, moet in GBA-V het proces voor de permanente
+synchronisatie van LO3 naar BRP geactiveerd zijn.
+Zolang de initiële vulling niet is afgerond worden de synchronisaties van LO3 naar BRP nog niet
+door de Migratievoorziening verwerkt maar in plaats daarvan ‘in de wacht’ geplaatst. De
+synchronisatieberichten worden pas verwerkt na afronding van de initiële vulling. Het
+synchronisatieproces wordt dan handmatig gestart.
+De reden voor het ‘in de wacht’ plaatsen van de synchronisatiestroom is dat daardoor de initiële
+vulling een afgebakend proces vormt. Daarnaast geldt dan dat elk te verwerken bronbericht zou
+moeten leiden tot een nieuwe PL in BRP, m.a.w. een A-nummer uit een geconverteerde PL mag
+nog niet voorkomen in BRP.
+De verwerkingslogica van de initiële vulling hoeft daardoor geen rekening te houden met het
+verwerken (of herkennen) van PL-wijzigingen en is daardoor minder complex. Indien bij de
+verwerking van een bronbericht geconstateerd wordt dat een PL al voorkomt in BRP wordt dit als
+een foutsituatie gezien en start een alternatieve Flow (zie par. 2.2.2).
+
+3.3
+
+Samenstelling initiële vulling
+
+3.3.1
+
+Selectie van bronberichten en meta data
+Alle PL-en worden geselecteerd, met uitzondering van de PL-en waarvan de reden opschorting
+bijhouding, rubriek 07.67.20, is gevuld met de waarde 'W'.
+Bij zo'n PL is sprake van een bijzondere situatie. Deze waarde is namelijk op aangeven van de
+gegevensbeheerder GBA-V aangebracht en is niet aanwezig in het Lg01-/La01-bericht van
+waaruit de PL in GBA-V is ontstaan. Een opschorting met reden ‘W’ wordt alleen aangebracht als
+er geen gemeente is die de 'foutieve' PL markeert als opgeschort met reden ‘F’.
+De volgende PL-en worden geselecteerd:
+Alle PL-en waarvoor geldt:
+• de reden opschorting is ongelijk aan ‘W’.
+
+3.3.2
+
+Vorm en inhoud
+Bij elke geselecteerde PL uit de GBA-V wordt het actuele bronbericht (Lg01 of La01) aan de
+berichtenadministratie ontleend en opgenomen in de initiële vulling.
+
+Operatie BRP
+
+Pagina 8 van 13
+
+Definitief | 2.9| UC101 Vul persoonsgegevens in BRP initieel | 13-04-2017
+
+De initiële vulling bestaat dus uit Lg01 en La01 berichten aangevuld met de volgende
+metagegevens:
+Gegeven
+
+Datatype
+
+Vaste lengte
+/opmaak
+
+Toelichting
+
+A-nummer
+
+Numeriek
+
+10
+
+Gemeente van
+inschrijving
+
+Numeriek
+
+4
+
+Datum
+opschorting
+
+Numeriek
+
+8
+
+Indien gevuld waarde uit rubriek
+07.67.10 overnemen.
+
+Reden
+opschorting
+
+Alfanumeriek
+
+1
+
+Indien gevuld waarde uit rubriek
+07.67.20 overnemen.
+
+Datumtijd
+opname in
+GBA-V
+
+Numeriek
+
+14 : JJJJMMDDHHMMSS
+
+column mutatie_dt uit de table
+lo3_pl, aannemende dat bij elke
+update van de PL deze column
+wordt bijgewerkt
+
+Berichtid
+
+Numeriek
+
+19
+
+BerichtID uit de GBA-Vberichtenadministratie
+
+Berichttype
+
+Alfanumeriek
+
+4
+
+Lg01 | La01
+
+GBAV_PL_ID
+
+Numeriek
+
+19
+
+Identificatie van de PL in GBA-V
+
+Bericht
+
+Alfanumeriek,
+Teletex
+
+variabele lengte
+
+Status
+
+Alfanumeriek
+
+variabele lengte
+
+Op iedere persoonslijst wordt de
+preconditie PRE061 (zie
+[BI_CONV]), ter voorkomen van
+dubbele BSN’s, gecontroleerd.
+Als de persoonslijst de
+preconditie niet overtreden, krijgt
+deze de status ‘Geselecteerd’.
+Wordt de preconditie wel
+overtreden, dan krijgt de
+persoonslijst de status ‘Dubbel
+BSN’.
+
+Het formaat van het Lg01 of La01 bericht is beschreven in Logisch Ontwerp GBA [LO-GBA].
+
+3.4
+
+Converteren PL
+Het converteren van de PL van LO3 naar BRP-formaat is beschreven in Documentatie
+bidirectionele conversie [BI-CONV].
+
+Operatie BRP
+
+Pagina 9 van 13
+
+Definitief | 2.9| UC101 Vul persoonsgegevens in BRP initieel | 13-04-2017
+
+3.5
+
+Logging
+Van de initiële vulling wordt een logging aangemaakt, op basis waarvan een verwerkingsrapport
+gemaakt kan worden met de volgende gegevens:
+Gegeven
+
+Toelichting
+
+Aantal geselecteerde PL-en
+
+< aantal PL geselecteerd >
+
+Aantal PL-en met Lg01 bericht
+
+< aantal Lg01 berichten opgenomen >
+
+Aantal PL-en met La01 bericht
+
+< aantal La01 berichten opgenomen >
+
+Aantal PL-en geconverteerd en opgeslagen in
+BRP
+
+< aantal La01/Lg01 berichten opgenomen >
+
+Aantal PL-en geconverteerd en niet opgeslagen
+in BRP
+
+< aantal La01/Lg01 berichten opgenomen >
+
+Aantal niet-geconverteerd i.v.m. Preconditie
+
+< aantal La01/Lg01 berichten opgenomen >
+
+Aantal niet-geconverteerd i.v.m. Technische
+fout
+
+< aantal La01/Lg01 berichten opgenomen >
+
+Als de gegevens van een bepaalde persoon niet in BRP kunnen worden opgenomen of als er bij
+het converteren bijzondere situaties zijn aangetroffen, dan wordt dit gelogd. Te registreren
+gegevens:
+Gegeven
+
+Toelichting
+
+Bericht-id
+
+Bericht ID van het bericht.
+
+A-nummer
+
+A-nummer uit het bericht.
+
+BSN
+
+BSN uit het bericht.
+
+Categorienummer
+
+Categorie nummer van het gegeven waarover gelogd wordt (altijd het
+actuele categorienummer, ook als het een historisch voorkomen
+betreft).
+
+Stapelnummer
+
+Stapelnummer van het gegeven waarover gelogd wordt.
+
+Volgnummer
+
+Volgnummer binnen de stapel ('0' is het actuele voorkomen).
+
+Elementnummer
+
+Element nummer van het gegeven waarover gelogd wordt.
+
+Melding code
+
+Code van de melding.
+
+Melding soort
+
+'Informatie', 'Waarschuwing' of 'Fout'.
+
+Melding omschrijving
+
+De beschrijving van de situatie.
+
+Operatie BRP
+
+Pagina 10 van 13
+
+Definitief | 2.9| UC101 Vul persoonsgegevens in BRP initieel | 13-04-2017
+
+3.6
+
+Loggen bijzondere situaties
+Tijdens de conversie van een PL naar BRP kunnen zich binnen de gegevens situaties voordoen
+die als bijzonder zijn aangemerkt. Een voorbeeld van zo'n situatie is: een stapel van categorie 04
+(Nationaliteit) bevat 2 verschillende nationaliteiten en wordt daarom in de BRP gesplitst in 2
+stapels.
+Deze situaties, die nader ingevuld, worden gelogd als 'Informatie' of 'Waarschuwing' fout level
+(zie par. 3.5).
+
+3.7
+
+Processen, parallellisatie en herstartbaarheid
+Het samenstellen (1) en het verwerken (2) van de initiële vulling worden als afzonderlijke
+stappen gerealiseerd. Bij het samenstellen van de initiële vulling worden de bronberichten
+verzameld en op een queue geplaatst. Het proces dat de bronberichten verwerkt leest uit de
+betreffende queue.
+Zie ook onderstaand schema.
+ISC environment
+
+Samenstellen
+initiële vulling
+
+Start
+
+Selecteer laatste
+bronberichten van
+elke PL
+
+Bronbericht
+Lg01/La01
+
+GBA-V
+Kopie database
+
+Verwerken initiële vulling
+
+Eind
+
+Bronbericht
+Lg01/La01
+
+PL-en
+Verzameling/
+verwerkingslog
+
+Start
+
+Verwerk
+Bronberichten
+Initiele vulling
+
+Converteren
+LO3 - BRP
+
+Registreer
+Bronbericht
+(MIG12)
+
+BRP
+Bijwerken
+
+Bronbericht
+Lg01/La01
+
+Eind
+
+Bronbericht
+Lg01/La01
+
+Message queue
+initiële vulling
+
+Status update queue
+Status update conversie
+Status update bijwerken BRP
+
+DAL BRP
+
+BRP Environment
+BRP
+database
+
+3.7.1
+
+Procesverloop
+Het samenstellen van de initiële vulling start met het aanleggen van de PL-en verzameling in de
+ISC-omgeving waarmee de te verwerken PL-en gedefinieerd is. Deze PL-en verzameling dient als
+werkvoorraad voor de initiële vulling.
+De status van elke PL in de PL-en verzameling in het totale proces een aantal keer bijgewerkt
+waarmee de tracking van de verwerking is gerealiseerd.
+
+Operatie BRP
+
+Pagina 11 van 13
+
+Definitief | 2.9| UC101 Vul persoonsgegevens in BRP initieel | 13-04-2017
+
+Bij het vullen van persoonsgegevens in BRP doorloopt elke PL de volgende statussen:
+
+Processtap
+
+Status
+
+Omschrijving
+
+Samenstelling
+
+Geselecteerd
+
+Initiële status bij selectie voor de initiële vulling
+
+Samenstelling
+
+Op de queue
+
+Bronbericht van de PL op de message queue geplaatst
+
+Verwerken
+
+Van de queue
+
+Bronbericht van de message queue gelezen
+
+Verwerken
+
+Geconverteerd
+
+Bronbericht geconverteerd naar BRP
+
+Verwerken
+
+Verwerkt
+
+Verwerking afgerond (incl. opgetreden fouten)
+
+Naast het bijwerken van de status vindt ook de logging plaats in de PL-en verzameling. Deze
+opzet levert eenvoudige uitbreidingsmogelijkheden voor de proefconversie.
+Het samenstellen van de initiële vulling is afgerond en kan gecontroleerd gestopt worden zodra
+alle PL-en uit de PL-en verzameling minstens de status ‘Op de queue’ hebben.
+Het verwerken van de initiële vulling is afgerond en kan gecontroleerd gestopt worden zodra alle
+PL-en uit de PL-en verzameling de status Verwerkt hebben.
+Het verloop van de initiële vulling kan gemonitord worden met PGadmin. Via een eenvoudige sql
+query kan een overzicht getoond waarin per status het aantal PL-en met die status worden
+weergegeven. Ook kan het aantal opgetreden fouten opgevraagd worden.
+
+3.7.2
+
+Parallellisatie
+Door het gebruik van een queue mechanisme en het centraal (bij de PL-en verzameling
+registreren van de tracking van de verwerking kunnen beide processen los van elkaar gestart en
+gestopt worden.
+Daarnaast kan de verwerking van initiële vulling parallel door meerdere instanties van het
+verwerkingsproces worden uitgevoerd. Dit reduceert de doorlooptijd van de initiële vulling.
+Het samenstellen van de initiële vulling wordt altijd door één instantie uitgevoerd.
+
+3.7.3
+
+Herstartbaarheid.
+In het geval dat het samenstellen of het verwerken van de initiële vulling wordt onderbroken,
+kan het proces opnieuw worden gestart waarbij alleen de nog niet verwerkte bronberichten
+worden verwerkt.
+Een herstart is aan de orde als de PL-en verzameling (deels) gevuld is en/of nog niet alle
+berichten de status ‘verwerkt’ hebben.
+
+Het proces voor de verwerking van initiële vulling herstart moet dan herstart worden. In het
+geval dat tevens de aanlevering nog niet volledig is, d.w.z. er zijn PL-en met de status:
+‘geselecteerd’, moet ook het samenstellen van de initiële vulling herstart worden.
+
+Operatie BRP
+
+Pagina 12 van 13
+
+Definitief | 2.9| UC101 Vul persoonsgegevens in BRP initieel | 13-04-2017
+
+4
+
+Opmerkingen
+
+Geen.
+
+Operatie BRP
+
+Pagina 13 van 13
+
+

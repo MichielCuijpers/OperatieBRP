@@ -1,0 +1,310 @@
+UC844 Beheren stamgegevens
+
+0.4
+
+Datum
+Status
+
+29-03-2017
+Definitief
+
+Definitief | 0.4 | UC844 Beheren stamgegevens | 29-03-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................6
+2.1
+2.2
+2.3
+
+3
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................5
+PRECONDITIE ........................................................................................................................................5
+POSTCONDITIE......................................................................................................................................5
+REGULIER VERLOOP: LIJST ..................................................................................................................6
+ALTERNATIEF VERLOOP: WIJZIGEN .....................................................................................................6
+ALTERNATIEF VERLOOP: TOEVOEGEN .................................................................................................6
+
+AANVULLENDE SPECIFICATIES .................................................................................................7
+3.1 IDENTIFICEREN STAMGEGEVENS .........................................................................................................7
+3.2 LIJST MET SOORTEN STAMGEGEVENS .................................................................................................7
+3.3 LIJST MET STAMGEGEVENS ..................................................................................................................7
+3.3.1 Stamgegevens uit het CONV-schema ..............................................................................7
+3.4 DYNAMISCHE STAMGEGEVENS WIJZIGEN ...........................................................................................7
+3.5 DYNAMISCHE STAMGEGEVENS TOEVOEGEN........................................................................................8
+3.6 ALLEEN DYNAMISCHE STAMGEGEVENS DIE NIET IN ANDERE USE CASES ZIJN BESCHREVEN ..........8
+
+4
+
+OPMERKINGEN ....................................................................................................................................9
+
+Operatie BRP
+
+Pagina 2 van 9
+
+Definitief | 0.4 | UC844 Beheren stamgegevens | 29-03-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+15-10-2015
+06-11-2015
+
+0.1
+0.2
+
+Operatie BRP
+Operatie BRP
+
+26-07-2016
+
+0.3
+
+29-03-2017
+
+0.4
+
+Initiële versie
+Aantal te tonen attributen in lijsten voor
+stamgegevens aangepast.
+Toevoegen en wijzigen stamgegevens
+opgenomen in AS.
+Verwijzingen opgenomen
+Extra regels opgenomen bij tonen gegevens
+uit CONV-schema.
+Vullen van DAG en DEG toegevoegd
+
+Omschrijving
+
+Reviewers
+
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Operatie BRP
+
+Versie
+
+Pagina 3 van 9
+
+Definitief | 0.4 | UC844 Beheren stamgegevens | 29-03-2017
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+De BRP kent diverse soorten stamgegevens. Hierbij wordt onderscheid gemaakt tussen statische
+en dynamische stamgegevens. De statische stamgegevens kunnen niet zomaar gewijzigd worden
+omdat er allerlei bedrijfsregels voor gelden die het functioneren van de BRP beïnvloeden. Om
+statische stamgegevens te kunnen wijzigen is een nieuwe release van de BRP-software nodig. De
+dynamische stamgegevens kunnen wel gewijzigd worden. Het systeem blijft, ongeacht de inhoud
+van het dynamische stamgegeven, hetzelfde functioneren.
+De stamgegevens zijn beschreven in het [BMR].
+Dit document beschrijft hoe een beheerder statische stamgegevens raadpleegt en dynamische
+stamgegevens beheert.
+
+Operatie BRP
+
+Pagina 4 van 9
+
+Definitief | 0.4 | UC844 Beheren stamgegevens | 29-03-2017
+
+1.2
+
+Referenties
+#
+[BMR]
+
+1.3
+
+Document
+https://www.modernodam.nl/bmr
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 5 van 9
+
+Definitief | 0.4 | UC844 Beheren stamgegevens | 29-03-2017
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop: lijst
+1. Het systeem toont een lijst van soorten statische en dynamische stamgegevens (AS: 3.1, 3.2)
+2. De beheerder selecteert een soort stamgegeven
+3. Het systeem toont de lijst van stamgegevens van het geselecteerde soort (AS: 3.3, 3.7)
+4. De beheerder selecteert een stamgegeven (AV: 2.3)
+5. Het systeem stelt vast dat het geselecteerde stamgegeven statisch is (AV: 2.2)
+6. De use case eindigt
+
+2.2
+
+Alternatief verloop: wijzigen
+1. Het systeem stelt vast dat het geselecteerde stamgegeven dynamisch is (AS: 3.4)
+2. Het systeem toont de details van het geselecteerde stamgegeven
+3. De beheerder wijzigt de details van het stamgegeven
+4. Het systeem controleert de details van het stamgegeven
+5. Het systeem legt de details van het stamgegeven vast
+6. De use case gaat verder bij stap 3 van het regulier verloop
+
+2.3
+
+Alternatief verloop: toevoegen
+1. De beheerder meldt het systeem om een nieuw stamgegeven toe te voegen (AS: 3.5)
+2. Het systeem toont de details van het soort stamgegeven
+3. De beheerder wijzigt de details van het stamgegeven
+4. Het systeem controleert de details van het stamgegeven
+5. Het systeem legt de details van het stamgegeven vast
+6. De use case gaat verder bij stap 3 van het regulier verloop
+
+Operatie BRP
+
+Pagina 6 van 9
+
+Definitief | 0.4 | UC844 Beheren stamgegevens | 29-03-2017
+
+3
+
+Aanvullende specificaties
+
+3.1
+
+Identificeren stamgegevens
+Stamgegevens in het [BMR] kunnen geïdentificeerd worden aan het attribuut Soort inhoud:
+• Stamgegeven – Release: de statische stamgegevens
+• Stamgegeven – Dynamisch: de dynamische stamgegevens
+
+3.2
+
+Lijst met soorten stamgegevens
+De lijst met soorten stamgegevens is gegroepeerd op:
+• Type (statisch/dynamisch)
+• Schema (Kern, Ber et cetera)
+Hierbij is de lijst alfabetisch gesorteerd op naam van type en schema.
+
+3.3
+
+Lijst met stamgegevens
+Voor de kolommen van de lijst dient de volgorde gehanteerd te worden zoals die in het BMR
+beschreven is.
+De lijst dient alfabetisch gesorteerd te zijn op (indien aanwezig):
+•
+•
+•
+•
+
+Naam, of
+Code, of
+Eerste attribuut van het type string/tekst, of
+Eerste attribuut (maar niet ID)
+
+Een statisch stamgegeven dient niet geselecteerd te kunnen worden.
+Een dynamisch stamgegeven dient altijd geselecteerd te kunnen worden zodat de details kunnen
+worden gewijzigd. De attributen van een stamgegeven worden getoond in de volgorde zoals die
+is beschreven in het [BMR].
+
+3.3.1
+
+Stamgegevens uit het CONV-schema
+Wanneer er in entiteiten uit het CONV-schema sprake is van een mapping van GBA-gegevens
+naar BRP-gegevens, dienen de Code en Naam of Omschrijving, indien aanwezig, van de BRPgegevens getoond te worden in de lijst.
+
+3.4
+
+Dynamische stamgegevens wijzigen
+Dynamische stamgegevens dienen gewijzigd te kunnen worden. De volgorde waarin de
+attributen getoond worden dient overeen te komen met de volgorde zoals die in het BMR
+beschreven is.
+
+Operatie BRP
+
+Pagina 7 van 9
+
+Definitief | 0.4 | UC844 Beheren stamgegevens | 29-03-2017
+
+3.5
+
+Dynamische stamgegevens toevoegen
+Dynamische stamgegevens dienen toegevoegd te kunnen worden. De volgorde waarin de
+attributen getoond worden dient overeen te komen met de volgorde zoals die in het BMR
+beschreven is.
+
+3.6
+
+Bedrijfsregels DAG en DEG
+Voor zowel Datum aanvang geldigheid (DAG) als Datum einde geldigheid (DEG) gelden de
+volgende bedrijfsregels:
+• Ze kunnen optioneel gevuld worden
+• Als ze gevuld worden dient de datum groter of gelijk te zijn aan de huidige datum
+• Als ze gevuld zijn mogen ze gewijzigd (ook leeg gemaakt) worden als de datum leeg is of de
+datum na de huidige datum ligt
+• De DEG dient groter of gelijk te zijn aan de DAG als de DAG gevuld is
+
+3.7
+
+Alleen dynamische stamgegevens die niet in andere use cases zijn beschreven
+(dynamische) Stamgegevens waarvan het beheer in andere use cases is beschreven dienen niet
+getoond te worden. Dit betreft met name de stamgegevens omtrent autorisatie (schema AutAut
+in het [BMR]).
+
+Operatie BRP
+
+Pagina 8 van 9
+
+Definitief | 0.4 | UC844 Beheren stamgegevens | 29-03-2017
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 9 van 9
+
+

@@ -1,0 +1,881 @@
+Aspectbeschrijving – Filters op leveringsberichten
+Versie
+
+1.0
+
+Datum
+
+7 juni 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+06-06-2017
+
+0.1
+
+Initiele versie
+
+Operatie BRP
+
+07-06-2017
+
+1.0
+
+Na peer review
+
+Operatie BRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Operatie BRP
+
+Aspectbeschrijving – Filters op leveringsberichten
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+
+2
+
+Doel ....................................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Berichtfilters ............................................................................................................. 4
+2.1
+Inleiding ..............................................................................................................................4
+2.1.1
+Niet filteren i.v.m. volledige opschorting ..............................................................................4
+2.1.2
+Leveren aan bijhouders .....................................................................................................4
+2.2
+Overzicht berichtfilters voor normaal- en mutatiebericht ............................................................6
+2.3
+Wettelijk verplicht te leveren gegevens.................................................................................. 11
+
+3
+
+Openstaande punten ............................................................................................... 12
+
+Status: Concept, versie: 1.0
+
+Pagina 2 van 12
+
+Aspectbeschrijving – Filters op leveringsberichten
+
+1 Inleiding
+1.1
+
+Doel
+
+Deze aspectbeschrijving beschrijft de richtlijnen die gelden voor het samenstellen van
+leveringsberichten. Het samenstellen van een leveringsbericht is namelijk een samenspel van
+verschillende filters en afleidingen die gezamenlijk een bericht moeten opleveren dat is
+toegesneden op de betreffende afnemende partij.
+Doel van dit document om tot in detail te beschrijven hoe het berichtfilter werkt.
+
+1.2
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+Status: Concept, versie: 1.0
+
+Pagina 3 van 12
+
+Aspectbeschrijving – Filters op leveringsberichten
+
+2 Berichtfilters
+2.1
+
+Inleiding
+
+Het samenstellen van een BRP bericht is een samenspel van verschillende filters en afleidingen die
+gezamenlijk een bericht moeten opleveren dat is toegesneden op de betreffende dienst en
+afnemende partij. Omdat de interactie van de filters op de verschillende objecten, groepen en
+attributen niet altijd triviaal is, beschrijven de bedrijfsregels vrij specifiek wat er in elk filterstap
+moet gebeuren, terwijl de activiteiten diagrammen in de use cases van de verschillende
+leveringsdiensten de volgorde van die stappen aangeeft. Daarmee zijn de bedrijfsregels bijna een
+pseudocode geworden die dichter bij het technische ‘hoe’ dan bij het functionele ‘wat’ zitten. De
+gedachten hierachter (namelijk: waar moet een ‘goed’ leveringsbericht aan een afnemende partij
+aan voldoen) zijn echter niet goed meer zichtbaar. Deze aspectbeschrijving probeert dit gat te
+vullen door te beschrijven welke richtlijnen er gelden voor ‘goede’ leveringsberichten, ofwel wat het
+eindresultaat is dat de bedrijfsregels voor het samenstellen van een BRP bericht trachten te
+bereiken.
+Daarbij is het handig om onderscheid te maken tussen het mutatiebericht en de overige berichten
+met persoonsgegevens: de eerste bevat in essentie een ‘delta’ op de persoon van één
+administratieve handeling terwijl voor de overige berichten de volledige persoon wordt geleverd.
+De te leveren gegevensset van de volledige persoon verschilt per soort bericht vanwege de
+verschillen in de bijbehorende XSD-schema’s.
+
+2.1.1
+
+Niet filteren i.v.m. volledige opschorting
+
+Als een persoon is overleden dan wordt de bijhouding van deze persoon volledig opgeschort. Dit
+betekend dat veel feiten die in de centrale voorziening voor een persoon geregistreerd kunnen
+worden niet meer relevant zijn en niet meer bijgehouden zouden moeten worden. Als deze feiten
+echter wel onterecht geregistreerd worden zou er filtering nodig zijn om ze bij levering te
+verwijderen.
+Er is echter voor gekozen om tijdens de bijhouding controles uit te voeren zodat de bijhouder
+wordt gewaarschuwd voor het registreren of aanwezig zijn van feiten die na de datum van
+volledige opschorting vallen. De bijhouder kan op basis van deze waarschuwingen op de juiste
+manier acteren. In enkele gevallen zal dit echter betekenen dat een feit na volledige opschorting
+toch wordt geregistreerd. Afnemers die hierin niet geïnteresseerd zijn hebben de mogelijkheid om
+de afnemerindicatie te verwijderen.
+Ten aanzien van het leveren van de opschortende handeling (bijvoorbeeld omdat er op de
+betreffende persoonslijst één of meer afnemerindicaties geplaatst zijn):
+•
+
+•
+
+De handeling ‘opschorten als foutief’ wordt nog gewoon geleverd. De afnemer weet dus dat
+de betreffende persoonslijst is afgevoerd en ontvangt eventueel een verwijzing naar een
+volgende A-nummer en/of BSN.
+De handeling ‘opschorten als gewist’ wordt niet geleverd; de betreffende handeling krijgt
+van de beheerapplicatie direct de status ‘niet leveren’. De beheerorganisatie zal afhankelijk
+van de situatie bepaalde gebruikers zelf moeten inlichten.
+
+2.1.2
+
+Leveren aan bijhouders
+
+Het koppelvlak Levering is voornamelijk gericht op afnemers. Maar ook voor bijhouders is
+leveringsfunctionaliteit relevant. Daarbij geldt dat bijhouders in hun rol van gegevenseigenaar per
+definitie een ruime autorisatie hebben: alle autoriseerbare groepen en attributen plus
+bijhoudingsgegevens inclusief materiële en formele historie en inclusief verantwoording. Met het
+oog op generieke werking en flexibiliteit is er voor gekozen om dit principe niet te automatiseren.
+Bijhouders moeten expliciet geautoriseerd worden voor levering in de rol van bijhouder voor alle
+
+Status: Concept, versie: 1.0
+
+Pagina 4 van 12
+
+Aspectbeschrijving – Filters op leveringsberichten
+
+groepen, attributen en de aspecten materieel, formeel en verantwoording. Het systeem voorkomt
+het leveren van bijhoudingsgegevens aan afnemers.
+Voor onderzoeken naar ontbrekende gegevens geldt ook dat deze alleen aan bijhouders worden
+geleverd. Bijhouders krijgen daarbij alle onderzoeken naar ontbrekende gegevens geleverd; er
+wordt dus niet gecontroleerd of de bijhouder geautoriseerd is voor het soort gegevens dat mogelijk
+ontbreekt.
+
+Status: Concept, versie: 1.0
+
+Pagina 5 van 12
+
+2.2
+
+Overzicht berichtfilters voor normaal- en mutatiebericht
+
+Algemeen
+
+Normaal bericht, rol
+Afnemer
+
+Normaal bericht, rol
+Bijhouder
+
+Mutatiebericht, rol Afnemer
+
+Mutatiebericht, rol Bijhouder
+
+Het bericht is consistent: Alle
+verwijzingen (van inhoudelijke
+groepen naar acties en van
+onderzoek naar wat in onderzoek
+staat) hebben betrekking op iets
+dat in het bericht terug te vinden
+is. Omgekeerd geldt dat
+verantwoordingsgegevens alleen
+maar in het bericht aanwezig zijn
+als er naar verwezen wordt vanuit
+het inhoudelijke deel van het
+bericht.
+
+Het bericht is consistent: Alle
+verwijzingen (van inhoudelijke
+groepen naar acties en van
+onderzoek naar wat in onderzoek
+staat) hebben betrekking op iets dat
+in het bericht terug te vinden is.
+Omgekeerd geldt dat
+verantwoordingsgegevens alleen
+maar in het bericht aanwezig zijn als
+er naar verwezen wordt vanuit het
+inhoudelijke deel van het bericht.
+
+Het bericht is consistent: Alle
+verwijzingen (van inhoudelijke
+groepen naar acties en van
+onderzoek naar wat in onderzoek
+staat) hebben betrekking op iets
+dat in het bericht terug te vinden
+is. Omgekeerd geldt dat
+verantwoordingsgegevens alleen
+maar in het bericht aanwezig zijn
+als er naar verwezen wordt vanuit
+het inhoudelijke deel van het
+bericht.
+
+Het bericht is consistent: Alle
+verwijzingen (van inhoudelijke
+groepen naar acties en van
+onderzoek naar wat in onderzoek
+staat) hebben betrekking op iets dat
+in het bericht terug te vinden is.
+Omgekeerd geldt dat
+verantwoordingsgegevens alleen
+maar in het bericht aanwezig zijn als
+er naar verwezen wordt vanuit het
+inhoudelijke deel van het bericht.
+
+Inhoudelijke deel;
+attributen,
+groepen en
+objecten
+Alleen attributen waarvoor de
+betreffende afnemer
+geautoriseerd is (R1974).
+Alleen Datum Einde Geldigheid als
+de afnemer geautoriseerd is voor
+de materiële historie van die
+groep (R1547).
+Inhoudelijke deel;
+attributen
+
+Alleen TijdstipRegistratie en
+Tijdstipverval als de afnemer
+geautoriseerd is voor de formele
+historie van die groep (R1548).
+
+Alle beschikbare attributen.
+Bijhouders hebben recht op alle
+autoriseerbare gegevens. Dit is
+geïmplementeerd door alle
+autoriseerbare attributen expliciet op
+te nemen in
+Dienstbundel\Groep\Attribuut
+(R1974).
+
+Alleen attributen waarvoor de
+betreffende afnemer geautoriseerd
+is (R1974).
+Alleen Datum Einde Geldigheid als
+de afnemer geautoriseerd is voor
+de materiële historie van die groep
+(R1547).
+Alleen TijdstipRegistratie en
+Tijdstipverval als de afnemer
+geautoriseerd is voor de formele
+historie van die groep (R1548).
+
+Alle beschikbare attributen.
+Bijhouders hebben recht op alle
+autoriseerbare gegevens. Dit is
+geïmplementeerd door alle
+autoriseerbare attributen expliciet op
+te nemen in
+Dienstbundel\Groep\Attribuut
+(R1974).
+
+Aspectbeschrijving – Filters op leveringsberichten
+
+Normaal bericht, rol
+Afnemer
+
+Inhoudelijke deel;
+groepen
+
+Status: Concept, versie: 1.0
+
+Normaal bericht, rol
+Bijhouder
+
+Mutatiebericht, rol Afnemer
+
+Mutatiebericht, rol Bijhouder
+
+Alleen actieInhoud,
+ActieAanpassingGeldigheid en
+ActieVerval bij autorisatie voor
+verantwoordingsinformatie of als
+de bijhouder een ABO-partij
+betreft (R1549). Tevens moet de
+bijbehorende actie in de
+verantwoordingsinformatie
+voorkomen (R2051).
+
+Alleen actieInhoud,
+ActieAanpassingGeldigheid en
+ActieVerval bij autorisatie voor
+verantwoordingsinformatie of als
+de bijhouder een ABO-partij
+betreft (R1549). Tevens moet de
+bijbehorende actie in de
+verantwoordingsinformatie
+voorkomen (R2051).
+
+Alias leveren voor administratieve
+handeling
+indien dit aangegeven is bij de
+leveringsautorisatie (R2062).
+
+Alias leveren voor administratieve
+handeling
+indien dit aangegeven is bij de
+leveringsautorisatie (R2062).
+
+Alleen groepen die ‘iets’
+(attribuut, historie of
+verantwoording) bevatten
+waarvoor de afnemer
+geautoriseerd is. (NB dit hoeft
+niet aanwezig te zijn in het
+bericht zelf, bijvoorbeeld omdat
+het leeg is) (R1975).
+
+Groepen die een verwijzing
+bevatten naar een Actie die
+onderdeel is van de onderhanden
+Administratieve Handeling
+(‘geraakte groepen’). Daarnaast
+groepen de ‘Identificerend’ zijn
+voor deze geraakte groepen of die
+‘Referentie’ zijn voor een geraakte
+groep (bijvoorbeeld het adres bij
+een in de handeling gestart
+onderzoek). (R1973).
+
+Groepen die een verwijzing bevatten
+naar een Actie die onderdeel is van
+de onderhanden Administratieve
+Handeling (‘geraakte groepen’).
+Daarnaast groepen de
+‘Identificerend’ zijn voor deze
+geraakte groepen of die ‘Referentie’
+zijn voor een geraakte groep
+(bijvoorbeeld het adres bij een in de
+handeling gestart onderzoek).
+(R1973).
+
+Alleen groepen die ‘iets’ (attribuut,
+historie of verantwoording)
+bevatten waarvoor de afnemer
+geautoriseerde is. (NB dit hoeft
+niet aanwezig te zijn in het bericht
+zelf, bijvoorbeeld omdat het leeg
+is), (R1975).
+
+Alle beschikbare groepen.
+Bijhouders hebben recht op alle
+autoriseerbare gegevens. Dit is
+geïmplementeerd door alle
+autoriseerbare attributen expliciet op
+te nemen in Dienstbundel\Groep
+(R1975).
+
+Alle beschikbare groepen.
+Bijhouders hebben recht op alle
+autoriseerbare gegevens. Dit is
+geïmplementeerd door alle
+autoriseerbare attributen expliciet op
+te nemen in Dienstbundel\Groep
+(R1975).
+
+Pagina 7 van 12
+
+Aspectbeschrijving – Filters op leveringsberichten
+
+Inhoudelijk deel;
+objecten
+
+Normaal bericht, rol
+Afnemer
+
+Normaal bericht, rol
+Bijhouder
+
+Mutatiebericht, rol Afnemer
+
+Mutatiebericht, rol Bijhouder
+
+Alleen beëindigde groepen als de
+afnemer geautoriseerd is voor
+materiële historie op die groep
+(R1349).
+
+Ook beëindigde groepen (R1349).
+Geïmplementeerd door bijhouders
+altijd te autoriseren.
+
+Alleen beëindigde groepen als de
+afnemer geautoriseerd is voor
+materiële historie op die groep
+(R1349).
+
+Ook beëindigde groepen (R1349).
+Geïmplementeerd door bijhouders
+altijd te autoriseren.
+
+Alleen vervallen groepen als de
+afnemer geautoriseerd is voor
+formele historie op die groep
+(R1546).
+
+Ook vervallen groepen (R1546).
+Geïmplementeerd door bijhouders
+altijd te autoriseren.
+
+Ook groepen die in de
+onderhanden Administratieve
+Handeling zijn vervallen (R1546).
+
+Ook groepen die in de onderhanden
+Administratieve Handeling zijn
+vervallen (R1546).
+
+Alleen groepen die niet eerder
+beëindigd waren dan de relatie
+waarbij ze aanwezig zijn (R1328).
+
+Ook de pre-relatie groepen (R1328).
+
+Alleen groepen die niet eerder
+beëindigd waren dan de relatie
+waarbij ze aanwezig zijn (R1328).
+
+Ook de pre-relatie groepen (R1328).
+
+Alleen groepen die geen
+IndMutLev hebben (R1353).
+
+Alleen groepen die geen IndMutLev
+hebben (R1353).
+
+Ook groepen met IndMutLev
+(R1353).
+
+Ook groepen met IndMutLev
+(R1353).
+
+Alleen objecten die binnen de
+berichtstructuur enige
+geautoriseerde groep zouden
+kunnen bevatten (NB hoeft niet
+aanwezig te zijn in het bericht
+zelf). (R1976).
+
+Alle beschikbare objecten (R1976).
+Geïmplementeerd door bijhouders
+altijd te autoriseren.
+
+Alleen objecten die binnen de
+berichtstructuur enige groep
+bevatten die in het bericht komt.
+(R1976 en R2260).
+
+Alleen objecten die binnen de
+berichtstructuur enige groep
+bevatten die in het bericht komt.
+(R1976 en R2260).
+
+Alle beschikbare attributen.
+(Geïmplementeerd via autorisatie).
+
+Alleen attributen die geen
+Bijhoudingsgegeven
+zijn(Geïmplementeerd via
+autorisatie).
+Alleen attributen waarvoor de
+betreffende afnemer geautoriseerd
+is (R1974).
+
+Alle beschikbare attributen
+(Geïmplementeerd via autorisatie).
+
+Veranwoordingsdeel;
+attributen,
+groepen en
+objecten
+Alleen attributen die geen
+Bijhoudingsgegeven zijn
+(Geïmplementeerd via
+autorisatie).
+Alleen attributen waarvoor de
+Verantwoordingsdeel; betreffende afnemer
+attributen
+geautoriseerd is (R1974).
+
+Status: Concept, versie: 1.0
+
+Pagina 8 van 12
+
+Aspectbeschrijving – Filters op leveringsberichten
+
+Normaal bericht, rol
+Afnemer
+
+Normaal bericht, rol
+Bijhouder
+
+Mutatiebericht, rol Afnemer
+
+Mutatiebericht, rol Bijhouder
+
+Alle groepen onder de geleverde
+verantwoordingsobjecten
+(R1552). Alleen bronnen
+Verantwoordingsdeel; waarnaar daadwerkelijk wordt
+groepen
+verwezen meeleveren (R2015).
+
+Alle groepen onder de geleverde
+verantwoordingsobjecten (R1552).
+(ook gedeblokkeerde meldingen).
+Alleen bronnen waarnaar
+daadwerkelijk wordt verwezen
+meeleveren (R2015).
+
+Alle groepen onder de geleverde
+verantwoordingsobjecten (R1552).
+Alleen bronnen waarnaar
+daadwerkelijk wordt verwezen
+meeleveren (R2015).
+
+Alle groepen onder de geleverde
+verantwoordingsobjecten (R1552).
+Alleen bronnen waarnaar
+daadwerkelijk wordt verwezen
+meeleveren (R2015).
+
+Alleen objecten die
+verantwoording vormen voor
+enige in het bericht overgebleven
+groep in het inhoudelijke deel of
+het onderzoeksdeel (moeten
+samenhangen met een actie die
+voorkomt in het inhoudelijke deel
+of het onderzoeksdeel); R1551.
+Verantwoordingsdeel; Geen Gedeblokkeerde meldingen
+objecten
+(R2529).
+
+Alleen objecten die verantwoording
+vormen voor enige in het bericht
+overgebleven groep in het
+inhoudelijke deel of het
+onderzoeksdeel (moeten
+samenhangen met een actie die
+voorkomt in het inhoudelijke deel of
+het onderzoeksdeel); R1551. Ook
+Gedeblokkeerde meldingen (R2529).
+
+Alleen de ‘onderhanden’
+Administratieve handeling en de
+Acties en Bronnen die daar bij
+horen. Geen Gedeblokkeerde
+meldingen (R2529).
+
+Alleen de ‘onderhanden’
+Administratieve handeling en de
+Acties en Bronnen die daar bij horen.
+Ook Gedeblokkeerde meldingen
+(R2529).
+
+Onderzoeksdeel;
+attributen,
+groepen en
+objecten
+
+Onderzoeksdeel;
+attributen
+
+Status: Concept, versie: 1.0
+
+Alleen attributen die geen
+Bijhoudingsgegeven zijn
+(geïmplementeerd via
+autorisatie). Alleen onderzoeken
+die betrekking hebben op
+geautoriseerde attributen (R1562
+en R1974).
+
+Alleen attributen die geen
+Bijhoudingsgegeven zijn
+(geïmplementeerd via autorisatie).
+Alleen onderzoeken die betrekking
+hebben op geautoriseerde
+attributen (R1562 en R1974).
+
+Alleen TijdstipRegistratie en
+Tijdstipverval als de afnemer
+geautoriseerd is voor de formele
+historie van die groep (R1548).
+
+Alleen TijdstipRegistratie en
+Tijdstipverval als de afnemer
+geautoriseerd is voor de formele
+historie van die groep (R1548).
+
+Alle attributen (geïmplementeerd via
+autorisatie).
+
+Alle attributen (geïmplementeerd via
+autorisatie).
+
+Pagina 9 van 12
+
+Aspectbeschrijving – Filters op leveringsberichten
+
+Normaal bericht, rol
+Afnemer
+
+Onderzoekdeel;
+groepen
+
+Onderzoekdeel;
+objecten
+
+Status: Concept, versie: 1.0
+
+Normaal bericht, rol
+Bijhouder
+
+Mutatiebericht, rol Afnemer
+
+Mutatiebericht, rol Bijhouder
+
+Alleen actieInhoud,
+ActieAanpassingGeldigheid en
+ActieVerval bij autorisatie voor
+verantwoordingsinformatie of als
+de bijhouder een ABO-partij
+betreft (R1549). Tevens moet de
+bijbehorende actie in de
+verantwoordingsinformatie
+voorkomen (R2051).
+
+Alleen actieInhoud,
+ActieAanpassingGeldigheid en
+ActieVerval bij autorisatie voor
+verantwoordingsinformatie of als
+de bijhouder een ABO-partij
+betreft (R1549).
+Tevens moet de bijbehorende actie
+in de verantwoordingsinformatie
+voorkomen (R2051).
+
+Alle groepen (ook formele
+historie).
+
+Alle groepen (ook formele historie).
+
+Alleen niet-vervallen groepen of
+groepen die in de onderhanden
+handeling vervallen zijn.
+
+Alleen niet-vervallen groepen of
+groepen die in de onderhanden
+handeling vervallen zijn.
+
+Alle objecten van onderzoeken die
+betrekking hebben op gegevens uit
+het inhoudelijk deel die nog in het
+bericht aanwezig zijn (R1561,
+R1563), plus objecten van
+onderzoeken naar ontbrekende
+gegevens (R2065) (alleen wanneer
+het bericht een volledige PL zou
+kunnen leveren).
+
+Alle objecten van onderzoeken die
+betrekking hebben op gegevens uit
+het inhoudelijk deel die nog in het
+bericht aanwezig zijn (R1561,
+R1563), plus alle objecten van
+onderzoeken die ‘geraakt’ zijn door
+de ‘onderhanden’ Administratieve
+handeling (R1319 en R1973)
+waarbij het onderzoek betrekking
+heeft op tenminste één object,
+groep of attribuut waarvoor de
+afnemer geautoriseerd is. (Dus
+geen objecten van onderzoeken
+naar ontbrekende gegevens;
+R2065).
+
+Alle objecten van onderzoeken die
+betrekking hebben op gegevens uit
+het inhoudelijk deel die nog in het
+bericht aanwezig zijn (R1561,
+R1563), plus alle objecten van
+onderzoeken die ‘geraakt’ zijn door
+de ‘onderhanden’ Administratieve
+handeling (R1319 en R1973)
+(inclusief onderzoeken naar
+ontbrekende onderzoeken waarbij
+dat het geval is; R2065).
+
+Alleen objecten van onderzoeken
+die betrekking hebben op
+gegevens uit het inhoudelijk deel
+die nog in het bericht aanwezig
+zijn (R1561, R1563). (Dus ook:
+geen objecten van onderzoeken
+naar ontbrekende gegevens;
+R2065).
+
+Pagina 10 van 12
+
+2.3
+
+Wettelijk verplicht te leveren gegevens
+
+Conform artikel 3.10 (en daar aan gerelateerde artikelen) van de Wet BRP moet een beperkt aantal
+gegevens van een persoon altijd worden geleverd in het geval dat het gegeven voorkomt op de
+persoonslijst. In onderstaande tabel is voor deze gegevens aangegeven op welke wijze deze door
+de centrale voorzieningen worden vastgelegd en geleverd.
+
+Gegevens artikel 3.10
+
+Toelichting op de wijze van levering
+
+Ingezetene of nietingezetene
+
+Het (niet-)ingezetenschap wordt vastgelegd in de centrale
+voorzieningen door middel van de gegevens Bijhoudingsaard en
+Nadere bijhoudingsaard in de groep Bijhouding. Beide gegevens
+worden altijd geleverd, ongeacht of de persoon een ingezetene of
+niet-ingezetene is. Uit de Nadere bijhoudingsaard blijkt bijvoorbeeld
+of de persoon overleden is of geëmigreerd is.
+
+Verstrekkingsbeperking
+
+Bij het leveren van persoonsgegevens wordt door middel van een
+waarschuwing (melding) aangegeven of er voor deze persoon
+sprake is van een verstrekkingsbeperking. Deze melding wordt
+opgenomen in het leveringsbericht.
+
+Gegeven in onderzoek
+
+Als er sprake is van een onderzoek bij de gegevens waarvoor de
+afnemer is geautoriseerd, dan leveren de centrale voorzieningen
+altijd gegevens over het onderzoek mee ter indicatie dat er een
+onderzoek aanwezig is.
+
+Persoon aangetroffen op
+adres
+
+Het gegeven Persoon aangetroffen op adres? in de groep adres is
+aangemerkt als gegeven omtrent het onderzoek. Dit gegeven wordt
+ook altijd bij adresgegevens meegeleverd wanneer het gegeven
+voorkomt.
+
+Aangewezen bestuursorgaan
+(ABO) dat opgave heeft
+gedaan van gegevens over
+niet-ingezetene
+
+Als de gegevens van een persoon worden bijgehouden op basis van
+een opgave van een aangewezen bestuursorgaan (ABO), dan wordt
+het gegeven partij als onderdeel van de verantwoordingsinformatie
+bij de betrokken gegevens verplicht geleverd.
+De centrale voorzieningen controleren voor iedere gegevensgroep in
+de verantwoordingsinformatie of deze is bijgehouden op basis van
+een opgave door een partij van de soort “verantwoordelijk
+bestuursorgaan”.
+
+Rechtsgrond niet-ingezetene Bij een wijziging van gegevens in de centrale voorzieningen op basis
+van een opgave door een aangewezen bestuursorgaan wordt het
+gegeven Rechtsgrondomschrijving in de groep Bron als onderdeel
+van de verantwoordingsinformatie altijd meegeleverd.
+Onjuist
+
+Bij een correctie leggen de centrale voorzieningen met behulp van
+het gegeven Nadere aanduiding verval de reden van de correctie
+vast. Bij een correctie krijgt het gegeven de waarde “O” (onjuist).
+Bij een mutatiebericht en een volledig bericht (mits de afnemer
+geautoriseerd is voor de levering van vervallen gegevens) wordt het
+gegeven Nadere aanduiding verval geleverd.
+
+Strijdigheid met openbare
+orde
+
+Zie Onjuist. Alleen krijgt het gegeven Nadere aanduiding verval bij
+een correctie de waarde “S” (in strijd met openbare orde).
+
+Aspectbeschrijving – Filters op leveringsberichten
+
+3 Openstaande punten
+De filters op leveringsberichten werken primair op het niveau van gegevensgroepen. Maar in
+bepaalde gevallen is het zinnig of zelfs noodzakelijk om ook op het niveau van objecten te filteren:
+•
+
+•
+
+Als alle inhoudelijke groepen uit het object zijn verwijderd. Het object heeft dan (meestal)
+in het bericht geen nut meer of kan zelfs een aanwijzing zijn dat er bepaalde gegevens
+bestaan die de betreffende afnemer niet mag zien.
+Als de groep ‘Identiteit’ uit een bericht wordt weggefilterd. Dit komt feitelijk neer op het
+verwijderen van het object.
+
+Anderzijds komt het ook voor dat het wel noodzakelijk is om een leeg object in een bericht te
+handhaven:
+•
+•
+
+Als het object in het bericht andere objecten verbindt. Bijvoorbeeld een betrokkenheid bij
+een gewijzigde gerelateerde.
+Als de afnemer expliciet mag zien dat een geautoriseerde groep ontbreekt maar dat het
+object wel bestaat.
+
+Op dit moment zijn er bij een aantal berichtenfilters ook expliciete objectenfilters gedefinieerd.
+Deze volgen dan direct op de bijbehorende groepenfilters. Voortschrijdend inzicht heeft opgeleverd
+dat dit niet in alle omstandigheden goed werkt. Bovendien krijgen we zo een groot aantal
+specifieke objectenfilters die performance kosten, lastig te doorgronden (dus foutgevoelig) en
+onderhoudsintensief zijn. Om deze reden is een analyse gedaan naar de mogelijkheid om een
+generiek objectenfilter te maken dat na alle groepenfilters kan worden toegepast. Dit lijkt mogelijk
+maar vergt wel een aanpassing die veel leveringsdiensten raakt.
+Een uitgebreide beschrijving van de voorgestelde oplossingsrichting voor objectenfilltering is te
+vinden in de brp-voortbrenging repository: https://www.modernodam.nl/svn/brp-voortbrenging/05
+Wit-Rood/WITROOD-7 Analyseren alternatief objectenfilter.
+
+Status: Concept, versie: 1.0
+
+Pagina 12 van 12
+
+

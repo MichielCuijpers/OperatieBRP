@@ -1,0 +1,562 @@
+LGM 08 Interstelsel tabellen
+Release 59
+Stapel voorkomen
+
+Dyn
+
+Identiteit
+
+Stapel \ Relatie
+
+Dyn
+
+Identiteit
+
+-
+
+-
+
+-
+
+ID
+
+D
+
+Stapel voorkomen ID
+
+*i
+
+-
+
+Stapel >
+
+D
+
+Stapel
+
+*l
+
+Volgnummer
+
+DX
+
+Volgnummer
+
+*l
+
+D
+
+Administratieve handeling
+
+ID
+
+D
+
+Stapel \ Relatie ID
+
+*i
+
+Stapel >
+
+D
+
+Stapel
+
+*l
+
+Relatie > D
+
+Relatie
+
+*l
+
+Stapel
+
+Dyn
+
+Identiteit
+
+-
+
+-
+
+Administratieve handeling >
+
+-
+
+Naam enumeratiewaarde
+
+*
+
+DX
+
+Soort document
+
+.
+
+Partij >
+
+DX
+
+Partij
+
+.
+
+Rubriek 8220 Datum document
+
+DX
+
+Datum evt. (deels) onbekend
+
+.
+
+Document omschrijving
+
+DX
+
+Document omschrijving
+
+.
+
+Rubriek 8310 Aanduiding gegevens in onderzoek
+
+DX
+
+LO3 rubriek incl categorie en groep .
+
+Rubriek 8320 Datum ingang onderzoek
+
+DX
+
+Datum evt. (deels) onbekend
+
+SG
+
+Rubriek 8330 Datum einde onderzoek
+
+DX
+
+Datum evt. (deels) onbekend
+
+.
+
+DX
+
+LO3 codering onjuist
+
+.
+
+Stapel ID
+
+*i
+
+Persoon >
+
+D
+
+Persoon
+
+*l
+
+Categorie
+
+DX
+
+LO3 categorie
+
+*l
+
+Volgnummer DX Volgnummer
+
+*l
+
+Administratieve handeling naam
+
+X
+
+*
+
+Soort document >
+
+D
+
+ID
+
+Autorisatietabel
+
+Standaard
+
+.
+
+-
+
+Rubriek 8410 Indicatie onjuist strijdigheid openbare orde
+
+ID
+
+D
+
+Autorisatietabel ID
+
+*i
+
+Rubriek 8510 Ingangsdatum geldigheid
+
+DX
+
+Datum evt. (deels) onbekend
+
+.
+
+Partijcode
+
+D
+
+Partij code
+
+*l
+
+Rubriek 8610 Datum van opneming
+
+DX
+
+Datum evt. (deels) onbekend
+
+.
+
+Datum ingang tabelregel D
+
+Datum
+
+*l
+
+D
+
+Datum
+
+.l
+
+DX
+
+Datum evt. (deels) onbekend
+
+Selectiesoort
+
+DX
+
+LO3 selectiesoort
+
+.
+
+Aktenummer
+
+DX
+
+Aktenummer
+
+.
+
+Berichtaanduiding
+
+DX
+
+LO3 berichtaanduiding
+
+.
+
+Administratienummer
+
+DX
+
+Administratienummer
+
+.
+
+Afnemersverstrekking
+
+DX
+
+LO3 afnemersverstrekking
+
+.
+
+Burgerservicenummer
+
+DX
+
+Burgerservicenummer
+
+.
+
+Voornamen
+
+DX
+
+Voornamen
+
+.
+
+Predicaat >
+
+DX
+
+Predicaat
+
+.
+
+Adellijke titel >
+
+DX
+
+Adellijke titel
+
+.
+
+Geslacht bij adellijke titel/predicaat >
+
+DX
+
+Geslachtsaanduiding
+
+.
+
+Voorvoegsel
+
+DX
+
+Voorvoegsel
+
+.
+
+Scheidingsteken
+
+DX
+
+Scheidingsteken
+
+.
+
+Geslachtsnaamstam
+
+DX
+
+Geslachtsnaamstam
+
+.
+
+Datum geboorte
+
+DX
+
+Datum evt. (deels) onbekend
+
+.
+
+Gemeente geboorte >
+
+DX
+
+Gemeente
+
+.
+
+Buitenlandse plaats geboorte
+
+DX
+
+Buitenlandse plaats
+
+.
+
+Omschrijving locatie geboorte
+
+DX
+
+Locatieomschrijving
+
+.
+
+Land/gebied geboorte >
+
+DX
+
+Land/gebied
+
+.
+
+Geslachtsaanduiding >
+
+DX
+
+Geslachtsaanduiding
+
+.
+
+Soort relatie >
+
+DX
+
+Soort relatie
+
+.
+
+Datum aanvang
+
+DX
+
+Datum evt. (deels) onbekend
+
+.
+
+Gemeente aanvang >
+
+DX
+
+Gemeente
+
+.
+
+Buitenlandse plaats aanvang
+
+DX
+
+Buitenlandse plaats
+
+.
+
+Omschrijving locatie aanvang
+
+DX
+
+Locatieomschrijving
+
+.
+
+Land/gebied aanvang >
+
+DX
+
+Land/gebied
+
+.
+
+Reden einde >
+
+DX
+
+Reden einde relatie
+
+.
+
+Datum einde
+
+DX
+
+Datum evt. (deels) onbekend
+
+.
+
+Gemeente einde >
+
+DX
+
+Gemeente
+
+.
+
+Buitenlandse plaats einde
+
+DX
+
+Buitenlandse plaats
+
+.
+
+Omschrijving locatie einde
+
+DX
+
+Locatieomschrijving
+
+.
+
+Land/gebied einde >
+
+DX
+
+Land/gebied
+
+.
+
+Ouder 1 heeft gezag?
+
+DX
+
+Ja
+
+.
+
+Ouder 2 heeft gezag?
+
+DX
+
+Ja
+
+.
+
+Derde heeft gezag?
+
+DX
+
+Ja
+
+.
+
+Onder curatele?
+
+DX
+
+Ja
+
+.
+
+Identiteit
+
+Datum einde tabelregel
+
+-
+
+Standaard
+
+-
+
+-
+
+Categorie ouders
+Rubriek 6210 Datum ingang familierechtelijke betrekking
+
+-
+
+Categorie gerelateerden
+
+-
+
+Categorie Huwelijk/Geregistreerd partnerschap
+
+-
+
+Categorie gezagsverhouding
+
+.
+
+-
+
+-
+
+-
+
+-
+
+17-7-2017
+
+

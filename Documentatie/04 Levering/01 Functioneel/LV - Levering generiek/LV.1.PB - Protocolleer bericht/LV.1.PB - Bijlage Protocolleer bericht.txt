@@ -1,0 +1,408 @@
+LV.1.PB - Bijlage Protocolleer bericht
+Versie: Werk
+Gegenereerd op: 21 juli 2017
+Status: Definitief
+
+1 Regels voor usecase LV.1.PB - Protocolleer bericht
+1.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2016
+
+1
+
+'Systeemdatum'
+
+R2395
+
+1
+
+'Peilmoment materieel'
+
+1.2
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1613
+
+6
+
+Vaststelling protocolleringsgegevens bij verstrekking op verzoek afnemer
+
+R1614
+
+6
+
+Vaststelling protocolleringsgegevens bij verstrekking op administratieve
+handeling
+
+R1615
+
+9
+
+Vaststelling protocolleringsgegevens bij verstrekking door systeemactie
+
+R1617
+
+6
+
+Afleiding Datum aanvang materiele periode resultaat
+
+R1618
+
+5
+
+Afleiding Datum einde materiele periode resultaat
+
+R1619
+
+6
+
+Afleiding Datum/tijd aanvang formele periode resultaat
+
+R1620
+
+4
+
+Afleiding Datum/tijd einde formele periode resultaat
+
+R1995
+
+3
+
+Een levering van persoonsgegevens aan een afnemer dient geprotocolleerd
+te worden
+
+R2236
+
+2
+
+Vulling Leveringsaantekening \ Persoon
+
+2 Uitwerking regels
+R1613
+Vaststelling protocolleringsgegevens bij verstrekking op verzoek afnemer
+Definitie:
+
+Indien een verstrekking van persoonsgegevens plaatsvindt als directe reactie op
+een bevraging van een afnemer (diensten Geef details persoon, Zoek persoon,
+Zoek persoon op adresgegevens en Geef medebewoners van persoon)
+DAN moeten de protocolleringsgegevens als volgt worden samengesteld:
+• Leveringsaantekening.Toegang leveringsautorisatie = Toegang
+leveringsautorisatie.ID waarvoor verstrekt wordt
+• Leveringsaantekening.Dienst = Dienst.ID van de geleverde Dienst (volgt uit
+opgegeven de parameters van het verzoekbericht)
+• Leveringsaantekening.Datum/tijd klaarzetten levering = Datum\tijd systeem
+van ophalen gegevens(Persoon en Autorisatie) uit de database
+• Leveringsaantekening.Datum aanvang materiële periode resultaat = R1617 Afleiding Datum aanvang materiele periode resultaat
+• Leveringsaantekening.Datum einde materiële periode resultaat = R1618 Afleiding Datum einde materiele periode resultaat
+• Leveringsaantekening.Datum/tijd aanvang formele periode resultaat = R1619 Afleiding Datum/tijd aanvang formele periode resultaat
+• Leveringsaantekening.Datum/tijd einde formele periode resultaat = R1620 Afleiding Datum/tijd einde formele periode resultaat
+• Leveringsaantekening.Administratieve handeling = 'leeg'
+• Leveringsaantekening.Soort synchronisatie = 'leeg'
+• Leveringsaantekening.Scope patroon: Indien scoping is toegepast vullen met
+het Elementpatroon van die scoping, anders 'leeg'.
+
+Versie:
+
+6
+
+Soort:
+
+Verwerkingslogica
+
+R1614
+Vaststelling protocolleringsgegevens bij verstrekking op administratieve handeling
+Definitie:
+
+Indien een verstrekking van persoonsgegevens aan een afnemer plaatsvindt als
+reactie op een bijhouding van de persoon (diensten Mutatielevering op basis van
+afnemerindicatie, Mutatielevering op basis van doelbinding en Attendering)
+DAN moeten de protocolleringsgegevens als volgt worden samengesteld:
+• Leveringsaantekening.Toegang leveringsautorisatie = Toegang
+leveringsautorisatie.ID waarvoor verstrekt wordt
+• Leveringsaantekening.Dienst = Dienst.ID van de geleverde Dienst
+• Leveringsaantekening.Datum/tijd klaarzetten levering = Datum\tijd systeem
+van ophalen gegevens(Persoon en Autorisatie) uit de database
+• Leveringsaantekening.Datum aanvang materiële periode resultaat = R1617 Afleiding Datum aanvang materiele periode resultaat
+• Leveringsaantekening.Datum einde materiële periode resultaat = R1618 Afleiding Datum einde materiele periode resultaat
+• Leveringsaantekening.Datum/tijd aanvang formele periode resultaat = R1619 Afleiding Datum/tijd aanvang formele periode resultaat
+• Leveringsaantekening.Datum/tijd einde formele periode resultaat = R1620 Afleiding Datum/tijd einde formele periode resultaat
+• Leveringsaantekening.Administratieve handeling = Administratieve
+handeling.ID van de Administratieve handeling die de levering heeft getriggerd.
+• Leveringsaantekening.Scope patroon = 'leeg'
+ALS het geleverde bericht (BRP of GBA) een Volledig bericht is
+
+DAN
+
+•
+
+Leveringsaantekening.Soort synchronisatie = 'Volledigbericht'
+
+•
+
+Leveringsaantekening.Soort synchronisatie = 'Mutatiebericht'
+
+ANDERS
+Versie:
+
+6
+
+Soort:
+
+Verwerkingslogica
+
+R1615
+Vaststelling protocolleringsgegevens bij verstrekking door systeemactie
+Definitie:
+
+Indien een verstrekking van persoonsgegevens aan een afnemer plaatsvindt op
+initiatief van het systeem anders dan naar aanleiding van een Bijhouding
+(leveren een een VolledigBericht als gevolg van Plaatsing afnemerindicatie,
+Synchronisatie persoon of Selectie.
+DAN moeten de protocolleringsgegevens als volgt worden samengesteld:
+• Leveringsaantekening.Toegang leveringsautorisatie = Toegang
+leveringsautorisatie.ID waarvoor verstrekt wordt
+• Leveringsaantekening.Dienst = Dienst.ID van de geleverde Dienst (1)
+• Leveringsaantekening.Datum/tijd klaarzetten levering = Datum\tijd systeem
+van ophalen gegevens(Persoon en Autorisatie) uit de database
+• Leveringsaantekening.Datum aanvang materiële periode resultaat = R1617 Afleiding Datum aanvang materiele periode resultaat
+• Leveringsaantekening.Datum einde materiële periode resultaat = R1618 Afleiding Datum einde materiele periode resultaat
+• Leveringsaantekening.Datum/tijd aanvang formele periode resultaat = R1619 Afleiding Datum/tijd aanvang formele periode resultaat
+• Leveringsaantekening.Datum/tijd einde formele periode resultaat = R1620 Afleiding Datum/tijd einde formele periode resultaat
+• Leveringsaantekening.Administratieve handeling = 'leeg'
+• Leveringsaantekening.Soort synchronisatie = 'Volledigbericht'(2)
+• Leveringsaantekening.Scope patroon = 'leeg'
+(1): Wanneer een levering asynchroon wordt getriggerd door bijvoorbeeld het op
+verzoek of via een selectie plaatsen van een afnemerindicatie of door een
+synchronisatieverzoek, dan wordt Dienst gevuld met de Dienst.ID van de
+betreffende dienst Plaatsing afnemerindicatie, Synchronisatie persoon of Selectie.
+(2): Er zijn momenteel geen asynchrone triggers zonder Administratieve Handeling
+die een Mutatiebericht laten vervaardigen.
+
+Versie:
+
+9
+
+Soort:
+
+Verwerkingslogica
+
+R1617
+Afleiding Datum aanvang materiele periode resultaat
+Definitie:
+
+Indien Soort dienst = Mutatielevering op basis van afnemerindicatie (daaronder
+ook: bij het leveren van een Volledig bericht als gevolg van de nieuwe of aanwezige
+afnemerindicatie bij de Soort dienst = Plaatsing afnemerindicatie of Synchronisatie
+persoon):
+Dan Leveringsaantekening.Datum aanvang materiële periode resultaat
+vullen met Persoon \ Afnemerindicatie.Datum aanvang materiële periode
+uit de Afnemerindicatie;
+Indien Soort dienst = Geef details persoon en Bericht.Historievorm uit het
+verzoekbericht = 'Geen':
+Dan Leveringsaantekening.Datum aanvang materiële periode resultaat vullen
+met Bericht.Peilmoment materieel resultaat uit het verzoekbericht
+
+Bericht.Peilmoment materieel resultaat indien aanwezig of gevuld, anders
+Leveringsaantekening.Datum aanvang materiële periode resultaat vullen met
+'Systeemdatum' (R2016);
+Indien Soort dienst = Geef medebewoners van persoon:
+Dan Leveringsaantekening.Datum aanvang materiële periode resultaat vullen
+met 'Peilmoment materieel' (R2395);
+Indien Soort dienst = Selectie en Dienst.Historievorm selectie = 'Geen':
+Dan Leveringsaantekening.Datum aanvang materiële periode resultaat vullen
+met Selectietaak.Peilmoment materieel resultaat
+Indien Selectietaak.Peilmoment materieel resultaat niet is gevuld, dan
+Leveringsaantekening.Datum aanvang materiële periode resultaat niet vullen
+('leeg');
+Anders (in alle overige gevallen):
+Dan Leveringsaantekening.Datum aanvang materiële periode resultaat niet
+vullen ('leeg').
+Versie:
+
+6
+
+Soort:
+
+Verwerkingslogica
+
+R1618
+Afleiding Datum einde materiele periode resultaat
+Definitie:
+
+Indien Soort dienst = Geef details persoon:
+Dan Leveringsaantekening.Datum einde materiële periode resultaat vullen met
+(Bericht.Peilmoment materieel resultaat uit het verzoekbericht) + 1 dag indien
+Bericht.Peilmoment materieel resultaat aanwezig of gevuld, anders
+Leveringsaantekening.Datum einde materiële periode resultaat vullen met
+'Systeemdatum' (R2016) + 1 dag;
+Indien Soort dienst = Geef medebewoners van persoon:
+Dan Leveringsaantekening.Datum einde materiële periode resultaat vullen met
+'Peilmoment materieel' (R2395) + 1 dag;
+Indien Soort dienst = Selectie:
+Dan Leveringsaantekening.Datum einde materiële periode resultaat vullen met
+Selectietaak.Peilmoment materieel resultaat + 1 dag
+Indien Selectietaak.Peilmoment materieel resultaat niet is gevuld, dan
+Leveringsaantekening.Datum einde materiële periode resultaat niet vullen
+('leeg');
+Anders (in alle overige gevallen):
+Dan Leveringsaantekening.Datum einde materiële periode resultaat niet
+vullen ('leeg').
+
+Versie:
+
+5
+
+Soort:
+
+Verwerkingslogica
+
+R1619
+Afleiding Datum/tijd aanvang formele periode resultaat
+Definitie:
+
+Indien Soort dienst = Geef details persoon en Bericht.Historievorm uit het
+verzoekbericht = 'Geen' of 'Materieel'):
+Dan Leveringsaantekening.Datum/tijd aanvang formele periode resultaat
+vullen met Bericht.Peilmoment formeel resultaat uit het verzoekbericht
+indien aanwezig of gevuld, anders Leveringsaantekening.Datum/tijd
+aanvang formele periode resultaat vullen met 'Systeemdatum' (R2016);
+
+Indien Soort dienst = Selectie en Dienst.Historievorm selectie = 'Geen' of
+'Materieel':
+Dan Leveringsaantekening.Datum/tijd aanvang formele periode resultaat
+vullen met Selectietaak.Peilmoment formeel resultaat.
+Indien Selectietaak.Peilmoment formeel resultaat niet is gevuld dan
+Leveringsaantekening.Datum/tijd aanvang formele periode resultaat niet
+vullen ('leeg');
+Anders (in alle overige gevallen):
+Leveringsaantekening.Datum/tijd aanvang formele periode resultaat niet
+vullen ('leeg').
+Versie:
+
+6
+
+Soort:
+
+Verwerkingslogica
+
+R1620
+Afleiding Datum/tijd einde formele periode resultaat
+Definitie:
+
+Indien Soort dienst = Geef details persoon EN Bericht.Peilmoment formeel resultaat
+in het verzoekbericht is gevuld:
+Dan Leveringsaantekening.Datum/tijd einde formele periode resultaat
+vullen met Bericht.Peilmoment formeel resultaat uit het verzoekbericht;
+Indien Soort dienst = Selectie
+Dan Leveringsaantekening.Datum/tijd einde formele periode resultaat
+vullen met Selectietaak.Peilmoment formeel resultaat.
+Indien Selectietaak.Peilmoment formeel resultaat niet is gevuld dan
+Leveringsaantekening.Datum/tijd einde formele periode resultaat vullen
+met Selectietaak.Datum uitvoer;
+Anders (in alle overige gevallen):
+Dan Leveringsaantekening.Datum/tijd einde formele periode resultaat vullen
+met Datum\tijd systeem van klaarzetten bericht
+Toelichting: Met betrekking tot 'alle overige gevallen' geldt dat de
+datum\tijd_systeem van het klaarzetten van het bericht een impliciete bovengrens
+is als er niet expliciet gefilterd wordt op die bovengrens: het systeem kan immers
+geen gegevens leveren die op het moment van leveren nog niet geregistreerd zijn.
+
+Versie:
+
+4
+
+Soort:
+
+Verwerkingslogica
+
+R1995
+Een levering van persoonsgegevens aan een afnemer dient geprotocolleerd te worden
+Definitie:
+
+Ieder uitgaand bericht, waarin persoonsgegevens zijn opgenomen en waarbij geldt
+dat:
+
+•
+•
+
+Het protcolleringsniveau van de Leveringsautorisatie niet geheim is
+(Leveringsautorisatie.Protocolleringsniveau heeft niet de waarde "Geheim")
+De Rol van de Toegang leveringsautorisatie (Via Partij \ Rol) gelijk is aan
+"Afnemer"
+
+dient geprotocolleerd te worden. De wijze waarop geprotocolleerd dient te worden is
+afhankelijk van de Soort dienst en is uitgewerkt in aparte verwerkingslogica.
+
+(Toelichting: Leveringen aan bijhouders dienen dus NIET geprotocolleerd te worden.
+Leveringen aan afnemers dienen wel geprotocolleerd te worden, maar NIET als de
+leveringsautorisatie protocolleringsniveau "Geheim" heeft)
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R2016
+'Systeemdatum'
+Definitie:
+
+De systeemdatum is de actuele datum tijdens het evalueren van een regel van het
+BRP syteem en heeft het formaat 'jjjjmmdd'.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2236
+Vulling Leveringsaantekening \ Persoon
+Definitie:
+
+Bij elke Leveringsaantekening dienen één of meer voorkomens van
+Leveringsaantekening \ Persoon aangemaakt te worden die aangeven op welke
+personen die protocollering betrekking heeft.
+Daarbij dient per persoon Leveringsaantekening \ Persoon.Tijdstip laatste wijziging
+persoon gevuld te worden met de geleverde actuele waarde van Persoon.Tijdstip
+laatste wijziging.
+
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R2395
+'Peilmoment materieel'
+Definitie:
+
+Dit is, indien gevuld, Bericht.Peilmoment materieel,
+anders 'Systeemdatum' (R2016).
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+

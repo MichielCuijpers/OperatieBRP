@@ -1,0 +1,419 @@
+UC811 Verwerken synchronisatievraag-cyclus
+
+2.3
+
+Datum
+Status
+
+04-04-2016
+Definitief
+
+Definitief | 2.3 | UC811 Verwerken synchronisatievraag-cyclus | 04-04-2016
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................7
+2.1
+2.2
+2.3
+2.4
+2.5
+2.6
+2.7
+
+3
+
+REGULIER VERLOOP ..............................................................................................................................7
+ALTERNATIEF VERLOOP: SYSTEEM ONTVANGT EEN FOUTBERICHT (LF01) ......................................7
+ALTERNATIEF VERLOOP: VERKEERDE FOUTREDEN OF GEEN GELDIGE GEMEENTECODE...................7
+ALTERNATIEF VERLOOP: SYSTEEM ONTVANGT EEN PROTOCOLFOUT (PF0X) ...................................7
+ALTERNATIEF VERLOOP: LIJST VAN SYNCHRONISATIEVRAGEN INVOEREN .......................................7
+ALTERNATIEF VERLOOP: INGEVOERDE SYNCHRONISATIEVRAAG ONJUIST .......................................8
+ALTERNATIEF VERLOOP: LIJST VAN SYNCHRONISATIEVRAGEN ONJUIST ..........................................8
+
+AANVULLENDE SPECIFICATIES .................................................................................................9
+3.1
+3.2
+3.3
+3.4
+3.5
+3.6
+
+4
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................6
+PRECONDITIE ........................................................................................................................................6
+POSTCONDITIE......................................................................................................................................6
+
+GEGEVENS VAN DE SYNCHRONISATIEVRAAG ......................................................................................9
+VALIDATIE SYNCHRONISATIEVRAAG ...................................................................................................9
+LIJST VAN SYNCHRONISATIEVRAGEN ..................................................................................................9
+VALIDATIE VAN LIJST VAN SYNCHRONISATIEVRAGEN ........................................................................9
+BERICHTEN MAKEN EN VERSTUREN .....................................................................................................9
+TECHNISCHE FOUTEN .........................................................................................................................10
+
+OPMERKINGEN ..................................................................................................................................11
+
+OperatieBRP
+
+Pagina 2 van 11
+
+Definitief | 2.3 | UC811 Verwerken synchronisatievraag-cyclus | 04-04-2016
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+20-01-2014
+03-06-2014
+
+0.1
+0.2
+
+Operatie BRP
+Operatie BRP
+
+16-06-2014
+01-09-2014
+28-07-2015
+15-10-2015
+28-03-2016
+
+1.0
+1.1
+2.0
+2.1
+2.2
+
+04-04-2016
+
+2.3
+
+Initiële versie
+Controle op verzendende partij en
+bijhoudende partij toegevoegd
+Reviewcommentaar verwerkt
+Definitief gemaakt voor release 2.2
+Versie aangemaakt voor release 3.1
+Afhandeling technische fouten verduidelijkt
+Aanpassingen t.b.v. beslisboom
+doorgevoerd, afhandeling La01 nu min of
+meer gelijk aan Lg01. UC813 en UC812
+samengevoegd in dit document
+Reviewcommentaar verwerkt
+
+Operatie
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+BRP
+
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+16-06-2014
+
+0.2
+
+Review
+
+Operatie BRP
+
+01-04-2016
+
+2.2
+
+Review
+
+Operatie BRP
+
+OperatieBRP
+
+Pagina 3 van 11
+
+Definitief | 2.3 | UC811 Verwerken synchronisatievraag-cyclus | 04-04-2016
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Vanuit de BRP kan een vraag aan een gemeente gesteld worden om de laatste versie van een
+persoonslijst op te sturen om zodoende de persoonslijst te synchroniseren. Dit is de start van de
+synchronisatievraag (bericht)cyclus. De synchronisatievraag-cyclus is uitvoerig beschreven in het
+Logisch Ontwerp [LO].
+De cyclus start met het opstellen van een of meer synchronisatievragen. Vervolgens wordt de
+synchronisatievraag middels een bericht (Lq01) naar de gemeente verstuurd. In de meeste
+gevallen antwoordt de gemeente hierop met een synchronisatieantwoord (La01). Indien de
+synchronisatievraag niet te beantwoorden is wordt door de gemeente een fout gestuurd (Lf01).
+Verder is het ook mogelijk dat een protocolfout gestuurd wordt (Pf0x).
+Dit document beschrijft op welke wijze de synchronisatievraag-cyclus verwerkt wordt nadat er
+een synchronisatievraag is opgesteld.
+
+uc UC811 Verw erken synchronisatiev raag-cyclus
+
+UC202 Verw erken
+synchronisatie-cyclus
+UC811 Verw erken
+synchronisatiev raag-cyclus
+
+«invokes»
+
+Gemeente
+
+OperatieBRP
+
+Pagina 4 van 11
+
+Definitief | 2.3 | UC811 Verwerken synchronisatievraag-cyclus | 04-04-2016
+
+Schematisch weergave van de synchronisatievraag-cyclus zoals die in het Logisch Ontwerp is
+beschreven.
+
+OperatieBRP
+
+Pagina 5 van 11
+
+Definitief | 2.3 | UC811 Verwerken synchronisatievraag-cyclus | 04-04-2016
+
+1.2
+
+1.3
+
+Referenties
+#
+[LO]
+
+Document
+Logisch Ontwerp
+
+Organisatie
+RvIG
+
+Versie
+3.9
+
+Datum
+31-01-2015
+
+[UC202]
+
+UC202 Synchroniseer in LO3
+gewijzigde persoonsgegevens naar
+BRP
+
+Operatie BRP
+
+-
+
+-
+
+[SUPPL]
+
+Aanvullende specificaties ISC
+
+Operatie BRP
+
+-
+
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+OperatieBRP
+
+Pagina 6 van 11
+
+Definitief | 2.3 | UC811 Verwerken synchronisatievraag-cyclus | 04-04-2016
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+1. De beheerder voert de gegevens van een enkele synchronisatievraag in (AS: 3.1)
+2. Het systeem stelt vast dat de ingevoerde gegevens juist zijn (AV: 2.6) (AS: 3.2)
+3. Het systeem maakt en verstuurt de synchronisatievraag (AS: 3.5)
+4. Het systeem ontvangt een synchronisatieantwoord (AV: 2.2, 2.4)
+5. Use case [UC202] wordt gestart
+6. De use case eindigt
+
+2.2
+
+Alternatief verloop: systeem ontvangt een foutbericht (Lf01)
+1. Het systeem stelt vast dat het foutbericht de foutreden ‘V’ bevat en een geldige gemeentecode
+waarnaar verwezen wordt (AV: 2.3)
+2. Het systeem meldt aan de beheerder dat er verwijsgegevens zijn gevonden
+3. De use case eindigt
+
+2.3
+
+Alternatief verloop: verkeerde foutreden of geen geldige gemeentecode
+1. Het systeem stelt vast dat het foutbericht een andere foutreden dan ‘V’ bevat en/of een
+ongeldige gemeentecode
+2. Het systeem meldt aan de beheerder dat het foutbericht een andere foutreden en/of ongeldige
+gemeentecode bevat
+3. De use case eindigt
+
+2.4
+
+Alternatief verloop: systeem ontvangt een protocolfout (Pf0x)
+1. Het systeem stelt vast dat er een protocolfout is ontvangen
+2. Het systeem meldt de protocolfout aan de beheerder
+3. De use case eindigt
+
+2.5
+
+Alternatief verloop: lijst van synchronisatievragen invoeren
+1. De beheerder voert een lijst van synchronisatievragen in (AS: 3.1, 3.3)
+2. Het systeem stelt vast dat de lijst van synchronisatievragen juist is (AV: 2.7) (AS: 3.4)
+3. Het systeem maakt en verstuurt elke synchronisatievraag uit de lijst (AS: 3.5)
+4. Het systeem ontvangt voor elke verstuurde synchronisatievraag een synchronisatieantwoord
+(AV: 2.2, 2.4)
+5. Voor elk ontvangen synchronisatieantwoord wordt use case [UC202] gestart
+6. De use case eindigt
+
+OperatieBRP
+
+Pagina 7 van 11
+
+Definitief | 2.3 | UC811 Verwerken synchronisatievraag-cyclus | 04-04-2016
+
+2.6
+
+Alternatief verloop: ingevoerde synchronisatievraag onjuist
+1. Het systeem stelt vast dat de ingevoerde gegevens van de synchronisatievraag onjuist is
+2. Het systeem meldt de beheerder dat de ingevoerde gegevens van de synchronisatievraag
+onjuist zijn
+3. De use case eindigt
+
+2.7
+
+Alternatief verloop: lijst van synchronisatievragen onjuist
+1. Het systeem stelt vast dat de lijst van synchronisatievragen onjuist is
+2. Het systeem meldt de beheerder dat de lijst van synchronisatievragen onjuist is
+3. De use case eindigt
+
+OperatieBRP
+
+Pagina 8 van 11
+
+Definitief | 2.3 | UC811 Verwerken synchronisatievraag-cyclus | 04-04-2016
+
+3
+
+Aanvullende specificaties
+
+3.1
+
+Gegevens van de synchronisatievraag
+De in te voeren gegevens van een synchronisatievraag zijn:
+• Gemeentecode, identificeert de gemeente waar de vraag aan wordt gesteld
+• A-nummer, identificeert de persoon waarvan de gegevens gewenst zijn
+
+3.2
+
+Validatie synchronisatievraag
+Het systeem voert voor elke synchronisatievraag de volgende controles uit:
+• Bestaat de synchronisatievraag uit een gemeentecode en a-nummer
+• Voldoet de gemeentecode aan het juiste formaat (4 cijfers, zie ook Tabel 33 in het [LO])
+• Voldoet het a-nummer aan de eisen zoals die in het [LO] pagina 232 Is de gemeentecode van
+een geldige/actuele GBA-gemeente
+• Bestaat er een verzendende instantie voor de gemeentecode
+Het systeem meldt de beheerder wanneer de validatie van een synchronisatievraag mislukt.
+
+3.3
+
+Lijst van synchronisatievragen
+De beheerder kan ook meerdere synchronisatievragen tegelijk stellen. Hiervoor dient de
+beheerder een lijst van gemeentecodes en a-nummers (zie ook par. 3.1) in te voeren middels
+een tekstbestand. Elke regel in het bestand is gelijk aan een synchronisatievraag welke bestaat
+uit een gemeentecode en a-nummer die zijn gescheiden door een komma.
+Voorbeeld:
+1234,510889517
+1235,698023432
+1236,997753328
+
+3.4
+
+Validatie van lijst van synchronisatievragen
+Het systeem controleert of de lijst van synchronisatievragen in het juiste formaat is opgesteld.
+Indien het tekstbestand niet aan het juiste formaat voldoet wordt dit gemeld aan de beheerder.
+Als is vastgesteld dat de lijst het juiste formaat heeft, wordt iedere synchronisatievraag uit de
+lijst gevalideerd zoals dat in paragraaf 3.2 beschreven is. Indien een of meer
+synchronisatievragen onjuist zijn worden deze in één melding aan de beheerder gemeld. Hierbij
+wordt aan de hand van een regelnummer gemeld welke synchronisatievraag onjuist is.
+
+3.5
+
+Berichten maken en versturen
+Het maken en versturen van berichten is generiek en is beschreven in [SUPPL].
+
+OperatieBRP
+
+Pagina 9 van 11
+
+Definitief | 2.3 | UC811 Verwerken synchronisatievraag-cyclus | 04-04-2016
+
+3.6
+
+Technische fouten
+De afhandeling van technische fouten is beschreven in [SUPPL].
+
+OperatieBRP
+
+Pagina 10 van 11
+
+Definitief | 2.3 | UC811 Verwerken synchronisatievraag-cyclus | 04-04-2016
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+OperatieBRP
+
+Pagina 11 van 11
+
+

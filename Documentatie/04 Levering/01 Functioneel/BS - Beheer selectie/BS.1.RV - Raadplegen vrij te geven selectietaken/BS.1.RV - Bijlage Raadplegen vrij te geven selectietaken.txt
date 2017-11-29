@@ -1,0 +1,83 @@
+BS.1.RV - Bijlage Raadplegen vrij te geven
+selectietaken
+Versie: Werk
+Gegenereerd op: 17 juli 2017
+Status: Definitief
+
+1 Regels voor usecase BS.1.RV - Raadplegen vrij te geven
+selectietaken
+1.1
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2812
+
+1
+
+F
+
+Ingevoerde gegevens onjuist
+
+R2854
+
+1
+
+I
+
+Geen vrij te geven selectietaken gevonden
+
+2 Uitwerking regels
+R2812
+Ingevoerde gegevens onjuist
+Definitie:
+
+Indien één van de zoekcriteria onjuist wordt ingevoerd wordt dit gemeld aan de
+gebruiker.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Ingevoerde gegevens onjuist.
+
+R2854
+Geen vrij te geven selectietaken gevonden
+Definitie:
+
+Indien er geen selectietaken zijn waarvoor geldt dat:
+de Selectietaak status.Naam is gelijk aan 'Gepland'
+EN
+voldoet aan de eventueel opgegeven zoekcriteria
+dan wordt dit aan de gebruiker gemeld.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Informatieve melding; ter kennisname
+
+Meldingstekst:
+
+Er zijn geen vrij te geven selectietaken gevonden.
+
+

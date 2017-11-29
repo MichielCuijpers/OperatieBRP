@@ -1,0 +1,430 @@
+UCS SL.0.US - Uitvoeren selectierun
+Versie
+
+1.0
+
+Datum
+
+12 juli 2017
+
+Status
+
+Definitief
+
+Locatie
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+0.1
+
+Vervanging voor gereviewde SL.0.OS – opstarten
+selectierun
+
+oBRP
+
+21-03-2017
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+22-03-2017
+
+0.3
+
+AD aangepast
+
+oBRP
+
+08-05-2017
+
+0.4
+
+Benamingen statussen selectietaken aangepast
+
+oBRP
+
+12-07-2017
+
+1.0
+
+Definitief gemaakt
+
+oBRP
+
+14-03-2017
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS SL.0.US - Uitvoeren selectierun
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Invoer ....................................................................................................................... 4
+2.1
+2.2
+2.3
+
+3
+
+Beschrijving .........................................................................................................................5
+Schematische weergave.........................................................................................................5
+Beschrijving activiteitendiagram .............................................................................................5
+Bedrijfsregels .......................................................................................................................6
+
+Uitvoer ...................................................................................................................... 7
+4.1
+
+5
+
+Beschrijving .........................................................................................................................4
+Verzoekbericht .....................................................................................................................4
+Bijzonderheden.....................................................................................................................4
+
+Verwerking ............................................................................................................... 5
+3.1
+3.2
+3.3
+3.4
+
+4
+
+Doel ....................................................................................................................................3
+Functionele context ...............................................................................................................3
+Referenties ..........................................................................................................................3
+
+Beschrijving .........................................................................................................................7
+
+Ontwerpbeslissingen ................................................................................................ 8
+
+Status: Definitief, versie: 1.0
+
+Pagina 2 van 8
+
+UCS SL.0.US - Uitvoeren selectierun
+
+1 Inleiding
+1.1
+
+Doel
+
+In een selectierun worden één of meerdere selectietaken uitgevoerd.
+Alle selectietaken die op de betreffende dag staan ingepland en de status “uitvoerbaar” hebben
+worden gecontroleerd op autorisatie en na goedkeuring opgenomen in de selectierun.
+Afhankelijk van de soort dienst van de betreffende selectietaak wordt de juiste verwerking
+aangeroepen.
+Deze Use Case beschrijft het samenstellen en uitvoeren van een selectierun.
+
+1.2
+
+Functionele context
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitdiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving Berichtstructuur
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 1.0
+
+Pagina 3 van 8
+
+UCS SL.0.US - Uitvoeren selectierun
+
+2 Invoer
+2.1
+
+Beschrijving
+
+De selectierun kan door de beheerder worden geïnitieerd vanuit de beheerapplicatie of automatisch
+op een te configureren moment door het systeem gestart worden.
+
+2.2
+
+Verzoekbericht
+
+Niet van toepassing
+
+2.3
+
+Bijzonderheden
+
+De volgende gegevens zijn van belang om een selectierun te kunnen starten:
+
+•
+
+Selectierun instellingen
+
+Een selectierun kan automatisch gestart worden op een te configureren moment of door vanuit de
+beheerapplicatie de functie aan te roepen.
+
+•
+
+Selectietaken
+
+De status en de geplande datum van de selectietaken worden beschouwd als input voor het starten
+van de selectierun.
+Selectietaken worden door de beheerder in de beheerapplicatie ingepland. Na goedkeuring door de
+beheerder krijgt de ingeplande selectietaak de status “Uitvoerbaar”. Deze ingeplande en
+uitvoerbare selectietaken worden in de selectierun uitgevoerd.
+
+•
+
+Autorisatiegegevens
+
+Voordat de selectietaak wordt opgenomen in de selectierun wordt de autorisatie (partij, toegang
+leveringsautorisatie, leveringsautorisatie, dienstbundel en dienst) nog een laatste keer
+gecontroleerd.
+
+•
+
+Selectiedienst instellingen:
+
+Afhankelijk van de soort selectiedienst waartoe een selectietaak binnen de selectierun behoort
+wordt de vervolgstap voor de betreffende selectietaak bepaald.
+
+Status: Definitief, versie: 1.0
+
+Pagina 4 van 8
+
+UCS SL.0.US - Uitvoeren selectierun
+
+3 Verwerking
+3.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft de verwerking van het opstarten van de selectierun.
+
+3.2
+
+Schematische weergave
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitendiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+In het diagram is alleen de happy flow weergegeven. Foutafhandeling is hier niet opgenomen,
+controles staan beschreven in de begeleidende tekst in de volgende paragraaf of in de
+aangeroepen Use Cases.
+Selecties
+SL.0.US- Uitvoeren selectierun
+
+SL.0.SS - Standaard selectiedienst
+
+SL.0.PA - Selectiedienst met
+plaatsing afnemerindicatie
+
+SL.0.VA - Selectiedienst met
+verwijdering afnemerindicatie
+
+SL.1.US.RS - Registreer
+selectierun
+
+SL.1.US.CU - Controleer
+uitvoerbare selectietaken
+
+Geen uitvoerbare
+selectietaken
+
+SL.1.US.CA - Controleer
+autorisatie selectietaak
+
+Autorisatie <> OK
+
+SL.1.US.VS - Voeg
+selectietaak toe aan run
+
+Standaard selectiedienst
+
+SL.0.SS - Standaard
+Selectiedienst
+
+Selectiedienst met
+Plaatsing afnemerindicatie
+
+Selectiedienst met
+Verwijdering afnemerindicatie
+
+SL.0.PA - Selectiedienst
+met plaatsing
+afnemerindicatie
+SL.0.VA - Selectiedienst
+met verwijdering
+afnemerindicatie
+
+SL.1.US.AS - Afronden
+selectierun
+
+3.3
+
+Beschrijving activiteitendiagram
+
+Het opstarten van een selectierun bestaat uit een aantal volgordelijke stappen die uitgevoerd
+worden. In de onderstaande toelichtende tekst zijn de stappen beschreven. Elke toegelichte stap is
+terug te vinden in het activiteitendiagram in de vorige paragraaf.
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de aan de specificatie van de Use Cases en de aan de Use Cases gekoppelde
+regels in BMR.
+
+•
+
+SL.1.US.RS – Registreer selectierun
+De samen te stellen en te starten selectierun wordt geregistreerd. Een selectierun krijgt
+een ID en de datum van de selectierun wordt vastgelegd.
+
+Status: Definitief, versie: 1.0
+
+Pagina 5 van 8
+
+UCS SL.0.US - Uitvoeren selectierun
+
+De volgende stappen worden per selectietaak doorlopen.
+•
+
+SL.1.US.CU – Controleer uitvoerbare selectietaken
+In deze stap wordt gecontroleerd of er uit te voeren selectietaken zijn die opgenomen
+dienen te worden in deze selectierun. De status van de selectietaak dient “Uitvoerbaar” te
+zijn en de geplande datum dient de systeemdatum te zijn.
+
+•
+
+SL.1.US.CA – Controleer autorisatie selectietaak
+Er wordt nog een laatste keer voordat de selectierun wordt uitgevoerd gecontroleerd of de
+autorisatie goed is. Er wordt gecontroleerd op geldigheid van partij, leveringsautorisatie,
+toegang leveringsautorisatie, dienstbundel en dienst.
+
+•
+
+SL.1.US.VS – Voeg selectietaak toe aan run
+Zodra bepaald is dat een selectietaak kan worden uitgevoerd in deze selectierun dan wordt
+dit bij de selectietaak geregistreerd.
+De status van de selectietaak wordt gewijzigd naar ‘In uitvoering’.
+
+•
+
+Aanroepen juiste selectiedienst
+Afhankelijk van de soort selectiedienst van de uit te voeren selectietaak wordt de juiste Use
+Case met betrekking tot de verwerking van de soort selectiedienst aangeroepen. De
+selectietaak wordt volgens deze Use Case verder verwerkt.
+
+Soort selectiedienst van de selectietaak
+
+Verwerking van de selectietaak
+
+Standaard selectiedienst
+
+SL.0.SS
+
+Selectiedienst met plaatsing afnemerindicatie
+
+SL.0.PA
+
+Selectiedienst met verwijdering
+afnemerindicatie
+
+SL.0.VA
+
+•
+
+3.4
+
+SL.1.US.AS – Afronden selectierun
+Wanneer alle selectietaken zijn uitgevoerd binnen de selectierun dan wordt de selectierun
+beëindigd. De selectierun krijgt een einddatum.
+
+Bedrijfsregels
+
+Voor een toelichting op de verschillende soorten bedrijfsregels, de meldingsniveaus, de toepassing
+en werking ervan in het bijhoudingsproces, wordt verwezen naar de daartoe opgestelde
+Aspectbeschrijving Controles [3].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels, verwerkingslogica en definitieregels zijn opgenomen de bijlage: SL.0.SS – Bijlage
+Opstarten selectierun.doc.
+
+Status: Definitief, versie: 1.0
+
+Pagina 6 van 8
+
+UCS SL.0.US - Uitvoeren selectierun
+
+4 Uitvoer
+4.1
+
+Beschrijving
+
+Niet van toepassing.
+
+Status: Definitief, versie: 1.0
+
+Pagina 7 van 8
+
+UCS SL.0.US - Uitvoeren selectierun
+
+5 Ontwerpbeslissingen
+Er zijn geen aanvullende ontwerpbeslissingen.
+
+Status: Definitief, versie: 1.0
+
+Pagina 8 van 8
+
+

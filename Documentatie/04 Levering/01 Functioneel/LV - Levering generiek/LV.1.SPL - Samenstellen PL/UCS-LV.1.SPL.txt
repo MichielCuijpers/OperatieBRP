@@ -1,0 +1,313 @@
+UCS LV.1.SPL – Samenstellen persoonslijst
+Versie
+
+2.0
+
+Datum
+
+14 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+18-11-2016
+
+0.1
+
+Eerste opzet
+
+oBRP
+
+22-11-2016
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+24-11-2016
+
+0.3
+
+Ontwerpbeslissing vanuit (oude) LV.1.MB overgenomen;
+AD aangepast sub niveaus toegevoegd zodat de regels in
+BMR gekoppeld kunnen worden aan de juiste stappen.
+
+oBRP
+
+13-12-2016
+
+0.4
+
+AD aangepast (verwijderen van (*)).
+
+oBRP
+
+15-02-2017
+
+1.0
+
+UC en regels in BMR omgehangen. Versie document
+gereed.
+
+oBRP
+
+03-04-2017
+
+1.1
+
+LV.1.SPS.PVB toegevoegd met R1340
+
+oBRP
+
+19-05-2017
+
+1.2
+
+Ontwerpbeslissingen mbt pre-relatiefilter uitgebreid en
+voorzien van plaatjes
+
+oBRP
+
+14-07-2017
+
+2.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS LV.1.SPL – Samenstellen persoonslijst
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Samenstellen persoonslijst (PL) ............................................................................... 4
+2.1
+2.2
+
+3
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+Openstaande punten .............................................................................................................3
+
+Activiteitendiagram ...............................................................................................................4
+Beschrijving van de stappen ...................................................................................................4
+
+Ontwerpbeslissingen ................................................................................................ 6
+3.1
+3.2
+
+Het pre-relatiefilter R1328 in samenhang met correctie aanvangsdatum relatie ............................6
+Overige ...............................................................................................................................8
+
+Status: Definitief, versie: 2.0
+
+Pagina 2 van 8
+
+UCS LV.1.SPL – Samenstellen persoonslijst
+
+1 Inleiding
+1.1
+
+Doel
+
+Het doel van dit document is te beschrijven hoe een volledige persoonslijst wordt samengesteld in
+de BRP.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de stappen met betrekking tot het samenstellen van een persoonslijst (PL).
+In hoofdstuk 3 worden de relevante ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+1.4
+
+Openstaande punten
+
+Ter overweging: voor de duale periode een waarschuwing geven aan Bijhouders dat de
+opgevraagde persoon ‘in verhuizing’ is, zodat zij hier in de verwerking van administratieve
+handelingen rekening mee kunnen houden. Tijdens die verhuizing is de persoon in het GBA-stelsel
+geblokkeerd. Dit is beschikbaar in de database in het schema MigBlok in het object Blokkering (met
+een verwijzing naar de persoon via het administratienummer).
+
+Status: Definitief, versie: 2.0
+
+Pagina 3 van 8
+
+UCS LV.1.SPL – Samenstellen persoonslijst
+
+2 Samenstellen persoonslijst (PL)
+De stappen om te komen tot een persoonslijst staan in een activiteitendiagram.
+In de paragraaf daarna worden de processtappen stuk voor stuk beschreven. Voor een meer
+gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden wordt verwezen
+naar de aan deze Use Case gekoppelde regels in BMR.
+
+2.1
+
+Activiteitendiagram
+
+2.2
+
+Beschrijving van de stappen
+
+In deze paragraaf worden de stappen in het activiteitendiagram beschreven.
+
+1. De volledige persoon samenstellen (LV.1.SPL.VP )
+Alle van de persoon geadministreerde gegevens worden opgehaald. De volledige persoon bevat
+attributen uit inhoudelijke groepen, verantwoordingsgroepen en onderzoeksgroepen.
+
+Status: Definitief, versie: 2.0
+
+Pagina 4 van 8
+
+UCS LV.1.SPL – Samenstellen persoonslijst
+
+2. Filteren op grens PL (LV.1.SPL.FG )
+Verwijderen van pre-relatie gegevens uit de persoonslijst wanneer de verzoekende partij een
+afnemer is.
+Een persoonslijst bevat gegevens van personen waar de betreffende persoon een relatie mee
+heeft. Een afnemer mag echter geen gegevens van de gerelateerde personen ontvangen die
+een geldigheidsperiode hebben die geheel voor de aanvangsdatum van de relatie met die
+persoon ligt.
+
+3. Persoon met een verstrekkingsbeperking (LV.1.SPL.PVB )
+Als de persoon een actuele verstrekkingsbeperking heeft, dan bevat het uitgaande bericht voor
+die persoon een waarschuwing.
+
+Status: Definitief, versie: 2.0
+
+Pagina 5 van 8
+
+UCS LV.1.SPL – Samenstellen persoonslijst
+
+3 Ontwerpbeslissingen
+3.1
+
+Het pre-relatiefilter R1328 in samenhang met correctie
+aanvangsdatum relatie
+
+Als de datum aanvang van een relatie gecorrigeerd wordt, dan zal het pre-relatiefilter daar in
+bepaalde gevallen niet optimaal op reageren. Dit is een bewuste keuze: enerzijds betreft het
+corner cases en anderzijds zou de complexiteit van het pre-relatiefilter erg groot worden als we dit
+wel willen ondersteunen.
+Het eerste punt betreft de situatie waar de datum aanvang van de relatie zodanig gewijzigd wordt
+dat een bestaand voorkomen van bijvoorbeeld de samengestelde naam van de partner nu niet
+meer weggefilterd wordt of nu juist wel weggefilterd wordt.
+In het onderstaande voorbeeld is sprake van een huwelijk en een naamswijziging die geen verband
+heeft met dat huwelijk. Aanvankelijk heeft de naamswijziging voor het huwelijk plaatsgevonden en
+wordt de oude samengestelde naam (voorkomens A en A’) dus weg gefilterd:
+
+Als nu het huwelijk zodanig wordt gecorrigeerd dat deze voor de naamswijziging komt te liggen,
+dan wordt de oude naam (A’) niet meer weggefilterd:
+
+Status: Definitief, versie: 2.0
+
+Pagina 6 van 8
+
+UCS LV.1.SPL – Samenstellen persoonslijst
+
+Dit is op zich helemaal correct en gaat goed bij een volledigbericht. Er is wel een issue met het
+mutatiebericht dat wordt aangemaakt door de correctie van het huwelijk: voorkomen A’ is niet
+geraakt door de handeling en zal dus niet in het bericht worden opgenomen. Als dit voor een
+afnemer relevant is dan doet hij er dus goed aan om na een correctie van de aanvangsdatum van
+een relatie opnieuw de gehele persoonslijst op te vragen.
+
+Het tweede punt betreft een naamswijziging die wel samenhangt met de sluiting van het huwelijk.
+In dat geval kan het voorkomen dat er een voorkomen bestaat met de oude naam dat materieel
+gezien nog bestaan heeft tijdens het huwelijk en dat weliswaar vervallen is, maar nog niet
+vervallen was op het moment dat het huwelijk (initieel) werd geregistreerd.
+Zie de onderstaande figuur ter illustratie, waar het huwelijk een de samengestelde naam is
+gecorrigeerd van datum 1-2-2010 naar 1-1-2010. Het voorkomen A’ zal hier wel worden
+opgenomen in het bericht omdat het deels buiten het bereik van het pre-relatiefilter komt te
+vallen.
+
+Status: Definitief, versie: 2.0
+
+Pagina 7 van 8
+
+UCS LV.1.SPL – Samenstellen persoonslijst
+
+3.2
+
+Overige
+•
+
+•
+•
+•
+
+Indien de gegevens van een gerelateerde eerder zijn vastgelegd dan de relatie zelf, dan
+levert de BRP niet de verantwoording van die gegevens.
+Voorbeeld: de gegevens zelf hebben als verantwoording bijvoorbeeld de
+geboorteakte van die gerelateerde persoon, terwijl de daadwerkelijke
+verantwoording dat die gegevens zijn opgenomen bij de PL van die hoofdpersoon
+de huwelijksakte is.
+De gegevens die ontstaan zijn na volledige opschorting worden niet verwijderd.
+Toelichting: Wanneer een bijhouder deze gegevens toch vastlegt, zal er vast een
+goede reden voor zijn.
+De gegevens die ontstaan zijn na gedeeltelijke opschorting worden (nog) niet verwijderd.
+Reden: dit is pas relevant wanneer de RNI overgaat naar het BRP stelsel en dat is
+op dit moment nog buiten scope.
+Het leveren van afnemerindicaties betreft een alles of niets autorisatie die met name
+bedoeld is voor bijhouders (inzagerecht van burgers en ondersteuning bij onderzoeken).
+Toelichting: Het is dus niet mogelijk voor afnemer om alleen hun eigen
+afnemerindicaties geleverd te krijgen. Geheime afnemerindicaties worden nooit
+geleverd (ook niet aan bijhouders).
+
+Status: Definitief, versie: 2.0
+
+Pagina 8 van 8
+
+

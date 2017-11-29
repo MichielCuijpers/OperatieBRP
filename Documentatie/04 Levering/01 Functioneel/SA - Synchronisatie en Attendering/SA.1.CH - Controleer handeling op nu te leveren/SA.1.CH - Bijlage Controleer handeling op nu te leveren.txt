@@ -1,0 +1,117 @@
+SA.1.CH - Bijlage Controleer handeling op nu te
+leveren
+Versie: Werk
+Gegenereerd op: 21 juli 2017
+Status: Definitief
+
+1 Regels voor usecase SA.1.CH.CSL - Controleer status
+levering
+1.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2561
+
+1
+
+Een nieuw geregistreerde administratieve handeling moet status 'Te Leveren'
+hebben
+
+2 Regels voor usecase SA.1.CH.CVH - Controleer
+voorafgaande handelingen
+2.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2562
+
+1
+
+Een nieuwe geregistreerde administratieve handeling moet in volgorde van
+bijhouding geleverd worden
+
+3 Regels voor usecase SA.1.CH.WSL - Wijzig status levering
+naar in levering
+3.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2563
+
+1
+
+Een te leveren administratieve handeling krijgt status 'In Levering'
+
+4 Uitwerking regels
+R2561
+Een nieuw geregistreerde administratieve handeling moet status 'Te Leveren' hebben
+Definitie:
+
+Bij het leveren naar aanleiding van een Administratieve handeling geldt dat er
+alleen berichten worden aangemaakt als de Administratieve handeling.Status
+levering de waarde 'Te leveren' heeft.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2562
+Een nieuwe geregistreerde administratieve handeling moet in volgorde van bijhouding
+geleverd worden
+Definitie:
+
+Handelingen moeten in dezelfde volgorde worden geleverd als waarin ze zijn
+bijgehouden. Dit betekent dat er geen enkel bijgehouden persoon mag zijn
+waarvoor nog eerdere bijhoudingen zijn die niet geleverd zijn.
+Voor elk Persoon met een Persoon.Afgeleid administratief die verwijst naar de te
+leveren Administratieve handeling moet gelden dat er geen enkel eerder voorkomen
+van Persoon.Afgeleid administratief is met de waarde 'Te leveren', 'In levering' of
+'Fout'.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2563
+Een te leveren administratieve handeling krijgt status 'In Levering'
+Definitie:
+
+Indien gestart wordt met de levering van diensten nav een Administratieve
+handeling en de te leveren Administratieve Handeling voldoet aan
+R2561 - Een nieuw geregistreerde administratieve handeling moet status 'Te
+Leveren' hebben
+EN
+R2562 - Een nieuwe geregistreerde administratieve handeling moet in volgorde van
+bijhouding geleverd worden
+dan moet Administratieve handeling.Status levering gewijzigd worden naar de
+waarde 'In levering'.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+

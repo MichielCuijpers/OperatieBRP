@@ -1,0 +1,935 @@
+Evaluatie standaard kwaliteitskenmerken (ISO 25010)
+Toelichting op kolommen
+Aspect
+Engels
+Toelichting
+Belang
+ABA?
+ABA
+Duiding impact
+Opmerkingen
+
+Onderdeel van de ISO norm (bron Wikipedia).
+Engelse term (bron Wikipedia).
+Toelichting op de term (bron Wikipedia).
+Inschatting van het belang van het aspect op de BRP. Zie beoordelingstabel hieronder.
+Inschatting van het de mate waarin het aspect de architectuur beïnvloed. ABA =
+Architectuurbepalend aspect. Zie beoordelingstabel hieronder.
+De term die voor het architectuurbepalende aspect gebruikt wordt.
+Op welke manier heeft het onderdeel impact op de BRP. (Zeer beknopte geformuleerd zie
+architectuurdocument voor meer informatie).
+Aanvullende opmerkingen.
+
+Beoordelingstabel: Mate waarin een aspect van belang is voor de BRP
+n.v.t. Het aspect speelt (hoegenaamd) geen rol bij de BRP.
+gering Er bestaat in de definitiestudie/PgSA slechts een enkele eis die terug te voeren is tot dit aspect en/of - Het aspect speelde nauwelijks een rol in gesprekken met belanghebbenden.
+normaal Er bestaan in de definitiestudie/PgSA diverse eisen die terug te voeren zijn tot dit aspect - en/of Het aspect speelde een beperkte rol in gesprekken met belanghebbenden.
+hoog Er bestaan in de definitiestudie/PgSA diverse eisen die terug te voeren zijn tot dit aspect - en/of Het aspect speelde daarnaast een prominente rol in gesprekken met belanghebbenden.
+zeer hoog
+
+Het aspect is direct te relateren aan één van de doelstellingen van de BRP.
+
+Beoordelingstabel: Mate waarin een aspect bepalend is voor de architectuur
+n.v.t. Het aspect heeft geen invloed op de architectuur.
+gering Er dient bij het ontwerp van een enkel specifiek onderdeel rekening gehouden te worden met het
+aspect. Het aspect heeft alleen invloed op dat onderdeel.
+normaal Er dient bij het ontwerp van enkele specifieke onderdelen rekening gehouden te worden met het
+aspect. Het aspect heeft alleen invloed op die onderdelen.
+hoog Er dient bij het ontwerp van vrijwel alle onderdelen rekening gehouden te worden met het aspect.
+Maar het aspect heeft geen invloed op de essentie van de ontwerpen.
+zeer hoog Er dient bij het ontwerp van vrijwel alle onderdelen rekening gehouden te worden met het aspect.
+Het aspect heeft wezenlijke invloed op de mogelijke oplossingsrichtingen en de uiteindelijke
+vormgeving van de ontwerpen.
+
+Evaluatie standaard kwaliteitskenmerken (ISO 25010)
+Onderdeel
+
+Productkwaliteit
+Geschiktheid
+
+Functionele
+compleetheid
+
+Functionele
+correctheid
+
+Functionele
+toepasselijkheid
+
+Engels
+Product quality
+
+Toelichting
+
+Functional suitability De mate waarin een softwareproduct of
+computersysteem functies levert die voldoen aan de
+uitgesproken en veronderstelde behoeften, bij
+gebruik onder gespecificeerde condities.
+Functional
+De mate waarin de set van functies alle
+completeness
+gespecificeerde taken en gebruikersdoelen
+ondersteunen.
+
+Functional
+correctness
+
+De mate waarin een softwareproduct of
+computersysteem de juiste resultaten met de
+benodigde nauwkeurigheid beschikbaar stelt.
+
+Belang
+
+ABA?
+
+ABA
+
+Duiding impact
+
+Opmerkingen
+
+-
+
+-
+
+-
+
+-
+
+n.v.t.
+
+-
+
+-
+
+Dit aspect is niet goed uit te drukken in termen van belang en impact op de
+architectuur (ABA). De stuurgroep maakt een afweging tussen functionaliteit, geld en
+tijd. Wel heeft het lang durig niet vaststaan van de scope impact gehad op de
+architectuur. Veel zaken zijn met een behoorlijke mate van genericiteit opgezet om
+beter om te kunnen gaan met een onzekere scope. Dit fenomeen is echter
+meegenomen bij Onderhoudbaarheid en daarbinnen de Wijzigbaarheid.
+Dit aspect komt vooral terug in het testen en het implementatie traject. Omdat de
+BRP een basisregistratie is ligt er bijzonder veel nadruk op de correcte werking van
+het systeem. Dit heeft echter geen duidelijk aanwijsbare invloed op de architectuur.
+
+hoog
+
+zeer hoog zeer hoog Gegevenskwaliteit Genormaliseerd gegevensmodel;
+Transactionele verwerking; Actualiteit;
+Concurrency.
+n.v.t.
+n.v.t.
+-
+
+Dit aspect komt terug in de doelstellingen van het programma en heeft een enorme
+impact op de totale architectuur.
+
+Snelheid
+
+Functional
+appropriateness
+Performance
+efficiency
+Time-behaviour
+
+De mate waarin de functies bijdragen aan het
+behalen van specifieke taken en doelen.
+De prestaties in verhouding tot de hoeveelheid
+middelen gebruikt onder genoemde condities.
+De mate waarin antwoord- en verwerkingstijden en
+zeer hoog zeer hoog Performance
+doorvoersnelheid van een product of systeem, tijdens
+de uitvoer van zijn functies, voldoet aan de wensen.
+
+Middelenbeslag
+
+Resource utilization
+
+De mate waarin de hoeveelheid en type middelen die
+gebruikt worden door een product of systeem, tijdens
+de uitvoer van zijn functies, voldoet aan de wensen.
+
+n.v.t.
+
+gering
+
+-
+
+Capaciteit
+
+Capacity
+
+De mate waarin de maximale limieten van een
+product- of systeemparameter voldoet aan de
+wensen.
+
+hoog
+
+hoog
+
+Schaalbaarheid
+
+Levering dient schaalbaar te zijn; Replica's;
+Allemaal losse services; Ontwerp gericht op
+concurrency; Aan bijhoudingskant is
+schaalbaarheid niet noodzakelijk, wel is ook
+daar concurrency nodig om de gevraagde
+capaciteit te halen.
+
+Noch in de definitiestudie noch in de programmastartarchitectuur wordt gesproken
+over schaalbaarheid. De eis komt echter wel prominent naar voren in de NFR's en
+speelt in de praktijk om diverse redenen toch een hele belangrijke rol: 1.
+Schaalbaarheid is een belangrijk middel om de in de NFR's gevraagde capaciteit aan
+te kunnen, 2. Schaalbaarheid is belangrijk om een toenemende capaciteitsvraag aan
+te kunnen (conform ervaringen met bijvoorbeeld BV-BSN), 3. Schaalbaarheid is
+belangrijk om de performance eisen te kunnen halen. De inschatting van de impact
+op de architectuur wordt vooral bepaald door het feit dat gegevensintegriteit
+(transactionele integriteit) en actualiteitseisen niet goed samen gaat met clustering
+met als gevolg dat de implementatie van schaalbaarheid minder triviaal is.
+
+Compatibility
+
+De mate waarin een product, systeem of component
+informatie uit kan wisselen met andere producten,
+systemen of componenten, en/of het de gewenste
+functies kan uitvoeren terwijl het dezelfde hard- of
+software-omgeving deelt.
+
+Co-existence
+
+De mate waarin een product zijn gewenste functies
+efficiënt kan uitvoeren terwijl het een
+gemeenschappelijke omgeving en middelen deelt
+met andere producten, zonder nadelige invloed op
+enig ander product.
+
+n.v.t.
+
+gering
+
+-
+
+-
+
+De inrichting van de infrastructuur zal hierbij uiteindelijk bepalend zijn. Inschatting is
+dat die inrichting niet tot significante wijzigingen in de architectuur van de software
+zal leiden.
+
+Prestatie-efficiëntie
+
+Uitwisselbaarheid
+
+Beïnvloedbaarheid
+
+De BRP is een maatwerk systeem. Dit onderdeel lijkt daardoor niet van toepassing.
+Alle functies zijn immers ontworpen om een bijdrage te leveren.
+
+Persoonscache; Mogelijk impact db schema Dit aspect komt terug in de doelstellingen van het programma en heeft een enorme
+(indexen, weglaten fk's…); Controle
+impact op de totale architectuur.
+selectiviteit bevragingen; Bijzondere
+architectuur selecties; Inzet van replica's;
+Aparte database voor archivering,
+protocollering etc.
+Indexering database.
+Het aspect speelt vooral een rol bij het in het geheugen kunnen houden van indexen.
+
+Koppelbaarheid
+
+Interoperability
+
+De mate waarin twee of meer systemen, producten zeer hoog
+of componenten informatie kunnen uitwisselen en de
+uitgewisselde informatie kunnen gebruiken.
+
+Usability
+
+De mate waarin een product of systeem gebruikt kan
+worden door gespecificeerde gebruikers om effectief,
+efficiënt en naar tevredenheid gespecificeerde doelen
+te bereiken in een gespecificeerde gebruikscontext.
+
+Herkenbaarheid van
+geschiktheid
+
+Appropriateness
+recognisability
+
+De mate waarin gebruikers kunnen herkennen of een
+product of systeem geschikt is voor hun behoeften.
+
+Leerbaarheid
+
+Learnability
+
+De mate waarin een product of systeem gebruikt kan
+worden door gespecificeerde gebruikers om
+gespecificeerde leerdoelen te bereiken met
+betrekking tot het gebruik van het product of systeem
+met effectiviteit, efficiëntie, vrijheid van risico en
+voldoening, in een gespecificeerde gebruikscontext.
+
+Bedienbaarheid
+
+Operability
+
+Bruikbaarheid
+
+hoog
+
+Koppelbaarheid
+
+BRPXML, GBA leveringen, StUF
+vertaalvoorziening, DigiKoppeling,
+DigiMelding, DigiLevering…
+
+We zien de toepassing van standaarden rond de koppelvlakken als onderdeel van de
+koppelbaarheid. Het is de vraag of dit klopt omdat de defintie van uitwisselbaarheid
+spreekt over "… terwijl het dezelfde hard- of software-omgeving deelt". Er is echter
+geen andere categorie waar dit aspect beter bij past.
+Dit aspect komt terug in de doelstellingen van het programma en heeft impact op
+diverse onderdelen van de architectuur. Deze onderdelen zijn echter wel redelijk
+goed van elkaar te scheiden en daarmee blijft de impact redelijk isoleerbaar.
+
+n.v.t.
+
+n.v.t.
+
+-
+
+-
+
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's.
+
+n.v.t.
+
+n.v.t.
+
+-
+
+-
+
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's.
+
+normaal
+
+-
+
+Beheerapplicatie.
+
+Het onderwerp komt ter sprake in afstemmingsoverleg met de beheerder.
+
+Voorkomen
+gebruikersfouten
+
+De mate waarin een product of systeem attributen
+normaal
+heeft die het makkelijk maken om het te bedienen en
+beheersen.
+User error protection De mate waarin het systeem gebruikers beschermt
+zeer hoog
+tegen het maken van fouten.
+
+Volmaaktheid
+gebruikersinteractie
+
+User interface
+aesthetics
+
+Toegankelijkheid
+
+Accessibility
+
+Betrouwbaarheid
+
+Reliability
+
+Volwassenheid
+
+Maturity
+
+Beschikbaarheid
+
+Availability
+
+Foutbestendigheid
+
+Fault tolerance
+
+Herstelbaarheid
+
+Recoverability
+
+Beveiligbaarheid
+
+Security
+
+De mate waarin een gebruikersinterface het de
+gebruiker mogelijk maakt om een plezierige en
+voldoening gevende interactie te hebben.
+De mate waarin een product of systeem gebruikt kan
+worden door mensen met de meest uiteenlopende
+eigenschappen en mogelijkheden om een
+gespecificeerd doel te bereiken in een
+gespecificeerde gebruikscontext
+De mate waarin een systeem, product of component
+gespecificeerde functies uitvoert onder
+gespecificeerde condities gedurende een
+gespecificeerde hoeveelheid tijd.
+De mate waarin een systeem, product of component
+aan betrouwbaarheidsbehoeften voldoet onder
+normale werkomstandigheden.
+De mate waarin een systeem, product of component
+operationeel en toegankelijk is wanneer men het wil
+gebruiken.
+De mate waarin een systeem, product of component
+werkt zoals bedoeld ondanks de aanwezigheid van
+hard- of softwarefouten.
+De mate waarin het product of systeem, in geval van
+een onderbreking of bij een fout, de direct betrokken
+gegevens kan herstellen en het systeem in de
+gewenste staat kan terug brengen.
+De mate waarin een product of systeem informatie
+en gegevens beschermt zodat personen, andere
+producten of systemen de juiste mate van
+gegevenstoegang hebben passend bij hun soort en
+niveau van autorisatie.
+
+hoog
+
+n.v.t.
+
+n.v.t.
+
+Gegevenskwaliteit Bedrijfsregels; Specifieke
+bijhoudingsberichten (in plaats van één
+generiek bericht); XSD validatie;
+Prevalidatie.
+-
+
+Vertoont duidelijk overlap met gegevenskwaliteit en komt daardoor feitelijk ook
+terug in de doelstellingen. De genoemde maatregelen raken het ontwerp van
+meerdere componenten maar niet die van de hele architectuur.
+
+n.v.t.
+
+n.v.t.
+
+-
+
+-
+
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's.
+
+zeer hoog
+
+normaal
+
+-
+
+Normenkader codekwaliteit;
+Schaduwdraaien.
+
+Als onderdeel van de NFR's zijn eisen opgenomen inzake de kwaliteit van de
+broncode en de volwassenheid van gebruikte sofware componenten.
+
+zeer hoog
+
+normaal
+
+-
+
+Stateless; Horizontaal schaalbaar.
+Daarnaast vooral infrastructuur.
+
+Dit aspect komt terug in de doelstellingen van het programma en heeft een beperkte
+en lokale impact op de architectuur. De impact op de infrastructuur is significant.
+
+zeer hoog
+
+normaal
+
+-
+
+zeer hoog
+
+normaal
+
+-
+
+Normenkader broncode; Robuustheid in
+koppelingen; Robuustheidstests;. Daarnaast
+vooral infrastructuur.
+Transactionele integriteit; Horizontale
+schaalbaarheid. Daarnaast vooral
+infrastructuur.
+
+Komt niet voor in de doelstellingen en beperkt in de NFR's. Volgt wel direct uit de
+aard van het systeem. Het aspect heeft een beperkte en lokale impact op de
+architectuur. De impact op de infrastructuur is significant.
+Komt niet voor in de doelstellingen, wel in de NFR's. Volgt wel direct uit de aard van
+het systeem. Het aspect heeft een beperkte en lokale impact op de architectuur. De
+impact op de infrastructuur is significant.
+
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's.
+
+Vertrouwelijkheid
+
+Confidentiality
+
+Integriteit
+
+Integrity
+
+Onweerlegbaarheid
+
+Non-repudiation
+
+Verantwoording
+
+Accountability
+
+Authenticiteit
+
+Authenticity
+
+Onderhoudbaarheid
+
+Maintainability
+
+Modulariteit
+
+Modularity
+
+Herbruikbaarheid
+
+Reusability
+
+Analyseerbaarheid
+
+Analysability
+
+Wijzigbaarheid
+
+Modifiability
+
+Testbaarheid
+
+Testability
+
+Overdraagbaarheid
+
+Portability
+
+Aanpasbaarheid
+
+Adaptability
+
+Installeerbaarheid
+
+Installability
+
+De mate waarin een product of systeem er voor zorgt zeer hoog
+dat gegevens alleen toegankelijk zijn voor diegenen
+die geautoriseerd zijn.
+De mate waarin een systeem, product of component zeer hoog
+ongeautoriseerde toegang tot of aanpassing van
+computerprogramma’s of gegevens verhindert.
+De mate waarin kan worden bewezen dat acties of
+gebeurtenissen plaats hebben gevonden, zodat later
+deze acties of gebeurtenissen niet ontkend kunnen
+worden.
+De mate waarin acties van een entiteit getraceerd
+kunnen worden naar die specifieke entiteit.
+
+hoog
+
+-
+
+Autorisatie.
+
+Komt niet voor in de doelstellingen, wel in de NFR's. Volgt wel direct uit de aard van
+het systeem. Impact is vooral omvangrijk bij het leveren van gegevens.
+
+normaal
+
+-
+
+Functionele architectuur; Autorisatie.
+Daarnaast hoofdzakelijk infrastructuur
+(firewalls, netwerkzones, encryptie etc).
+
+Komt niet voor in de doelstellingen, wel in de NFR's. Volgt wel direct uit de aard van
+het systeem. Impact blijft beperkt tot enkele onderdelen.
+
+zeer hoog zeer hoog Verantwoording
+
+Historie; Nadere verantwoording;
+Brondocumenten etc.
+
+Komt niet voor in de doelstellingen, wel in diverse eisen. Volgt daarnaast ook direct
+uit de relevante wetgeving. Heeft impact op zeer grote delen van de architectuur.
+
+zeer hoog zeer hoog Verantwoording
+
+Handelingen; Acties etc.
+
+Komt niet voor in de doelstellingen, wel in diverse eisen. Volgt daarnaast ook direct
+uit de relevante wetgeving. Heeft impact op zeer grote delen van de architectuur.
+
+De mate waarin bewezen kan worden dat de
+zeer hoog
+identiteit van een onderwerp of bron is zoals wordt
+beweerd.
+De mate waarin een claim over de oorsprong of de
+auteur van de informatie verifieerbaar is,
+bijvoorbeeld aan handschrift.
+De mate waarin een product of systeem effectief en
+efficiënt gewijzigd kan worden door de aangewezen
+beheerders.
+De mate waarin een systeem of computerprogramma normaal
+opgebouwd is in losstaande componenten zodat
+wijzigingen van een component minimale impact
+heeft op andere componenten.
+
+normaal
+
+-
+
+Authenticatie.
+
+Komt niet voor in de doelstellingen, wel in de NFR's. Volgt wel direct uit de aard van
+het systeem. Impact blijft beperkt tot enkele onderdelen.
+
+normaal
+
+-
+
+Opdeling in lagen, componenten en
+koppelvlakken.
+
+Komt voor in diverse eisen. Is echter de basis van volwassen systeemontwikkeling.
+Ook als deze eisen niet geformuleerd waren was de software modulair opgebouwd
+om de complexiteit te kunnen beheersen. De eisen leiden daardoor niet tot extra
+complexiteit in de architectuur.
+
+De mate waarin een bestaand onderdeel gebruikt kan
+n.v.t.
+worden in meer dan één systeem of bij het bouwen
+van een nieuw onderdeel.
+De mate waarin het mogelijk is om effectief en
+normaal
+efficiënt de impact, van een geplande verandering
+van één of meer onderdelen, op een product of
+systeem te beoordelen, om afwijkingen en/of
+foutoorzaken van een product vast te stellen of om
+onderdelen te identificeren die gewijzigd moeten
+worden.
+De mate waarin een product of systeem effectief en zeer hoog
+efficiënt gewijzigd kan worden zonder fouten of
+kwaliteitsvermindering tot gevolg.
+
+n.v.t.
+
+-
+
+-
+
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's.
+
+-
+
+Er bestaat een eis die specifiek op dit onderwerp ingaat. Het onderwerp is wel met
+enige regelmaat onderwerp van discussie. De eis heeft geen wezenlijke impact op de
+architectuur.
+
+hoog
+
+Bouw- en
+onderhoudbaarheid
+
+Zo veel mogelijk eenheid in software
+De eis sluit direct aan bij de doelstellingen van Operatie BRP. De impact op de
+architectuur; 'Separation of concerns';
+architectuur is significant (zie impact).
+Diverse generieke constructies in het
+datamodel; Generieke opzet bedrijfsregels;
+Generieke opzet berichten.
+
+De mate waarin effectief en efficiënt testcriteria
+vastgesteld kunnen worden voor een systeem,
+product of component en waarin tests uitgevoerd
+kunnen worden om vast te stellen of aan die criteria
+is voldaan.
+De mate waarin een systeem, product of component
+effectief en efficiënt overgezet kan worden van één
+hardware, software of andere operationele of
+gebruiksomgeving naar een andere.
+
+hoog
+
+gering
+
+-
+
+-
+
+Volgt direct uit het belang van de functionele correctheid. Impact op de architectuur
+is gering.
+
+De mate waarin een product of systeem effectief en
+efficiënt aangepast kan worden voor andere of zich
+ontwikkelende hardware, software of andere
+operationele of gebruiksomgevingen.
+De mate waarin het product of het systeem effectief
+en efficiënt geïnstalleerd of verwijderd kan worden in
+een gespecificeerde omgeving.
+
+n.v.t.
+
+n.v.t.
+
+-
+
+-
+
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's.
+
+hoog
+
+gering
+
+-
+
+-
+
+Binnen het testtraject bestaan veel omgevingen en worden regelmatig deployments
+uitgevoerd. Is opgenomen als eis in de NFR's. Impact op de architectuur is gering.
+
+n.v.t.
+
+Vervangbaarheid
+
+Kwaliteit tijdens gebruik
+Effectiviteit
+Efficientie
+Voldoening
+Bruikbaarheid
+
+Vertrouwen
+
+Tevredenheid
+Welzijn
+
+Vrijwaring tegen risico
+
+Economisch risico
+beperking
+
+Gezond- en
+veiligheidsrisico
+beperking
+Omgevingsrisico
+beperking
+
+Replaceability
+
+Quality in use
+Effectiveness
+
+De mate waarin een product een ander specifiek
+softwareproduct, met hetzelfde doel in de zelfde
+omgeving, kan vervangen.
+
+n.v.t.
+
+n.v.t.
+
+-
+
+-
+
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's.
+
+De nauwkeurigheid en volledigheid waarmee
+gebruikers gespecificeerde doelen behalen.
+
+n.v.t.
+
+n.v.t.
+
+-
+
+-
+
+n.v.t.
+
+n.v.t.
+
+-
+
+-
+
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's. Eventuele
+requirements op dit terrein worden gezien als onderdeel van functionele correctheid
+en gegevenskwaliteit.
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's.
+
+n.v.t.
+
+n.v.t.
+
+-
+
+-
+
+De functies van het systeem zijn wettelijk voorgeschreven.
+
+n.v.t.
+
+n.v.t.
+
+-
+
+-
+
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's.
+
+n.v.t.
+
+n.v.t.
+
+-
+
+-
+
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's.
+
+n.v.t.
+
+n.v.t.
+
+-
+
+-
+
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's.
+
+n.v.t.
+
+n.v.t.
+
+-
+
+-
+
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's.
+
+n.v.t.
+
+n.v.t.
+
+-
+
+-
+
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's.
+
+n.v.t.
+
+n.v.t.
+
+-
+
+-
+
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's.
+
+n.v.t.
+
+n.v.t.
+
+-
+
+-
+
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's.
+
+n.v.t.
+
+n.v.t.
+
+-
+
+-
+
+Dit aspect komt niet terug in de doelstellingen, eisen of NFR's.
+
+Efficiency
+
+De benodigde hulpbronnen die gebruikt zijn in
+verhouding tot de nauwkeurigheid en volledigheid
+waarmee gebruikers doelen behalen.
+Satisfaction
+De mate waarin gebruikersbehoeften vervuld worden
+als het product of systeem gebruikt wordt in een
+gespecificeerde gebruikscontext.
+Usefullness
+De mate waarin een gebruiker tevreden is met de
+voor de gebruiker waargenomen behaalde doelen,
+inclusief de resultaten van het gebruik van het
+systeem en de consequenties van het gebruik van het
+systeem.
+Trust
+De mate waarin een gebruiker of andere betrokkene
+vertrouwen heeft dat het product of systeem zich zal
+gedragen zoals bedoeld.
+Pleasure
+De mate waarin een gebruiker tevreden is bij het
+verwezenlijken van zijn persoonlijke wensen.
+Comfort
+De mate waarin een gebruiker tevreden is met zijn
+fysiek welzijn.
+Freedom from risk
+De mate waarin een product of systeem het
+potentiële risico beperkt met betrekking tot
+economische status, mensenlevens, gezondheid of de
+omgeving.
+Economic risk
+De mate waarin een product of systeem de potentiële
+mitigation
+risico’s beperkt met betrekking tot financiële status,
+efficiënte werking, commerciële eigendommen,
+reputatie of andere middelen in de beoogde
+gebruikscontexten.
+Health and safety risk De mate waarin een product of systeem de potentiële
+mitigation
+risico’s met betrekking tot personen beperkt in de
+beoogde gebruikscontexten.
+Environmental risk
+De mate waarin een product of systeem de potentiële
+mitigation
+risico’s met betrekking tot eigendommen of de
+omgeving beperkt in de beoogde gebruikscontexten.
+
+De mate waarin een product of systeem gebruikt kan
+worden met effectiviteit, efficiëntie, vrijheid van
+risico en voldoening zowel in de gespecificeerde
+gebruikscontexten als in niet initieel gespecificeerde
+gebruikscontexten.
+Context compleetheid Context completeness De mate waarin een product of systeem gebruikt kan
+worden met effectiviteit, efficiëntie, vrijheid van
+risico en voldoening in alle gespecificeerde
+gebruikscontexten.
+Flexibiliteit
+Flexibility
+De mate waarin een product of systeem gebruikt kan
+worden met effectiviteit, efficiëntie, vrijheid van
+risico en voldoening in gebruikscontexten die niet
+initieel gespecificeerd zijn in de requirements.
+
+Context dekking
+
+Context coverage
+
+

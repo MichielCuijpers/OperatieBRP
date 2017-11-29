@@ -1,0 +1,246 @@
+Operatie BRP
+Technische aspecten
+
+StUF BG
+Transformatiecomponent
+Operatie BRP
+Versie 0.3
+2 augustus 2017
+
+Inleiding
+•
+
+Deze presentatie bevat de consolidatie van de technische aspecten van
+de StUF BG Transformatiecomponent, zoals tot aan de stopzetting van
+operatie BRP besproken met de Opdrachtnemer van deze component.
+
+•
+
+Betreft geen limitatieve opsomming en zal bij verdere uitwerking
+mogelijk op onderdelen worden uitgebreid.
+
+•
+
+De genoemde (en eventueel nieuwe) aspecten dienen door
+Opdrachtnemer te worden opgenomen in het Technisch Ontwerp, dat
+als onderdeel van de StUF BG Transformatiecomponent wordt
+opgeleverd.
+
+Inhoud
+1. Decompositie StUF BG Transformatiecomponent
+
+2. Technische aspecten
+3. API - StUF BG Transformatiecomponent
+
+Operatie BRP | 4
+
+1. Decompositie
+StUF BG Transformatiecomponent
+
+Operatie BRP | 5
+
+Decompositie StUF BG Transformatiecomponent (1) …
+
+BRP2
+BRP2
+StUFBG
+StUFBG
+0310
+Vertaal
+Vertaal
+Service
+Service
+
+BRP2
+StUFBG
+Micro
+Service
+
+BRP2
+StUFBG
+Gateway
+
+BRP2
+StUF
+API
+
+BRPDienst:
+Geef StUF
+BG bericht
+
+Operatie BRP | 6
+
+Decompositie StUF BG Transformatiecomponent (2) …
+Onderstaand korte uitleg over de verschillende componenten binnen de
+StUF BG Transformatiecomponent:
+
+BRP2StUFBG-API …
+De ApplicationProgrammingInterface waarmee de BRP-dienst ‘Geef StUF BG
+bericht’ de StUf BG Transformatiecomponent aanroept. De samenstelling
+van deze API is opgenomen op Slide API StUF BG Transformatiecomponent
+
+BRP2StUFBG-Gateway …
+Dit is de micro service welke fungeert als gateway en/of loadbalancer naar
+beschikbare microservices. Hier is de configuratie van elke microservice
+opgeslagen en hier wordt de logging betreffende inkomende en uitgaande
+berichten gedaan.
+
+Operatie BRP | 7
+
+Decompositie StUF BG Transformatiecomponent (2) …
+BRP2StUFBG-MicroService …
+Dit is de microservice die bepaalt welke onderliggende 'VertaalService'
+aangesproken wordt, afhankelijk van de opgegeven BG-versie afkomstig
+van de 'Geef StUF BG bericht' service. Op dit moment zal alleen de
+BRP2BG0310-VertaalService aangesproken kunnen worden, maar in de
+toekomst kan hier een BRP2BG0320-VertaalService component bij.
+
+BRP2StUFBG-VertaalService …
+Dit is de microservice die de vertaling van BRP-XML naar BG0310 StUF
+berichten voor zijn rekening neemt. Mocht er een BG0320 vertaling
+gemaakt moeten worden dan komt er een BRP2BG0320-VertaalService
+component bij en blijft dit component ongewijzigd.
+
+Operatie BRP | 8
+
+2. Technische aspecten
+
+Operatie BRP | 9
+
+Technische aspecten
+StUF BG Transformatiecomponent (1) …
+Aspect
+
+Toetsing Operatie BRP
+
+Ontwikkeling in zelfde Java-versie als BRP; is nu Java8
+
+Toetsing bij (tussentijdse) oplevering
+
+Deployment op zelfde Appserver als oBRP; is nu TomCat8
+
+Toetsing bij (tussentijdse) oplevering
+
+Oplevering in vorm van softwarebibliotheek (jar)
+
+1.
+2.
+
+Opgeleverde code inclusief JavaDoc en Junit-test
+
+oBRP: JavaDoc volgens guidelines Oracle:
+http://www.oracle.com/technetwork/articles/java/index137868.html
+Opdrachtnemer maakt op basis van deze guidelines zelf eerste
+opzet; deze wordt getoetst door Operatie BRP.
+
+Modulaire opzet via MicroServices
+
+Toetsing bij (tussentijdse) oplevering
+
+Voldoet aan Normenkader tijdelijke voorzieningen
+
+1)
+2)
+3)
+4)
+5)
+
+Oplevering van executable JAR met embedded TomCat.
+Oplevering met Docker; oBRP gebruikt versie 1.12 van
+Docker; configuratie-settings nader af te stemmen.
+
+oBRP gebruikt SonarQube 6.1
+oBRP levert configuratie Normenkader op aan
+Opdrachtnemer
+Opdrachtnemer voert zelf controle Normenkader uit en
+presenteert resultaten
+Opdrachtnemer past na afstemming Operatie BRP
+zonodig code hiervoor aan
+Toetsing bij (tussentijdse) oplevering
+Operatie BRP | 10
+
+Technische aspecten
+StUF BG Transformatiecomponent (1) …
+Aspect
+
+Toetsing Operatie BRP
+
+Werkt als stateless blackbox; geen interactie met BRP-database
+
+Toetsing bij (tussentijdse) oplevering
+
+Sluit aan op logging-implementatie BRP (één log)
+
+Gebruik Log4J volgens defacto-standaards. Bij tussentijdse
+oplevering nadere afstemming met oBRP over aanpassing
+configuratie. oBRP levert voorbeeld property-file Log4J.
+
+Sluit (via interface) aan op meldingen-systematiek BRP; zowel
+in geval van ‘functionele’ fouten als onverwacht opgetreden
+technische fouten. Zie ook sheets API; voor StUF BG
+Transformatiecomponent aparte meldingenlijst aanleggen; incl.
+codering SVxxxx en Meldingteksten.
+
+Toetsing bij (tussentijdse) oplevering.
+
+Levert XSD-valide StUF BG0310-berichten; aantoonbaar
+gemaakt door Opdrachtnemer en VNG-KING.
+
+Toetsing bij (tussentijdse) oplevering; inzage testrapporten en
+goedkeuringsverklaring VNG-KING.
+
+Operatie BRP | 11
+
+3. API
+StUF BG Transformatiecomponent
+
+Operatie BRP | 12
+
+API - StUF BG Transformatiecomponent …
+De API van de StUF BG Transfromatiecomponent is als volgt samen gesteld:
+•
+
+Berichtsoort BRP; mogelijke waarden:
+Mutatiebericht
+Volledigbericht
+
+•
+
+StUFBG-versie; mogelijk waarden:
+0310
+
+•
+
+Te vertalen BRPXML-bericht; inhoud:
+
+•
+
+Vertaalde StUFBG-bericht(en); inhoud:
+
+-
+
+-
+
+één te vertalen Mutatie- of Volledigbericht
+XSD-validatie uitgevoerd door aanroepende service (i.c. BRP-dienst)
+
+één of meerdere StUF BG-berichten
+XSD-validatie uitgevoerd door aangeroepen service (i.c. StUF BG
+Transformatiecomponent)
+Operatie BRP | 13
+
+API - StUF BG Transformatiecomponent …
+•
+
+Meldingen; repeterende lijst:
+Volgnummer vertaalde bericht (indien geen vertaalde bericht
+aanwezig ivm blokkerende fouten, dan wordt waarde ‘0’ gevuld.
+Regelcode (range nader te bepalen)
+Soortnaam; mogelijke waarden:
+Waarschuwing
+Fout
+Meldingtekst
+
+Operatie BRP | 14
+
+

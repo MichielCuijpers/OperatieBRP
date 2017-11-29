@@ -1,0 +1,242 @@
+UC831 Verwerken inkomend vrij bericht
+
+0.4
+
+Datum
+Status
+
+09-03-2017
+Concept
+
+Concept | 0.4 | UC831 Verwerken inkomend vrij bericht | 09-03-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................6
+2.1
+
+3
+
+REGULIER VERLOOP ..............................................................................................................................6
+
+AANVULLENDE SPECIFICATIES .................................................................................................7
+3.1
+3.2
+
+4
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................5
+PRECONDITIE ........................................................................................................................................5
+POSTCONDITIE......................................................................................................................................5
+
+ONTVANGST INGAAND VRIJ BERICHT ..................................................................................................7
+TOEVOEGEN INGAAND VRIJ BERICHT ..................................................................................................7
+
+OPMERKINGEN ....................................................................................................................................8
+
+OperatieBRP
+
+Pagina 2 van 8
+
+Concept | 0.4 | UC831 Verwerken inkomend vrij bericht | 09-03-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+25-01-2017
+30-01-2017
+03-02-2017
+09-03-2017
+
+0.1
+0.2
+0.3
+0.4
+
+Initiële versie
+Gewijzigd na review
+Versturen en opslaan naar UC830
+Aangepast nav opmerking bouw/test
+
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+27-01-2017
+
+0.1
+
+Review van de initiële versie
+
+Operatie BRP
+
+OperatieBRP
+
+Pagina 3 van 8
+
+Concept | 0.4 | UC831 Verwerken inkomend vrij bericht | 09-03-2017
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+In dit document wordt beschreven op welke wijze vrije berichten die gericht zijn aan de ‘BRP’
+vastgelegd worden zodat deze raadpleegbaar zijn voor de beheerder.
+Voor meer informatie over vrij berichten zie [LO].
+
+OperatieBRP
+
+Pagina 4 van 8
+
+Concept | 0.4 | UC831 Verwerken inkomend vrij bericht | 09-03-2017
+
+1.2
+
+1.3
+
+Referenties
+#
+LO
+
+Document
+LO BRP
+
+Organisatie
+RvIG
+
+[UC830]
+
+Beheren vrij bericht
+
+Operatie BRP
+
+[UCS VB.0.AV]
+
+Afhandelen vrij bericht
+
+Operatie BRP
+
+Versie
+3.10
+
+Datum
+8-10-2016
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+OperatieBRP
+
+Pagina 5 van 8
+
+Concept | 0.4 | UC831 Verwerken inkomend vrij bericht | 09-03-2017
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+1.
+2.
+3.
+
+Het systeem ontvangt een ingaand vrij bericht (AS: 3.1 )
+Het systeem legt het ontvangen vrije bericht vast (AS: 3.2 )
+De use case eindigt.
+
+OperatieBRP
+
+Pagina 6 van 8
+
+Concept | 0.4 | UC831 Verwerken inkomend vrij bericht | 09-03-2017
+
+3
+
+Aanvullende specificaties
+
+3.1
+
+Ontvangst ingaand vrij bericht
+Alleen vrije berichten met Soortbericht = “Verwerk vrij bericht” en waarbij de Ontvanger vrij
+bericht gelijk is aan de BRP partijcode komen voor ontvangst in aanmerking.
+
+3.2
+
+Toevoegen ingaand vrij bericht
+Op de basis van de onderstaande vast te leggen gegevens kunnen de ingaande vrije berichten
+gevonden worden.
+Naam
+Vrij bericht.Soortbericht
+Vrij bericht.Soort
+Vrij bericht.Inhoud
+Vrij bericht.Tijdstip registratie
+Vrij bericht.Gelezen?
+Vrij bericht\Partij
+
+OperatieBRP
+
+Toelichting
+“Verwerk vrij bericht”
+Het soort vrij bericht, over te nemen uit het bericht
+De inhoud van het vrije bericht, over te nemen uit het bericht
+Systeemdatum tijd
+“Nee”
+Zender vrij bericht, over te nemen uit het bericht
+
+Pagina 7 van 8
+
+Concept | 0.4 | UC831 Verwerken inkomend vrij bericht | 09-03-2017
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+OperatieBRP
+
+Pagina 8 van 8
+
+

@@ -1,0 +1,738 @@
+Technisch ontwerp Routering
+
+1.1
+
+Datum
+Status
+
+22-01-2016
+Definitief
+
+Definitief | 1.1 | Technisch ontwerp Routering | 22-01-2016
+
+Inhoudsopgave
+1
+
+INLEIDING ................................................................................................................................................4
+1.1
+1.2
+
+2
+
+Beknopte omschrijving ..........................................................................................................................4
+Referenties .............................................................................................................................................4
+
+CONTEXT ..................................................................................................................................................5
+2.1 Omgeving ..............................................................................................................................................5
+2.2 Ontwerpbeslissingen..............................................................................................................................5
+2.2.1
+Communicatie.................................................................................................................................5
+2.2.2
+Tooling ...........................................................................................................................................5
+
+3
+
+ROUTERING CENTRALE ......................................................................................................................6
+3.1 Maven Structuur ....................................................................................................................................6
+3.2 Queues en topics ....................................................................................................................................6
+3.3 Onverwerkbare berichten ......................................................................................................................6
+3.3.1
+Opnieuw verwerken van DLQ berichten ........................................................................................7
+
+4
+
+OPMERKINGEN .......................................................................................................................................8
+
+5
+
+BIJLAGE A: JMX INTERFACE .............................................................................................................9
+5.1
+
+Active MQ ...........................................................................................................................................10
+
+6
+
+BIJLAGE B: CONFIGURATIE .............................................................................................................11
+
+7
+
+BIJLAGE C: GEMEENTE- EN AUTORISATIEREGISTER CLIENT ............................................12
+7.1 Maven Structuur ..................................................................................................................................12
+7.2 Implementatie ......................................................................................................................................12
+7.2.1
+Autorisatieregister ........................................................................................................................12
+7.2.2
+Gemeenteregister .........................................................................................................................13
+
+Pagina 2 van 13
+
+Definitief | 1.1 | Technisch ontwerp Routering | 22-01-2016
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+02-10-2015
+22-01-2016
+
+1.0
+1.1
+
+Initiële versie
+Nalopen voor release; kleine fouten
+bijwerken; autorisatieregister opnemen
+
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+02-10-2015
+
+1.0
+
+Initiële review
+
+Operatie BRP
+
+Pagina 3 van 13
+
+Definitief | 1.1 | Technisch ontwerp Routering | 22-01-2016
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Het component Routering verzorgt de centrale communicatie tussen de componenten van de
+migratievoorzieningen ([VOISC], [ISC] en [SYNC]).
+
+1.2
+
+Referenties
+#
+[SAD]
+
+Organisatie
+OperatieBRP
+
+[AMQ_JMX]
+
+Document
+Software Architecture Document
+Migratiesoftware BRP
+http://activemq.apache.org/jmx.html
+
+[VOISC]
+
+TO Voisc
+
+OperatieBRP
+
+[ISC]
+
+TO ISC
+
+OperatieBRP
+
+[SYNC]
+
+TO BRP Synchronisatie Service
+
+OperatieBRP
+
+Versie
+
+Datum
+
+Nota: versienummers van ‘interne’ documenten worden niet opgenomen. Deze dienen consistent
+te zijn.
+
+Pagina 4 van 13
+
+Definitief | 1.1 | Technisch ontwerp Routering | 22-01-2016
+
+2
+
+Context
+
+De routering centrale is het centrale component binnen de migratievoorzieningen waarmee de
+verschillende componenten met elkaar communiceren.
+2.1
+
+Omgeving
+Zoals beschreven in het [SAD] bevindt de routering centrale zich als communicatie kanaal tussen
+de verschillende componenten van de migratievoorzieningen.
+
+2.2
+
+Ontwerpbeslissingen
+
+2.2.1
+
+Communicatie
+De communicatie tussen componenten wordt gerealiseerd door middel van JMS-queues en topics
+om berichten asynchroon te versturen en te ontvangen. Door deze communicatie te ontkoppelen
+kunnen de verschillende componenten van de migratievoorzieningen (VOISC, ISC en
+Synchronisatie Service) los van elkaar uitgevoerd worden.
+
+2.2.2
+
+Tooling
+Om de routering centrale te realiseren is gekozen om de functionaliteit van Apache ActiveMQ te
+gebruiken. ActiveMQ wordt reeds gebruikt binnen het BRP systeemlandschap en hiermee sluiten
+de migratievoorzieningen aan op de reeds gekozen oplossing.
+Voor persistentie is gekozen om de berichten op te slaan in een database. Binnen Operatie BRP
+is gekozen voor de PostgreSQL database. Door de berichten op te slaan in een database kan
+gebruik worden gemaakt van een uniforme manier van backup over alle persistente gegevens
+heen.
+
+Pagina 5 van 13
+
+Definitief | 1.1 | Technisch ontwerp Routering | 22-01-2016
+
+3
+
+Routering Centrale
+
+3.1
+
+Maven Structuur
+Het onderstaande overzicht toont de Maven structuur en geeft aan waar elk project voor wordt
+gebruikt.
+Project
+migr-routering
+
+3.2
+
+Subproject
+
+Beschrijving
+
+migr-routering-runtime
+
+Bevat alle routering centrale functionaliteit
+
+Queues en topics
+De volgende queues en topics worden beschikbaar gemaakt binnen de routering centrale:
+Naam
+sync.verzoek
+
+Type
+Queue
+
+Doel
+Berichten van ISC naar de Synchronisatie Service
+
+sync.antwoord
+
+Queue
+
+Berichten van de Synchronisatie Service naar ISC
+
+voisc.ontvangst
+
+Queue
+
+Berichten van VOISC naar ISC
+
+voisc.verzenden
+
+Queue
+
+Berichten van ISC naar VOISC
+
+levering
+
+Queue
+
+Berichten voor Levering (van BRP) naar ISC
+
+archivering
+
+Queue
+
+gemeente.verzoek
+
+Queue
+
+gemeente.register
+
+Topic
+
+autorisatie.verzoek
+
+Queue
+
+autorisatie.register
+
+Topic
+
+Berichten voor Archivering (van VOISC) naar de Synchronisatie
+Service
+Verzoeken voor het Gemeenteregister (van ISC of VOISC) naar de
+Synchronisatie Service
+Publicatie van het Gemeenteregister (voor ISC of VOISC) door de
+Synchronisatie Service
+Verzoeken voor het Autorisatieregister (van ISC) naar de
+Synchronisatie Service
+Publicatie van het Autorisatieregister (voor ISC) door de
+Synchronisatie Service
+
+De communicatie tussen ISC en VOISC, en ISC en de Synchronisatie Service wordt ondersteund
+door combinaties van queues. Communicatie waarbij geen antwoord wordt gegeven, zoals voor
+Levering en Archivering wordt ondersteund door een enkele queue.
+Voor het publiceren van een register wordt gebruik gemaakt van een combinatie van een queue
+en een topic. Van de afnemer van een register wordt verwacht dat naar het topic wordt
+geluisterd voor de publicatie van het register en dat een verzoek voor het register wordt
+verstuurd naar de queue. Hierdoor wordt bereikt dat een register centraal kan worden
+‘gepushed’ naar de afnemers en dat de verschillende afnemers van het register allen hetzelfde
+register gebruiken.
+
+3.3
+
+Onverwerkbare berichten
+Indien berichten niet verwerkt kunnen worden (in andere woorden als de transactie teruggerold
+wordt) bevat ActiveMQ een automatisch herhalingsmechanisme waardoor het bericht opnieuw
+wordt aangeboden. Echter indien na een aantal (vijf) herhalingen het bericht opnieuw niet
+verwerkt kan worden, wordt het bericht, om overbelasting van het systeem te voorkomen,
+
+Pagina 6 van 13
+
+Definitief | 1.1 | Technisch ontwerp Routering | 22-01-2016
+
+verplaatst naar een zogenaamde ‘dead letter queue’ (DLQ). Per queue is een aparte DLQ
+geconfigureerd met dezelfde naam als de queue met daarachter de suffix ‘.dlq’.
+
+3.3.1
+
+Opnieuw verwerken van DLQ berichten
+De berichten die op de DLQ zijn geplaatst kunnen enkel handmatig opnieuw in het systeem
+worden gebracht en duiden op een structurele onverwachte fout in het systeem. Om dit proces
+te ondersteunen kan gebruik worden gemaakt van de JMX operatie ‘redeliverDlq’ om alle
+berichten van een DLQ opnieuw op de ‘gewone’ queue te plaatsen.
+
+Pagina 7 van 13
+
+Definitief | 1.1 | Technisch ontwerp Routering | 22-01-2016
+
+4
+
+Opmerkingen
+
+Instellingen wat betreft fail-over en clustering dienen nog te worden bepaald.
+
+Pagina 8 van 13
+
+Definitief | 1.1 | Technisch ontwerp Routering | 22-01-2016
+
+5
+
+Bijlage A: JMX interface
+
+Ten behoeve van externe toegang is een JMX interface beschikbaar waarmee enkele handelingen
+uitgevoerd kunnen worden
+De standaard JMX voorziening van Java wordt gebruikt om de JMX interface beschikbaar te
+stellen. Om hier mee te kunnen verbinden worden bij het opstarten van de applicatie de
+volgende systeem instellingen (properties) gebruikt.
+Instelling
+
+Waarde
+
+Omschrijving
+
+com.sun.management.jmxremote
+
+Indicatie om aan te geven dat de
+JMX interface wordt gebruikt
+com.sun.management.jmxremote.port
+1099
+Poort voor JMX
+com.sun.management.jmxremote.rmi.port
+1099
+Poort voor RMI
+com.sun.management.jmxremote.ssl
+false
+Indicatie om aan te geven dat geen
+SSL wordt gebruikt
+com.sun.management.jmxremote.authenticate false
+Indicatie om aan te geven dat geen
+authenticatie wordt gebruikt
+com.sun.management.jmxremote.local.only
+false
+Indicatie om aan te geven dat niet
+enkel lokaal verbonden mag worden
+Nota: de poort instellingen kunnen veranderd worden indien deze poorten reeds gebruikt worden
+door een andere applicatie.
+
+5.1
+
+Routering
+nl.bzk.migratiebrp.routering:name=ROUTERING
+Operatie
+
+Parameters
+
+Omschrijving
+
+afsluiten
+redeliverDlq
+
+queueNaam (String)
+
+Applicatie afsluiten.
+Alle berichten op een DLQ (queueNaam + ‘.dlq’)
+verplaatsen naar de ‘gewone’ queue
+(queueNaam).
+
+Class
+Jmx
+JmxImpl
+
+Pagina 9 van 13
+
+Definitief | 1.1 | Technisch ontwerp Routering | 22-01-2016
+
+5.2
+
+Active MQ
+ActiveMQ stelt ook een JMX interface beschikbaar om informatie te verschaffen over de queues
+en topics (zie [AMQ_JMX]).
+Deze wordt binnen de Routering centrale beschikbaar gesteld onder de naam:
+org.apache.activemq:type=Broker,brokerName=routeringCentrale
+Met deze interface kan onder andere worden bepaald hoeveel berichten er op een queue of topic
+staan:
+org.apache.activemq:type=Broker,brokerName=routeringCentrale,
+destinationType=Queue,destinationName=<<Queue naam>>
+Attribuut
+
+Omschrijving
+
+QueueSize
+
+Aantal berichten op de queue
+
+org.apache.activemq:type=Broker,brokerName=routeringCentrale,
+destinationType=Topic,destinationName=<<Topic naam>>
+Attribuut
+
+Omschrijving
+
+QueueSize
+
+Aantal berichten op het topic
+
+Pagina 10 van 13
+
+Definitief | 1.1 | Technisch ontwerp Routering | 22-01-2016
+
+6
+
+Bijlage B: Configuratie
+
+De volgende instellingen zijn beschikbaar in het configuratie bestand ‘routeringruntime.properties’:
+Instelling
+
+Standaard waarde
+
+Omschrijving
+
+routering.database.driver
+
+org.postgresql.Driver
+
+JDBC database driver
+
+routering.database.url
+
+jdbc:postgresql://loc
+alhost/routering
+
+JDBC database verbinding (host, port
+en database naam)
+
+routering.database.username
+
+postgres
+
+Database gebruikersnaam
+
+routering.database.password
+
+postgres
+
+Database wachtwoord
+
+routering.database.minpool
+
+3
+
+Minimum aantal database
+verbindingen
+
+routering.database.maxpool
+
+20
+
+Maximum aantal database
+verbindingen
+
+routering.activemq.url
+
+nio://localhost:61616
+
+Active MQ poort (waarop de andere
+componenten kunnen verbinden)
+
+routering.activemq.data.directory
+
+work/activemq-data
+
+Active MQ data directory (relatief)
+
+routering.activemq.scheduler.direc
+tory
+
+work/activemqscheduler
+
+Active MQ scheduler directory
+(relatief)
+
+routering.activemq.memory.usage
+
+32 mb
+
+Active MQ geheugen gebruik
+(memoryUsage)
+
+routering.activemq.store.usage
+
+32 mb
+
+Active MQ disk gebruik (storeUsage)
+
+routering.activemq.temp.usage
+
+32 mb
+
+Active MQ temp gebruik (tempUsage)
+
+routering.queue.sync.verzoek
+
+sync.verzoek
+
+Naam voor de sync.verzoek queue
+
+routering.queue.sync.antwoord
+
+sync.antwoord
+
+Naam voor de sync.antwoord queue
+
+routering.queue.voisc.ontvangst
+
+voisc.ontvangst
+
+Naam voor de voisc.ontvangst queue
+
+routering.queue.voisc.verzenden
+
+voisc.verzenden
+
+Naam voor de voisc.verzenden queue
+
+routering.queue.levering
+
+levering
+
+Naam voor de levering queue
+
+routering.queue.archivering
+
+archivering
+
+Naam voor de archivering queue
+
+routering.queue.gemeente.verzoek
+
+gemeente.verzoek
+
+Naam voor de gemeenteregister
+verzoek queue
+
+routering.topic.gemeente.register
+
+gemeente.register
+
+Naam voor het gemeenteregister topic
+
+routering.queue.autorisatie.verzoe
+k
+
+autorisatie.verzoek
+
+Naam voor de autorisatieregister
+verzoek queue
+
+routering.topic.autorisatie.regist
+er
+
+autorisatie.register
+
+Naam voor het autorisatieregister
+topic
+
+Pagina 11 van 13
+
+Definitief | 1.1 | Technisch ontwerp Routering | 22-01-2016
+
+7
+
+Bijlage C: Gemeente- en autorisatieregister client
+
+Om het gebruik van het gemeente- en autorisatieregister te ondersteunen is een algemene
+bibliotheek beschikbaar.
+
+7.1
+
+Maven Structuur
+Het onderstaande overzicht toont de Maven structuur en geeft aan waar elk project voor wordt
+gebruikt.
+Project
+migr-register
+
+7.2
+
+Subproject
+
+Beschrijving
+
+migr-register-client
+
+Algemene functionaliteit voor het afnemen
+van een register
+
+Implementatie
+Package
+nl.bzk.migratiebrp.register.client
+
+Omschrijving
+Package met de algemene register client
+functionaliteit
+
+Voor het afnemen van een register dient gebruik gemaakt te worden van een queue en een
+topic. Om deze specifieke werkwijze te abstraheren is een algemene implementatie beschikbaar
+waarin dit transparant wordt opgelost.
+Class
+AbstractRegisterServiceImpl
+RegisterService
+Er wordt gebruik gemaakt van de standaard Spring functionaliteit om te communiceren met
+queues en topics (JmsTemplate en DefaultMessageListenerContainer).
+
+7.2.1
+
+Autorisatieregister
+Class
+AutorisatieService
+AutorisatieServiceImpl
+AutorisatieServiceJMX
+De autorisatieregister client wordt ondersteund door een spring configuratie (classpath:/registerclient-autorisatie.xml). Met deze configuratie wordt een instantie van de AutorisatieService
+interface geconfigureerd onder de naam ‘autorisatieRegisterService’. Hierbij worden de volgende
+geconfigureerde beans verwacht: autorisatieConnectionFactory (JMS ConnectionFactory),
+autorisatieVerzoekQueue (JMS Destination) en autorisatieRegisterTopic (JMS Destination).
+
+Pagina 12 van 13
+
+Definitief | 1.1 | Technisch ontwerp Routering | 22-01-2016
+
+Het autorisatieregister wordt ook ondersteund door een JMX interface (let op: de naam kan
+afwijkend worden geconfigureerd indien nodig).
+nl.bzk.migratiebrp.register:name=AUTORISATIE
+
+7.2.2
+
+Operatie
+
+Parameters
+
+Omschrijving
+
+refreshRegister
+clearRegister
+
+-
+
+isGestart
+
+-
+
+start
+stop
+
+-
+
+Register opnieuw opvragen
+Cache legen (zodat bij het volgende gebruik het
+register opnieuw wordt opgevraagd)
+Geeft aan of register berichten worden
+ontvangen
+Start met het ontvangen van register berichten
+Stop met het ontvangen van register berichten
+
+Gemeenteregister
+Class
+GemeenteService
+GemeenteServiceImpl
+GemeenteServiceJMX
+De gemeenteregister client wordt ondersteund door een spring configuratie (classpath:/registerclient-gemeente.xml). Met deze configuratie wordt een instantie van de GemeenteService
+interface geconfigureerd onder de naam ‘gemeenteRegisterService’. Hierbij worden de volgende
+geconfigureerde beans verwacht: gemeenteConnectionFactory (JMS ConnectionFactory),
+gemeenteVerzoekQueue (JMS Destination) en gemeenteRegisterTopic (JMS Destination).
+Het autorisatieregister wordt ook ondersteund door een JMX interface (let op: de naam kan
+afwijkend worden geconfigureerd indien nodig).
+nl.bzk.migratiebrp.register:name=GEMEENTE
+Operatie
+
+Parameters
+
+Omschrijving
+
+refreshRegister
+clearRegister
+
+-
+
+isGestart
+
+-
+
+start
+stop
+
+-
+
+Register opnieuw opvragen
+Cache legen (zodat bij het volgende gebruik het
+register opnieuw wordt opgevraagd)
+Geeft aan of register berichten worden
+ontvangen
+Start met het ontvangen van register berichten
+Stop met het ontvangen van register berichten
+
+Pagina 13 van 13
+
+

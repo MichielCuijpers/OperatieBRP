@@ -1,0 +1,821 @@
+UC862 Beheren persoon
+
+1.6
+
+Datum
+Status
+
+16-01-2017
+Definitief
+
+Definitief | 1.6 | UC862 Beheren persoon | 16-01-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................5
+2.1
+2.2
+2.3
+2.4
+2.5
+2.6
+2.7
+
+3
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................4
+PRECONDITIE ........................................................................................................................................4
+POSTCONDITIE......................................................................................................................................4
+REGULIER VERLOOP ..............................................................................................................................5
+ALTERNATIEF VERLOOP: ADMINISTRATIEVE HANDELING MARKEREN DOOR ACTIE..........................5
+ALTERNATIEF VERLOOP: DETAILS ADMINISTRATIEVE HANDELING TONEN .......................................5
+ALTERNATIEF VERLOOP: GERELATEERDE PERSOON OPVRAGEN ........................................................5
+ALTERNATIEF VERLOOP: PERSOON WISSEN .......................................................................................6
+ALTERNATIEF VERLOOP: DE BEVESTIGING IS ONJUIST .....................................................................6
+ALTERNATIEF VERLOOP: PERSOON HEEFT GEEN GBA-BIJHOUDER ..................................................6
+
+AANVULLENDE SPECIFICATIES .................................................................................................7
+3.1 ZOEKEN .................................................................................................................................................7
+3.2 ZOEKRESULTATEN ................................................................................................................................8
+3.3 ACTUELE GEGEVENS VAN DE PERSOON ...............................................................................................8
+3.4 GEGEVENS UIT DE CD-LAAG ..............................................................................................................9
+3.4.1 Voorbeelden ...............................................................................................................................9
+3.5 LIJST VAN ADMINISTRATIEVE HANDELINGEN....................................................................................10
+3.6 ADMINISTRATIEVE HANDELING MARKEREN.......................................................................................10
+3.7 ADMINISTRATIEVE HANDELING MARKEREN DOOR ACTIE .................................................................10
+3.8 PERSOON WISSEN ..............................................................................................................................11
+3.8.1 Alleen personen met een GBA-bijhouder .....................................................................11
+3.8.2 Bevestiging ...............................................................................................................................11
+3.8.3 Wissen ........................................................................................................................................11
+
+4
+
+OPMERKINGEN ..................................................................................................................................12
+
+Operatie BRP
+
+Pagina 2 van 12
+
+Definitief | 1.6 | UC862 Beheren persoon | 16-01-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+04-06-2015
+11-06-2015
+25-06-2015
+
+0.1
+0.2
+1.0
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+24-08-2015
+
+1.1
+
+25-08-2015
+03-09-2015
+
+1.2
+1.3
+
+04-09-2015
+
+1.4
+
+09-01-2017
+
+1.5
+
+16-01-2017
+
+1.6
+
+Initiële versie
+Reviewcommentaar verwerkt
+Definitief gemaakt ten behoeve van release
+3.1
+Verwijzing naar BMR-versie verwijderd
+Specificatie uitgebreid met meer details en
+voorbeelden
+Reviewcommentaar verwerkt
+Mogelijkheid om naar andere personen te
+navigeren ogenomen
+Reviewopmerkingen verwerkt: tekstuele
+dingen en volgorde gegevens
+Wissen persoon toegevoegd, naam van de
+use case aangepast (nummer ongewijzigd)
+Reviewcommentaar verwerkt
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+11-06-2015
+
+0.1
+
+Review
+
+Operatie BRP
+
+25-08-2015
+
+1.1
+
+Review
+
+Operatie BRP
+
+04-09-2015
+
+1.3
+
+Review
+
+Operatie BRP
+
+13-01-2016
+
+1.4
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 12
+
+Definitief | 1.6 | UC862 Beheren persoon | 16-01-2017
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Er kunnen om allerlei redenen vragen ontstaan over wat er van een persoon is geregistreerd in
+de BRP. Er kunnen bijvoorbeeld vragen gesteld worden door gemeenten of afnemers, of de
+beheerder constateert zelf (fout) situaties waarbij die gegevens nodig zijn. Het is daarom van
+belang dat de beheerder zowel de actuele als de historische gegevens van een persoon die in de
+BRP geregistreerd is, kan inzien.
+In uitzonderlijke gevallen kan een beheerder een persoon markeren als onterecht opgenomen
+(wissen). Dit kan alleen voor personen met een GBA-bijhouder.
+Deze use case beschrijft op welke wijze een beheerder de gegevens van een persoon kan
+raadplegen en kan markeren als onterecht opgenomen.
+
+1.2
+
+1.3
+
+Referenties
+#
+[BMR]
+
+Document
+https://www.modernodam.nl/bmr
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+[UCRAH]
+
+UC860 Raadplegen administratieve
+handeling
+
+Operator BRP
+
+-
+
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 4 van 12
+
+Definitief | 1.6 | UC862 Beheren persoon | 16-01-2017
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+1. De beheerder meldt het systeem aan de hand van een aantal zoekcriteria welke personen
+getoond dienen te worden (AS: 3.1)
+2. Het systeem zoekt op basis van de zoekcriteria de bijbehorende personen
+3. Het systeem toont de gevonden personen (AS: 3.2)
+4. De beheerder selecteert een gevonden persoon
+5. Het systeem toont de details van de geselecteerde persoon (AS: 3.3, 3.4)
+6. Het systeem toont de administratieve handelingen die betrekking hebben op de geselecteerde
+persoon (AS: 3.5)
+7. De beheerder selecteert een administratieve handeling (AV: 2.2, 2.3, 2.4, 2.5)
+8. Het systeem markeert alle groepen en regels die door acties van de administratieve handeling
+geraakt zijn (AS: 3.6)
+9. De use case eindigt
+
+2.2
+
+Alternatief verloop: Administratieve handeling markeren door actie
+1. De beheerder selecteert bij een van de regels een actie (AS: 3.7)
+2. Het systeem markeert alle groepen en regels die door acties van de administratieve handeling
+van de geselecteerde actie geraakt zijn (AS: 3.6, 3.7)
+3. De use case eindigt
+
+2.3
+
+Alternatief verloop: Details administratieve handeling tonen
+1. De beheerder selecteert een administratieve handeling (AS: 3.6)
+2. Use case [UCRAH] wordt gestart
+3. De use case eindigt
+
+2.4
+
+Alternatief verloop: Gerelateerde persoon opvragen
+1. De beheerder selecteert een gerelateerde persoon
+2. De use case gaat verder bij stap 5 uit het regulier verloop
+
+Operatie BRP
+
+Pagina 5 van 12
+
+Definitief | 1.6 | UC862 Beheren persoon | 16-01-2017
+
+2.5
+
+Alternatief verloop: Persoon wissen
+1. De beheerder selecteert wissen persoon
+2. Het systeem vraagt de beheerder om een bevestigingscode (AS: 3.8.2)
+3. De beheerder voert de bevestigingscode in
+4. Het systeem stelt vast dat de bevestigingscode juist is (AF: 2.6)
+5. Het systeem stelt vast dat de persoon een GBA-bijhouder heeft (AF: 2.7) (AS: 3.8.1)
+6. Het systeem wist de persoon (AS: 3.8.3)
+7. De use case eindigt.
+
+2.6
+
+Alternatief verloop: De bevestiging is onjuist
+1. Het systeem stelt vast dat de bevestigingscode onjuist is (AS: 3.8.2)
+2. Het systeem meldt de beheerder dat de bevestigingscode onjuist is
+3. De use case gaat verder bij stap 2 van paragraaf 2.5
+
+2.7
+
+Alternatief verloop: Persoon heeft geen GBA-bijhouder
+1. Het systeem stelt vast dat de persoon geen GBA-bijhouder heeft
+2. Het systeem meldt de beheerder dat de persoon geen GBA-bijhouder heeft en daarom niet
+gewist mag worden
+3. De use case eindigt.
+
+Operatie BRP
+
+Pagina 6 van 12
+
+Definitief | 1.6 | UC862 Beheren persoon | 16-01-2017
+
+3
+
+Aanvullende specificaties
+
+3.1
+
+Zoeken
+Personen kunnen op basis van de volgende zoekcriteria gevonden worden:
+Attribuut
+Persoon.Identiteit
+ID
+Soort
+Persoon.Identificatienummers
+Burgerservicenummer
+
+Administratienummer
+
+Persoon.Samengestelde naam
+Afgeleid?
+Namenreeks?
+Predicaat
+Voornamen
+Adellijke titel
+Voorvoegsel
+Scheidingsteken
+Geslachtsnaamstam
+Persoon.Geboorte
+Datum geboorte
+Gemeente geboorte
+Woonplaatsnaam geboorte
+Buitenlandse plaats geboorte
+Buitenlandse regio geboorte
+Land/gebied geboorte
+Persoon \ Adres.Standaard
+Soort
+Identificatiecode adresseerbaar object
+Identificatiecode nummeraanduiding
+Gemeente
+Naam openbare ruimte
+Afgekorte naam openbare ruimte
+Huisnummer
+Huisletter
+Huisnummertoevoeging
+Postcode
+Woonplaatsnaam
+Buitenlands adres
+Land/gebied
+
+Operatie BRP
+
+Toelichting
+Zoekt ook in Persoon.Nummerverwijzing.Vorige
+burgerservicenummer en Persoon.Nummerverwijzing.
+Volgende burgerservicenummer
+Zoekt ook in Persoon.Nummerverwijzing.Vorige
+administratienummer en Persoon.Nummerverwijzing.
+Volgende administratienummer
+Zoekt ook in Persoon.Naamgebruik.Predicaat
+naamgebruik
+Zoekt ook in Persoon.Naamgebruik.Voornamen
+naamgebruik
+Zoekt ook in Persoon.Naamgebruik.Adellijke titel
+naamgebruik
+Zoekt ook in Persoon.Naamgebruik.Voorvoegsel
+naamgebruik
+Zoekt ook in Persoon.Naamgebruik.Scheidingsteken
+naamgebruik
+Zoekt ook in
+Persoon.Naamgebruik.Geslachtsnaamstam
+Zoekt in Persoon \ Adres.Standaard.Buitenlands adres
+regel 1 t/m 6
+-
+
+Pagina 7 van 12
+
+Definitief | 1.6 | UC862 Beheren persoon | 16-01-2017
+
+Er dient minimaal één zoekcriterium gevuld te zijn.
+Standaard is er geen zoekcriterium gevuld.
+
+3.2
+
+Zoekresultaten
+De volgende gegevens worden in het zoekresultaat getoond:
+Naam
+ID
+Soort
+Burgerservicenummer
+Administratienummer
+Voornamen
+Voorvoegsel
+Scheidingsteken
+Geslachtsnaamstam
+Geboortedatum
+Geslachtsaanduiding
+
+Attribuut
+Persoon.Identiteit.ID
+Persoon.Identiteit.Soort
+Persoon.Identificatienummers.Burgerservicenummer
+Persoon.Identificatienummers.Administratienummer
+Persoon.Samengestelde naam.Voornamen
+Persoon.Samengestelde naam.Voorvoegsel
+Persoon.Samengestelde naam.Scheidingsteken
+Persoon.Samengestelde naam.Geslachtsnaamstam
+Persoon.Geboorte.Geboortedatum
+Persoon.Geslachtsaanduiding.Geslachtsaanduiding
+
+Toelichting
+-
+
+De zoekresultaten zijn standaard alfabetisch gesorteerd op Burgerservicenummer.
+Als er geen zoekcriterium is gevuld zijn er ook geen zoekresultaten.
+3.3
+
+Actuele gegevens van de persoon
+Van de persoon worden alle actuele gegevens getoond (A-laag):
+Gegeven
+Alle groepen
+Alle groepen van
+gerelateerde objecten
+
+Toelichting
+De volgorde dient overeen te komen met de volgorde zoals die in
+het [BMR] beschreven is.
+Alle gerelateerde objecten die meer dan eens voor kunnen
+komen dienen gegroepeerd getoond te worden (Voornamen,
+Reisdocumenten et cetera).
+Relaties en betrokkenheden worden gegroepeerd op
+betrokkenheid.rol (Partner, Ouder, Kind).
+Van de persoon uit de betrokkenheid worden de volgende
+gegevens getoond:
+•
+•
+•
+•
+
+Alle kolommen uit de
+groepen
+
+Operatie BRP
+
+Gegevens
+Gegevens
+Gegevens
+Gegevens
+
+uit
+uit
+uit
+uit
+
+groep
+groep
+groep
+groep
+
+Identificatienummers van de persoon
+Samengestelde naam van de persoon
+Geboorte van de persoon
+Geslachtsaanduiding
+
+De beheerder kan naar de details van de persoon uit de
+betrokkenheid navigeren door het administratienummer te
+selecteren.
+De volgorde dient overeen te komen met de volgorde zoals die in
+het [BMR] beschreven is.
+
+Pagina 8 van 12
+
+Definitief | 1.6 | UC862 Beheren persoon | 16-01-2017
+
+3.4
+
+Gegevens uit de CD-Laag
+Voor elke groep wordt naast de actuele gegevens ook de administratieve historie van die
+gegevens getoond uit de CD-laag (ofwel His *).
+Voor elke regel van de CD-laag worden de volgende gegevens getoond:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+De gegevens uit de groep
+Datum aanvang geldigheid (indien aanwezig)
+Datum einde geldigheid (indien aanwezig)
+Datum/tijd registratie
+Datum/tijd verval
+Nadere aanduiding verval
+Toegevoegd
+Gewijizgd
+Vervallen
+
+De regels zijn van nieuw naar oud gesorteerd op Datum/tijd registratie.
+In sommige groepen zijn een aantal gegevens niet aanwezig omdat deze geen materiële historie
+bevatten. Indien ze niet aanwezig zijn worden ze niet getoond.
+Van een BRP actie dient niet de waarde van de actie getoond te worden maar een indicatie of
+deze aanwezig is.
+3.4.1
+
+Voorbeelden
+De gegevens uit de CD-laag van de groep Inschrijving (heeft alleen formele historie) zouden als
+volgt getoond kunnen worden:
+Datum/tijd registratie
+
+Datum/tijd
+verval
+
+Nadere aanduiding
+verval
+
+Toegevoegd
+
+Vervallen
+
+2015-01-01
+
+-
+
+-
+
+Ja
+
+Nee
+
+Datum inschrijving
+
+1999-01-01
+
+Versienummer
+
+2
+
+Datumtijdstempel
+
+2015-01-01
+
+2010-01-01
+
+2015-01-01
+
+-
+
+Ja
+
+Ja
+
+Datum inschrijving
+
+1999-01-01
+
+Versienummer
+
+1
+
+Datumtijdstempel
+
+1999-01-02
+
+Operatie BRP
+
+Pagina 9 van 12
+
+Definitief | 1.6 | UC862 Beheren persoon | 16-01-2017
+
+De gegevens uit de CD-laag van de groep Identificatienummers (heeft formele en materiële
+historie) zouden als volgt getoond kunnen worden:
+
+3.5
+
+Datum
+aanvang
+geldigheid
+
+Datum
+einde
+geldigheid
+
+Datum/
+tijd
+registratie
+
+Datum/
+tijd verval
+
+Nadere
+aanduidi
+ng verval
+
+Toegev
+oegd
+
+Gewijzigd
+
+Verva
+llen
+
+2010-01-01
+
+2015-01-01
+
+2016-01-01
+
+-
+
+-
+
+Ja
+
+Ja
+
+Nee
+
+-
+
+-
+
+Ja
+
+Nee
+
+Nee
+
+2016-01-01
+
+O
+
+Ja
+
+Ja
+
+Ja
+
+2015-01-01
+
+-
+
+Ja
+
+Nee
+
+Ja
+
+Burgerservicenummer
+
+123456789
+
+Administratienummer
+
+987654320
+
+2015-01-01
+
+2015-01-01
+
+Burgerservicenummer
+
+123456780
+
+Administratienummer
+
+987654320
+
+2010-01-01
+
+2015-01-01
+
+2015-01-01
+
+Burgerservicenummer
+
+123456789
+
+Administratienummer
+
+987654321
+
+2010-01-01
+
+2010-01-01
+
+-
+
+Burgerservicenummer
+
+123456789
+
+Administratienummer
+
+987654321
+
+Lijst van administratieve handelingen
+Naast de details van de persoon wordt ook een lijst van administratieve handelingen getoond die
+bij de persoon horen. De volgende gegevens van Administratieve handeling worden in de lijst
+getoond:
+•
+•
+•
+•
+
+ID
+Soort
+Partij
+Tijdstip registratie
+
+De lijst is van nieuw naar oud gesorteerd op Tijdstip registratie.
+
+3.6
+
+Administratieve handeling markeren
+Wanneer een administratieve handeling geselecteerd wordt, markeert het systeem in de details
+van de persoon alle groepen en regels in de administratieve historie (CD-laag) die door de
+administratieve handeling zijn geraakt. Hierbij moet duidelijk zijn welke acties van de regel wel
+en niet horen bij de geselecteerde administratieve handeling.
+De beheerder kan ook een administratieve handeling selecteren om de details van de
+administratieve handeling te raadplegen. Zie ook [UCRAH].
+
+3.7
+
+Administratieve handeling markeren door actie
+Wanneer een actie uit de lijst van de administratieve historie (CD-laag) van een groep
+geselecteerd wordt, selecteert het systeem de bijbehorende administratieve handeling.
+
+Operatie BRP
+
+Pagina 10 van 12
+
+Definitief | 1.6 | UC862 Beheren persoon | 16-01-2017
+
+3.8
+
+3.8.1
+
+Persoon wissen
+
+Alleen personen met een GBA-bijhouder
+Alleen personen met een GBA-bijhouder mogen door de beheerder gewist worden. Ofwel,
+Persoon.Bijhouding.Bijhoudingspartij dient een partij te zijn met een lege
+Partij.Bijhouding.Datum overgang naar BRP.
+
+3.8.2
+
+Bevestiging
+Om te voorkomen dat de beheerder per ongeluk een persoon ‘wist’ (opschorten met reden ‘W’),
+vraagt het systeem de beheerder om het wissen te bevestigen. Hierbij vraagt het systeem aan
+de beheerder om een willekeurig door het systeem gegenereerde code in te voeren. Alleen als de
+beheerder dezelfde code heeft ingevoerd mag het systeem de persoon wissen. Wanneer een
+afwijkende code wordt ingevoerd zal het systeem dit melden aan de beheerder en deze opnieuw
+vragen de code in te voeren.
+De beheerder kan de code niet invoeren door middel van kopiëren en plakken.
+
+3.8.3
+
+Wissen
+Wanneer de beheerder een correcte bevestigingscode heeft ingevoerd, ‘wist’ het systeem de
+persoon. Hiervan dient ook verantwoording vastgelegd te worden. In de onderstaande tabel is te
+vinden op welke wijze een persoon als gewist gemarkeerd wordt en de bijzonderheden bij het
+vastleggen van de verantwoording.
+Attribuut
+Persoon.Bijhouding.Nadere bijhoudingsaard
+Administratieve handeling.Soort
+Administratieve handeling.Partij
+Administratieve handeling.Status levering
+Actie.Soort
+Actie.Partij
+
+Operatie BRP
+
+Waarde
+W
+GBA – Wissen persoon
+BRP Voorziening
+Niet leveren
+GBA – Wissen persoon
+BRP Voorziening
+
+Pagina 11 van 12
+
+Definitief | 1.6 | UC862 Beheren persoon | 16-01-2017
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 12 van 12
+
+

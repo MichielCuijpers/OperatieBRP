@@ -1,0 +1,366 @@
+His_Relatie
+
+OGM H02 Betrokkenheid Relatie
+
+Dyn
+
+ID
+
+His_RelatieID
+
+Relatie >
+
+Relatie
+
+* u1
+
+TsReg
+
+Ts
+
+* u1
+
+ActieInh >
+
+Actie
+
+*
+
+Release 59
+
+*i
+
+His_Betr
+
+Dyn
+
+TsVerval
+
+Ts
+
+.
+
+ID
+
+His_BetrID
+
+ActieVerval >
+
+Actie
+
+.
+
+Betr >
+
+*i
+
+Betr
+
+* u1
+
+Ts
+
+*
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+TsReg
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+ActieInh >
+
+Actie
+
+*
+
+.
+
+TsVerval
+
+Ts
+
+.
+.
+
+IndVoorkomenTbvLevMuts Ja
+DatAanv
+
+DatEvtDeelsOnbekend
+
+.
+
+ActieVerval >
+
+Actie
+
+GemAanv >
+
+Gem
+
+.
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+Actie
+
+.
+
+WplnaamAanv
+
+NaamEnumeratiewaarde
+
+.
+
+ActieVervalTbvLevMuts >
+
+BLPlaatsAanv
+
+BLPlaats
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+BLRegioAanv
+
+BLRegio
+
+.
+
+OmsLocAanv
+
+Locoms
+
+.
+
+LandGebiedAanv >
+
+LandGebied
+
+.
+
+RdnEinde >
+
+RdnEindeRelatie
+
+.
+
+DatEinde
+
+DatEvtDeelsOnbekend
+
+.
+
+GemEinde >
+
+Gem
+
+.
+
+WplnaamEinde
+
+NaamEnumeratiewaarde
+
+.
+
+BLPlaatsEinde
+
+BLPlaats
+
+.
+
+BLRegioEinde
+
+BLRegio
+
+.
+
+OmsLocEinde
+
+Locoms
+
+.
+
+LandGebiedEinde >
+
+LandGebied
+
+.
+
+.
+
+His_OuderOuderlijkGezag
+
+His_OuderOuderschap
+
+17-7-2017
+
+Dyn
+
+ID
+
+His_OuderOuderlijkGezagID
+
+*i
+
+Betr >
+
+Betr
+
+* u1
+* u1
+
+Dyn
+
+TsReg
+
+Ts
+
+ID
+
+His_OuderOuderschapID
+
+*i
+
+ActieInh >
+
+Actie
+
+*
+
+Betr >
+
+Betr
+
+* u1
+
+TsVerval
+
+Ts
+
+.
+
+TsReg
+
+Ts
+
+* u1
+
+ActieVerval >
+
+Actie
+
+.
+
+ActieInh >
+
+Actie
+
+*
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+TsVerval
+
+Ts
+
+.
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+ActieVerval >
+
+Actie
+
+.
+
+IndVoorkomenTbvLevMuts Ja
+
+NadereAandVerval
+
+NadereAandVerval
+
+.
+
+DatAanvGel
+
+DatEvtDeelsOnbekend
+
+* u1
+
+ActieVervalTbvLevMuts >
+
+Actie
+
+.
+
+DatEindeGel
+
+DatEvtDeelsOnbekend
+
+.
+
+IndVoorkomenTbvLevMuts
+
+Ja
+
+.
+
+ActieAanpGel >
+
+Actie
+
+.
+
+DatAanvGel
+
+DatEvtDeelsOnbekend
+
+* u1
+
+IndOuderHeeftGezag
+
+JaNee
+
+*
+
+DatEindeGel
+
+DatEvtDeelsOnbekend
+
+.
+
+ActieAanpGel >
+
+Actie
+
+.
+
+IndOuderUitWieKindIsGeboren JaNee
+
+.
+
+.
+
+

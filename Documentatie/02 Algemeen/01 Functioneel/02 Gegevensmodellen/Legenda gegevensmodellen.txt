@@ -1,0 +1,114 @@
+Legenda bij Logisch Gegevensmodel
+Kleur
+Objecttypen van dezelfde kleur horen in hetzelfde schema.
+
+Objecttype
+
+Soort inhoud
+Dyn = Dynamisch
+SG = Stamgegeven / Stuurgegeven
+Rel = Inhoud kan alleen wijzigen bij release BRP.
+
+Groep
+Attribuut
+
+Structuur regels
+
+Verwijzend attribuut
+
+*
+= Verplicht
+.
+= Optioneel
+i
+= Attribuut is onderdeel van primaire identiteitsregel
+li1, li2 … = Attribuut is onderdeel van logische identiteitsregel x
+u1, u2 … = Attribuut is onderdeel van uniciteitsregel x
+au1, au2 … = Attribuut is onderdeel van ANSI-uniciteitsregel x
+s1, s2 …
+= Attribuut is onderdeel van sorteer index x
+S1, S2 … = Attribuut is onderdeel van upper sorteer index x
+
+Nog niet definitief /
+Element is een voorstel
+
+Historie patroon
+Viewindicator
+S = Gegevensset
+D = Database
+X = XSD’s
+
+Type
+•
+•
+
+Voor gewone attributen het attribuuttype.
+Voor verwijzende attributen het objecttype.
+
+G
+F
+F1
+F+M1
+F+M
+M1
+
+= Geen historie
+= Formele historie
+= Formele bestaansperiode
+= Formele historie en materiele bestaansperiode
+= Formele historie en materiele historie
+= Bestaansperiode stamgegeven
+
+Verantwoording structuur
+- = Geen verantwoording
+A = BRP Actie
+D = Dienst
+
+Legenda bij Operationeel Gegevensmodel
+Kleur
+Tabellen van dezelfde kleur horen in hetzelfde schema.
+
+Tabel
+
+Soort inhoud
+Dyn = Dynamisch
+SG = Stamgegeven / Stuurgegeven
+Rel = Inhoud kan alleen wijzigen bij release BRP.
+
+Technische sleutel
+Gegenereerde
+velden i.v.m. historie /
+verantwoording
+Als eerste een verwijzing naar
+corresponderende tabel in de
+A-laag.
+
+Structuur regels
+*
+.
+i
+u1, u2 …
+au1, au2 …
+s1, s2 …
+S1, S2 …
+
+Foreign key
+
+Attributen uit logisch
+Gegevensmodel.
+
+Domein
+Voor kolommen met een foreign key wordt
+de naam van de tabel genoemd waarnaar
+wordt verwezen. De inhoud van de kolom
+is de verwijzende technische sleutel.
+
+= verplicht
+= optioneel
+= attribuut is onderdeel van primaire identiteitsregel
+= attribuut is onderdeel van uniciteitsregel x
+= attribuut is onderdeel van ANSI-uniciteitsregel x
+= attribuut is onderdeel van sorteer index x
+= attribuut is onderdeel van upper sorteer index x
+
+

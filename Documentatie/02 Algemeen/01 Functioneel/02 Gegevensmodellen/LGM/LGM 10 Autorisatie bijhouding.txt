@@ -1,0 +1,280 @@
+LGM 10 Autorisatie bijhouding
+Release 59
+Partij
+
+17-7-2017
+
+SG
+
+......
+
+Partij \ Rol
+
+SG
+
+......
+
+Bijhouder \ Fiatteringsuitzondering
+
+SG
+
+Identiteit
+
+-
+
+-
+
+ID
+
+D
+
+Bijhouder \ Fiatteringsuitzondering ID
+
+*i
+
+Bijhouder >
+
+D
+
+Partij \ Rol
+
+*
+
+Datum ingang
+
+DX
+
+Datum
+
+Datum einde
+
+DX
+
+Datum
+
+.
+
+Bijhouder bijhoudingsvoorstel >
+
+DX
+
+Partij \ Rol
+
+.
+
+Soort document >
+
+DX
+
+Soort document
+
+.
+
+Soort administratieve handeling >
+
+DX
+
+Soort administratieve handeling
+
+.
+
+Geblokkeerd?
+
+DX
+
+Ja
+
+.
+
+Standaard
+
+G
+
+F
+*
+
+Bijhoudingsautorisatie
+
+SG
+
+Identiteit
+
+Toegang bijhoudingsautorisatie
+
+ID
+
+SG
+
+Identiteit
+
+-
+
+D
+
+Modelautorisatie? D
+
+-
+
+-
+
+Bijhoudingsautorisatie ID
+
+*i
+
+Ja/Nee
+
+*
+
+ID
+
+D
+
+Toegang bijhoudingsautorisatie ID
+
+*i
+
+Standaard
+
+Geautoriseerde >
+
+D
+
+Partij \ Rol
+
+* u1
+
+Naam
+
+DX
+
+Naam enumeratiewaarde * u1
+
+Bijhoudingsautorisatie
+
+* u1
+
+Datum ingang
+
+DX
+
+Datum
+
+*
+
+Datum
+
+.
+
+Ja
+
+.
+
+Bijhoudingsautorisatie > D
+
+G
+
+Ondertekenaar >
+
+D
+
+Partij
+
+. u1
+
+Datum einde
+
+DX
+
+Transporteur >
+
+D
+
+Partij
+
+. u1
+
+Geblokkeerd?
+
+DX
+
+Standaard
+
+G
+
+F
+
+Datum ingang
+
+DX
+
+Datum
+
+*
+
+Datum einde
+
+DX
+
+Datum
+
+.
+
+Afleverpunt
+
+DX
+
+Uri
+
+.
+
+Geblokkeerd?
+
+DX
+
+Ja
+
+.
+
+Bijhoudingsautorisatie \ Soort administratieve handeling
+
+SG
+
+Identiteit
+
+-
+
+-
+
+ID
+
+D
+
+Bijhoudingsautorisatie \ Soort administratieve handeling ID
+
+*i
+
+Bijhoudingsautorisatie >
+
+D
+
+Bijhoudingsautorisatie
+
+* u1
+
+Soort administratieve handeling >
+
+D
+
+Soort administratieve handeling
+
+* u1
+
+Standaard
+
+F
+
+G
+
+F
+
+

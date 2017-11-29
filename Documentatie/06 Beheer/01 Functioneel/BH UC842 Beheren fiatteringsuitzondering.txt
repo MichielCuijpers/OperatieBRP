@@ -1,0 +1,348 @@
+UC842 Beheren fiatteringsuitzondering
+
+0.2
+
+Datum
+Status
+
+02-11-2016
+Definitief
+
+Definitief | 0.2 | UC842 Beheren fiatteringsuitzondering | 02-11-2016
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................6
+2.1
+2.2
+2.3
+
+3
+
+REGULIER VERLOOP: ZOEKEN FIATTERINGSUITZONDERING .............................................................6
+ALTERNATIEF VERLOOP: TOEVOEGEN FIATTERINGSUITZONDERING .................................................6
+ALTERNATIEF VERLOOP: WIJZIGEN FIATTERINGSUITZONDERING .....................................................6
+
+AANVULLENDE SPECIFICATIES .................................................................................................7
+3.1
+3.2
+3.3
+3.4
+
+4
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................5
+PRECONDITIE ........................................................................................................................................5
+POSTCONDITIE......................................................................................................................................5
+
+ZOEKEN FIATTERINGSUITZONDERING.................................................................................................7
+TONEN ZOEKRESULTATEN FIATTERINGSUITZONDERING ....................................................................7
+TOEVOEGEN FIATTERINGSUITZONDERING ..........................................................................................8
+WIJZIGEN FIATTERINGSUITZONDERING .............................................................................................8
+
+OPMERKINGEN ....................................................................................................................................9
+
+Operatie BRP
+
+Pagina 2 van 9
+
+Definitief | 0.2 | UC842 Beheren fiatteringsuitzondering | 02-11-2016
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+11-08-2016
+02-11-2016
+
+0.1
+0.2
+
+Initiële versie
+Bedrijfsregels datum ingang en einde
+toegevoegd
+
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+23-08-2016
+
+0.1
+
+Review – Geen opmerkingen
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 9
+
+Definitief | 0.2 | UC842 Beheren fiatteringsuitzondering | 02-11-2016
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Bijhoudingsvoorstellen waarvan de Bijhouder niet wil dat deze automatisch gefiatteerd worden.
+(Bron: [BMR]). Vertaling: Met een fiatteringsuitzondering geeft een bijhouder aan welke soorten
+bijhoudingsvoorstellen niet automatisch gefiatteerd mogen worden.
+Bijhouder \ Fiatteringsuitzondering is een dynamisch stamgegeven en wordt beschreven in het
+[BMR]: AutAut.Bijhouder \ Fiatteringsuitzondering.
+In dit document wordt beschreven op welke wijze fiatteringsuitzonderingen beheerd worden
+(zoeken, toevoegen en wijzigen).
+
+Operatie BRP
+
+Pagina 4 van 9
+
+Definitief | 0.2 | UC842 Beheren fiatteringsuitzondering | 02-11-2016
+
+1.2
+
+Referenties
+#
+[BMR]
+
+1.3
+
+Document
+https://www.modernodam.nl/bmr
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 5 van 9
+
+Definitief | 0.2 | UC842 Beheren fiatteringsuitzondering | 02-11-2016
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop: zoeken fiatteringsuitzondering
+1. De beheerder meldt het systeem een fiatteringsuitzondering te zoeken (AV: 2.2)
+2. Het systeem toont de beheerder zoekcriteria waarmee fiatteringsuitzondering gezocht kunnen
+worden (AS: 3.1)
+3. De beheerder voert een of meer zoekcriteria in
+4. Het systeem zoekt op basis van de zoekcriteria naar fiatteringsuitzonderingen
+5. Het systeem toont de gevonden fiatteringsuitzonderingen (AS: 3.2)
+6. De use case eindigt. (AV: 2.3)
+
+2.2
+
+Alternatief verloop: toevoegen fiatteringsuitzondering
+1. De beheerder meldt het systeem een fiatteringsuitzondering toe te voegen
+2. Het systeem toont de in te vullen details van de fiatteringsuitzondering (AS: 3.3)
+3. De beheerder voert de details in
+4. Het systeem controleert de details
+5. Het systeem legt de details vast
+6. De use case eindigt.
+
+2.3
+
+Alternatief verloop: wijzigen fiatteringsuitzondering
+1. De beheerder selecteert een fiatteringsuitzondering
+2. Het systeem toont de details van de geselecteerde fiatteringsuitzondering (AS: 3.4)
+3. De beheerder wijzigt de details van de fiatteringsuitzondering
+4. Het systeem controleert de details van de fiatteringsuitzondering
+5. Het systeem legt de details vast
+6. Het systeem toont de eerdere lijst van gevonden fiatteringsuitzonderingen
+7. De use case eindigt.
+
+Operatie BRP
+
+Pagina 6 van 9
+
+Definitief | 0.2 | UC842 Beheren fiatteringsuitzondering | 02-11-2016
+
+3
+
+Aanvullende specificaties
+
+3.1
+
+Zoeken fiatteringsuitzondering
+Op de basis van de onderstaande gegevens kunnen Bijhouder \ Fiatteringsuitzondering gevonden
+worden.
+Naam
+Bijhouder
+Datum
+Bijhouder
+bijhoudingsvoorstel
+
+Soort document
+Soort administratieve
+handeling
+Geblokkeerd?
+
+3.2
+
+Toelichting
+Bijhouder \ Fiatteringsuitzondering.Bijhouder.Partij.Naam, of
+Bijhouder \ Fiatteringsuitzondering.Bijhouder.Partij.Code
+>= Bijhouder \ Fiatteringsuitzondering.Datum ingang en
+<= Bijhouder \ Fiatteringsuitzondering.Datum einde
+Bijhouder \ Fiatteringsuitzondering.Bijhouder
+bijhoudingsvoorstel.Partij.Naam, of
+Bijhouder \ Fiatteringsuitzondering.Bijhouder
+bijhoudingsvoorstel.Partij.Code
+Bijhouder \ Fiatteringsuitzondering.Soort document
+Bijhouder \ Fiatteringsuitzondering.Soort administratieve handeling
+Bijhouder \ Fiatteringsuitzondering.Geblokkeerd?
+
+Tonen zoekresultaten fiatteringsuitzondering
+De onderstaande gegevens worden in het zoekresultaat van Bijhouder \ Fiatteringsuitzondering
+getoond.
+Naam
+ID
+Bijhouder
+Datum ingang
+Datum einde
+Bijhouder
+bijhoudingsvoorstel
+Soort document
+Soort administratieve
+handeling
+Geblokkeerd?
+
+Toelichting
+Bijhouder \ Fiatteringsuitzondering.ID
+Bijhouder \ Fiatteringsuitzondering.Bijhouder.Partij.Naam
+Bijhouder \ Fiatteringsuitzondering.Datum ingang
+Bijhouder \ Fiatteringsuitzondering.Datum einde
+Bijhouder \ Fiatteringsuitzondering.Bijhouder
+bijhoudingsvoorstel.Partij.Naam
+Bijhouder \ Fiatteringsuitzondering.Soort document
+Bijhouder \ Fiatteringsuitzondering.Soort administratieve handeling
+Bijhouder \ Fiatteringsuitzondering.Geblokkeerd?
+
+Standaard is de lijst gesorteerd op Bijhouder \ Fiatteringsuitzondering.Bijhouder.Partij.Naam en
+Bijhouder \ Fiatteringsuitzondering.Bijhouder bijhoudingsvoorstel.Partij.Naam.
+
+Operatie BRP
+
+Pagina 7 van 9
+
+Definitief | 0.2 | UC842 Beheren fiatteringsuitzondering | 02-11-2016
+
+3.3
+
+Toevoegen fiatteringsuitzondering
+In de onderstaande tabel is te vinden welke gegevens van Bijhouder \ Fiatteringsuitzondering
+getoond worden.
+Naam
+Bijhouder
+Datum ingang
+Datum einde
+Bijhouder
+bijhoudingsvoorstel
+Soort document
+Soort administratieve
+handeling
+Geblokkeerd?
+
+3.4
+
+Toelichting
+Bijhouder \ Fiatteringsuitzondering.Bijhouder.Partij.Naam
+Bijhouder \ Fiatteringsuitzondering.Datum ingang, dient voor
+Datum einde te liggen indien aanwezig
+Bijhouder \ Fiatteringsuitzondering.Datum einde, dient na Datum
+ingang te liggen indien aanwezig
+Bijhouder \ Fiatteringsuitzondering.Bijhouder
+bijhoudingsvoorstel.Partij.Naam
+Bijhouder \ Fiatteringsuitzondering.Soort document
+Bijhouder \ Fiatteringsuitzondering.Soort administratieve handeling
+Bijhouder \ Fiatteringsuitzondering.Geblokkeerd?
+
+Wijzigen fiatteringsuitzondering
+In de onderstaande tabel is te vinden welke gegevens van Bijhoudingsautorisatie getoond
+worden.
+Naam
+ID
+Bijhouder
+Datum ingang
+Datum einde
+Bijhouder
+bijhoudingsvoorstel
+Soort document
+Soort administratieve
+handeling
+Geblokkeerd?
+
+Operatie BRP
+
+Toelichting
+Bijhouder \ Fiatteringsuitzondering.ID alleen tonen, niet te wijzigen
+Bijhouder \ Fiatteringsuitzondering.Bijhouder.Partij.Naam
+Bijhouder \ Fiatteringsuitzondering.Datum ingang, dient voor
+Datum einde te liggen indien aanwezig
+Bijhouder \ Fiatteringsuitzondering.Datum einde, dient na Datum
+ingang te liggen indien aanwezig
+Bijhouder \ Fiatteringsuitzondering.Bijhouder
+bijhoudingsvoorstel.Partij.Naam
+Bijhouder \ Fiatteringsuitzondering.Soort document
+Bijhouder \ Fiatteringsuitzondering.Soort administratieve handeling
+Bijhouder \ Fiatteringsuitzondering.Geblokkeerd?
+
+Pagina 8 van 9
+
+Definitief | 0.2 | UC842 Beheren fiatteringsuitzondering | 02-11-2016
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 9 van 9
+
+

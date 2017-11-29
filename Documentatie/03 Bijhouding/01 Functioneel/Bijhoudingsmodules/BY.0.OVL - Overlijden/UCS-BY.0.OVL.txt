@@ -1,0 +1,789 @@
+UCS BY.0.OVL - Overlijden
+Versie
+
+0.4
+
+Datum
+
+11 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+26-06-2017
+
+0.1
+
+Initiële opzet
+
+Operatie BRP
+
+27-06-2017
+
+0.2
+
+Document aangepast m.b.t. documentatierichtlijnen.
+
+Operatie BRP
+
+28-06-2017
+
+0.3
+
+UCM toegevoegd
+
+Operatie BRP
+
+11-07-2017
+
+0.4
+
+Reviecommentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+Reviewhistorie
+Versie Review
+0.3
+
+Operatie BRP
+
+UCS BY.0.OVL - Overlijden
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+Use case model ....................................................................................................................4
+
+Overlijden in Nederland ............................................................................................ 5
+2.1
+Functionele context ...............................................................................................................5
+2.1.1
+Brondocumenten ..............................................................................................................5
+2.1.2
+Betrokken personen ..........................................................................................................5
+2.1.3
+Proces .............................................................................................................................5
+2.1.4
+Bijhoudings(voorstel)partijen .............................................................................................5
+2.1.5
+Vastgelegde gegevens .......................................................................................................5
+2.2
+Specifieke verwerking............................................................................................................6
+2.3
+Aanvullende informatie voor LO en HUP ...................................................................................6
+
+3
+
+Overlijden in buitenland ............................................................................................ 7
+3.1
+Functionele context ...............................................................................................................7
+3.1.1
+Brondocumenten ..............................................................................................................7
+3.1.2
+Betrokken personen ..........................................................................................................7
+3.1.3
+Proces .............................................................................................................................7
+3.1.4
+Bijhoudings(voorstel)partijen .............................................................................................7
+3.1.5
+Vastgelegde gegevens .......................................................................................................7
+3.2
+Specifieke verwerking............................................................................................................7
+
+4
+
+Correctie overlijden .................................................................................................. 9
+4.1
+Functionele context ...............................................................................................................9
+4.1.1
+Brondocumenten ..............................................................................................................9
+4.1.2
+Betrokken personen ..........................................................................................................9
+4.1.3
+Proces .............................................................................................................................9
+4.1.4
+Bijhoudings(voorstel)partijen .............................................................................................9
+4.1.5
+Vastgelegde gegevens .......................................................................................................9
+4.2
+Specifieke verwerking............................................................................................................9
+
+5
+
+Acties ...................................................................................................................... 10
+5.1
+5.2
+5.3
+
+6
+
+Registratie overlijden........................................................................................................... 10
+Correctieverval overlijden .................................................................................................... 10
+Correctieregistratie overlijden ............................................................................................... 10
+
+Appendix A – BZVU en plaatsonafhankelijke bijhouding ......................................... 11
+
+Status: Definitief, versie: 0.4
+
+Pagina 2 van 11
+
+UCS BY.0.OVL - Overlijden
+
+1 Inleiding
+1.1
+
+Doel
+
+De module ‘Overlijden’ bevat administratieve handelingen om het overlijden van een persoon te
+registreren of te corrigeren. Het doel van dit document is om de afhandeling van deze handelingen
+te beschrijven.
+
+1.2
+
+Leeswijzer
+
+Per administratieve handeling wordt de functionele context en specifieke verwerking beschreven.
+De functionele context beschrijft de situatie waarin de administratieve handeling van toepassing is.
+In de specifieke verwerking wordt beschreven welke acties relevant zijn voor de administratieve
+handeling en wordt per actie eventuele specifieke functionaliteit binnen de context van de
+handeling benoemd. Voor de definitie van het invoerbericht en bedrijfsregels die bij een
+administratieve handeling horen wordt verwezen naar ‘UCS-BY.0.OVL - Bijlage Registreer
+overlijden’ [4], ‘UCS-BY.0.OVL - Bijlage Corrigeer overlijden’ [5].
+Verder wordt het ‘peilmoment’ voor regels met een tijdsaspect gedefinieerd.
+De beschrijving van de generieke functionaliteit van de acties staat beschreven in hoofdstuk 0.
+NB Bij enkele use cases is een paragraaf opgenomen met de titel ‘Aanvullende informatie voor LO
+en HUP’. Deze paragraaf heeft geen functionele impact, maar dient als kapstok voor het schrijven
+van het LO en de HUP.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Logisch Ontwerp Basisregistratie Personen
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+UCS BY.0.AV – Afhandeling verzoek
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+UCS BY.1.ON – Ontrelateren
+
+Operatie BRP
+
+-
+
+-
+
+4
+
+UCS-BY.0.OVL - Bijlage Registreer overlijden
+
+Operatie BRP
+
+-
+
+-
+
+5
+
+UCS-BY.0.OVL - Bijlage Corrigeer overlijden
+
+Operatie BRP
+
+-
+
+-
+
+6
+
+Aspectbeschrijving – Corrigeren
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 0.4
+
+Pagina 3 van 11
+
+UCS BY.0.OVL - Overlijden
+
+1.4
+
+Use case model
+
+In onderstaand use case model staan alle administratieve handelingen voor de module Overlijden.
+Hierin is te zien dat alle administratieve handelingen subtype zijn van het supertype ‘Afhandeling
+verzoek’. De laatste beschrijft de generieke afhandeling van een verzoek wat relevant is voor de
+verwerking van alle handelingen.
+
+Status: Definitief, versie: 0.4
+
+Pagina 4 van 11
+
+UCS BY.0.OVL - Overlijden
+
+2 Overlijden in Nederland
+2.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Overlijden in Nederland’ is het registreren van het
+overlijden of het rechtsvermoeden van overlijden van een ingezetene op basis van een akte van
+overlijden, opgenomen in de registers van de Burgerlijke Stand.
+Door het overlijden wordt ook het actuele huwelijk of geregistreerd partnerschap ontbonden (bij
+zowel de overledene als bij de partner). Het huwelijk of geregistreerd partnerschap wordt
+standaard ontbonden met reden ‘Overlijden partner (O)’. Deze reden wordt doorgaans gebruikt in
+geval van een akte van overlijden of lijkvinding.
+Tevens wordt het adres van de overledene beëindigd.
+Mocht het huwelijk of geregistreerd partnerschap ontbonden moeten worden met reden
+‘Rechtsvermoeden van overlijden partner (R)’1 dan zijn er twee procedurele mogelijkheden:
+-
+
+-
+
+Eerst het huwelijk of geregistreerd partnerschap ontbinden met de administratieve
+handeling ‘Ontbinding huwelijk’ resp. ‘Ontbinding geregistreerd partnerschap’ met reden
+‘Rechtsvermoeden van overlijden partner (R)’ en vervolgens het overlijden registreren met
+de administratieve handeling ‘Overlijden in Nederland’;
+Eerst het overlijden registreren en daarna de ontbinding van het huwelijk of geregistreerd
+partnerschap corrigeren met de administratieve handeling ‘Correctie overlijden’.
+
+Beide partners kunnen ook gelijktijdig zijn overleden, beide huwelijken of geregistreerd
+partnerschappen worden dan door overlijden ontbonden. Beide persoonslijsten worden dan op
+dezelfde dag opgeschort. Hiervoor moet deze administratieve handeling twee maal worden
+gebruikt.
+2.1.1
+•
+
+Brondocumenten
+
+Een akte van overlijden of een afschrift / kennisgeving daarvan.
+
+Van het overlijden wordt een akte opgemaakt in het register van overlijden in de gemeente waar
+de persoon is overleden.
+2.1.2
+•
+•
+
+Betrokken personen
+
+Hoofdpersoon (Ingezetene)
+Echtgenoot of geregistreerd partner van de hoofdpersoon (Ingezetene)
+
+2.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [2].
+2.1.4
+•
+•
+
+Bijhoudingspartij van de overledene2;
+Indien de registergemeente (gemeente van overlijden) een andere gemeente is dan de
+bijhoudingspartij van de overledene, maakt de registergemeente een bijhoudingsvoorstel en
+stuurt dit door aan de bijhoudingspartij van de overledene.
+
+2.1.5
+•
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Overlijden
+
+1
+
+Van ‘rechtsvermoeden van overlijden partner’ wordt gesproken als men geen sterk bewijs heeft van het daadwerkelijk
+overlijden van de persoon. Dit is bijvoorbeeld het geval na langdurige vermissing of na een ramp waarbij geen identificatie
+heeft (kunnen) plaatsvinden.
+2 Deze situatie is ook van toepassing indien de bron een kennisgeving / afschrift is van een akte die in Den Haag is
+ingeschreven.
+
+Status: Definitief, versie: 0.4
+
+Pagina 5 van 11
+
+UCS BY.0.OVL - Overlijden
+
+•
+•
+•
+•
+
+2.2
+
+Nadere bijhoudingsaard (wordt ‘Overleden’)
+Huwelijk of geregistreerd partnerschap (wordt ontbonden respectievelijk beëindigd)
+Adres (wordt beëindigd)
+Ouderlijk gezag (wordt beëindigd indien de overledene de voogd of toeziende voogd is)
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie overlijden
+De volgende attributen worden afgeleid vastgelegd en komen dus niet voor in het bericht:
+o
+
+Persoon.Overlijden
+
+Element
+
+Afleiding
+
+Land/gebied overlijden
+
+‘Nederland’
+
+o Relatie.Standaard
+Het actuele huwelijk of geregistreerd partnerschap wordt afgeleid beëindigd:
+Element
+
+Afleiding
+
+Gemeente einde
+
+Persoon.Overlijden.Gemeente overlijden
+
+Woonplaats einde
+
+Persoon.Overlijden.Woonplaatsnaam overlijden
+
+Land/gebied einde
+
+‘Nederland’
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum overlijden’ van de actie ‘Registratie overlijden’.
+
+2.3
+
+Aanvullende informatie voor LO en HUP
+
+Registratie van een kind dat levenloos is geboren wordt niet in de BRP opgenomen.
+Is een kind geboren en na de geboorte overleden (het kind hoeft maar héél kort te hebben
+geleefd) dan wordt een geboorteakte opgenomen én een akte van overlijden. Hiervoor moet dus
+eerst de ‘geboorte in Nederland’ (al dan niet met erkenning) en vervolgens het overlijden worden
+geregistreerd.
+
+Status: Definitief, versie: 0.4
+
+Pagina 6 van 11
+
+UCS BY.0.OVL - Overlijden
+
+3 Overlijden in buitenland
+3.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Overlijden in Nederland’ is het registreren van het
+overlijden van een ingezetene op basis van een buitenlandse akte of een bewijs van overlijden.
+Door het overlijden wordt ook het actuele huwelijk of geregistreerd partnerschap ontbonden (bij
+zowel de overledene als bij de partner), met reden ‘Overlijden partner (O)’. Reden
+‘Rechtsvermoeden van overlijden partner (R)’ is hier niet van toepassing omdat dat betrekking
+heeft op een uitspraak van een Nederlandse rechtbank.
+Tevens wordt het adres van de overledene beëindigd.
+Beide partners kunnen ook gelijktijdig zijn overleden, beide huwelijken of geregistreerd
+partnerschappen zijn dan door overlijden ontbonden. Beide persoonslijsten worden dan op dezelfde
+dag opgeschort. Hiervoor moet deze administratieve handeling twee maal worden gebruikt.
+3.1.1
+•
+•
+
+Een buitenlandse akte of een ander bewijs van overlijden uit het buitenland;
+Een akte of afschrift/kennisgeving ervan van de gemeente Den Haag3
+
+3.1.2
+•
+•
+
+Brondocumenten
+
+Betrokken personen
+
+Hoofdpersoon (Ingezetene)
+Echtgenoot of geregistreerd partner van de hoofdpersoon (Ingezetene)
+
+3.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [2].
+3.1.4
+•
+
+Bijhoudingspartij van de overledene4;
+
+3.1.5
+•
+•
+•
+•
+•
+
+3.2
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Overlijden
+Nadere bijhoudingsaard (wordt ‘Overleden’)
+Huwelijk of geregistreerd partnerschap (wordt ontbonden respectievelijk beëindigd)
+Adres (wordt beëindigd)
+Ouderlijk gezag (wordt beëindigd indien de overledene de voogd of toeziende voogd is)
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie overlijden
+De volgende attributen worden afgeleid vastgelegd en komen dus niet voor in het bericht:
+o Relatie.Standaard
+Het actuele huwelijk of geregistreerd partnerschap wordt afgeleid beëindigd:
+
+3
+
+In speciale gevallen kan het overlijden ook worden vastgesteld voor Nederlanders die vermist zijn en in Nederland
+woonachtig zijn op moment van vermissing onder bepaalde omstandigheden. Denk aan personen die zijn omgekomen bij
+een vliegramp. Ook hiervoor wordt door de rechtbank een uitspraak gedaan. De akte wordt ingeschreven in Den Haag en
+vermeld de plaats en/of het land/gebied van overlijden.
+4 Deze situatie is ook van toepassing indien de bron een kennisgeving / afschrift is van een akte die in Den Haag is
+ingeschreven.
+
+Status: Definitief, versie: 0.4
+
+Pagina 7 van 11
+
+UCS BY.0.OVL - Overlijden
+
+Element
+
+Afleiding
+
+Buitenlande plaats einde
+
+Persoon.Overlijden.Buitenlandse plaats overlijden
+
+Buitenlandse regio einde
+
+Persoon.Overlijden.Buitenlandse regio overlijden
+
+Omschrijving locatie einde
+
+Persoon.Overlijden.Buitenlandse locatie overlijden
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum overlijden’ van de actie ‘Registratie overlijden’.
+
+Status: Definitief, versie: 0.4
+
+Pagina 8 van 11
+
+UCS BY.0.OVL - Overlijden
+
+4 Correctie overlijden
+4.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Correctie overlijden’ is het herstellen van een fout in de
+overlijdensgegevens of het ongedaan maken van de registratie van het overlijden.
+4.1.1
+
+Brondocumenten
+
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [6].
+4.1.2
+•
+
+Betrokken personen
+
+De overleden hoofdpersoon (die voor het overlijden ingezetene was).
+
+4.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [2].
+4.1.4
+•
+
+Bijhoudings(voorstel)partijen
+
+De bijhoudingspartij van de overledene of ten onrechte overleden ingezetene.
+
+4.1.5
+
+Vastgelegde gegevens
+
+Met deze administratieve handeling vervalt een bestaand voorkomen van de onderstaande groep
+naar de formele historie en wordt er optioneel een nieuw voorkomen van deze groep geregistreerd:
+•
+
+4.2
+
+Overlijden
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Correctieverval overlijden
+Geen bijzonderheden voor deze actie.
+
+•
+
+Hoofdactie Correctieregistratie overlijden (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling is de systeemdatum.
+
+Status: Definitief, versie: 0.4
+
+Pagina 9 van 11
+
+UCS BY.0.OVL - Overlijden
+
+5 Acties
+De generieke functionaliteit van de relevante acties binnen de context van deze module is in dit
+hoofdstuk per actie beschreven.
+
+5.1
+
+Registratie overlijden
+
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+Persoon.Overlijden
+Geen bijzonderheden voor deze groep
+
+•
+
+Persoon.Bijhouding
+Deze groep wordt afgeleid geregistreerd.
+
+•
+
+•
+
+•
+
+5.2
+
+Element
+
+Afleiding
+
+PartijCode
+
+Overnemen van het voorkomen dat door deze actie komt te vervallen.
+
+Nadere bijhoudingsaard
+
+‘Overleden’
+
+Datum aanvang geldigheid
+
+Persoon.Datum overlijden
+
+Relatie.Standaard
+Het actuele huwelijk of geregistreerd partnerschap wordt afgeleid beëindigd:
+Element
+
+Afleiding
+
+Reden einde
+
+‘Overlijden partner’
+
+Datum einde
+
+Persoon.Datum overlijden
+
+Persoon \ Adres
+Deze groep wordt afgeleid beëindigd.
+Element
+
+Afleiding
+
+Datum einde geldigheid
+
+Persoon.Datum overlijden
+
+Persoon.Ouderlijk gezag
+Deze groep wordt afgeleid beëindigd.
+Element
+
+Afleiding
+
+Datum einde geldigheid
+
+Persoon.Datum overlijden
+
+Correctieverval overlijden
+
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van onderstaande
+groep van de persoon:
+•
+
+5.3
+
+Persoon.Overlijden
+
+Correctieregistratie overlijden
+
+Met de actie wordt een nieuw voorkomen van onderstaande groep van de persoon geregistreerd:
+•
+
+Persoon.Overlijden
+
+Status: Definitief, versie: 0.4
+
+Pagina 10 van 11
+
+UCS BY.0.OVL - Overlijden
+
+6 Appendix A – BZVU en plaatsonafhankelijke bijhouding
+In onderstaande tabel staat per handeling aangegeven of het berichtelement BZVU (Bezien vanuit
+persoon) van toepassing is – inclusief motivatie – en de toegestane indienende partijen – ook
+inclusief motivatie.
+Wanneer BZVU niet van toepassing is zal het berichtelement niet aanwezig zijn in het bericht. Voor
+meer informatie over BZVU zie UCS BY.1.ON – Ontrelateren [3].
+Bij toegestane indienende partijen wordt vermeld of het bijhoudingsvoorstel (ook) door andere dan
+de eigen gemeente mag worden ingestuurd. In onderstaande tabel kan deze kolom de volgende
+waarden aannemen:
+•
+•
+•
+
+A(lle): het bijhoudingsvoorstel mag door elke bijhoudingspartij worden ingediend;
+H(uidige): het bijhoudingsvoorstel mag alleen door de huidige bijhoudingspartij worden
+ingediend;
+B(eperkt): het bijhoudingsvoorstel mag door een beperkt aantal bijhoudingspartijen
+worden ingediend. In de motivatie staat vermeld welke partijen dat zijn.
+
+Administratieve
+Handeling
+
+BZVU?
+
+Motivatie
+
+Plaatsonafh.
+bijh.?
+
+Toegestane indienende
+partij(en)
+
+Overlijden in Nederland
+
+N
+
+Heeft betrekking op slechts 1
+persoonslijst. Als een
+eventueel huwelijk of
+geregistreerd partnerschap
+wordt ontbonden resp.
+beëindigd en de
+bijhoudingspartij van de
+partner fiatteert niet
+automatisch, dan kan deze
+bijhoudingspartij de AH
+‘Ontbinding huwelijk’ resp.
+‘Ontbinding geregistreerd
+partnerschap’ gebruiken om
+handmatig te fiatteren.
+
+B
+
+Gemeente van overlijden en
+huidige bijhoudingspartij
+
+Overlijden in buitenland
+
+N
+
+Idem
+
+H
+
+Huidige bijhoudingspartij
+
+Correctie overlijden
+
+N
+
+Heeft betrekking op slechts 1
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Status: Definitief, versie: 0.4
+
+Pagina 11 van 11
+
+

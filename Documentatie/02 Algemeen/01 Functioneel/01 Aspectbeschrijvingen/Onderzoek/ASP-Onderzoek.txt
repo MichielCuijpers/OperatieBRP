@@ -1,0 +1,2442 @@
+Aspectbeschrijving – Onderzoek
+Versie
+
+0.18
+
+Datum
+
+6 juni 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+16-03-2017
+
+0.1
+
+Outline opgezet
+
+Operatie BRP
+
+23-03-2017
+
+0.2
+
+Initiële versie
+
+Operatie BRP
+
+23-03-2017
+
+0.3
+
+Review Operatie BRP verwerkt op paragraaf 2.1
+
+Operatie BRP
+
+24-03-2017
+
+0.4
+
+Review Operatie BRP verwerkt op paragraaf 2.4 en 3
+
+Operatie BRP
+
+27-03-2017
+
+0.5
+
+Review Operatie BRP verwerking op paragraaf 2.2 en 2.3
+
+Operatie BRP
+
+27-03-2017
+
+0.6
+
+Paragraaf 2.3 uitgebreid en review Operatie BRP verwerkt
+
+Operatie BRP
+
+27-03-2017
+
+0.7
+
+Review Operatie BRP op paragraaf 2.3 verwerkt
+
+Operatie BRP
+
+27-03-2017
+
+0.8
+
+Paragraaf 1.1 en hoofdstuk 4 uitgebreid
+
+Operatie BRP
+
+28-03-2017
+
+0.9
+
+Paragraaf 2.4 uitgebreid
+
+Operatie BRP
+
+29-03-2017
+
+0.10
+
+•
+
+Operatie BRP
+
+29-03-2017
+
+0.11
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+04-04-2017
+
+0.12
+
+Review Operatie BRP en Operatie BRP verwerkt
+
+Operatie BRP
+
+20-04-2017
+
+0.13
+
+•
+•
+
+Operatie BRP
+
+•
+
+•
+•
+•
+•
+•
+•
+•
+
+Review Operatie BRP op paragraaf 2.4 en hoofdstuk 4
+verwerkt
+Tekstuele aanpassingen hoofdstuk 3
+
+Partij bij onderzoek vervalt
+Waarschuwing als bij bepaalde AH-en een ouder in
+onderzoek staat
+Wijzigen onderzoek beperkt tot alleen de status
+Overgang bijhoudingspartij
+Persoon aangetroffen op adres
+Infrastructurele wijzigingen
+Corrigeren
+Interne review Operatie BRP verwerkt
+Onderzoek wordt niet als nevenactie uitgevoerd
+
+25-04-2017
+
+0.14
+
+Interne review Operatie BRP verwerkt
+
+Operatie BRP
+
+25-04-2017
+
+0.15
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+18-05-2017
+
+0.16
+
+In paragraaf 2.3.4 volgorde van corrigeren en sluiten onderzoek toegevoegd.
+
+Operatie BRP
+
+22-05-2017
+
+0.17
+
+Review Operatie BRP
+
+Operatie BRP
+
+06-06-2017
+
+0.18
+
+Hoofdstuk 4 ‘Aandachtspunten voor Levering’ herschreven
+naar ‘Levering van onderzoeksgegevens’
+
+Operatie BRP
+
+Aspectbeschrijving – Onderzoek
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Operatie BRP
+
+0.2
+
+Operatie BRP
+
+0.6
+
+Operatie BRP
+
+0.9
+
+Operatie BRP
+
+0.10
+
+Operatie BRP
+
+0.11
+
+Operatie BRP
+
+0.13
+
+Operatie BRP
+
+0.15
+
+Operatie BRP
+
+Status: Definitief, versie: 0.18
+
+Pagina 2 van 23
+
+Aspectbeschrijving – Onderzoek
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 4
+1.1
+1.2
+
+2
+
+Uitgangspunten en ontwerpbeslissingen .................................................................. 5
+2.1
+2.2
+2.3
+2.3.1
+2.3.2
+2.3.3
+2.3.4
+2.4
+2.4.1
+2.4.2
+2.4.3
+2.5
+2.5.1
+2.5.2
+
+3
+
+Doel ....................................................................................................................................4
+Referenties ..........................................................................................................................4
+
+Wat houdt onderzoek in .........................................................................................................5
+Modellering van onderzoek .....................................................................................................5
+Levensloop van een onderzoek ...............................................................................................7
+Starten van een onderzoek ................................................................................................7
+Wijzigen van een onderzoek ...............................................................................................8
+Afsluiten van een onderzoek ..............................................................................................9
+Corrigeren .......................................................................................................................9
+Bijhouding van gegevens die in onderzoek staan.......................................................................9
+Verval naar formele historie ...............................................................................................9
+Waarschuwing bij bijhouding van gegevens in onderzoek ..................................................... 10
+Overerven van onderzoeken ............................................................................................. 10
+Bijzonderheden bij adresonderzoeken .................................................................................... 11
+Persoon aangetroffen op adres? ........................................................................................ 11
+Infrastructurele wijzigingen .............................................................................................. 12
+
+Patronen ................................................................................................................. 13
+3.1
+Legenda............................................................................................................................. 13
+3.2
+Actualisering van een groep met formele historie .................................................................... 14
+3.2.1
+Voorbeeld: Uitsluiting kiesrecht wijzigt, voorkomen staat in onderzoek .................................. 14
+3.3
+Actualisering van een groep met formele en materiële historie ................................................. 15
+3.3.1
+Voorbeeld: Geslachtsaanduiding wijzigt, attribuut staat in onderzoek .................................... 15
+3.4
+Actualisering van een groep met formele en impliciete materiële historie ................................... 16
+3.4.1
+Voorbeeld: Ontbinding huwelijk, gehele object in onderzoek ................................................ 16
+3.4.2
+Voorbeeld: Ontbinding huwelijk, voorkomen in onderzoek ................................................... 16
+3.5
+Actualisering van een groep met meerdere stapels .................................................................. 17
+3.5.1
+Voorbeeld: Voornaam ...................................................................................................... 17
+3.6
+Correctie van een groep ....................................................................................................... 18
+3.6.1
+Voorbeeld: Correctie aanvangsdatum huwelijk, voorkomen in onderzoek ............................... 18
+3.6.2
+Voorbeeld: Correctie aanvangsdatum huwelijk, gehele object in onderzoek ............................ 18
+3.7
+Ontrelateren....................................................................................................................... 19
+3.7.1
+Voorbeeld: Ontrelateren huwelijk, gehele object in onderzoek .............................................. 19
+3.8
+Relateren ........................................................................................................................... 20
+3.8.1
+Voorbeeld: Relateren huwelijk, gehele object in onderzoek .................................................. 20
+3.9
+Wijziging adres infrastructureel............................................................................................. 21
+3.9.1
+Voorbeeld: Infrastructurele wijziging adres, voorkomen in onderzoek .................................... 21
+3.10
+Wijziging gemeente infrastructureel ...................................................................................... 22
+3.10.1
+Voorbeeld: Infrastructurele wijziging gemeente, attribuut in onderzoek ............................. 22
+
+4
+
+Levering van Onderzoeksgegevens. ........................................................................ 23
+
+Status: Definitief, versie: 0.18
+
+Pagina 3 van 23
+
+Aspectbeschrijving – Onderzoek
+
+1 Inleiding
+1.1
+
+Doel
+
+Het doel van dit document is te beschrijven hoe onderzoek werkt in het koppelvlak Bijhouden van
+de BRP. Eerst wordt beschreven wat een onderzoek inhoudt en hoe dit gemodelleerd is. Vervolgens
+wordt de levensloop van een onderzoek toegelicht en wordt er beschreven wat er gebeurt als er
+een bijhouding plaatsvindt op gegevens die in onderzoek staan. Aan de hand van voorbeelden
+wordt de werking geïllustreerd. Tenslotte worden voor het koppelvlak Leveren de belangrijkste
+aandachtspunten benoemd.
+
+1.2
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Architectuur Basisregistratie Personen
+
+Operatie BRP
+
+0.13.1
+
+02-03-2017
+
+2
+
+Aspectbeschrijving – Formele en Materiële Historie
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 0.18
+
+Pagina 4 van 23
+
+Aspectbeschrijving – Onderzoek
+
+2 Uitgangspunten en ontwerpbeslissingen
+In dit hoofdstuk worden de uitgangspunten en ontwerpbeslissingen beschreven met betrekking tot
+het onderwerp ‘onderzoek’ in de BRP.
+
+2.1
+
+Wat houdt onderzoek in
+
+Wanneer wordt getwijfeld aan de juistheid van gegevens die in de BRP zijn opgenomen kan de
+verantwoordelijke bijhoudingspartij besluiten om de gegevens in onderzoek te plaatsen. Als de
+gegevens aan afnemers geleverd worden, wordt de aanduiding dat de gegevens in onderzoek staan
+meegeleverd. Voor meer informatie zie paragraaf 5.4 “Onderzoek, verificatie en terugmelding” van
+Architectuur Basisregistratie Personen [1].
+Zodra de twijfel omtrent de gegevens die in onderzoek staan is weggenomen – door middel van
+een correctie of nadat is vastgesteld dat het gegeven/de gegevens juist zijn – neemt de verantwoordelijke bijhoudingspartij in de BRP op dat het onderzoek is afgesloten.
+Naast een onderzoek naar opgenomen persoonsgegevens is het in de BRP ook mogelijk om aan te
+geven dat er een onderzoek is naar niet opgenomen (d.w.z. ontbrekende) gegevens. Hiervan kan
+bijvoorbeeld sprake zijn als er een vermoeden bestaat dat een persoon gehuwd is, maar het huwelijk niet in de BRP is opgenomen. Dit onderzoeksgegeven wordt niet geleverd maar is wel zichtbaar
+voor de bijhouder.
+
+2.2
+
+Modellering van onderzoek
+
+Hierna is schematisch weergegeven wat van een onderzoek in de BRP wordt geregistreerd, waarbij
+verplichte gegevens zijn onderstreept. Zie het logisch gegevensmodel voor de volledige details.
+
+Onderzoek
+Een onderzoek is altijd gekoppeld aan de ingeschrevene waar het onderzoek betrekking op heeft.
+Een onderzoek heeft altijd een Datum aanvang en krijgt bij het afsluiten een Datum einde. De Status en de (optionele) Omschrijving van een onderzoek zijn alleen zichtbaar voor bijhoudingspartijen. Deze worden niet geleverd aan afnemers. In de Omschrijving wordt een extra toelichting vastgelegd om nader toe te lichten wat er in onderzoek is geplaatst. De Omschrijving is dus geen logboek. Dit betekent ook dat de omschrijving alleen bij de aanvang van het onderzoek opgegeven
+
+Status: Definitief, versie: 0.18
+
+Pagina 5 van 23
+
+Aspectbeschrijving – Onderzoek
+
+kan worden en niet bij het wijzigen en beëindigen van het onderzoek. In paragraaf 2.3 wordt een
+nadere toelichting gegeven op de mogelijke statussen van een onderzoek.
+Gegeven in onderzoek
+De verwijzing naar een gegeven dat in onderzoek staat wordt in de BRP opgeslagen middels een
+elementnaam in combinatie met de verwijzing naar een object dan wel een voorkomen. Het verwijzen wordt gedaan met vastleggen van respectievelijk de objectsleutel en de voorkomensleutel. Met
+de elementnaam wordt aangeduid welk soort gegeven van de persoonslijst in onderzoek wordt
+geplaatst. Hiermee kan een object en daarbinnen eventueel een groep en een attribuut worden
+aangeduid. Bijvoorbeeld:
+•
+
+Persoon.Geboorte.Datum, duidt een attribuut aan binnen de groep Geboorte;
+
+•
+
+Persoon.Overlijden, duidt een groep aan;
+
+•
+
+Huwelijk, duidt een object van het soort Huwelijk aan.
+
+Bij een onderzoek naar een volledig object wordt naast het element de objectsleutel opgenomen.
+Hetzelfde geldt voor een onderzoek naar een attribuut uit een groep waar geen historie op zit, zoals bijvoorbeeld het attribuut Soort van een relatie. In dat geval zou het Gegeven in onderzoek
+gevuld worden met element Relatie.SoortCode en de objectsleutel van de betreffende relatie.
+Bij een onderzoek naar een specifiek voorkomen van een groep of een attribuut van een voorkomen, wordt de voorkomensleutel bij het onderzoek opgenomen. De objectsleutel en voorkomensleutel sluiten elkaar uit binnen een Gegeven in onderzoek.
+In geval van een onderzoek naar niet opgenomen gegevens is binnen het Gegeven in onderzoek
+alleen het attribuut Element gevuld. Dat is bijvoorbeeld het element Huwelijk in geval van een onderzoek naar een niet opgenomen huwelijk.
+Een belangrijke ontwerpbeslissing met betrekking tot de gegevens die onderdeel zijn van het onderzoek is de volgende:
+Ontwerpbeslissing 1
+De scope van een onderzoek mag niet wijzigen. Dit betekent dat aan een bestaand onderzoek geen
+nieuwe gegevens mogen worden toegevoegd en er geen bestaande gegevens van mogen worden
+verwijderd.
+Er mogen aan een bestaand onderzoek dus geen nieuwe voorkomens van Gegeven in onderzoek
+worden toegevoegd en bestaande voorkomens van Gegeven in onderzoek mogen dus niet vervallen.
+De enige uitzondering doet zich voor als door actualisering een voorkomen ontstaat dat (functioneel gezien) een ‘kloon’ is van een voorkomen dat al onderdeel is van het onderzoek en door de
+actualisering vervalt. Om te zorgen dat het onderzoek via het nieuwe actuele voorkomen zichtbaar
+blijft, wordt dit voorkomen automatisch aan het onderzoek toegevoegd. Weliswaar wordt in dat
+geval een nieuw Gegeven in onderzoek aan het onderzoek toegevoegd, maar wijzigt semantisch
+gezien de scope van het onderzoek niet, omdat het een kloon betreft van een gegeven wat al onderdeel was van het onderzoek.
+Zie paragraaf 2.4.3 voor een nadere toelichting op het automatisch in onderzoek plaatsen van
+voorkomens.
+Overgang bijhoudingspartij
+De actuele bijhoudingspartij is verantwoordelijk voor de volledige persoonslijst, dus ook voor de
+onderzoeksgegevens daarop. Bij de overgang naar een andere bijhoudingspartij gaan de onderzoeksgegevens in de BRP samen met de rest van de persoonslijst mee over naar de nieuwe bijhoudingspartij. Met andere woorden: het onderzoek volgt de persoon.
+Er moet wel bekend blijven welke partij oorspronkelijk het onderzoek startte, bijvoorbeeld als het
+fysieke onderzoeksdossier bij die partij moet worden opgevraagd. Deze is door de bijhoudingspartij
+altijd te achterhalen door aan de hand van de Datum aanvang van het onderzoek in te prikken in
+de materiële historie van de groep Bijhouding.
+
+Status: Definitief, versie: 0.18
+
+Pagina 6 van 23
+
+Aspectbeschrijving – Onderzoek
+
+2.3
+
+Levensloop van een onderzoek
+
+Een onderzoek doorloopt in de BRP achtereenvolgens verschillende statussen. De toestand van een
+onderzoek is opgenomen in het attribuut Status. Mogelijke statussen zijn:
+•
+
+‘In uitvoering’: de initiële status van een onderzoek.
+
+•
+
+‘Gestaakt’: een onderzoek kan in deze status worden gezet om uit te drukken dat het onderzoek stil ligt. Dat doet zich bijvoorbeeld voor als gewacht wordt op niet eenvoudig te
+verkrijgen stukken uit het buitenland. Het onderzoek wordt dan niet afgesloten (en misschien wel nooit), omdat nog steeds aan de juistheid van de gegevens wordt getwijfeld.
+
+•
+
+‘Afgesloten’: het onderzoek is afgesloten. Er wordt niet meer getwijfeld aan de juistheid
+van de gegevens of er is een correctie doorgevoerd.
+
+Een onderzoek dat niet is afgesloten duiden we verder ook wel aan als een ‘openstaand onderzoek’.
+In het volgende diagram is schematisch weergegeven welke statusovergangen mogelijk zijn bij de
+actualisering van een onderzoek. Bij elke statusovergang is het paragraafnummer opgenomen
+waar het verder wordt beschreven.
+
+Indien onderzoeksgegevens niet juist of ten onrechte zijn geregistreerd kunnen deze door middel
+van de administratieve handeling Correctie onderzoek gecorrigeerd worden. Zie paragraaf 2.3.4
+voor meer informatie over het corrigeren van onderzoeksgegevens.
+2.3.1
+
+Starten van een onderzoek
+
+De verantwoordelijke bijhoudingspartij kan een onderzoek starten met de administratieve handeling Aanvang onderzoek.
+Bij de start van een onderzoek geeft de bijhouder Datum aanvang en optioneel Omschrijving op.
+Daarnaast dient minimaal één gegeven in onderzoek te worden geplaatst. Ten aanzien van de gegevens die in onderzoek worden geplaatst wordt gecontroleerd of de partij die dat doet de bijhou-
+
+Status: Definitief, versie: 0.18
+
+Pagina 7 van 23
+
+Aspectbeschrijving – Onderzoek
+
+dingsverantwoordelijke is. Verder gelden er beperkingen met betrekking tot welke gegevens in
+onderzoek kunnen worden geplaatst. Alleen de gegevens van de juridische persoonslijst kunnen in
+onderzoek worden geplaatst. De volgende gegevens kunnen echter niet in onderzoek worden geplaatst:
+•
+
+Onderzoeksgegevens zelf, te weten:
+o Objecttype Onderzoek en onderliggende attributen
+o Objecttype Gegeven in onderzoek en onderliggende attributen
+
+•
+
+(Gegevens van) voorkomens die naar de formele historie zijn vervallen
+
+•
+
+Objecttype Persoon \ Verificatie en onderliggende attributen
+
+•
+
+Objecttype Persoon \ Afnemerindicatie en onderliggende attributen
+
+•
+
+Verantwoordingsgegevens, te weten:
+o Tijdstip registratie van alle groepen
+o Actie inhoud van alle groepen
+o Actie aanpassing geldigheid van alle groepen met materiële historie
+o Groep Afgeleid administratief en onderliggende attributen
+NB: Tijdstip verval en Nadere aanduiding verval mogen ook niet in onderzoek worden
+geplaatst, maar dat wordt al afgedekt doordat (gegevens van) vervallen voorkomens
+niet in onderzoek mogen worden geplaatst.
+
+•
+
+Administratienummer van een persoon (alleen in de duale periode). Van gerelateerden
+mag wel het Administratienummer in onderzoek worden gezet. Van hen mag het immers
+ook gecorrigeerd worden en van hoofdpersonen niet. Met betrekking tot het in onderzoek
+plaatsen van identificatienummers geldt de volgende ontwerpbeslissing:
+
+Ontwerpbeslissing 2
+Eigenlijk zouden identificatienummers (Burgerservicenummer en Administratienummer) niet in
+onderzoek moeten worden gezet. Het nummer is namelijk geldig geweest en er zou aan afnemers dan niet moeten worden gecommuniceerd dat er twijfel over is. Desondanks is besloten
+om alleen voor Administratienummers tegen te houden dat deze in onderzoek worden gezet en
+het voor Burgerservicenummers aan de verantwoordelijkheid van de bijhouder te laten.
+De reden om het voor Administratienummers tegen te houden is dat het in de GBA ook niet in
+onderzoek mag worden gezet en er gedurende de duale periode dan dus conversieproblemen
+kunnen optreden.
+Bij het starten van een onderzoek kunnen optioneel bronnen uit de documententabel worden opgenomen met betrekking tot het onderzoek. Er vindt geen controle plaats of het soort document
+past bij de gegevens die in onderzoek worden geplaatst.
+Zodra een onderzoek in de BRP is aangemaakt krijgt het automatisch de status ‘In uitvoering’.
+2.3.2
+
+Wijzigen van een onderzoek
+
+In paragraaf 2.2 is toegelicht dat de scope van een onderzoek niet mag wijzigen. Er is daarom
+geen mogelijkheid om nieuwe gegevens aan een bestaand onderzoek toe te voegen. Met de administratieve handeling Wijziging onderzoek is het alleen mogelijk om de status van het onderzoek te
+actualiseren. Alleen de huidige bijhoudingspartij kan deze wijzigen. Hierna wordt per status van het
+onderzoek aangegeven wat de toegestane statuswijzigingen zijn:
+•
+
+‘In uitvoering’: Status kan worden gewijzigd in ‘Gestaakt’.
+
+•
+
+‘Gestaakt’: Status kan worden gewijzigd in ‘In uitvoering’.
+
+•
+
+‘Afgesloten’: Status kan niet gewijzigd worden.
+
+Wanneer een ander gegeven van een onderzoek aangepast moet worden, dient dat met een correctie te worden hersteld.
+
+Status: Definitief, versie: 0.18
+
+Pagina 8 van 23
+
+Aspectbeschrijving – Onderzoek
+
+2.3.3
+
+Afsluiten van een onderzoek
+
+Analoog aan het starten van een onderzoek kan een openstaand onderzoek met de administratieve
+handeling Beëindiging onderzoek worden afgesloten. Hierbij wordt Datum einde van het onderzoek
+opgegeven.
+Alleen de huidige bijhoudingspartij kan het onderzoek afsluiten. Deze partij doet dat altijd expliciet:
+Ontwerpbeslissing 3
+Het afsluiten van een onderzoek is (net als het starten) altijd een expliciete actie van de bijhouder. De BRP start of sluit nooit automatisch een onderzoek.
+De voornaamste reden hiervoor is dat alleen de bijhouder weet wat het doel van het onderzoek
+is en de BRP daar geen aannames over kan doen om impliciet gedrag op te baseren. Daar
+komt bij dat het vanwege dossiervorming buiten de BRP ook wenselijk is dat de bijhouder ‘in
+control’ is met betrekking tot het starten en afsluiten van onderzoeken.
+Verder volgt uit Ontwerpbeslissing 1 dat een onderzoek altijd in zijn geheel wordt gesloten. Een
+onderzoek kan niet voor een deel van de gegevens die in onderzoek staan worden afgesloten.
+Tot slot kan een eenmaal afgesloten onderzoek uitsluitend worden heropend met de administratieve handeling Correctie onderzoek.
+2.3.4
+
+Corrigeren
+
+Met de administratieve handeling Correctie onderzoek is het mogelijk om een onderzoek te laten
+vervallen (Onderzoek en onderliggende Gegeven in onderzoek) dan wel met elementaire correctieacties de gegevens van een Onderzoek te corrigeren. Dit laatste houdt in dat Datum aanvang, Datum einde, Omschrijving en Status gecorrigeerd kunnen worden. Ook kan er een Nadere aanduiding verval opgegeven worden.
+Conform Ontwerpbeslissing 1 mag de scope van het onderzoek niet wijzigen, dit betekent dat de
+gegevens uit de groep Gegeven in onderzoek niet gecorrigeerd kunnen worden, omdat dan de semantische scope van het onderzoek aangepast zou worden. Als een Gegeven in onderzoek niet
+juist is dan dient dat te worden hersteld door het hele onderzoek (inclusief Gegeven in onderzoek)
+te laten vervallen en een nieuw onderzoek te starten.
+Als blijkt dat een gegeven dat in onderzoek staat gecorrigeerd moet worden dan moet éérst de
+correctie worden doorgevoerd voordat het onderzoek wordt afgesloten.
+
+2.4
+
+Bijhouding van gegevens die in onderzoek staan
+
+Met betrekking tot het actualiseren en corrigeren van gegevens die in onderzoek staan gelden enkele bijzonderheden. In de eerste plaats met betrekking tot het verval van gegevens naar de formele historie. In de tweede plaats met betrekking tot het geven van een waarschuwing bij de bijhouding van gegevens die in onderzoek staan. Tenslotte gaat in sommige gevallen het onderzoek
+automatisch over op nieuwe voorkomens. Deze aspecten worden hierna verder toegelicht.
+2.4.1
+
+Verval naar formele historie
+
+Zoals in paragraaf 2.3.1 is beschreven mogen gegevens die zijn vervallen niet in onderzoek worden
+geplaatst. Maar ten aanzien van gegevens die vervallen nadat ze in onderzoek zijn geplaatst geldt
+het volgende:
+Ontwerpbeslissing 4
+Gegevens die naar de formele historie zijn vervallen nadat ze in onderzoek zijn geplaatst blijven onderdeel van het onderzoek.
+De reden hiervoor is dat bij bevraging van de formele historie van het gegeven altijd zichtbaar
+moet blijven dat het gegeven op een bepaald moment in onderzoek stond.
+Dit betekent ook dat de situatie kan ontstaan dat aan een openstaand onderzoek alleen nog maar
+vervallen gegevens zijn gekoppeld. Zoals beschreven in paragraaf 2.3.3 is het aan de verantwoor-
+
+Status: Definitief, versie: 0.18
+
+Pagina 9 van 23
+
+Aspectbeschrijving – Onderzoek
+
+delijke bijhouder om dergelijke onderzoeken al dan niet af te sluiten. Voor de toekomst is het
+denkbaar dat deze situatie met een Bestands Controle Module (BCM) 1-controle wordt opgespoord.
+2.4.2
+
+Waarschuwing bij bijhouding van gegevens in onderzoek
+
+Wanneer er een bijhouding plaatsvindt op een persoonslijst waarop een openstaand onderzoek
+staat wordt een waarschuwing gegeven. Dit betreft een algemene waarschuwing waarbij het niet
+uitmaakt of de specifieke door deze bijhouding geraakte gegevens in onderzoek staan. De waarschuwing beperkt zich tot de hoofdpersonen van het bijhoudingsvoorstel.
+Het zou het meest wenselijk zijn om deze controle (R2626) op bijhoudingsplanpersonen te doen,
+maar dat kan niet omdat eerst de controles uitgevoerd worden en hierna pas het bijhoudingsplan
+gemaakt wordt. Daarom werkt de controle op hoofdpersonen.
+Een andere situatie waarin een waarschuwing wordt gegeven is de volgende. Als bij een administratieve handeling gegevens afgeleid worden van ouder naar kind en er is een lopend onderzoek
+aanwezig bij één van de ouders, dan wordt hiervoor een waarschuwing gegeven. Dit kan voor de
+bijhouder aanleiding zijn om het afgeleide gegeven van het kind ook in onderzoek te plaatsen. Dat
+zal in een nieuw onderzoek moeten gebeuren, omdat de scope van een bestaand onderzoek niet
+kan worden aangepast (zie Ontwerpbeslissing 1) en een onderzoek bovendien persoonsgebonden
+is.
+2.4.3
+
+Overerven van onderzoeken
+
+Actualiseren
+Zoals in paragraaf 2.2 is toegelicht mag de scope van een onderzoek niet wijzigen. Dit betekent
+onder meer dat er geen nieuwe gegevens aan een bestaand onderzoek mogen worden toegevoegd.
+Bij een actualisering kan het zich voor doen dat een voorkomen ontstaat dat in feite een kloon
+(d.w.z. een kopie) is van een bestaand voorkomen. Dit doet zich voor bij actualisering van materieel historische groepen, waarbij het opnemen van een nieuw voorkomen leidt tot afgeleide materiele beëindiging van een ander voorkomen. Zie voor meer informatie hierover paragraaf 3.1 van
+‘Aspectbeschrijving – Formele en Materiële Historie’ [2]. Ten aanzien van dergelijke klonen is besloten om deze automatisch aan het onderzoek toe te voegen:
+Ontwerpbeslissing 5
+Als een (attribuut van een) voorkomen van een materieel historische groep in onderzoek staat en
+door een actualisering vervalt dit voorkomen, dan ontstaat er een kloon die als extra gegeven een
+Datum einde geldigheid heeft. In dat geval wordt wordt (hetzelfde attribuut van) de kloon automatisch aan het bestaande onderzoek toegevoegd. Het nieuwe voorkomen ‘erft’ hier in feite het onderzoek.
+Dit vindt plaats door het automatisch aanmaken van een nieuw Gegeven in onderzoek, dat verwijst
+naar (het attribuut van) de kloon en wordt aan het bestaande onderzoek gekoppeld. Dit gebeurt
+alleen als een voorkomen of een attribuut in onderzoek staat. Als het gehele object in onderzoek
+staat dan gebeurt dit niet. In dat geval staan namelijk impliciet alle voorkomens van de groepen
+binnen het object in onderzoek.
+De reden om het onderzoek uit te breiden met het nieuwe voorkomen is dat het onderzoek “weg
+zou zakken in de formele historie” als het alleen aan het vervallen voorkomen gekoppeld zou blijven. Door de kloon aan het onderzoek toe te voegen wordt het onderzoek gekoppeld aan het nieuwe (niet-vervallen) voorkomen van het gegeven. Hierdoor blijven afnemers geïnformeerd over het
+feit dat het gegeven in onderzoek staat.
+De scope van het onderzoek wijzigt hierdoor niet, omdat functioneel hetzelfde gegeven al in onderzoek stond.
+Hetzelfde geldt voor groepen met impliciete materiële historie. De kloon met beëindigingsgegevens
+wordt automatisch aan het onderzoek toegevoegd.
+
+1
+
+De BCM valt buiten de scope van de BRP.
+
+Status: Definitief, versie: 0.18
+
+Pagina 10 van 23
+
+Aspectbeschrijving – Onderzoek
+
+De status van het onderzoek speelt hierbij overigens geen rol. Ook voor afgesloten onderzoeken is
+nodig dat het zichtbaar blijft op niet-vervallen voorkomens.
+In paragraaf 3.3 wordt aan de hand van voorbeelden geïllustreerd wat precies de werking is van
+het overerven van onderzoek bij actualisering van een materieel historische groep.
+Corrigeren
+In tegenstelling tot actualiseren wordt bij het corrigeren van gegevens nooit iets automatisch in
+onderzoek geplaatst. Bij actualiseren ligt in de verwerking besloten dat in bepaalde gevallen voorkomens worden gekloond. Bij corrigeren is dat niet het geval. Nieuwe voorkomens ontstaan daarbij
+alleen door een expliciete registratie-actie. Of een voorkomen is ontstaan als kloon van een ander
+voorkomen kan dan ook niet worden bepaald. Het is dan aan de bijhouder om zo nodig een nieuw
+voorkomen in onderzoek te plaatsen door middel van het starten van een separaat onderzoek.
+Zie paragraaf 3.6 voor voorbeelden van de samenhang tussen correcties en onderzoek.
+Afgeleide gegevens
+Bij actualisering van bepaalde groepen worden andere groepen afgeleid geactualiseerd. Bijvoorbeeld bij actualisering van de groep Voornaam of Geslachtsnaamcomponent wordt Samengestelde
+naam opnieuw afgeleid. Ten aanzien van dergelijke afgeleide gegevens is het volgende besluit genomen:
+Ontwerpbeslissing 6
+Als een gegeven in onderzoek wordt geplaatst waarvan andere gegevens zijn afgeleid, dan worden
+die afgeleide gegevens niet automatisch ook in onderzoek geplaatst. Het is namelijk niet altijd mogelijk om te bepalen welke gegevens dan automatisch in onderzoek zouden moeten worden geplaatst. Dit zou tot onvoorspelbaarheid leiden.
+Dus wanneer bijvoorbeeld een Voornaam in onderzoek wordt geplaatst, dan worden niet automatisch ook de Samengestelde naam en Naamgebruik in onderzoek geplaatst. De bijhouder dient
+deze afgeleide gegevens zo nodig expliciet in onderzoek te plaatsen.
+Relateren en ontrelateren
+Bij zowel het relateren als het ontrelateren van een relatie ontstaat een kloon van de betreffende
+relatie. Wanneer de relatie die wordt gerelateerd of ontrelateerd onderdeel is van een onderzoek,
+vindt daarbij – analoog aan actualisering van een materieel historische groep – overerving plaats:
+Ontwerpbeslissing 7
+Als een relatie waar een onderzoek op staat wordt gerelateerd, wordt de nieuw ontstane relatie aan
+het onderzoek toegevoegd.
+Als een relatie waar een onderzoek op staat wordt ontrelateerd, wordt één van de nieuw ontstane
+relaties aan het onderzoek toegevoegd. Dit betreft dan de nieuwe relatie waarin de persoon waar
+het onderzoek over gaat als ingeschrevene is betrokken. Met andere woorden, het onderzoek volgt
+de persoon.
+In zijn algemeenheid geldt voor zowel relateren als ontrelateren dat elk nieuw object/voorkomen
+dat hierbij ontstaat het onderzoek erft van het object/voorkomen waar het een kloon van is.
+Als niet de gehele relatie maar een specifiek voorkomen van de groep Relatie.Standaard in onderzoek staat, dan wordt van de nieuwe relatie ook het corresponderende voorkomen in onderzoek
+geplaatst (in plaats van de gehele relatie).
+Zie paragraaf 3.7 en 3.8 voor voorbeelden van het overerven van onderzoek bij relateren en ontrelateren.
+
+2.5
+2.5.1
+
+Bijzonderheden bij adresonderzoeken
+Persoon aangetroffen op adres?
+
+Voor een openstaand onderzoek naar het adres kan de bijhouder specifiek een tussenresultaat
+‘Persoon niet aangetroffen op adres’ registreren. Dit wordt vastgelegd door bij het attribuut Per-
+
+Status: Definitief, versie: 0.18
+
+Pagina 11 van 23
+
+Aspectbeschrijving – Onderzoek
+
+soon aangetroffen op adres? van het betreffende adres de waarde ‘Nee’ vast te leggen. Vervolgens
+zal de bijhouder het onderzoek voortzetten om het nieuwe adres te achterhalen of definitief vast te
+stellen dat het onbekend is waarheen de persoon is vertrokken (VOW). Het vastleggen van het
+eerder genoemde tussenresultaat wordt doorgevoerd met de administratieve handeling Registratie
+niet aangetroffen op adres. Eenmaal gezet wordt de indicatie in principe niet verwijderd. Alleen als
+deze ten onrechte gezet was kan deze met een correctie actie op het adres verwijderd worden.
+2.5.2
+
+Infrastructurele wijzigingen
+
+Ontwerpbeslissing 8
+Als een adres dat in onderzoek staat wordt geactualiseerd met de administratieve handeling Wijziging adres infrastructureel, Wijziging gemeente infrastructureel of Wijziging gemeente infrastructureel bij overledene dan wordt niet alleen het beëindigde voorkomen van het actuele adres aan het
+onderzoek toegevoegd (zie Ontwerpbeslissing 5), maar wordt ook het nieuwe adres automatisch
+aan het onderzoek toegevoegd.
+De semantische scope van het onderzoek wijzigt daarmee niet. De persoon woont namelijk nog
+steeds op dezelfde locatie. Alleen de aanduiding daarvan verandert door de infrastructurele wijziging.
+Zie paragraaf 3.9 voor een voorbeeld hiervan.
+Ontwerpbeslissing 9
+Bij een infrastructurele wijziging van de gemeente (dit betreffen de administratieve handelingen
+Wijziging gemeente infrastructureel en Wijziging gemeente infrastructureel bij overledene) worden
+daarnaast ook openstaande onderzoeken naar de bijhoudingspartij overgenomen.
+Dit houdt in dat bij een openstaand onderzoek naar het actuele voorkomen van de groep Bijhouding of het attribuut Bijhoudingspartij ervan, het nieuwe voorkomen van de groep Bijhouding automatisch aan het onderzoek wordt toegevoegd.
+Zie paragraaf 3.10 voor een voorbeeld hiervan.
+
+Status: Definitief, versie: 0.18
+
+Pagina 12 van 23
+
+Aspectbeschrijving – Onderzoek
+
+3 Patronen
+In dit hoofdstuk wordt aan de hand van een aantal patronen geïllustreerd hoe onderzoeken in de
+BRP zich in verschillende bijhoudingssituaties gedragen, zoals beschreven in paragraaf 2.3.4. Onderscheidend voor een patroon is de historievorm van de gegevens die in onderzoek staan en het
+soort bijhouding.
+
+3.1
+
+Legenda
+
+In onderstaande voorbeelden worden diverse afkortingen en tekstkleuren gebruikt. Ter verduidelijking volgt hier een legenda:
+Afkorting
+
+Attribuut
+
+Omschrijving
+
+DAG
+
+Datum aanvang geldigheid
+
+Ingangsdatum geldigheid van het gegeven. Onderdeel
+van de Materiële Historie.
+
+DEG
+
+Datum einde geldigheid
+
+Einddatum geldigheid van het gegeven. Onderdeel van
+de Materiële Historie.
+Een lege DEG geeft aan dat het gegeven niet beëindigd
+is.
+
+tsReg
+
+Tijdstip registratie
+
+Tijdstip waarop het gegeven daadwerkelijk is vastgelegd
+in de BRP. Onderdeel van de Formele Historie.
+
+tsVerval
+
+Tijdstip verval
+
+Tijdstip waarop in de BRP geregistreerd is dat het gegeven is vervallen. Onderdeel van de Formele Historie.
+
+Ai
+
+Actie inhoud
+
+De actie die aanleiding gaf tot registratie van het nieuwe
+gegeven (tsReg).
+
+Av
+
+Actie verval
+
+De actie die aanleiding gaf tot verval van het (bestaande) gegeven (tsVerval).
+
+Nav
+
+Nadere aanduiding verval
+
+De reden die aanleiding gaf tot verval van het (bestaande) gegeven (tsVerval). Bij correcties kan dit attibuut de
+waarde ‘O’ (Onjuist) of ‘S’ (Strijdig met de openbare
+orde) krijgen.
+
+Aag
+
+Actie aanpassing geldigheid
+
+De actie die aanleiding gaf tot aanpassing van het (bestaande) gegeven (DEG).
+
+Elem
+
+Gegeven in
+onderzoek.Element
+
+Het element dat onderzocht wordt.
+
+VS
+
+Voorkomenssleutel
+
+De identificatie van een voorkomen.
+
+OS
+
+Objectsleutel
+
+De identificatie van een object.
+
+Kleur
+
+Omschrijving
+
+Zwarte tekst
+
+Eerder vastgelegde gegevens
+
+Rode tekst
+
+Gewijzigde/toegevoegde gegevens als gevolg van de uitgevoerde Actie
+
+Groen kader
+
+Geeft aan welke gegevens in onderzoek staan (de pijl wijst hier ook naar)
+
+Status: Definitief, versie: 0.18
+
+Pagina 13 van 23
+
+Aspectbeschrijving – Onderzoek
+
+3.2
+
+Actualisering van een groep met formele historie
+
+3.2.1
+
+Voorbeeld: Uitsluiting kiesrecht wijzigt, voorkomen staat in onderzoek
+
+Er is een onderzoek naar een voorkomen van de groep Uitsluiting kiesrecht:
+Onderzoek
+
+Uitsluiting kiesrecht
+
+Onderzoek 1:
+Elem: Persoon.Uitsluiting
+kiesrecht
+VS: 1
+
+Uitsluiting kiesrecht?
+
+tsReg
+
+N
+
+1-1-2000
+
+tsVerval
+
+Ai
+
+Av
+
+Aag
+
+<A1>
+
+VS
+
+Nav
+
+1
+
+Vervolgens wordt het attribuut Uitsluiting kiesrecht? door middel van een actualisering (actie A2)
+gewijzigd:
+Onderzoek
+
+Uitsluiting kiesrecht
+
+Onderzoek 1:
+Elem: Persoon.Uitsluiting
+kiesrecht
+VS: 1
+
+Uitsluiting kiesrecht?
+
+tsReg
+
+J
+
+1-1-2017
+
+N
+
+1-1-2000
+
+tsVerval
+
+Ai
+
+Av
+
+Aag
+
+<A2>
+1-1-2017
+
+<A1>
+
+2
+<A2>
+
+1
+
+
+
+Het voorkomen dat vervalt (VS 1) blijft in onderzoek staan. (Ontwerpbeslissing 4)
+
+
+
+Het onderzoek wordt niet automatisch beëindigd. (Ontwerpbeslissing 3)
+
+
+
+Het nieuwe voorkomen (VS 2) met nieuwe inhoud komt niet in onderzoek te staan.
+(Ontwerpbeslissing 1)
+
+Status: Definitief, versie: 0.18
+
+VS
+
+Pagina 14 van 23
+
+Nav
+
+Aspectbeschrijving – Onderzoek
+
+3.3
+
+Actualisering van een groep met formele en materiële historie
+
+3.3.1
+
+Voorbeeld: Geslachtsaanduiding wijzigt, attribuut staat in onderzoek
+
+Er is een onderzoek naar het attribuut Geslachtsaanduiding van een voorkomen van de groep Geslachtsaanduiding:
+Onderzoek
+
+Geslachtsaanduiding
+
+Onderzoek 1:
+Elem: Persoon.Geslachtsaanduiding.
+Code
+VS: 1
+
+Geslachtsaanduiding
+M
+
+DAG
+
+DEG
+
+1-1-2000
+
+tsReg
+
+tsVerval
+
+1-1-2000
+
+Ai
+
+Av
+
+Aag
+
+<A1>
+
+VS
+
+Nav
+
+1
+
+Vervolgens wordt de Geslachtsaanduiding van de persoon van man (‘M’) naar vrouw (‘V’) gewijzigd
+(actie A2):
+Onderzoek
+
+Geslachtsaanduiding
+
+Onderzoek 1:
+Elem: Persoon.Geslachtsaanduiding.
+Code
+VS: 1 + VS:2
+
+Geslachtsaanduiding
+
+DAG
+
+DEG
+
+tsReg
+
+tsVerval
+
+Ai
+
+V
+
+1-1-2017
+
+1-1-2017
+
+<A2>
+
+M
+
+1-1-2000 1-1-2017 1-1-2017
+
+<A1>
+
+M
+
+1-1-2000
+
+1-1-2000
+
+1-1-2017
+
+<A1>
+
+Av
+
+Aag
+
+3
+<A2>
+<A2>
+
+
+
+Het voorkomen dat vervalt (VS 1) blijft in onderzoek staan. (Ontwerpbeslissing 4)
+
+
+
+Het onderzoek wordt niet automatisch beëindigd. (Ontwerpbeslissing 3)
+
+
+
+Het attribuut Geslachtsaanduiding van het nieuwe beëindigde voorkomen (VS 2) wordt automatisch aan het onderzoek toegevoegd. (Ontwerpbeslissing 5)
+
+
+
+Het nieuwe voorkomen (VS 3) met nieuwe inhoud komt niet in onderzoek te staan.
+(Ontwerpbeslissing 1)
+
+Status: Definitief, versie: 0.18
+
+VS
+
+Pagina 15 van 23
+
+2
+1
+
+Nav
+
+Aspectbeschrijving – Onderzoek
+
+3.4
+
+Actualisering van een groep met formele en impliciete materiële historie
+
+3.4.1
+
+Voorbeeld: Ontbinding huwelijk, gehele object in onderzoek
+
+Er is een onderzoek naar een object van het soort Huwelijk:
+Onderzoek
+
+Huwelijk (OS:100)
+
+Onderzoek 1:
+Elem: Huwelijk
+OS: 100
+
+Sluiting
+
+Beëindiging
+
+1-1-2000,
+Rotterdam
+
+tsReg
+
+tsVerval
+
+1-1-2000
+
+Ai
+
+Av
+
+Aag
+
+<A1>
+
+VS
+
+Nav
+
+1
+
+Vervolgens wordt het huwelijk ontbonden (actie A2):
+Onderzoek
+
+Huwelijk (OS:100)
+
+Onderzoek 1:
+Elem: Huwelijk
+OS: 100
+
+Sluiting
+
+Beëindiging
+
+tsReg
+
+1-1-2000,
+Rotterdam
+
+3-3-2015,
+Rotterdam
+
+4-3-2015
+
+1-1-2000,
+Rotterdam
+
+1-1-2000
+
+tsVerval
+
+Ai
+
+Av
+
+Aag
+
+<A2>
+4-3-2015
+
+Nav
+
+2
+
+<A1>
+
+<A2>
+
+
+
+Het voorkomen dat vervalt (VS 1) blijft in onderzoek staan. (Ontwerpbeslissing 4)
+
+
+
+Het onderzoek wordt niet automatisch beëindigd. (Ontwerpbeslissing 3)
+
+
+
+Het nieuwe beëindigde voorkomen (VS 2) wordt impliciet onderdeel van het onderzoek,
+omdat het hele object in onderzoek staat. Er wordt dus geen nieuw Gegeven in onderzoek
+aan het onderzoek toegevoegd. (Ontwerpbeslissing 5)
+
+3.4.2
+
+VS
+
+1
+
+Voorbeeld: Ontbinding huwelijk, voorkomen in onderzoek
+
+Er is een onderzoek naar een voorkomen van de groep Standaard van een Huwelijk:
+Onderzoek
+
+Huwelijk
+
+Onderzoek 1:
+Elem: Huwelijk.Standaard
+VS: 1
+
+Sluiting
+
+Beëindiging
+
+1-1-2000,
+Rotterdam
+
+tsReg
+
+tsVerval
+
+1-1-2000
+
+Ai
+
+Av
+
+Aag
+
+<A1>
+
+VS
+
+Nav
+
+1
+
+Vervolgens wordt het huwelijk ontbonden (actie A2):
+Onderzoek
+
+Huwelijk
+
+Onderzoek 1:
+Elem: Huwelijk.Standaard
+VS: 1 + VS: 2
+
+Sluiting
+
+Beëindiging
+
+tsReg
+
+1-1-2000,
+Rotterdam
+
+3-3-2015,
+Rotterdam
+
+4-3-2015
+
+1-1-2000,
+Rotterdam
+
+1-1-2000
+
+tsVerval
+
+Ai
+
+Av
+
+<A2>
+4-3-2015
+
+VS
+2
+
+<A1>
+
+<A2>
+
+
+
+Het voorkomen dat vervalt (VS 1) blijft in onderzoek staan. (Ontwerpbeslissing 4)
+
+
+
+Het onderzoek wordt niet automatisch beëindigd. (Ontwerpbeslissing 3)
+
+Status: Definitief, versie: 0.18
+
+Aag
+
+Pagina 16 van 23
+
+1
+
+Nav
+
+Aspectbeschrijving – Onderzoek
+
+
+
+3.5
+
+Het nieuwe beëindigde voorkomen (VS 2) wordt automatisch aan het onderzoek toegevoegd. (Ontwerpbeslissing 5)
+
+Actualisering van een groep met meerdere stapels
+
+3.5.1
+
+Voorbeeld: Voornaam
+
+Er is een onderzoek naar één van de voorkomens van de eerste voornaam:
+Onderzoek
+
+Voornaam #1
+
+Onderzoek 1:
+Elem: Persoon.Voornaam
+VS: 4
+
+Naam
+
+DAG
+
+Jean
+
+1-1-2015
+
+2-1-2015
+
+<A3>
+
+Jan
+
+1-1-2000 1-1-2015 2-1-2015
+
+<A1>
+
+Jan
+
+1-1-2000
+
+DEG
+
+tsReg
+
+tsVerval
+
+Ai
+
+Av
+
+Aag
+
+VS
+
+Nav
+
+4
+<A3>
+
+2-1-2000
+
+2-1-2015
+
+<A1>
+
+<A3>
+
+tsReg
+
+tsVerval
+
+Ai
+
+Av
+
+3
+1
+
+Voornaam #2
+Naam
+
+DAG
+
+Marie
+
+1-1-2010
+
+DEG
+
+2-1-2010
+
+Aag
+
+<A2>
+
+VS
+
+Nav
+
+2
+
+Vervolgens wijzigt de tweede voornaam (VS 2) in Anna:2
+Onderzoek
+
+Voornaam #1
+
+Onderzoek 1:
+Elem: Persoon.Voornaam
+VS: 4
+
+Naam
+
+DAG
+
+Jean
+
+1-1-2015
+
+2-1-2015
+
+<A3>
+
+Jan
+
+1-1-2000 1-1-2015 2-1-2015
+
+<A1>
+
+Jan
+
+1-1-2000
+
+DEG
+
+tsReg
+
+tsVerval
+
+Ai
+
+Av
+
+Aag
+
+VS
+
+Nav
+
+4
+<A3>
+
+2-1-2000
+
+2-1-2015
+
+<A1>
+
+<A3>
+
+tsReg
+
+tsVerval
+
+Ai
+
+Av
+
+3
+1
+
+Voornaam #2
+
+2
+
+Naam
+
+DAG
+
+DEG
+
+Anna
+
+1-1-2017
+
+1-1-2017
+
+<A4>
+
+Marie
+
+1-1-2010 1-1-2017 1-1-2017
+
+<A2>
+
+Marie
+
+1-1-2010
+
+2-1-2010
+
+1-1-2017
+
+<A2>
+
+Aag
+
+6
+<A4>
+<A4>
+
+
+
+Het voorkomen dat in onderzoek staat (VS 4) blijft in onderzoek staan. De scope van het
+onderzoek blijft onveranderd. (Ontwerpbeslissing 5)
+
+
+
+Als (een gegeven van) de ene stapel in onderzoek staat dan leidt dat nooit tot het automatisch in onderzoek plaatsen van (gegevens van) een andere stapel. Ook dit volgt uit het
+beginsel dat de scope van een onderzoek onveranderd moet blijven. (Ontwerpbeslissing 5)
+
+In dit voorbeeld gaan we ervan uit dat voornamen afzonderlijk geactualiseerd kunnen worden.
+
+Status: Definitief, versie: 0.18
+
+VS
+
+Pagina 17 van 23
+
+5
+2
+
+Nav
+
+Aspectbeschrijving – Onderzoek
+
+3.6
+
+Correctie van een groep
+
+3.6.1
+
+Voorbeeld: Correctie aanvangsdatum huwelijk, voorkomen in onderzoek
+
+Er is een onderzoek naar een voorkomen van de groep Standaard van een Huwelijk:
+Onderzoek
+
+Huwelijk
+
+Onderzoek 1:
+Elem: Huwelijk.Standaard
+VS: 1
+
+Sluiting
+
+Beëindiging
+
+1-1-2000,
+Rotterdam
+
+tsReg
+
+tsVerval
+
+1-1-2000
+
+Ai
+
+Av
+
+Aag
+
+<A1>
+
+VS
+
+Nav
+
+1
+
+Vervolgens wordt de aanvangsdatum gecorrigeerd (acties A2 en A3).
+Onderzoek
+
+Huwelijk
+
+Onderzoek 1:
+Elem: Huwelijk.Standaard
+VS: 1
+
+Sluiting
+
+Beëindiging
+
+tsReg
+
+1-2-2000,
+Rotterdam
+
+4-3-2015
+
+1-1-2000,
+Rotterdam
+
+1-1-2000
+
+tsVerval
+
+Ai
+
+Av
+
+Aag
+
+<A3>
+4-3-2015
+
+<A1>
+
+VS
+
+Nav
+
+2
+
+<A2>
+
+
+
+Het voorkomen dat vervalt (VS 1) blijft in onderzoek staan. (Ontwerpbeslissing 4)
+
+
+
+Het onderzoek wordt niet automatisch beëindigd. (Ontwerpbeslissing 3)
+
+
+
+Het nieuwe voorkomen (VS 2) met nieuwe inhoud komt niet in onderzoek te staan.
+(Ontwerpbeslissing 1; zie ook kopje “Corrigeren” in paragraaf 2.4.3)
+
+3.6.2
+
+Voorbeeld: Correctie aanvangsdatum huwelijk, gehele object in onderzoek
+
+1
+
+O
+
+VS
+
+Nav
+
+Er is een onderzoek naar een object van het soort Huwelijk:
+Onderzoek
+
+Huwelijk (OS:100)
+
+Onderzoek 1:
+Elem: Huwelijk
+OS: 100
+
+Sluiting
+
+Beëindiging
+
+1-1-2000,
+Rotterdam
+
+tsReg
+
+tsVerval
+
+1-1-2000
+
+Ai
+
+Av
+
+Aag
+
+<A1>
+
+1
+
+Vervolgens wordt de sluitingsdatum van het huwelijk gecorrigeerd (acties A2 en A3):
+Onderzoek
+
+Huwelijk (OS:100)
+
+Onderzoek 1:
+Elem: Huwelijk
+OS: 100
+
+Sluiting
+
+Beëindiging
+
+tsReg
+
+1-2-2000,
+Rotterdam
+
+4-3-2015
+
+1-1-2000,
+Rotterdam
+
+1-1-2000
+
+tsVerval
+
+Ai
+
+Av
+
+<A3>
+4-3-2015
+
+<A1>
+
+VS
+
+Nav
+
+2
+<A2>
+
+
+
+Het voorkomen dat vervalt (VS 1) blijft in onderzoek staan. (Ontwerpbeslissing 4)
+
+
+
+Het onderzoek wordt niet automatisch beëindigd. (Ontwerpbeslissing 3)
+
+Status: Definitief, versie: 0.18
+
+Aag
+
+Pagina 18 van 23
+
+1
+
+O
+
+Aspectbeschrijving – Onderzoek
+
+
+
+3.7
+
+Het nieuwe voorkomen (VS 2) wordt impliciet onderdeel van het onderzoek, omdat het hele object in onderzoek staat. Er wordt dus geen nieuw Gegeven in onderzoek aan het onderzoek toegevoegd.(Ontwerpbeslissing 1)
+
+Ontrelateren
+
+3.7.1
+
+Voorbeeld: Ontrelateren huwelijk, gehele object in onderzoek
+
+Er is een onderzoek naar een object van het soort Huwelijk:
+Onderzoek
+
+Huwelijk tussen Piet(i) en Marie(i) (OS:100)
+
+Onderzoek 1:
+Persoon: Piet
+Elem: Huwelijk
+OS: 100
+
+Sluiting
+
+Beëindiging
+
+1-1-2000,
+Rotterdam
+
+tsReg
+
+tsVerval
+
+1-1-2000
+
+Ai
+
+Av
+
+Aag
+
+VS
+
+<A1>
+
+Nav
+
+1
+
+Vervolgens wordt het huwelijk ontrelateerd (actie A2):
+Onderzoek
+
+Huwelijk tussen Piet(i) en Marie(i) (OS:100)
+
+Onderzoek 1:
+Persoon: Piet
+Elem: Huwelijk
+OS: 100 + OS:101
+
+Sluiting
+
+Beëindiging
+
+1-1-2000,
+Rotterdam
+
+tsReg
+
+tsVerval
+
+Ai
+
+Av
+
+1-1-2000
+
+4-3-2015
+
+<A1>
+
+<A2>
+
+tsVerval
+
+Ai
+
+Av
+
+Aag
+
+VS
+
+Nav
+
+1
+
+Huwelijk tussen Piet(i) en Marie(p) (OS:101)
+Sluiting
+
+Beëindiging
+
+1-1-2000,
+Rotterdam
+
+tsReg
+4-3-2015
+
+Aag
+
+<A2>
+
+VS
+
+Nav
+
+2
+
+Huwelijk tussen Piet(p) en Marie(i) (OS:102)
+Sluiting
+1-1-2000,
+Rotterdam
+
+Beëindiging
+
+tsReg
+4-3-2015
+
+tsVerval
+
+Ai
+
+Av
+
+Aag
+
+<A2>
+
+3
+
+
+
+Het voorkomen dat vervalt (VS 1) blijft in onderzoek staan. (Ontwerpbeslissing 4)
+
+
+
+Het onderzoek wordt niet automatisch beëindigd. (Ontwerpbeslissing 3)
+
+
+
+Het onderzoek volgt de persoon. Het ontrelateerde huwelijk (OS 101) van Piet wordt dus
+automatisch aan het onderzoek toegevoegd. (Ontwerpbeslissing 7)
+
+
+
+Het ontrelateerde huwelijk van Marie (OS 102) wordt niet in onderzoek geplaatst, omdat
+het onderzoek geen onderdeel was van haar persoonslijst. (Ontwerpbeslissing 7)
+
+Status: Definitief, versie: 0.18
+
+VS
+
+Pagina 19 van 23
+
+Nav
+
+Aspectbeschrijving – Onderzoek
+
+3.8
+
+Relateren
+
+3.8.1
+
+Voorbeeld: Relateren huwelijk, gehele object in onderzoek
+
+Er is een onderzoek naar het (asymmetrische) huwelijk van Piet:
+Onderzoek
+
+Huwelijk tussen Piet(i) en Marie(p) (OS:100)
+
+Onderzoek 1:
+Persoon:Piet
+Elem: Huwelijk
+OS: 100
+
+Sluiting
+
+Beëindiging
+
+1-1-2000,
+Rotterdam
+
+tsReg
+
+tsVerval
+
+4-3-2015
+
+Ai
+
+Av
+
+Aag
+
+<A1>
+
+VS
+
+Nav
+
+1
+
+Huwelijk tussen Piet(p) en Marie(i) (OS:101)
+Sluiting
+
+Beëindiging
+
+1-1-2000,
+Rotterdam
+
+tsReg
+
+tsVerval
+
+4-3-2015
+
+Ai
+
+Av
+
+Aag
+
+<A2>
+
+VS
+
+Nav
+
+2
+
+Vervolgens wordt dit huwelijk gerelateerd met het (asymmetrische) huwelijk van Marie (actie A3):
+Onderzoek
+
+Huwelijk tussen Piet(i) en Marie(p) (OS:100)
+
+Onderzoek 1:
+Persoon: Piet
+Elem: Huwelijk
+OS: 100 + OS:102
+
+Sluiting
+
+Beëindiging
+
+1-1-2000,
+Rotterdam
+
+tsReg
+
+tsVerval
+
+Ai
+
+Av
+
+1-1-2000
+
+4-3-2015
+
+<A1>
+
+<A3>
+
+Aag
+
+VS
+
+Nav
+
+1
+
+Huwelijk tussen Piet(p) en Marie(i) (OS:101)
+Sluiting
+
+Beëindiging
+
+1-1-2000,
+Rotterdam
+
+tsReg
+
+tsVerval
+
+Ai
+
+Av
+
+4-3-2015
+
+4-3-2015
+
+<A2>
+
+<A3>
+
+tsVerval
+
+Ai
+
+Av
+
+Aag
+
+VS
+
+Nav
+
+2
+
+Huwelijk tussen Piet(i) en Marie(i) (OS:102)
+Sluiting
+1-1-2000,
+Rotterdam
+
+Beëindiging
+
+tsReg
+4-3-2015
+
+Aag
+
+<A3>
+
+3
+
+
+
+Het voorkomen dat vervalt (VS 1) blijft in onderzoek staan. (Ontwerpbeslissing 4)
+
+
+
+Het onderzoek wordt niet automatisch beëindigd. (Ontwerpbeslissing 3)
+
+
+
+Het onderzoek volgt de persoon. Het gerelateerde huwelijk (OS 102) wordt dus automatisch aan het onderzoek van Piet toegevoegd. (Ontwerpbeslissing 7)
+
+
+
+Voor Marie komt het gerelateerde huwelijk niet in onderzoek te staan, omdat het onderzoek geen onderdeel was van haar persoonslijst. (Ontwerpbeslissing 7)
+
+Status: Definitief, versie: 0.18
+
+VS
+
+Pagina 20 van 23
+
+Nav
+
+Aspectbeschrijving – Onderzoek
+
+3.9
+
+Wijziging adres infrastructureel
+
+3.9.1
+
+Voorbeeld: Infrastructurele wijziging adres, voorkomen in onderzoek
+
+Er is een onderzoek naar het actuele voorkomen van de groep Adres
+Onderzoek
+
+Adres
+
+Onderzoek 1:
+Elem: Persoon.Adres
+VS: 1
+
+Adres
+Plein 10
+
+DAG
+
+DEG
+
+1-1-2000
+
+tsReg
+
+tsVerval
+
+1-1-2000
+
+Ai
+
+Av
+
+Aag
+
+<A1>
+
+VS
+
+Nav
+
+1
+
+Vervolgens vindt er een infrastructurele wijziging van het adres plaats (actie A2):
+Onderzoek
+
+Adres
+
+Onderzoek 1:
+Elem: Persoon.Adres
+VS: 1 + VS: 2 + VS: 3
+
+Adres
+
+DAG
+
+DEG
+
+tsReg
+
+tsVerval
+
+Ai
+
+Plein 10a
+
+1-1-2017
+
+1-1-2017
+
+<A2>
+
+Plein 10
+
+1-1-2000 1-1-2017 1-1-2017
+
+<A1>
+
+Plein 10
+
+1-1-2000
+
+1-1-2000
+
+1-1-2017
+
+<A1>
+
+Av
+
+Aag
+
+3
+<A2>
+<A2>
+
+
+
+Het voorkomen dat vervalt (VS 1) blijft in onderzoek staan. (Ontwerpbeslissing 4)
+
+
+
+Het onderzoek wordt niet automatisch beëindigd. (Ontwerpbeslissing 3)
+
+
+
+Het nieuwe beëindigde voorkomen (VS 2) wordt automatisch aan het onderzoek toegevoegd. (Ontwerpbeslissing 5)
+
+
+
+Het nieuwe voorkomen (VS 3) met nieuwe inhoud komt ook in onderzoek te staan.
+(Ontwerpbeslissing 8)
+
+Status: Definitief, versie: 0.18
+
+VS
+
+Pagina 21 van 23
+
+2
+1
+
+Nav
+
+Aspectbeschrijving – Onderzoek
+
+3.10 Wijziging gemeente infrastructureel
+3.10.1 Voorbeeld: Infrastructurele wijziging gemeente, attribuut in onderzoek
+Er is een onderzoek naar de actuele Bijhoudingspartij in het voorkomen van de groep Bijhouding.
+Onderzoek
+
+Bijhouding
+
+Onderzoek 1:
+Elem: Persoon.Bijhouding.
+PartijCode
+VS: 1
+
+Bijh.partij
+
+DAG
+
+Oostzaan
+
+1-1-2000
+
+DEG
+
+tsReg
+
+tsVerval
+
+1-1-2000
+
+Ai
+
+Av
+
+Aag
+
+<A1>
+
+VS
+
+Nav
+
+1
+
+Vervolgens vindt er een infrastructurele wijziging van de gemeente plaats (actie A2):
+Onderzoek
+
+Bijhouding
+
+Onderzoek 1:
+Elem: Persoon.Bijhouding.PartijCod
+e
+VS: 1 + VS: 2 + VS: 3
+
+Bijh.partij
+
+DAG
+
+Zaanstad
+
+1-1-2017
+
+1-1-2017
+
+<A2>
+
+Oostzaan
+
+1-1-2000 1-1-2017 1-1-2017
+
+<A1>
+
+Oostzaan
+
+1-1-2000
+
+DEG
+
+tsReg
+
+1-1-2000
+
+tsVerval
+
+1-1-2017
+
+Ai
+
+<A1>
+
+Av
+
+Aag
+
+3
+<A2>
+<A2>
+
+
+
+Het voorkomen dat vervalt (VS 1) blijft in onderzoek staan. (Ontwerpbeslissing 4)
+
+
+
+Het onderzoek wordt niet automatisch beëindigd. (Ontwerpbeslissing 3)
+
+
+
+Het nieuwe beëindigde voorkomen (VS 2) wordt automatisch aan het onderzoek toegevoegd. (Ontwerpbeslissing 5)
+
+
+
+Het nieuwe voorkomen (VS 3) met nieuwe inhoud komt ook in onderzoek te staan.
+(Ontwerpbeslissing 9)
+
+Status: Definitief, versie: 0.18
+
+VS
+
+Pagina 22 van 23
+
+2
+1
+
+Nav
+
+Aspectbeschrijving – Onderzoek
+
+4 Levering van Onderzoeksgegevens.
+Artikel 3.10 van de Wet BRP geeft aan dat onderzoeksgegevens verplicht moeten worden meegeleverd waneer persoonsgegevens geleverd worden die in onderzoek staan. Dit betekent dat bijna
+elke leveringsdienst onderzoeksgegevens kunnen meeleveren met de persoonslijst.
+Daarnaast kunnen de onderzoeksgegevens zelf ook het primaire onderwerp van een levering zijn.
+Het leveren van onderzoeksgegevens zelf gaat met het patroon van volledige- en mutatieberichten,
+net als persoonsgegevens. Dit betekent dat als er al onderzoeksgegevens voor een persoon zijn
+geregistreerd en de afnemer voor het eerst gegevens over deze persoon ontvangt (omdat deze
+bijvoorbeeld een afnemersindicatie plaatst), de afnemer een volledig bericht ontvangt met de voor
+hem relevant onderzoeksgegevens. Onderzoeken die alleen betrekking hebben op gegevens waarvoor de afnemer niet geautoriseerd is, worden niet meegeleverd. Daarna worden via mutatieberichten onderzoeksgegevens geleverd als een onderzoek wordt aangemaakt, gewijzigd of afgesloten.
+Voor mutatieberichten betekent dit dat er twee redenen kunnen zijn waarom het een onderzoek
+bevat: het onderzoek zelf kan bijgehouden zijn of het mutatiebericht kan (gewijzigde of identificerende) gegevens bevatten die in onderzoek staan.
+Omdat mutatieberichten ook onderzoekshandelingen kunnen leveren, zijn onderzoeksgegevens ook
+voorzien van een verwerkingssoort (‘Toevoeging’, ‘Wijziging’ of ‘Vervallen’). Gegevens op de persoonslijst die alleen in het mutatiebericht zijn opgenomen omdat een bijgehouden onderzoek er
+naar verwijst krijgen verwerkingssoort ‘Referentie’. Dus als er bijvoorbeeld een onderzoek is gestart naar een adres van een persoon waar een afnemer een indicatie op heeft geplaatst, dan krijgt
+hij een mutatiebericht met daarin een object ‘Onderzoek’ en ‘Gegeven in onderzoek’ met verwerkingssoort ‘Toevoeging’ en daarbij het (ongewijzigde) adres met verwerkingssoort ‘Referentie’.
+Onderzoeken naar ontbrekende gegevens worden niet geleverd aan afnemers maar alleen aan
+bijhouders. Deze onderzoeken worden bovendien alleen opgenomen in berichten die de hele persoonslijst leveren, zoals bij Geef Details Persoon. Berichten die maar een beperkte set van de persoonsgegevens leveren zoals Zoek persoon, leveren dus geen onderzoeken naar ontbrekende gegevens mee.
+Bijhouders krijgen daarnaast ook alle beschikbare onderzoeksgegevens geleverd. Dit betreft met
+name de attributen Status en Omschrijving. Afnemers zien alleen de datum waarop het onderzoek
+is gestart en beëindigd en de verwijzing naar de gegevens waar het onderzoek betrekking op heeft
+(object ‘Gegevens in onderzoek’).
+
+Status: Definitief, versie: 0.18
+
+Pagina 23 van 23
+
+

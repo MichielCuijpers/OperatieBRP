@@ -1,0 +1,388 @@
+UCS SA.0.SS – Synchronisatie stamgegeven
+Versie
+
+1.0
+
+Datum
+
+11 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+16-03-2017
+
+0.1
+
+Eerste opzet ‘nieuwe stijl’
+
+oBRP
+
+01-06-2017
+
+0.2
+
+Textueel bijgewerkt
+
+oBRP
+
+11-07-2017
+
+1.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS SA.0.SS – Synchronisatie stamgegeven
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Invoer ....................................................................................................................... 4
+2.1
+2.2
+2.3
+2.4
+
+3
+
+Beschrijving .........................................................................................................................4
+Verzoekbericht .....................................................................................................................4
+Specifieke toelichting op het verzoekbericht .............................................................................4
+Bijzonderheden.....................................................................................................................4
+
+Verwerking ............................................................................................................... 5
+3.1
+3.2
+3.3
+3.4
+
+4
+
+Doel ....................................................................................................................................3
+Functionele context ...............................................................................................................3
+Referenties ..........................................................................................................................3
+
+Beschrijving .........................................................................................................................5
+Schematische weergave.........................................................................................................5
+Beschrijving activiteitendiagram .............................................................................................6
+Bedrijfsregels .......................................................................................................................7
+
+Uitvoer ...................................................................................................................... 8
+4.1
+Beschrijving .........................................................................................................................8
+4.2
+Resultaatbericht....................................................................................................................8
+4.2.1
+Toelichting op het resultaatbericht ......................................................................................8
+
+5
+
+Ontwerpbeslissingen ................................................................................................ 9
+
+Status: Definitief, versie: 1.0
+
+Pagina 2 van 9
+
+UCS SA.0.SS – Synchronisatie stamgegeven
+
+1 Inleiding
+1.1
+
+Doel
+
+Met deze dienst is het voor de afnemer mogelijk om op basis van een identificerend kenmerk van
+een stamgegeven de gehele tabelinhoud hiervan op te vragen met het doel de stamgegevens in de
+eigen lokale administratie bij te werken (te synchroniseren). De afnemer ontvangt direct
+(synchroon) een bevestiging van de verwerking.
+Indien de verwerking succesvol is verlopen, dan wordt de volledige tabelinhoud van het
+opgevraagde stamgegeven direct in het resultaatbericht opgenomen
+
+1.2
+
+Functionele context
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitdiagrammen wordt verwezen naar de Leeswijzer BRP [1].
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving Berichtstructuur
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 1.0
+
+Pagina 3 van 9
+
+UCS SA.0.SS – Synchronisatie stamgegeven
+
+2 Invoer
+2.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft het verzoekbericht waarmee de afnemer de tabelinhoud van een specifiek
+stamgegeven kan opvragen.
+
+2.2
+
+Verzoekbericht
+
+De structuur van het verzoekbericht staat beschreven in Aspectbeschrijving Generieke
+berichtstructuur [2]. De inhoud van het verzoekbericht is opgenomen in bijlage: SA.0.SS – Bijlage
+Synchronisatie stamgegeven.doc.
+
+2.3
+
+Specifieke toelichting op het verzoekbericht
+
+Toelichting op het verzoekbericht van deze dienst.
+
+Stuurgegevens
+Van een ingevoerd bericht worden de stuurgegevens Zendende partij, Zendende systeem,
+Referentienummer en Tijdstip meegeleverd als onderdeel van het verzoekbericht. De afnemer waar
+de dienst voor moet worden uitgevoerd, wordt geïdentificeerd door het gegeven Zendende partij.
+Parameters
+De voor de afnemer geldende leveringsautorisatie op basis waarvan de dienst wordt aangeroepen,
+wordt geïdentificeerd door Leveringsautorisatieidentificatie.
+Het specifieke stamgegeven waarvan de tabelinhoud wordt opgevraagd, wordt geïdentificeerd door
+de parameter Stamgegeven. In deze parameter wordt als identificerend gegeven de tabelnaam
+opgenomen.
+
+2.4
+
+Bijzonderheden
+
+Met deze dienst kan per bericht de tabelinhoud voor 1 stamgegeven worden gesynchroniseerd.
+
+Status: Definitief, versie: 1.0
+
+Pagina 4 van 9
+
+UCS SA.0.SS – Synchronisatie stamgegeven
+
+3 Verwerking
+3.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft de verwerking van het verzoekbericht.
+
+3.2
+
+Schematische weergave
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen en
+activiteitendiagrammen wordt verwezen naar de Leeswijzer [1].
+Activiteitendiagram met de verwerking van de dienst Synchronisatie stamgegeven. In het diagram
+is alleen de happy flow weergegeven.
+
+Status: Definitief, versie: 1.0
+
+Pagina 5 van 9
+
+UCS SA.0.SS – Synchronisatie stamgegeven
+
+3.3
+
+Beschrijving activiteitendiagram
+
+De verwerking van het ontvangen verzoekbericht bestaat uit een aantal volgordelijke stappen die
+uitgevoerd worden. In de onderstaande toelichtende tekst zijn de stappen onderverdeeld in ‘XSD
+controle’, ‘Controle invoer’, ‘Verwerking’ en ‘Uitvoer’. Elke toegelichte stap is terug te vinden in het
+activiteitendiagram in de vorige paragraaf.
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de aan de Use Case gekoppelde regels in BMR.
+
+XSD controle
+•
+
+AL.1.XV – XSD validatie
+Het inkomende verzoek wordt gevalideerd door deze te controleren tegen het bij het
+verzoek behorende XSD-schema (XML Schema Definition). Als er een XSD fout wordt
+geconstateerd, dan wordt er direct een technische foutmelding teruggegeven aan de
+zendende applicatie.
+
+Controle invoer
+•
+
+LV.1.AB – Archiveer bericht
+Draagt zorg voor de archivering van het technisch verwerkbare inkomende verzoekbericht
+en van het uitgaande bericht (het resultaatbericht).
+
+•
+
+LV.1.AL – Autorisatie levering
+Het inkomende verzoek wordt gecontroleerd op geldigheid van leveringsautorisatie en
+dienst autorisatie.
+
+•
+
+SA.1.SS.CI - Controleer Inhoud.
+De gevraagde stamtabel moet voorkomen als stamtabel in de centrale voorzieningen en
+moet vrijgegeven zijn voor levering.
+
+Verwerking
+•
+
+SA.1.SS.MB – Maak bericht
+De inhoud van de gevraagde stamtabel wordt retour gegeven (de volledige inhoud, tenzij
+dat voor die tabel anders is gespecificeerd).
+
+Uitvoer
+•
+
+LV.1.MR – Maak resultaatbericht
+De “geslaagd” melding of de eventuele foutmelding(en) worden in een (synchroon)
+resultaatbericht opgenomen. Er wordt dus altijd een resultaatbericht vervaardigd.
+
+•
+
+LV.1.VR – Verzend resultaatbericht
+Deze stap verzorgt de uiteindelijke verzending van het aangemaakte resultaatbericht naar
+het afleverpunt dat is aangegeven in de toegang Leveringsautorisatie.
+
+Status: Definitief, versie: 1.0
+
+Pagina 6 van 9
+
+UCS SA.0.SS – Synchronisatie stamgegeven
+
+3.4
+
+Bedrijfsregels
+
+Voor een toelichting op de verschillende soorten bedrijfsregels, de meldingsniveaus, de toepassing
+en werking ervan in het bijhoudingsproces, wordt verwezen naar de daartoe opgestelde
+Aspectbeschrijving Controles [3].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels en definitieregels zijn opgenomen de bijlage: SA.0.SS – Bijlage Synchronicatie
+stamgegeven.doc.
+
+Status: Definitief, versie: 1.0
+
+Pagina 7 van 9
+
+UCS SA.0.SS – Synchronisatie stamgegeven
+
+4 Uitvoer
+4.1
+
+Beschrijving
+
+Bij het verwerken van het synchronisatieverzoek wordt de tabelinhoud van het gevraagde
+stamgegeven opgehaald en wordt deze inhoud via het resultaatbericht direct terug gemeld aan de
+indiener van het verzoek.
+
+4.2
+
+Resultaatbericht
+
+In antwoord op de aanroep van de dienst ontvangt de afnemer een synchroon resultaatbericht.
+Voor de volledige beschrijving en inhoud van het resultaatbericht zie Aspectbeschrijving Generieke
+Berichtstructuur [2] en de bijlage SA.0.SS – Bijlage Synchronicatie stamgegeven.doc.
+
+4.2.1
+
+Toelichting op het resultaatbericht
+
+Stuurgegevens
+Van het bericht worden de stuurgegevens Zendende partij, Zendende systeem, Referentienummer,
+Crossreferentienummer en Tijdstip meegeleverd als onderdeel van het resultaatbericht.
+Resultaat
+Het resultaat van de Verwerking kan de waarde “Geslaagd” of “Foutief” aannemen. Daarachter
+wordt aangegeven wat het Hoogste Meldingsniveau is, dat is aangetroffen tijdens de uitgevoerde
+controles. De ernst wordt uitgedrukt in het meldingsniveau en betreft voor deze dienst in aflopende
+hoogte:
+Fout
+Deblokkeerbaar
+Waarschuwing
+Informatie1
+Meldingen
+In het bericht zijn de Regels opgenomen die gecontroleerd zijn, met daarbij aangegeven welke
+Soort melding (informatief, waarschuwing, fout) en de Melding zelf, die in tekst aangeeft wat er op
+basis van de gecontroleerde regel is geconstateerd.
+Stamgegeven
+Van maximaal één stamgegeven wordt de volledige tabelinhoud in het resultaatbericht
+opgenomen.
+
+1
+
+Dit meldingsniveau wordt momenteel nog niet gehanteerd, maar is gereserveerd voor toekomstig gebruik.
+
+Status: Definitief, versie: 1.0
+
+Pagina 8 van 9
+
+UCS SA.0.SS – Synchronisatie stamgegeven
+
+5 Ontwerpbeslissingen
+-
+
+Status: Definitief, versie: 1.0
+
+Pagina 9 van 9
+
+

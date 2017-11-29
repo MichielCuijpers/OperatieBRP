@@ -1,0 +1,548 @@
+Use Case Model beheer
+
+1.3
+
+Datum
+Status
+
+09-01-2017
+Definitief
+
+Definitief | 1.3 | Use Case Model beheer | 09-01-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+
+2
+
+HET MODEL ............................................................................................................................................5
+2.1
+2.2
+2.3
+2.4
+2.5
+2.6
+2.7
+2.8
+2.9
+2.10
+
+3
+
+LEESWIJZER ..........................................................................................................................................4
+BEHEER – BEWAKING BRP WORKFLOW .............................................................................................5
+BEHEER – BEWAKING GBA WORKFLOW ............................................................................................6
+BEHEER – EXPLOITATIE SELECTIES ....................................................................................................8
+BEHEER – INRICHTING STAMGEGEVENS.............................................................................................8
+BEHEER – INZAGE BERICHTARCHIEF ..................................................................................................9
+BEHEER – INZAGE LOGGING ...............................................................................................................9
+BEHEER – INZAGE PERSOONSGEGEVENS ...........................................................................................9
+BEHEER – INZAGE PROTOCOLLERING ...............................................................................................10
+BEHEER – PARTIJEN & AUTORISATIES .............................................................................................11
+BEHEER – VRIJE BERICHTEN..........................................................................................................12
+
+OPMERKINGEN ..................................................................................................................................13
+
+OperatieBRP
+
+Pagina 2 van 13
+
+Definitief | 1.3 | Use Case Model beheer | 09-01-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+23-01-2015
+29-07-2015
+
+0.1
+1.0
+
+Initiele versie
+Definitief gemaakt ten behoeve van release
+3.1
+
+Operatie BRP
+Operatie BRP
+
+25-01-2016
+
+1.1
+
+BMR44 verwerkt
+
+Operatie BRP
+
+26-08-2016
+
+1.2
+
+Oude use cases verwijderd, nieuwe
+toegevoegd
+
+Operatie BRP
+
+09-01-2017
+
+1.3
+
+Raadplegen persoonsgegevens naar Beheren
+persoon hernoemd (nummer is ongewijzigd
+gebleven)
+
+Operatie BRP
+
+Omschrijving
+
+Reviewers
+
+Reviewhistorie
+Datum
+
+OperatieBRP
+
+Versie
+
+Pagina 3 van 13
+
+Definitief | 1.3 | Use Case Model beheer | 09-01-2017
+
+1
+
+Inleiding
+
+Dit document geeft een overzicht van alle beheer use cases van de migratievoorziening en de
+BRP.
+
+1.1
+
+Leeswijzer
+Alle use cases die met Beheren beginnen, beschrijven alle van toepassing zijnde bewerkingen:
+•
+•
+•
+•
+•
+
+Toevoegen
+Wijzigen
+Verwijderen
+Tonen
+Zoeken
+
+Alle use cases die met Raadplegen beginnen, beschrijven alle van toepassing zijnde
+bewerkingen:
+• Zoeken
+• Tonen
+Er is voor gekozen om deze bewerkingen niet in aparte use cases te beschrijven om de
+leesbaarheid en onderhoudbaarheid te vergroten.
+Alle use cases die met Versturen beginnen, beschrijven op welke wijze berichten aan partijen
+worden verstrekt.
+
+OperatieBRP
+
+Pagina 4 van 13
+
+Definitief | 1.3 | Use Case Model beheer | 09-01-2017
+
+2
+
+Het model
+
+2.1
+
+Beheer – Bewaking BRP workflow
+
+UC860 Raadplegen
+administratiev e
+handelingen
+Beheerder
+
+Code
+UC860
+
+Use case
+Raadplegen
+administratieve
+handelingen
+
+Omschrijving
+De administratieve handeling fungeert als een spin in het
+web van waaruit de beheerder kan navigeren naar alle
+gegevens die een relatie hebben met de administratieve
+handeling.
+In dit document wordt beschreven op welke wijze de
+beheerder administratieve handelingen kan raadplegen.
+
+OperatieBRP
+
+Pagina 5 van 13
+
+Definitief | 1.3 | Use Case Model beheer | 09-01-2017
+
+2.2
+
+Beheer – Bewaking GBA workflow
+
+UC814 Raadplegen
+berichten
+migratiev oorziening
+
+UC815 Beheren taken
+migratiev oorziening
+
+UC801 Beheren
+processen
+migratiev oorziening
+
+UC811 Verw erken
+synchronisatiev raag-cyclus
+
+UC808 Beoordelen
+onduidelij ke
+synchronisatie
+migratiev oorziening
+Beheerder
+
+Code
+UC801
+
+Use case
+Beheren processen
+migratievoorziening
+
+Omschrijving
+De migratievoorziening is een complex systeem dat een
+veelheid van activiteiten uitvoert. Het is daarom
+belangrijk dat het systeem goed beheerd kan worden.
+Om dit mogelijk te maken is ervoor gekozen om alle
+activiteiten in processen te vatten waarbij elk proces
+bestaat uit meerdere voor gedefinieerde stappen.
+Deze use case beschrijft op welke wijze de beheerder
+inzicht krijgt in de processen van het systeem en hoe
+deze beheerd kunnen worden.
+
+UC808
+
+UC811
+
+UC814
+
+Beoordelen
+onduidelijke
+synchronisatie
+migratievoorziening
+
+Verwerken
+synchronisatievraagcyclus
+Raadplegen berichten
+migratievoorziening
+
+In sommige gevallen kan een persoonslijst niet in de BRP
+verwerkt worden omdat er door het systeem een
+onduidelijke situatie is geconstateerd. Hier krijgt de
+beheerder melding van. De beheerder dient handmatig te
+bepalen op welke wijze de aangeboden persoonslijst
+verwerkt dient te worden.
+Deze use case beschrijft op basis waarvan en op welke
+wijze een beheerder kan beoordelen en aangeven hoe
+een persoonslijst in de BRP verwerkt dient te worden.
+Deze use case beschrijft op welke wijze een enkele
+synchronisatievraag-cyclus plaatsvindt.
+Tijdens het uitvoeren van een proces is het mogelijk dat
+er berichten verstuurd en/of ontvangen worden. Dit
+kunnen interne berichten binnen het systeem zijn maar
+ook berichten van/naar buiten het systeem.
+Deze use case beschrijft op welke de beheerder inzicht
+krijgt in de berichten die verstuurd/ontvangen zijn door
+het systeem.
+
+OperatieBRP
+
+Pagina 6 van 13
+
+Definitief | 1.3 | Use Case Model beheer | 09-01-2017
+
+Code
+UC815
+
+Use case
+Beheren taken
+migratievoorziening
+
+Omschrijving
+Het kan voorkomen dat in een proces een onduidelijke
+situatie is ontstaan waardoor het systeem niet
+zelfstandig kan bepalen wat de volgende stap in het
+proces zou moeten zijn. Een dergelijk geval dient onder
+de aandacht van de beheerder gebracht te worden zodat
+die kan bepalen wat de volgende stap in het proces zou
+moeten zijn. Het systeem brengt dit onder de aandacht
+door een taak voor de beheerder aan te maken.
+Deze use case beschrijft op welke wijze de beheerder
+inzicht krijgt in de taken die het systeem heeft
+aangemaakt.
+
+OperatieBRP
+
+Pagina 7 van 13
+
+Definitief | 1.3 | Use Case Model beheer | 09-01-2017
+
+2.3
+
+Beheer – Exploitatie selecties
+
+UC846 Beheren
+selecties
+
+Beheerder
+
+Code
+UC846
+
+Use case
+Beheren selecties
+
+Omschrijving
+Afnemers kunnen eenmalig of periodiek een selectie van
+personen uit de BRP ontvangen. Hiervoor dient de
+afnemer over een geldig abonnement met bijbehorende
+dienst te beschikken.
+Deze use case beschrijft hoe de beheerder selecties kan
+inplannen, beoordelen en raadplegen.
+
+2.4
+
+Beheer – Inrichting stamgegevens
+
+UC844 Beheren
+stamgegev ens
+
+Beheerder
+
+Code
+UC844
+
+Use case
+Omschrijving
+Beheren stamgegevens De BRP kent diverse soorten stamgegevens welke zijn
+onderverdeeld in twee typen, dynamische en statische
+stamgegevens.
+Deze use case beschrijft hoe de stamgegevens beheerd
+worden.
+
+OperatieBRP
+
+Pagina 8 van 13
+
+Definitief | 1.3 | Use Case Model beheer | 09-01-2017
+
+2.5
+
+Beheer – Inzage berichtarchief
+
+UC863 Raadplegen
+berichten
+
+Beheerder
+
+Code
+UC863
+
+2.6
+
+Use case
+Raadplegen berichten
+
+Omschrijving
+Deze use case beschrijft hoe de beheerder de berichten
+die de BRP heeft ontvangen en verstuurd, kan
+raadplegen.
+
+Beheer – Inzage logging
+
+UC861 Raadplegen
+loggegev ens
+
+Beheerder
+
+Code
+UC861
+
+2.7
+
+Use case
+Raadplegen
+loggegevens
+
+Omschrijving
+Deze use case beschrijft op welke wijze de beheerder de
+technische en functionele loggegevens in de BRP kan
+raadplegen.
+
+Beheer – Inzage persoonsgegevens
+
+UC862 Beheren
+persoon
+
+Beheerder
+
+Code
+UC862
+
+OperatieBRP
+
+Use case
+Beheren persoon
+
+Omschrijving
+Deze use case beschrijft op welke wijze de beheerder
+persoonsgegevens in de BRP kan raadplegen en
+eventueel kan ‘wissen’.
+
+Pagina 9 van 13
+
+Definitief | 1.3 | Use Case Model beheer | 09-01-2017
+
+2.8
+
+Beheer – Inzage protocollering
+
+UC863 Raadplegen
+protocolleringsgegev ens
+
+Beheerder
+
+Code
+UC863
+
+Use case
+Raadplegen
+protocolleringsgegeven
+s
+
+Omschrijving
+Personen hebben het recht om te weten aan welke
+partijen hun persoonsgegevens zijn verstrekt. Daarom
+legt de BRP dit bij elke verstrekking vast. Dit wordt
+protocolleren genoemd.
+Deze use case beschrijft op welke wijze de beheerder de
+protocolleringsgegevens kan raadplegen.
+
+OperatieBRP
+
+Pagina 10 van 13
+
+Definitief | 1.3 | Use Case Model beheer | 09-01-2017
+
+2.9
+
+Beheer – Partijen & autorisaties
+
+UC842 Beheren
+fiatteringsuitzondering
+
+UC845 Beheren
+partij en
+
+UC841 Beheren
+bij houdingsautorisatie
+
+UC840 Beheren
+lev eringsautorisatie
+Beheerder
+
+Code
+UC840
+
+UC841
+
+UC842
+
+UC845
+
+OperatieBRP
+
+Use case
+Beheren
+leveringsautorisatie
+
+Omschrijving
+Om te kunnen communiceren met de BRP dient een
+afnemer over een geldige leveringsautorisatie te
+beschikken. In een leveringsautorisatie is onder andere
+vastgesteld welke diensten er gebruikt kunnen worden
+en welke gegevens worden verstrekt.
+
+Deze use case beschrijft op welke wijze de beheerder
+leveringsautorisaties kan onderhouden.
+Beheren
+Om te kunnen communiceren met de BRP dient een BRPbijhoudingsautorisaties bijhouder te beschikken over een geldige
+bijhoudingsautorisatie.
+
+Beheren
+fiatteringsuitzondering
+
+Beheren partijen
+
+Deze use beschrijft het beheer van
+bijhoudingsautorisaties.
+Bijhoudingsvoorstellen waarvan de Bijhouder niet wil dat
+deze automatisch gefiatteerd worden.
+Deze use case beschrijft het beheer van
+fiatteringsuitzonderingen.
+Deze use case beschrijft hoe een beheerder partijen kan
+onderhouden.
+
+Pagina 11 van 13
+
+Definitief | 1.3 | Use Case Model beheer | 09-01-2017
+
+2.10
+
+Beheer – Vrije berichten
+
+UC830 Versturen
+v rij e berichten
+
+Beheerder
+
+Code
+UC830
+
+OperatieBRP
+
+Use case
+Versturen vrije
+berichten
+
+Omschrijving
+Deze use case beschrijft op welke wijze de beheerder
+vrije berichten aan partijen kan versturen.
+
+Pagina 12 van 13
+
+Definitief | 1.3 | Use Case Model beheer | 09-01-2017
+
+3
+
+Opmerkingen
+
+N.v.t.
+
+OperatieBRP
+
+Pagina 13 van 13
+
+

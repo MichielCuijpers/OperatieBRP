@@ -1,0 +1,1085 @@
+MV UC220 Bepalen verwerking persoonslijst
+
+3.2
+
+Datum
+Status
+
+07-06-2017
+Definitief
+
+Definitief | 3.2 | MV UC220 Bepalen verwerking persoonslijst | 07-06-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................6
+1.1
+1.2
+1.3
+1.4
+
+2
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................6
+REFERENTIES ........................................................................................................................................6
+PRECONDITIE ........................................................................................................................................6
+POSTCONDITIE......................................................................................................................................6
+
+LOGICA .....................................................................................................................................................7
+2.1 VERVANGEN ..........................................................................................................................................8
+2.1.1 Reguliere wijziging door de gemeente van bijhouding .............................................8
+2.1.2 Reguliere wijziging door verhuizing of gemeentelijke herindeling .......................8
+2.1.3 Emigratie (RNI) ........................................................................................................................9
+2.1.4 A-nummer wijziging door de gemeente van bijhouding .........................................10
+2.1.5 Wijziging van opgeschorte persoonslijst met reden ‘O’ (Overlijden) door een
+andere gemeente .................................................................................................................................10
+2.2 TOEVOEGEN ........................................................................................................................................11
+2.3 NEGEREN .............................................................................................................................................11
+2.3.1 De aangeboden persoonslijst is ouder ...........................................................................11
+2.3.2 De aangeboden persoonslijst bevat blokkeringsinformatie ...................................12
+2.3.3 De persoonslijsten zijn gelijk ............................................................................................12
+2.4 ONDUIDELIJKE SITUATIE....................................................................................................................12
+
+3
+
+AANVULLENDE SPECIFICATIES ...............................................................................................13
+3.1 ALLEEN VERGELIJKEN MET NIET VERVALLEN GEGEVENSELEMENTEN ...............................................13
+3.2 TERMEN ...............................................................................................................................................13
+3.2.1 BRP Gegevenselementen ....................................................................................................13
+3.2.2 Stuurinformatie ......................................................................................................................13
+3.3 FOUTIEF OPGESCHORTE PERSOONSLIJSTEN .....................................................................................14
+3.4 JUISTE BLOKKERINGSSITUATIE VOOR DE GEVONDEN PERSOONSLIJST ..........................................14
+3.5 VASTSTELLEN DEZELFDE PERSOON ...................................................................................................14
+3.5.1 BRP Gegevenselementen ....................................................................................................14
+3.6 PERSOONSVERGELIJKING ...................................................................................................................15
+3.7 ADRESVERGELIJKING .........................................................................................................................15
+3.8 LOGGING .............................................................................................................................................16
+
+4
+
+OPMERKINGEN ..................................................................................................................................17
+
+Operatie BRP
+
+Pagina 3 van 17
+
+Definitief | 3.2 | MV UC220 Bepalen verwerking persoonslijst | 07-06-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+13-11-2013
+18-02-2014
+
+0.1
+0.2
+
+Initiële versie
+Review verwerkt
+
+Operatie BRP
+Operatie BRP
+
+10-03-2014
+
+0.3
+
+Review verwerkt
+
+Operatie BRP
+
+Vergelijking van vorig a-nummer
+aangescherpt.
+26-03-2014
+
+1.0
+
+Aanpassingen n.a.v. review
+
+Operatie BRP
+
+18-06-2014
+
+1.1
+
+Vergelijking van gemeente van bijhouding
+aangepast. Is nu Persoon.Bijhoudingspartij.
+
+Operatie BRP
+
+10-07-2014
+
+1.2
+
+• Vergelijking van recentheid bij verhuizing
+aangepast.
+
+Operatie BRP
+
+• Vergelijking van blokkering na verhuizing
+toegevoegd (negeren).
+• Vergelijking van adressen bij verhuizing
+aangescherpt
+• Reviewcommentaar verwerkt
+14-08-2014
+
+1.3
+
+• Persoonslijsten kunnen genegeerd worden
+als ze gelijk zijn
+
+Operatie BRP
+
+• Vergelijking van geboortedatum
+uitgebreid met TsVerval voorkomens
+14-08-2014
+
+1.3
+
+• Logging foutmeldingen verduidelijkt
+
+Operatie BRP
+
+01-09-2014
+
+1.4
+
+Definitief gemaakt voor release 2.2
+
+Operatie BRP
+
+18-09-2014
+
+1.5
+
+• Verduidelijkt dat de volgorde waarin het
+resultaat bepaald wordt belangrijk is
+
+Operatie BRP
+
+• Negeren bij blokkeringsinformatie
+uitgebreid met vergelijking van hele
+persoonslijst
+19-09-2014
+
+1.6
+
+• Vergelijking van bepalen persoonslijst
+ouder aangepast
+
+Operatie BRP
+
+• Vergelijking zelfde persoonslijst naar
+achter verplaatst
+08-01-2015
+
+1.7
+
+• Extra beslissingen opgenomen ten
+behoeve van emigraties (verhuizing naar
+RNI)
+
+Operatie BRP
+
+• Bij blokkering opgenomen dat bij de
+vergelijking van de persoon IST gebruikt
+dient te worden
+03-07-2015
+
+1.8
+
+• Blokkeringsinformatie vereenvoudigd
+
+Operatie BRP
+
+• Migratie blok aangepast/vereenvoudigd
+28-07-2015
+
+2.0
+
+Versie aangemaakt voor release 3.1
+
+Operatie BRP
+
+11-03-2016
+
+2.1
+
+• Check op a-nummer in kop verwijderd
+
+Operatie BRP
+
+• Wijzigingen op opgeschort reden ‘O’
+toegevoegd
+
+Operatie BRP
+
+Pagina 4 van 17
+
+Definitief | 3.2 | MV UC220 Bepalen verwerking persoonslijst | 07-06-2017
+
+• Foutief opgeschort negeren als algemene
+requirement opgenomen
+21-03-2016
+
+2.2
+
+• Reviewcommentaar verwerkt
+
+Operatie BRP
+
+• Blokkering opgenomen
+28-03-2016
+
+2.3
+
+• Bij negeren de voorwaarde Lg01
+opgenomen om te voorkomen dat La01’s
+genegeerd worden
+
+Operatie BRP
+
+04-04-2016
+
+2.4
+
+• Reviewcommentaar verwerkt
+
+Operatie BRP
+
+04-05-2016
+
+2.5
+
+• Beslisboom verder verduidelijkt
+
+Operatie BRP
+
+09-05-2016
+
+2.6
+
+• Controle op verzendende instantie ook bij
+Toevoegen
+
+Operatie BRP
+
+• Juiste blokkeringssituatie aangescherpt
+21-12-2016
+
+2.7
+
+• Bij toevoegen mag aangeboden PL niet
+foutief zijn opgeschort
+
+Operatie BRP
+
+13-01-2017
+
+2.8
+
+• Bij negeren vergelijking met gemeente
+van bijhouding verwijderd en
+adresvergelijking toegevoegd
+
+Operatie BRP
+
+• Beschrijving van persoonsvergelijking
+verduidelijkt
+02-02-2017
+
+2.9
+
+• Referenties bijgewerkt
+
+Operatie BRP
+
+26-05-2017
+
+3.0
+
+• Controle op BSN bij toevoegen
+
+Operatie BRP
+
+• Opgeschort reden ‘W’ toegevoegd
+• Bepalen kandidaat persoonslijsten
+uitgebreid met BSN
+30-05-2017
+
+3.1
+
+• Reviewcommentaar verwerk
+
+Operatie BRP
+
+07-06-2017
+
+3.2
+
+• BSN-vergelijking aangescherpt
+
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+18-11-2013
+17-02-2014
+
+0.1
+0.1
+
+Review
+Review
+
+Operatie BRP
+Operatie BRP
+
+10-03-2014
+
+0.2
+
+Review
+
+Operatie BRP
+
+10-07-2014
+
+1.2
+
+Review
+
+Operatie BRP
+
+19-09-2014
+
+1.5
+
+Review
+
+Operatie BRP
+
+21-03-2016
+
+2.1
+
+Review
+
+Operatie BRP
+
+01-04-2016
+
+2.3
+
+Review
+
+Operatie BRP
+
+09-05-2016
+
+2.5
+
+Review
+
+Operatie BRP
+
+30-05-2017
+
+3.0
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 5 van 17
+
+Definitief | 3.2 | MV UC220 Bepalen verwerking persoonslijst | 07-06-2017
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Deze use case beschrijft hoe bepaald wordt op welke wijze een aangeboden persoonslijst in de
+BRP gesynchroniseerd dient te worden.
+
+1.2
+
+Referenties
+#
+[LO]
+
+1.3
+
+Document
+Logisch Ontwerp GBA
+
+Organisatie
+RvIG
+
+Versie
+3.10
+
+Datum
+08-10-2016
+
+Preconditie
+Er is een persoonslijst aangeboden.
+
+1.4
+
+Postconditie
+Van de aangeboden PL is één van de volgende synchronisatieacties bepaald:
+• Toevoegen, de PL wordt als nieuw toegevoegd
+• Vervangen, de gevonden PL in de BRP wordt vervangen door de aangeboden PL
+• Negeren, de aangeboden PL wordt genegeerd
+• Onduidelijke situatie, het is niet helemaal duidelijk wat er met de aangeboden PL gedaan
+moet worden
+
+Operatie BRP
+
+Pagina 6 van 17
+
+Definitief | 3.2 | MV UC220 Bepalen verwerking persoonslijst | 07-06-2017
+
+2
+
+Logica
+
+In dit hoofdstuk wordt uitgelegd welke voorwaarden leiden tot een bepaalde verwerking in de
+BRP.
+Woorden die dikgedrukt zijn verwijzen naar gegevenselementen die in paragraaf 3.1 worden
+toegelicht. Wanneer een gegevenselement niet geduid wordt met een bijvoeglijk naamwoord
+zoals oud, wordt het actuele voorkomen van het gegevenselement bedoeld.
+Complexe vergelijkingen zoals die van persoon en adres zijn duidelijk herkenbaar en worden
+toegelicht in hoofdstuk 3. Er is voor gekozen om niet bij elk van deze vergelijkingen een
+verwijzing op te nemen naar de desbetreffende paragraaf om de leesbaarheid te vergroten.
+Wijzigingen naar aanleiding van een immigratie of emigratie (van en naar RNI) hoeven niet
+speciaal behandeld te worden. De onderstaande logica geldt daarom ook voor dat type wijziging.
+Er zijn vier mogelijke resultaten van de verwerking van een aangeboden persoonslijst:
+•
+•
+•
+•
+
+Vervangen: de aangeboden persoonslijst vervangt de persoonslijst in de BRP
+Toevoegen: de aangebonden persoonslijst wordt als nieuw toegevoegd aan de BRP
+Negeren: de aangebonden persoonslijst wordt genegeerd en niet opgenomen in de BRP
+Onduidelijk: de aangebonden persoonslijst is onduidelijk en wordt aan de beheerder
+voorgelegd
+
+Er is voor elk resultaat, aan de hand van een verzameling vergelijkingen, beschreven wanneer
+de persoonslijst hieraan voldoet.
+De volgorde waarin de vergelijkingen opgesomd zijn dienen ook zo door het systeem uitgevoerd
+te worden. Wanneer deze in een andere volgorde worden uitgevoerd leidt dit tot ongewenste
+resultaten.
+De volgorde waarin het systeem het resultaat bepaalt, is ook van belang. De volgorde die
+gehanteerd dient te worden is:
+1. Vervangen: Reguliere wijziging door de gemeente van bijhouding
+2. Vervangen: Fout! Verwijzingsbron niet gevonden.
+3. Vervangen: Emigratie (RNI)
+4. Vervangen: A-nummer wijziging door de gemeente van bijhouding
+5. Vervangen: Wijziging van opgeschorte persoonslijst met reden ‘O’ (Overlijden) door een
+andere gemeenten
+6. Toevoegen
+7. Negeren: De aangeboden persoonslijst is ouder
+8. Negeren: De aangeboden persoonslijst bevat blokkeringsinformatie
+9. Negeren: Fout! Verwijzingsbron niet gevonden.
+Indien het systeem geen van bovenstaande resultaten kan bepalen is het resultaat automatisch
+Onduidelijk.
+Wanneer het systeem een bepaalde eindsituatie heeft bepaald, kan het systeem de aangeboden
+persoonslijst verwerken en dient het systeem eventuele volgende eindsituaties te negeren. Het
+systeem mag dus altijd maar één resultaat als waar bepalen. Als bijvoorbeeld wordt vastgesteld
+dat 1, 2, 3, 4, 5 onwaar zijn en 6 waar is dan is het resultaat Toevoegen. Het systeem dient dan
+bijvoorbeeld niet meer vast te stellen of 7 ook waar is, ook al is dat misschien het geval.
+
+Operatie BRP
+
+Pagina 7 van 17
+
+Definitief | 3.2 | MV UC220 Bepalen verwerking persoonslijst | 07-06-2017
+
+2.1
+
+Vervangen
+In de volgende paragrafen wordt beschreven in welke gevallen een persoonslijst in de BRP
+vervangen dient te worden door de aangeboden persoonslijst (postconditie Vervangen).
+
+2.1.1
+
+Reguliere wijziging door de gemeente van bijhouding
+Er is sprake van een reguliere wijziging als:
+• er in de BRP één persoonslijst voorkomt dat een a-nummer heeft dat gelijk is aan het anummer op de aangeboden persoonslijst, en
+• de gevonden persoonslijst is niet foutief opgeschort (3.3), en
+• er een juiste blokkeringssituatie bestaat voor de gevonden persoonslijst (3.4), en
+• de gevonden persoonslijst in de BRP een gemeente van bijhouding heeft dat gelijk is aan
+de gemeente van bijhouding op de aangeboden persoonslijst, en
+• de aangeboden persoonslijst een gemeente van bijhouding heeft dat gelijk is aan de
+verzendende partij van de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een vorig a-nummer heeft dat gelijk is aan het vorig anummer op de aangeboden persoonslijst of de gevonden persoonslijst in de BRP een
+historie van vorige a-nummers heeft die voorkomt in de historie van vorige anummers op de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een historie van a-nummers heeft dat gelijk is aan de
+historie van a-nummers op de aangeboden persoonslijst, en
+• de persoon op de gevonden persoonslijst in de BRP dezelfde persoon is als de persoon op de
+aangeboden persoonslijst (3.5), en
+• als burgerservicenummer op de gevonden persoonslijst ongelijk is aan het
+burgerservicenummer op de aangeboden persoonslijst
+o er in de BRP geen persoonslijst voorkomt dat een burgerservicenummer of
+historisch burgerservicenummer heeft dat gelijk is aan burgerservicenummer
+van de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een versienummer heeft dat kleiner is dan het
+versienummer van de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een datumtijdstempel heeft dat ouder is dan de
+datumtijdstempel van de aangebonden persoonslijst
+
+2.1.2
+
+Reguliere wijziging door verhuizing of gemeentelijke herindeling
+Er is sprake van een wijziging door verhuizing of gemeentelijke herindeling als:
+• er in de BRP één persoonslijst voorkomt dat een a-nummer heeft dat gelijk is aan het anummer op de aangeboden persoonslijst, en
+• de gevonden persoonslijst is niet foutief opgeschort (3.3), en
+• er een juiste blokkeringssituatie bestaat voor de gevonden persoonslijst (3.4), en
+• de gevonden persoonslijst in de BRP een gemeente van bijhouding heeft dat ongelijk is aan
+de gemeente van bijhouding op de aangeboden persoonslijst, en
+• de aangeboden persoonslijst een gemeente van bijhouding heeft dat gelijk is aan de
+verzendende partij van de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een vorig a-nummer heeft dat gelijk is aan het vorig anummer op de aangeboden persoonslijst of de gevonden persoonslijst in de BRP een
+historie van vorige a-nummers heeft die voorkomt in de historie van vorige anummers op de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een historie van a-nummers heeft dat gelijk is aan de
+historie van a-nummers op de aangeboden persoonslijst, en
+• de persoon op de gevonden persoonslijst in de BRP dezelfde persoon is als de persoon op de
+aangeboden persoonslijst (3.5), en
+
+Operatie BRP
+
+Pagina 8 van 17
+
+Definitief | 3.2 | MV UC220 Bepalen verwerking persoonslijst | 07-06-2017
+
+• als burgerservicenummer op de gevonden persoonslijst ongelijk is aan het
+burgerservicenummer op de aangeboden persoonslijst
+o er in de BRP geen persoonslijst voorkomt dat een burgerservicenummer of
+historisch burgerservicenummer heeft dat gelijk is aan burgerservicenummer
+van de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een adres en een historie van adressen heeft dat
+voorkomt in de historie van adressen op de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een versienummer heeft dat gelijk of kleiner is dan het
+versienummer van de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een datumtijdstempel heeft dat ouder is dan de
+datumtijdstempel van de aangebonden persoonslijst
+
+2.1.3
+
+Emigratie (RNI)
+Er is sprake van een emigratie (verhuizing naar RNI) als:
+• er in de BRP één persoonslijst voorkomt dat een a-nummer heeft dat gelijk is aan het anummer op de aangeboden persoonslijst, en
+• de gevonden persoonslijst is niet foutief opgeschort (3.3), en
+• er een juiste blokkeringssituatie bestaat voor de gevonden persoonslijst (3.4), en
+• de gevonden persoonslijst in de BRP een gemeente van bijhouding heeft dat ongelijk is aan
+de gemeente van bijhouding op de aangeboden persoonslijst, en
+• de aangeboden persoonslijst een gemeente van bijhouding heeft dat gelijk is aan de
+verzendende partij van de aangeboden persoonslijst, en
+• de gemeente van bijhouding op de aangeboden persoonslijst is gelijk aan ‘199901’, en
+• de gevonden persoonslijst in de BRP een vorig a-nummer heeft dat gelijk is aan het vorig anummer op de aangeboden persoonslijst of de gevonden persoonslijst in de BRP een
+historie van vorige a-nummers heeft die voorkomt in de historie van vorige anummers op de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een historie van a-nummers heeft dat gelijk is aan de
+historie van a-nummers op de aangeboden persoonslijst, en
+• de persoon op de gevonden persoonslijst in de BRP dezelfde persoon is als de persoon op de
+aangeboden persoonslijst (3.5), en
+• als burgerservicenummer op de gevonden persoonslijst ongelijk is aan het
+burgerservicenummer op de aangeboden persoonslijst
+o er in de BRP geen persoonslijst voorkomt dat een burgerservicenummer of
+historisch burgerservicenummer heeft dat gelijk is aan burgerservicenummer
+van de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een adres en een historie van adressen heeft dat
+voorkomt in adres en de historie van adressen op de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een versienummer heeft dat gelijk of kleiner is dan het
+versienummer van de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een datumtijdstempel heeft dat ouder is dan de
+datumtijdstempel van de aangebonden persoonslijst
+
+Operatie BRP
+
+Pagina 9 van 17
+
+Definitief | 3.2 | MV UC220 Bepalen verwerking persoonslijst | 07-06-2017
+
+2.1.4
+
+A-nummer wijziging door de gemeente van bijhouding
+Er is sprake van een a-nummer wijziging door de gemeente van bijhouding als:
+• er in de BRP één persoonslijst voorkomt dat een a-nummer heeft dat gelijk is aan het vorig
+a-nummer op de aangeboden persoonslijst, en
+• de gevonden persoonslijst is niet foutief opgeschort (3.3), en
+• er een juiste blokkeringssituatie bestaat voor de gevonden persoonslijst (3.4), en
+• er in de BRP geen persoonslijst voorkomt met een a-nummer of historisch a-nummer dat
+gelijk is aan het a-nummer op de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een gemeente van bijhouding heeft dat gelijk is aan
+de gemeente van bijhouding op de aangeboden persoonslijst, en
+• de aangeboden persoonslijst een gemeente van bijhouding heeft dat gelijk is aan de
+verzendende partij van de aangeboden persoonslijst, en
+• de persoon op de gevonden persoonslijst in de BRP dezelfde persoon is als de persoon op de
+aangeboden persoonslijst (3.5), en
+• als burgerservicenummer op de gevonden persoonslijst ongelijk is aan het
+burgerservicenummer op de aangeboden persoonslijst
+o er in de BRP geen persoonslijst voorkomt dat een burgerservicenummer of
+historisch burgerservicenummer heeft dat gelijk is aan burgerservicenummer
+van de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een versienummer heeft dat kleiner is dan het
+versienummer van de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een datumtijdstempel heeft dat ouder is dan de
+datumtijdstempel van de aangebonden persoonslijst
+
+2.1.5
+
+Wijziging van opgeschorte persoonslijst met reden ‘O’ (Overlijden) door een andere gemeente
+Persoonslijsten die zijn opgeschort met reden ‘O’ worden niet aangepast wanneer er een
+gemeentelijk herindeling heeft plaatsgevonden. Het kan echter voorkomen dat na de
+gemeentelijke herindeling actualiseringen plaatsvinden op deze persoonslijsten. In dat geval is
+het vaak zo dat de verzendende partij een andere is dan de gemeente van bijhouding van de
+opgeschorte persoonslijst. Deze paragraaf beschrijft hoe deze situatie herkend en verwerkt
+wordt. Meer informatie is te vinden in [LO] paragraaf 3.9.7.
+Er is sprake van een wijziging van een opgeschorte persoonslijst met reden ‘O’ (Overlijden) door
+een andere gemeente als:
+• er in de BRP één persoonslijst voorkomt dat een a-nummer heeft dat gelijk is aan het anummer op de aangeboden persoonslijst, en
+• de gevonden persoonslijst is niet foutief opgeschort (3.3), en
+• er een juiste blokkeringssituatie bestaat voor de gevonden persoonslijst (3.4), en
+• de gevonden persoonslijst in de BRP een gemeente van bijhouding heeft dat gelijk is aan
+de gemeente van bijhouding op de aangeboden persoonslijst, en
+• de gevonden persoonslijst is opgeschort is met reden ‘O’ (Overlijden), en
+• de aangeboden persoonslijst een gemeente van bijhouding heeft dat ongelijk is aan de
+verzendende partij van de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een vorig a-nummer heeft dat gelijk is aan het vorig anummer op de aangeboden persoonslijst of de gevonden persoonslijst in de BRP een
+historie van vorige a-nummers heeft die voorkomt in de historie van vorige anummers op de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een historie van a-nummers heeft dat gelijk is aan de
+historie van a-nummers op de aangeboden persoonslijst, en
+• de persoon op de gevonden persoonslijst in de BRP dezelfde persoon is als de persoon op de
+aangeboden persoonslijst (3.5), en
+
+Operatie BRP
+
+Pagina 10 van 17
+
+Definitief | 3.2 | MV UC220 Bepalen verwerking persoonslijst | 07-06-2017
+
+• als burgerservicenummer op de gevonden persoonslijst ongelijk is aan het
+burgerservicenummer op de aangeboden persoonslijst
+o er in de BRP geen persoonslijst voorkomt dat een burgerservicenummer of
+historisch burgerservicenummer heeft dat gelijk is aan burgerservicenummer
+van de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een versienummer heeft dat gelijk of kleiner is dan het
+versienummer van de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een datumtijdstempel heeft dat ouder is dan de
+datumtijdstempel van de aangebonden persoonslijst
+
+2.2
+
+Toevoegen
+Er is sprake van het als nieuw opnemen van een persoonslijst in de BRP als (postconditie
+Toevoegen):
+• de aangeboden persoonslijst een gemeente van bijhouding heeft dat gelijk is aan de
+verzendende partij van de aangeboden persoonslijst, en
+• de aangeboden persoonslijst geen historie van a-nummers bevat of dat alle historische anummers gelijk zijn aan het a-nummer, en
+• er in de BRP geen persoonslijst voorkomt dat een a-nummer of historisch a-nummer heeft
+dat gelijk is aan a-nummer van de aangeboden persoonslijst, en
+• er in de BRP geen persoonslijst voorkomt dat een burgerservicenummer of historisch
+burgerservicenummer heeft dat gelijk is aan burgerservicenummer van de aangeboden
+persoonslijst, en
+• de aangeboden persoonslijst niet foutief is opgeschort (reden ‘F’)
+
+2.3
+
+Negeren
+In de volgende paragrafen wordt beschreven in welke gevallen de aangeboden persoonslijst
+genegeerd kan worden (postconditie Negeren).
+
+2.3.1
+
+De aangeboden persoonslijst is ouder
+Een aangeboden persoonslijst is ouder en kan genegeerd worden als:
+• het bericht van het soort Lg01 is, en
+• er in de BRP één persoonslijst voorkomt dat een a-nummer heeft dat gelijk is aan het anummer op de aangeboden persoonslijst, en
+• de gevonden persoonslijst is niet foutief opgeschort (3.3), en
+• er een juiste blokkeringssituatie bestaat voor de gevonden persoonslijst (3.4), en
+• de gevonden persoonslijst in de BRP een vorig a-nummer heeft dat gelijk is aan het vorig anummer op de aangeboden persoonslijst of de gevonden persoonslijst in de BRP een
+historie van vorige a-nummers heeft die voorkomt in de historie van vorige anummers op de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een historie van a-nummers heeft dat gelijk is aan de
+historie van a-nummers op de aangeboden persoonslijst, en
+• de persoon op de gevonden persoonslijst in de BRP dezelfde persoon is als de persoon op de
+aangeboden persoonslijst (3.5), en
+• de aangeboden persoonslijst een adres en een historie van adressen heeft dat voorkomt in
+adres en de historie van adressen van de gevonden persoonslijst in de BRP, en
+• de gevonden persoonslijst in de BRP een versienummer heeft dat groter is dan het
+versienummer van de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een datumtijdstempel heeft dat nieuwer is dan de
+datumtijdstempel van de aangebonden persoonslijst
+
+Operatie BRP
+
+Pagina 11 van 17
+
+Definitief | 3.2 | MV UC220 Bepalen verwerking persoonslijst | 07-06-2017
+
+2.3.2
+
+De aangeboden persoonslijst bevat blokkeringsinformatie
+Een aangeboden persoonslijst die blokkeringsinformatie bevat kan genegeerd worden als:
+• het bericht van het soort Lg01 is, en
+• de aangeboden persoonslijst een gevulde datum ingang blokkering bevat
+
+2.3.3
+
+De persoonslijsten zijn gelijk
+Een aangeboden persoonslijst is gelijk aan de gevonden persoonslijst en kan genegeerd worden
+als:
+• het bericht van het soort Lg01 is, en
+• er in de BRP één persoonslijst voorkomt dat een a-nummer heeft dat gelijk is aan het anummer op de aangeboden persoonslijst, en
+• de gevonden persoonslijst is niet foutief opgeschort (3.3), en
+• er een juiste blokkeringssituatie bestaat voor de gevonden persoonslijst (3.4), en
+• de gevonden persoonslijst in de BRP een versienummer heeft dat gelijk is aan het
+versienummer van de aangeboden persoonslijst, en
+• de gevonden persoonslijst in de BRP een datumtijdstempel heeft dat gelijk is aan de
+datumtijdstempel van de aangebonden persoonslijst, en
+• de gevonden persoonslijst, inclusief de vervallen elementen (TsVerval gevuld), gelijk is aan de
+aangeboden persoonslijst (3.6)
+
+2.4
+
+Onduidelijke situatie
+Wanneer het systeem niet kan vaststellen of een aangeboden persoonslijst vervangen,
+toegevoegd of genegeerd kan worden, of er is een verkeerde blokkeringssituatie vastgesteld, is
+er sprake van een onduidelijk situatie die niet verwerkt kan worden en aan de beheerder
+voorgelegd dient te worden (postconditie Onduidelijke situatie).
+Als een onduidelijke situatie wordt vastgesteld dienen eventuele kandidaat persoonslijsten
+voorgelegd te worden aan de beheerder. Een persoonslijst in de BRP is kandidaat als het anummer van de aangeboden persoonslijst voorkomt in:
+• de historie van a-nummers, of
+• de historie van vorige a-nummers, of
+• de historie van volgende a-nummers.
+Een persoonslijst in de BRP is ook kandidaat als het burgerservicenummer van de aangeboden
+persoonslijst voorkomt in de historie van burgerservicenummers.
+
+Operatie BRP
+
+Pagina 12 van 17
+
+Definitief | 3.2 | MV UC220 Bepalen verwerking persoonslijst | 07-06-2017
+
+3
+
+Aanvullende Specificaties
+
+3.1
+
+Alleen vergelijken met niet vervallen gegevenselementen
+Voor alle vergelijkingen geldt dat alleen vergeleken wordt met gegevenselementen in de BRP die
+niet zijn vervallen (TsVerval niet gevuld), tenzij er expliciet vermeld wordt dat dit wel van
+toepassing zijn.
+
+3.2
+
+Termen
+
+3.2.1
+
+BRP Gegevenselementen
+
+3.2.2
+
+Term
+A-nummer
+Historisch a-nummer
+
+Toelichting
+-
+
+Historie van a-nummers
+
+-
+
+Vorig a-nummer
+Historie van vorige anummers
+
+-
+
+Volgend a-nummer
+
+-
+
+Historie van volgende anummers
+
+-
+
+Burgerservicenummer
+Historisch
+burgerservicenummer
+Historie van
+burgerservicenummers
+
+-
+
+Opgeschort
+Gemeente van
+bijhouding
+Versienummer
+Datumtijdstempel
+Migratie
+Nadere bijhoudingsaard
+Adres
+Historie van adressen
+Blokkering
+Gemeente waar naartoe
+wordt verhuisd
+
+Ook RNI
+
+BRP gegevenselement
+Persoon.Identificatienummers.Administratienummer
+Historisch voorkomen van
+Persoon.Identificatienummers.Administratienummer
+De hele historie (inclusief het actuele a-nummer) van
+Persoon.Identificatienummers.Administratienummer
+Persoon.Vorige administratienummer
+De hele historie (inclusief het actuele vorige anummer) van Persoon.Nummerverwijzing.Vorige
+administratienummer
+Persoon.Nummerverwijzing.Volgende
+administratienummer
+De hele historie (inclusief het actuele volgende anummer) van Persoon.Nummerverwijzing.Volgende
+administratienummer
+Persoon.Identificatienummers.Burgerservicenummer
+Historisch voorkomen van
+Persoon.Identificatienummers.Burgerservicenummer
+De hele historie (inclusief het actuele
+burgerservicenummer) van
+Persoon.Identificatienummers.Burgerservicenummer
+Persoon.Bijhouding.Nadere bijhoudingsaard
+Persoon.Bijhouding.Bijhoudingspartij
+
+-
+
+Persoon.Inschrijving.Versienummer
+Persoon.Inschrijving.Datumtijdstempel
+Persoon.Migratie.*
+Persoon.Bijhouding.Nadere bijhoudingsaard
+Zie par. 3.6
+Zie par. 3.6
+MigBlok.Blokkeringen
+MigBlok.Blokkeringen.LO3 gemeente vestiging
+
+-
+
+Stuurinformatie
+Term
+Verzendende partij
+
+Operatie BRP
+
+Toelichting
+De partij die het Lg01- of La01-bericht verstuurd heeft. Dit gegeven
+wordt afgeleid van OriginatorORName uit de stuurgegevens van het
+bericht.
+
+Pagina 13 van 17
+
+Definitief | 3.2 | MV UC220 Bepalen verwerking persoonslijst | 07-06-2017
+
+3.3
+
+Foutief opgeschorte persoonslijsten
+In alle situaties worden foutief opgeschorte persoonslijsten (reden ‘F’) en gewiste persoonslijsten
+(reden ‘W’) buiten beschouwing gelaten.
+
+3.4
+
+Juiste blokkeringssituatie voor de gevonden persoonslijst
+In alle situaties geldt dat er een juiste blokkeringssituatie moet bestaan voor de gevonden
+persoonslijst. Er is sprake van een juiste blokkeringssituatie als:
+• er geen blokkering voor de gevonden persoonslijst gevonden wordt, of
+• er wel een blokkering voor de gevonden persoonslijst gevonden wordt en de gemeente van
+bijhouding van de aangeboden persoonslijst is gelijk aan de gemeente waar naartoe
+wordt verhuisd volgens de gevonden blokkering en de gemeente van bijhouding van de
+gevonden persoonslijst is een BRP-gemeente (verhuizing)
+Als er sprake is van een verkeerde blokkeringssituatie is er sprake van een onduidelijke situatie
+(zie ook par. 2.4).
+Meer informatie over het blokkeren van de PL is beschreven in het [BMR]
+(MigBlok.Blokkeringen).
+
+3.5
+
+Vaststellen dezelfde persoon
+Om vast te stellen of twee persoonslijsten van dezelfde persoon zijn wordt de onderstaande
+vergelijking gebruikt:
+Komt de historie van burgerservicenummers op de gevonden persoonslijst voor in de
+historie van burgerservicenummers van de aangeboden persoonslijst en komt de historie
+van geboortedatums op de gevonden persoonslijst voor in de historie van geboortedatums
+op de aangeboden persoonslijst?
+Het komt regelmatig voor dat er een correctie plaats vindt op de geboortedatum. Het is daarom
+van belang dat bij de vergelijking van historie van geboortedatums ook de vervallen
+voorkomens in de vergelijking meegenomen worden (TsVerval is gevuld). Net als bij de
+adresvergelijking dient het aantal voorkomens overeen te komen.
+Als het antwoord op de bovenstaande vergelijking Ja is dan kan worden gesteld dat het om
+dezelfde persoon gaat.
+Als het antwoord op de bovenstaande vergelijking Nee is dan kan niet worden vastgesteld dat
+het om dezelfde persoon gaat.
+
+3.5.1
+
+BRP Gegevenselementen
+Term
+Burgerservicenummer
+Historie van
+geboortedatums
+
+Operatie BRP
+
+Toelichting
+Optioneel
+-
+
+BRP-gegevenselement
+Persoon.Burgerservicenummer
+De hele historie (inclusief de actuele
+geboortedatum) van Persoon.Datum geboorte
+
+Pagina 14 van 17
+
+Definitief | 3.2 | MV UC220 Bepalen verwerking persoonslijst | 07-06-2017
+
+3.6
+
+Persoonsvergelijking
+Om te bepalen of een aangeboden persoonslijst hetzelfde is als een gevonden persoonslijst dient
+rekening gehouden te worden met de wijze waarop persoonsgegevens naar de BRP worden
+geconverteerd en de regels van de deltabepaling zoals die beschreven zijn in [DELTA].
+Het is uit performanceoverwegingen belangrijk dat de vergelijking van de gehele persoonslijst
+alleen gedaan wordt als is vastgesteld dat het versienummer en datumtijdstempel gelijk zijn.
+Let op: de vergelijking van de relatiegegevens dient plaats te vinden op de IST-view van de
+persoon.
+
+3.7
+
+Adresvergelijking
+De onderstaande gegevenselementen worden gebruikt bij het vergelijken van adresgegevens.
+Term
+Huisnummer
+Huisletter
+Huisnummertoevoeging
+Postcode
+Woonplaatsnaam
+Gemeente
+Buitenlands adres regel 1
+Buitenlands adres regel 2
+Buitenlands adres regel 3
+Buitenlands adres regel 4
+Buitenlands adres regel 5
+Buitenlands adres regel 6
+
+Toelichting
+-
+
+BRP-gegevenselement
+Persoon \ Adres.Huisnummer
+Persoon \ Adres.Huisletter
+Persoon \ Adres.Huisnummertoevoeging
+Persoon \ Adres.Postcode
+Persoon \ Adres.Woonplaatsnaam
+Persoon \ Adres.Gemeente
+Persoon \ Adres.Buitenlands adres regel 1
+Persoon \ Adres.Buitenlands adres regel 2
+Persoon \ Adres.Buitenlands adres regel 3
+Persoon \ Adres.Buitenlands adres regel 4
+Persoon \ Adres.Buitenlands adres regel 5
+Persoon \ Adres.Buitenlands adres regel 6
+
+Met adres wordt het actuele voorkomen van de bovenstaande gegevenselementen bedoeld.
+Met historie van adressen wordt de gehele historie van de bovenstaande gegevenselementen
+bedoeld. Als bepaald wordt of een adres en historie van adressen van de ene persoonslijst
+voorkomt in de historie van adressen van de andere persoonslijst dient ook het aantal
+voorkomens van een adres gelijk te zijn. De volgorde waarin de adressen voorkomen maakt niet
+uit.
+Hieronder zijn twee voorbeelden te vinden waarin dit geïllustreerd wordt. Het (actuele) adres is
+vet weergegevens en de historie van adressen cursief.
+Voorbeeld 1: het adres en historie van adressen van persoonslijst A komt niet voor in de historie
+van adressen van persoonslijst B.
+Persoonslijst A
+Adres X
+Adres B
+Adres X
+
+Operatie BRP
+
+Persoonslijst B
+Adres Y
+Adres X
+Adres B
+
+Pagina 15 van 17
+
+Definitief | 3.2 | MV UC220 Bepalen verwerking persoonslijst | 07-06-2017
+
+Voorbeeld 2: het adres en historie van adressen van persoonslijst A komt wel voor in de historie
+van adressen van persoonslijst B.
+Persoonslijst A
+Adres X
+Adres B
+Adres X
+
+3.8
+
+Persoonslijst B
+Adres Y
+Adres Z
+Adres X
+Adres X
+Adres B
+
+Logging
+Om de beheerder inzicht te kunnen geven waarom een persoonslijst op een bepaalde wijze is
+verwerkt dient er door het systeem het volgende gelogd te worden:
+• De postconditie van de verwerking: Toevoegen, Vervangen, Negeren, Onduidelijke situatie,
+Fout
+• Het resultaat van elke verzameling van vergelijkingen waarbij duidelijk is te zien waar de ene
+verzameling eindigt en waar de volgende begint, bijvoorbeeld door een witregel.
+• Het resultaat van elke vergelijking binnen de verzameling van vergelijkingen
+• De waarde die bij elke vergelijking is gebruikt, met uitzondering van de vergelijking van de
+gehele persoonslijst
+• Een verwerkingspad voor elke verzameling van vergelijkingen zodat snel/eenvoudig een
+analyse uitgevoerd kan worden waarom een bepaalde vergelijking wel of niet succesvol was
+• Eventuele foutmeldingen (stacktrace) van het systeem
+• Het EREF (zie ook [LO]) van het bericht dat de aangeboden persoonslijst bevat
+
+Operatie BRP
+
+Pagina 16 van 17
+
+Definitief | 3.2 | MV UC220 Bepalen verwerking persoonslijst | 07-06-2017
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 17 van 17
+
+

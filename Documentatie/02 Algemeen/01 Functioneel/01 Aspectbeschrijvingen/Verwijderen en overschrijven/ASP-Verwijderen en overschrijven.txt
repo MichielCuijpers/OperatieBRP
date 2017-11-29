@@ -1,0 +1,493 @@
+Legenda
+Blaak
+
+Actueel / Niet vervallen voorkomen
+
+Plein
+
+Vervallen voorkomen
+
+Legenda
+Blaak
+
+Actueel / Niet vervallen voorkomen
+
+Plein
+
+Vervallen voorkomen
+
+Spui
+
+Verwijderd voorkomen
+Peildatum
+
+Formele tijd
+
+Korte Poten
+
+Blaak
+
+2006
+
+Korte Poten
+
+Lange
+Poten
+
+2002
+
+Plein
+
+Spui
+
+1998
+
+Plein
+1994
+
+Lange Poten
+1990
+1990
+
+1992
+
+1994
+
+1996
+
+1998
+
+2000
+
+2002
+
+2004
+
+2006
+
+2008
+Materiële tijd
+
+Formele tijd
+
+Peildatum
+
+Blaak
+
+Korte Poten
+2006
+
+Korte Poten
+
+Lange
+Poten
+
+2002
+
+Plein
+
+Spui
+
+1998
+
+Plein
+1994
+
+Lange Poten
+1990
+1990
+
+1992
+
+1994
+
+1996
+
+1998
+
+2000
+
+2002
+
+Voorbeeld MH verwijderen:
+Adres
+
+2004
+
+2006
+
+2008
+Materiële tijd
+
+Peildatum
+
+Formele tijd
+
+Korte Poten
+
+Blaak
+
+2006
+
+Korte Poten
+
+Lange
+Poten
+
+2002
+
+Plein
+
+Spui
+
+1998
+
+Plein
+1994
+
+Lange Poten
+1990
+1990
+
+1992
+
+1994
+
+1996
+
+1998
+
+2000
+
+2002
+
+2004
+
+2006
+
+Voorbeeld MH verwijderen:
+Adres, Actueel voorkomen overspant peildatum en vervallen voorkomen Ligt na peildatum
+
+2008
+Materiële tijd
+
+Formele tijd
+
+Peildatum
+
+2017
+
+Kees de Boer
+2016
+
+2015
+
+Xiwo Chang
+
+Kees de Boer
+
+2014
+
+Xiwo Chang
+2013
+2013
+
+2014
+
+2015
+
+2016
+
+Voorbeeld MH overschrijven:
+Samengestelde naam
+
+2017
+Materiële tijd
+
+Formele tijd
+
+2017
+
+2016
+
+Xiwo Chang
+
+Kees de Boer
+
+2015
+
+2014
+
+Xiwo Chang
+2013
+2013
+
+2014
+
+2015
+
+2016
+
+2017
+Materiële tijd
+
+Formele tijd
+
+2017
+
+2016
+
+Eigen, Patricia de Boer
+
+2015
+
+2014
+
+Partner, Kees de Vries-de Boer
+2013
+
+Formele tijd
+
+2017
+
+2016
+
+Eigen, Patricia de Boer
+
+2015
+
+2014
+
+Partner, Kees de Vries-de Boer
+2013
+
+Voorbeeld FH verwijderen:
+Naamgebruik
+
+Formele tijd
+
+Peildatum
+
+2017
+
+2016
+
+2015
+
+Aanduiding verblijfsrecht.
+Datum aanvang verblijfsrecht:01-01-2014
+
+2014
+
+Aanduiding verblijfsrecht.
+Datum aanvang verblijfsrecht:01-01-2013
+
+2013
+2013
+
+2014
+
+2015
+
+2016
+
+Voorbeeld FH met impliciete MH verwijderen:
+Verblijfsrecht, Datum aanvang ligt voor Peildatum
+
+2017
+Materiële tijd
+
+Formele tijd
+
+Peildatum
+
+2017
+
+Aanduiding verblijfsrecht.
+Datum aanvang verblijfsrecht: 01-01-2015
+
+2016
+
+2015
+
+Aanduiding verblijfsrecht.
+
+2014
+
+Datum aanvang verblijfsrecht:01-06-2014
+
+2013
+2013
+
+2014
+
+2015
+
+2016
+
+Voorbeeld FH met impliciete MH verwijderen:
+Verblijfsrecht, Datum aanvang ligt na Peildatum
+
+2017
+Materiële tijd
+
+Formele tijd
+
+2017
+
+Kees de
+Boer
+
+2016
+
+Patricia de Boer
+
+2015
+
+2014
+
+Kees de Boer
+2013
+
+2013
+
+2014
+
+2015
+
+2016
+
+2017
+Materiële tijd
+
+Formele tijd
+
+Peildatum
+
+2017
+
+Kees de Boer
+2016
+
+2015
+
+Kees de
+Boer
+
+2014
+
+Patricia de Boer
+Kees de Boer
+
+2013
+
+2013
+
+2014
+
+2015
+
+2016
+
+2017
+
+Voorbeeld MH – Overschrijving gegevens gerelateerde na geslachtswijziging:Materiële tijd
+Samengestelde naam van de gerelateerde
+
+Formele tijd
+
+2017
+
+Kees de Boer
+
+2016
+
+Patricia de Boer
+
+2015
+
+2014
+
+Kees de Boer
+2013
+
+2013
+
+2014
+
+2015
+
+2016
+
+2017
+
+Formele tijd
+
+Materiële tijd
+
+2017
+
+2016
+
+2015
+
+2014
+
+Man
+
+Vrouw
+
+Formele tijd
+
+Datum
+Geslachtswijziging
+
+2017
+
+Peildatum
+(Datum Naamswijziging)
+
+Patricia de Boer
+
+2016
+
+Kees de Boer
+
+2015
+
+Patricia de Boer
+
+2014
+
+Kees de Boer
+2013
+
+2013
+
+2014
+
+2015
+
+2016
+
+2017
+
+Formele tijd
+
+Materiële tijd
+
+2017
+
+Vrouw
+
+2016
+
+2015
+
+2014
+
+Man
+
+Vrouw
+
+

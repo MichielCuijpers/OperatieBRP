@@ -1,0 +1,1735 @@
+UCM LV.0 – Use Case Model
+Versie
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Datum
+
+14 juli 2017
+
+Status
+
+Definitief
+
+Locatie
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+08-05-2017
+
+0.1
+
+Initiële versie
+
+oBRP
+
+09-05-2017
+
+0.2
+
+Na peer review
+
+oBRP
+
+02-06-2017
+
+0.3
+
+Zoekopties bij slim zoeken gewijzigd. Bijlage
+Interactiepatronen etc toegevoegd. BV.0.GR – Geef
+relatiegegevens GBA toegevoegd.
+
+oBRP
+
+14-07-2017
+
+1.0
+
+Definitief gemaakt. Hfd. openstaande punten toegevoegd. UC oBRP
+matrix Selectie bijgewerkt.
+
+Reviewhistorie
+Datum
+
+Versie Reviewer
+
+08-05-2017
+
+0.1
+
+Interne review
+
+UCM LV.0 - Use Case Model
+
+Inhoudsopgave
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Use Case Model Levering........................................................................................... 4
+2.1
+2.1.1
+2.1.2
+2.1.3
+2.1.4
+2.2
+2.2.1
+2.2.2
+2.2.3
+2.2.4
+2.3
+2.3.1
+2.3.2
+2.3.3
+2.4
+2.4.1
+2.4.2
+2.4.3
+2.5
+2.5.1
+2.5.2
+2.5.3
+
+3
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+Openstaande punten .............................................................................................................3
+
+Diensten Synchronisatie en Attendering ...................................................................................5
+Inleiding ..........................................................................................................................5
+Use Case Model ................................................................................................................5
+Diensten die op initiatief van de afnemer worden geleverd .....................................................5
+Diensten geïnitieerd door de centrale voorzieningen ..............................................................6
+Diensten Bevraging ...............................................................................................................8
+Inleiding ..........................................................................................................................8
+Use Case Model ................................................................................................................8
+Zoekvragen......................................................................................................................8
+Detailvragen ....................................................................................................................9
+Dienst Vrij bericht ............................................................................................................... 11
+Inleiding ........................................................................................................................ 11
+Use Case Model .............................................................................................................. 11
+VB.0.AV – Afhandelen vrij bericht ..................................................................................... 11
+Dienst Geef StUF BG bericht ................................................................................................. 12
+Inleiding ........................................................................................................................ 12
+Use Case Model .............................................................................................................. 12
+SV.0.GS – Geef StUF BG bericht ....................................................................................... 12
+Diensten Selectie ................................................................................................................ 13
+Inleiding ........................................................................................................................ 13
+Use Case Model .............................................................................................................. 13
+Uitvoeren selectierun en protocollering selectietaak ............................................................ 13
+
+Use Case Matrix ...................................................................................................... 15
+3.1
+Inleiding ............................................................................................................................ 15
+3.1.1
+Diensten Synchronisatie en Attendering ............................................................................. 15
+3.1.2
+Diensten Bevraging ......................................................................................................... 16
+3.1.3
+Dienst Vrij bericht ........................................................................................................... 16
+3.1.4
+Dienst Geef StUF BG bericht............................................................................................. 17
+3.1.5
+Diensten Selectie ............................................................................................................ 17
+
+Bijlage 1:
+
+Interactiepatronen, berichttypen en berichtsoorten per Use Case Specificatie
+19
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 2 van 20
+
+UCM LV.0 - Use Case Model
+
+1 Inleiding
+1.1
+
+Doel
+
+Dit document geeft een overzicht van de Use Cases van het koppelvlak Levering.
+
+1.2
+
+Leeswijzer
+
+Het koppelvlak Levering bevat alle diensten waarmee gegevens over ingezeten en niet-ingezeten
+personen aan geautoriseerde partijen geleverd worden. Deze leveringsdiensten zijn ingedeeld in de
+volgende koppelvlakmodules:
+•
+Synchronisatie en Attendering
+•
+Bevraging
+•
+Selectie
+•
+StUF vertaling
+•
+Vrij bericht
+Hoofdstuk 2 bevat een beschrijving van de koppelvlakmodules en, omdat elke module
+onderverdeeld is in een of meer leveringsdiensten, een overzicht van deze verschillende
+leveringsdiensten.
+Elke leveringsdienst is opgebouwd uit meerdere verschillende modulen. Een module kan algemeen
+worden gebruikt, alleen specifiek voor het koppelvlak Levering of slechts specifiek voor één
+leveringsdienst. Deze onderverdeling is voor het leveringskoppelvlak in hoofdstuk 3 opgenomen.
+
+1.3
+
+Referenties
+
+Nr. Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Logisch Ontwerp Basisregistratie Personen
+
+Operatie BRP
+
+-
+
+-
+
+1.4
+
+Openstaande punten
+De koppelvlakmodule Beheer selecties (BS) is nog niet opgenomen in het UCM.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 3 van 20
+
+UCM LV.0 - Use Case Model
+
+2 Use Case Model Levering
+Onderstaande figuur geeft aan welke koppelvlakmodules in het koppelvlak Levering worden
+aangeboden door de centrale voorzieningen.
+
+Figuur 1 De koppelvlakmodules in het koppelvlak Levering.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 4 van 20
+
+UCM LV.0 - Use Case Model
+
+2.1
+2.1.1
+
+Diensten Synchronisatie en Attendering
+Inleiding
+
+De koppelvlakmodules “Synchronisatie” en “Attendering” bevat diensten die op initiatief van de
+afnemer worden geleverd en diensten die geïnitieerd worden door de centrale voorzieningen.
+2.1.2
+
+Use Case Model
+
+In onderstaand figuur zijn de Use Cases opgenomen die de diensten beschrijven die vallen onder
+de koppelvlakmodules “Synchronisatie” en “Attendering” van het koppelvlak Levering
+
+Figuur 2. Diensten in koppelvlakmodules “Synchronisatie” en “Attendering”.
+
+2.1.3
+
+Diensten die op initiatief van de afnemer worden geleverd
+
+2.1.3.1
+
+Inleiding
+
+Voor elke dienst die op initiatief van de afnemer wordt geleverd is een verzoekbericht noodzakelijk.
+Diensten die op initiatief van de afnemer worden geleverd:
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 5 van 20
+
+UCM LV.0 - Use Case Model
+
+•
+•
+•
+•
+
+SA.0.PA – Plaatsing afnemerindicatie
+SA.0.VA – Verwijdering afnemerindicatie
+SA.0.SP – Synchronisatie persoon
+SA.0.SS – Synchronisatie stamgegeven
+
+2.1.3.2
+
+SA.0.PA – Plaatsing afnemerindicatie
+
+Met deze dienst is het voor de afnemer mogelijk om op basis van het Burgerservicenummer een
+afnemerindicatie te plaatsen voor een bepaalde leveringsautorisatie bij een persoon en deze
+hiermee in de groep van te volgen personen op te nemen. De afnemer ontvangt van de centrale
+voorzieningen direct (synchroon) een bevestiging van het plaatsen van de afnemerindicatie.
+Hierna ontvangt de afnemer een tweede bericht (asynchroon) van de centrale voorzieningen. Dit
+betreft een zogenaamd volledig bericht voor de persoon. Een volledig bericht omvat alle gegevens
+die aan de afnemer geleverd mogen worden over de persoon. Met deze gegevens kan de afnemer
+een kopie van de persoonsgegevens opnemen in de eigen administratie.
+2.1.3.3
+
+SA.0.VA - Verwijdering afnemerindicatie
+
+Bij deze dienst is het mogelijk om aan de hand van het Burgerservicenummer en de desbetreffende
+leveringsautorisatie een afnemerindicatie bij een persoon te verwijderen en hiermee uit de in de
+groep van te volgen personen te verwijderen. De afnemer ontvangt van de centrale voorzieningen
+direct (synchroon) een bevestiging van het verwijderen van de afnemerindicatie.
+2.1.3.4
+
+SA.0.SP - Synchronisatie persoon
+
+Met deze dienst is het voor de afnemer mogelijk om op basis van het Burgerservicenummer de
+gegevens van een persoon waarvoor hij geautoriseerd is op te vragen, bijvoorbeeld in de situatie
+dat is gebleken (of het vermoeden bestaat) dat gegevens van de persoon in de administratie van
+de afnemer niet meer synchroon zijn.
+De afnemer ontvangt van de centrale voorzieningen direct (synchroon) een bevestiging van het
+synchronisatieverzoek.
+Daarna ontvangt de afnemer een tweede bericht (asynchroon) van de centrale voorzieningen. Dit
+betreft een zogenaamd volledig bericht voor de persoon.
+2.1.3.5
+
+SA.0.SS - Synchronisatie stamgegevens
+
+Met deze dienst is het voor de afnemer mogelijk om van een specifieke stamtabel de gehele inhoud
+met stamgegevens op te vragen. De afnemer ontvangt van de centrale voorzieningen direct
+(synchroon) de inhoud van de opgevraagde stamtabel.
+
+2.1.4
+
+Diensten geïnitieerd door de centrale voorzieningen
+
+2.1.4.1
+
+Inleiding
+
+Diensten die worden geïnitieerd door een wijziging (als gevolg van een administratieve handeling)
+in persoonsgegevens in de centrale voorzieningen en vervolgens leiden tot berichten:
+•
+•
+•
+•
+
+SA.0.MA – Mutatielevering op basis van afnemerindicatie
+SA.0.MD – Mutatielevering op basis van doelbinding
+SA.0.AT – Attendering
+SA.0.AA – Attendering met plaatsing afnemerindicatie
+
+2.1.4.2
+
+SA.0.MA – Mutatielevering op basis van afnemerindicatie
+
+Deze dienst levert een mutatiebericht (of in sommige gevallen een volledig bericht) aan de
+afnemer als er een bijhouding heeft plaatsgevonden bij een persoon die de afnemer eerder via een
+afnemerindicatie heeft aangemerkt als een door de afnemer te volgen persoon. Als de persoon een
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 6 van 20
+
+UCM LV.0 - Use Case Model
+
+verstrekkingsbeperking heeft laten instellen voor de afnemer, dan wordt een meldingsbericht
+geleverd met vermelding dat bij de persoon een verstrekkingsbeperking is vastgelegd en dat de
+mutatielevering gestopt is.
+2.1.4.3
+
+SA.0.MD - Mutatielevering op basis van doelbinding
+
+Deze dienst levert een mutatiebericht of volledig bericht aan de afnemer als er een bijhouding
+heeft plaatsgevonden bij een persoon waar door de centrale voorzieningen op basis van een
+algoritme wordt bepaald of deze tot de doelgroep van een afnemer behoort of behoorde. De
+specifieke leveringsautorisatie voor de afnemer bevat de criteria op basis waarvan het algoritme
+voor de betreffende afnemer werkt.
+Als gevolg van de bijhouding kunnen zich hierbij de volgende situaties voordoen:
+1. een persoon voldoet voor het eerst aan het algoritme van de doelgroep;
+in dat geval wordt door de centrale voorzieningen een volledig bericht naar de afnemer
+gestuurd.
+2. een persoon voldeed en voldoet nog steeds aan het algoritme van de doelgroep;
+in dat geval wordt door de centrale voorzieningen een mutatiebericht (of in sommige
+gevallen een volledig bericht) naar de afnemer gestuurd.
+3. een persoon voldoet niet meer aan het algoritme van de doelgroep;
+in dat geval wordt door de centrale voorzieningen eveneens een mutatiebericht (of in
+sommige gevallen een volledig bericht) naar de afnemer gestuurd, voorzien van de melding
+dat de persoon niet meer tot de algoritmisch bepaalde doelgroep behoort.
+2.1.4.4
+
+SA.0.AT - Attendering
+
+Met deze dienst is het voor de afnemer mogelijk zich door de centrale voorzieningen te laten
+attenderen op het zich voor doen van een specifieke bijhouding bij een persoon (bijvoorbeeld de
+wijziging van de bijhoudingsgemeente).
+Evenals bij de dienst ‘Mutatielevering op basis van doelbinding’ wordt op basis van een bijhouding
+door de centrale voorzieningen op basis van een algoritme bepaald of een volledig bericht naar een
+afnemer moet worden gestuurd. De geleverde persoon wordt hierbij niet in de groep van te volgen
+personen opgenomen. Indien dit is gewenst, dient de afnemer voor de geleverde persoon zelf een
+afnemerindicatie te plaatsen
+2.1.4.5
+
+SA.0.AA – Attendering met plaatsing afnemerindicatie
+
+Met deze dienst is het voor de afnemer mogelijk zich door de centrale voorzieningen te laten
+attenderen op het ontstaan van een specifieke situatie bij een persoon, waar voor deze persoon
+tevens een afnemerindicatie wordt geplaatst. De geleverde persoon is daarmee opgenomen in de
+groep van te volgen personen.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 7 van 20
+
+UCM LV.0 - Use Case Model
+
+2.2
+2.2.1
+
+Diensten Bevraging
+Inleiding
+
+De koppelvlakmodule “Bevraging” bevat zowel diensten om personen te zoeken(zoekvragen) als
+diensten om details over reeds bekende personen op te vragen(detailvragen).
+2.2.2
+
+Use Case Model
+
+In onderstaand figuur zijn de Use Cases opgenomen die de diensten beschrijven die vallen onder
+de koppelvlakmodule “Bevraging” in het koppelvlak Levering.
+
+Figuur 3. Diensten in koppelvlakmodule “Bevraging”.
+
+2.2.3
+
+Zoekvragen
+
+2.2.3.1
+
+Inleiding
+
+Zoekvragen zijn bevragingen waarbij geen identificerend BSN of A-nummer wordt meegegeven.
+Het resultaat van een zoekvraag kan meerdere personen bevatten met een beperkte set
+persoonsgegevens.
+De bevragende partij mag in principe elke combinatie van zoekcriteria meegeven, zolang hij maar
+geautoriseerd is voor het betreffende attribuut.
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 8 van 20
+
+UCM LV.0 - Use Case Model
+
+Met ‘slim zoeken’ wordt het gebruik van zoekopties bedoeld. De volgende zoekopties zijn mogelijk;
+•
+•
+
+•
+•
+
+•
+
+“Exact”; de waarde in het attribuut dient exact gelijk te zijn (over de volledige lengte).
+“Vanaf exact”; de waarde in het attribuut dient te beginnen met de in het zoekcriterium
+opgegeven waarde. De waarde in het attribuut mag dus langer zijn dan de opgegeven
+waarde. Het 'overblijvende deel' wordt niet beschouwd in de vergelijking.
+“Klein”; de waarde in het attribuut dient na omzetting van hoofdletters en diakritische
+tekens gelijk te zijn.
+“Vanaf klein”; de waarde in het attribuut dient na omzetting van hoofdletters en
+diakritische tekens te beginnen met de opgegeven waarde. Verdere werking is conform
+“Vanaf exact”.
+“Leeg”; het attribuut dient leeg te zijn.
+
+Een zoekvraag moet binnen een bepaalde (nader vast te stellen) tijdslimiet klaar zijn en mag niet
+meer dan het in het autorisatiebesluit genoemde maximaal aantal resultaten opleveren.
+Diensten met zoekvragen:
+•
+•
+
+BV.0.ZP – Zoek persoon
+BV.0.ZA – Zoek persoon op adresgegevens
+
+2.2.3.2
+
+BV.0.ZP – Zoek persoon
+
+Deze dienst maakt het mogelijk om de centrale voorzieningen te benaderen als de afnemer of
+bijhouder wel beschikt over bepaalde gegevens van de persoon maar niet over het BSN of Anummer (als de afnemer of bijhouder al wel beschikt over een BSN of A-nummer, dan kunnen
+direct andere diensten zoals ‘Geef details persoon’ aangesproken worden). De dienst ‘Zoek
+persoon’ geeft aan de hand van de zoekargumenten een vaste set van gegevens (inclusief BSN en
+A-nummer) retour van alle personen die aan de vraag voldoen. Aan de hand van de ontvangen
+gegevens zou de afnemer of bijhouder in staat moeten zijn om te controleren of de betreffende
+persoon in de resultaatset aanwezig is en zo ja welke persoon het betreft. Met de ontvangen
+kenmerken kunnen vervolgens andere leveringsdiensten van de centrale voorzieningen gebruikt
+worden, zoals ‘Geef details persoon’ of ‘Plaatsing afnemerindicatie’.
+2.2.3.3
+
+BV.0.ZA – Zoek persoon op adresgegevens
+
+Deze dienst lijkt sterk op ‘Zoek persoon’ met als verschil dat de dienst ‘Zoek Persoon op
+Adresgegevens’ wel met alleen adresgegevens mag zoeken naar personen. Deze adresgegevens
+moeten dan echter wel voldoende specifiek zijn.
+De centrale voorzieningen zoekt vervolgens naar personen die ingeschreven zijn (of waren) op dat
+adres. Ook hier wordt een vaste set van gegevens retour gegeven van de gevonden personen
+waarmee de afnemer andere diensten kan benaderen.
+Wanneer het resultaat van ‘Zoek Persoon op Adresgegevens’ uitsluitend personen levert die op
+exact hetzelfde adres wonen, dan worden alle personen geleverd. Het maximaal aantal
+zoekresultaten dat de gebruiker mag ontvangen wordt genegeerd en hiermee mogelijk
+overschreden. Dit in tegenstelling tot de dienst Zoek Persoon waar altijd het maximaal aantal
+zoekresultaten uit de autorisatie geldt.
+
+2.2.4
+
+Detailvragen
+
+2.2.4.1
+
+Inleiding
+
+Met een detailvraag wordt aan de hand van een identificerend kenmerk als BSN, A-nummer of
+Persoonsobjectsleutel alle voor de afnemer of bijhouder beschikbare gegevens geleverd binnen de
+aangeroepen dienst.
+Diensten met detailvragen:
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 9 van 20
+
+UCM LV.0 - Use Case Model
+
+•
+•
+•
+•
+
+BV.0.GD – Geef details persoon
+BV.0.GM – Geef medebewoners van persoon
+BV.0.BO – Bepaal kandidaat ouder
+BV.0.GR – Geef relatiegegevens GBA
+
+2.2.4.2
+
+BV.0.GD – Geef details persoon
+
+Met deze dienst kan de afnemer of bijhouder gegevens opvragen aan de hand van het BSN, Anummer of de eerder ontvangen tijdelijke Persoonsobjectsleutel van de persoon. Optioneel kan het
+resultaat ingeperkt worden tot een bepaalde periode, peildatum of alleen de actuele gegevens
+(historiefilter) of tot een bepaalde subset van de gegevens (scoping). Een afnemer kan de scoping
+opgeven door het meegeven van een lijst van elementnamen bij het aanroepen van de dienst.
+Deze lijst kan vervolgens worden beschouwd als een vrijwillige inperking van de autorisatie.
+Het resultaat wordt gefilterd op autorisatie voor zowel afnemers als bijhouders. Waarbij bijhouders
+in principe voor alle gegevens geautoriseerd zijn.
+Deze dienst kan ook de aanwezige (niet-geheime) afnemerindicaties leveren. Die functionaliteit is
+bedoeld voor gemeenten ten behoeve van inzagerecht en adresonderzoeken.
+2.2.4.1
+
+BV.0.GM – Geef medebewoners van persoon
+
+Met deze dienst kan gezocht worden naar welke personen op een zeker moment op hetzelfde adres
+waren ingeschreven als een opgegeven persoon. Op hetzelfde adres wil zeggen; persoon heeft een
+exact gelijk identificatiecode Nummeraanduiding. Het betreffende adres en een vaste set van
+gegevens worden retour gegeven. Daarbij worden ook de identificatienummers van de
+gerelateerden doorgegeven, zodat de gebruiker kan afleiden of de betreffende personen op
+hetzelfde adres gerelateerd zijn aan elkaar.
+2.2.4.1
+
+BV.0.KO – Geef kandidaat ouder
+
+Deze dienst wordt door bijhouders gebruikt in de context van het registreren van een aangifte van
+geboorte in Nederland. Daarbij moet worden vastgesteld wie juridisch gezien de ouders van het
+kind zijn. Dat is in elk geval de ‘ouder uit wie het kind is gekomen’ (=OUWKIG, in de meeste
+gevallen is dat de moeder). De bepaling van de andere ouder, de ‘ouder uit wie het kind niet is
+gekomen’ (=NOUWKIG) is iets lastiger (bron is Burgerlijk Wetboek, artikel 199).
+Deze dienst geeft op basis van de BSN van de OUWKIG en de geboortedatum van het kind de
+gegevens retour van welke persoon volgens de BRP waarschijnlijk de NOUWKIG is. Het is
+vervolgens aan de Ambtenaar Burgerlijke Stand om deze gegevens al dan niet te gebruiken voor
+de verdere afhandeling en bijhouding van de geboorte-aangifte. De BRP beschikt bijvoorbeeld niet
+over gegevens over ‘erkenning voor de geboorte’ en kan dus niet te allen tijde de juiste ‘andere’
+ouder bepalen. Daarom ook heet deze dienst ‘Bepaal kandidaat ouder’.
+2.2.4.2
+
+BV.0.GR – Geef relatiegegevens GBA
+
+De dienst is alleen bedoeld voor bijhouders en levert van één persoon gegevens die vanuit het
+GBA-stelsel niet in BRP-formaat geconverteerd zijn. Het gaat hier om gegevens die ontstaan zijn in
+het GBA-stelsel, in het verleden werden bijgehouden en alleen nog incidenteel nodig kunnen zijn,
+bijvoorbeeld voor een protocolleringsverzoek.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 10 van 20
+
+UCM LV.0 - Use Case Model
+
+2.3
+2.3.1
+
+Dienst Vrij bericht
+Inleiding
+
+De koppelvlakmodule “Vrij bericht” bevat de dienst ‘Vrij bericht’ voor onderlinge digitale
+communicatie gedurende de duale periode tussen partijen die op het BRP- of GBA-stelsel zijn
+aangesloten.
+2.3.2
+
+Use Case Model
+
+In onderstaand figuur zijn de Use Cases opgenomen voor de diensten die valt onder de
+koppelvlakmodule “Vrij bericht” in het koppelvlak Levering.
+
+Figuur 4. Dienst in koppelvlakmodule “Vrij bericht”.
+
+2.3.3
+
+VB.0.AV – Afhandelen vrij bericht
+
+Naast de BRP afnemers, BRP bijhouders, de BRP beheerder en BRP afnemers/bijhouders die (nog)
+op het GBA-stelsel zijn aangesloten kunnen ook partijen in het BRP-stelsel die zelf geen
+leveringsautorisatie hebben, zoals bewerkers, op het vrije bericht aansluiten.
+Tijdens de duale periode vindt er communicatie plaats tussen partijen die werken in het GBAstelsel en partijen die werken in het BRP-stelsel. Berichten, zoals het vrije bericht, die worden
+verstuurd door een partij in het GBA-stelsel naar een partij in het BRP-stelsel worden onderschept
+en omgezet van het GBA formaat naar het BRP formaat. Het onderscheppen en omzetten van de
+berichten, alsmede het verzenden van omgezette berichten en het ontvangen van berichten wordt
+uitgevoerd door de zogenaamde migratievoorziening.
+Het vrije bericht kan voor uiteenlopende doeleinden gebruikt worden. Zo kunnen tekstuele
+berichten als een mededeling of notificatie verstuurd worden. Maar het vrije bericht kan ook
+gebruikt worden om bijvoorbeeld gepland onderhoud aan te kondigen. De vrije tekst is
+ongestructureerd, dat wil zeggen dat het niet door het systeem geïnterpreteerd kan worden. Het
+soort vrije bericht kan gebruikt worden om het onderwerp aan te duiden wat de ontvangende partij
+de mogelijkheid biedt het bericht intern te routeren.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 11 van 20
+
+UCM LV.0 - Use Case Model
+
+2.4
+2.4.1
+
+Dienst Geef StUF BG bericht
+Inleiding
+
+De koppelvlakmodule “StUF vertaling” bevat de dienst ‘Geef StUF BG bericht’ die het voor afnemers
+mogelijk maakt om een ontvangen BRPXML mutatiebericht of volledig bericht te vertalen naar de
+landelijk vastgestelde berichtenstandaard StUF BG.
+2.4.2
+
+Use Case Model
+
+In onderstaand figuur zijn de Use Cases opgenomen voor de diensten die valt onder de
+koppelvlakmodule “StUF vertaling” in het koppelvlak Levering.
+
+Figuur 5. Dienst in koppelvlakmodule “StUF vertaling”.
+
+2.4.3
+
+SV.0.GS – Geef StUF BG bericht
+
+Met deze dienst is het voor de afnemer mogelijk om een ontvangen BRPXML mutatiebericht of
+volledig bericht te vertalen naar de landelijk vastgestelde berichtenstandaard StUF BG. Het is
+hierbij mogelijk dat de vertaling van het BRPXML mutatiebericht of volledigbericht leidt tot
+meerdere StUF BG-kennisgevingsberichten. Voor de vertaling van een BRPXML mutatiebericht of
+volledig bericht naar StUF BG wordt binnen de dienst gebruik gemaakt van een externe
+component; de zogenaamde StUF BG Transformatiecomponent.
+De afnemer ontvangt direct (synchroon) een bevestiging van de berichtvertaling. Indien de
+vertaling succesvol is verlopen, bevat het resultaatbericht ook de naar StUF BG vertaalde
+bericht(en). Met deze vertaalde berichten kan de afnemer vervolgens de eigen administratie
+bijwerken.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 12 van 20
+
+UCM LV.0 - Use Case Model
+
+2.5
+
+Diensten Selectie
+
+2.5.1
+
+Inleiding
+
+De koppelvlakmodule “Selectie” bevat diensten die de mogelijkheid hebben om grotere aantallen
+gegevens, van personen met bepaalde kenmerken ineens, aan afnemers te leveren.
+2.5.2
+
+Use Case Model
+
+In onderstaand figuur zijn de Use Cases opgenomen die onderdeel zijn van de diensten die vallen
+onder de koppelvlakmodule “Selectie”.
+
+Figuur 6. Diensten in koppelvlakmodule “Selectie”.
+
+2.5.3
+
+Uitvoeren selectierun en protocollering selectietaak
+
+2.5.3.1
+
+Inleiding
+
+Een selectiedienst verstrekt op vastgestelde momenten gegevens over personen. De personen
+worden geselecteerd op basis van vooraf gedefinieerde selectiecriteria en of op basis van een
+invoerbestand met Administratienummers of Burgerservicenummers. De verstrekking is eenmalig
+of periodiek. De daadwerkelijke verstrekking wordt door de BRP beheerder samengesteld, gepland
+en uitgevoerd als een selectietaak. Er kunnen meerdere selectietaken zijn voor een selectiedienst.
+Een selectietaak wordt uitgevoerd tijdens een selectierun. Meerdere selectietaken (behorende bij
+verschillende selectiediensten) kunnen worden uitgevoerd tijdens één selectierun.
+De volgende selectiediensten kunnen in een selectierun worden uitgevoerd:
+•
+•
+•
+
+SL.0.SS – Standaard selectiedienst
+SL.0.PA – Selectiedienst met plaatsing afnemersindicatie
+SL.0.VA – Selectiedienst met verwijdering afnemersindicatie
+
+Tijdens een selectierun worden de selectietaken geprotocolleerd door de gegevens in een apart
+protocolleer bestand te plaatsen en later weggeschreven in de protocolleringsadministratie van de
+centrale voorzieningen.
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 13 van 20
+
+UCM LV.0 - Use Case Model
+
+2.5.3.2
+
+SL.0.US – Uitvoeren selectierun
+
+Deze Use Case beschrijft het samenstellen en uitvoeren één of meerdere selectietaken, de
+selectierun. Alle selectietaken die op de betreffende dag staan ingepland worden gecontroleerd op
+autorisatie en na goedkeuring opgenomen in de selectierun.
+Geïnitieerd door de centrale voorzieningen wordt afhankelijk van de soort dienst van de
+betreffende selectietaak de juiste verwerking aangeroepen.
+2.5.3.3
+
+SL.0.SS – Standaard selectiedienst
+
+Om de dienst Standaard selectiedienst te kunnen uitvoeren zijn er gegevens nodig van de
+betreffende ingerichte selectiedienst, autorisatie van de partij en gegevens met betrekking tot de
+uit te voeren selectietaak. Deze gegevens kunnen gezien worden als de invoergegevens van deze
+dienst.
+Dit proces levert per persoon een persoonsbeeld dat toegevoegd wordt aan een
+selectieresultaatset. In de instelling kan aangegeven worden wat het maximaal aantal personen in
+een selectieresultaatset mag zijn en/of wat de maximale grootte van de selectieresultaatset mag
+zijn. Hierdoor kan het resultaat van het uitvoeren van een selectietaak bestaan uit meerdere
+selectieresultaatsets.
+Wanneer alle geselecteerde personen geplaatst zijn in de selectieresultaatsets wordt er een
+afsluitende selectieresultaatset aangemaakt met de samenvattende gegevens van de uitgevoerde
+selectietaak.
+De selectieresultaatsets worden op een door de beheerder te configureren locatie geplaatst. Ook de
+bestanden ten behoeve van de (later uit te voeren) protocollering en de steekproefcontrole door de
+beheerder worden ergens geplaatst.
+2.5.3.4
+
+SL.0.PA – Selectiedienst met plaatsing afnemersindicatie
+
+Deze selectiedienst geeft de mogelijkheid om in één keer bij de geselecteerde personen
+afnemerindicaties te plaatsen. Er wordt geen protocolleringsbestand en selectieresultaatset met
+persoonsgegevens verstrekt zoals bij een standaard selectiedienst. Er wordt wel altijd een
+selectieresultaatset Totalen klaargezet met de samenvattende gegevens van deze selectiedienst.
+Afhankelijk van de instellingen van de betreffende selectiedienst kunnen er wel asynchroon volledig
+berichten gestuurd worden van de personen waarbij een afnemerindicatie is geplaatst.
+Indien bij een geselecteerd persoon reeds een afnemerindicatie bestaat en er dus geen
+afnemerindicatie geplaatst kan worden met deze selectiedienst dan leidt dit niet tot een
+fout(melding) en er wordt ook geen volledig bericht van de betreffende persoon verstuurd.
+2.5.3.5
+
+SL.0.VA – Selectiedienst met verwijdering afnemersindicatie
+
+Een selectiedienst met verwijdering afnemerindicatie geeft de mogelijkheid om in één keer bij de
+geselecteerde personen afnemerindicaties te verwijderen. Net als de selectiedienst met plaatsing
+afnemerindicatie wordt er geen protocolleringsbestand en selectieresultaatset met
+persoonsgegevens verstrekt maar wel altijd een selectieresultaatset Totalen en afhankelijk van de
+instellingen kunnen er asynchroon volledig berichten gestuurd worden van de personen waarbij een
+afnemerindicatie is verwijderd.
+Indien bij een geselecteerd persoon geen afnemerindicatie aanwezig is en er dus geen
+afnemerindicatie verwijderd kan worden dan leidt dit niet tot een fout(melding) en volledig bericht.
+2.5.3.6
+
+SL.0.PS – Protocollering selecties
+
+Met deze stap, het protocolleren van selecties, worden de protocolleer bestanden van de
+geselecteerde selectietaken weggeschreven in de protocolleringsadministratie van de centrale
+voorzieningen. De te protocolleren gegevens zijn al eerder in het proces bij het uitvoeren van de
+selectietaak in een protocolleer bestand apart gezet.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 14 van 20
+
+UCM LV.0 - Use Case Model
+
+3 Use Case Matrix
+3.1
+
+Inleiding
+
+De Use Cases op het leveringskoppelvlak hebben een vaste codering XX.n.YYY.ZZZ waarbij:
+•
+
+•
+•
+•
+
+XX het acroniem is voor de modules in het leveringskoppel:
+o AL voor algemene modules (koppelvlak overstijgend)
+o LV = Leveren algemeen
+o SA = Synchronisatie en Attendering
+o BV = Bevraging
+o SL = Selectie
+o SV – StUF vertaling
+o VB = Vrij bericht
+n het Use Case niveau is
+YYY het acroniem is van de Use Case.
+ZZZ een optionele code is voor een sub Use Case.
+
+In de volgende paragrafen is de samenhang aangegeven tussen de Use Cases op 0-niveau en de
+sub Use Cases die ‘ge-include’ zijn.
+
+3.1.1
+
+Diensten Synchronisatie en Attendering
+SA.0. PA
+
+AL.1.XV - XSD validatie
+LV.1.AB - Archiveer bericht
+LV.1.AFB - Autorisatiefilter bericht
+LV.1.AL - Autorisatie levering
+LV.1.BO - Bericht opschonen
+LV.1.CA - Controleer afnemerindicatie
+LV.1.CPI - Controleer persoonsselectie identiteitsnummer
+LV.1.MR - Maak resultaatbericht
+LV.1.PB - Protocolleer bericht
+LV.1.SPL - Samenstellen persoonslijst
+LV.1.VA - Verwijder afnemerindicatie
+LV.1.VE - Verzend bericht
+LV.1.VPB - Verwerk persoon bericht
+LV.1.VR - Verzend resultaatbericht
+SA.1.AA.BL - Bepaal levering attendering met plaatsen
+afnemersindicatie
+SA.1.AA.PA - Plaats afnemersindicatie
+SA.1.ASA - Autorisatie synchronisatie en attendering
+SA.1.AT.BL - Bepaal levering attendering
+SA.1.BPB - Bepaal persoonsbeeld voor expressie-evaluatie
+SA.1.BS - Bepaal stelsel voor levering
+SA.1.CAA - Controleer autorisatie afnemerindicatie
+SA.1.CH - Controleer handeling op nu te leveren
+SA.1.MA.BL - Bepaal mutatielevering op basis van
+afnemersindicatie
+
+Status: Definitief, versie:
+
+MA
+
+X
+
+MD AT
+
+AA
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+VA
+
+X
+X
+
+X
+
+SP
+
+SS
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+
+X
+
+X
+X
+
+X
+
+X
+
+X
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+X
+
+X
+
+X
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 15 van 20
+
+UCM LV.0 - Use Case Model
+
+SA.1.EMB - Eindcontrole mutatiebericht
+
+X
+
+X
+
+SA.1.MMB - Maak mutatiebericht
+SA.1.MA.MMV - Maak meldingsbericht voor de
+verstrekkingsbeperking
+SA.1.MAG - Markeer als geleverd
+SA.1.MD.BL - Bepaal mutatielevering op basis van
+doelbinding
+
+X
+
+X
+
+X
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+X
+X
+X
+
+Diensten Bevraging
+BV.0. ZA
+
+AL.1.XV - XSD validatie
+BV.1.GD.AFB - Autorisatiefilter bericht
+BV.1.GD.CI - Controleer inhoud
+BV.1.GR.CI – Controleer inhoud
+BV.1.GR.MB – Maak relatiegegevens GBA bericht
+BV.1.GM.BA - Bepaal adres
+BV.1.GM.BB - Bepaal bewoners
+BV.1.GM.CI - Controleer inhoud
+BV.1.GM.MB - Maak geef medebewoners bericht
+BV.1.KO.KO - Bepaal kandidaat ouder
+
+X
+
+ZP
+
+GD
+
+GM
+
+KO
+
+GR
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+X
+X
+X
+X
+X
+X
+X
+
+BV.1.KO.MB - Maak kandidaat ouder bericht
+BV.1.ZA.CI - Controleer inhoud
+BV.1.ZA.HR - Haal resultaten
+BV.1.ZP.CI - Controleer inhoud
+BV.1.ZP.HR - Haal resultaten
+LV.1.AB - Archiveer bericht
+LV.1.AFB - Autorisatiefilter bericht
+LV.1.AL - Autorisatie levering
+LV.1.BO - Bericht opschonen
+LV.1.CPI - Controleer persoonsselectie identiteitsnummer
+LV.1.MBZ - Maak bericht zoek persoon (op adresgegevens)
+LV.1.MR - Maak resultaatbericht
+LV.1.PB - Protocolleer bericht
+LV.1.SPL - Samenstellen persoonslijst
+LV.1.VR - Verzend resultaatbericht
+
+3.1.3
+
+X
+
+X
+
+SA.1.MVG - Maak en verzend GBA bericht
+SA.1.PA.CI - Controleer inhoud
+SA.1.PA.VPA - Verwerken plaatsen afnemerindicatie
+SA.1.SP.CA - Controleer autorisatie
+SA.1.SS.CI - Controleer inhoud
+SA.1.SS.MB - Maak bericht
+
+3.1.2
+
+X
+
+X
+X
+X
+X
+X
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+X
+
+X
+X
+
+X
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+Dienst Vrij bericht
+VB.0. AV
+
+AL.1.XV - XSD validatie
+Status: Definitief, versie:
+
+X
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 16 van 20
+
+UCM LV.0 - Use Case Model
+
+LV.1.MR - Maak resultaatbericht
+LV.1.VR - Verzend resultaatbericht
+VB.1.AV.AB - Archiveer vrij bericht
+VB.1.AV.CA - Controleer autorisatie vrij bericht
+VB.1.AV.CI - Controleer inhoud vrij bericht
+VB.1.AV.NB - Maak notificatiebericht
+VB.1.AV.VV - Verzend vrij bericht
+
+3.1.4
+
+X
+X
+X
+X
+X
+X
+X
+
+Dienst Geef StUF BG bericht
+SV.0. GS
+
+AL.1.XV - XSD validatie
+LV.1.AB - Archiveer bericht
+LV.1.AL - Autorisatie levering
+LV.1.MR - Maak resultaatbericht
+LV.1.VR - Verzend resultaatbericht
+SV.1.GS.CI - Controleer inhoud
+SV.1.GS.VBB - Vertaal BRPXML-bericht
+
+3.1.5
+
+X
+X
+X
+X
+X
+X
+X
+
+Diensten Selectie
+SL.0. US SS
+
+LV.1.AB - Archiveer bericht
+
+PA
+
+VA
+
+X
+
+X
+
+LV.1.AFB - Autorisatiefilter bericht
+
+X
+
+X
+
+X
+
+LV.1.BO - Bericht opschonen
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+X
+
+LV.1.PB - Protocolleer bericht
+LV.1.SPL - Samenstellen persoonslijst
+
+X
+
+LV.1.VE - Verzend bericht
+LV.1.VPB - Verwerk persoon bericht
+SL.1.HFS - Historiefilter selectie
+
+X
+
+SL.1.MCB - Maak controle bestand
+
+X
+
+SL.1.MPB - Maak protocollering bestand
+
+X
+
+SL.1.MSP - Maak selectieresultaatset personen
+
+X
+
+SL.1.MST - Maak selectieresultaat totaal
+
+X
+
+SL.1.PA.VPA - Verwerken plaatsen afnemerindicatie
+
+X
+
+SL.1.PA.WS – Wijzig status selectietaak
+
+X
+
+PS
+
+SL.1.PS.CB – Controleer bestand
+
+X
+
+SL.1.PS.CP – Controleer te protocolleren selectietaken
+
+X
+
+SL.1.PS.PS – Protocolleer selectietaak
+
+X
+
+SL.1.PS.WS – Wijzig status selectietaak
+
+X
+
+SL.1.SP – Selecteer personen
+
+X
+
+SL.1.SS.WS – Wijzigen status selectietaak
+
+X
+
+SL.1.US.AS - Afronden selectierun
+
+X
+
+SL.1.US.CA - Controleer autorisatie selectietaak
+
+X
+
+SL.1.US.CU - Controleer uitvoerbare selectietaken
+
+X
+
+SL.1.US.RS - Registreer selectierun
+
+X
+
+Status: Definitief, versie:
+
+X
+
+Fout! Onbekende naam voor documenteigenschap.
+
+X
+
+Pagina 17 van 20
+
+UCM LV.0 - Use Case Model
+
+SL.1.US.VS - Voeg selectietaak toe aan run
+
+X
+
+SL.1.VA.VVA - Verwerken verwijderen afnemerindicatie
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+X
+
+Pagina 18 van 20
+
+UCM LV.0 - Use Case Model
+
+Bijlage 1: Interactiepatronen, berichttypen en berichtsoorten
+per Use Case Specificatie
+Voor een nadere toelichting op de interactiepatronen, berichttypes en berichtsoorten die binnen de
+centrale voorzieningen voor het koppelvlak Leveren worden gebruikt zie Logisch Ontwerp
+Basisregistratie Personen [2].
+Use Case
+Specificatie
+
+Interactiepatroon
+
+Berichttype
+
+Berichtsoort
+
+SA.0.PA –
+Plaatsing
+afnemerindicatie
+
+Verzoek-Resultaat
+
+Verzoek
+
+Afnemerindicatiebericht
+
+Resultaat
+
+Afnemerindicatieresultaatbericht
+
+Asynchrone
+levering
+
+Notificatie
+
+Volledig bericht
+
+SA.0.VA –
+Verwijdering
+afnemerindicatie
+
+Verzoek-Resultaat
+
+Verzoek
+
+Afnemerindicatiebericht
+
+Resultaat
+
+Afnemerindicatieresultaatbericht
+
+SA.0.SP –
+Synchronisatie
+persoon
+
+Verzoek-Resultaat
+
+Verzoek
+
+Synchronisatieverzoekbericht
+
+Resultaat
+
+Synchronisatieverzoekresultaatbericht
+
+Asynchrone
+levering
+
+Notificatie
+
+Volledig bericht
+
+SA.0.SS –
+Synchronisatie
+stamgegeven
+
+Verzoek-Resultaat
+
+Verzoek
+
+Synchronisatieverzoekbericht
+
+Resultaat
+
+Synchronisatieverzoekresultaatbericht
+
+SA.0.MA –
+Mutatielevering op
+basis van
+afnemerindicatie
+
+Asynchrone
+levering
+
+Notificatie
+
+Incidenteel een Volledig bericht
+
+SA.0.MD –
+Mutatielevering op
+basis van
+doelbinding
+
+Asynchrone
+levering
+
+Notificatie
+
+SA.0.AT Attendering
+
+Asynchrone
+levering
+
+Notificatie
+
+Volledig bericht
+
+SA.0.AA –
+Attendering met
+plaatsing
+afnemerindicatie
+
+Asynchrone
+levering
+
+Notificatie
+
+Volldedig bericht
+
+BV.0.ZP – Zoek
+persoon
+
+Verzoek-Resultaat
+
+Verzoek
+
+Bevragingsbericht
+
+Resultaat
+
+Bevragingsresultaatbericht
+
+BV.0.ZA – Zoek
+persoon op
+adresgegevens
+
+Verzoek-Resultaat
+
+Verzoek
+
+Bevragingsbericht
+
+Resultaat
+
+Bevragingsresultaatbericht
+
+BV.0.GD – Geef
+details persoon
+
+Verzoek-Resultaat
+
+Verzoek
+
+Bevragingsbericht
+
+Resultaat
+
+Bevragingsresultaatbericht
+
+BV.0.GM – Geef
+
+Verzoek-Resultaat
+
+Verzoek
+
+Bevragingsbericht
+
+Status: Definitief, versie:
+
+Mutatiebericht
+
+Volledig bericht
+Mutatiebericht
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 19 van 20
+
+UCM LV.0 - Use Case Model
+
+medebewoners
+van persoon
+BV.0.KO – Geef
+kandidaat ouder
+
+Verzoek-Resultaat
+
+BV.0.GR – Geef
+relatiegegevens
+GBA
+
+Verzoek-Resultaat
+
+SV.0.GS - Geef
+StUF BG bericht
+
+Verzoek-Resultaat
+
+VB.0.AV –
+Afhandelen vrij
+bericht
+
+Verzoek-Resultaat
+
+Asynchrone
+levering
+
+Status: Definitief, versie:
+
+Resultaat
+
+Bevragingsresultaatbericht
+
+Verzoek
+
+Bevragingsbericht
+
+Resultaat
+
+Bevragingsresultaatbericht
+
+Verzoek
+
+Bevragingsbericht
+
+Resultaat
+
+Bevragingsresultaatbericht
+
+Verzoek
+
+Bevragingsbericht
+
+Resultaat
+
+Bevragingsresultaatbericht
+
+Verzoek
+
+Vrij bericht verzoekbericht
+
+Resultaat
+
+Vrij bericht resultaatbericht
+
+Notificatie
+
+Vrij bericht
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 20 van 20
+
+

@@ -1,0 +1,913 @@
+Uitgangspunten ontwerp LO BRP
+Layout / formatting
+➢
+
+Bij start paragraaf géén witregel opnemen.
+
+➢
+
+Geen wiskundige tekens ( > = < ) gebruiken in lopende teksten / beschrijvingen
+controleregels, maar gewoon uitschrijven: ‘Groter dan’, ‘kleiner of gelijk aan’.
+Uitzondering: ter markering van het feit dat op een bepaalde plek nog een verwijzing
+moet worden toegevoegd: <verwijzing nader in te vullen>.
+
+➢
+
+Structuur: in principe gebaseerd op 4 niveaus, alle uitspringend, alle Verdana.
+• Hoofdstuk 1
+12 punts
+• Paragraaf 1.1
+9 punts Bold
+• Paragraaf 1.1.1
+9 punts Cursief
+• Paragraaf 1.1.1.1
+9 punts
+Een genummerde variant van Kop 5 kennen we niet in het LO BRP en we proberen dit
+niveau ook zoveel mogelijk te vermijden. Wanneer een extra niveau nodig is dan wordt
+dat door middel van onderstreping inzichtelijk gemaakt. Zie bijvoorbeeld in hoofdstuk 8:
+Resultaat in berichtsoort bevragingsresultaatbericht: en Parameters in berichtsoort Vrij
+bericht:
+
+➢
+
+Getallen onder de 20 worden voluit uitgeschreven. Voorbeeld: “er zijn drie manieren om
+persoonsgegevens te ontvangen:”
+
+➢
+
+Kleurgebruik: zwart / wit / grijstinten.
+Uitzondering: om zaken (bijvoorbeeld in ‘drukke’ plaatjes met veel tekst) extra te
+accentueren kan de kleur (helder) rood worden gebruikt. Dit wel spaarzaam gebruiken.
+
+➢
+
+Toepassing van Vet, Cursief en Onderstreept: tot een minimum beperken (anders dreigt
+snel wildgroei). Zie ook onder bij Naamgevingsconventies.
+
+➢
+
+Bij gebruik opsommingstekens in principe bullets gebruiken en géén nummers.
+Nummergebruik suggereert een bepaalde logische volgorde, die er vaak niet is. Als die
+volgorde er écht is, dan hanteren we de nummers.
+
+➢
+
+Bij opsommingen hanteren we de regels volgens o.m.:
+http://www.goedverwoord.nl/opsommingen-wat-is-de-juiste-opmaak
+http://taaladvies.net/taal/advies/tekst/94/leestekens_en_hoofdletters_in_een_pu
+ntsgewijze_opsomming_algemeen/#3.
+o Daaruit vloeit bijvoorbeeld voort:
+• Alleen opsommingen bestaande uit telkens 1 woord eindigen zonder punt.
+• Opsommingen met meerdere woorden, gescheiden door een komma, eindigen
+wel weer met een punt (dit komt veel voor in de Bijlagen). Hierop zijn twee
+uitzonderingen:
+o
+o
+
+o
+
+o
+
+➢
+
+In het (straks gegenereerde) gegevenswoordenboek, wordt bij
+opsomming in het soort en het type van een gegeven géén punt
+gebruikt en bij het waardebereik wel (indien deze gevuld is). Zie
+onderstaand voorbeeld:
+Soort:
+
+Algemeen gegeven
+
+Type:
+
+Numeriek, lengte 9 cijfers
+
+Waardebereik:
+
+Blablabla bla, bla bla bla, blablablabla.
+
+De titels van controle- en verwerkingsregels (b.v. R1316 Melding als
+persoon niet meer tot de doelgroep van de leveringsautorisatie behoort)
+eindigen niet met een punt. Dit vanwege het feit dat het “titels” zijn en
+deze ook zonder punt in de BMR voorkomen en (telkens) automatisch
+richting het LO worden gegenereerd.
+
+Plaatjes en figuren altijd uitlijnen op dezelfde hoogte als de tekst en niet uitspringend ter
+hoogte van de nummering. Alleen wanneer de plaatjes anders te klein worden om goed
+gelezen te worden, wordt een uitzondering gemaakt. Maar eerst wordt gekeken of de
+teksten in de plaatjes zodanig kunnen worden verwerkt (verplaatst), dat de plaatjes
+minder breed worden en daardoor groter in de tekst kunnen worden geplaatst.
+
+Overige typografische conventies:
+➢
+
+Stamtabellen, diensten, administratieve handelingen, acties en nevenacties beginnen
+met een hoofdletter en zijn cursief gedrukt. Voorbeelden:
+• Gemeenten, Plaatsing afnemerindicatie, Aangaan geregistreerd partnerschap in
+Nederland, Registratie aanvang geregistreerd partnerschap en Registratie
+geslachtsnaam.
+
+➢
+
+Berichtelementen, gegevenselementen, gegevensgroepen en berichtsoorten beginnen
+met een kleine letter (behalve aan het begin van een zin) en zijn cursief. Voorbeelden:
+o Datum geboorte, bijhouding en afnemerindicatiebericht, synchronisatie.
+o In dienstbeschrijvingen is ervoor gekozen om berichtelementen als volgt te
+visualiseren, waarbij het berichtdeel dikgedrukt is en het berichtelement cursief:
+
+▪
+▪
+
+➢
+
+Parameter Rol (afnemer of bijhouder) is bedoeld voor de
+technische routering van het verzoek.
+Parameter Leveringsautorisatie verwijst naar de
+leveringsautorisatie, geldend voor de in het bericht opgegeven
+zendende partij.
+
+Voorbeelden en/of inhoud van een gegeven- en/of berichtelement beschrijven we tussen
+dubbele quotes: voornaam “Bas Regis” met volgnummer “1”.
+Wanneer in het LO BRP waarden tussen “quotes” worden gezet, dan hoeft dat niet per
+se de exacte waarde in de database zijn. In het LO BRP houden we omwille van de
+leesbaarheid de vrijheid om hier soepel mee om te gaan. Twee voorbeelden:
+•
+•
+
+Wordt de waarde “Nederland” vastgelegd  Officieel is dit natuurlijk een
+nationaliteitscode “XXXX”
+Wordt de waarde “pseudo-persoon” vastgelegd  Officieel: is dit de waarde “P”
+
+Scope van het LO BRP
+Nr.
+
+Onderwerp
+
+1
+
+Alleen BRP, geen
+migratie
+
+2
+
+Geen aanpalende
+systemen
+
+Beschrijving
+Het LO BRP beschrijft de uitgangssituatie na migratie en bevat
+daarom geen migratiefunctionaliteit.
+Bijvoorbeeld: berichten van en naar GBA-gemeenten via ISCvoorzieningen zijn niet opgenomen.
+
+Bepaalde interne gegevensstructuren worden in het LO BRP
+beschouwd als intern / 'onder de motorkap'. Hier wordt in de
+betreffende hoofdstukken een LO-view van gepresenteerd.
+Bijvoorbeeld:
+3
+
+Onder de motorkap
+
+▪
+▪
+
+Autorisaties en abonnementen (Hoofdstuk 5).
+Administratieve handelingen, Actie, Actie/bron, bron,
+rechtsgronden, ... etc (hoofdstuk 4).
+
+Focus ligt op het koppelvlakbeschrijving. "Just enough"
+informatie om het koppelvlak goed te beschrijven.
+In het LO maken we onderscheid tussen:
+
+4.
+
+Stamgegevens
+
+1. Statische stamgegevens die geraakt worden in de
+gegevensset. De inhoud van deze stamtabellen zijn
+uitgeschreven, zoals: geslachtsaanduiding,
+bijhoudingsaard, nadere bijhoudingsaard;
+2. Dynamische stamgegevens die geraakt worden in de
+gegevensset. De structuur van deze stamtabellen en één
+voorbeelduitwerking is opgenomen in bijlage A.6. De
+daadwerkelijk inhoud van de stamtabel wordt elders
+gepubliceerd.
+De méér technische "overige" stamgegevens (verwerkingswijze,
+verwerkingsresultaat, soort synchronisatie, Categorie dienst)
+brengen we in summiere vorm onder in LO BRP.
+
+5
+
+6
+
+Alleen centrale
+voorzieningen,
+geen gemeentelijke
+voorzieningen
+Alleen bijhouding
+ingezetenen
+
+Het LO BRP beschrijft alleen de centrale voorzieningen en niet
+de gemeentelijke voorzieningen.
+
+Het LO BRP beschrijft alleen de bijhouding van ingezetenen: de
+bijhouding van gegevens van niet-ingezetenen is buiten scope
+totdat duidelijk wordt hoe de bijhouding van niet-ingezetenen in
+het BRP domein wordt ingericht.
+
+Keuze om teksten goede leesbaar te houden en dit bij de
+uitvoeringspraktijk door:
+▪
+▪
+
+7
+
+Toegankelijkheid
+document
+
+▪
+
+gebruik van voorbeelden
+in sommige gevallen niet alle teksten 100% sluitend te
+formuleren en bewust bepaalde details in inleidende
+hoofdstukken niet te noemen:
+bijvoorbeeld: vanaf het moment dat de afnemerindicatie
+is geplaatst --> eigenlijk had dit moeten zijn vanaf het
+moment dat de afnemerindicatie is geplaatst (waarbij de
+datum aanvang geldigheid van de afnemerindicatie <
+datum aanvang materiele periode geldig).
+Laatstgenoemde is waarschijnlijk waar, maar leidt te
+veel af van de hoofdboodschap van de tekst. hetgeen de
+teksten niet toegankelijk /leesbaar maakt.
+▪ Niet te verzanden in te technische
+(attribuut/voorkomen/objecttypen) of juridische
+begrippen (ontwerpaspecten-achtige teksten)
+hypallagen worden gedoogd, zoals bijgehouden personen
+in plaats van "de personen van wie de gegevens zijn
+bijgehouden"
+
+Bewuste keus om géén 1op1 mapping (vertaaltabel) te maken
+van begrippen tussen Wet brp en systeembeschrijving,
+bijvoorbeeld:
+8
+
+Geen mapping tussen
+Wet BRP en LO
+
+▪
+
+(geen verwijstabel)
+
+▪
+
+Afstemmingsbericht <Wet BRP>
+en .....bericht <systeembeschrijving>
+Systematische gegevensverstrekking en dienst X, Y, Z
+
+De inleiding in hoofdstukken 1 t/m 3 moeten voldoende kaders
+bieden.
+
+9
+
+Buiten scope: patronen uit de dienstencatalogus (combinaties
+Inrichting autorisaties van af te nemen diensten, bijvoorbeeld: automatisch met een
+op abonnementen en beetje hulp) worden niet in het LO BRP beschreven. Van deze
+diensten
+inrichtingskeuzes worden verondersteld dat ze door de
+beheerder RvIG worden gemaakt.
+
+Vrije berichten beschouwen we in het LO BRP als module van
+koppelvlak Leveren. Reden: Is te klein om hiervoor een ander
+Geen koppelvlak vrije
+10
+koppelvlak (naast Bijhouding en levering) op te nemen en te
+berichten in LO BRP
+beschrijven. In berichtmodel wel aparte service en hier is korte
+toelichting bij geschreven.
+
+11
+
+Aansluitprocedure
+
+De aansluitprocedure BRP zou een product moeten zijn van de
+beheerder (RvIG) als ondersteuning van afnemers en
+bijhouders bij het aansluittraject. De aansluitprocedure valt
+formeel gezien buiten een systeembeschrijving en is om die
+reden niet opgenomen in het LO BRP.
+
+Ontwerpkeuzes
+Nr.
+
+1
+
+Begrip
+Persoonslijst,
+persoon, persoonsgegevens
+
+Definitie (toelichting)
+Een afnemer zoekt een persoon. Daarna is hij pas
+geïnteresseerd in de persoonsgegevens.
+<zie onderstaande tekst>
+Een bericht moet aan de controleregels voldoen die
+betrekking hebben op autorisatie.
+
+2
+
+Autorisatie vs abonnement
+
+Autorisatie is meer dan een abonnement. Een afnemer
+dient bijvoorbeeld ook geautoriseerd te zijn voor de
+toegang tot dat abonnement en de diensten
+daarbinnen. Het geheel van (toegang tot)
+abonnementen en diensten eventueel vervangen door
+het begrip "Autorisatieprofiel".
+In het LO gaat de voorkeur uit naar het gebruik van
+"gegevens" boven "gegevenselementen". Uit de zin
+blijkt altijd waar je het over hebt. In de beschrijvingen
+spreek je dan over:
+▪
+▪
+
+3
+
+Gegevens vs
+gegevenselementen
+
+Het gegeven naam met de waarde “X”.
+De persoonsgegevens van Bas Regis
+
+Als er écht heel generiek over gegevens wilt praten en
+dan zonder de context van de vastgelegde waarden,
+dan kan je gegevenselementen gebruiken.
+Bijvoorbeeld: bij protocollering legt de BRP vast welke
+gegevenselementen worden gelegd". Hiermee leg je de
+nadruk op het gegevenselement en niet op de
+vastgelegde waarden, die namelijk ook niet worden
+geprotocolleerd ivm impliciet protocolleren.
+We gebruiken de term: "attribuut" niet.
+De functionele taal om aan te geven dat er een
+expressie is ingesteld in de centrale voorzieningen
+voor:
+
+4
+
+set voorwaarden
+
+▪
+
+▪
+
+doelgroepbeperking in relatie tot de dienst
+Mutatielevering op basis van doelbinding
+(sluitende doelgroep)
+attenderingscriteria
+
+5
+
+hierarchie naamgeving
+bijhouding
+
+Bijhouding → bijhoudingsverzoek (bestaat
+uit: prevalidatieverzoek en bijhoudingsvoorstel)
+In de context van bijhoudingsvoorstelorgaan altijd
+bijhoudingsvoorstel gebruiken (prevalidatie is immers
+niet mogelijk)
+
+6
+
+verstrekking vs. leveren
+
+Tot en met H3 heeft het LO BRP een juridische
+invalshoek, daar spreken we over "verstrekking" (zoals
+in wetgeving BRP) en niet over "leveren". Bij de
+uitwerking van de overige functionele hoofdstukken
+(H4 t/m H8) gebruiken we "leveren", uitgezonderd daar
+waar we een verwijzing naar wettekst gebruiken (bijv.
+"indien op basis van het autorisatiebesluit gegevens
+verstrekt mogen worden aan....").
+
+Bewuste afwijkingen team LO t.o.v. bouwteams
+
+Nr.
+
+Standaard
+gebruik
+bouwteams
+
+Bewuste afwijking team LO
+Uitgangspunten:
+▪
+▪
+
+Objecttypen worden in LO BRP geïnterpreteerd als gegevensgroep.
+De groep identiteit in het LO wordt vermeden, omdat deze niet
+zichtbaar is op het koppelvlak, bijvoorbeeld:
+BMR
+
+LO
+
+Persoon.identiteit.soort code Persoon.soort
+▪
+
+2
+
+Vermijden
+van het
+gebruik
+objecttypen
+
+De gegevens uit de gegevensset in de gegevensgroepen identiteit en
+standaard worden samengevoegd EN het historiepatroon van
+standaardgroep geldt voor het geheel.
+
+Voorbeeld voornaam:
+
+In LO
+
+Persoon \
+Geslachtsnaamcomponent –
+Identiteit – Volgnummer
+Geslachtsnaamcomponent.volgnummer
+Persoon \
+Geslachtsnaamcomponent –
+Standaard – Voorvoegsel
+
+Geslachtsnaamcomponent.Voorvoegsel
+Geslachtsnaamcomponent.Scheidingsteken
+
+Persoon \
+Geslachtsnaamcomponent –
+Standaard – Scheidingsteken
+- identiteit en standaard kunnen namelijk niet los van elkaar historie
+opbouwen. Als bijv. een voornaam wijzigt in het voorbeeld van een
+voornaam, dan wijzigt automatisch het volgnummer in de groep identiteit.
+
+3
+
+Vermijden
+van gebruik
+verschillende
+soorten
+regels
+
+In BMR zijn 7 typen bedrijfsregels opgenomen. Vrijwel elk type komt terug in
+het LO BRP maar de indeling in typen is echter voor de buitenwereld niet
+werkelijk relevant. Om die reden wordt in het LO BRP alleen "controleregel"
+gehanteerd als verzamelnaam voor alle typen regels die in het LO BRP zijn
+opgenomen. Op verschillende plaatsen in het LO wordt naar deze
+controleregels in Bijlage F verwezen:
+▪
+▪
+▪
+▪
+
+Bijlage
+Bijlage
+Bijlage
+Bijlage
+
+A - Gegevenswoordenboek
+B - Berichtafhandeling
+C - Administratieve handelingenboek
+D - Dienstenboek
+
+Taalgebruik / formulering
+Zelfstandig LO begrip
+
+Toelichting
+GROEPEN: identificatienummers,
+samengestelde naam, geboorte,
+geslachtsaanduiding
+
+Beperkte set met altijd te leveren persoonsgegevens
+
+NIET:
+▪
+
+(maatschappelijk)
+Identificerende gegevens
+van een persoon
+
+Bedoeld wordt: de database(s) met
+persoonsgegevens van de afnemer
+Eigen administratie van de afnemer
+
+Niet:
+Lokale administratie van de
+afnemer.
+Bedoeld wordt: ICT-systemen van
+de afnemer.
+
+Eigen voorzieningen van de afnemer
+
+==> het geheel aan: webservices,
+systeem, tekenset, applicatie,
+database, .....
+
+Doelgroep van de afnemer
+Doelgroep van het abonnement
+Doelgroepbeperking
+
+(niet: doelbinding)
+Altijd in meervoud ivm aansluiting
+bij Wet BRP en niet in combinatie
+met BRP
+
+Centrale voorzieningen (meervoud)
+
+Niet: centrale voorziening of
+centrale voorziening BRP
+Niet: Database
+gebruiken we als we het geheel
+moeten aanduiden, dus:
+
+BRP
+gemeentelijke voorzieningen en
+centrale voorzieningen
+
+Technische berichtspecificatie
+
+Niet: XSD
+
+Bepaalde herhalingen voorkomen:
+▪
+
+▪
+
+de afnemer ontvangt de gegevens waarvoor de
+afnemer is geautoriseerd
+▪ Op één plek uitleggen en dan moet
+Op hoofdlijnen in hoofdtekst en in
+voorzich zelf spreken dat dit in het
+bijlage de volledige / uitgebreide en
+gehele LO wordt overerfd.
+ontvangt gegevens vanaf het moment dat een sluitende beschrijving
+afnemerindicatie is geplaatst of vanaf datum
+aanvang materiele periode als deze is
+opgegeven door de afnemer bij de specifieke
+dienst)
+▪ Hoe het precies zit lees je dan in de
+bijlage bij de dienstbeschrijving.
+
+In beschrijvingen zorgen dat deze:
+▪
+▪
+
+niet subjectief zijn; simpele, eenvoudige, ...
+tijdsaspect weglaten, bijvoorbeeld: direct (of
+kort daarop) na bericht 1 ontvangt de afnemer
+bericht 2 ==> dit moet zijn: Daarna ontvangt
+de afnemer een tweede bericht (asynchroon)
+van de centrale voorzieningen
+
+Onderwerp
+
+Verwerking in zinsconstructies
+
+Afnemerindicatie
+
+Een afnemerindicatie wordt geplaatst bij
+persoonsgegevens
+
+Doelgroep
+abonnement
+
+Tot de doelgroep van een abonnement behoren
+
+Verstrekken
+
+Persoonsgegevens worden verstrekt aan
+De persoon over wie persoonsgegevens worden
+verstrekt
+
+Leveren
+
+Persoonsgegevens worden geleverd aan
+De persoon over wie gegevens worden geleverd
+
+Controleregels
+
+Controleregels komen tot uitdrukking
+Controleregels worden geactiveerd
+Controles worden uitgevoerd
+Controles leiden tot meldingen
+
+Persoonslijst
+
+....
+
+Toelichting /
+wanneer
+gebruiken
+
+Bijhouding of in algemene zinsconstructies
+spreken of nieuw of gewijzigde gegevens.
+Bijhouding
+
+Niet: Actualiseren en correcties hebben in het
+kader van de BRP (en de huidige GBA) een
+bepaalde betekenis. Een afnemer ontvangt ook
+van de ‘gecorrigeerde’ gegevens een bericht.
+
+Verwijzingen naar
+paragraaf
+
+Bij paragrafen alleen het nummer opnemen.
+Bijvoorbeeld: zie paragraaf 8.3.2
+
+Verwijzen naar
+Hoofdstuk
+
+Bij hoofdstukken en bijlagen het nummer + titel
+van het hoofdstuk / de bijlage
+Bijvoorbeeld: zie hoofdstuk 5 - Levering
+
+Geleverde persoon
+
+Gegevensvastlegging
+
+Correcties zijn
+zelfstandige
+bijhoudingen
+binnen modules.
+
+De persoon over wie gegevens geleverd worden
+De persoonsgegevens worden vastgelegd in de
+centrale voorzieningen.
+Niet: Gegevens worden geregistreerd
+Een afnemer ontvangt gegevens over een
+persoon
+
+Ontvangen
+niet: afnemer ontvangt gegevens voor een
+persoon
+TO DO
+▪
+▪
+"trigger voor een
+dienst"
+
+Volledige set met
+geautoriseerde
+gegevens
+
+▪
+
+•
+•
+•
+
+2 soorten colleges ???
+(afstemmen)
+
+•
+•
+
+een opgetreden wijziging op de
+persoonsgegevens [= standaard], of
+opgetreden mutatie als gevolg van een
+bijhouding op persoonsgegevens
+verstrijken van tijd of een bijhouding door
+een bijhouder --> Indien een bijhouding
+tot gevolg
+
+volledige verzameling van
+persoonsgegevens, of
+volledige set van persoonsgegevens [=
+standaard]
+Alle groepen van gegevens die vastgelegd
+worden over een persoon?
+Bijhoudingsverantwoordelijke college
+Het college van de feitgemeente
+
+niet: gemeente, feitgemeente,
+bijhoudingsgemeente
+
+To do: Goede
+definitie
+verzinnen voor
+de trigger van
+een dienst:
+
+To do: Hoe
+noem je alle
+gegevens
+waarvoor je
+geautoriseerd
+bent:
+
+Gemeente ???
+(afstemmen)
+
+niet gebruiken in teksten, behalve om aan te
+duiden dat het gaat over het geografische
+component. De inwoners van een gemeente?
+
+Afkortingenlijst
+Nr. Afkorting
+
+Volledig
+
+1
+
+XSD
+
+(W3C) XML Schema Definition Language
+
+2
+
+HUP
+
+Handleiding UitvoeringsProcedures
+
+3
+
+WSDL
+
+WebService Definition Language
+
+Toelichting
+
+Ontwerpkeuzes / afwijkingen bij
+generatie van bijlage A
+
+Het logisch onderscheid tussen één actueel voorkomen en
+meerdere actuele voorkomens is uitgelegd in paragraaf 7.3.2
+Meerdere actuele gegevens van hetzelfde soort
+Logisch: kan een persoon meerdere actuele voorkomens hebben
+van nationaliteit, meerdere verstrekkingsbeperkingen;
+voornamen.
+Fysiek: heeft ieder voorkomen wel een uniek voorkomen in de
+database, bijvoorbeeld:
+Voornaam:
+ID: 7654321
+Voornaam.identiteit.Volgnummer: 01
+Voornaam.standaard.Naam: Kees
+ID: 1234567
+Voornaam.identiteit.Volgnummer: 02
+
+Meerdere
+actuele voorkomens
+mogelijk
+
+Voornaam.standaard.Naam: Jan
+
+Nationaliteit
+ID: 7654321
+nationaliteit.Nationaliteit: Nederlandse
+nationaliteit.Reden verkrijging: 17
+ID: 1234567
+nationaliteit.Nationaliteit: Turkse
+nationaliteit.Reden verkrijging: 17
+
+NB: deze ontwerpkeuze hangt samen met het 'vermijden' van
+objecttypen in het LO BRP.
+XSD-validatie
+
+Bij generatie worden XSD-validatieregels opgenomen in het
+waardebereik. Voorbeelden zijn: locatieomschrijving en postcode.
+
+historiepatroon
+'bestaansperiode'
+kennen we niet in het
+LO BRP.
+
+Dit historiepatroon komt voor bij stamtabellen. In de bijlage is er
+voor gekozen om de datum ingang en datum einde te expliciteren
+in de stamtabellen. voorbeeld stamtabel land/gebied:
+Land, Code, Naam, ISO 3166-1 alpha 2, Datum aanvang
+geldigheid, Datum einde geldigheid
+
+Partij (en gemeente) en In BMR zijn de groepen partij en gemeente en reden
+reden verlies/verkrijgen verlies/verkrijgen NL nationaliteit technisch in elkaar verweven,
+NL nationaliteit
+maar in LO BRP zin ze platgeslagen en afzonderlijk opgenomen.
+
+ONTWERPKEUZES TEMPLATE
+DIENSTBESCHRIJVINGEN
+Nr.
+
+Onderdeel
+
+Ontwerpkeuze
+De beschrijving gaan alleen uit van de positieve flow van een
+dienst. De Alternatieve flow wordt niet beschreven, omdat
+deze op een standaard manier wordt afgehandeld.
+
+1
+
+Algemeen
+
+•
+
+Bijvoorbeeld: “Bij correcte verwerking van het bericht”
+è de variant bij niet correcte verwerking van het bericht
+wordt niet uitgewerkt…
+
+Focus dienstbeschrijvingen:
+2
+
+Algemeen
+
+De beschrijvingen moeten voldoende informatie bevatten om
+samen met de hoofdconcepten, de XSD-berichten kunnen
+snappen.
+Focus op één afnemer
+•
+
+3
+
+Algemeen
+
+Uitgangspunt: dienstbeschrijving zijn opgesteld vanuit
+het perspectief van de individuele afnemer. Uitleg in
+hoofdstuk 5 is generieker, dus per afnemer (toegang
+tot abonnement) wordt een mutatiebericht opgesteld.
+Zie situatiebeschrijving: de afnemer ontvangt een
+mutatiebericht en per afnemer volgt een bericht.
+
+De structuur van de diensten / handelingen zijn voor op
+uniforme wijze beschreven en hebben dezelfde kopjes (doel,
+gebruik bericht, inhoud bericht etcetera). Wanneer de inhoud
+leeg is maken wij onderscheid tussen geen en niet van
+toepassing;
+▪
+4
+
+Algemeen
+▪
+
+•
+
+5
+
+Verwerkingsregels
+
+•
+
+Geen. De stap gebeurt wel, maar er zijn bijvoorbeeld
+geen noemenswaardigheden o.i.d.
+Niet van toepassing. Het is onmogelijk om hier inhoud
+neer te zetten, omdat het voor deze dienst niet van
+toepassing is. Bijvoorbeeld: inhoud invoerbericht en
+gebruik invoerbericht bij diensten waarbij het initiatief
+bij de centrale voorzieningen ligt en er géén
+invoerbericht benodigd is als trigger.
+Indien de verwerkingsregel triviaal is wordt geen
+verwijzing opgenomen naar de bijlage. Ook de code vd
+verwerkingsregel wordt dan niet opgenomen. Als er wel
+sprake is van een afleiding of actie van de BRP bij een
+verwerkingsregel, dan wordt deze wel opgenomen (incl.
+code en verwijzing naar bijlage). Bijvoorbeeld: de
+verwerkingsregel afnemerindicatie is niet opgenomen,
+omdat deze voor zichzelf spreekt.
+Let op formulering bij het kopje verwerkingsregels. Niet
+in verleden tijd, maar toekomende tijd formuleren. De
+acties moeten immers nog plaats vinden en het kopje
+“resultaat beschrijft de eindsituatie (postconditie), dus:
+o “De gegevens worden opgenomen in de groep
+XXX” in plaats van “de gegevens zijn
+opgenomen in de groep XXX”
+
+Ontwerpkeuzes:
+
+6
+
+Inhoud bericht
+
+1. Bij koppelvlak levering nemen we voor alle
+gegevensgroepen die niet onder <persoon> vallen alle
+attributen op om verwarring te voorkomen. Bij persoon
+niet en volstaan we met de opmerking; afhankelijk van
+de gegevensautorisatie.
+1.
+1. We volgen – waar mogelijk de structuur
+van de berichten. Alle elementen en
+dergelijke drukken we uit in termen van
+de gegevensset LO.
+
+Bijlage A - Gegevenswoordenboek beschrijft alle objecten,
+elementen en andere (min of meer technische) gegevens die
+beschreven zijn in de vastgestelde gegevensset en/of die op
+de Koppelvlakken Bijhouding en Levering kunnen worden
+uitgewisseld. Dit impliceert dat bijvoorbeeld een stamtabellen
+"elementtabel" of "soort synchronisatie" ook in Bijlage A (maar
+wel als separate categorie) wordt beschreven. Immers,
+uitwisseling van die gegevens vindt plaats via de
+koppelvlakken.
+
+7
+
+==> de interne gegevensstructuren zijn daarbij deels
+achterwege gelaten o.a. verantwoording, objecten vs groepen,
+Gegevenswoordenboek indicatoren, ...
+==> het gegeven Relatie – Identiteit – Soort staat niet in de
+set, omdat we dat niet als expliciet gegeven verstrekken. Wel
+afgeleid in een bericht, namelijk:
+•
+
+persoon
+o partner
+▪ huwelijk
+▪ datum aanvang relatie
+▪ gemeente aanvang
+
+

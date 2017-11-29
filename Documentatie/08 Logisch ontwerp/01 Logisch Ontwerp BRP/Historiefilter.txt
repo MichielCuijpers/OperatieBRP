@@ -1,0 +1,278 @@
+Toelichting op de werking van het historiefilter
+De werking van het historiefilter wordt uitgelegd aan de hand van onderstaande case, beperkt tot
+filtering op de groep Adres. In werkelijkheid zullen alle gegevensgroepen op soortgelijke wijze
+worden gefilterd.
+
+In de bovenstaande case zijn vier administratieve handelingen door de centrale voorzieningen
+verwerkt:
+•
+Administratieve handeling ‘W’ betreft de ‘Immigratie’ en is geregistreerd op 01-01-2000 om
+14:03 uur. Hierbij is vastgelegd dat de persoon per 01-01-2000 op Neude 11 te Utrecht
+woont [A].
+•
+Administratieve handeling ‘X’ betreft ‘Verhuizing 1’ die is geregistreerd op 01-01-2010,
+10:12 uur. Per 01-01-2010 komt de persoon op Spui 43 te Den Haag te wonen. Het oude
+adres [A’] krijgt een datum einde geldigheid gelijk aan de datum aanvang geldigheid van
+het nieuwe adres (01-01-2010). De registratie van het oude adres zonder datum einde
+geldigheid [A] komt op hetzelfde tijdstip te vervallen (TsVerval: 01-01-2010, 10:12) als
+het tijdstip waarop het nieuwe adres [B] is geregistreerd (TsReg: 01-01-2010, 10:12).
+•
+Administratieve handeling ‘Y’ betreft een doorgevoerde correctie op het adres Spui 43 te
+Den Haag. Bij aangifte van ‘Verhuizing 2’ (zie handeling ‘Z’) bleek dat voor het bestaande
+adres de huisletter ‘B’ ontbrak. Deze is daarom alsnog toegevoegd aan het adres [C]. Deze
+correctie vond plaats op 01-01-2015, 11:07. Daarmee kwam de registratie van het oude
+adres [B] zonder huisletter en zonder datum einde geldigheid op hetzelfde tijdstip te
+vervallen (TsVerval: 01-01-2015, 11:07).
+•
+Administratieve handeling ‘Z’ betreft ‘Verhuizing 2’ per 1-1-2015 naar Uithoorn. Het oude
+adres krijgt een datum einde geldigheid [C’] gelijk aan de datum aanvang geldigheid van
+het nieuwe adres (1-1-2015). De registratie van het oude adres zonder datum einde
+geldigheid [C] komt op hetzelfde tijdstip te vervallen (TsVerval: 01-01-2015, 11:12) als
+het tijdstip waarop het nieuwe adres [D] is geregistreerd (TsReg: 01-01-2015, 11:12).
+Voor een partij kan binnen de centrale voorzieningen voor wat betreft het verstrekken van
+historische gegevens per gegevensgroep worden ingesteld welke autorisatie van toepassing is (zie
+tevens paragraaf 3.3.1.2):
+•
+Geen historie autorisatie levert uitsluitend de actuele gegevens [D];
+
+1
+
+•
+•
+
+Materiële historie autorisatie, levert naast de actuele gegevens [D] tevens de beëindigde
+gegevens [A’] en [C’];
+Formele historie autorisatie, levert naast de actuele gegevens [D] tevens de vervallen
+gegevens [A], [B] en [C].
+
+Deze autorisatie wordt opgegeven middels de bij de gegevensgroep aanwezige indicatoren
+materieel? (MH) en formeel? (FH). Afhankelijk van de vulling van deze indicatoren wordt de historie
+autorisatie als volgt vorm gegeven:
+
+Voorkomen
+
+A
+A’
+B
+C
+C’
+D
+
+FH: Uit
+MH: Uit
+(Geen)
+X
+
+Autorisatie-instelling
+FH: Aan
+FH: Uit
+MH: Uit
+MH: Aan
+(Formeel)
+(Materieel)
+X
+X
+X
+X
+X
+X
+X
+
+FH: Aan
+MH: Aan
+(Materieel/Formeel)
+X
+X
+X
+X
+X
+X
+
+Voor afnemers geldt dat zij zijn geautoriseerd voor één van bovenstaande opties. Voor bijhouders
+geldt geen historie autorisatie, zij zijn altijd geautoriseerd voor materiële – en formele historie.
+De geautoriseerde partij zal niet altijd geïnteresseerd zijn in alle mogelijk te leveren gegevens.
+Vaak zullen alleen de actuele en beëindigde gegevens (Materiële historie) voldoen aan de
+informatiebehoefte van de bevragende partij. In andere gevallen kan de geautoriseerde partij een
+specifieke vraag hebben over de formele historie, bijvoorbeeld wat op 23 maart 2013 het geldige
+adres was volgens de destijds in de centrale voorzieningen bekende gegevens. Het historiefilter
+kan helpen om in dit soort gevallen alleen de voor de geautoriseerde partij relevante gegevens in
+het bevragingsresultaatbericht op te nemen.
+Om de historische uitvraag te beperken is het historiefilter van toepassing op het bevragings- of
+selectieverzoek. Deze kent een drietal parameters, die aan de hand van een aantal voorbeeld
+uitvragingen worden toegelicht op de hierboven gevisualiseerde case.
+Een door de afnemer opgegeven historiefilter moet vallen binnen de voor de afnemer geldende
+autorisaties. Als de afnemer een ruimer historiefilter opgeeft, dan zal deze wel worden toegepast,
+maar zal het resultaat beperkt worden tot die gegevens waarvoor de afnemer autorisatie heeft.
+Voor een bijhouder gelden geen autorisatierestricties op het historiefilter.
+Het historiefilter kent de volgende drie parameters:
+1. Peilmoment materieel resultaat
+Met deze parameter kan door de geautoriseerde partijen de materiële peildatum worden
+opgegeven op basis waarvan de centrale voorzieningen de op dat moment geldige gegevens
+verzamelen en in het resultaatbericht opnemen.
+2. Peilmoment formeel resultaat
+Met deze parameter kan door de geautoriseerde partijen het formele tijdstip (datum en tijd)
+worden opgegeven op basis waarvan de centrale voorzieningen de op dat moment bekende
+gegevens verzamelen en in het resultaatbericht opnemen.
+Let op:
+Dit is het enige peilmoment, dat daadwerkelijk een tijdstip aangeeft in plaats van
+een datum. Zie paragraaf 8.3.1.3 voor een toelichting hierop.
+3. Historievorm
+Met deze parameter kan door de geautoriseerde partijen worden aangegeven welke
+historievorm zij in het resultaatbericht willen ontvangen.
+
+2
+
+De mogelijke waarden van de parameter Historievorm zijn:
+Waarde
+
+Omschrijving
+
+“Geen”
+
+Geen historie. De afnemer ontvangt alleen de op
+peilmoment geldige gegevens.
+Alleen materiële historie. De afnemer ontvangt zowel de
+op peilmoment geldige als de daarvoor beëindigde
+gegevens; ook wel de tot en met de peildatum geldige
+gegevens genoemd.
+Zowel materiële als formele historie. De afnemer
+ontvangt alle gegevens zoals die tot en met de
+peilmomenten bekend en geldig zijn of zijn geweest
+(inclusief eerder beëindigde en eerder vervallen
+gegevens).
+
+“Materieel”
+
+“MaterieelFormeel”
+
+Als er voor geen van de drie parameters een waarde is opgegeven, dan wordt het historiefilter in
+het geheel niet toegepast. Dit zal dus resulteren in het leveren van alle via autorisatie toegestane
+historische gegevens.
+Als tenminste één van deze drie parameters is gevuld, dan treedt het historiefilter in werking,
+waarvoor een standaardwaarde wordt gebruikt voor de niet opgegeven parameter(s).
+De te hanteren standaardwaarden zijn:
+•
+Peilmoment materieel resultaat krijgt de waarde “systeemdatum”.
+•
+Peilmoment formeel resultaat krijgt de waarde “systeemtijdstip”.
+•
+Historievorm krijgt de waarde “Geen”.
+Onderstaand zijn zes voorbeeld situaties voor het gebruik van het historiefilter opgenomen. Deze
+voorbeelden plotten verschillende situaties op de case, waarbij de werking en het resultaat van het
+gebruik van de parameters wordt toegelicht.
+In de voorbeelden wordt het resultaat getoond van de opgegeven parameters van het historiefilter:
+Als er geen enkele parameter is opgegeven, dan wordt geen filtering
+toegepast;
+Als historievorm de waarde ”Geen” bevat, dan zal een peilmoment (een punt
+als datum) worden geselecteerd;
+Als de historievorm de waarde “Materieel” bevat, dan zal een periode (tijdlijn
+tot aan de punt op de materiële tijdsas) tot en met het opgegeven
+peilmoment worden geselecteerd;
+Als de historievorm de waarde “MaterieelFormeel” heeft, dan zal een vlak
+(gearceerd vlak met de punt als einddatum van zowel de formele als
+materiële tijdsas) tot en met het opgegeven peilmoment worden
+geselecteerd.
+
+3
+
+Historievorm = “Geen”
+Als in het bericht de Historievorm met de waarde “Geen” is opgegeven, dan worden alleen de
+gegevens die geldig waren op het opgegeven Peilmoment materieel resultaat zoals bekend in de
+centrale voorzieningen op Peilmoment formeel resultaat geleverd (dus maar één voorkomen van
+elke groep). Als geen van beide peilmomenten is opgegeven, dan worden alleen de op de
+verwerkingstijdstip actuele gegevens geleverd.
+Indien er onzekerheid bestaat over de geldigheid van een voorkomen, door bijvoorbeeld een deels
+onbekende datum, dan worden beide voorkomens waar de onzekerheid over bestaat geleverd.
+Zie tevens paragraaf 7.4.10. Het gevolg hiervan is dat er soms twee voorkomens geleverd worden
+waar er op voorhand één voorkomen verwacht wordt.
+Voorbeeld waarbij datums met onzekerheid leiden tot twee te leveren voorkomens:
+Een adreswijziging van A naar B, waarvoor geldt dat:
+Datum aanvang geldigheid (DAG) van adres A = 01-01-2000 en datum einde geldigheid
+(DEG) van adres A = 00-04-2014.
+DAG van adres B = 00-04-2014 en er is geen DEG van adres B.
+Peilmoment materieel resultaat is opgegeven met de waarde 13-04-2014.
+
+Dan zullen beide adressen worden geselecteerd, zijn mogelijk beiden geldig op 13-04-2014.
+Voorbeeld 1: Historievorm = “Geen”, Peilmomenten leeg. De gestelde vraag is daarmee feitelijk:
+waar woont de persoon nu, met de kennis van dit moment? Het antwoord is dan ‘Bertram 157,
+Uithoorn’ (het actuele adres).
+
+4
+
+Voorbeeld 2: Door wel een waarde mee te geven in de peilmomenten, kan de gebruiker een ander
+voorkomen selecteren. In het voorbeeld Peilmoment formeel resultaat 21-01-2016, 00:00 uur en
+Peilmoment materieel resultaat 17-03-2008. De gestelde vraag is dan: waar woonde de persoon op
+17-03-2008, met de kennis van de centrale voorzieningen op 21-01-2016 om 00:00 uur? Het
+antwoord is dan ‘Neude 11, Utrecht’. Door de aanwezigheid van een datum einde geldigheid
+(aangeduid als DEG) is zichtbaar dat de persoon daar inmiddels niet meer woont. Door de
+afwezigheid van een tijdstip verval (aangeduid als TsVerval) is bovendien af te leiden dat deze
+gegevens ook nog geldig zijn op 17-03-2008.
+
+5
+
+Historievorm = “Materieel”
+Als in het bericht de Historievorm met de waarde “Materieel” is opgegeven, dan wordt de materiële
+tijdslijn geleverd tot en met Peilmoment materieel resultaat zoals bekend in de centrale
+voorzieningen op Peilmoment formeel resultaat. Als geen van de peilmomenten in het
+bevragingsbericht zijn opgenomen, dan wordt de complete materiële historie van de persoon
+geleverd zoals die op het moment van bevragen in de centrale voorzieningen bekend is.
+Voorbeeld 3: Historievorm = “Materieel” zonder opgegeven peilmomenten. De vraag aan de
+centrale voorzieningen is dan: wat is de adreshistorie van de persoon volgens de kennis op het
+verwerkingsmoment in de centrale voorzieningen?
+Dit levert drie adressen op:
+•
+[A’] Neude 11, Utrecht, geldig vanaf 01-01-2000 tot en met 01-01-2010;
+•
+[C’] Spui 43 B, Den Haag, geldig vanaf 01-01-2010 tot en met 01-01-2015;
+•
+[D] Bertram 157, Uithoorn, geldig vanaf 01-01-2015.
+
+6
+
+Voorbeeld 4: Ook hier is het mogelijk afwijkende peilmomenten op te nemen in het
+bevragingsbericht. Bijvoorbeeld: hoe zag de historie tot 2014 er volgens de centrale voorzieningen
+uit op 01-01-2014?
+Opgaaf van de peilmomenten is dan: Peilmoment materieel resultaat 01-01-2014 en Peilmoment
+formeel resultaat 01-01-2014, om 00:00 uur.
+In dit geval wordt Neude 11, Utrecht en Spui 43, Den Haag (zonder huisletter) gevonden. Het
+laatste voorkomen heeft bovendien een nadere aanduiding verval met de waarde “onjuist”, hieruit
+blijkt dat dit adres is gecorrigeerd en daarmee de vervallen waarden foutief zijn bevonden.
+
+7
+
+Historievorm = “MaterieelFormeel”
+Als in het bericht de Historievorm met de waarde “MaterieelFormeel” is opgegeven, dan worden
+alle voorkomens geleverd die in de centrale voorzieningen geregistreerd zijn tot en met
+Peilmoment formeel resultaat met een geldigheid die betrekking heeft op de periode tot en met het
+Peilmoment materieel resultaat.
+Voorbeeld 5: Als er geen peilmomenten in het bevragingsbericht zijn opgenomen, dan leveren de
+centrale voorzieningen alle adresgegevens op die beschikbaar zijn. In de onderstaande figuur is
+aangegeven dat alle voorkomens die overlap hebben met het gearceerde vlak (zoekgebied
+peilmoment parameters) worden geleverd.
+
+8
+
+Door in het bevragingsbericht de specifieke peilmomenten op te geven, kan de ‘punt’ worden
+verlegd (waarmee het zoekgebied wordt verkleind). Hiermee kan de bevraging van de historie
+worden beperkt tot een kleiner gebied dan zonder opgaaf van de peilmomenten.
+Voorbeeld 6: de peilmomenten zijn als volgt opgegeven: Peilmoment materieel resultaat 01-032012 en Peilmoment formeel resultaat 01-06-2014 om 00:00 uur. Het verzoek aan de centrale
+voorzieningen is hiermee: geef de adreshistorie van een persoon tot en met 01-03-2012 zoals die
+in de centrale voorzieningen is geregistreerd tot en met 01-06-2014 om 00:00 uur.
+Hierdoor vallen de ‘witte’ voorkomens compleet buiten het geselecteerde zoekgebied en zullen dus
+niet worden geleverd.
+Aan de hand van de opgegeven peilmomenten (zoekgebied peilmoment parameters) wordt een
+aantal te leveren gegevens geselecteerd, te weten:
+•
+[A] het op 01-01-2010 om 10:12 vervallen adres Neude 11, Utrecht dat geldig was vanaf
+01-01-2000;
+•
+[A’] Neude 11, Utrecht, geldig vanaf 01-01-2000 tot en met 01-01-2010;
+•
+[B] het op 01-01-2015 om 11:07 vervallen adres Spui 43, Den Haag dat geldig was vanaf
+01-01-2010. Dit voorkomen heeft bovendien een nadere aanduiding verval met de waarde
+“onjuist”, hieruit blijkt dat dit adres is gecorrigeerd en daarmee de vervallen waarden
+foutief zijn bevonden.
+
+9
+
+

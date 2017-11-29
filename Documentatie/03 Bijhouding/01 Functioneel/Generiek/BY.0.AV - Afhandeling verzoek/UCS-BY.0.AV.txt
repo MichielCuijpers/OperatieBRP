@@ -1,0 +1,1476 @@
+UCS BY.0.AV - Afhandeling verzoek
+Versie
+
+2.29
+
+Datum
+
+30 juni 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+12-07-2016
+
+2.0
+
+Geheel nieuwe versie n.a.v. verbetering bestaande
+documentatie.
+
+Operatie BRP
+
+18-07-2016
+
+2.1
+
+Reviewopmerkingen Operatie BRP verwerkt
+
+Operatie BRP
+
+19-07-2016
+
+2.2
+
+Regels uit hoofdstuk 3 verwijderd en een verwijzing
+opgenomen naar de nieuwe bijlage A (uit BMR gegenereerd).
+In paragraaf 4.3 “reden notificatie” uit de opsomming
+verwijderd (is vervallen) en de figuren aangepast in
+paragraaf 3.2 (tekst bij splitsing “Bijhoudingsnotificatie”
+aangescherpt).
+
+Operatie BRP
+
+10-08-2016
+
+2.3
+
+Platen (in paragrafen 1.2 en 3.2) aangepast door bij BY.1.RR
+een asteriks (*) op te nemen. Tevens de tekst in paragraaf
+3.3. aangepast van BY.1.RR en de asterisk toegelicht.
+
+Operatie BRP
+
+16-08-2016
+
+2.4
+
+Use Case beschrijving van BY.1.BV opgenomen in paragraaf
+3.3, tevens de naam van de Use Case en de schema’s
+aangepast. Verwijzing naar BY.0.VZ opgenomen.
+
+Operatie BRP
+
+16-08-2016
+
+2.5
+
+Use Case beschrijving van BY.1.BA opgenomen in paragraaf
+3.3, tevens de schema’s aangepast (asteriss toegevoegd)
+
+Operatie BRP
+
+17-08-2016
+
+2.6
+
+Tekst + schema m.b.t. XSD validatie (AL.1.XV) aangepast.
+Scenario’s (Hoofdstuk 5) verwijderd.
+
+Operatie BRP
+
+17-08-2016
+
+2.7
+
+Overzicht bedrijfsregels in Bijlage A opnieuw gegenereerd.
+
+Operatie BRP
+
+18-08-2016
+
+2.8
+
+Tekst en schema voor BY.1.CI aangepast.
+
+Operatie BRP
+
+19-08-2016
+
+2.9
+
+Hoofstuk 2 Invoer ingevuld.
+
+Operatie BRP
+
+22-08-2016
+
+2.10
+
+Tekst in par. 3.3 van BY.1.AA en BY.1.CI uitgebreid met de
+verwerking van bijhoudingsvoorstellen waarbij regels zijn
+opgegeven ter deblokkering. Tevens de bijlage A voorzien
+van de regels (ontbrak in versie 2.9)
+
+Operatie BRP
+
+24-08-2016
+
+2.11
+
+In overleg met Operatie BRP besloten om de Use Case regels
+(bijlage A) uit deze UC te verwijderen en op te nemen
+(middels BMR generatie) in de bijlagen van BYM.0.xx
+
+Operatie BRP
+
+25-08-2016
+
+2.12
+
+Hoofstuk 2 herschreven met verwijzingen naar het LO.
+
+Operatie BRP
+
+05-09-2016
+
+2.13
+
+Tekst in paragraaf 3.3 aangepast n.a.v. review Operatie BRP
+
+Operatie BRP
+
+23-09-2016
+
+2.14
+
+Reviewcommentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+27-09-2016
+
+2.15
+
+Titel van document gewijzigd: min-teken tussen code en
+omschrijving geplaatst.
+Kolom Datum uit tabel met reviewhistorie verwijderd
+
+Operatie BRP
+
+UCS BY.0.AV – Afhandeling verzoek
+
+Referenties bijgewerkt
+03-11-2016
+
+2.16
+
+Reviewcommentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+07-11-2016
+
+2.17
+
+Use case diagram gecorrigeerd. Alle specifieke UC’s moeten
+een groene kleur hebben.
+
+Operatie BRP
+
+25-11-2016
+
+2.18
+
+Reviewcommentaar Operatie BRP verwerkt. O.a.
+migratievoorziening beschreven met eigen activiteitdiagram.
+BZVU toegevoegd.
+
+Operatie BRP
+
+29-11-2016
+
+2.19
+
+Reviewcommentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+13-12-2016
+
+2.20
+
+Bij UC BY.1.MN – Maak bijhoudingsnotificatie beschreven dat
+ook een bijhoudingsnotificatie naar de GBA geboortegemeente wordt gestuurd.
+
+Operatie BRP
+
+17-01-2017
+
+2.21
+
+Referenties verbeterd.
+
+Operatie BRP
+
+06-02-2017
+
+2.22
+
+Usescases die in dit document uitgewerkt zijn werden
+Operatie BRP
+aangeduid met een *. De * is verwijderd bij deze usecases.
+In plaats hiervan zijn de usescases die niet in dit document
+(maar wel in een andere document) uitgewerkt zijn, voorzien
+van een
+
+symbool.
+
+05-04-2017
+
+2.23
+
+Ook bij andere bijhoudingssituaties dan ‘Indiener is
+bijhoudingspartij’ kan de bijhoudingsplanpersoon onder de
+indienende partij vallen (bijv. bij situatie ‘Opgeschort’). Bij
+het bepalen of bijhoudingsnotificaties moeten worden
+verstuurd werd naar de bijhoudingssituatie gekeken. Dat is
+niet juist. Het is nu aangepast, zodat naar de partij wordt
+gekeken i.p.v. naar de bijhoudingssituatie.
+
+Operatie BRP
+
+07-06-2017
+
+2.24
+
+Referenties bijwerkt n.a.v. wijzigen van code van modules
+
+Operatie BRP
+
+08-06-2017
+
+2.25
+
+Paragraaf 3.3 uitgebreid: notificaties moeten ook naar GBA
+worden verstuurd bij wijziging A-nr.
+
+Operatie BRP
+
+12-06-2017
+
+2.26
+
+Reviewcommentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+14-06-2017
+
+2.27
+
+Reviewcommentaar Operatie BRP verwerkt (BY.1.MN).
+
+Operatie BRP
+
+26-06-2017
+
+2.28
+
+Document aangepast m.b.t. documentatierichtlijnen.
+
+Operatie BRP
+
+30-06-2017
+
+2.29
+
+Reviewcommentaar Operatie BRP verwerkt (BY.1.MN).
+
+Operatie BRP
+
+Reviewhistorie
+Versie Reviewer
+2.11
+
+Operatie BRP (n.a.v. concept ‘Aspectbeschrijving Bedrijfsregels’)
+
+2.13
+
+Operatie BRP
+
+2.15
+
+Operatie BRP
+
+2.18
+
+Operatie BRP
+
+2.25
+
+Operatie BRP
+
+2.26
+
+Operatie BRP
+
+2.28
+
+Operatie BRP
+
+Status: Definitief , versie: 2.29
+
+Pagina 2 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+Inhoudsopgave
+1
+
+Inleiding ................................................................................................................... 4
+1.1
+1.2
+1.2.1
+1.2.2
+1.3
+1.4
+
+2
+
+Invoer ....................................................................................................................... 7
+2.1
+2.2
+2.3
+2.4
+2.5
+2.6
+2.7
+2.7.1
+2.7.2
+
+3
+
+Inleiding ............................................................................................................................ 13
+Schematische weergave....................................................................................................... 14
+Activiteitendiagram met de flow van een Bijhoudingsvoorstel (BRP Bijhouder) ........................ 14
+Activiteitendiagram met de flow van een Prevalidatieverzoek (BRP Bijhouder) ........................ 15
+Activiteitendiagram met de flow van een GBA bijhoudingsvoorstel (migratievoorziening) ......... 16
+Beschrijving ....................................................................................................................... 16
+Bedrijfsregels ..................................................................................................................... 20
+
+Uitvoer .................................................................................................................... 22
+4.1
+4.2
+4.3
+4.4
+
+A.
+
+Beschrijving .........................................................................................................................7
+Indeling van het bijhoudingsbericht .........................................................................................7
+Prevalidatie of Bijhouding.......................................................................................................9
+BRP Bijhoudingsbericht ..........................................................................................................9
+GBA Bijhoudingsbericht ....................................................................................................... 10
+Toelichting op het bijhoudingsbericht..................................................................................... 10
+Berichtelement ‘Bezien vanuit persoon’ .................................................................................. 10
+Wanneer van toepassing? ................................................................................................ 11
+Voorbeeld ...................................................................................................................... 11
+
+Verwerking ............................................................................................................. 13
+3.1
+3.2
+3.2.1
+3.2.2
+3.2.3
+3.3
+3.4
+
+4
+
+Doel ....................................................................................................................................4
+Terminologie ........................................................................................................................4
+Migratievoorziening ...........................................................................................................4
+Actoren ...........................................................................................................................4
+Functionele context ...............................................................................................................5
+Referenties ..........................................................................................................................6
+
+Beschrijving ....................................................................................................................... 22
+Bijhoudingsresultaatbericht .................................................................................................. 22
+Bijhoudingsnotificatie .......................................................................................................... 22
+Bijzonderheden................................................................................................................... 22
+
+Berichtnaam bijhoudingsberichten ......................................................................... 23
+
+Status: Definitief , versie: 2.29
+
+Pagina 3 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+1 Inleiding
+1.1
+
+Doel
+
+Deze use case heeft tot doel om een van een BRP Bijhouder of migratievoorzieing ontvangen
+verzoek (d.w.z. bijhoudingsvoorstel of prevalidatieverzoek) af te handelen. Voor elk van deze
+verzoeken wordt een aantal stappen doorlopen, waarna de indiener van het verzoek via een
+‘Bijhoudingsresultaatbericht’ op de hoogte wordt gesteld van de afhandeling van het verzoek.
+Eventuele andere betrokken partijen worden via een ‘Bijhoudingsnotificatie’ op de hoogte gesteld.
+
+1.2
+1.2.1
+
+Terminologie
+Migratievoorziening
+
+Tijdens de duale periode vindt er communicatie plaats tussen gemeentes die werken in het GBAstelsel en gemeenten die werken in het BRP-stelsel. Berichten die worden verstuurd door een
+gemeente die gebruik maakt van de GBA naar een gemeente die gebruik maakt van de BRP
+worden onderschept en omgezet van het GBA formaat naar het BRP formaat.
+Het onderscheppen en omzetten van de berichten, alsmede het verzenden van omgezette
+berichten en het ontvangen van berichten wordt uitgevoerd door de zogenaamde
+migratievoorziening. Naast deze taken heeft de migratievoorziening ook nog andere taken
+waaronder het synchroniseren van persoonslijsten tussen GBA en BRP.
+Om te communiceren met de BRP maakt de migratievoorziening gebruik van specifieke
+administratieve handelingen waarvan de naam doorgaans begint met de prefix ‘GBA-’. Dit zijn
+interne administratieve handelingen die alleen ter beschikking worden gesteld aan de
+migratievoorziening en niet aan andere bijhoudingspartijen. Deze zijn terug te vinden in de
+betreffende UCS documenten, mits van toepassing.
+1.2.2
+
+Actoren
+
+Wanneer de bijhouder die het verzoek indient een partij is in het BRP-stelsel, dan wordt dit een
+BRP Bijhouder genoemd.
+Wanneer de bijhouder die het verzoek indient een partij is in het GBA-stelsel (en dus nog niet
+aangesloten is op het BRP-stelsel), dan ontvangt de use case ‘Afhandeling verzoek’ het bericht van
+de migratievoorziening. De BRP kan namelijk niet rechtstreeks met GBA-bijhoudingspartijen
+communiceren. Dat verloopt altijd via de migratievoorziening.
+In feite is er dus sprake van twee actoren: de BRP Bijhouder en de migratievoorziening. Deze
+worden samengevat als één actor: BRP Bijhouder / migratievoorziening.
+Prevalidatieverzoeken zijn altijd van BRP-bijhouders afkomstig en kunnen niet worden ontvangen
+van de migratievoorziening.
+
+Status: Definitief , versie: 2.29
+
+Pagina 4 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+1.3
+
+Functionele context
+
+NB Een vork achter de use case naam ( ) geeft aan dat de uitwerking in een afzonderlijke use
+case specification is opgenomen.
+
+Status: Definitief , versie: 2.29
+
+Pagina 5 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+1.4
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Gegevenswoordenboek
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+UCS BY.0.VZ - Verzend bijhoudingsnotificatie
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Logisch Ontwerp Basisregistratie Personen
+
+Operatie BRP
+
+-
+
+-
+
+4
+
+BY.0.HGP - Huwelijk en Geregistreerd partnerschap
+
+Operatie BRP
+
+-
+
+-
+
+5
+
+Aspectbeschrijving – Controles
+
+Operatie BRP
+
+-
+
+-
+
+6
+
+Aspectbeschrijving – Authenticatie
+
+Operatie BRP
+
+-
+
+-
+
+7
+
+UCS BY.1.ON – Ontrelateren
+
+Operatie BRP
+
+-
+
+-
+
+8
+
+UCS BY.1.MP – Maak bijhoudingsplan
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief , versie: 2.29
+
+Pagina 6 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+2 Invoer
+2.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft het bijhoudingsbericht, dat gebruikt wordt om een bijhoudingsvoorstel of
+prevalidatieverzoek in te kunnen dienen. Alle bijhoudingsberichten zijn op dezelfde manier
+opgebouwd. De onderdelen van deze generieke opbouw worden hier besproken.
+De generieke aspecten van het berichtmodel BRP worden beschreven in hoofdstuk 8
+‘Berichtstructuur’ het Logisch Ontwerp Basisregistratie Personen [3]. Voor de algemene
+berichtkenmerken, interactiepatronen en de algemene berichtstructuur wordt in de volgende
+paragrafen verwezen naar paragrafen in dit hoofdstuk.
+
+2.2
+
+Indeling van het bijhoudingsbericht
+
+Een ‘bijhoudingsbericht’ is een berichtsoort van het berichttype ‘verzoekbericht’. Daarbij wordt
+middels de Parameter ‘Verwerkingswijze’ onderscheid gemaakt tussen een bijhoudingsvoorstel of
+prevalidatieverzoek. De berichtsoortcategorie is ‘Bijhouding’; dit wordt bepaald aan de hand van
+‘Soort bericht.Naam’ die begint met 'bhg' (zie ook bijlage A).
+Een overzicht en beschrijving van alle berichttypen staat in paragraaf 8.1.4 ‘Berichttypen’ en van
+de berichtsoorten in paragraaf 8.1.5 ‘Berichtsoorten’ in het Logisch Ontwerp Basisregistratie
+Personen [3]. Figuur 1 geeft de berichtsamenstelling van de berichtsoort ‘Bijhoudingbericht’ met
+generieke berichtdelen weer. Een overzicht van de berichtsamenstelling van alle berichtsoorten
+staat in paragraaf 8.3.3 ‘Berichtsamenstelling’ en de beschrijving van de generieke berichtdelen
+staat in paragraaf 8.3.4. ‘Generieke berichtdelen’ van het Logisch Ontwerp Basisregistratie
+Personen [3].
+
+Legenda
+Berichtdeel (verplicht)
+
+Berichtdeel (optioneel)
+
+Hiërarchie
+berichtdelen
+...
+...
+
+Figuur 1 Berichtsamenstelling van het bijhoudingsbericht
+Hierna volgt een beschrijving van de vulling van de berichtelementen in de berichtdelen voor zover
+deze gelijk is voor een BRP en GBA bijhoudingsbericht. De berichtdelen waarvoor de beschrijving
+niet gelijk is voor een BRP en GBA bijhoudingsbericht, dit betreft de berichtdelen ‘Stuurgegevens’
+
+Status: Definitief , versie: 2.29
+
+Pagina 7 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+en aan het ‘Stuurgegeven’ ‘Zendende systeem’ kan vastgesteld worden of het een BRP- of GBAbijhoudingsbericht betreft.
+Parameters, zijn opgenomen in paragraaf 2.4 BRP Bijhoudingsbericht en 2.5 GBA
+Bijhoudingsbericht.
+
+Administratieve handeling (AH)
+Berichtelement
+
+Vulling
+
+Naam
+
+De naam zoals bekend is in de BRP van de administratieve handeling
+die tot nieuwe of gewijzigde persoonsgegevens leidt.
+
+Partijcode
+
+De code zoals bekend is in de BRP van de bijhoudingspartij die de
+administratieve handeling aan de centrale voorzieningen aanbiedt.
+
+Toelichting ontlening
+
+Een nadere toelichting op de ontlening van de gegevens, zoals deze
+via de administratieve handeling ter verwerking in de centrale
+voorzieningen zijn aangeboden.
+
+Bezien vanuit persoon
+
+Een lijst van personen voor wie de AH van toepassing is. De bijhouding
+zal zich beperken tot deze personen. Andere (gerelateerde) personen
+op wie de AH normaliter ook betrekking hebben worden bij de
+verwerking van de bijhouding buiten beschouwing gelaten.
+Dit element is niet op alle AH’s van toepassing. Per UCS wordt
+aangegeven of het element van toepassing is.
+Voor meer informatie zie paragraaf 2.7.
+
+Gedeblokkeerde meldingen
+Berichtelement
+
+Vulling
+
+ReferentieID
+
+De CommunicatieID van de overeenkomstige deblokkeerbare melding
+in het ingekomen bijhoudingsbericht
+
+Regel
+
+Een code zoals bekend is in de BPR die aangeeft welke controleregel
+genegeerd moet worden.
+
+Melding
+
+De tekst die de melding nader omschrijft.
+
+Bronnen
+Berichtelement
+
+Vulling
+
+Soort naam
+
+De naam zoals bekend is in de BRP van het soort document dat als
+bron is gebruikt.
+
+Identificatie
+
+De identificatie van het document, zoals deze is toegekend door de
+partij die het document heeft opgesteld of in beheer heeft.
+
+Aktenummer
+
+Het aktenummer van de Burgerlijke stand; alleen in gebruik voor
+Nederlandse akten.
+
+Omschrijving
+
+Een nadere omschrijving van het document.
+
+Partijcode
+
+De partij die het document heeft opgesteld en/of in beheer heeft. Bij
+Nederlandse akten is dit de registergemeente. Bij overige documenten
+is dit de partij die gegevens aan deze bron heeft ontleend en het
+document heeft gearchiveerd.
+
+Status: Definitief , versie: 2.29
+
+Pagina 8 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+Acties en Bronverwijzingen
+Berichtelement
+
+Vulling
+
+Soort naam
+
+De naam zoals bekend bij de BRP van de soort actie, zoals die door de
+centrale voorzieningen wordt uitgevoerd.
+
+Datum aanvang geldigheid
+
+De datum aanvang geldigheid waarmee de gegevens door de
+betreffende actie in de centrale voorzieningen worden opgenomen.
+Niet van toepassing op gegevensgroepen met formele historie.
+
+Datum einde geldigheid
+
+De datum einde geldigheid waarmee de gegevens door de betreffende
+actie in de centrale voorzieningen worden opgenomen. Niet van
+toepassing op gegevensgroepen met formele historie.
+
+Bronverwijzing
+
+Een verwijzing naar de bronnen waaraan de gegevens die door de
+actie worden geregistreerd zijn ontleend.
+
+Persoon / Relatie
+Dit berichtdeel bevat de gegevens van objecten met bijbehorende attributen die bijgehouden
+moeten worden. Welke objecten en bijbehorende attributen dit betreft hangt af van de betreffende
+administratieve handeling en de vulling hiervan is beschreven bij de beschrijving van deze
+administratieve handeling.
+
+2.3
+
+Prevalidatie of Bijhouding
+
+Voor prevalidaties en bijhoudingen wordt dezelfde berichtsoort ‘bijhoudingsbericht’ gebruikt. Het
+onderscheid tussen een prevalidatie en een bijhouding wordt gemaakt door middel van de
+parameter ‘verwerkingswijze’. Als deze parameter de waarde ‘Prevalidatie’ heeft is het
+bijhoudingsbericht ter prevalidatie aangeboden, anders heeft de parameter de waarde ‘Bijhouding’.
+Voor bijhoudingen afkomstig van de migratievoorziening heeft deze parameter altijd de waarde
+‘Bijhouding’.
+
+2.4
+
+BRP Bijhoudingsbericht
+
+Een bijhouder die werkt in het BRP stelsel zal een ‘bijhoudingsbericht’ sturen naar de BRP om een
+bijhoudingsvoorstel of prevalidatieverzoek in te dienen. Voor zover de vulling niet generiek is, zoals
+hiervoor beschreven, wordt per berichtelement beschreven wat de ‘specifieke’ vulling moet zijn van
+deze berichten. De berichtelementen zijn gegroepeerd per generiek berichtdeel die relevant zijn
+voor de berichtsoort bijhoudingsbericht.
+Stuurgegevens
+Berichtelement
+
+Vulling
+
+Zendende partij
+
+De partijcode van de geautoriseerde partij zoals bekend bij de centrale
+voorzieningen namens wie het bericht wordt verzonden.
+
+Zendende systeem
+
+De naam van het systeem waarmee de zendende partij het bericht
+verstuurt.
+
+Referentienummer
+
+Gegenereerde unieke ID in UUID-formaat versie 4
+
+Tijdstip
+
+Systeem datum/tijd bij het aanmaken van het bericht volgens ISO8601.
+Formaat: JJJJ-MM-DDTuu:mm:ss.dddZ of
+JJJJ-MM-DDTuu:mm:ss.ddd+uu:mm
+Bijvoorbeeld: 2012-04-18T15:32:03.234Z of
+2012-04-18T15:32:03.234+01:00
+
+Status: Definitief , versie: 2.29
+
+Pagina 9 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+Parameters
+Berichtelement
+
+Vulling
+
+Verwerkingswijze
+
+‘Prevalidatie’ of ‘Bijhouding’
+
+2.5
+
+GBA Bijhoudingsbericht
+
+Zoals in de Inleiding gesteld worden berichten die worden verstuurd door een gemeente die
+gebruik maakt van de GBA naar een gemeente die gebruik maakt van de BRP, onderschept door de
+migratievoorziening die deze berichten omzet van GBA formaat naar BRP formaat. De berichten die
+moeten leiden tot een bijhouding in de BRP worden omgezet naar een ‘bijhoudingsbericht’. De
+indeling van dit bericht is dus gelijk aan de indeling van een ‘bijhoudingsbericht’ dat wordt
+ontvangen van een bijhouder die in het BRP-stelsel werkt.
+Hoewel de indeling van het ‘bijhoudingsbericht’ dus gelijk is, is de invulling dit niet. Prevalidatie is
+niet mogelijk voor bijhoudingsberichten die via de migratievoorziening worden ontvangen. Vanuit
+de migratievoorziening is namelijk geen synchrone terugkoppeling voorzien van het resultaat naar
+het GBA systeem. Het berichtdeel voor de gedeblokkeerde meldingen is dus ook niet van
+toepassing voor deze berichten omdat dit betrekking heeft op een prevalidatie. Verder is de vulling
+van de berichtelementen ‘Zendende partij’ en ‘Zendende systeem’ in de stuurgegevens specifiek.
+Stuurgegevens
+Berichtelement
+
+Vulling
+
+Zendende partij
+
+Partijcode van de Feitgemeente waar het GBA bericht vandaan komt.
+
+Zendende systeem
+
+Vaste waarde: ‘ISC’ (synoniem voor migratievoorziening).
+
+Referentienummer
+
+Gegenereerde unieke ID in UUID-formaat versie 4
+
+Tijdstip
+
+Systeem datum/tijd bij het aanmaken van het bericht volgens ISO8601.
+Formaat: JJJJ-MM-DDTuu:mm:ss.dddZ of
+JJJJ-MM-DDTuu:mm:ss.ddd+uu:mm
+Bijvoorbeeld: 2012-04-18T15:32:03.234Z of
+2012-04-18T15:32:03.234+01:00
+
+Parameters
+Berichtelement
+
+Vulling
+
+Verwerkingswijze
+
+‘Bijhouding’
+
+2.6
+
+Toelichting op het bijhoudingsbericht
+
+Bijlage A geeft een overzicht van alle berichtnamen van alle bijhoudingsberichten die van
+toepassing zijn voor deze use case.
+
+2.7
+
+Berichtelement ‘Bezien vanuit persoon’
+
+Met het berichtelement ‘bezien vanuit persoon’ (BZVU) kan het bijhoudingsvoorstel bewust
+asymmetrisch aangeboden worden.
+
+Status: Definitief , versie: 2.29
+
+Pagina 10 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+Het effect van de BZVU is dat er wordt ontrelateerd en de bijhouding alleen wordt doorgevoerd
+voor de personen die door de BZVU worden aangeduid.
+
+De BZVU kan worden opgegeven bij administratieve handelingen die betrekking hebben op
+bestaande symmetrische relaties, zoals ontbinding huwelijk, nietigverklaring huwelijk en omzetting
+huwelijk. Maar ook bij bijhouding van persoonsgegevens die op de persoonslijst van
+gerelateerde(n) staan, zoals bijvoorbeeld bij naamswijzigingen kan het een rol spelen.
+Dit berichtelement is nodig voor de volgende situaties:
+•
+•
+•
+
+2.7.1
+
+een partij die niet automatisch fiatteert wil/moet na ontvangst van de
+‘Bijhoudingsnotificatie’ de bijhouding alleen voor zijn eigen ingezetenen vastleggen;
+voor de verwerking in de BRP van een GBA-handeling die betrekking heeft op een relatie
+(deze hebben namelijk altijd betrekking op één ingeschrevene);
+in overige gevallen waarin de bijhouder bewust asymmetrie wil vastleggen (bijv. naar
+aanleiding van een rechterlijke uitspraak waaruit asymmetrie volgt).
+Wanneer van toepassing?
+
+De BZVU is niet voor elke handeling van toepassing. Het betreft uitsluitend handelingen waarbij
+(potentieel) meerdere persoonslijsten worden geraakt. Bijvoorbeeld bij de administratieve
+handeling Verhuizing binnengemeentelijk is er altijd slechts sprake van één persoonslijst die
+geraakt wordt. De BZVU heeft hier geen toegevoegde waarde en wordt dan ook niet toegestaan.
+Daarnaast zijn er soms meerdere mogelijkheden om hetzelfde doel te bereiken, waarvan het
+gebruiken van de BZVU één van de opties is. Het vastleggen van een asymmetrisch huwelijk zou
+bijvoorbeeld kunnen worden bereikt met een symmetrisch bericht in combinatie met BZVU. Echter,
+het huwelijk kan ook asymmetrisch vastgelegd worden door het meegeven van een pseudopersoon in het bericht.
+Afspraak is dat de BZVU bij een soort administratieve handeling alleen is toegestaan als er geen
+andere manier is om hetzelfde doel te bereiken.
+In elk use case specificatie document is een tabel in de appendix opgenomen waar aangegeven is
+voor welke administratieve handelingen de BZVU van toepassing is.
+2.7.2
+
+Voorbeeld
+
+Het voorbeeld heeft betrekking op de volgende familierechtelijke betrekking. Peter is kind van
+vader Josef en moeder Maria.
+
+Figuur 2 - Uitgangssituatie
+Marie wil haar naam wijzigen in Marietje. Wanneer deze AH symmetrisch wordt ingediend – BZVU
+is niet aanwezig – dan zal de situatie er na verwerking als volgt uit zien:
+
+Status: Definitief , versie: 2.29
+
+Pagina 11 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+Figuur 3 - BZVU niet aanwezig
+De naamswijziging is voor zowel de persoonslijst van Peter als die Maria doorgevoerd.
+Wanneer de gemeente van Maria echter niet wil dat deze wijziging op de persoonslijst van Peter
+wordt doorgevoerd, kan de gemeente van Maria de BZVU vullen met de objectsleutel van Maria. De
+administratieve handeling zal dan asymmetrisch worden verwerkt:
+
+Figuur 4 - BZVU gevuld met ‘Maria’
+De symmetrische relatie is ontrelateerd waardoor de naamswijziging alleen zichtbaar is op de
+persoonslijst van Maria. Op de persoonslijst van Peter staat nog steeds ‘Maria’ als de naam van zijn
+moeder.
+Opmerkingen:
+•
+
+•
+
+In bovenstaand voorbeeld wordt de persoonslijst van Josef niet geraakt. Immers hij
+heeft geen directe relatie met Maria. Alleen als Marie en Josef een huwelijk of
+geregistreerd partnerschap zouden hebben (gehad) zal ook de persoonslijst van Josef
+worden geraakt. De BZVU zal dan ook betrekking hebben op dit huwelijk/geregistreerd
+partnerschap. Deze zal ontrelateerd worden, omdat Josef niet in dit berichtelement is
+opgenomen.
+Zie UCS BY.1.ON – Ontrelateren [7] voor meer informatie over ontrelateren.
+
+Status: Definitief , versie: 2.29
+
+Pagina 12 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+3 Verwerking
+3.1
+
+Inleiding
+
+Voor het verwerken van een verzoekbericht met betrekking tot een bijhouding, onderscheiden we 3
+soorten:
+•
+Een BRP bijhoudingsvoorstel (verzonden door een BRP Bijhouder)
+•
+Een prevalidatieverzoek (verzonden door een BRP Bijhouder)
+•
+Een GBA bijhoudingsvoorstel (verzonden door de migratievoorziening)
+In het hieronder getoonde proces wordt rekening gehouden met het soort verzoekbericht. De in dit
+hoofdstuk opgenomen figuren en beschrijvingen geven dan ook aan, daar waar van toepassing,
+welke verschillen er bestaan in de verwerking van de verzoekberichten.
+NB Deze use case gaat ervan uit dat authenticatie al heeft plaats gevonden. Zie Aspectbeschrijving
+- Authenticatie [6].
+
+Status: Definitief , versie: 2.29
+
+Pagina 13 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+3.2
+3.2.1
+
+Schematische weergave
+Activiteitendiagram met de flow van een Bijhoudingsvoorstel (BRP Bijhouder)
+
+De bovenstaande figuur geeft de stappen weer voor het verwerken van een bijhoudingsvoorstel.
+NB Of een verzoek afkomstig is van de migratievoorziening kan alleen van de naam van de
+administratieve handeling in het bericht worden afgeleid. Deze beginnen doorgaans met de prefix
+‘GBA-’.
+NB Een vork achter de use case naam ( ) geeft aan dat de uitwerking in een afzonderlijke use
+case specification is opgenomen.
+
+Status: Definitief , versie: 2.29
+
+Pagina 14 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+3.2.2
+
+Activiteitendiagram met de flow van een Prevalidatieverzoek (BRP Bijhouder)
+
+Voor de verwerking van een prevalidatieverzoek geldt bijna dezelfde flow, maar zijn een aantal
+verwerkingsstappen niet van toepassing, omdat bij een prevalidatie geen daadwerkelijke
+verwerking van het voorstel plaatsvindt. De voor prevalidatie niet van toepassing zijnde stappen
+zijn daarom in onderstaande figuur grijs gearceerd weergegeven.
+
+Status: Definitief , versie: 2.29
+
+Pagina 15 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+3.2.3
+
+Activiteitendiagram met de flow van een GBA bijhoudingsvoorstel
+(migratievoorziening)
+
+Voor de verwerking van een GBA bijhoudingsvoorstel geldt ook bijna dezelfde flow, maar zijn ook
+een aantal verwerkingsstappen niet van toepassing, omdat bij een GBA bijhoudingsvoorstel geen
+autorisatie plaatsvindt. De voor een GBA bijhoudingsvoorstel niet van toepassing zijnde stappen
+zijn daarom in onderstaande figuur grijs gearceerd weergegeven.
+
+3.3
+
+Beschrijving
+
+De verwerking van een ontvangen prevalidatieverzoek of bijhoudingsvoorstel bestaat uit een aantal
+volgordelijke stappen die uitgevoerd worden.
+
+Status: Definitief , versie: 2.29
+
+Pagina 16 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+Voor de overzichtelijkheid van de activiteitendiagrammen zijn foutpaden niet ingetekend. In
+onderstaande beschrijving is aangegeven op welke plaatsen uit de flow gesprongen kan worden
+naar aanleiding van een foutsituatie.
+In de onderstaande toelichtende tekst zijn de stappen onderverdeeld in ‘Algemene stappen’ en
+‘Bijhouding stappen’.
+Algemene stappen:
+•
+AL.1.XV – XSD validatie
+Voert een technische controle uit op de verwerkbaarheid van het inkomend bericht door
+het inkomende verzoek tegen het bij het verzoek behorende XSD-schema te controleren.
+Als het bericht technisch niet verwerkbaar is, volgt er een technische foutmelding (geen
+Bijhoudingsresultaatbericht) en wordt de verwerking beëindigd. Zie ook Aspectbeschrijving
+- Controles [5].
+Deze use case kent geen uitwerking in een apart UCS-document, omdat de werking geen
+nadere toelichting behoeft.
+•
+
+AL.1.AB – Archiveer bericht ( )
+Draagt zorg voor de archivering van het technisch verwerkbare inkomende verzoekbericht
+
+Bijhouding stappen:
+•
+
+BY.1.AA - Autorisatie Adm. Handeling ( )
+Draagt zorg voor zowel de generieke als specifieke controle op autorisatie van de
+ingediende administratieve handeling (n.v.t. voor de migratievoorziening).
+Ter toelichting op de hiervoor gehanteerde begrippen ‘generieke’ en ‘specifieke’ controles:
+de generieke controles zijn op alle bijhoudingsberichten van toepassing en zijn daarom
+gekoppeld aan de use cases. De specifieke controles zijn specifiek van toepassing op een
+handeling of actie en zijn daarom gekoppeld aan een ‘Actie’ of ‘Administratieve handeling \
+Actie’.
+Bij de controle op een prevalidatieverzoek of een bijhoudingsvoorstel kunnen
+deblokkeerbare fouten worden aangetroffen. Bij het opnieuw aanbieden van het
+prevalidatieverzoek of bijhoudingsvoorstel kan de bijhouder de geconstateerde
+deblokkeerbare meldingen opgeven als te deblokkeren.
+In het bericht is dan aangegeven, welke meldingen bij welke gegevens in het bericht
+gedeblokkeerd moeten worden. Als de controle op de te deblokkeren regels constateert dat
+er nog deblokkeerbare regels actief blijven of dat er een deblokkade op een niet bestaande
+regel wordt doorgegeven, dan is er sprake van een blokkerende fout.
+Als een dergelijke of andere blokkerende fout op een bijhoudingsvoorstel of
+prevalidatieverzoek wordt aangetroffen, dan wordt de verdere verwerking gestaakt en
+worden de meldingen doorgegeven aan BY.1.MR – ‘Maak bijhoudingsresultaatbericht’ ( )
+en wordt vanaf daar verder gegaan met de stappen BY.1.RR ( ) en AL.1.AB.
+Deze stap is niet van toepassing voor een GBA bijhoudingsvoorstel.
+
+•
+
+BY.1.CI – Controleer inhoud
+Draagt zorg voor controle op het gegevensmodel en de voor de generieke en de specifieke
+inhoudelijke controle op verwerkbaarheid van de ingediende administratieve handeling.
+Ter toelichting op de hiervoor gehanteerde begrippen ‘generieke’ en ‘specifieke’ controles:
+de generieke controles zijn op alle bijhoudingsberichten van toepassing en zijn daarom
+gekoppeld aan de use cases. De specifieke controles zijn specifiek van toepassing op een
+handeling of actie en zijn daarom gekoppeld aan een ‘Actie’ of ‘Administratieve handeling \
+Actie’. Zie ook Aspectbeschrijving - Authenticatie [6].
+Voor deze stap geldt, voor wat betreft de deblokkeerbare regels en hoe deze
+gedeblokkeerd kunnen worden, hetzelfde als bij BY.1.AA ( ).
+
+Status: Definitief , versie: 2.29
+
+Pagina 17 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+Deze use case kent geen uitwerking in een apart UCS-document, omdat de werking geen
+nadere toelichting behoeft.
+•
+
+BY.1.MP – Maak bijhoudingsplan ( )
+Vervaardigt indien van toepassing een bijhoudingsplan. Een bijhoudingsplan geeft aan
+welke personen betrokken zijn bij de bijhouding. Per persoon wordt aangegeven wat de
+bijhoudingssituatie is. Uit deze bijhoudingssituatie kan afgeleid worden of de bijhouding
+voor die persoon verwerkt kan worden of niet (en indien van toepassing, waarom niet).
+Er is echter 1 situatie waarin een fout kan optreden, dat is het geval, als in het bericht de
+parameter BZVU (bezien vanuit persoon) is gevuld en de perso(o)n(en) niet als betrokken
+perso(o)n(en) zijn onderkend in het bijhoudingsplan. Als deze situatie zich voordoet, dan
+worden de meldingen doorgegeven aan BY.1.MR – ‘Maak bijhoudingsresultaatbericht’ ( )
+en wordt vanaf daar verder gegaan met de stappen BY.1.RR ( ) en AL.1.AB ( ).
+
+•
+
+BY.1.ON – Ontrelateren ( )
+Verzorgt, indien van toepassing, het ontrelateren. Deze stap is noodzakelijk, om het
+bijhoudingsvoorstel zoals in het bijhoudingsplan opgenomen te kunnen verwerken. In deze
+stap worden indien van toepassing systeem administratieve handelingen, die de relaties
+ontrelateren, vervaardigd en verwerkt.
+Voor ieder bijhoudingsvoorstel wordt aan de hand van het bijhoudingsplan voor de daarin
+opgenomen personen vastgesteld of de bestaande relatie ontrelateerd moet worden.
+Deze stap is niet van toepassing voor prevalidatieverzoeken.
+
+•
+
+BY.1.VB – Verwerk bijhoudingsvoorstel ( )
+Is de use case die het bijhoudingsvoorstel verwerkt op basis van de specifieke
+administratieve handeling, nadat de eventueel noodzakelijke ontrelateer acties zijn
+doorgevoerd.
+Het kan nodig zijn om op voorhand een pseudo-persoon te registreren (asymmetrische
+registratie van een persoon buiten het ontrelateer-proces). Deze pre-registratie maakt
+onderdeel uit van deze verwerkingsstap.
+Er kunnen zich situaties voordoen, waarbij het bijhoudingsvoorstel op basis van het
+bijhoudingsplan, niet tot verwerking moet leiden. In deze gevallen worden uitsluitend
+‘Bijhoudingsresultaatberichten’ en ‘Bijhoudingsnotificaties’ vervaardigd en verzonden.
+Het resultaat na geslaagde verwerking is, dat de bijhouding is verwerkt in de centrale
+voorzieningen voor de personen die onder de verantwoordelijkheid van de indiener van het
+bijhoudingsvoorstel vallen en voor de personen die onder de verantwoordelijkheid vallen
+van een partij die het voorstel automatisch fiatteert.
+Deze stap is niet van toepassing voor prevalidatieverzoeken.
+
+•
+
+BY.1.BA – Bied verwerkte Adm. Handelingen aan voor Levering
+Voor ieder verwerkt bijhoudingsvoorstel geldt dat de daarbij behorende administratieve
+handelingen worden aangeboden voor afhandeling door ‘Levering’.
+De administratieve handelingen van een bijhoudingsvoorstel zijn in één transactie verwerkt
+en kunnen bestaan uit de bijhouding zelf en eventueel één of meer systeem handelingen
+van het soort ‘Ontrelateren’ (zie BY.1.ON – Ontrelateren ( )).
+Na succesvolle verwerking van de gehele transactie worden de betrokken administratieve
+handelingen in de wachtrij geplaatst voor de afhandeling door het leveringskoppelvlak.
+
+Status: Definitief , versie: 2.29
+
+Pagina 18 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+Het leveringskoppelvlak pakt in haar eigen proces de administratieve handelingen op en
+verwerkt deze in volgorde van de bijhouding (‘Administratieve handeling.Tijdstip
+registratie’). Op basis hiervan worden door het leveringskoppelvlak de berichtsoorten
+‘volledig bericht’ en ‘mutatiebericht’ samengesteld en verzonden.
+Deze stap is niet van toepassing voor prevalidatieverzoeken.
+Deze use case kent geen uitwerking in een apart UCS-document, omdat de werking geen
+nadere toelichting behoeft.
+•
+
+BY.1.MR – Maak bijhoudingsresultaatbericht ( )
+Vervaardigt het ‘Bijhoudingsresultaatbericht’, dat geretourneerd wordt aan de verzender
+van het verzoek, met daarin het resultaat van de verwerking (d.w.z. het bijhoudingsplan,
+de fout/geslaagd-melding en overige meldingen), verkregen uit de voorgaande stappen.
+
+•
+
+BY.1.MN – Maak Bijhoudingsnotificatie ( )
+Vervaardigt (indien van toepassing) een ‘bijhoudingsnotificatie’ voor de overige betrokken
+(bijhoudings)partij(en).
+De ‘Bijhoudingsnotificatie’ wordt opgesteld voor iedere bijhoudingspartij die in het
+bijhoudingsplan (attribuut ‘Bijhoudingsplan \ Persoon.Partij’) is betrokken en niet gelijk is
+aan de indiener (attribuut ‘Bijhoudingsplan \ Partij bijhoudingsvoorstel’).
+Indien het attribuut ‘Bijhoudingsplan.Partij GBA geboorte’ aanwezig is in het
+bijhoudingsplan wordt tevens een ‘Bijhoudingsnotificatie’ voor deze partij opgesteld. Dit
+betreft een notificatie voor het geval een geboorte plaatsvindt in een GBA-gemeente. Zie
+UCS BY.1.MP – Maak bijhoudingsplan [8] voor meer uitleg over deze casus.
+Indien het ‘Administratienummer’ in de groep ‘Identificatienummers’ wijzigt of indien het
+‘Vorige administratienummer’ in de groep ‘Nummerverwijzing’ wijzigt, moet ook een
+notificatie worden verstuurd naar alle GBA-gemeenten (en RNI) waar de persoon eerder
+ingeschreven is geweest, inclusief de geboortegemeente, als deze in Nederland ligt. De
+reden hiervoor is dat de verwijsgegevens binnen het GBA bijgewerkt moeten worden met
+het nieuwe Administratienummer.
+Het ‘Administratienummer’ wordt gewijzigd door de administratieve handeling ‘Wijziging
+identificatienummers’. Het ‘Vorige administratienummer’ wordt gewijzigd door de
+administratieve handeling ‘Wijziging nummerverwijzing’ met actie ‘Registratie
+nummerverwijzing vorig’.
+Op de volgende wijze worden de juiste partijen geselecteerd:
+o Selecteer in de materiële historie van de groep ‘Persoon \ Bijhouding’ alle unieke
+bijhoudingspartijen;
+o Controleer voor elke bijhoudingspartij of deze partij voortgezet is in een andere
+gemeente (bijvoorbeeld als gevolg van een gemeentelijke herindeling):
+‘Gemeente.Voortzettende gemeente’ is dan gevuld. Vervang in dat geval de
+bijhoudingspartij door de ‘Gemeente.Voortzettende gemeente’. Als deze ook weer
+is voortgezet in een andere gemeente dan herhaalt dit principe zich.
+o Selecteer vervolgens alleen de partijen die geldig zijn op ‘Actie.Datum aanvang
+geldigheid: Partij.Datum ingang’ ligt op of voor ‘Actie.Datum aanvang geldigheid en
+Partij.Datum einde’ is niet gevuld of ligt na ‘Actie.Datum aanvang geldigheid’;
+o Selecteer alleen de actuele bijhoudingspartijen (met ‘Partij \ Rol.Rol’ is gelijk aan
+‘Bijhoudingsorgaan College’ of ‘Bijhoudingsorgaan minister’) die zich in het GBAstelsel bevinden: ‘Partij.Datum overgang naar BRP’ is niet gevuld of ligt na de
+huidige datum. Naast gemeenten kan dit ook het RNI zijn;
+o Selecteer alle unieke bijhoudingspartijen, zodat maar één notificatie per
+bijhoudingspartij wordt gestuurd.
+
+Status: Definitief , versie: 2.29
+
+Pagina 19 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+De ‘Bijhoudingsnotificatie’ bevat naast het ‘Bijhoudingsplan’ tevens
+‘Bijhoudingsresultaatbericht(en)’. De ‘Bijhoudingsnotificatie’ is óf een signaal tot het
+ondernemen van een actie in het kader van de bijhouding, óf een kennisgeving van een
+doorgevoerde bijhouding in het geval dat de partij toestemming heeft gegeven via
+automatisch fiatteren.
+Deze stap is niet van toepassing voor prevalidatieverzoeken.
+•
+
+BY.1.BV – Bied bijhoudingsnotificatie aan voor verzending
+Draagt zorg voor het bepalen van de afleverpunten voor de aangemaakte
+bijhoudingsnotificaties en het klaarzetten van deze berichten in de wachtrij ter verzending.
+De afleverpunten worden bepaald op basis van, de in de stuurgegevens van het
+bijhoudingsnotificatie opgenomen, ‘Ontvangende partij’.
+In ‘Toegang Bijhoudingsautorisatie’ moet gezocht worden naar alle voorkomens waarbij het
+veld ‘Geautoriseerde’ verwijst naar een voorkomen van ‘Partij \ Rol’ dat op zijn beurt
+verwijst naar de ‘Ontvangende partij’ en naar de rol ‘Bijhoudingsorgaan College’ (zie UCS
+BY.1.AA ( ), par.2.1.1 punt 4, 1e bullet). Als deze is gevonden, dan wordt het ‘Afleverpunt’
+opgehaald.
+Dit ‘Afleverpunt’ is het adres waarnaar het bijhoudingsnotificatie moet worden gezonden.
+Het kan voorkomen, dat er meer dan 1 afleverpunt wordt aangetroffen
+(bewerkerscontructie). Het bijhoudingsnotificatie wordt voor alle aangetroffen
+afleverpunten klaargezet ter verzending.
+De klaargezette bijhoudingsnotificaties worden in het asynchrone proces verwerkt door use
+case BY.0.VZ – Verzend bijhoudingsnotificatie ( ) [2].
+Deze stap is niet van toepassing voor prevalidatieverzoeken.
+Deze use case kent geen uitwerking in een apart UCS-document, omdat de werking geen
+nadere toelichting behoeft.
+
+•
+
+BY.1.RR – Retourneer bijhoudingsresultaatbericht
+Draagt zorg voor het retourneren van het ‘Bijhoudingsresultaatbericht’ aan de partij (de
+zendende partij zoals opgenomen in de stuurgegevens van het inkomende bericht) die het
+prevalidatieverzoek of bijhoudingsvoorstel heeft ingediend.
+Deze use case kent geen uitwerking in een apart UCS-document, omdat de werking geen
+nadere toelichting behoeft.
+
+Algemene stappen:
+•
+
+3.4
+
+AL.1.AB – Archiveer bericht ( )
+Draagt zorg voor het archiveren van de ter verzending aangeboden ‘Bijhoudingsnotificaties’
+(niet van toepassing voor prevalidatieverzoeken), alsmede de geretourneerde
+‘Bijhoudingsresultaatberichten’.
+
+Bedrijfsregels
+
+Voor een toelichting op de verschillende soorten bedrijfsregels, de meldingsniveaus, de toepassing
+en werking ervan in het bijhoudingsproces, wordt verwezen naar de daartoe opgestelde
+Aspectbeschrijving - Controles [5].
+De in de procesflow van deze use case betrokken invoervalidatieregels, autorisatieregels,
+controleregels en definitieregels zijn opgenomen de bijlagen die behoren bij de use cases die de
+Bijhoudingsmodulen specificeren. Ter illustratie: Voor de module ‘Huwelijk en Geregistreerd
+
+Status: Definitief , versie: 2.29
+
+Pagina 20 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+partnerschap’ zijn deze regels opgenomen in de bijlagen van BY.0.HGP - Huwelijk en Geregistreerd
+partnerschap [4].
+Voor de integriteitsregels en gegevensvalidatieregels wordt verwezen naar het
+Gegevenswoordenboek [1].
+
+Status: Definitief , versie: 2.29
+
+Pagina 21 van 24
+
+UCS BY.0.AV – Afhandeling verzoek
+
+4 Uitvoer
+4.1
+
+Beschrijving
+
+Deze generieke use case draagt zorg voor het genereren van een ‘Bijhoudingsresultaatbericht’ op
+basis van de in deze use case opgenomen controles en de verwerking van het verzoek.
+Het ‘Bijhoudingsresultaatbericht’ bevat dus, afhankelijk van de controleresultaten één of meer
+meldingen en/of een bevestiging van de afhandeling van het verzoek (de zogenaamde geslaagd
+melding) met het vervaardigde bijhoudingsplan.
+Wanneer in geval van een bijhoudingsvoorstel naast de indiener nog andere partijen bij de
+bijhouding zijn betrokken, dan ontvangen deze partijen een ‘Bijhoudingsnotificatie’.
+
+4.2
+
+Bijhoudingsresultaatbericht
+
+Het ‘Bijhoudingsresultaatbericht’ wordt samengesteld op basis van de informatie uit de voorgaande
+stappen in deze use case.
+Een ‘Bijhoudingsresultaatbericht’, waarin is aangegeven dat het verzoek met succes is
+afgehandeld, wordt uitsluitend getriggerd door de use case, die een ‘geslaagd’ melding doorgeeft
+om een ‘Bijhoudingsresultaatbericht’ via deze use case te laten vervaardigen. Naast de ‘geslaagd
+melding’ kunnen additionele meldingen voorkomen.
+Een ‘Bijhoudingsresultaatbericht’ bevat tevens een bijhoudingsplan dat aangeeft welke personen en
+partijen bij de bijhouding zijn betrokken en in welke rol een partij is betrokken (zoals indiener,
+automatisch fiatteerder, handmatig fiatteerder, GBA-partij).
+Indien de bedrijfsregels worden overtreden die leiden tot een blokkerende foutmelding, dan wordt
+het ‘Bijhoudingsresultaatbericht’ met de geconstateerde melding(en) direct vervaardigd.
+
+4.3
+
+Bijhoudingsnotificatie
+
+Indien bij het verwerken van een bijhoudingsvoorstel blijkt dat het noodzakelijk is om andere
+partijen dan de indiener op de hoogte te brengen van de bijhouding, dan worden deze
+‘Bijhoudingsnotificaties’ vervaardigd en ter verzending aangeboden.
+De ‘Bijhoudingsnotificatie’ bevat:
+•
+‘Bijhoudingsplan’
+•
+kopie van het ‘Bijhoudingsvoorstel’
+•
+kopie van het ‘Bijhoudingsresultaatbericht’ van het verwerkte ‘Bijhoudingsvoorstel’
+
+4.4
+
+Bijzonderheden
+
+Wanneer het ‘Bijhoudingsresultaatbericht’ bedoeld is voor een partij in het GBA-stelsel is, dan
+retourneert de use case ‘BY.1.RR – Retourneer Bijhoudingsresultaatbericht’ het
+‘Bijhoudingsresultaatbericht’ aan de migratievoorziening.
+Voor de ‘Bijhoudingsnotificaties’ die bestemd zijn voor een partij in het GBA-stelsel, verstuurt de
+use case ‘BY.1.BV – Bied aan voor verzending’ deze aan de migratievoorziening.
+
+Status: Definitief , versie: 2.29
+
+Pagina 22 van 24
+
+A.
+
+Berichtnaam bijhoudingsberichten
+
+Deze bijlage bevat een opsomming van de berichtnaam van alle bijhoudingsberichten die van
+toepassing zijn op de use case ‘BY.0.AV - Afhandeling verzoek’. De berichtnamen zijn gegroepeerd
+per module. Ook de bijhoudingsresultaat berichten, te herkennen aan de ‘_R’ aan het eind van de
+naam, die horen bij de bijhoudingsberichten zijn opgenomen.
+Afstamming
+Berichtnaam
+bhg_afsRegistreerGeboorte
+bhg_afsRegistreerGeboorte_R
+bhg_afsRegistreerErkenning
+bhg_afsRegistreerErkenning_R
+bhg_afsActualiseerAfstamming
+bhg_afsActualiseerAfstamming_R
+bhg_afsRegistreerAdoptie
+bhg_afsRegistreerAdoptie_R
+bhg_afsCorrigeerAfstamming
+bhg_afsCorrigeerAfstamming_R
+
+Naam en geslacht
+Berichtnaam
+bhg_nmgRegistreerNaamGeslacht
+bhg_nmgRegistreerNaamGeslacht_R
+bhg_nmgCorrigeerNaamGeslacht
+bhg_nmgCorrigeerNaamGeslacht_R
+
+Document, verzoek en mededeling
+Berichtnaam
+bhg_dvmRegistreerMededelingVerzoek
+bhg_dvmRegistreerMededelingVerzoek_R
+bhg_dvmCorrigeerMededelingVerzoek
+bhg_dvmCorrigeerMededelingVerzoek_R
+bhg_dvmVerwijderHistorie
+bhg_dvmVerwijderHistorie_R
+
+Huwelijk en Geregistreerd partnerschap
+Berichtnaam
+bhg_hgpRegistreerHuwelijkGeregistreerdPartnerschap
+bhg_hgpRegistreerHuwelijkGeregistreerdPartnerschap_R
+bhg_hgpCorrigeerHuwelijkGeregistreerdPartnerschap
+bhg_hgpCorrigeerHuwelijkGeregistreerdPartnerschap_R
+
+Verblijf en adres
+Berichtnaam
+bhg_vbaRegistreerImmigratie
+bhg_vbaRegistreerImmigratie_R
+bhg_vbaRegistreerVerhuizing
+bhg_vbaRegistreerVerhuizing_R
+bhg_vbaActualiseerAdresInfrastructureel
+bhg_vbaActualiseerAdresInfrastructureel_R
+bhg_vbaCorrigeerAdres
+bhg_vbaCorrigeerAdres_R
+bhg_vbaRegistreerVerblijfsrecht
+bhg_vbaRegistreerVerblijfsrecht_R
+
+Nationaliteit
+
+UCS BY.0.AV – Afhandeling verzoek
+
+Berichtnaam
+bhg_natRegistreerNationaliteit
+bhg_natRegistreerNationaliteit_R
+bhg_natCorrigeerNationaliteit
+bhg_natCorrigeerNationaliteit_R
+
+Reisdocument
+Berichtnaam
+bhg_rsdRegistreerReisdocument
+bhg_rsdRegistreerReisdocument_R
+bhg_rsdCorrigeerReisdocument
+bhg_rsdCorrigeerReisdocument_R
+
+Overlijden
+Berichtnaam
+bhg_ovlRegistreerOverlijden
+bhg_ovlRegistreerOverlijden_R
+bhg_ovlCorrigeerOverlijden
+bhg_ovlCorrigeerOverlijden_R
+
+Bijzondere bijhouding
+Berichtnaam
+bhg_bbhRegistreerIdentificatienummers
+bhg_bbhRegistreerIdentificatienummers_R
+bhg_bbhCorrigeerPersoonsgegevens
+bhg_bbhCorrigeerPersoonsgegevens_R
+bhg_bbhVerwijderPersoon
+bhg_bbhVerwijderPersoon_R
+bhg_bbhRegistreerVerantwoording
+bhg_bbhRegistreerVerantwoording_R
+bhg_bbhActualiseerGemeenteInfrastructureel
+bhg_bbhActualiseerGemeenteInfrastructureel_R
+
+Onderzoek
+Berichtnaam
+bhg_ondRegistreerOnderzoek
+bhg_ondRegistreerOnderzoek_R
+bhg_ondWijzigOnderzoek
+bhg_ondWijzigOnderzoek_R
+
+Verkiezingen
+Berichtnaam
+bhg_vkzRegistreerKiesrecht
+bhg_vkzRegistreerKiesrecht_R
+bhg_vkzCorrigeerKiesrecht
+bhg_vkzCorrigeerKiesrecht_R
+
+Status: Definitief , versie: 2.29
+
+Pagina 24 van 24
+
+

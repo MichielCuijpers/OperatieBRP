@@ -1,0 +1,291 @@
+SA.1.EMB - Bijlage Eindcontrole mutatiebericht
+Versie: Werk
+Gegenereerd op: 21 juli 2017
+Status: Definitief
+
+1 Regels voor usecase SA.1.EMB - Eindcontrole mutatiebericht
+1.1
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1315
+
+9
+
+W
+
+Melding als persoon met afnemerindicatie niet meer tot doelgroep van de
+leveringsautorisatie behoort
+
+R1316
+
+10
+
+W
+
+Melding als persoon niet meer tot de doelgroep van de leveringsautorisatie
+behoort
+
+1.2
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1540
+
+3
+
+'Inhoudelijke groep'
+
+R2059
+
+2
+
+Totale populatiebeperking
+
+1.3
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R1318
+
+2
+
+Alleen relevante actieverwijzingen opnemen in mutatiebericht
+
+R1989
+
+5
+
+Alleen personen zonder lege waarden in mutatiebericht
+
+R1990
+
+1
+
+Alleen mutatielevering als personen opgenomen in mutatiebericht
+
+2 Uitwerking regels
+R1315
+Melding als persoon met afnemerindicatie niet meer tot doelgroep van de
+leveringsautorisatie behoort
+Definitie:
+
+Indien
+• een Bericht wordt aangemaakt omdat er een bijhouding heeft plaatsgevonden
+bij een Persoon waarbij een Persoon \ Afnemerindicatie bestaat voor een
+Leveringsautorisatie
+EN
+• de Totale populatiebeperking (R2059) evalueert op de R2550 - Reconstructie
+persoonsbeeld 'nieuw' ten behoeve van expressies als ONWAAR of NULL
+dan dient in het Bericht een waarschuwing opgenomen te worden.
+Toelichting:
+• De Persoon blijft dus wel geleverd worden, ook al voldoet hij inmiddels niet
+meer aan de Totale populatiebeperking. Dit geeft de Afnemer de mogelijkheid
+om zijn lopende processen af te maken (b.v. een rekening/aanslag sturen naar
+nieuw adres buiten de eigen regio).
+
+Versie:
+
+9
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+De geleverde persoon valt niet meer binnen de doelgroep van de
+leveringsautorisatie.
+
+Loggingsniveau:
+
+Melding
+
+R1316
+Melding als persoon niet meer tot de doelgroep van de leveringsautorisatie behoort
+Definitie:
+
+Bij het verwerken van een Administratieve handeling door de Dienst Mutatielevering
+op basis van doelbinding geldt het volgende:
+Indien er door de onderhanden Administratieve handeling één of meer personen 'Uit
+doelbinding gegaan zijn' van Totale populatiebeperking (R2059) van de betreffende
+Toegang leveringsautorisatie en "Dienst", dan:
+
+•
+
+Dient voor die personen een waarschuwing in het Bericht opgenomen te
+worden.
+
+Een Persoon is 'Uit doelbinding gegaan' door de onderhanden Administratieve
+handeling bij een Toegang leveringsautorisatie en "Dienst" als:
+
+•
+
+Expressie Totale populatiebeperking (R2059) op de R2550 - Reconstructie
+persoonsbeeld 'nieuw' ten behoeve van expressies evalueert als ONWAAR of als
+NULL
+
+EN
+
+•
+
+Expressie Totale populatiebeperking (R2059) op de R2551 - Reconstructie
+persoonsbeeld 'oud' ten behoeve van expressies evalueert als WAAR)
+
+Toelichting:
+Als de expressie Totale populatiebeperking (R2059) op de R2551 - Reconstructie
+persoonsbeeld 'oud' ten behoeve van expressies evalueert als NULL dan wordt dat
+behandeld als ONWAAR.
+
+Versie:
+
+10
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+De geleverde persoon heeft de doelbindingspopulatie verlaten. Mutatielevering voor
+deze persoonslijst is gestopt.
+
+Loggingsniveau:
+
+Melding
+
+R1318
+Alleen relevante actieverwijzingen opnemen in mutatiebericht
+Definitie:
+
+In een 'Inhoudelijke groep' (R1540) van een mutatiebericht worden alleen
+actieverwijzingen opgenomen die samenhangen met de onderhanden
+Administratieve handeling:
+• ActieInhoud komt alleen voor als deze verwijst naar een Actie van de
+onderhanden Administratieve handeling
+• ActieAanpassingGeldigheid komt alleen voor als deze verwijst naar een Actie
+van de onderhanden Administratieve handeling
+• ActieVerval komt alleen voor als deze verwijst naar een Actie van de
+onderhanden Administratieve handeling
+
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R1540
+'Inhoudelijke groep'
+Definitie:
+
+Inhoudelijke groepen zijn groepen van de Persoonslijst die bij de Persoon horen. Dit
+zijn alle groepen onder Objecttypen Persoon, Persoon \ Adres, Persoon \
+Geslachtsnaamcomponent, Persoon \ Indicatie, Persoon \ Nationaliteit, Persoon \
+Reisdocument, Persoon \ Verificatie, Persoon \ Verstrekkingsbeperking, Persoon \
+Voornaam, Persoon \ Buitenlands persoonsnummer, Relatie (soorten Huwelijk en
+Geregistreerd partnerschap) en Betrokkenheid (rol Ouder).
+(Dit zijn dus de groepen uit het persoonsdeel van het bericht over de persoon, in
+tegenstelling tot de groepen uit bijvoorbeeld het verantwoordingsdeel en het
+onderzoeksdeel)
+
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R1989
+Alleen personen zonder lege waarden in mutatiebericht
+Definitie:
+
+Een Persoon wordt NIET opgenomen in een mutatiebericht als voor een
+Leveringsautorisatie na toepassing van de Autorisatiefilters en alle overige filters
+voor levering geldt dat:
+Voor deze Persoon geen enkele 'Inhoudelijke groep' ('Inhoudelijke groep' (R1540))
+anders dan Persoon.Afgeleid administratief of Definitie 'Onderzoeksgroep'
+('Onderzoeksgroep' (R1543)) in het bericht overblijft met een VerwerkingsSoort <>
+'Identificatie'.
+(Noot 1: De groep 'Afgeleid administratief' dus negeren bij de bepaling of er iets
+gewijzigd is)
+(Noot 2: deze regel zal waarschijnlijk ooit nog aangepast moeten worden voor
+handeling 'sterker brondocument' en/of het leveren van mutaties op
+Verantwoording)
+
+Versie:
+
+5
+
+Soort:
+
+Verwerkingslogica
+
+R1990
+Alleen mutatielevering als personen opgenomen in mutatiebericht
+Definitie:
+
+Als er na toepassing van Autorisatiefilters en alle overige filters voor levering voor
+een Leveringsautorisatie geen personen resteren voor opname in een
+mutatiebericht, dan wordt er GEEN mutatiebericht aangemaakt en geleverd.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2059
+Totale populatiebeperking
+Definitie:
+
+Voor elke levering is een 'Totale populatiebeperking' vast te stellen. Hiervoor zijn de
+volgende voorkomens nodig:
+• De Toegang leveringsautorisatie waarvoor geleverd wordt
+• De Leveringsautorisatie die daar bij hoort
+• De Dienst die geleverd wordt
+• De Dienstbundel die daarbij hoort
+De 'Totale populatiebeperking' is dan een expressie die bestaat uit de logische EN
+van:
+• Leveringsautorisatie.Populatiebeperking
+• Toegang leveringsautorisatie.Nadere populatiebeperking
+• Dienstbundel.Nadere populatiebeperking
+Hierbij geldt dat elk van de drie attributen leeg kan zijn. In dat geval worden ze niet
+meegenomen in de logische EN (of worden ze vervangen door de constante
+expressie 'WAAR').
+Als alle drie de attributen leeg zijn dan geldt dat ook als 'WAAR' (er is dan geen
+beperking).
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+

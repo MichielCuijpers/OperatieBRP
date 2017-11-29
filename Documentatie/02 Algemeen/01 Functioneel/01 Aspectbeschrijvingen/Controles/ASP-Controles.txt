@@ -1,0 +1,149 @@
+XSD controle (3.2.1)
+
+NOK
+
+OK
+Geconstateerde
+meldingen
+
+Controles
+Gegevensmodel (3.2.2)
+
+Blokkerend:
+verwerkingsresultaat = Foutief
+
+Niet (meer) blokkerend
+Geconstateerde
+meldingen
+
+Generieke controles
+(3.2.3)
+
+Blokkerend:
+verwerkingsresultaat = Foutief
+
+Niet (meer) blokkerend
+Geconstateerde
+meldingen
+
+Specifieke controles
+(3.2.4)
+
+Blokkerend:
+verwerkingsresultaat = Foutief
+
+Niet (meer) blokkerend
+Prevalidatieverzoek:
+verwerkingsresultaat = Geslaagd
+
+Bijhoudingsvoorstel
+
+Verwerking
+bijhoudingsvoorstel (3.4)
+
+Verwerkingsresultaat
+Geslaagd
+
+Geef meldingen door aan
+UCS BY.1.MR - Maak
+bijhoudingsresultaatbericht (3.3)
+
+Bijhouding
+Controleer deblokkeerbare regels
+
+Bestaat de te
+deblokkeren regel?
+Fout: te deblokkeren regel bestaat niet
+
+Regel bestaat
+
+Komt de te deblokkeren
+regel voor in lijst van
+opgetreden fouten?
+Fout: te deblokkeren regel komt niet voor
+
+Regels juist geadresseerd
+
+Alle te deblokkeren
+regels gedeblokkeerd?
+
+Fout: nog een blokkerende regel aanwezig
+
+Alle regels gedeblokkeerd
+Verwerkingsresultaat prevalidatieverzoek
+Geslaagd
+
+Verwerkingsresultaat
+bijhoudingsvoorstel
+Geslaagd
+
+Verwerk bijhoudingsvoorstel tot bijhouding
+
+Geef meldingen door aan
+UCS BY.1.MR - Maak
+bijhoudingsresultaatbericht (4.3)
+
+Generieke controles
+(4.2.2)
+
+Geconstateerde
+meldingen
+
+Blokkerend:
+verwerkingsresultaat = Foutief
+
+Niet (meer) blokkerend
+
+Ga verder met
+verwerking
+
+Geef meldingen door aan
+UCS BY.1.MR - Maak
+bijhoudingsresultaatbericht (4.3)
+
+Specifieke controles
+(4.2.3)
+
+Geconstateerde
+meldingen
+
+Blokkerend:
+verwerkingsresultaat = Foutief
+
+Niet (meer) blokkerend
+
+Ga verder met
+verwerking
+
+Geef meldingen door aan
+UCS BY.1.MR - Maak
+bijhoudingsresultaatbericht (4.3)
+
+Controles
+Gegevensmodel (4.2.1)
+
+Geconstateerde
+meldingen
+
+Blokkerend:
+verwerkingsresultaat = Foutief
+
+Niet (meer) blokkerend
+
+Ga verder met
+verwerking
+
+Geef meldingen door aan
+UCS BY.1.MR - Maak
+bijhoudingsresultaatbericht (4.3)
+
+XSD controle
+
+XSD-error
+
+Geen XSD-error
+
+Ga verder met
+verwerking
+
+

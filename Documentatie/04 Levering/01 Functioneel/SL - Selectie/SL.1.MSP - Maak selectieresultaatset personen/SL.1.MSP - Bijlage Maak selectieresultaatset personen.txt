@@ -1,0 +1,186 @@
+SL.1.MSP - Bijlage Maak selectieresultaatset
+personen
+Versie: Werk
+Gegenereerd op: 12 juli 2017
+Status: Definitief
+
+1 Regels voor usecase SL.1.MSP - Maak selectieresultaatset
+personen
+1.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2627
+
+1
+
+Maximale grootte bestand bij selecties
+
+2 Regels voor usecase SL.1.MSP.BS - Bepaal set
+2.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2627
+
+1
+
+2.2
+
+Maximale grootte bestand bij selecties
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2556
+
+1
+
+Controleer voorwaarden plaatsen persoon in selectieresultaat set
+
+3 Regels voor usecase SL.1.MSP.MN - Maak nieuwe set
+3.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2557
+
+1
+
+Bestandsnaam selectieresultaat set
+
+R2558
+
+2
+
+Vullen selectiekenmerken selectieresultaat set personen
+
+4 Uitwerking regels
+R2556
+Controleer voorwaarden plaatsen persoon in selectieresultaat set
+Definitie:
+
+Een persoon mag worden toegevoegd aan een selectieresultaat set wanneer aan de
+volgende voorwaarden wordt voldaan.
+Na het plaatsen van de geselecteerde persoon in de selectieresultaat set mag:
+
+•
+
+de maximale bestandsgrootte van de selectieresultaat set niet groter zijn dan
+Maximale grootte bestand bij selecties (R2627)
+
+EN
+
+•
+
+het aantal personen in de selectieresultaat set niet groter zijn dan
+Selectie.Maximaal aantal personen per selectiebestand
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2557
+Bestandsnaam selectieresultaat set
+Definitie:
+
+De naam van de folder waarin de selectieresultaat sets worden opgegeslagen
+bestaat uit de volgende gegevens:
+
+•
+•
+
+Selectiedatum
+SelectietaakID
+
+De bestandsnaam van een selectieresultaat set bestaat uit de volgende gegevens:
+
+•
+•
+
+Volgnummer
+Soort selectieresultaat set
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2558
+Vullen selectiekenmerken selectieresultaat set personen
+Definitie:
+
+Bij een selectieresultaat set van het soort selectieresultaat personen worden de
+selectiekenmerken op de volgende wijze gevuld:
+
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Bericht.Soort selectieresultaat set = 'Resultaatset personen'
+Bericht.Volgnummer selectieresultaat set = het volgnummer van de
+betreffende selectieresultaat set
+Bericht.Soort selectie = Selectie.soort selectie
+Bericht.Selectie leveringsautorisatie = Leveringsautorisatie ID
+Bericht.Selectie dienst = Dienst ID
+Bericht.Selectietaak = Selectietaak ID
+Bericht.Selectie datum = Selectietaak.Datum uitvoer
+Bericht.Peilmoment materieel resultaat selectie = Selectietaak.Peilmoment
+materieel resultaat
+Bericht.Peilmoment formeel resultaat selectie = Selectietaak.Peilmoment
+formeel resultaat
+
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R2627
+Maximale grootte bestand bij selecties
+Definitie:
+
+De maximale grootte van een selectieresultaatset is gelijk aan Dienst.Maximale
+grootte selectiebestand.
+Indien Dienst.Maximale grootte selectiebestand niet is gevuld dan is de maximale
+grootte van een selectieresultaatset gelijk aan 4,7 GB.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+

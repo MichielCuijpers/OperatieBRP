@@ -1,0 +1,650 @@
+BY.1.AA - Bijlage Autorisatie administratieve
+handeling
+Versie: Release 59
+Gegenereerd op: 19 juli 2017
+Status: Definitief
+
+1 Regels voor usecase BY.1.AA - Autorisatie administratieve
+handeling
+1.1
+
+Autorisatieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2106
+
+7
+
+F
+
+De administratieve handeling moet zijn toegestaan voor de
+bijhoudingsautorisatie
+
+R2115
+
+4
+
+F
+
+De bijhoudingsautorisatie mag niet geblokkeerd zijn
+
+R2247
+
+4
+
+F
+
+De toegang bijhoudingsautorisatie moet geldig zijn
+
+R2248
+
+4
+
+F
+
+De toegang bijhoudingsautorisatie mag niet geblokkeerd zijn
+
+R2250
+
+6
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij en rol
+bestaan
+
+R2251
+
+5
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en
+ondertekenaar bestaan
+
+R2252
+
+5
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en
+transporteur bestaan
+
+R2268
+
+2
+
+F
+
+De geautoriseerde partij moet een geldige partij zijn
+
+R2269
+
+2
+
+F
+
+De ondertekenaar moet een geldige partij zijn
+
+R2270
+
+2
+
+F
+
+De transporteur moet een geldige partij zijn
+
+R2271
+
+2
+
+F
+
+De combinatie partij met rol voor toegang bijhoudingsautorisatie moet geldig
+zijn
+
+R2299
+
+2
+
+F
+
+De bijhoudingsautorisatie moet geldig zijn
+
+1.2
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2343
+
+4
+
+1.3
+
+F
+
+Algemene foutmelding bij schending autorisatieregels
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1273
+
+7
+
+Datum (deels) onbekend
+
+R1284
+
+7
+
+Geldig voorkomen stamgegeven op peildatum
+
+R2016
+
+1
+
+'Systeemdatum'
+
+R2129
+
+2
+
+Geldig
+
+2 Uitwerking regels
+R1273
+Datum (deels) onbekend
+Definitie:
+
+Een Datum evt. (deels) onbekend heeft het formaat 'jjjj-mm-dd'. Als een datum
+deels onbekend is dan moet:
+• indien dag onbekend is voor dag ('dd') de waarde 00 zijn ingevuld;
+• indien maand onbekend is voor zowel dag ('dd') als maand ('mm') de waarde
+00 zijn ingevuld;
+• indien jaar onbekend is zowel dag ('dd') als maand ('mm') de waarde 00 zijn
+ingevuld en voor jaar ('jjjj') de waarde 0000.
+
+Versie:
+
+7
+
+Soort:
+
+Definitieregel
+
+R1284
+Geldig voorkomen stamgegeven op peildatum
+Definitie:
+
+Een Stamgegeven is geldig op een zekere peildatum, indien aan de volgende
+voorwaarden is voldaan:
+1.
+2.
+
+indien gevuld moet DatumAanvangGeldigheid van Stamgegeven <= peildatum;
+indien gevuld moet DatumEindeGeldigheid van Stamgegeven > peildatum.
+
+Als er sprake is van Datum (deels) onbekend (R1273) dan moet de R1283 Vergelijken (partiële) datums streng uitgevoerd worden.
+Toelichting
+• het Stamgegeven is geldig op elke peildatum indien DatumAanvangGeldigheid
+en DatumEindeGeldigheid leeg zijn.
+• Voor de stamtabel Partij geldt dat Partij.Datum ingang en Partij.Datum einde
+ipv respectievelijk DatumAanvangGeldigheid en DatumEindeGeldigheid gebruikt
+moeten worden.
+• Voor de stamtabel Partij \ Rol geldt dat Partij \ Rol.Datum ingang en Partij \
+Rol.Datum einde ipv respectievelijk DatumAanvangGeldigheid en
+DatumEindeGeldigheid gebruikt moeten worden.
+Versie:
+
+7
+
+Soort:
+
+Definitieregel
+
+R2016
+'Systeemdatum'
+Definitie:
+
+De systeemdatum is de actuele datum tijdens het evalueren van een regel van het
+BRP syteem en heeft het formaat 'jjjjmmdd'.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2106
+De administratieve handeling moet zijn toegestaan voor de bijhoudingsautorisatie
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient de Soort
+administratieve handeling toegestaan te zijn bij de Bijhoudingsautorisatie.
+Dit is het geval als de Soort administratieve handeling via een
+Bijhoudingsautorisatie \ Soort administratieve handeling is gekoppeld aan de
+Bijhoudingsautorisatie.
+
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Bijhoudingsautorisatie kan worden geselecteerd.
+Versie:
+
+7
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De soort administratieve handeling is niet toegestaan voor deze autorisatie.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2115
+De bijhoudingsautorisatie mag niet geblokkeerd zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan mag
+Bijhoudingsautorisatie.Geblokkeerd? niet de waarde 'Ja' hebben.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+4
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De autorisatie is door de beheerder tijdelijk geblokkeerd.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2129
+Geldig
+Definitie:
+
+Een object is geldig op een peildatum als:
+De Datum aanvang geldigheid op of voor de peildatum ligt en de Datum einde
+geldigheid na de peildatum ligt.
+of
+De Datum ingang op of voor de peildatum ligt en de Datum einde na de peildatum
+ligt.
+(dus: de geldigeheidsperiode is inclusief de ingangsdatum, maar exclusief de
+einddatum)
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2247
+De toegang bijhoudingsautorisatie moet geldig zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient de
+bijbehorende Toegang bijhoudingsautorisatie Geldig (R2129) te zijn op de
+'Systeemdatum' (R2016).
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+4
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De toegang bijhoudingsautorisatie is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2248
+De toegang bijhoudingsautorisatie mag niet geblokkeerd zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient Toegang
+bijhoudingsautorisatie.Geblokkeerd? ongelijk aan "Ja" te zijn.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+4
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De toegang bijhoudingsautorisatie is geblokkeerd door de beheerder.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2250
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij en rol bestaan
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient er
+tenminste één voorkomen van Toegang bijhoudingsautorisatie te bestaan die hoort
+bij de Toegang bijhoudingsautorisatie.Geautoriseerde.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd. Door bij dat
+selectieproces de Toegang bijhoudingsautorisatie.Ondertekenaar en Toegang
+bijhoudingsautorisatie.Transporteur buiten beschouwing te laten, worden de voor
+deze regel benodigde voorkomens van Toegang bijhoudingsautorisatie geselecteerd.
+
+Versie:
+
+6
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Geen autorisatie voor de opgegeven combinatie van partij en rol.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2251
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en ondertekenaar
+bestaan
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient er
+tenminste één voorkomen van Toegang bijhoudingsautorisatie te bestaan die hoort
+bij de combinatie van Toegang bijhoudingsautorisatie.Geautoriseerde en Toegang
+bijhoudingsautorisatie.Ondertekenaar.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd. Door bij dat
+selectieproces de Toegang bijhoudingsautorisatie.Transporteur buiten beschouwing
+te laten, worden de voor deze regel benodigde voorkomens van Toegang
+bijhoudingsautorisatie geselecteerd.
+
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven combinatie van partij, rol en ondertekenaar is niet juist.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2252
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en transporteur
+bestaan
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient er
+tenminste één voorkomen van Toegang bijhoudingsautorisatie te bestaan die hoort
+bij de combinatie van Toegang bijhoudingsautorisatie.Geautoriseerde en Toegang
+bijhoudingsautorisatie.Transporteur.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd. Door bij dat
+selectieproces de Toegang bijhoudingsautorisatie.Ondertekenaar buiten
+beschouwing te laten, worden de voor deze regel benodigde voorkomens van
+Toegang bijhoudingsautorisatie geselecteerd.
+
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven combinatie van partij, rol en transporteur is niet juist.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2268
+De geautoriseerde partij moet een geldige partij zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient
+Bericht.Zendende partij te verwijzen naar een Geldig voorkomen stamgegeven op
+peildatum (R1284) op 'Systeemdatum' (R2016) van Partij.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De verzendende partij is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2269
+De ondertekenaar moet een geldige partij zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient het OIN van
+het PKI-overheidscertificaat waarmee het bericht is ondertekend (de
+ondertekenaar) te verwijzen naar een Geldig voorkomen stamgegeven op peildatum
+(R1284) op 'Systeemdatum' (R2016) van Partij.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De ondertekenaar is geen geldige partij.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2270
+De transporteur moet een geldige partij zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient het OIN van
+het PKI-overheidscertificaat waarmee de beveiligde verbinding is opgezet (de
+transporteur) te verwijzen naar Geldig voorkomen stamgegeven op peildatum
+(R1284) op 'Systeemdatum' (R2016) van Partij.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De transporteur is geen geldige partij.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2271
+De combinatie partij met rol voor toegang bijhoudingsautorisatie moet geldig zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient de
+bijbehorende Toegang bijhoudingsautorisatie te verwijzen naar een Geldig
+voorkomen stamgegeven op peildatum (R1284) op 'Systeemdatum' (R2016) van
+Partij \ Rol.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De combinatie partij en rol is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2299
+De bijhoudingsautorisatie moet geldig zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient de bij de
+Toegang bijhoudingsautorisatie behorende Bijhoudingsautorisatie Geldig (R2129) te
+zijn op de 'Systeemdatum' (R2016).
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De bijhoudingsautorisatie is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2343
+Algemene foutmelding bij schending autorisatieregels
+Definitie:
+
+Bij schending van één of meer van de autorisatieregels die zijn gekoppeld aan Use
+Case BY.1.AA, Use Case LV.1.AL of Use Case VB.1.AV.CA wordt in plaats van de
+meldingstekst bij de geschonden regel, de in deze regel opgenomen meldingstekst
+opgenomen in het berichtonderdeel Meldingen van het resultaatbericht. Zodat niet
+precies blijkt wat er aan de hand is.
+
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Er is een autorisatiefout opgetreden.
+
+

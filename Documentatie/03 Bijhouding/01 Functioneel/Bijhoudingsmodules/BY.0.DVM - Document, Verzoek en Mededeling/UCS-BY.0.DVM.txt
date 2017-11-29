@@ -1,0 +1,2449 @@
+UCS BY.0.DVM – Document, Verzoek en
+Mededeling
+Versie
+
+0.23
+
+Datum
+
+13 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+11-05-2017
+
+0.1
+
+Initiële versie.
+
+Operatie BRP
+
+12-5-2017
+
+0.2
+
+•
+•
+•
+
+AH Verwijdering gegevens na adoptie toegevoegd
+AH Verwijdering kindgegevens na adoptie toegevoegd.
+AH Overschrijving geslacht en naam na
+geslachtswijziging toegevoegd
+AH Overschrijving partnergegevens na
+geslachtswijziging toegevoegd
+AH Overschrijving kindgegevens na geslachtswijziging
+toegevoegd
+AH Overschrijving oudergegevens na geslachtswijziging
+toegevoegd
+BZVU gevuld voor verwijder- en overschrijfhandelingen
+
+Operatie BRP
+
+Actie Verwijdering gegevens na adoptie toegevoegd
+Actie Verwijdering kind toegevoegd.
+Actie Overschrijving gegevens na geslachtswijziging
+toegevoegd
+Actie Overschrijving gerelateerde gegevens na
+geslachtswijziging toegevoegd
+
+Operatie BRP
+
+•
+•
+•
+•
+17-05-2017
+
+0.3
+
+•
+•
+•
+•
+
+22-05-2017
+
+0.4
+
+Verwijzing naar aspectbeschrijving opgenomen
+
+Operatie BRP
+
+29-05-2017
+
+0.5
+
+Aangepast:
+•
+AH Verwijdering gegevens na adoptie (+ actie)
+
+Operatie BRP
+
+30-05-2017
+
+0.6
+
+Aangepast:
+•
+AH Verwijdering kindgegevens na adoptie (+ actie)
+•
+AH Overschrijving geslacht en naam na
+geslachtswijziging (+ actie)
+•
+AH Overschrijving partnergegevens na
+geslachtswijziging (+ actie)
+•
+AH Overschrijving kindgegevens na geslachtswijziging
+•
+AH Overschrijving oudergegevens na geslachtswijziging
+
+Operatie BRP
+
+1-6-2017
+
+0.7
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+Operatie BRP
+
+6-6-2017
+
+0.8
+
+AH Wijziging verstrekkingsbeperking (+actie) toegevoegd
+
+Operatie BRP
+
+7-6-2017
+
+0.9
+
+Reviewverwerking Operatie BRP
+
+Operatie BRP
+
+8-6-2017
+
+0.10
+
+Reviewverwerking Operatie BRP
+
+Operatie BRP
+
+13-6-2017
+
+0.11
+
+AH Wijziging curatele (+actie) toegevoegd
+
+Operatie BRP
+
+15-6-2017
+
+0.12
+
+Reviewverwerking Operatie BRP
+
+Operatie BRP
+
+15-06-2017
+
+0.13
+
+AH Correctie verstrekkingsbeperking toegevoegd
+
+Operatie BRP
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+16-06-2017
+
+0.14
+
+AH Correctie curatele toegevoegd
+
+Operatie BRP
+
+16-06-2017
+
+0.15
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+19-06-2017
+
+0.16
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+20-06-2017
+
+0.17
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+21-06-2017
+
+0.18
+
+AH Wijziging gezag toegevoegd
+
+Operatie BRP
+
+26-06-2017
+
+0.19
+
+Document aangepast m.b.t. documentatierichtlijnen.
+
+Operatie BRP
+
+28-06-2017
+
+0.20
+
+UCM toegevoegd
+
+Operatie BRP
+
+10-07-2017
+
+0.21
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+11-07-2017
+
+0.22
+
+Review op AH Wijziging gezag verwerkt
+
+Operatie BRP
+
+13-07-2017
+
+0.23
+
+Review Operatie BRP verwerkt
+
+Operatie BRP
+
+Reviewhistorie
+Versie Review
+0.6
+
+Operatie BRP
+
+0.7
+
+Operatie BRP
+
+0.9
+
+Operatie BRP (AH Wijziging verstrekkingsbeperking)
+
+0.11
+
+Operatie BRP (AH Wijziging curatele)
+
+0.12
+
+Operatie BRP
+
+0.15
+
+Operatie BRP (AH Correctie verstrekkingsbeperking & Correctie curatele)
+
+0.16
+
+Operatie BRP
+
+0.20
+
+Operatie BRP (AH Wijziging/Correctie verstrekkingsbeperking, Wijziging/Correctie
+curatele, AH Wijziging gezag)
+Operatie BRP (AH Wijziging gezag)
+
+0.22
+
+Operatie BRP
+
+Status: Definitief, versie: 0.23
+
+Pagina 2 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 6
+1.1
+1.2
+1.3
+1.4
+1.5
+1.6
+1.6.1
+1.7
+
+2
+
+Doel ....................................................................................................................................6
+Leeswijzer ............................................................................................................................6
+Referenties ..........................................................................................................................6
+Use case model ....................................................................................................................7
+Document ............................................................................................................................7
+Verzoek ...............................................................................................................................7
+Verwijderen/overschrijven .................................................................................................7
+Mededeling ..........................................................................................................................7
+
+Wijziging verstrekkingsbeperking............................................................................. 8
+2.1
+Functionele context ...............................................................................................................8
+2.1.1
+Brondocumenten ..............................................................................................................8
+2.1.2
+Betrokken personen ..........................................................................................................8
+2.1.3
+Proces .............................................................................................................................8
+2.1.4
+Bijhoudings(voorstel)partijen .............................................................................................8
+2.1.5
+Vastgelegde gegevens .......................................................................................................8
+2.2
+Specifieke verwerking............................................................................................................8
+2.3
+Aanvullende informatie voor LO en HUP ...................................................................................9
+
+3
+
+Correctie verstrekkingsbeperking ........................................................................... 10
+3.1
+Functionele context ............................................................................................................. 10
+3.1.1
+Brondocumenten ............................................................................................................ 10
+3.1.2
+Betrokken personen ........................................................................................................ 10
+3.1.3
+Proces ........................................................................................................................... 10
+3.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 10
+3.1.5
+Vastgelegde gegevens ..................................................................................................... 10
+3.2
+Specifieke verwerking.......................................................................................................... 10
+
+4
+
+Wijziging gezag ...................................................................................................... 12
+4.1
+Functionele context ............................................................................................................. 12
+4.1.1
+Brondocumenten ............................................................................................................ 12
+4.1.2
+Betrokken personen ........................................................................................................ 12
+4.1.3
+Proces ........................................................................................................................... 12
+4.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 12
+4.1.5
+Vastgelegde gegevens ..................................................................................................... 12
+4.2
+Specifieke verwerking.......................................................................................................... 12
+
+5
+6
+
+Correctie gezag ....................................................................................................... 13
+Wijziging Curatele................................................................................................... 14
+6.1
+Functionele context ............................................................................................................. 14
+6.1.1
+Brondocumenten ............................................................................................................ 14
+6.1.2
+Betrokken personen ........................................................................................................ 14
+6.1.3
+Proces ........................................................................................................................... 14
+6.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 14
+6.1.5
+Vastgelegde gegevens ..................................................................................................... 14
+6.2
+Specifieke verwerking.......................................................................................................... 14
+
+7
+
+Correctie Curatele ................................................................................................... 15
+7.1
+Functionele context ............................................................................................................. 15
+7.1.1
+Brondocumenten ............................................................................................................ 15
+7.1.2
+Betrokken personen ........................................................................................................ 15
+7.1.3
+Proces ........................................................................................................................... 15
+7.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 15
+7.1.5
+Vastgelegde gegevens ..................................................................................................... 15
+
+Status: Definitief, versie: 0.23
+
+Pagina 3 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+7.2
+
+8
+
+Specifieke verwerking.......................................................................................................... 15
+
+Overschrijving geslacht en naam na geslachtswijziging ......................................... 16
+8.1
+Functionele context ............................................................................................................. 16
+8.1.1
+Brondocumenten ............................................................................................................ 16
+8.1.2
+Betrokken personen ........................................................................................................ 16
+8.1.3
+Proces ........................................................................................................................... 16
+8.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 16
+8.1.5
+Vastgelegde gegevens ..................................................................................................... 16
+8.2
+Specifieke verwerking.......................................................................................................... 17
+
+9
+
+Overschrijving partnergegevens na geslachtswijziging .......................................... 18
+9.1
+Functionele context ............................................................................................................. 18
+9.1.1
+Brondocumenten ............................................................................................................ 18
+9.1.2
+Betrokken personen ........................................................................................................ 18
+9.1.3
+Proces ........................................................................................................................... 18
+9.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 18
+9.1.5
+Vastgelegde gegevens ..................................................................................................... 18
+9.2
+Specifieke verwerking.......................................................................................................... 19
+
+10
+
+Overschrijving kindgegevens na geslachtswijziging ............................................... 20
+
+10.1
+Functionele context ............................................................................................................. 20
+10.1.1
+Brondocumenten ........................................................................................................ 20
+10.1.2
+Betrokken personen .................................................................................................... 20
+10.1.3
+Proces ....................................................................................................................... 20
+10.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 20
+10.1.5
+Vastgelegde gegevens................................................................................................. 20
+10.2
+Specifieke verwerking.......................................................................................................... 20
+
+11
+
+Overschrijving oudergegevens na geslachtswijziging ............................................. 22
+
+11.1
+Functionele context ............................................................................................................. 22
+11.1.1
+Brondocumenten ........................................................................................................ 22
+11.1.2
+Betrokken personen .................................................................................................... 22
+11.1.3
+Proces ....................................................................................................................... 22
+11.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 22
+11.1.5
+Vastgelegde gegevens................................................................................................. 22
+11.2
+Specifieke verwerking.......................................................................................................... 23
+
+12
+
+Verwijdering gegevens na adoptie .......................................................................... 24
+
+12.1
+Functionele context ............................................................................................................. 24
+12.1.1
+Brondocumenten ........................................................................................................ 24
+12.1.2
+Betrokken personen .................................................................................................... 24
+12.1.3
+Proces ....................................................................................................................... 24
+12.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 24
+12.1.5
+Vastgelegde gegevens................................................................................................. 24
+12.2
+Specifieke verwerking.......................................................................................................... 25
+
+13
+
+Verwijdering kindgegevens na adoptie ................................................................... 26
+
+13.1
+Functionele context ............................................................................................................. 26
+13.1.1
+Brondocumenten ........................................................................................................ 26
+13.1.2
+Betrokken personen .................................................................................................... 26
+13.1.3
+Proces ....................................................................................................................... 26
+13.1.4
+Bijhoudings(voorstel)partijen ....................................................................................... 26
+13.1.5
+Vastgelegde gegevens................................................................................................. 26
+13.2
+Specifieke verwerking.......................................................................................................... 26
+
+14
+
+Acties ...................................................................................................................... 28
+
+14.1
+14.2
+14.3
+14.4
+
+Overschrijving gegevens na geslachtswijziging ....................................................................... 28
+Overschrijving gegevens gerelateerde na geslachtswijziging ..................................................... 28
+Verwijdering gegevens na adoptie ......................................................................................... 28
+Verwijdering kind ................................................................................................................ 30
+
+Status: Definitief, versie: 0.23
+
+Pagina 4 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+14.5
+14.6
+14.7
+14.8
+14.9
+14.10
+14.11
+14.12
+14.13
+14.14
+14.15
+
+Registratie verstrekkingsbeperking........................................................................................ 30
+Registratie gezag ................................................................................................................ 31
+Beëindiging Gezag .............................................................................................................. 31
+Registratie onder curatele .................................................................................................... 31
+Beëindiging onder curatele ................................................................................................... 31
+Correctieverval volledige verstrekkingsbeperking .................................................................... 32
+Correctieregistratie volledige verstrekkingsbeperking .............................................................. 32
+Correctieverval verstrekkingsbeperking ................................................................................. 32
+Correctieregistratie verstrekkingsbeperking ............................................................................ 32
+Correctieverval onder curatele .............................................................................................. 32
+Correctieregistratie onder curatele ........................................................................................ 32
+
+Appendix A – BZVU en toegestane indienende partijen .................................................. 33
+15
+
+Openstaande punten ............................................................................................... 35
+
+Status: Definitief, versie: 0.23
+
+Pagina 5 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+1 Inleiding
+1.1
+
+Doel
+
+De module ‘Document, verzoek en mededeling’ bevat handelingen en acties die verantwoord
+worden door een verzoek van (of namens) de ingeschrevene, een mededeling van de minister van
+V&J, een kennisgeving of een ambtshalve besluit of een mededeling van een derde.
+Het doel van dit document is om de afhandeling van deze handelingen te beschrijven.
+
+1.2
+
+Leeswijzer
+
+Per administratieve handeling wordt de functionele context en specifieke verwerking beschreven.
+De functionele context beschrijft de situatie waarin de administratieve handeling van toepassing is.
+Verder wordt de ‘peildatum’ voor regels met een tijdsaspect gedefinieerd.
+In de specifieke verwerking wordt beschreven welke acties relevant zijn voor de administratieve
+handeling en wordt per actie eventuele specifieke functionaliteit binnen de context van de
+handeling benoemd.
+Voor de definitie van het invoerbericht en bedrijfsregels die bij een administratieve handeling horen
+wordt verwezen naar de relevante hoofdstukken in ‘UCS-BY.0.DVM - Bijlage Verwijder
+persoonsgegevens’ [1], ‘UCS-BY.0.DVM - Bijlage Corrigeer mededeling verzoek’ [8], ‘UCSBY.0.DVM - Bijlage Registreer mededeling verzoek’ [9].
+De beschrijving van de generieke functionaliteit van de acties staat beschreven in hoofdstuk 14.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+UCS BY.0.DVM - Bijlage Verwijder persoonsgegevens.
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving - Verwijderen en overschrijven
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+UCS BY.0.AV – Afhandeling verzoek
+
+Operatie BRP
+
+-
+
+-
+
+4
+
+Aspectbeschrijving - Formele en Materiële Historie
+
+Operatie BRP
+
+-
+
+-
+
+5
+
+Aspectbeschrijving - Corrigeren
+
+Operatie BRP
+
+-
+
+-
+
+6
+
+Besluit BRP
+
+Operatie BRP
+
+-
+
+-
+
+7
+
+UCS BY.1.ON – Ontrelateren
+
+Operatie BRP
+
+-
+
+-
+
+8
+
+UCS-BY.0.DVM - Bijlage Corrigeer mededeling verzoek
+
+Operatie BRP
+
+-
+
+-
+
+9
+
+UCS-BY.0.DVM - Bijlage Registreer mededeling verzoek
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 0.23
+
+Pagina 6 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+1.4
+
+Use case model
+
+In onderstaand use case model staan alle administratieve handelingen voor de module ‘Document,
+Verzoek en Mededeling’. Hierin is te zien dat alle administratieve handelingen subtype zijn van het
+supertype ‘Afhandeling verzoek’. De laatste beschrijft de generieke afhandeling van een verzoek
+zoals relevant is voor de verwerking van alle handelingen.
+
+1.5
+
+Document
+
+1.6
+
+Verzoek
+
+1.6.1
+
+Verwijderen/overschrijven
+
+Artikel 2.57 van de Wet BRP regelt het recht om gegevens van de persoonslijst te verwijderen in
+het geval van adopties en geslachtswijzigingen.
+Zo heeft bijvoorbeeld een geadopteerde het recht om op verzoek gegevens van vóór de adoptie
+van zijn persoonslijst te laten verwijderen. Een ander voorbeeld is het recht om na
+geslachtswijziging op verzoek de gegevens over het oorspronkelijke geslacht op de persoonslijst te
+overschrijven met de gegevens van het nieuwe geslacht.
+In beide gevallen gebruikt de wet de term verwijderen. In de BRP gebruiken we de term
+overschrijven in plaats van verwijderen als er andere gegevens in de plaats van de verwijderde
+gegevens komen, zoals bij overschrijving na geslachtswijziging.
+In alle gevallen geldt dat de verwijderde gegevens niet meer zichtbaar mogen zijn voor afnemers
+en bijhouders.
+
+1.7
+
+Mededeling
+
+Status: Definitief, versie: 0.23
+
+Pagina 7 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+2 Wijziging verstrekkingsbeperking
+2.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Wijziging verstrekkingsbeperking’ is het registreren van
+het verzoek van de burger voor de beperking van verstrekking van gegevens aan een of meerdere
+derden (afnemers).
+De administratieve handeling is bedoeld om de verstrekkingsbeperking bij een ingezetene te
+registreren of te beëindigen. Deze verstrekkingsbeperking kan betrekking hebben op:
+•
+•
+•
+
+De systematische verstrekking aan een of meerdere geautoriseerde partijen, opgenomen in
+de bijlage 4 van het Besluit BRP [6].1 (specifieke verstrekkingsbeperking)
+De verstrekking door het college van burgemeester en wethouders aan een of meerdere in
+de gemeentelijke verordening opgenomen instanties.2 (specifieke verstrekkingsbeperking)
+Zowel de systematische verstrekkingen aan de derden genoemd in bijlage 4 van het Besluit
+BRP [6] als de verstrekkingen door het (de) college(s) van burgemeester en wethouders.3
+(volledige verstrekkingsbeperking)
+
+Specifieke verstrekkingsbeperkingen worden door de registratie van een volledige
+verstrekkingsbeperking beëindigd. En omgekeerd wordt ook een volledige verstrekkingsbeperking
+beëindigd door de registratie van een specifieke verstrekkingsbeperking.
+2.1.1
+•
+
+De basis voor de administratieve handeling is een Verzoek verstrekkingsbeperking door of
+namens de ingezetene.
+
+2.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+De ingezetene wiens gegevens niet (of beperkt) verstrekt worden (hoofdpersoon).
+
+2.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [3].
+2.1.4
+•
+
+Bijhoudingspartij van de hoofdpersoon
+
+2.1.5
+•
+•
+
+2.2
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Persoon.Verstrekkingsbeperking (volledige verstrekkingsbeperking)
+of
+Persoon \ Verstrekkingsbeperking (specifieke verstrekkingsbeperking)
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+•
+
+Registratie verstrekkingsbeperking
+Geen bijzonderheden voor deze actie.
+Beëindiging verstrekkingsbeperking
+Geen bijzonderheden voor deze actie.
+
+1
+
+uitsluitend een in de BRP bekende derde als afnemer kan worden aangewezen.
+naast de omschrijving van de instantie die het betreft wordt ook geregistreerd welke gemeentelijke verordening het
+betreft (de gemeentecode).
+3 hier is sprake van een volledige verstrekkingsbeperking en wordt geen specifieke partij of gemeentecode waarvan de
+verordening is opgenomen bij de aantekening dat er sprake is van een verstrekkingsbeperking.
+2
+
+Status: Definitief, versie: 0.23
+
+Pagina 8 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+2.3
+
+Aanvullende informatie voor LO en HUP
+
+Het verzoek tot registratie van een verstrekkingsbeperking kan ook onderdeel zijn van de aangifte
+van verblijf en adres en de geboorte-aangifte. Het verzoek kan dan bij de betreffende
+administratieve handelingen als nevenactie worden opgenomen.
+
+Status: Definitief, versie: 0.23
+
+Pagina 9 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+3 Correctie verstrekkingsbeperking
+3.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Correctie verstrekkingsbeperking’ is het herstellen van
+een foutieve registratie van de verstrekkingsbeperking van gegevens aan één of meerdere derden
+(afnemers). Dit kan op verzoek van de burger of ambtshalve.
+De administratieve handeling is bedoeld om de geregistreerde verstrekkingsbeperking bij een
+ingezetene te corrigeren. De correctie kan ook betrekking hebben op een ten onrechte beëindigde
+verstrekkingsbeperking.
+3.1.1
+
+Brondocumenten
+
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [5].
+3.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon
+De ingezetene op wiens persoonslijst de verstrekkingsbeperking gecorrigeerd wordt.
+
+3.1.3
+•
+3.1.4
+
+Proces
+Geen bijzonderheden
+Bijhoudings(voorstel)partijen
+
+De bijhoudingspartij van de hoofdpersoon
+3.1.5
+
+Vastgelegde gegevens
+
+Indien de volledige verstrekkingsbeperking gecorrigeerd wordt, door middel van de acties
+‘Correctieverval volledige verstrekkingsbeperking’ en ‘Correctieregistratie volledige
+verstrekkingsbeperking’, vervalt respectievelijk een bestaand voorkomen van de aangewezen
+groep naar de formele historie en wordt er een nieuw voorkomen van deze groep geregistreerd.
+Het betreft hier de groep:
+•
+
+Persoon.Verstrekkingsbeperking.Standaard
+
+Indien de verstrekkingsbeperking voor een specifieke partij of derde gecorrigeerd wordt, door
+middel van de acties ‘Correctieverval verstrekkingsbeperking’ en ‘Correctieregistratie
+verstrekkingsbeperking’, vervalt respectievelijk een bestaand voorkomen van de aangewezen
+groep naar de formele historie en wordt er een nieuw voorkomen van deze groep geregistreerd.
+Het betreft hier de groep:
+•
+
+Persoon \ Verstrekkingsbeperking.Persoon.Verstrekkingsbeperking.Standaard
+
+Optioneel kan bij het laten vervallen van een voorkomen een ‘Nadere aanduiding verval’ worden
+vastgelegd.
+
+3.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+•
+•
+•
+
+Correctieverval volledige verstrekkingsbeperking
+Geen bijzonderheden voor deze actie.
+Correctieregistratie volledige verstrekkingsbeperking
+Geen bijzonderheden voor deze actie.
+Correctieverval verstrekkingsbeperking
+Geen bijzonderheden voor deze actie.
+Correctieregistratie verstrekkingsbeperking
+
+Status: Definitief, versie: 0.23
+
+Pagina 10 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+Geen bijzonderheden voor deze actie.
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+Status: Definitief, versie: 0.23
+
+Pagina 11 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+4 Wijziging gezag
+4.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Wijziging gezag’ is het registreren van gegevens over
+het gezag dat over de minderjarige wordt uitgeoefend en bij meerderjarigheid het beëindigen
+ervan.
+Gezag wordt uitsluitend opgenomen of gewijzigd op basis van een ontvangen mededeling uit het
+gezagsregister. De datum ingang en de datum einde van het gezag wordt overgenomen van de
+kennisgeving.
+Gezag dat ‘van rechtswege’ aan ouders toekomt wordt niet geregistreerd in de BRP, uitsluitend
+voogdij en toeziend voogdij wordt geregistreerd.
+Zodra de persoon meerderjarig is (bijvoorbeeld door huwelijk of het bereiken van de leeftijd van 18
+jaar), eindigt het gezag van rechtswege. Van het gezagsregister wordt géén mededeling ontvangen
+dat het gezag van rechtswege is vervallen. De bijhoudingsverantwoordelijke kan ‘ambtshalve’
+overgaan tot wijziging van het gezag.
+4.1.1
+
+Brondocumenten
+
+De basis voor de wijziging gezag is:
+•
+•
+4.1.2
+•
+
+4.2
+
+Bijhoudings(voorstel)partijen
+
+Bijhoudingspartij van de hoofdpersoon
+
+4.1.5
+•
+•
+
+Proces
+
+Geen bijzonderheden
+
+4.1.4
+•
+
+Betrokken personen
+
+De ingezetene (hoofdpersoon)
+
+4.1.3
+•
+
+Een mededeling/kennisgeving van het gezagsregister
+Een ambtshalve besluit (bij laten vervallen vanwege meerderjarigheid)
+
+Vastgelegde gegevens
+
+Ouder.Ouderlijk gezag
+Persoon.Gezag derde
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties. Eén van
+deze acties moet aanwezig zijn en ze mogen niet beide tegelijk worden gebruikt.
+•
+•
+
+Hoofdactie Registratie gezag (optioneel)
+Geen bijzonderheden voor deze actie.
+Hoofdactie Beëindiging gezag (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’ dan wel ‘Datum einde geldigheid’ van de actie.
+
+Status: Definitief, versie: 0.23
+
+Pagina 12 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+5 Correctie gezag
+Deze administratieve handeling moet nog uitgewerkt worden.
+
+Status: Definitief, versie: 0.23
+
+Pagina 13 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+6 Wijziging Curatele
+6.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Wijziging curatele’ is het registreren, beëindigen van
+het registreren van een ondercuratelestelling.
+Ondercuratelestelling geldt uitsluitend voor meerderjarigen. Van een ondercuratelestelling wordt
+aantekening gemaakt in het centrale curatele- en bewindregister. De curatele wordt geregistreerd
+door de gemeente naar aanleiding van een kennisgeving die is ontvangen van het register. De
+datum ingang dan wel de datum einde van de ondercuratelestelling wordt overgenomen van de
+kennisgeving. Deze datum kan in de toekomst liggen. Dit is bijvoorbeeld het geval als de rechter al
+een uitspraak doet over curatele voordat de betrokkene meerderjarig is. In die gevallen vindt de
+registratie pas plaats op het moment dat de ondercuratelestelling ingaat.
+6.1.1
+•
+
+De basis voor de Wijziging curatele is een mededeling/kennisgeving van het centrale curateleen bewindregister.
+
+6.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+De ingezetene (hoofdpersoon)
+
+6.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [3].
+6.1.4
+•
+
+Bijhoudingspartij van de hoofdpersoon
+
+6.1.5
+•
+
+6.2
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Persoon.Curatele
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties. Eén van
+deze acties moet aanwezig zijn en ze mogen niet beide tegelijk worden gebruikt.
+•
+•
+
+Registratie onder curatele
+Geen bijzonderheden voor deze actie.
+Beëindiging onder curatele
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’ dan wel ‘Datum einde geldigheid’ van de actie.
+
+Status: Definitief, versie: 0.23
+
+Pagina 14 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+7 Correctie Curatele
+7.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Correctie curatele’ is het herstellen van een fout in de
+registratie van een ondercuratelestelling.
+Gecorrigeerd kan worden dat de ondercuratelestelling onterecht is opgenomen (bij de verkeerde
+persoon bijvoorbeeld). Ook kan de datum ingang geldigheid of de datum einde geldigheid met deze
+administratieve handeling worden gecorrigeerd.
+7.1.1
+
+Brondocumenten
+
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [5].
+7.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon
+De ingezetene op wiens persoonslijst de ondercuratelestelling gecorrigeerd wordt.
+
+7.1.3
+•
+7.1.4
+
+Proces
+Geen bijzonderheden
+Bijhoudings(voorstel)partijen
+
+De bijhoudingspartij van de hoofdpersoon
+7.1.5
+
+Vastgelegde gegevens
+
+Indien de ondercuratelestelling gecorrigeerd wordt, door middel van de acties ‘Correctieverval
+onder curatele’ en ‘Correctieregistratie onder curatele’, vervalt respectievelijk een bestaand
+voorkomen van de aangewezen groep naar de formele historie en wordt er een nieuw voorkomen
+van deze groep geregistreerd. Het betreft hier de groep:
+•
+
+Persoon.Curatele
+
+Optioneel kan bij het laten vervallen van een voorkomen een ‘Nadere aanduiding verval’ worden
+vastgelegd.
+
+7.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+•
+
+Correctieverval onder curatele
+Geen bijzonderheden voor deze actie.
+Correctieregistratie onder curatele
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+Status: Definitief, versie: 0.23
+
+Pagina 15 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+8 Overschrijving geslacht en naam na geslachtswijziging
+8.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Overschrijving geslacht en naam na geslachtswijziging’
+is om de geslachtsaanduiding en voornamen van vóór de geslachtswijziging te overschrijven met
+de gegevens van na de geslachtswijziging.
+Een betrokkene van 16 jaar of ouder kan dit verzoek zelf doen. De wettelijke vertegenwoordiger
+kan het verzoek indienen namens een jonger persoon.
+Het kan overigens voor komen dat de geslachtswijziging en voornaamswijziging niet tegelijkertijd
+hebben plaatsgevonden. Aangezien na de geslachtswijziging nog altijd een verzoek tot
+overschrijven kan worden gedaan is dat voor deze administratieve handeling relevant.
+8.1.1
+
+Brondocumenten
+
+Het is verplicht om minimaal één bron op te geven. Alleen brondocumenten van het soort ‘Overig’
+zijn toegestaan.
+8.1.2
+•
+
+Betrokken personen
+
+De ingezetene wiens geslacht is gewijzigd (hoofdpersoon)
+
+8.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [3].
+De handeling wordt asymmetrisch verwerkt. De persoonslijsten van gerelateerden van de
+hoofdpersoon mogen namelijk niet worden geraakt. Elke symmetrische relatie waarin de
+hoofdpersoon is betrokken wordt dan ook eerst ontrelateerd. Zie paragraaf 3.2.1 van
+Aspectbeschrijving – Verwijderen en overschrijven [2].
+8.1.4
+•
+
+Bijhoudings(voorstel)partijen
+
+Bijhoudingspartij van de hoofdpersoon
+
+8.1.5
+
+Vastgelegde gegevens
+
+Van de hoofdpersoon worden de volgende groepen overschreven voor zover deze betrekking
+hebben op de periode vóór de geslachtswijziging:4
+•
+•
+•
+•
+
+Geslachtsaanduiding
+Voornaam
+Samengestelde naam
+Naamgebruik
+
+Overschrijven houdt in het verwijderen van voorkomens en opvullen van de ontstane gaten door
+andere voorkomens op te rekken. Voor meer informatie over het oprekken van voorkomens, zie
+paragraaf 4.1.2 van Aspectbeschrijving – Verwijderen en overschrijven [2].
+Conform ontwerpbeslissing 1 van Aspectbeschrijving – Verwijderen en overschrijven [2] vindt het
+verwijderen van voorkomens plaats door deze met de ‘Nadere aanduiding verval’ waarde ‘P’
+(Privacy) naar de formele historie te laten vervallen.
+
+4
+
+De datum van de geslachtswijziging/voornaamswijziging wordt als ‘Peildatum verwijdering’ in het bericht opgenomen. Als
+de geslachtswijziging en voornaamswijziging niet op dezelfde datum zijn ingegaan, wordt de meest recente van de 2 als
+‘Peildatum verwijdering’ in het bericht opgenomen. Zie onder het kopje ‘Peildatum’ in paragraaf 4.1.1 van
+Aspectbeschrijving – Verwijderen en overschrijven [2].
+
+Status: Definitief, versie: 0.23
+
+Pagina 16 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+Welke voorkomens precies van een groep moeten worden verwijderd is afhankelijk van het
+historiepatroon van de groep. Deze patronen zijn beschreven in hoofdstuk 4 van
+Aspectbeschrijving – Verwijderen en overschrijven [2].
+
+8.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande actie.
+•
+
+Overschrijving gegevens na geslachtswijziging
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+
+Status: Definitief, versie: 0.23
+
+Pagina 17 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+9 Overschrijving partnergegevens na geslachtswijziging
+9.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Overschrijving partnergegevens na geslachtswijziging’
+is het op de persoonslijst van de hoofdpersoon overschrijven van de geslachtsaanduiding en
+naamsgegevens van een gerelateerde (ex)partner die een geslachtswijziging heeft ondergaan. De
+gegevens ná de geslachtswijziging van de (ex)partner worden overschreven met de gegevens van
+vóór de geslachtswijziging.
+Het kan overigens voor komen dat de geslachtswijziging en voornaamswijziging niet tegelijkertijd
+hebben plaatsgevonden. Aangezien lang na de geslachtswijziging nog een verzoek tot
+overschrijven kan worden gedaan is dat voor deze administratieve handeling relevant.
+9.1.1
+
+Brondocumenten
+
+Het is verplicht om minimaal één bron op te geven. Alleen brondocumenten van het soort ‘Overig’
+zijn toegestaan.
+9.1.2
+•
+
+Betrokken personen
+
+De ingezetene op wiens persoonslijst de gegevens van de (ex)partner worden overschreven
+(hoofdpersoon)
+
+9.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS-BY.0.AV – Afhandeling verzoek [3].
+De handeling wordt asymmetrisch verwerkt. De persoonslijsten van gerelateerden van de
+hoofdpersoon mogen namelijk niet worden geraakt. Elke symmetrische relatie waarin de
+hoofdpersoon is betrokken wordt dan ook eerst ontrelateerd. Zie paragraaf 3.2.1 van
+Aspectbeschrijving – Verwijderen en overschrijven [2].
+9.1.4
+•
+
+Bijhoudings(voorstel)partijen
+
+Bijhoudingspartij van de hoofdpersoon.
+
+9.1.5
+
+Vastgelegde gegevens
+
+Van de in het bericht aangeduide partner worden de volgende groepen overschreven voor zover
+deze betrekking hebben op de periode vanaf de geslachtswijziging:5
+•
+•
+
+Geslachtsaanduiding
+Samengestelde naam
+
+Overschrijven houdt in het verwijderen van voorkomens en opvullen van de ontstane gaten door
+andere voorkomens op te rekken. Voor meer informatie over het oprekken van voorkomens, zie
+paragraaf 4.1.2 van Aspectbeschrijving – Verwijderen en overschrijven [2].
+Conform ontwerpbeslissing 1 van Aspectbeschrijving – Verwijderen en overschrijven [2] vindt het
+verwijderen van voorkomens plaats door deze met de ‘Nadere aanduiding verval’ ‘P’ (Privacy) naar
+de formele historie te laten vervallen.
+Welke voorkomens precies van een groep moeten worden verwijderd is afhankelijk van het
+historiepatroon van de groep. Deze patronen zijn beschreven in hoofdstuk 4 van
+Aspectbeschrijving – Verwijderen en overschrijven [2].
+
+5
+
+De datum van de geslachtswijziging/voornaamswijziging wordt als ‘Peildatum verwijdering’ in het bericht opgenomen. Als
+de geslachtswijziging en voornaamswijziging niet op dezelfde datum zijn ingegaan, wordt de oudste van de 2 als ‘Peildatum
+verwijdering’ in het bericht opgenomen. Zie onder het kopje ‘Peildatum’ in paragraaf 4.1.1 van Aspectbeschrijving –
+Verwijderen en overschrijven [2].
+
+Status: Definitief, versie: 0.23
+
+Pagina 18 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+9.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande actie.
+•
+
+Overschrijving gegevens gerelateerde na geslachtswijziging
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+Bij het overschrijven van de gegevens van de (pseudo-persoon) partner worden (indien aanwezig)
+ook de volgende IST-gegevens verwijderd behorende bij de familierechtelijke betrekking waarin de
+hoofdpersoon is betrokken:
+•
+•
+•
+
+Stapel \ Relatie
+Stapel
+Stapel voorkomen
+
+Voor meer informatie over het verwijderen van IST-gegevens bij verwijderings- en
+overschrijvingshandelingen, zie paragraaf 3.2.2 van Aspectbeschrijving – Verwijderen en
+overschrijven [2].
+
+Status: Definitief, versie: 0.23
+
+Pagina 19 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+10 Overschrijving kindgegevens na geslachtswijziging
+10.1 Functionele context
+Het doel van de administratieve handeling ‘Overschrijving kindgegevens na geslachtswijziging’ is
+het op de persoonslijst van de ouder overschrijven van de naamsgegevens van een kind die een
+geslachtswijziging heeft ondergaan. De gegevens ná de geslachtswijziging van het kind worden
+overschreven met de gegevens van vóór de geslachtswijziging.
+10.1.1 Brondocumenten
+Het is verplicht om minimaal één bron op te geven. Alleen brondocumenten van het soort ‘Overig’
+zijn toegestaan.
+10.1.2 Betrokken personen
+•
+
+De ingezeten ouder op wiens persoonslijst de kindgegevens worden overschreven
+(hoofdpersoon)
+
+10.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [3].
+De handeling wordt asymmetrisch verwerkt. De persoonslijsten van gerelateerden van de
+hoofdpersoon mogen namelijk niet worden geraakt. Elke symmetrische relatie waarin de
+hoofdpersoon is betrokken wordt dan ook eerst ontrelateerd. Zie paragraaf 3.2.1 van
+Aspectbeschrijving – Verwijderen en overschrijven [2].
+10.1.4 Bijhoudings(voorstel)partijen
+•
+
+Bijhoudingspartij van de hoofdpersoon
+
+10.1.5 Vastgelegde gegevens
+Van het in het bericht aangeduide kind wordt de volgende groep overschreven voor zover deze
+betrekking heeft op de periode vanaf de geslachtswijziging:6
+•
+
+Samengestelde naam
+
+Overschrijven houdt in het verwijderen van voorkomens en opvullen van de ontstane gaten door
+andere voorkomens op te rekken. Voor meer informatie over het oprekken van voorkomens, zie
+paragraaf 4.1.2 van Aspectbeschrijving – Verwijderen en overschrijven [2].
+Conform ontwerpbeslissing 1 van Aspectbeschrijving – Verwijderen en overschrijven [2] vindt het
+verwijderen van voorkomens plaats door deze met de ‘Nadere aanduiding verval’ ‘P’ (Privacy) naar
+de formele historie te laten vervallen.
+Welke voorkomens precies van een groep moeten worden verwijderd is afhankelijk van het
+historiepatroon van de groep. Deze patronen zijn beschreven in hoofdstuk 4 van
+Aspectbeschrijving – Verwijderen en overschrijven [2].
+
+10.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande actie.
+•
+
+Overschrijving gegevens gerelateerde na geslachtswijziging
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+6
+
+De datum van de naamswijziging wordt als Peildatum verwijdering in het bericht opgenomen.
+
+Status: Definitief, versie: 0.23
+
+Pagina 20 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+Bij het overschrijven van de gegevens van de (pseudo-persoon) ouder worden (indien aanwezig)
+ook de volgende IST-gegevens verwijderd behorende bij de familierechtelijke betrekking waarin de
+hoofdpersoon is betrokken:
+•
+•
+•
+
+Stapel \ Relatie
+Stapel
+Stapel voorkomen
+
+Voor meer informatie over het verwijderen van IST-gegevens bij verwijderings- en
+overschrijvingshandelingen, zie paragraaf 3.2.2 van Aspectbeschrijving – Verwijderen en
+overschrijven [2].
+
+Status: Definitief, versie: 0.23
+
+Pagina 21 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+11 Overschrijving oudergegevens na geslachtswijziging
+11.1 Functionele context
+Het doel van de administratieve handeling ‘Overschrijving oudergegevens na geslachtswijziging’ is
+het op de persoonslijst van het kind overschrijven van de geslachtsaanduiding en naamsgegevens
+van een ouder die een geslachtswijziging heeft ondergaan. De gegevens ná de geslachtswijziging
+van de ouder worden overschreven met de gegevens van vóór de geslachtswijziging.
+Het kan overigens voor komen dat de geslachtswijziging en voornaamswijziging niet tegelijkertijd
+hebben plaatsgevonden. Aangezien lang na de geslachtswijziging nog een verzoek tot
+overschrijven kan worden gedaan is dat voor deze administratieve handeling relevant.
+11.1.1 Brondocumenten
+Het is verplicht om minimaal één bron op te geven. Alleen brondocumenten van het soort ‘Overig’
+zijn toegestaan.
+11.1.2 Betrokken personen
+•
+
+Het ingezeten kind van wiens persoonslijst de oudergegevens worden overschreven
+(hoofdpersoon)
+
+11.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS-BY.0.AV – Afhandeling verzoek [3].
+De handeling wordt asymmetrisch verwerkt. De persoonslijsten van gerelateerden van de
+hoofdpersoon mogen namelijk niet worden geraakt. Elke symmetrische relatie waarin de
+hoofdpersoon is betrokken wordt dan ook eerst ontrelateerd. Zie paragraaf 3.2.1 van
+Aspectbeschrijving – Verwijderen en overschrijven [2].
+11.1.4 Bijhoudings(voorstel)partijen
+•
+
+Bijhoudingspartij van de hoofdpersoon
+
+11.1.5 Vastgelegde gegevens
+Van de in het bericht aangeduide ouder worden de volgende groepen overschreven voor zover
+deze betrekking hebben op de periode vanaf de geslachtswijziging:7
+•
+•
+
+Geslachtsaanduiding
+Samengestelde naam
+
+Overschrijven houdt in het verwijderen van voorkomens en opvullen van de ontstane gaten door
+andere voorkomens op te rekken. Voor meer informatie over het oprekken van voorkomens, zie
+paragraaf 4.1.2 van Aspectbeschrijving – Verwijderen en overschrijven [2].
+Conform ontwerpbeslissing 1 van Aspectbeschrijving – Verwijderen en overschrijven [2] vindt het
+verwijderen van voorkomens plaats door deze met de ‘Nadere aanduiding verval’ ‘P’ (Privacy) naar
+de formele historie te laten vervallen.
+Welke voorkomens precies van een groep moeten worden verwijderd is afhankelijk van het
+historiepatroon van de groep. Deze patronen zijn beschreven in hoofdstuk 4 van
+Aspectbeschrijving – Verwijderen en overschrijven [2].
+
+7
+
+De datum van de geslachtswijziging/voornaamswijziging wordt als ‘Peildatum verwijdering’ in het bericht opgenomen. Als
+de geslachtswijziging en voornaamswijziging niet op dezelfde datum zijn ingegaan, wordt de oudste van de 2 als ‘Peildatum
+verwijdering’ in het bericht opgenomen. Zie onder het kopje ‘Peildatum’ in paragraaf 4.1.1 van Aspectbeschrijving –
+Verwijderen en overschrijven [2].
+
+Status: Definitief, versie: 0.23
+
+Pagina 22 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+11.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande actie.
+•
+
+Overschrijving gegevens gerelateerde na geslachtswijziging
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+Bij het overschrijven van de gegevens van de (pseudo-persoon) ouder worden (indien aanwezig)
+ook de volgende IST-gegevens verwijderd behorende bij de familierechtelijke betrekking waarin de
+hoofdpersoon is betrokken:
+•
+•
+•
+
+Stapel \ Relatie
+Stapel
+Stapel voorkomen
+
+Voor meer informatie over het verwijderen van IST-gegevens bij verwijderings- en
+overschrijvingshandelingen, zie paragraaf 3.2.2 van Aspectbeschrijving – Verwijderen en
+overschrijven [2].
+
+Status: Definitief, versie: 0.23
+
+Pagina 23 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+12 Verwijdering gegevens na adoptie
+12.1 Functionele context
+Het doel van de administratieve handeling ‘Verwijdering gegevens na adoptie’ is het verwijderen
+van een set aan adoptie gerelateerde gegevens van de persoonslijst van de geadopteerde. Hierbij
+worden gegevens van vóór de adoptie verwijderd en overschreven.
+Een verwijderverzoek kan alleen worden ingediend door de geadopteerde zelf die minstens 16 jaar
+is of (als deze jonger is) door de adoptiefouders.
+Het verwijderverzoek is alleen van toepassing op een sterke adoptie.
+Voorbeelden van situaties waarin sprake is van een zgn. ‘sterke adoptie’ en een verwijderverzoek
+kan worden gedaan zijn:
+•
+
+Adoptie in Nederland van een niet-Nederlands kind
+
+•
+
+Adoptie in Nederland van een Nederlands kind
+
+•
+
+Een buitenlandse sterke adoptie die in Nederland wordt overgenomen
+De oorspronkelijke ouders zijn doorgaans dan niet in de BRP geregistreerd.
+
+•
+
+Omzetting van een zwakke adoptie in sterke adoptie
+Het ouderschap van de adoptieouders is dan vóór de omzetting al aangevangen. Het
+ouderschap van de oorspronkelijke ouders wordt bij de omzetting beëindigd.
+
+•
+
+Stiefouderadoptie in Nederland
+Meestal verkrijgt hiermee de partner van de oorspronkelijke ouder eveneens het
+ouderschap over de geadopteerde. In geval van meerdere oorspronkelijke ouders wordt
+tegelijk het ouderschap van een van hen beëindigd.
+
+12.1.1 Brondocumenten
+Het is verplicht om minimaal één bron op te geven. Alleen brondocumenten van het soort ‘Overig’
+zijn toegestaan.
+12.1.2 Betrokken personen
+•
+
+De ingezetene die is geadopteerd (hoofdpersoon)
+
+12.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS-BY.0.AV – Afhandeling verzoek [3].
+De handeling wordt asymmetrisch verwerkt. De persoonslijsten van gerelateerden van de
+hoofdpersoon mogen namelijk niet worden geraakt. Elke symmetrische relatie waarin de
+hoofdpersoon is betrokken wordt dan ook eerst ontrelateerd. Zie paragraaf 3.2.1 van
+Aspectbeschrijving – Verwijderen en overschrijven [2].
+12.1.4 Bijhoudings(voorstel)partijen
+•
+
+Bijhoudingspartij van de hoofdpersoon
+
+12.1.5 Vastgelegde gegevens
+Met deze administratieve handeling worden van elke ouder waarvan het Ouderschap door de
+adoptie is beëindigd de volgende objecten/groepen verwijderd:8
+•
+•
+•
+8
+
+Ouder (Betrokkenheid)
+Ouderschap
+Ouderlijk gezag
+
+Dit geldt ook voor ouders waarvan de betrokkenheid inmiddels is vervallen.
+
+Status: Definitief, versie: 0.23
+
+Pagina 24 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+•
+•
+•
+•
+
+Samengestelde naam
+Identificatienummers
+Geslachtsaanduiding
+Geboorte
+
+Van de hoofdpersoon worden de volgende groepen verwijderd voor zover deze aanwezig zijn op de
+persoonslijst én betrekking hebben op de periode vóór de adoptie:9
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Gezag derde
+Samengestelde naam
+Geslachtsnaamcomponent
+Voornaam
+Naamgebruik
+Nationaliteit
+Staatloosheid
+Behandeld als Nederlander
+Vastgesteld niet Nederlander
+Verblijfsrecht
+Bijzondere verblijfsrechtelijke positie
+Buitenlands persoonsnummer
+Adresgegevens
+Bijhouding
+Migratie
+Inschrijving
+
+NB Als de persoon niet vanaf geboorte is ingeschreven dient de bijhouder voorafgaand aan het
+indienen van deze administratieve handeling de inschrijfdatum te corrigeren naar de adoptiedatum.
+Conform ontwerpbeslissing 1 van Aspectbeschrijving – Verwijderen en overschrijven [2] vindt het
+verwijderen van voorkomens plaats door deze met de ‘Nadere aanduiding verval’ ‘P’ (Privacy) naar
+de formele historie te laten vervallen.
+Welke voorkomens precies van een groep moeten worden verwijderd is afhankelijk van het
+historiepatroon van de groep. Deze patronen zijn beschreven in hoofdstuk 4 van
+Aspectbeschrijving – Verwijderen en overschrijven [2]. Het oprekken van voorkomens is
+beschreven in paragraaf 4.1.2 van Aspectbeschrijving – Verwijderen en overschrijven [2].
+
+12.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande actie:
+•
+
+Verwijdering gegevens na adoptie
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+Bij het verwijderen van de gegevens van een (pseudo-persoon) ouder worden (indien aanwezig)
+ook de volgende IST-gegevens verwijderd behorende bij de familierechtelijke betrekking waarin de
+hoofdpersoon is betrokken:
+•
+•
+•
+
+Stapel \ Relatie
+Stapel
+Stapel voorkomen
+
+Voor meer informatie over het verwijderen van IST-gegevens bij verwijderings- en
+overschrijvingshandelingen, zie paragraaf 3.2.2 van Aspectbeschrijving – Verwijderen en
+overschrijven [2].
+
+9
+
+De datum adoptie wordt als ‘Peildatum verwijdering’ in het bericht opgenomen.
+
+Status: Definitief, versie: 0.23
+
+Pagina 25 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+13 Verwijdering kindgegevens na adoptie
+13.1 Functionele context
+Het doel van de administratieve handeling ‘Verwijdering kindgegevens na adoptie’ is het
+verwijderen van de gegevens van een adoptiefkind van de persoonslijst van een oorspronkelijke
+ouder. Hierbij worden alle gegevens van het geadopteerde kind verwijderd.
+Als het kind een ingeschreven persoon is, dan blijft deze persoon zelf in de BRP uiteraard bestaan.
+Ook blijft de oorspronkelijke ouder gewoon op de persoonslijst van het adoptiefkind staan. Als de
+oorspronkelijke ouder van de persoonslijst van het adoptiefkind moet worden verwijderd, dan kan
+dat met de administratieve handeling ‘Verwijdering gegevens na adoptie’ zoals beschreven in
+hoofdstuk 12.
+13.1.1 Brondocumenten
+Het is verplicht om minimaal één bron op te geven. Alleen brondocumenten van het soort ‘Overig’
+zijn toegestaan.
+13.1.2 Betrokken personen
+•
+
+De ingezeten oorspronkelijke ouder op wiens persoonslijst de kindgegevens worden verwijderd
+(hoofdpersoon)
+
+13.1.3 Proces
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS-BY.0.AV – Afhandeling verzoek [3].
+De handeling wordt asymmetrisch verwerkt. De persoonslijsten van gerelateerden van de
+hoofdpersoon mogen namelijk niet worden geraakt. Elke symmetrische relatie waarin de
+hoofdpersoon is betrokken wordt dan ook eerst ontrelateerd. Zie paragraaf 3.2.1 van
+Aspectbeschrijving – Verwijderen en overschrijven [2].
+13.1.4 Bijhoudings(voorstel)partijen
+•
+
+Bijhoudingspartij van de hoofdpersoon
+
+13.1.5 Vastgelegde gegevens
+Met deze administratieve handeling worden, gegeven de in het bericht aangewezen Ouderbetrokkenheid, de volgende objecten/groepen verwijderd:
+•
+•
+•
+•
+•
+•
+•
+•
+
+Ouder (Betrokkenheid)
+Ouderschap
+Ouderlijk gezag
+Relatie.Standaard (van familierechtelijke betrekking)
+Kind (Betrokkenheid)
+Samengestelde naam (van pseudo-persoon kind)
+Identificatienummers (van pseudo-persoon kind)
+Geboorte (van pseudo-persoon kind)
+
+Conform ontwerpbeslissing 1 van Aspectbeschrijving – Verwijderen en overschrijven [2] vindt het
+verwijderen van voorkomens plaats door deze met de ‘Nadere aanduiding verval’ ‘P’ (Privacy) naar
+de formele historie te laten vervallen.
+
+13.2 Specifieke verwerking
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande actie:
+•
+
+Verwijdering kind
+Geen bijzonderheden voor deze actie.
+
+Status: Definitief, versie: 0.23
+
+Pagina 26 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling de systeemdatum.
+Bij het verwijderen van de gegevens van het (pseudo-persoon) kind worden (indien aanwezig) ook
+de volgende IST-gegevens verwijderd behorende bij de familierechtelijke betrekking waarin de
+hoofdpersoon is betrokken:
+•
+•
+•
+
+Stapel \ Relatie
+Stapel
+Stapel voorkomen
+
+Voor meer informatie over het verwijderen van IST-gegevens bij verwijderings- en
+overschrijvingshandelingen, zie paragraaf 3.2.2 van Aspectbeschrijving – Verwijderen en
+overschrijven [2].
+
+Status: Definitief, versie: 0.23
+
+Pagina 27 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+14 Acties
+De generieke functionaliteit van de relevante acties binnen de context van deze module is in dit
+hoofdstuk per actie beschreven.
+Per actie worden de gegevensgroepen en attributen beschreven die bijgehouden worden. Dit
+betreft niet alleen de gegevensgroepen zoals deze in het bijhoudingsbericht zijn opgenomen, maar
+ook de afgeleide verwerkingen door de BRP zelf.
+Alleen de attributen waarvan de waarden worden afgeleid zijn expliciet benoemd. De attributen
+zoals die in het bericht per actie en per gegevensgroep zijn opgenomen worden niet expliciet in dit
+hoofdstuk herhaald.
+Tussen haakjes is telkens het historiepatroon vermeld, samen met de indicatie of voorkomens
+worden verwijderd of overschrijven.
+De werking van de formele en materiële historie wordt niet expliciet benoemd. Voor meer
+informatie hierover zie Aspectbeschrijving - Formele en Materiële Historie [4].
+
+14.1 Overschrijving gegevens na geslachtswijziging
+Op de persoonslijst van de hoofpersoon worden de volgende gegevens overschreven, conform de
+genoemde ontwerpbeslissingen uit Aspectbeschrijving – Verwijderen en overschrijven [2]:
+•
+
+•
+
+•
+
+•
+
+Persoon.Geslachtsaanduiding (MH – Overschrijven)
+Voorkomens worden overschreven conform ontwerpbeslissingen 6 en 7, aan de hand van
+de opgegeven ‘peildatum verwijdering’.
+Persoon \ Voornaam.Standaard (MH – Overschrijven)
+Voorkomens worden overschreven conform ontwerpbeslissingen 6 en 7, aan de hand van
+de opgegeven ‘peildatum verwijdering’.
+Persoon.Samengestelde naam (MH – Overschrijven)
+Voorkomens worden overschreven conform ontwerpbeslissingen 6 en 7, aan de hand van
+de opgegeven ‘peildatum verwijdering’.
+Persoon.Naamgebruik (FH – Verwijderen)
+Voorkomens worden verwijderd conform ontwerpbeslissing 9.
+
+14.2 Overschrijving gegevens gerelateerde na geslachtswijziging
+Op de persoonslijst van de hoofpersoon worden de volgende gegevens van de in het bericht
+aangeduide gerelateerde pseudo-persoon overschreven, conform de genoemde
+ontwerpbeslissingen uit Aspectbeschrijving – Verwijderen en overschrijven [2]:
+•
+
+•
+
+Persoon.Geslachtsaanduiding (MH – Overschrijven)
+Voorkomens worden overschreven conform ontwerpbeslissingen 6 en 7, aan de hand van
+de opgegeven ‘peildatum verwijdering’.
+Persoon.Samengestelde naam (MH – Overschrijven)
+Voorkomens worden overschreven conform ontwerpbeslissingen 6 en 7, aan de hand van
+de opgegeven ‘peildatum verwijdering’.
+
+14.3 Verwijdering gegevens na adoptie
+Op de persoonslijst van de hoofdpersoon worden de ouders waarvan het Ouderschap voor of op de
+in het bericht opgegeven ‘peildatum verwijdering’ is beëindigd verwijderd.10 Omdat de actie
+asymmetrisch werkt staan de ouders als pseudo-personen op de persoonslijst van de
+hoofdpersoon. Elke pseudo-persoon ouder wordt dan ook in zijn geheel verwijderd, samen met de
+ouder-betrokkenheid.
+
+10
+
+Dit geldt ook voor ouders waarvan de betrokkenheid inmiddels is vervallen.
+
+Status: Definitief, versie: 0.23
+
+Pagina 28 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+Concreet betekent dit dat van de betreffende ouders de volgende gegevens worden verwijderd:
+•
+•
+•
+•
+•
+•
+•
+
+Betrokkenheid.Identiteit
+Alle voorkomens worden verwijderd.
+Ouder.Ouderschap
+Alle voorkomens worden verwijderd.
+Ouder.Ouderlijk gezag
+Alle voorkomens worden verwijderd.
+Persoon.Samengestelde naam
+Alle voorkomens worden verwijderd.
+Persoon.Identificatienummers
+Alle voorkomens worden verwijderd.
+Persoon.Geboorte
+Alle voorkomens worden verwijderd.
+Persoon.Geslachtsaanduiding
+Alle voorkomens worden verwijderd.
+
+Daarnaast worden van de hoofdpersoon zelf de volgende gegevens verwijderd of overschreven,
+conform de genoemde ontwerpbeslissingen uit Aspectbeschrijving – Verwijderen en overschrijven
+[2]:
+•
+
+•
+
+•
+
+•
+
+•
+•
+
+•
+
+•
+
+•
+
+•
+•
+•
+
+Persoon.Gezag derde (MH – Verwijderen)11
+Voorkomens worden verwijderd conform ontwerpbeslissing 6, aan de hand van de
+opgegeven ‘peildatum verwijdering’.
+Persoon.Samengestelde naam (MH – Overschrijven)
+Voorkomens worden overschreven conform ontwerpbeslissingen 6 en 7, aan de hand van
+de opgegeven ‘peildatum verwijdering’.
+Persoon \ Geslachtsnaamcomponent.Standaard (MH – Overschrijven)
+Voorkomens worden overschreven conform ontwerpbeslissingen 6 en 7, aan de hand van
+de opgegeven ‘peildatum verwijdering’.
+Persoon \ Voornaam.Standaard (MH – Overschrijven)
+Voorkomens worden overschreven conform ontwerpbeslissingen 6 en 7, aan de hand van
+de opgegeven ‘peildatum verwijdering’.
+Persoon.Naamgebruik (FH – Verwijderen)
+Voorkomens worden verwijderd conform ontwerpbeslissing 9.
+Persoon.Nationaliteit (MH – Verwijderen)
+Voorkomens worden verwijderd conform ontwerpbeslissing 6, aan de hand van de
+opgegeven ‘peildatum verwijdering’.
+Persoon.Staatloosheid (MH – Verwijderen)
+Voorkomens worden verwijderd conform ontwerpbeslissing 6, aan de hand van de
+opgegeven ‘peildatum verwijdering’.
+Persoon.Behandeld als Nederlander (MH – Verwijderen)
+Voorkomens worden verwijderd conform ontwerpbeslissing 6, aan de hand van de
+opgegeven ‘peildatum verwijdering’.
+Persoon.Vastgesteld niet Nederlander (MH – Verwijderen)
+Voorkomens worden verwijderd conform ontwerpbeslissing 6, aan de hand van de
+opgegeven ‘peildatum verwijdering’.
+Persoon.Verblijfsrecht (FH – Verwijderen)
+Voorkomens worden verwijderd conform ontwerpbeslissing 9.
+Persoon.Bijzondere verblijfsrechtelijke positie (FH – Verwijderen)
+Voorkomens worden verwijderd conform ontwerpbeslissing 9.
+Persoon \ Buitenlands persoonsnummer.Standaard (FH – Verwijderen)
+Voorkomens worden verwijderd conform ontwerpbeslissing 9.
+
+11
+
+Tussen haakjes is telkens het historiepatroon vermeld, samen met de indicatie of voorkomens worden verwijderd of
+overschrijven. Overschrijven houdt in het verwijderen van voorkomens en opvullen van ontstane gaten door andere
+voorkomens op te rekken.
+
+Status: Definitief, versie: 0.23
+
+Pagina 29 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+•
+
+•
+
+•
+
+•
+
+Persoon \ Adres.Standaard (MH – Verwijderen)
+Voorkomens worden verwijderd conform ontwerpbeslissing
+opgegeven ‘peildatum verwijdering’.
+Persoon.Bijhouding (MH – Verwijderen)
+Voorkomens worden verwijderd conform ontwerpbeslissing
+opgegeven ‘peildatum verwijdering’.
+Persoon.Migratie (MH – Verwijderen)
+Voorkomens worden verwijderd conform ontwerpbeslissing
+opgegeven ‘peildatum verwijdering’.
+Persoon.Inschrijving (FH – Verwijderen)
+Voorkomens worden verwijderd conform ontwerpbeslissing
+
+6, aan de hand van de
+
+6, aan de hand van de
+
+6, aan de hand van de
+
+9.
+
+14.4 Verwijdering kind
+Op de persoonslijst van de hoofdpersoon wordt het kind verwijderd die (indirect) hoort bij de ouder
+die in het bericht wordt aangewezen. Omdat de actie asymmetrisch werkt staat het betreffende
+kind als pseudo-persoon op de persoonslijst van de hoofdpersoon. Het pseudo-persoon kind wordt
+dan ook in zijn geheel verwijderd, samen met de bij het kind behorende familierechtelijke
+betrekking en de betrokkenheden.
+Concreet betekent dit dat de volgende gegevens worden verwijderd:
+•
+
+•
+•
+•
+
+•
+
+•
+•
+•
+
+Betrokkenheid.Identiteit (Ouder)
+Alle voorkomens worden verwijderd van deze groep, behorende bij de in het bericht
+aangewezen ‘Ouder’.
+Ouder.Ouderschap
+Alle voorkomens worden verwijderd.
+Ouder.Ouderlijk gezag
+Alle voorkomens worden verwijderd.
+Relatie.Standaard
+Alle voorkomens worden verwijderd, behorende bij de ‘Familierechtelijke betrekking’, waar
+de in het bericht aangewezen ‘Ouder’ aan is gekoppeld.
+Betrokkenheid.Identiteit (Kind)
+Alle voorkomens worden verwijderd van deze groep, behorende bij het ‘Kind’ van de
+hiervoor genoemde ‘Familierechtelijke betrekking’.
+Persoon.Samengestelde naam
+Alle voorkomens worden verwijderd, behorende bij het pseudo-persoon ‘Kind’.
+Persoon.Identificatienummers
+Alle voorkomens worden verwijderd, behorende bij het pseudo-persoon ‘Kind’.
+Persoon.Geboorte
+Alle voorkomens worden verwijderd, behorende bij het pseudo-persoon ‘Kind’.
+
+14.5 Registratie verstrekkingsbeperking
+Met de actie Registratie verstrekkingsbeperking wordt binnen een administratieve handeling een
+wijziging ten aanzien van de Specifieke dan wel Volledige verstrekkingsbeperking verwerkt. In
+geval van een specifieke verstrekkingsbeperking moet de derde (andere instellingen of personen
+naast overheidsorganen die gegevens verstrekt krijgen die zij nodig hebben voor de uitvoering van
+hun taken) worden geïdentificeerd.
+Specifieke verstrekkingsbeperkingen worden door de registratie van een volledige
+verstrekkingsbeperking beëindigd. En omgekeerd worden ook een volledige verstrekkingsbeperking
+beëindigd door de registratie van een specifieke verstrekkingsbeperking.
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+Persoon.Verstrekkingsbeperking (Volledige verstrekkingsbeperking)
+Bij de registratie van deze groep komt elke eventueel bestaande niet-vervallen Persoon \
+Verstrekkingsbeperking.Identiteit te vervallen.
+
+Status: Definitief, versie: 0.23
+
+Pagina 30 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+•
+
+Persoon \ Verstrekkingsbeperking.Identiteit (specifieke verstrekkingsbeperking)
+Bij de registratie van deze groep komt een eventuele bestaand niet-vervallen
+Persoon.Verstrekkingsbeperking te vervallen.
+
+14.6 Registratie gezag
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+•
+
+Ouder.Ouderlijk gezag
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon.Gezag derde
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+14.7 Beëindiging Gezag
+Met de actie worden gegevens van de volgende groep beëindigd:
+•
+
+•
+
+Ouder.Ouderlijk gezag
+Element
+
+Afleiding
+
+Datum einde geldigheid
+
+Actie.Datum einde geldigheid
+
+Persoon.Gezag derde
+Element
+
+Afleiding
+
+Datum einde geldigheid
+
+Actie.Datum einde geldigheid
+
+14.8 Registratie onder curatele
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+Persoon.Curatele
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+14.9 Beëindiging onder curatele
+Met de actie worden gegevens van de volgende groep beëindigd:
+•
+
+Persoon.Curatele
+Element
+
+Afleiding
+
+Datum einde geldigheid
+
+Actie.Datum einde geldigheid
+
+Status: Definitief, versie: 0.23
+
+Pagina 31 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+14.10 Correctieverval volledige verstrekkingsbeperking
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep:
+•
+
+Persoon.Verstrekkingsbeperking.Standaard
+
+14.11 Correctieregistratie volledige verstrekkingsbeperking
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+
+Persoon.Verstrekkingsbeperking.Standaard
+
+14.12 Correctieverval verstrekkingsbeperking
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep:
+•
+
+Persoon \ Verstrekkingsbeperking.Identiteit
+
+14.13 Correctieregistratie verstrekkingsbeperking
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+
+Persoon \ Verstrekkingsbeperking.Identiteit
+
+14.14 Correctieverval onder curatele
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep:
+•
+
+Persoon.Curatele
+
+14.15 Correctieregistratie onder curatele
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+
+Persoon.Curatele
+
+Status: Definitief, versie: 0.23
+
+Pagina 32 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+Appendix A – BZVU en toegestane indienende partijen
+In onderstaande tabel staat per handeling aangegeven of het berichtelement BZVU (Bezien vanuit
+persoon) van toepassing is – inclusief motivatie – en de toegestane indienende partijen – ook
+inclusief motivatie.
+Wanneer BZVU niet van toepassing is zal het berichtelement niet aanwezig zijn in het bericht. Voor
+meer informatie over BZVU zie UCS BY.1.ON – Ontrelateren [7].
+Bij toegestane indienende partijen wordt vermeld of het bijhoudingsvoorstel (ook) door andere dan
+de eigen gemeente mag worden ingestuurd. In onderstaande tabel kan deze kolom de volgende
+waarden aannemen:
+•
+•
+•
+
+A(lle): het bijhoudingsvoorstel mag door elke bijhoudingspartij worden ingediend;
+H(uidige): het bijhoudingsvoorstel mag alleen door de huidige bijhoudingspartij worden
+ingediend;
+B(eperkt): het bijhoudingsvoorstel mag door een beperkt aantal bijhoudingspartijen worden
+ingediend. In de motivatie staat vermeld welke partijen dat zijn.
+
+Administratieve Handeling
+
+BZVU?
+
+Wijziging
+verstrekkingsbeperking
+
+N
+
+Heeft betrekking op de
+slechts 1 persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+van de hoofdpersoon
+
+Correctie
+verstrekkingsbeperking
+
+N
+
+Heeft betrekking op de
+slechts 1 persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+van de hoofdpersoon
+
+Wijziging gezag
+
+N
+
+Heeft betrekking op de
+slechts 1 persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+van de hoofdpersoon
+
+Correctie gezag
+
+N
+
+Heeft betrekking op de
+slechts 1 persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+van de hoofdpersoon
+
+Wijziging Curatele
+
+N
+
+Heeft betrekking op de
+slechts 1 persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+van de hoofdpersoon
+
+Correctie Curatele
+
+N
+
+Heeft betrekking op de
+slechts 1 persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+van de hoofdpersoon
+
+Overschrijving geslacht
+en naam na
+geslachtswijziging
+
+N
+
+De administratieve
+handeling is
+asymmetrisch
+
+H
+
+Huidige bijhoudingspartij
+van de hoofdpersoon
+
+Overschrijving
+partnergegevens na
+geslachtswijziging
+
+N
+
+De administratieve
+handeling is
+asymmetrisch
+
+H
+
+Huidige bijhoudingspartij
+van de hoofdpersoon
+
+Overschrijving
+kindgegevens na
+geslachtswijziging
+
+N
+
+De administratieve
+handeling is
+asymmetrisch
+
+H
+
+Huidige bijhoudingspartij
+van de hoofdpersoon
+
+Overschrijving
+oudergegevens na
+geslachtswijziging
+
+N
+
+De administratieve
+handeling is
+asymmetrisch
+
+H
+
+Huidige bijhoudingspartij
+van de hoofdpersoon
+
+Verwijdering gegevens
+na adoptie
+
+N
+
+De administratieve
+handeling is
+asymmetrisch
+
+H
+
+Huidige bijhoudingspartij
+van de hoofdpersoon
+
+Verwijdering
+kindgegevens na
+
+N
+
+De administratieve
+handeling is
+
+H
+
+Huidige bijhoudingspartij
+
+Status: Definitief, versie: 0.23
+
+Motivatie
+
+Toegestane
+indienende
+partij(en)
+
+Motivatie
+
+Pagina 33 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+adoptie
+
+Status: Definitief, versie: 0.23
+
+asymmetrisch
+
+van de hoofdpersoon
+
+Pagina 34 van 35
+
+UCS BY.0.DVM - Document, Verzoek en Mededeling
+
+15 Openstaande punten
+•
+•
+•
+
+Paragraaf 1.5: Inleidende tekst voor het onderdeel Document.
+Paragraaf 1.7: Inleidende tekst voor het onderdeel Mededeling.
+Hoofdstuk 5: Administratieve handeling Correctie gezag.
+
+Status: Definitief, versie: 0.23
+
+Pagina 35 van 35
+
+

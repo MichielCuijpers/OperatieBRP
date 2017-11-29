@@ -1,0 +1,314 @@
+UCS LV.1.AFB – Autorisatiefilter bericht
+Versie
+
+2.0
+
+Datum
+
+12 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+18-11-2016
+
+0.1
+
+Eerste opzet
+
+oBRP
+
+24-11-2016
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+24-11-2016
+
+0.3
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+25-11-2016
+
+0.4
+
+Regel verplaatst , alleen onderzoek op geautoriseerde
+attributen worden geleverd
+
+oBRP
+
+13-12-2016
+
+0.5
+
+AD aangepast ((*) verwijderd)
+
+oBRP
+
+26-01-2016
+
+0.6
+
+Stukje toegevoegd over het filteren van objecten op
+formele historie en IndMutLev
+
+oBRP
+
+15-02-2017
+
+1.0
+
+UC en regels in BMR omgezet. Versie document gereed
+
+oBRP
+
+12-07-2017
+
+2.0
+
+Definitief gemaakt
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+0.2
+
+Interne review
+
+UCS LV.1.AFB – Autorisatiefilter bericht
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Autorisatiefilter bericht............................................................................................. 4
+2.1
+2.2
+
+3
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Activiteitendiagram ...............................................................................................................4
+Beschrijving van de stappen ...................................................................................................4
+
+Ontwerpbeslissingen ................................................................................................ 8
+
+Status: Definitief, versie: 2.0
+
+Pagina 2 van 8
+
+UCS LV.1.AFB – Autorisatiefilter bericht
+
+1 Inleiding
+1.1
+
+Doel
+
+Het doel van dit document is te beschrijven welke stappen “Autorisatiefilter bericht” bevat. Met
+deze generieke autorisatiefilter wordt de PL verder ingeperkt ten behoeve van het te leveren
+bericht.
+De autorisatiefilter filtert alle te leveren berichten op autorisatie op historie, verantwoording,
+onderzoek, inhoudelijke groepen en attributen.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de stappen van de autorisatiefilterbericht. In hoofdstuk 3 staan de Use Case
+specifieke ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 2.0
+
+Pagina 3 van 8
+
+UCS LV.1.AFB – Autorisatiefilter bericht
+
+2 Autorisatiefilter bericht
+De autorisatiefilter bericht kent een aantal stappen. Deze staan in het activiteitendiagram.
+In de paragraaf daarna worden de stappen stuk voor stuk beschreven. Voor een meer
+gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden wordt verwezen
+naar de aan deze Use Case gekoppelde regels in BMR.
+
+2.1
+
+Activiteitendiagram
+
+2.2
+
+Beschrijving van de stappen
+
+In deze paragraaf worden de stappen in het activiteitendiagram beschreven.
+1. Toepassen autorisatie formele historie (LV.1.AF.FH)
+Indien een afnemer niet geautoriseerd is voor formele historie op een groep dan worden
+datum/tijd registratie, datum/tijd verval en vervallen groepen gefilterd uit de samengestelde
+persoonslijst. Deze worden niet geleverd. Als alles in een object vervallen is en de afnemer
+heeft geen enkele autorisatie op formele historie binnen dat object, dan wordt het hele object
+(en eventuele subobjecten) gefilterd uit het bericht.
+
+Status: Definitief, versie: 2.0
+
+Pagina 4 van 8
+
+UCS LV.1.AFB – Autorisatiefilter bericht
+
+Voorbeeld filteren objecten op formele historie: door een relateeractie zijn alle groepen van de
+bovenste ‘gerelateerde ouder’ betrokkenheid komen te vervallen. Als de afnemer geen
+autorisatie voor formele historie heeft, dan wordt die hele ouderbetrokkenheid (en de
+gerelateerde persoon ‘Pseudo-Marie’) uit het bericht gefilterd. (dit zou anders resulteren in het
+alleen leveren van de Soort persoon uit de Persoon.Identititeit, omdat die geen formele historie
+kent)
+Een uitzondering hierop zit bij mutatieberichten. Groepen (en objecten) die vervallen zijn door
+de “onderhanden handeling” worden wel geleverd in een mutatiebericht, ongeacht de
+autorisatie.
+In deze stap worden ook de ‘voorkomens ten behoeve van mutatielevering’ uit het bericht
+gefilterd, als het geen mutatiebericht betreft. Dit is alleen nodig tijdens de duale periode: het
+betreft voorkomens die formeel geen onderdeel van de persoonslijst zijn maar die door de
+migratievoorziening worden aangemaakt om te kunnen bepalen wat er gewijzigd is aan de
+persoonslijst (omdat een ‘nette’ formele historie ontbreekt bij een LO3 bijhouding) en om een
+voor de afnemer begrijpelijk mutatiebericht te kunnen maken. Ook hier geldt dat wanneer een
+heel object de ‘indicatie ten behoeve van mutatielevering’ heeft (ofwel het hele object is
+geschrapt in de LO3 PL), we het hele object verwijderen uit het bericht tenzij het een
+mutatiebericht betreft een het object in de onderhanden bijhouding is komen te vervallen.
+
+Status: Definitief, versie: 2.0
+
+Pagina 5 van 8
+
+UCS LV.1.AFB – Autorisatiefilter bericht
+
+Voorbeeld filteren objecten op ‘indicatie voorkomen ten behoeve van levering mutatie’: De
+erkenning van de bovenste ouder is via een LO3 bijhouding komen te vervallen. In de LO3 PL is
+categorie 03 gewist. Dit resulteert in de BRP in een gerelateerde-ouderbetrokkenheid waar alle
+groepen met formele historie deze indicatie hebben. Als het geen mutatiebericht betreft zal de
+BRP die gerelateerde-ouderbetrokkenheid en alles daaronder uit het bericht verwijderen.
+
+2. Toepassen autorisatie materiële historie en verantwoording (LV.1.AF.MH)
+Wanneer een afnemer niet geautoriseerd is voor materiële historie dan wordt de datum einde
+geldigheid (DEG) van een inhoudelijke groep weg gefilterd. Ook worden de groepsvoorkomens
+die beëindigd zijn weggefilterd (dat zijn de voorkomens waarin de DEG gevuld is).
+Deze filter heeft alleen betrekking op de materiele historie en niet op de formele historie
+gegevens met een materieel aspect (zoals bijvoorbeeld Onderzoek met de datum Einde
+Onderzoek en Huwelijk met de datum einde Huwelijk).
+Verantwoordingsinformatie van een inhoudelijke of onderzoeksgroep wordt alleen geleverd
+wanneer de partij hiervoor is geautoriseerd of als het een RNI bijhouding betreft. Wanneer dit
+niet het geval is dan wordt de verantwoordingsinformatie gefilterd uit de samengestelde PL.
+Verantwoordingsinformatie die geen betrekking heeft op het bijhouden van de hoofdpersoon
+van de samengestelde persoon worden uit de samengestelde PL gefilterd.
+Voorbeeld: verantwoordingsinformatie van een in de samengestelde PL opgenomen
+gerelateerde van de hoofdpersoon wordt weg gefilterd wanneer dit geen betrekking heeft op de
+hoofdpersoon zelf. Zoals een geboorteakte van een partner.
+Alias leveren
+Indien de afnemer een beperkte autorisatie heeft geeft dit soms meer privacygevoelige
+informatie prijs dan wenselijk is.
+Voorbeeld:
+
+Status: Definitief, versie: 2.0
+
+Pagina 6 van 8
+
+UCS LV.1.AFB – Autorisatiefilter bericht
+
+Wanneer er een naamswijziging bij een persoon heeft plaatsgevonden naar aanleiding van een
+adoptie dan is het niet wenselijk dat deze reden zichtbaar is voor afnemers die enkel
+geautoriseerd zijn voor NAW gegevens.
+In dat geval is in de Leveringsautorisatie opgenomen dat een Alias wordt geleverd die minder
+prijsgeeft over de achterliggende bijhouding.
+
+3. Toepassen autorisatie op attributen (LV.1.AF.AA)
+•
+Alleen attributen waarvoor de partij is geautoriseerd worden geleverd. Overige
+attributen worden gefilterd uit de samengestelde PL.
+•
+Inhoudelijke groepen zonder attribuut waarvoor de partij is geautoriseerd worden weg
+gefilterd.
+•
+Objecten die een geautoriseerde groep of (sub)object kunnen bevatten blijven
+onderdeel van de samengestelde PL, de overige objecten worden weg gefilterd.
+
+•
+
+Voorbeeld:
+Een afnemer is geautoriseerd om de ouders van een persoon te zien. Bij een vondeling
+is er wel een gerelateerde ouderbetrokkenheid maar die is niet gekoppeld aan een
+persoon (juridisch gezien is er een moeder, maar we weten niet wie het is). Dit
+betekent dat de eigen kindbetrokkenheid, de familierechtelijke betrekking en de
+gerelateerde-ouderbetrokkenheid in het bericht blijven ondanks dat er geen enkele
+geautoriseerde groep of attribuut aanwezig is. Alleen al het feit dat er een persoon had
+kunnen zijn die de afnemer had mogen zien, betekent dat de bovenliggende objecten
+voldoen aan de autorisatie. De afnemer mag immers ook weten dat er sprake is van
+een onbekende ouder.
+Een bericht bevat alleen onderzoeken die betrekking hebben op geautoriseerde
+attributen.
+
+Status: Definitief, versie: 2.0
+
+Pagina 7 van 8
+
+UCS LV.1.AFB – Autorisatiefilter bericht
+
+3 Ontwerpbeslissingen
+•
+
+Ontbrekende gegevens
+Het leveren van onderzoeken naar ontbrekende gegevens aan afnemers is juridisch
+niet verplicht binnen de Wet BRP. Deze worden uit de samengestelde PL gefilterd indien
+de partij een afnemer betreft en worden dus niet geleverd.
+
+Status: Definitief, versie: 2.0
+
+Pagina 8 van 8
+
+

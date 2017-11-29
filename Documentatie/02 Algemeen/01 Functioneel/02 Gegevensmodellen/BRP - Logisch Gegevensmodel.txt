@@ -1,0 +1,4651 @@
+BRP - Logisch Gegevensmodel
+
+BRP - Logisch Gegevensmodel
+
+Release 59
+
+Subtypering: Betrokkenheid, Relatie
+
+Persoon, Betrokkenheid, Relatie
+
+Relatie
+
+Dyn
+
+Identiteit
+
+Persoon
+
+Dyn
+
+Identiteit
+
+D
+
+ID
+
+SDX
+
+Soort >
+
+Persoon ID
+
+Persoon \ Verstrekkingsbeperking
+
+-
+
+Identiteit
+
+Soort persoon
+
+Betrokkenheid
+Versienummer
+
+Identiteit
+
+*
+
+Afgeleid administratief
+
+A
+DX
+SDX
+
+/Tijdstip laatste wijziging
+
+D
+
+/Sorteervolgorde
+
+SDX
+
+/Tijdstip laatste wijziging GBA-systematiek
+
+Administratieve handeling
+
+Dyn
+
+A
+D
+
+ID
+
+/Administratieve handeling >
+
+F
+
+F1
+
+Betrokkenheid ID
+
+DX
+
+*i
+
+Identiteit
+
+Persoon >
+
+D
+
+Persoon
+
+* u1
+
+ID
+
+D
+
+Betrokkenheid ID
+
+*i
+
+Datum aanvang
+
+SDX
+
+Partij
+
+. u1
+
+Relatie >
+
+DX
+
+Relatie
+
+*
+
+Gemeente aanvang >
+
+SDX
+
+Gemeente
+
+.
+
+Omschrijving derde
+
+SDX
+
+Omschrijving enumeratiewaarde
+
+. u1
+
+Rol >
+
+D
+
+Soort betrokkenheid
+
+*
+
+Woonplaatsnaam aanvang
+
+SDX
+
+Naam enumeratiewaarde
+
+.
+
+. u1
+
+Persoon > DX Persoon
+
+. s1
+
+Buitenlandse plaats aanvang SDX Buitenlandse plaats
+
+Land/gebied
+
+.
+
+Reden einde relatie
+
+.
+
+Datum einde
+
+SDX
+
+Datum evt. (deels) onbekend
+
+.
+
+Gemeente einde >
+
+SDX
+
+Gemeente
+
+.
+
+SDX
+
+Naam enumeratiewaarde
+
+.
+.
+
+Datum/Tijd
+
+Relatie
+
+Samengestelde naam
+
+Dyn
+
+Persoon cache
+
+Afgeleid?
+
+SDX
+
+Ja/Nee
+
+*
+
+Namenreeks?
+
+SDX
+
+Ja/Nee
+
+*
+
+Predicaat >
+
+SDX
+
+Predicaat
+
+.
+
+Voornamen
+
+SDX
+
+Voornamen
+
+.
+
+Persoon \ Voornaam
+
+Dyn
+-
+
+D
+
+ID
+
+-
+
+Persoon \ Voornaam ID
+
+D
+
+Persoon >
+
+*i
+
+Persoon
+
+* u1
+
+Standaard
+
+A
+SDX
+
+Naam
+
+Adellijke titel
+
+.
+
+Voorvoegsel
+
+SDX
+
+Voorvoegsel
+
+.
+
+Scheidingsteken
+
+SDX
+
+Scheidingsteken
+
+.
+
+Geslachtsnaamstam
+
+SDX
+
+Geslachtsnaamstam
+
+* S1 S2 S3
+
+*
+
+D
+
+Persoon ID
+
+*i
+
+Persoon >
+
+D
+
+Persoon
+
+*
+
+Buitenlandse plaats einde
+
+SDX
+
+Buitenlandse plaats
+
+Buitenlandse regio einde
+
+SDX
+
+Buitenlandse regio
+
+.
+
+Omschrijving locatie einde
+
+SDX
+
+Locatieomschrijving
+
+.
+
+Land/gebied einde >
+
+SDX
+
+Land/gebied
+
+.
+
+-
+
+Versienummer
+
+D
+
+Versienummer klein
+
+*
+
+Persoon historie volledig gegevens
+
+D
+
+Byteaopslag
+
+.
+
+D
+
+Persoon \ Geslachtsnaam ID
+
+*i
+
+Persoon >
+
+D
+
+Persoon
+
+* u1
+
+SDX
+
+Volgnummer
+
+* u1
+
+SDX
+
+Datum evt. (deels) onbekend
+
+* S3
+
+SDX
+
+Gemeente
+
+.
+
+Woonplaatsnaam geboorte
+
+SDX
+
+Naam enumeratiewaarde
+
+.
+
+Buitenlandse plaats geboorte
+
+SDX
+
+Buitenlandse plaats
+
+.
+
+Standaard
+
+Buitenlandse regio geboorte
+
+SDX
+
+Buitenlandse regio
+
+.
+
+Predicaat >
+
+SDX
+
+Predicaat
+
+.
+
+Omschrijving locatie geboorte
+
+SDX
+
+Locatieomschrijving
+
+.
+
+Adellijke titel >
+
+SDX
+
+Adellijke titel
+
+.
+
+Land/gebied geboorte >
+
+SDX
+
+Land/gebied
+
+*
+
+Voorvoegsel
+
+SDX
+
+Voorvoegsel
+
+.
+
+Volgnummer
+
+A
+
+A
+
+A
+Datum evt. (deels) onbekend
+
+*
+
+Versienummer
+
+D
+
+Versienummer
+
+*
+
+Datumtijdstempel
+
+D
+
+Datum/Tijd
+
+*
+
+F+M
+
+Ouder uit wie het kind is geboren? SDX Ja/Nee .
+Ouderlijk gezag
+
+A
+SDX
+
+F+M
+
+Ja/Nee
+
+*
+
+Huwelijk/Geregistreerd partnerschap
+
+Dyn
+
+Dyn
+
+F+M
+
+Scheidingsteken SDX Scheidingsteken
+
+.
+
+SDX
+
+*
+
+Huwelijk
+
+Geslachtsnaamstam
+
+Geregistreerd partnerschap
+
+Dyn
+
+Dyn
+
+Vorige burgerservicenummer
+
+SDX
+
+Burgerservicenummer
+
+.
+
+Volgende burgerservicenummer
+
+SDX
+
+Burgerservicenummer
+
+.
+
+Vorige administratienummer
+
+SDX
+
+Administratienummer
+
+.
+
+Volgende administratienummer
+
+SDX
+
+Administratienummer
+
+.
+
+F
+Dyn
+
+Identiteit
+
+A
+
+F+M
+
+D
+
+Persoon \ Nationaliteit ID
+
+Persoon >
+
+D
+
+Persoon
+
+* u1
+
+Nationaliteit
+
+* u1
+
+SDX
+
+Standaard
+
+A
+
+F+M
+
+Reden verkrijging NL nationaliteit
+
+.
+
+SDX
+
+Reden verlies NL nationaliteit
+
+.
+
+Identiteit
+
+Bijhouding beëindigd?
+
+SDX
+
+Ja
+
+.
+
+ID
+
+Migratie Reden opname nationaliteit
+
+D
+
+Bijhoudingsaard >
+
+SDX
+
+Bijhoudingsaard
+
+*
+
+Migratie Reden beëindigen nationaliteit
+
+D
+
+.
+
+Datum evt. (deels) onbekend
+
+Gemeente overlijden >
+
+SDX
+
+Gemeente
+
+.
+
+Woonplaatsnaam overlijden
+
+SDX
+
+Naam enumeratiewaarde
+
+.
+
+Identiteit
+
+Buitenlandse plaats overlijden
+
+SDX
+
+Buitenlandse plaats
+
+.
+
+ID
+
+.
+
+*
+A
+
+D
+
+DX
+
+F
+
+Categorie administratieve handeling
+
+.
+
+Partij
+
+*
+.
+
+Datum/Tijd
+
+* s2 s4
+
+-
+
+Bijhoudingsplan
+
+.
+
+Persoon \ Indicatie ID
+
+X
+
+Bijhoudingsplan >
+
+* u1
+
+Soort >
+
+Tijdstip levering
+
+D
+
+Datum/Tijd
+
+. s1
+
+Status levering >
+
+D
+
+Status levering administratieve handeling
+
+* s3
+
+A
+DX
+
+Ja
+
+*
+
+D
+
+LO3 Reden opname nationaliteit
+
+.
+
+D
+
+LO3 Reden beëindigen nationaliteit
+
+.
+
+*
+
+Migratie Reden beëindigen nationaliteit
+
+Predicaat naamgebruik >
+
+SDX
+
+Predicaat
+
+.
+
+-
+
+Gedeblokkeerde melding
+
+.
+
+Regel >
+
+Persoon \ Adres
+
+SDX
+
+Voorvoegsel
+
+.
+
+Identiteit
+
+Scheidingsteken naamgebruik
+
+SDX
+
+Scheidingsteken
+
+.
+
+ID
+
+D
+
+Persoon \ Adres ID
+
+*i
+
+Geslachtsnaamstam naamgebruik
+
+SDX
+
+Geslachtsnaamstam
+
+* S4
+
+Persoon >
+
+D
+
+Persoon
+
+*
+
+Soort >
+
+SDX
+
+Soort adres
+
+* S1 S2 S4 S5 S11 S12
+
+Reden wijziging >
+
+SDX
+
+Reden wijziging verblijf
+
+*
+
+Migratie
+
+A
+
+-
+
+Standaard
+
+A
+
+X
+
+Persoon
+
+*
+
+Aangever adreshouding >
+
+SDX
+
+Aangever
+
+.
+
+Datum aanvang adreshouding
+
+SDX
+
+Datum evt. (deels) onbekend
+
+.
+
+*
+
+Identificatiecode nummeraanduiding
+
+SDX
+
+Identificatiecode nummeraanduiding
+
+. S3 S8
+
+Reden wijziging migratie >
+
+SDX
+
+Reden wijziging verblijf
+
+.
+
+Gemeente >
+
+SDX
+
+Gemeente
+
+. S1 S4 S6
+
+SDX
+
+Naam openbare ruimte
+
+. S1 S12
+
+Afgekorte naam openbare ruimte
+
+. S4 S11
+
+Gemeentedeel
+
+.
+
+SDX
+
+Land/gebied
+
+*
+
+Afgekorte naam openbare ruimte
+
+Buitenlands adres regel 1 migratie
+
+SDX
+
+Adresregel
+
+.
+
+Gemeentedeel
+
+SDX
+
+Regel
+
+Partij
+
+SG
+
+X
+
+Persoon
+
+.
+
+Administratieve handeling >
+
+X
+
+Administratieve handeling
+
+.
+
+SDX
+
+Partij >
+
+Administratieve handeling
+
+*l
+
+Document >
+
+X
+
+Document
+
+.l
+
+Rechtsgrond >
+
+X
+
+Rechtsgrond
+
+-
+
+.l
+
+Rechtsgrondomschrijving
+
+X
+
+Omschrijving enumeratiewaarde
+
+.l
+
+F+M
+
+Actie
+
+-
+
+Identiteit
+
+D
+
+Actie ID
+
+*i
+
+ID
+
+D
+
+Actie \ Bron ID
+
+*i
+
+Soort >
+
+DX
+
+Soort actie
+
+*
+
+Actie >
+
+D
+
+Actie
+
+* u1
+
+Administratieve handeling
+
+*
+
+Document >
+
+DX
+
+Document
+
+. u1
+
+Partij
+
+*
+
+Rechtsgrond >
+
+DX
+
+Rechtsgrond
+
+. u1
+
+Rechtsgrondomschrijving SDX Omschrijving enumeratiewaarde . u1
+
+-
+
+DX
+
+D
+
+ID
+
+Administratieve handeling > D
+D
+
+Regel >
+
+-
+
+Administratieve handeling \ Gedeblokkeerde melding ID
+
+*i
+
+Administratieve handeling
+
+*
+
+Regel
+
+*
+
+Datum aanvang geldigheid
+
+X
+
+Datum evt. (deels) onbekend
+
+.
+
+Datum einde geldigheid
+
+X
+
+Datum evt. (deels) onbekend
+
+.
+
+Nadere aanduiding verval
+
+X
+
+Nadere aanduiding verval
+
+.
+
+X
+
+Peildatum verwijdering
+Tijdstip registratie
+
+D
+
+Datum ontlening
+
+SDX
+
+Datum
+
+.
+
+Datum/Tijd
+
+*
+
+Datum evt. (deels) onbekend
+
+.
+
+-
+
+. S5
+
+Huisnummer
+
+SDX
+
+Huisnummer
+
+. S1 S2 S4 S5 S11 S12
+
+Buitenlands adres regel 3 migratie
+
+SDX
+
+Adresregel
+
+.
+
+Huisletter
+
+SDX
+
+Huisletter
+
+. S1 S2 S4 S5 S11 S12
+
+Buitenlands adres regel 4 migratie
+
+SDX
+
+Adresregel
+
+.
+
+Huisnummertoevoeging
+
+SDX
+
+Huisnummertoevoeging
+
+. S1 S2 S4 S5 S11 S12
+
+Buitenlands adres regel 5 migratie
+
+SDX
+
+Adresregel
+
+.
+
+Postcode
+
+SDX
+
+Postcode
+
+. S2 S5
+
+Identiteit
+
+Buitenlands adres regel 6 migratie
+
+SDX
+
+Adresregel
+
+.
+
+Woonplaatsnaam
+
+SDX
+
+Naam enumeratiewaarde
+
+. S11 S12
+
+ID
+
+Locatie ten opzichte van adres
+
+SDX
+
+Locatie ten opzichte van adres
+
+.
+
+Persoon > D
+
+Locatieomschrijving
+
+SDX
+
+Locatieomschrijving
+
+. S6
+
+Buitenlands adres regel 1
+
+SDX
+
+Adresregel
+
+.
+
+Buitenlands adres regel 2
+
+SDX
+
+Adresregel
+
+. S7
+
+Identiteit
+
+Buitenlands adres regel 3
+
+SDX
+
+Adresregel
+
+.
+
+ID
+
+D
+
+Partij ID
+
+*i
+
+Buitenlands adres regel 4
+
+SDX
+
+Adresregel
+
+.
+
+Code
+
+DX
+
+Partij code
+
+*l
+
+Buitenlands adres regel 5
+
+SDX
+
+Adresregel
+
+.
+
+Buitenlands adres regel 6
+
+SDX
+
+Adresregel
+
+.
+
+Naam
+
+DX
+
+Naam enumeratiewaarde *
+
+Datum ingang
+
+DX
+
+Datum
+
+*
+
+Datum einde
+
+DX
+
+Datum
+
+.
+
+OIN
+
+D
+
+OIN
+
+. s1
+
+D
+
+Soort partij
+
+.
+
+SDX
+
+Datum aanvang verblijfsrecht
+
+SDX
+
+Datum mededeling verblijfsrecht
+
+SDX
+
+Datum voorzien einde verblijfsrecht
+
+Datum evt. (deels) onbekend
+Datum evt. (deels) onbekend
+Datum evt. (deels) onbekend
+
+*
+*
+.
+
+Bijzondere verblijfsrechtelijke positie
+
+A
+S
+
+Bijzondere verblijfsrechtelijke positie?
+
+Ja
+
+F
+
+*
+
+Uitsluiting kiesrecht
+
+A
+
+Uitsluiting kiesrecht?
+
+SDX
+
+Ja
+
+*
+
+Datum voorzien einde uitsluiting kiesrecht
+
+SDX
+
+Datum evt. (deels) onbekend
+
+.
+
+F
+
+A
+SDX
+
+Deelname EU verkiezingen?
+
+Ja/Nee
+
+SDX
+
+Datum evt. (deels) onbekend
+
+.
+
+Datum voorzien einde uitsluiting EU verkiezingen
+
+SDX
+
+Datum evt. (deels) onbekend
+
+.
+
+Land/gebied >
+
+SDX
+
+Land/gebied
+
+*
+
+Persoon aangetroffen op adres?
+
+SDX
+
+Nee
+
+.
+
+Dyn
+
+Identiteit
+
+Persoonskaart
+
+A
+
+Gemeente persoonskaart >
+
+SDX
+
+Partij
+
+.
+
+Persoonskaart volledig geconverteerd?
+
+SDX
+
+Ja/Nee
+
+*
+
+Onderzoek
+
+Persoon \ Reisdocument
+D
+
+ID
+F
+
+D
+SDX
+
+Soort >
+
+Persoon \ Reisdocument ID
+
+A
+S
+
+Ja
+
+F+M
+
+*
+
+Verstrekkingsbeperking
+
+A
+
+Persoon
+
+S
+
+Volledige verstrekkingsbeperking?
+
+Ja
+
+*
+
+Vastgesteld niet Nederlander
+
+A
+S
+
+Vastgesteld niet Nederlander?
+
+Ja
+
+F+M
+
+*
+
+Soort Nederlands reisdocument
+
+A
+S
+
+Ja
+
+*
+
+Signalering met betrekking tot verstrekken reisdocument? S
+
+Ja
+
+*
+
+Behandeld als Nederlander?
+Signalering met betrekking tot verstrekken reisdocument
+
+A
+S
+
+Ja
+
+SDX
+
+Reisdocument nummer
+
+* s1
+
+Autoriteit van afgifte
+
+SDX
+
+Autoriteit van afgifte reisdocument code
+
+*
+
+Datum evt. (deels) onbekend
+
+Datum einde document
+
+SDX
+
+Datum uitgifte
+
+SDX
+
+Datum evt. (deels) onbekend
+
+Datum inhouding/vermissing
+
+SDX
+
+Datum evt. (deels) onbekend
+
+*
+
+Datum evt. (deels) onbekend
+
+Gegeven in onderzoek
+
+*
+
+F
+
+*
+
+Soort >
+
+Persoon >
+
+D
+
+Persoon
+
+*
+
+Verstrekkingsbeperking mogelijk? DX Ja/Nee
+
+Partij >
+
+DX
+
+Partij
+
+*
+
+Datum overgang naar BRP
+
+F
+
+Bijhouding
+
+Datum einde
+
+SDX
+
+Datum evt. (deels) onbekend
+
+.
+
+Omschrijving
+
+SDX
+
+Onderzoek omschrijving
+
+.
+
+.
+.
+
+DX
+
+Status onderzoek
+
+A
+
+F1
+
+ID
+
+D
+
+Gegeven in onderzoek ID
+
+Onderzoek >
+
+D
+
+Onderzoek
+
+*
+
+Element >
+
+DX
+
+Element
+
+*
+
+Object sleutel gegeven
+
+DX
+
+Sleutelwaarde
+
+.
+
+Voorkomen sleutel gegeven DX Sleutelwaarde
+
+.
+
+D
+
+-
+
+Persoon \ Verificatie ID
+
+*i
+
+Persoon
+
+*
+
+Partij >
+
+SDX
+
+Partij
+
+*
+
+Soort
+
+SDX
+
+Naam enumeratiewaarde
+
+*
+
+Standaard
+Datum
+
+A
+SDX
+
+Datum evt. (deels) onbekend
+
+F
+*
+
+*
+
+Datum
+
+.
+
+D
+
+Ja/Nee
+
+Ondertekenaar vrij bericht >
+
+D
+
+Partij
+
+.
+
+Transporteur vrij bericht >
+
+D
+
+Partij
+
+.
+
+Datum ingang vrij bericht
+
+DX
+
+Datum
+
+*
+
+Datum einde vrij bericht
+
+DX
+
+Datum
+
+.
+
+Afleverpunt vrij bericht
+
+D
+
+Uri
+
+.
+
+Geblokkeerd vrij bericht?
+
+D
+
+Ja
+
+.
+
+G
+
+F
+*
+
+Vrij bericht
+
+*
+
+Dyn
+
+F
+
+D
+
+Automatisch fiatteren?
+
+Dyn
+
+Identiteit
+
+*
+
+Persoon \ Buitenlands persoonsnummer
+
+G
+
+F
+
+*i
+
+Dyn
+
+Identiteit
+
+Onverwerkt document aanwezig
+Onverwerkt document aanwezig?
+
+F
+
+*i
+
+Status >
+
+F+M
+
+A
+
+Onderzoek ID
+
+A
+
+-
+
+G
+
+D
+
+Standaard
+
+F
+
+Nummer
+
+SDX
+
+-
+
+ID
+
+* s1
+
+Aanduiding inhouding/vermissing > SDX Aanduiding inhouding/vermissing reisdocument
+
+Behandeld als Nederlander
+
+-
+
+*
+
+A
+
+Datum ingang document
+
+F
+
+-
+
+-
+
+*i
+
+Standaard
+Staatloos
+Staatloos?
+
+Dyn
+
+Datum aanvang SDX Datum evt. (deels) onbekend *
+
+Persoon >
+
+SG
+
+Standaard
+
+F
+
+*
+
+Datum aanleiding aanpassing deelname EU verkiezingen
+
+Partij
+
+Identiteit
+
+Deelname EU verkiezingen
+
+*
+
+Persoon \ Verificatie
+
+F
+
+*
+
+Partij
+
+-
+
+Adresregel
+
+Aanduiding verblijfsrecht
+
+.
+
+Dyn
+
+ID
+
+Administratieve handeling > D
+
+Dyn
+
+Actie \ Bron
+
+Dyn
+
+SDX
+
+SDX
+
+*
+
+Aktenummer
+
+-
+
+Buitenlands adres regel 2 migratie
+
+Aanduiding verblijfsrecht >
+
+Soort document
+
+Dyn
+-
+
+Administratieve handeling >
+
+*
+
+Identiteit
+
+Naam openbare ruimte
+
+Land/gebied migratie >
+
+A
+
+*i
+
+-
+
+Persoon >
+
+/Partij >
+
+Soort migratie
+
+SDX
+
+DX
+
+-
+
+Administratieve handeling \ Gedeblokkeerde regel
+
+SDX
+
+Verblijfsrecht
+
+......
+
+Document ID
+
+Dyn
+-
+
+Identiteit
+
+Soort migratie >
+
+.
+
+Persoon >
+
+Identiteit
+-
+
+Melding DX Meldingtekst .
+
+Identificatiecode adresseerbaar object SDX Identificatiecode adresseerbaar object . S9 S10
+
+F+M
+
+*
+
+/Administratieve handeling \ Bron
+
+......
+
+Dyn
+
+Voorvoegsel naamgebruik
+
+*
+
+Administratieve handeling
+
+Identiteit
+
+Dyn
+
+Identiteit
+
+F+M
+
+-
+
+F+M
+
+Waarde
+
+*
+
+A
+
+X
+
+SG
+
+Omschrijving SDX Document omschrijving .
+
+-
+
+Administratieve handeling >
+
+/Persoon \ Administratieve handeling
+
+*i
+
+* u1
+
+Ja/Nee
+
+Curatele
+
+-
+
+Partij
+
+-
+
+-
+
+Soort indicatie
+
+Naamgebruik
+
+*
+
+Dyn
+
+Identiteit
+
+Persoon
+
+SDX
+
+F+M
+
+/Administratieve handeling \ Bijgehouden persoon
+
+D
+
+SDX
+
+A
+
+Aktenummer SDX
+
+D
+
+Naamgebruik afgeleid?
+
+Gezag derde
+
+SDX
+
+Soort >
+
+Persoon >
+
+Naamgebruik >
+
+.
+
+-
+
+Levering
+
+Migratie Reden opname nationaliteit
+
+Aangever
+
+*
+
+D
+
+ID
+
+*i
+
+Soort administratieve handeling
+
+-
+
+Dyn
+
+Standaard
+
+Naamgebruik
+
+Ja
+
+SDX
+
+Partij >
+
+Administratieve handeling ID
+
+Standaard
+
+.
+
+Ja
+
+X
+
+Categorie >
+
+Persoon \ Indicatie
+
+.
+
+Adellijke titel
+
+SDX
+
+Soort >
+
+Tijdstip registratie
+
+*
+
+Voornamen
+
+LO3 Reden beëindigen nationaliteit
+
+D
+
+Dyn
+
+Identiteit
+
+Dyn
+
+Toelichting ontlening SDX Ontleningstoelichting
+
+Datum evt. (deels) onbekend
+
+Land/gebied
+
+.
+
+F
+
+SDX
+
+Locatieomschrijving
+
+LO3 Reden opname nationaliteit
+
+D
+
+Migratie Datum einde bijhouding
+
+Datum overlijden
+
+Buitenlandse regio
+
+Administratieve handeling
+
+SDX
+
+*
+
+A
+
+Document
+
+F+M
+
+Reden verlies >
+
+Partij
+
+Overlijden
+
+Verantwoording
+
+Reden verkrijging >
+
+SDX
+
+*
+
+*i
+
+A
+
+Bijhoudingspartij >
+
+Nadere bijhoudingsaard
+
+-
+
+ID
+
+Nationaliteit >
+
+Bijhouding
+
+SDX
+
+.
+
+A
+
+Familierechtelijke betrekking
+
+Persoon \ Nationaliteit
+
+Nummerverwijzing
+
+Aangever migratie >
+
+.
+
+Byteaopslag
+
+Ouderschap
+
+*
+
+Inschrijving
+
+S
+
+Versienummer
+
+Dyn
+
+F+M
+
+Stam
+
+Onder curatele?
+
+D
+
+Ouder
+
+-
+
+ID
+Gemeente geboorte >
+
+S
+
+-
+
+F
+
+Datum geboorte
+
+Derde heeft gezag?
+
+-
+
+Dyn
+
+Identiteit
+
+SDX
+
+ID
+
+Afnemerindicatie gegevens
+
+Persoon \ Geslachtsnaamcomponent
+
+A
+
+Geslachtsaanduiding
+
+Dyn
+
+-
+
+Ouder heeft gezag?
+
+Geboorte
+
+Adellijke titel naamgebruik >
+
+Partner
+
+Dyn
+
+.
+
+Woonplaatsnaam einde
+
+Lockversie afnemerindicatie gegevens D
+
+F+M
+
+Voornaam
+
+-
+
+Standaard
+
+* u1
+
+Volgnummer SDX Volgnummer
+
+SDX
+
+SDX
+
+Dyn
+
+Identiteit
+
+F+M
+
+Adellijke titel >
+
+Geslachtsaanduiding
+
+Kind
+
+F+M
+
+A
+
+Voornamen naamgebruik
+
+.
+
+SDX
+
+. s1
+
+Identiteit
+
+SDX
+
+.
+
+Omschrijving locatie aanvang SDX Locatieomschrijving
+SDX
+
+. s2 s3 u1
+
+Land/gebied overlijden >
+
+.
+
+Buitenlandse regio
+
+Reden einde >
+
+Administratienummer
+
+SDX
+
+SDX
+
+Buitenlandse regio aanvang
+
+Land/gebied aanvang >
+
+SDX
+
+Omschrijving locatie overlijden
+
+F
+
+Partij >
+
+*
+
+Persoon > DX Persoon
+
+Administratienummer
+
+SDX
+
+.
+
+A
+
+*
+
+. s1 s4 u2
+
+Buitenlandse regio overlijden
+
+Datum evt. (deels) onbekend
+
+SDX
+
+*
+
+Soort betrokkenheid
+
+A
+
+*
+
+Burgerservicenummer
+
+SDX
+
+*i
+*
+
+Sorteervolgorde
+
+SDX
+
+Nadere bijhoudingsaard >
+
+Relatie ID
+Soort relatie
+
+Datum/Tijd
+
+Burgerservicenummer
+
+SDX
+
+Standaard
+
+Persoon \ Verstrekkingsbeperking ID
+
+......
+
+Datum inschrijving
+
+F1
+
+D
+
+*i
+
+Relatie
+
+D
+
+Rol >
+
+A
+
+SDX
+
+Betrokkenheid
+
+F
+
+Soort >
+
+ID
+
+Gemeente verordening > SDX Partij
+
+Relatie >
+
+*
+
+Identificatienummers
+
+Geslachtsaanduiding >
+
+D
+
+Dyn
+
+-
+
+SD
+
+ID
+
+* s1 s2 S1 S3 S4
+-
+
+D
+
+A
+
+-
+
+*i
+
+Versie
+Lock versie
+
+Dyn
+
+11-8-2017
+
+-
+
+-
+
+ID
+
+D
+
+Persoon \ Buitenlands persoonsnummer ID
+
+*i
+
+Persoon >
+
+D
+
+Persoon
+
+* u1
+
+Autoriteit van afgifte > SDX Autoriteit van afgifte buitenlands persoonsnummer * u1
+SDX
+
+Nummer
+
+Buitenlands persoonsnummer
+
+* u1 S1
+
+Standaard
+
+A
+
+F
+
+Levering
+
+Bericht
+Bericht
+
+Dyn
+
+Melding
+Identiteit
+ID
+
+D
+
+/Tijdstip registratie
+
+D
+
+Soort >
+Richting >
+
+Partij, Authenticatie, Autorisatie
+
+-
+
+D
+D
+
+Bericht ID
+
+Bijhoudingsautorisatie
+
+SG
+
+Identiteit
+
+-
+
+Identiteit
+
+-
+
+D
+
+Partij ID
+
+*i
+
+Code
+
+DX
+
+Partij code
+
+*l
+
+Partij \ Rol
+
+F
+
+Identiteit
+
+Standaard
+
+G
+
+DX
+
+Datum
+
+Datum einde
+
+DX
+
+Datum
+
+D
+
+OIN
+
+D
+
+Soort >
+
+Richting
+
+D
+
+Partij \ Rol ID
+
+*i
+
+*
+
+Partij >
+
+D
+
+Partij
+
+*l
+
+.
+
+Rol >
+
+D
+
+Rol
+
+*l
+
+Standaard
+
+Datum
+
+.
+G
+
+Automatisch fiatteren?
+
+G
+
+Datum ingang DX Datum
+Datum einde
+
+G
+
+DX
+
+Datum
+
+Partij
+
+.
+
+Identiteit
+
+Transporteur vrij bericht >
+
+D
+
+Partij
+
+.
+
+ID
+
+D
+
+Bijhouder >
+
+D
+
+DX
+
+Datum
+
+*
+
+Datum einde vrij bericht
+
+DX
+
+Datum
+
+.
+
+Afleverpunt vrij bericht
+
+D
+
+Uri
+
+.
+
+Geblokkeerd vrij bericht?
+
+D
+
+Ja
+
+.
+
+Toegang leveringsautorisatie
+
+-
+
+D
+
+Toegang leveringsautorisatie ID
+
+*i
+
+Geautoriseerde >
+
+D
+
+Partij \ Rol
+
+* u1
+
+Leveringsautorisatie >
+
+D
+
+Leveringsautorisatie
+
+* u1
+
+G
+
+*
+
+-
+
+Zendende systeem
+
+DX
+
+Systeem naam
+
+*
+
+Toegang bijhoudingsautorisatie ID
+
+*i
+
+Geautoriseerde >
+
+D
+
+Partij \ Rol
+
+* u1
+
+Referentienummer
+
+DX
+DX
+
+Partij
+Referentienummer
+
+Datum
+
+*
+
+Datum einde
+
+DX
+
+Datum
+
+.
+
+Ja
+
+.
+
+DX
+
+Referentienummer
+
+.
+
+DX
+
+Datum/Tijd
+
+.
+
+Datum/tijd ontvangst
+
+D
+
+Datum/Tijd
+
+.
+-
+
+Verwerkingswijze >
+
+DX
+
+Verwerkingswijze
+
+.
+
+Rol >
+
+DX
+
+Rol
+
+.
+
+Bijhoudingsautorisatie > D
+
+Bijhoudingsautorisatie
+
+* u1
+
+Soort synchronisatie >
+
+DX
+
+Soort synchronisatie
+
+.
+
+Ondertekenaar >
+
+D
+
+Partij
+
+. u1
+
+Leveringsautorisatie >
+
+DX
+
+Leveringsautorisatie
+
+.
+
+Transporteur >
+
+D
+
+Partij
+
+. u1
+
+Dienst >
+
+DX
+
+SG
+
+DX
+
+Datum
+
+*
+
+Datum einde
+
+DX
+
+Datum
+
+.
+
+-
+
+Afleverpunt
+
+DX
+
+Uri
+
+.
+
+*i
+
+Geblokkeerd?
+
+DX
+
+Ja
+
+.
+
+SG
+Bijhouder \ Fiatteringsuitzondering ID
+Partij \ Rol
+G
+
+Bericht \ Zoekcriteria
+Identiteit
+
+Zoekcriterium > DX Zoekcriterium *
+
+Bericht \ Persoon
+
+Stamgegeven
+
+X
+
+Stamgegeven
+
+.
+
+Vertaling berichtsoort BRP >
+
+X
+
+Vertaling berichtsoort BRP
+
+.
+
+Versie Stuf BG >
+
+X
+
+Versie Stuf BG
+
+.
+
+Zender vrij bericht >
+
+X
+
+Partij
+
+.
+
+Ontvanger vrij bericht >
+
+X
+
+Partij
+
+.
+
+DX
+
+Ja
+
+.
+
+Soort administratieve handeling > D
+
+Soort administratieve handeling
+
+* u1
+
+Soort selectieresultaat set >
+
+Datum ingang
+
+Datum
+
+*
+
+Datum einde
+
+DX
+
+Datum
+
+.
+
+DX
+
+Uri
+
+.
+
+Geblokkeerd?
+
+DX
+
+Ja
+
+.
+
+*i
+
+Persoon >
+
+D
+
+Persoon
+
+* u1
+
+DX
+
+Partij
+
+* u1
+
+DX
+
+Leveringsautorisatie
+
+* u1
+
+Standaard
+
+.
+
+Afleverpunt
+
+Persoon \ Afnemerindicatie ID
+
+G
+
+F
+
+-
+
+Naam
+
+DX
+
+Naam enumeratiewaarde * u1
+
+Partij >
+
+Protocolleringsniveau >
+
+DX
+
+Protocolleringsniveau
+
+*
+
+Leveringsautorisatie >
+
+Alias soort administratieve handeling leveren?
+
+DX
+
+Ja/Nee
+
+*
+
+Standaard
+
+Datum ingang
+
+DX
+
+Datum
+
+*
+
+Datum aanvang materiële periode DX Datum
+
+Datum einde
+
+DX
+
+Datum
+
+.
+
+Datum einde volgen
+
+Populatiebeperking
+
+DX
+
+Populatiebeperking
+
+.
+
+Toelichting
+
+DX
+
+Onbeperkte omschrijving
+
+.
+
+Verantwoording
+
+D
+
+Verwerkingswijze
+
+DX
+
+Datum
+
+.
+.
+
+Soort dienst
+
+Ja
+
+.
+
+ID
+
+-
+
+D
+
+Soort dienst ID
+
+*i
+
+Identiteit
+
+-
+
+X
+X
+
+Soort selectieresultaat set
+
+SG
+-
+
+Identiteit
+
+Volgnummer
+
+D
+
+Dienstbundel \ Groep ID
+
+*i
+
+Dienstbundel >
+
+D
+
+Dienstbundel
+
+*l
+
+Selectie dienst >
+
+X
+
+Dienst
+
+Selectietaak >
+
+X
+
+Selectietaak
+
+*
+
+Selectie datum
+
+X
+
+Datum
+
+*
+
+Peilmoment materieel resultaat selectie
+
+X
+
+Datum
+
+*
+
+Peilmoment formeel resultaat selectie
+
+X
+
+Datum/Tijd
+
+*
+
+Selectie historievorm >
+
+X
+
+Historievorm
+
+.
+-
+
+Verwerking >
+
+DX
+
+Verwerkingsresultaat
+
+*
+
+Bijhouding >
+
+DX
+
+Bijhoudingsresultaat
+
+.
+
+Hoogste meldingsniveau >
+
+DX
+
+Soort melding
+
+.
+
+Aantal selectieresultaat personen
+
+X
+
+Aantal resultaten
+
+.
+
+Aantal selectieresultaat sets
+
+X
+
+Aantal resultaten
+
+.
+-
+
+Administratieve handeling >
+
+DX
+
+Administratieve handeling
+
+.
+
+Data
+
+D
+
+Berichtdata
+
+.
+
+Element
+
+DX
+
+*
+
+Materiële historie? DX Ja/Nee
+
+*
+
+DX
+
+Verantwoording?
+
+Ja/Nee
+
+ID
+
+D
+
+Dienstbundel \ Groep > D
+Attribuut >
+
+D
+
+Dienstbundel \ Groep \ Attribuut ID
+
+*i
+
+Dienstbundel \ Groep
+
+* u1
+
+Element
+
+* u1
+
+.
+
+X
+
+Identificatiecode adresseerbaar object .
+
+Identificatiecode nummeraanduiding
+
+X
+
+Identificatiecode nummeraanduiding
+
+Bericht vertaling
+Attendering
+
+DX
+
+Ja
+
+G
+
+F
+
+.
+DX
+
+Attenderingscriterium
+
+DX
+
+Aantal resultaten
+
+Soort selectie >
+
+DX
+
+Soort selectie
+
+*
+
+Eerste selectiedatum
+
+DX
+
+Datum
+
+.
+
+Selectieinterval
+
+DX
+
+Selectieinterval
+
+.
+
+Eenheid selectieinterval >
+
+DX
+
+Eenheid selectieinterval
+
+.
+
+Selectiecriterium
+
+DX
+
+Populatiebeperking
+
+.
+
+Selectie peilmoment materieel resultaat
+
+DX
+
+Datum
+
+.
+
+Selectie peilmoment formeel resultaat
+
+DX
+
+Datum/Tijd
+
+.
+
+Historievorm selectie >
+
+DX
+
+Historievorm
+
+*
+
+Selectieresultaat controleren?
+
+DX
+
+Ja/Nee
+
+*
+
+Maximaal aantal personen per selectiebestand
+
+DX
+
+Aantal resultaten
+
+.
+
+Maximale grootte selectiebestand
+
+DX
+
+Aantal kilobytes
+
+.
+
+Verzend volledig bericht bij wijziging afnemerindicatie na selectie?
+
+DX
+
+Ja/Nee
+
+.
+
+Leverwijze selectie >
+
+DX
+
+Leverwijze selectie
+
+.
+
+Attenderingscriterium
+
+Rel
+
+SG
+-
+
+.
+
+Identificatiecode adresseerbaar object
+
+.
+
+......
+
+-
+
+Afgekorte naam openbare ruimte
+
+.
+
+Onbeperkte omschrijving
+
+Element
+
+Identiteit
+
+X
+
+Woonplaatsnaam
+
+.
+G
+
+F
+*
+
+G
+
+F
+
+*
+
+Dienstbundel \ Groep \ Attribuut
+
+Afgekorte naam openbare ruimte
+
+Dienstbundel \ LO3 Rubriek
+Identiteit
+ID
+
+D
+
+Dienstbundel > D
+Rubriek >
+
+SG
+
+D
+
+-
+
+Dienstbundel \ LO3 Rubriek ID
+
+*i
+
+Dienstbundel
+
+*l
+
+Conversie LO3 Rubriek
+
+*l
+
+.
+-
+
+-
+
+Te vertalen bericht
+
+X
+
+BerichtdataLax (XSD)
+
+.
+
+Vertaalde bericht
+
+X
+
+BerichtdataSkip (XSD)
+
+.
+
+Soort vrij bericht >
+
+X
+
+Soort vrij bericht
+
+*
+
+Inhoud vrij bericht
+
+X
+
+Vrij bericht data
+
+*
+
+Vrij bericht
+
+Bijhoudingsplan \ Persoon
+D
+
+Administratieve handeling
+
+.
+
+Identiteit
+
+Dyn
+-
+
+-
+
+Bijhoudingsplan >
+
+D
+
+Bijhoudingsplan
+
+Persoon >
+
+DX
+
+Persoon
+
+*
+*
+
+/Bijhoudingspartij >
+
+D
+
+Partij
+
+*
+
+Situatie >
+
+DX
+
+Bijhoudingssituatie
+
+*
+
+.
+
+.
+
+DX
+
+-
+
+Ja/Nee
+
+Formele historie?
+
+X
+
+Naam enumeratiewaarde
+
+*l
+-
+
+.
+
+X
+
+Selectie
+Standaard
+
+Datum evt. (deels) onbekend
+
+.
+
+Toelichting
+
+.
+
+X
+
+Postcode
+
+.
+
+.
+
+Geboortedatum kind
+
+Locatie ten opzichte van adres
+
+Ja
+
+.
+
+BerichtdataLax (XSD)
+
+Administratieve handeling >
+
+X
+
+DX
+
+Melding GBA
+
+DX
+
+.
+
+X
+
+Geblokkeerd?
+
+DX
+
+Sleutelwaardetekst
+
+Postcode
+
+.
+
+Melding GBA
+
+X
+
+Locatie ten opzichte van adres
+
+Nee
+
+.
+
+Object sleutel
+
+.
+
+DX
+
+Partij GBA geboorte >
+
+Partij
+
+Bijhoudingsvoorstel resultaatbericht DX BerichtdataLax (XSD)
+
+Effect afnemerindicaties >
+
+Nadere populatiebeperking volledig geconverteerd?
+
+*
+
+DX
+
+.
+
+Gemeente code
+
+-
+
+Partij
+
+Administratienummer
+
+*
+
+.
+
+DX
+
+X
+
+Effect afnemerindicaties
+
+Datum
+
+*
+
+Partij bijhoudingsvoorstel >
+
+Administratienummer
+
+Soort dienst
+
+DX
+
+Identiteit
+
+.
+
+D
+
+Datum einde
+
+.
+
+Datum/Tijd
+
+Dyn
+
+Burgerservicenummer
+
+Gemeente code
+
+Datum
+
+Bijhoudingsplan
+
+X
+
+D
+
+.
+
+D
+
+Burgerservicenummer
+
+Soort >
+
+Populatiebeperking
+
+Datum aanvang materiële periode D
+
+Bijhoudingsvoorstel verzoekbericht
+
+.
+
+DX
+
+* s1
+
+-
+
+Bijhouding
+
+-
+
+.
+
+Maximaal aantal zoekresultaten
+D
+
+-
+
+Huisnummertoevoeging
+
+Nadere populatiebeperking
+
+Persoon
+
+Tijdstip laatste wijziging persoon
+
+-
+
+Huisletter
+
+*
+
+D
+
+-
+
+-
+
+X
+
+Datum
+
+* s3
+
+*
+
+X
+
+DX
+
+* s2
+
+Datum/Tijd
+
+Omschrijving DX Omschrijving enumeratiewaarde *
+
+Huisnummertoevoeging
+
+Datum ingang
+
+Leveringsaantekening
+
+D
+
+*
+
+Huisletter
+
+.
+
+D
+
+Leveringsautorisatie
+
+*
+
+Datum
+
+Leveringsaantekening >
+
+X
+
+Dienstbundel
+
+DX
+
+-
+
+Selectie leveringsautorisatie >
+
+D
+
+Datum einde
+
+Identiteit
+
+Persoon >
+
+Dienstbundel >
+
+F
+
+-
+
+Dyn
+
+Rel
+
+*l
+
+*
+
+G
+
+*l
+
+*
+
+Leveringsautorisatie
+
+Standaard
+
+Naam enumeratiewaarde
+
+Soort selectie
+
+D
+
+*
+
+DX
+
+X
+
+Leveringsautorisatie >
+
+Datum
+
+Naam
+
+Soort selectie >
+
+Huisnummer
+
+DX
+
+*i
+
+*i
+
+X
+
+Datum ingang
+
+.
+
+Naam enumeratiewaarde
+
+Huisnummer
+
+Naam enumeratiewaarde *
+
+.
+
+Datum
+
+Soort synchronisatie ID
+
+*il
+
+DX
+
+Datum
+
+D
+
+DX
+
+Dienst ID
+
+Naam
+
+D
+
+D
+
+D
+
+F
+
+Verwerkingswijze ID
+
+Naam
+
+ID
+
+G
+
+Datum aanvang materiële periode resultaat
+
+ID
+
+*i
+
+Zoeken
+
+Groep >
+
+-
+
+* s1
+
+*
+
+Dienstbundel ID
+
+-
+
+ID
+
+-
+
+Datum/Tijd
+
+/Datum/tijd klaarzetten levering
+
+D
+
+Geblokkeerd?
+
+Identiteit
+
+-
+
+SG
+
+D
+
+Identiteit
+
+*
+
+ID
+
+Standaard
+
+Dienstbundel \ Groep
+
+Dienst
+
+-
+
+ID
+
+Soort synchronisatie
+
+Identificatiecriteria
+
+SG
+
+-
+
+-
+
+Naam DX Naam enumeratiewaarde * l
+
+Dienstbundel
+
+D
+
+Leveringsaantekening \ Persoon
+
+Rel
+
+Identiteit
+
+Rel
+
+.
+
+-
+
+Resultaat
+
+F
+
+Datum/tijd klaarzetten levering
+
+Omschrijving DX Omschrijving enumeratiewaarde *
+
+Standaard
+DX
+
+Geblokkeerd?
+
+-
+
+*
+
+*
+
+.
+
+X
+
+Geblokkeerd?
+
+D
+
+Persoon
+
+Identiteit
+
+Verantwoording >
+
+Selectiekenmerken
+
+ID
+
+D
+
+*
+
+Dienst
+
+.
+
+* u1
+
+Identiteit
+
+* s2
+
+Toegang leveringsautorisatie
+
+D
+
+Scope patroon
+
+.
+
+Bijhoudingsautorisatie
+
+*
+
+Datum/Tijd
+
+D
+
+Dienst >
+
+Soort synchronisatie
+
+Historievorm
+
+D
+
+Ja/Nee
+
+* s1
+
+Toegang leveringsautorisatie >
+
+D
+
+X
+
+Bijhoudingsautorisatie >
+
+......
+
+Bericht
+
+*i
+
+D
+
+Historievorm >
+
+.
+
+D
+
+D
+
+-
+
+Leveringsaantekening ID
+
+Scope patroon >
+
+.
+
+Soort administratieve handeling
+
+Modelautorisatie?
+
+-
+
+-
+
+D
+
+Soort synchronisatie >
+
+Datum
+Datum/Tijd
+
+DX
+
+*
+
+Dyn
+
+-
+
+ID
+
+.
+
+X
+X
+
+Soort administratieve handeling >
+
+Stelsel
+
+Dyn
+
+Identiteit
+
+.
+
+Peilmoment formeel resultaat
+
+Soort document >
+
+D
+
+Leveringsaantekening
+
+*
+
+*i
+
+Stelsel >
+
+*
+
+Administratieve handeling
+
+Bijhoudingsautorisatie \ Soort administratieve handeling ID
+
+Partij
+
+Zoekoptie
+
+D
+
+D
+
+Dyn
+
+DX
+
+Administratieve handeling >
+
+ID
+
+Persoon \ Afnemerindicatie
+
+Optie >
+
+.
+
+.
+
+*il
+
+Naam enumeratiewaarde lang .
+
+.
+
+Soort document
+
+Leveringsautorisatie ID
+
+DX
+
+Datum/Tijd
+
+DX
+
+SG
+
+Waarde
+
+Datum/Tijd
+
+Identiteit
+
+-
+
+* u1
+
+D
+
+.
+
+SG
+
+Element >
+
+*
+
+D
+
+Partij \ Rol
+
+F
+
+*
+
+* u1
+
+Element
+
+Datum/tijd einde formele periode resultaat
+
+DX
+
+D
+
+Bericht
+
+D
+
+Datum/tijd aanvang formele periode resultaat
+
+Bijhouder bijhoudingsvoorstel >
+
+ID
+
+DX
+
+Bericht >
+
+Element > DX Element
+
+-
+
+Scope patroon
+
+-
+
+.
+
+.
+
+-
+
+-
+
+-
+
+Datum
+
+Datum
+
+G
+
+Identiteit
+
+Dyn
+
+Scope patroon \ Element ID * i
+
+X
+
+DX
+
+-
+
+D
+
+ID
+
+Dyn
+
+-
+
+Peilmoment materieel
+
+Datum einde
+
+-
+
+-
+
+.
+
+*
+SG
+
+Dyn
+
+Zoekbereik
+
+Datum
+
+Identiteit
+
+Scope patroon \ Element
+
+X
+
+DX
+
+Bijhoudingsautorisatie \ Soort administratieve handeling
+
+*
+
+Zoekbereik >
+
+Peilmoment materieel resultaat
+
+F
+
+*i
+
+Datum einde materiële periode resultaat
+
+Datum ingang
+
+Leveringsautorisatie
+
+Melding DX Meldingtekst
+
+*
+
+Scope patroon > D
+
+Persoon >
+
+*
+
+Soort >
+
+*
+
+Zoekcriterium
+
+/Tijdstip registratie D
+Dienst
+
+*
+
+Soort melding
+
+Scope patroon ID
+
+Melding > DX Melding *
+
+Bericht >
+
+F
+
+Datum ingang
+
+Bericht
+
+Identiteit
+
+Partij
+
+Regel
+
+DX
+
+ID D
+
+-
+
+.
+
+G
+
+DX
+
+-
+
+* s1
+
+Datum/tijd verzending
+
+Parameters
+
+-
+
+Identiteit
+
+-
+
+DX
+
+Dyn
+
+Identiteit
+
+*
+
+Cross referentienummer
+F
+
+DX
+
+DX
+
+Ontvangende partij >
+
+Volgnummer selectieresultaat set
+
+F
+
+DX
+
+Nadere populatiebeperking DX Populatiebeperking
+
+Partij
+
+Naam enumeratiewaarde * u1
+
+Standaard
+
+. u1
+
+Standaard
+
+DX
+
+*
+
+Datum ingang
+
+Geblokkeerd?
+
+D
+
+-
+
+*
+
+Standaard
+
+. u1
+
+Partij
+
+DX
+
+-
+
+-
+
+ID
+
+Partij
+
+-
+
+ID
+
+SG
+
+Identiteit
+
+D
+
+F
+
+Bijhouder \ Fiatteringsuitzondering
+
+D
+
+Transporteur >
+
+Identiteit
+
+Standaard
+F
+
+Datum ingang vrij bericht
+
+Ja/Nee
+
+......
+
+Ondertekenaar vrij bericht >
+
+D
+
+Toegang bijhoudingsautorisatie
+
+*
+
+Vrij bericht
+
+Ondertekenaar >
+
+*
+
+Zendende partij >
+
+*i
+
+G
+
+Naam
+SG
+
+F
+
+Ja/Nee
+
+Bijhoudingsautorisatie ID
+
+Standaard
+
+-
+
+D
+
+*
+
+Bijhouding
+D
+
+-
+
+ID
+
+.
+
+Verstrekkingsbeperking mogelijk? DX Ja/Nee
+Datum overgang naar BRP
+
+Identiteit
+
+-
+
+Regel >
+Dyn
+
+.
+
+SG
+
+SG
+
+. s1
+
+Soort partij
+
+D
+
+Modelautorisatie? D
+
+Naam enumeratiewaarde *
+
+OIN
+
+-
+
+ID
+
+ID
+
+Datum ingang
+
+Bericht \ Melding
+
+Bericht >
+
+Partij
+
+DX
+
+* s2
+
+Soort bericht
+
+Stuurgegevens
+
+Naam
+
+Identiteit
+
+*i
+
+Datum/Tijd
+
+Scope patroon
+
+Dyn
+
+-
+
+-
+
+-
+
+

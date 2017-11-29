@@ -1,0 +1,542 @@
+BS.0.VS - Bijlage Vrijgeven selectietaak
+Versie: Werk
+Gegenereerd op: 17 juli 2017
+Status: Definitief
+
+1 Regels voor usecase BS.1.RV - Raadplegen vrij te geven
+selectietaken
+1.1
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2812
+
+1
+
+F
+
+Ingevoerde gegevens onjuist
+
+R2854
+
+1
+
+I
+
+Geen vrij te geven selectietaken gevonden
+
+2 Regels voor usecase BS.1.RDS - Raadplegen detailgegevens
+selectietaak
+2.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2813
+
+1
+
+Berekend peilmoment formeel resultaat selectietaak
+
+R2814
+
+1
+
+Berekend peilmoment materieel resultaat selectietaak
+
+3 Regels voor usecase BS.1.VS.WGS - Wijzig gegevens
+selectietaak
+3.1
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2815
+
+1
+
+F
+
+Datum planning mag niet teveel afwijken van de berekende selectiedatum
+
+R2816
+
+1
+
+F
+
+Datum planning mag niet voor de eerste selectiedatum liggen
+
+R2820
+
+3
+
+F
+
+Gegevens wijzigen bij het plannen van een selectietaak
+
+R2821
+
+2
+
+F
+
+Wijzigen selectiesoort bij de selectietaak
+
+R2822
+
+1
+
+W
+
+Waarschuwing bij het aanpassen van de selectiesoort bij de selectietaak
+
+R2826
+
+1
+
+F
+
+Datum planning mag niet in het verleden liggen
+
+3.2
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2016
+
+1
+
+'Systeemdatum'
+
+R2702
+
+2
+
+Berekende selectiedatum
+
+3.3
+
+Integriteitsregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2818
+
+2
+
+F
+
+Selectietaak uniek op datum planning
+
+4 Regels voor usecase BS.1.VS.WSS - Wijzig status
+selectietaak
+4.1
+
+Controleregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2861
+
+1
+
+R2862
+
+1
+
+F
+
+Statuswijziging na goedkeuren selectietaak
+Vrijgeven selectietaak door andere beheerder
+
+5 Uitwerking regels
+R2016
+'Systeemdatum'
+Definitie:
+
+De systeemdatum is de actuele datum tijdens het evalueren van een regel van het
+BRP syteem en heeft het formaat 'jjjjmmdd'.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2702
+Berekende selectiedatum
+Definitie:
+
+De berekende selectiedatum die hoort bij de Selectietaak wordt afgeleid door
+de Dienst.Eerste selectiedatum nul, één of meer keer op te hogen met de
+combinatie van de Dienst.Eenheid selectieinterval en Dienst.Selectieinterval
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2812
+Ingevoerde gegevens onjuist
+Definitie:
+
+Indien één van de zoekcriteria onjuist wordt ingevoerd wordt dit gemeld aan de
+gebruiker.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Ingevoerde gegevens onjuist.
+
+R2813
+Berekend peilmoment formeel resultaat selectietaak
+Definitie:
+
+Indien alle volgende attributen een waarde hebben:
+• Dienst.Selectie peilmoment formeel resultaat
+• Dienst.Eenheid selectieinterval heeft een waarde
+• Dienst.Selectieinterval heeft een waarde
+EN
+Selectietaak.Peilmoment formeel resultaat heeft geen waarde
+dan
+wordt Selectietaak.Peilmoment formeel resultaat afgeleid door
+de Dienst.Selectie peilmoment formeel resultaat op te hogen met het
+Selectietaak.Volgnummer x (de combinatie van de Dienst.Eenheid selectieinterval
+en Dienst.Selectieinterval)
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2814
+
+Berekend peilmoment materieel resultaat selectietaak
+Definitie:
+
+Indien alle volgende attributen een waarde hebben:
+
+•
+•
+•
+
+Dienst.Selectie peilmoment materieel resultaat
+Dienst.Eenheid selectieinterval
+Dienst.Selectieinterval
+
+EN
+Selectietaak.Peilmoment materieel resultaat heeft geen waarde
+dan
+wordt Selectietaak.Peilmoment materieel resultaat afgeleid door
+de Dienst.Selectie peilmoment materieel resultaat op te hogen met het
+Selectietaak.Volgnummer x (de combinatie van de Dienst.Eenheid selectieinterval
+en Dienst.Selectieinterval)
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2815
+Datum planning mag niet teveel afwijken van de berekende selectiedatum
+Definitie:
+
+Bij het opslaan van de Selectietaak.Datum planning
+bij een periodieke selectiedienst
+mag de Selectietaak.Datum planning
+niet meer dan de
+(Dienst.Selectieinterval X Dienst.Eenheid selectieinterval)
+afwijken van de Berekende selectiedatum (R2702)
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De geplande datum wijkt teveel af van de berekende selectiedatum.
+
+R2816
+Datum planning mag niet voor de eerste selectiedatum liggen
+Definitie:
+
+Selectietaak.Datum planning mag niet vóór de Dienst.Eerste selectiedatum liggen.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Een selectietaak mag niet voor de eerste selectiedatum gepland worden.
+
+R2818
+Selectietaak uniek op datum planning
+Definitie:
+
+Op Selectietaak.Datum planning mag voor de combinatie Selectietaak.Toegang
+leveringsautorisatie en Selectietaak.Dienst maar één selectietaak voorkomen met
+de status 'Gepland' of 'Uitvoerbaar'.
+
+Versie:
+
+2
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Er is voor deze toegang leveringsautorisatie en deze dienst al een geplande
+selectietaak.
+
+R2820
+Gegevens wijzigen bij het plannen van een selectietaak
+Definitie:
+
+Tijdens het plannen van de selectietaak mogen de volgende gegevens slechts
+aangepast worden indien de Selectietaak status.Naam gelijk is aan 'In te plannen'
+of 'Gepland':
+• Dienst.Selectieresultaat controleren?
+• Dienst.Maximaal aantal personen per selectiebestand
+• Dienst.Maximale grootte selectiebestand
+• Dienst.Leverwijze selectie
+• Dienst. Medium selectie (nieuw)
+• Dienst. E-mail contactpersoon (nieuw)
+• Dienst. Verwacht aantal personen (nieuw)
+• Selectietaak. selectiesoort (nieuw)
+• Selectietaak.Datum planning
+• Selectietaak.Peilmoment formeel resultaat
+• Selectietaak.Peilmoment materieel resultaat
+• Selectietaak.Selectie lijst gebruiken?
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Dit gegeven mag niet meer gewijzigd worden.
+
+R2821
+Wijzigen selectiesoort bij de selectietaak
+Definitie:
+
+Indien de Dienst.Soort selectie is gelijk aan 'Standaard selectiedienst'
+dan mag de Selectietaak.Soort selectie niet worden aangepast.
+Toelichting:
+Indien de Dienst.Soort selectie is gelijk aan 'Selectiedienst met plaatsing
+afnemerindicatie'
+OF
+'Selectiedienst met verwijdering afnemerindicatie'
+dan mag de Selectietaak.Soort selectie worden aangepast en afwijken van de
+Dienst.Soort selectie.
+
+Versie:
+
+2
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De autorisatie betreft een standaard selectiedienst, dit kan niet worden aangepast.
+
+R2822
+Waarschuwing bij het aanpassen van de selectiesoort bij de selectietaak
+Definitie:
+
+Wanneer de Selectietaak.Selectie soort wordt opgeslagen
+EN
+Selectietaak.Selectie is ongelijk aan Dienst.Soort selectie
+dan volgt er een waarschuwing.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+Let op! Deze soort selectiedienst wijkt af van de voor deze partij geautoriseerde
+soort selectiedienst.
+
+R2826
+Datum planning mag niet in het verleden liggen
+Definitie:
+
+De Selectietaak.Datum planning mag nier voor 'Systeemdatum' (R2016) liggen.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De planningsdatum mag niet in het verleden liggen.
+
+R2854
+Geen vrij te geven selectietaken gevonden
+Definitie:
+
+Indien er geen selectietaken zijn waarvoor geldt dat:
+de Selectietaak status.Naam is gelijk aan 'Gepland'
+EN
+voldoet aan de eventueel opgegeven zoekcriteria
+dan wordt dit aan de gebruiker gemeld.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Informatieve melding; ter kennisname
+
+Meldingstekst:
+
+Er zijn geen vrij te geven selectietaken gevonden.
+
+R2861
+Statuswijziging na goedkeuren selectietaak
+Definitie:
+
+Indien de Selectietaak status.Naam gelijk is aan 'Gepland'
+dan mag de nieuwe status slechts één van de volgende waarde krijgen:
+
+•
+•
+
+'Uitvoerbaar'
+'Geannuleerd'
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Deze statuswijziging is niet mogelijk.
+
+R2862
+Vrijgeven selectietaak door andere beheerder
+Definitie:
+
+Indien Selectietaak.Status wordt gewijzigd van 'Gepland' naar 'Uitvoerbaar'
+dan moet de Selectietaak.Status gewijzigd door die hoort bij de Selectietaak.Status
+'Gepland'
+ongelijk zijn aan de Selectietaak.Status gewijzigd door die hoort bij de
+Selectietaak.Status 'Uitvoerbaar'
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+

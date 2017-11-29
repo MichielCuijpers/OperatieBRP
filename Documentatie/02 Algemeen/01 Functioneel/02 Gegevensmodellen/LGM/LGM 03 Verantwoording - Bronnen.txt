@@ -1,0 +1,624 @@
+/Administratieve handeling \ Bijgehouden persoon
+Administratieve handeling
+
+Dyn
+
+Identiteit
+
+D
+
+ID
+
+SDX
+
+Soort >
+
+X
+
+Categorie >
+
+SDX
+
+Partij >
+
+Administratieve handeling ID
+
+*i
+
+Soort administratieve handeling
+
+*
+
+Categorie administratieve handeling
+
+.
+
+Partij
+
+*
+
+Toelichting ontlening SDX Ontleningstoelichting
+Tijdstip registratie
+
+DX
+
+Datum/Tijd
+
+* s2 s4
+
+ID
+
+D
+
+Soort >
+
+DX
+
+Bijhoudingsplan
+
+-
+
+Levering
+
+-
+
+-
+
+Administratieve handeling > D
+
+.
+
+DX
+
+/Partij >
+-
+
+X
+
+Administratieve handeling
+
+*
+
+Persoon >
+
+X
+
+Persoon
+
+*
+
+Actie ID
+
+/Administratieve handeling \ Bron
+
+*i
+
+Identiteit
+
+*
+
+Administratieve handeling >
+
+Administratieve handeling
+
+*l
+
+Document >
+
+X
+
+Document
+
+.l
+
+Partij
+
+*
+
+Rechtsgrond >
+
+X
+
+Rechtsgrond
+
+.l
+
+Rechtsgrondomschrijving
+
+X
+
+Omschrijving enumeratiewaarde
+
+.l
+
+X
+
+Datum evt. (deels) onbekend
+
+.
+
+X
+
+Datum evt. (deels) onbekend
+
+.
+.
+
+D
+
+Datum/Tijd
+
+. s1
+
+D
+
+Status levering administratieve handeling
+
+* s3
+
+Nadere aanduiding verval
+
+X
+
+Nadere aanduiding verval
+
+Peildatum verwijdering
+
+X
+
+Datum
+
+.
+
+Datum/Tijd
+
+*
+
+Identiteit
+
+Datum evt. (deels) onbekend
+
+.
+
+ID
+
+D
+
+Datum ontlening
+
+SDX
+
+Actie \ Bron
+
+Dyn
+-
+
+Persoon >
+
+X
+
+Persoon
+
+.
+
+Administratieve handeling >
+
+X
+
+Administratieve handeling
+
+.
+
+-
+
+*
+
+Datum aanvang geldigheid
+
+Tijdstip registratie
+
+-
+
+Soort actie
+
+Status levering >
+
+-
+
+Dyn
+D
+
+Actie \ Bron ID
+
+Document
+
+-
+
+Identiteit
+
+*i
+
+-
+
+Administratieve handeling \ Gedeblokkeerde melding ID
+
+*i
+
+Code
+
+Administratieve handeling
+
+*
+
+Regel
+
+*
+
+Identiteit
+
+D
+
+ID
+
+Administratieve handeling > D
+D
+
+Regel >
+
+Gedeblokkeerde melding
+
+-
+
+-
+
+Partij ID
+
+*i
+
+DX
+
+Partij code
+
+*l
+
+Standaard
+
+ID
+
+. u1
+
+Soort >
+
+. u1
+
+Aktenummer SDX Aktenummer
+
+DX
+
+Rechtsgrond
+
+G
+
+SDX
+
+DX
+
+Regel
+
+*
+
+Melding DX Meldingtekst .
+
+DX
+
+Naam enumeratiewaarde *
+
+Datum ingang
+
+DX
+
+Datum
+
+*
+
+Datum einde
+
+DX
+
+Datum
+
+.
+
+OIN
+
+D
+
+OIN
+
+. s1
+
+Identiteit
+
+Soort >
+
+D
+
+Soort partij
+
+.
+
+ID
+
+D
+
+Rechtsgrond ID
+
+*i
+
+*
+
+Code
+
+DX
+
+Rechtsgrond code
+
+*l
+
+.
+
+Omschrijving
+
+DX
+
+Omschrijving enumeratiewaarde
+
+D
+
+Datum
+
+Bijhouding
+Automatisch fiatteren?
+
+Partij
+
+*
+
+F
+
+Rechtsgrond
+
+-
+
+G
+D
+
+Ja/Nee
+
+Vrij bericht
+
+SG
+-
+
+M1
+
+Leidt tot strijdigheid? DX Ja
+
+F
+
+*
+.
+
+*
+G
+
+F
+
+Ondertekenaar vrij bericht >
+
+D
+
+Partij
+
+Transporteur vrij bericht >
+
+D
+
+Partij
+
+.
+.
+
+Datum ingang vrij bericht
+
+DX
+
+Datum
+
+*
+
+Bericht
+
+Datum einde vrij bericht
+
+DX
+
+Datum
+
+.
+
+......
+
+Afleverpunt vrij bericht
+
+D
+
+Uri
+
+.
+
+Regel >
+
+DX
+
+Regel
+
+*
+
+Geblokkeerd vrij bericht?
+
+D
+
+Ja
+
+.
+
+Soort >
+
+DX
+
+Soort melding
+
+*
+
+Melding
+
+Dyn
+
+Dyn
+
+Identiteit
+
+-
+
+Melding DX Meldingtekst
+
+Bericht \ Melding
+Identiteit
+Bericht >
+
+Dyn
+-
+
+DX
+
+.
+
+Omschrijving SDX Document omschrijving .
+
+Naam
+
+Datum overgang naar BRP
+
+*
+
+* u1
+
+Document
+
+-
+
+D
+
+Verstrekkingsbeperking mogelijk? DX Ja/Nee
+
+Identiteit
+Regel >
+
+Dyn
+
+Soort document
+
+Actie
+
+SG
+
+Identiteit
+ID
+
+*i
+
+DX
+
+SDX
+
+-
+
+Document ID
+
+D
+
+Partij >
+
+Dyn
+
+D
+
+Document >
+
+Rechtsgrondomschrijving SDX Omschrijving enumeratiewaarde . u1
+
+Partij
+
+Dyn
+
+Actie >
+
+Rechtsgrond >
+
+Administratieve handeling \ Gedeblokkeerde regel
+
+17-7-2017
+
+Dyn
+
+Administratieve handeling
+
+Tijdstip levering
+
+Identiteit
+
+Release 59
+
+-
+
+Administratieve handeling >
+
+Datum einde geldigheid
+
+/Persoon \ Administratieve handeling
+
+-
+
+LGM 03 Verantwoording - Bronnen
+
+Dyn
+
+Identiteit
+
+X
+
+Actie
+
+.
+
+Standaard
+Bijhoudingsplan >
+
+Identiteit
+
+-
+
+Dyn
+
+Bericht
+
+*
+
+Melding > DX Melding *
+
+-
+
+*
+
+

@@ -1,0 +1,470 @@
+UC308 Verwerk toevallige gebeurtenis BRP
+
+0.2
+
+Datum
+Status
+
+02-02-2016
+Definitief
+
+Definitief | 0.2| UC308 Verwerk toevallige gebeurtenis BRP | 02-02-2016
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................6
+PRECONDITIES ......................................................................................................................................6
+POSTCONDITIE......................................................................................................................................6
+
+VERLOOP .................................................................................................................................................7
+2.1
+2.2
+
+REGULIER VERLOOP ..............................................................................................................................7
+ALTERNATIEF VERLOOP: INHOUD BIJHOUDINGSNOTIFICATIE NIET CORRECT VOOR TB02BERICHT ...........................................................................................................................................................7
+2.3 ALTERNATIEF VERLOOP: MIGRATIEVOORZIENING ONTVANGT EEN TF21-BERICHT .........................7
+2.4 ALTERNATIEF VERLOOP: ONJUIST GBA-BERICHT ONTVANGEN ........................................................7
+3
+
+AANVULLENDE SPECIFICATIES .................................................................................................8
+3.1 BIJHOUDINGSNOTIFICATIE EN AKTENUMMERS ...................................................................................8
+3.2 FOUTEN .................................................................................................................................................8
+3.2.1 Inhoudelijke controle van de bijhoudingsnotificatie ...................................................9
+3.2.2 Tf21-bericht ...............................................................................................................................9
+
+4
+
+OPMERKINGEN ..................................................................................................................................10
+
+Operatie BRP
+
+Pagina 2 van 10
+
+Definitief | 0.2| UC308 Verwerk toevallige gebeurtenis BRP | 02-02-2016
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+29-01-2016
+02-02-2016
+
+0.1
+0.2
+
+Initiële versie
+Reviewcommentaar verwerkt
+
+Operatie BRP
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+02-02-2016
+
+0.1
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 10
+
+Definitief | 0.2| UC308 Verwerk toevallige gebeurtenis BRP | 02-02-2016
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+Wanneer een akte is opgemaakt en opgenomen in de registers van de burgerlijke stand in een
+andere gemeente (feitgemeente) dan waar de hoofdpersoon als ingezetene is ingeschreven
+(rechtsgemeente), wordt gesproken over een toevallige gebeurtenis.
+Hoe de toevallige gebeurtenis verwerkt wordt in de GBA, is beschreven in de toevallige
+gebeurtenis berichtcyclus in het [LO]. Er zijn altijd twee verschillende gemeenten betrokken bij
+de toevallige gebeurtenis berichtcyclus.
+Deze use case beschrijft op welke wijze de migratievoorziening de toevallige gebeurtenis
+verwerkt indien de feitgemeente een BRP-gemeente is en de rechtsgemeente een GBAgemeente. Er wordt beschreven welke bedrijfsregels door de migratievoorziening worden
+gecontroleerd en op welke wijze gebruik gemaakt wordt van de interne services van de BRP.
+Meer informatie over de toevallige gebeurtenis in het [LO] is te vinden in:
+• Paragraaf III.2.17 Toevallige gebeurtenis: pagina 461
+• Tb02: pagina 559
+• Tf21: pagina 564
+Veel informatie is ook te vinden in [HUP] (hoofdstuk 5 Procedures op basis van een in Nederland
+opgemaakte akte van de burgerlijke stand).
+In [UC309] is een toelichting te vinden van alle termen en coderingen die gebruikt worden in dit
+document.
+
+Operatie BRP
+
+Pagina 4 van 10
+
+Definitief | 0.2| UC308 Verwerk toevallige gebeurtenis BRP | 02-02-2016
+
+Operatie BRP
+
+Pagina 5 van 10
+
+Definitief | 0.2| UC308 Verwerk toevallige gebeurtenis BRP | 02-02-2016
+
+1.2
+
+Referenties
+#
+[BMR]
+
+Document
+https://www.modernodam.nl/bmr
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+[LO]
+
+Logisch Ontwerp
+
+RvIG
+
+3.10
+
+08-10-2016
+
+[XSD]
+
+brp0200_bhgAfstamming_Berichten.xsd
+
+Operatie BRP
+
+-
+
+-
+
+brp0200_bhgHuwelijkGeregistreerdPartners
+chap_Berichten.xsd
+brp0200_bhgNaamGeslacht_Berichten.xsd
+brp0200_bhgOverlijden_Berichten.xsd
+
+1.3
+
+[HUP]
+
+Handleiding Uitvoeringsprocedures
+
+RvIG
+
+2.3
+
+18-12-2015
+
+[UCAV]
+
+BRP Use case afhandelen verzoek
+
+Operatie BRP
+
+-
+
+-
+
+[UC309]
+
+MV UC309 Verwerk toevallige gebeurtenis
+GBA
+
+Operatie BRP
+
+-
+
+-
+
+[BRPDOC]
+
+https://www.modernodam.nl/svn/brpdoc/02%20Documentatie/04%20Interne%2
+0Use%20cases%20(UC1)/03%20Bijhoudin
+g
+
+Operatie BRP
+
+-
+
+-
+
+[AS]
+
+MV Aanvullende specificaties ISC.doc
+
+Operatie BRP
+
+-
+
+-
+
+Precondities
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 6 van 10
+
+Definitief | 0.2| UC308 Verwerk toevallige gebeurtenis BRP | 02-02-2016
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+1. De migratievoorziening ontvangt van de BRP een bijhoudingsnotificatie
+2. De migratievoorziening stelt vast dat op basis van de inhoud van de notificatie een correct
+Tb02-bericht gemaakt kan worden (AV: 2.2) (AS: 3.1, 3.2.1)
+3. De migratievoorziening stelt een Tb02-bericht op
+4. De migratievoorziening stuurt het Tb02-bericht aan de GBA-gemeente
+5. De migratievoorziening ontvangt een Null-bericht van de GBA-gemeente (AV: 2.4)
+6. De use case eindigt.
+
+2.2
+
+Alternatief verloop: inhoud bijhoudingsnotificatie niet correct voor Tb02-bericht
+1. De migratievoorziening stelt vast dat op basis van de inhoud van de bijhoudingsnotificatie
+geen Tb02-bericht gemaakt kan worden (AS: 3.1, 3.2.1)
+2. De migratievoorziening stelt een notificatiefoutbericht op (AS: 3.2)
+3. De migratievoorziening stuurt het notificatiefoutbericht aan de BRP
+4. De use case eindigt.
+
+2.3
+
+Alternatief verloop: migratievoorziening ontvangt een Tf21-bericht
+1. De migratievoorziening
+2. De migratievoorziening
+3. De migratievoorziening
+3.2)
+4. De migratievoorziening
+5. De use case eindigt.
+
+2.4
+
+ontvangt een Tf21-bericht van de GBA-gemeente
+stelt vast dat het Tf21-bericht correct is (AV: 2.4) (AS: [LO])
+maakt op basis van het Tf21-bericht een notificatiefoutbericht (AS:
+stuurt het notificatiefoutbericht aan de BRP
+
+Alternatief verloop: onjuist GBA-bericht ontvangen
+1. De migratievoorziening stelt vast dat het ontvangen GBA-bericht niet correct is
+2. De migratievoorziening verstuurt een Pf03-bericht aan de GBA-gemeente (AS: [LO])
+3. De use case eindigt
+
+Operatie BRP
+
+Pagina 7 van 10
+
+Definitief | 0.2| UC308 Verwerk toevallige gebeurtenis BRP | 02-02-2016
+
+3
+
+Aanvullende specificaties
+
+3.1
+
+Bijhoudingsnotificatie en aktenummers
+In de onderstaande tabel is te vinden in welk soort bijhoudingsnotificatie een soort Actie /
+Bron.Document.Aktenummer mag voorkomen. De migratievoorziening mag ervan uitgaan dat
+het juiste aktenummer aan de juiste administratieve handeling en actie gekoppeld is omdat de
+BRP hierop controleert.
+Soort aktenummer
+1.C
+1.E
+1.J
+1.N
+1.Q
+1.U
+1.V
+1.H
+1.M
+1.S
+3.A
+3.B
+3.H
+5.H
+5.B
+5.A
+2.A
+2.G
+
+Soort bijhoudingsnotificatie
+bhg_afsRegistreerErkenning
+bhg_afsActualiseerAfstamming
+bhg_afsRegistreerErkenning
+bhg_afsRegistreerErkenning
+bhg_afsRegistreerAdoptie
+bhg_afsActualiseerAfstamming
+bhg_afsActualiseerAfstamming
+bhg_nmgRegistreerNaamGeslacht
+bhg_nmgRegistreerNaamGeslacht
+bhg_nmgRegistreerNaamGeslacht
+bhg_hgpRegistreerHuwelijkGeregistreerdPartnerschap
+bhg_hgpRegistreerHuwelijkGeregistreerdPartnerschap
+bhg_hgpRegistreerHuwelijkGeregistreerdPartnerschap
+bhg_hgpRegistreerHuwelijkGeregistreerdPartnerschap
+bhg_hgpRegistreerHuwelijkGeregistreerdPartnerschap
+bhg_hgpRegistreerHuwelijkGeregistreerdPartnerschap
+bhg_ovlRegistreerOverlijden
+bhg_ovlRegistreerOverlijden
+
+Meer informatie over de technische beschrijving van de berichten is te vinden in [XSD]. Overige
+informatie over de bijhoudingsnotificatie is te vinden in [BRPDOC] en [UCAV].
+@@ De soorten bijhoudingsnotificatie klopt niet door recente wijzigingen. Dit zal op een later
+moment aangepast worden.
+3.2
+
+Fouten
+Wanneer er door de migratievoorziening fouten geconstateerd worden, dient een
+foutnotificatiebericht gestuurd te worden aan de BRP-feitgemeente. Redenen om een
+foutnotificatiebericht te sturen zijn:
+• De bijhoudingsnotificatie kan door de migratievoorziening niet verwerkt worden omdat er
+inhoudelijk fouten zijn geconstateerd
+• De GBA-gemeente heeft fouten geconstateerd en heeft een Tf21-bericht teruggestuurd
+Meer informatie over de notificatiefoutbericht is te vinden in [BRPDOC] en [UCAV].
+
+Operatie BRP
+
+Pagina 8 van 10
+
+Definitief | 0.2| UC308 Verwerk toevallige gebeurtenis BRP | 02-02-2016
+
+3.2.1
+
+Inhoudelijke controle van de bijhoudingsnotificatie
+De migratievoorziening controleert inhoudelijk de ontvangen bijhoudingsnotificatie en stuurt bij
+fouten een foutnotificatiebericht aan de BRP-feitgemeente. In de onderstaande tabel staat welke
+controles worden uitgevoerd en wat er aan de BRP-feitgemeente gemeld wordt.
+
+Controle
+De Actie in de bijhoudingsnotificatie bevat één
+aktenummer (Actie /
+Bron.Document.Aktenummer)
+De Actie in de bijhoudingsnotificatie wijzigt niet
+meer gegevens dan wat in het [LO] en in
+[UC309] par. 3.2 en 3.3 is beschreven.
+De bijhoudingsnotificatie bevat niet minder
+gegevens dan die volgens het [LO] en in
+[UC309] par. 3.2 en 3.3 nodig zijn om een
+Tb02-bericht op te stellen
+De bijhoudingsnotificatie bevat gegevens die
+voldoen aan de controles zoals die in [UC309]
+par. 4.1 zijn beschreven
+
+Melding in notificatiefoutbericht
+Meerdere aktenummers zijn niet toegestaan.
+
+Er zijn meer gegevens gewijzigd dan is
+toegestaan in een Tb02-bericht.
+Er zijn onvoldoende gegevens aanwezig om
+een Tb02-bericht op te stellen.
+<opsomming van de gegevens die ontbreken>
+Er zijn één of meer inhoudelijke controles
+gefaald.
+<opsomming van de controles die gefaald
+zijn>
+
+3.2.2
+
+Tf21-bericht
+In de onderstaande tabel is te vinden hoe de foutcodes uit een Tf21-bericht van de GBAgemeente gemeld worden in een notificatiefoutbericht.
+Foutcode Tf21-bericht
+U
+
+V
+
+G
+
+B
+
+O
+
+N
+
+Operatie BRP
+
+Melding in notificatiefoutbericht
+Foutreden U:
+Het A-nummer van de hoofdpersoon komt dubbel voor in het PLbestand of in het verwijsbestand.
+Foutreden V:
+De persoonslijst van de hoofdpersoon is verhuisd naar een andere
+gemeente: <gemeente uit kop van het bericht indien aanwezig>
+Foutreden G:
+De persoonslijst van de hoofdpersoon kan niet gevonden worden in
+het PL-bestand of in het verwijsbestand.
+Foutreden B:
+De persoonslijst van de hoofdpersoon is geblokkeerd in verband met
+een verhuizing of is opgeschort met reden E of M: <gemeente uit kop
+van het bericht indien aanwezig>
+Foutreden O:
+De ingangsdatum geldigheid van het rechtsfeit ligt na het moment
+van opschorten van de persoonslijst door overlijden.
+Foutreden N:
+Diverse gegevens op de gevonden persoonslijst van de hoofdpersoon
+komen niet overeen met de gegevens van de hoofdpersoon uit het
+Tb02-bericht.
+
+Pagina 9 van 10
+
+Definitief | 0.2| UC308 Verwerk toevallige gebeurtenis BRP | 02-02-2016
+
+4
+
+Opmerkingen
+
+• In de BRP is nog onduidelijk hoe het notificatiefoutbericht eruit ziet
+• In de BRP is nog (voor een deel) onduidelijk welke aktenummers in welk bericht voor kunnen
+komen
+• Het is nog onduidelijk hoe notificatiefoutbericht onder de aandacht van de beheerder worden
+gebracht. Voldoet logging naar de ELK of dient er speciaal mee omgegaan te worden. Een
+UC808 taak is het niet omdat de beheerder niet in het proces ingrijpt en het
+notificatiefoutbericht altijd gestuurd wordt.
+• Veel BRP-documentatie is op dit moment nog niet volledig of ontbreekt. Op een later moment
+zal gekeken moeten worden of verwijzingen ontbreken of gewijzigd moeten worden
+
+Operatie BRP
+
+Pagina 10 van 10
+
+

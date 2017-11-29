@@ -1,0 +1,1122 @@
+MV Use Case Model
+
+2.3
+
+Datum
+Status
+
+13-04-2017
+Definitief
+
+Definitief | 2.3 | MV Use Case Model | 13-04-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+
+DOEL VAN DIT DOCUMENT ...................................................................................................................4
+LEESWIJZER ..........................................................................................................................................4
+REFERENTIES ........................................................................................................................................4
+
+2
+
+ACTOREN .................................................................................................................................................5
+
+3
+
+USE CASES..............................................................................................................................................6
+3.1
+3.2
+3.3
+3.4
+3.5
+3.6
+3.7
+3.8
+3.9
+
+4
+
+N-MV-1 HET INITIEEL VULLEN VAN BRP ..........................................................................................6
+N-MV-2 HET SYNCHRONISEREN VAN PERSOONSGEGEVENS TUSSEN BRP EN GBA-V .................7
+N-MV-3 HET AFHANDELEN VAN INTERSTELSEL BIJHOUDINGEN ......................................................8
+N-MV-4 HET UITWISSELEN VAN GEGEVENS OVER TERUGMELDINGEN ..........................................11
+N-MV-5 HET VERTALEN EN DOORGEVEN VAN VRIJE BERICHTEN. .................................................11
+N-MV-6 COMPONENTEN VOOR DE OVERGANG VAN EEN GEMEENTE NAAR BRP...........................12
+N-MV-7 COMPONENTEN VOOR DE OVERGANG VAN EEN AFNEMER NAAR BRP .............................12
+N-MV-9 COMPONENTEN BINNEN GGO ...........................................................................................13
+N-MV-10 AFHANDELEN BERICHTEN LO3 PARTIJEN.......................................................................15
+
+OPMERKINGEN ..................................................................................................................................16
+
+Operatie BRP
+
+Pagina 2 van 16
+
+Definitief | 2.3 | MV Use Case Model | 13-04-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+0.1
+0.2
+0.3
+0.4
+
+29-09-2011
+02-02-2012
+06-07-2012
+26-09-2012
+
+Operatie
+Operatie
+Operatie
+Operatie
+
+0.5
+0.6
+
+21-03-2013
+05-08-2013
+
+Initieel
+Aanpassingen naar aanleiding van review
+Wijzigingen n.a.v. aanpassing van de Vision
+UC701 en UC702 zijn vervallen; UC806 heeft
+een andere inhoud gekregen; UC807 is
+vervallen.
+UC310/UC311 omgewisseld
+Wijziging n.a.v. keuze voor scenario 3 variant
+3.
+Vervallen: UC201, UC304, UC313, UC804,
+UC805, UC810, UC812, UC813, UC1002
+Toegevoegd: UC102, UC103, UC104, UC502,
+UC807, UC808, UC809, UC810 (zit
+waarschijnlijk in BRP), UC811, UC812 (zit
+waarschijnlijk in BRP) UC813, UC1001,
+UC1002, UC1003, UC1004, UC1005, UC1006
+
+0.7
+
+06-08-2013
+
+Update van de use-case diagrammen
+Vervallen: UC810 UC812 UC813 UC1002
+Toegevoegd: UC807
+
+Operatie BRP
+
+0.8
+
+20-11-2013
+
+Review commentaar verwerkt.
+UC220, UC814, UC815 toegevoegd
+UC807 verwijderd
+
+Operatie BRP
+
+0.9
+
+11-04-2014
+
+1.0
+1.1
+
+01-09-2014
+26-09-2014
+
+2.0
+2.1
+2.2
+2.3
+
+29-07-2015
+30-09-2016
+02-02-2017
+13-04-2017
+
+Diverse aanpassingen om het document op te
+kunnen leveren ten behoeve van BOP 2.2
+Definitief gemaakt voor release 2.2
+Beheer use cases verplaatst naar UCM van
+beheer
+Definitief gemaakt voor release 3.1
+UCM van GGO geconsolideerd.
+UC105 verwijderd
+Verwerken reviewcommentaar
+documentatierichtlijnen
+
+BRP
+BRP
+BRP
+BRP
+
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+11-04-2017
+
+2.2
+
+Review op documentatierichtlijnen
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 16
+
+Definitief | 2.3 | MV Use Case Model | 13-04-2017
+
+1
+
+Inleiding
+
+1.1
+
+Doel van dit document
+In dit document wordt beschreven welke actoren en use cases relevant zijn voor de
+migratievoorziening.
+In hoofdstuk 2 staan de actoren van het beschrijven. In hoofdstuk 3 staan de use cases. Deze
+zijn gegroepeerd op basis de needs die tijdens de definitiestudie onderkend zijn.
+
+1.2
+
+Leeswijzer
+Dit document bevat een lijst met use cases waarvan met enige zekerheid wordt vermoed dat die
+gerealiseerd moeten worden. Gedurende de realisatie van de migratievoorziening zal deze lijst
+wijzigen. Deze lijst is geen lijst van use cases die reeds beschreven zijn en is nog zeker niet
+compleet/definitief.
+
+1.3
+
+Referenties
+#
+[1]
+
+Operatie BRP
+
+Document
+Logisch Ontwerp GBA
+
+Organisatie
+RvIG
+
+Versie
+3.10
+
+Datum
+08-10-2016
+
+Pagina 4 van 16
+
+Definitief | 2.3 | MV Use Case Model | 13-04-2017
+
+2
+
+Actoren
+
+In de onderstaande tabel zijn de actoren te vinden die relevant zijn voor de component ISC van
+de migratievoorziening.
+Actor
+
+Omschrijving
+
+GBA-V
+
+GBA-V is een centraal systeem binnen het GBA-V stelsel voor de
+verstrekking van GBA gegevens aan afnemers. De gegevens in GBA-V
+zijn een kopie (afslag) van de gegevens (persoonslijsten) in de
+verschillende gemeentelijke GBA systemen (ingezetenen1) en de RNI
+(niet-ingezetenen)
+De actor BRP is het centrale BRP systeem met persoonsgegevens in
+het BRP stelsel. Net als GBA-V omvat de BRP zowel ingezetenen als
+niet-ingezetenen.
+NB: In de context van de Use cases wordt met de term BRP altijd het
+BRP systeem bedoeld. Als het register dan wel het stelsel bedoeld
+wordt, dan zal dit expliciet vermeld worden.
+BZM (Burgerzaken Module) is een module van een
+burgerzakensysteem die de gebruikersinterface en functionaliteit levert
+voor gemeentelijke werkprocessen en/of RNI. Burgerzaken Modules
+maken gebruik van de koppelvlakken van het BRP systeem.
+Kwaliteitsmonitor
+De Gegevensbeheerder ISC bewaakt de voortgang van de
+Interstelselcommunicatieprocessen (Use cases) en grijpt zo nodig in.
+Een afnemer aangesloten op het GBA stelsel. Deze krijgt gegevens
+verstrekt vanuit GBA-V.
+Register Niet Ingezetenen
+Een afnemer aangesloten op het BRP stelsel. Deze krijgt gegevens
+verstrekt vanuit het BRP-systeem.
+De IND (Immigratie- en Naturalisatiedienst )stuurt gegevens omtrent
+verblijfstitels naar gemeenten en RNI. Aanname is dat bij de start van
+de implementatieperiode de IND nog op het GBA stelsel is
+aangesloten.
+Op enig moment zal de IND overschakelen van het GBA stelsel naar
+het BRP stelsel.
+Vanuit de PGK module (LO3) worden vrije berichten gestuurd naar
+gemeenten.
+
+BRP
+
+BZM
+
+BCM
+Beheerder
+LO3 Afnemer
+RNI
+BRP Afnemer
+LO3 IND
+
+BRP IND
+LO3 PGK
+
+1 Met ingezetenen worden ook overleden personen bedoeld die ten tijde van het overlijden als ingezetene waren ingeschreven.
+
+Operatie BRP
+
+Pagina 5 van 16
+
+Definitief | 2.3 | MV Use Case Model | 13-04-2017
+
+3
+
+Use Cases
+
+In dit hoofdstuk worden de use cases opgesomd die deel uitmaken van de ISC component van
+de migratievoorziening.
+De use cases zijn opgedeeld op basis van de needs en features die tijdens de definitiestudie zijn
+onderkend.
+
+3.1
+
+N-MV-1 Het initieel vullen van BRP
+
+UC101 Vul
+persoonsgegev ens
+in BRP initieel
+
+UC102 Vul
+autorisatietabel in
+BRP initieel
+UC103 Vul
+afnemersindicatie in
+BRP initieel
+
+Beheerder
+
+UC104 Vul
+protocollering in
+BRP initieel
+
+Code
+UC101
+
+Use case
+Vul persoonsgegevens
+in BRP initieel
+
+Omschrijving
+Deze UC betreft het initieel vullen van de BRP met
+persoonsgegevens uit GBA-V.
+
+UC102
+
+Vul autorisatietabel in
+BRP initieel
+
+Deze UC betreft het initieel vullen van de BRP
+autorisaties met de gegevens uit GBA-V. Denk hierbij
+aan voorwaardenregels, rubrieken voor de rubriekfilter,
+sleutelrubrieken, etc.
+
+UC103
+
+Vul afnemerindicaties
+in BRP initieel
+
+Deze UC betreft het initieel vullen van de BRP
+afnemerindicaties met de gegevens uit GBA-V.
+
+UC104
+
+Vul protocollering in
+BRP initieel
+
+Deze UC betreft het initieel vullen van de BRP
+protocollering met de gegevens uit GBA-V.
+
+Operatie BRP
+
+Pagina 6 van 16
+
+Definitief | 2.3 | MV Use Case Model | 13-04-2017
+
+3.2
+
+N-MV-2 Het synchroniseren van persoonsgegevens tussen BRP en GBA-V
+
+UC202 Verw erken
+synchronisatiecyclus
+
+«include»
+
+UC220 Bepalen
+v erw erking
+persoonslij st
+
+Gemeente
+
+Code
+UC202
+
+Use case
+Verwerken
+synchronisatie-cyclus
+
+Omschrijving
+Beschrijft op welke wijze de LO3 synchronisatie-cyclus
+door de migratievoorziening verwerkt wordt.
+
+UC220
+
+Bepalen verwerking
+persoonslijst
+
+Beschrijft hoe bepaald wordt op welke wijze een
+aangeboden persoonslijst in de BRP gesynchroniseerd
+dient te worden.
+
+Operatie BRP
+
+Pagina 7 van 16
+
+Definitief | 2.3 | MV Use Case Model | 13-04-2017
+
+3.3
+
+N-MV-3 Het afhandelen van interstelsel bijhoudingen
+
+UC312 Opnemen
+v erblij fstitel v anuit
+BRP stelsel
+BRP IND
+
+UC311 Verw erk
+w ij ziging A-nummer
+in BRP
+
+UC310 Verw erk
+w ij ziging A-nummer
+in LO3
+
+BRP
+
+UC307 Stuur
+toev allige geboorte
+in LO3 GBA door
+
+UC308 Stuur
+toev allige
+gebeurtenis in BRP
+door
+
+UC309 Stuur
+toev allige
+gebeurtenis in LO3
+GBA door
+
+Gemeente
+UC301 Verw erk
+v erv olginschrij v ing
+v an BRP naar LO3
+GBA
+UC303 Verw erk
+v erv olginschrij v ing
+v an BRP naar LO3
+RNI
+
+UC302 Verw erk
+v erv olginschrij v ing
+v an LO3 naar BRP
+ingezetenen
+
+UC305 Stuur
+gew ij sgegev ens
+naar LO3
+UC306 Stuur
+toev allige geboorte
+in BRP door
+
+Code
+UC301
+
+Use case
+Omschrijving
+Verwerk
+Deze UC betreft een vervolginschrijving vanuit BRP naar
+vervolginschrijving van een LO3 gemeente. De betreffende persoon is op dat
+BRP naar LO3 GBA
+moment in de BRP als ingezetene is ingeschreven 2.
+Aanleiding:
+- Een persoon verhuist van een BRP gemeente naar een
+LO3 gemeente.
+
+UC302
+
+Verwerk
+De UC betreft een vervolginschrijving vanuit een LO3
+vervolginschrijving van gemeente of vanuit LO3 RNI naar BRP afdeling
+LO3 naar BRP
+ingezetenen3.
+ingezetenen
+Aanleiding:
+- Een persoon verhuist van een LO3 gemeente naar een
+BRP gemeente, of
+- Een persoon (her)vestigt zich in Nederland in een BRP
+gemeente, terwijl op dat moment de persoonsgegevens
+in LO3 zijn opgenomen.
+
+2
+Een vervolginschrijving voor een BRP niet-ingezetene doet zich pas voor als RNI is overgeschakeld naar BRP. Voor het project
+geldt het uitgangspunt dat de RNI aangesloten is op het LO3-stelsel en dat de omschakeling van RNI naar BRP niet in scope is.
+3 De totstandkoming van inschrijving in de BRP afdeling ingezetenen hangt af van de situatie, namelijk of de persoon op dat moment
+ingeschreven is in LO3 GBA of in LO3 RNI. In geval de persoonsgegevens uit LO3 RNI afkomstig zijn, moet de ambtenaar t.b.v.
+inschrijving in BRP de gegevens opnieuw vaststellen.
+
+Operatie BRP
+
+Pagina 8 van 16
+
+Definitief | 2.3 | MV Use Case Model | 13-04-2017
+
+Code
+UC303
+
+Use case
+Omschrijving
+Verwerk
+Deze UC is in gebruik zolang de RNI aangesloten is op
+vervolginschrijving van het LO3 stelsel.
+BRP naar LO3 RNI
+De UC betreft een vervolginschrijving vanuit BRP naar
+LO3 RNI.
+Aanleiding:
+- Een persoon die in een BRP gemeente is ingeschreven
+emigreert, of
+- Bij een BRP gemeente wordt de bijhouding van een PL
+opgeschort i.v.m. een Ministerieel besluit.
+
+UC305
+
+Stuur verwijsgegevens
+naar LO34
+
+Deze UC wordt geïnitieerd door de ISC
+gegevensbeheerder en dient om een foutsituatie te
+corrigeren door (nogmaals) verwijsgegevens (Iv11bericht) naar de LO3 gemeente of LO3 RNI te sturen.
+Het LO3 beschrijft 4 situaties waarin verwijsgegevens
+alsnog opgenomen zouden kunnen worden:
+- Na een niet goed afgeronde cyclus Vervolginschrijving.
+- Na een niet goed afgeronde cyclus Toevallige geboorte.
+- Na een eerste inschrijving op grond van een aangifte
+van verblijf en adres.
+- Na het afvoeren van een persoonslijst ingeval een
+persoon met meerdere persoonslijsten.
+
+UC306
+
+Stuur toevallige
+geboorte in BRP door
+
+Deze UC betreft de geboorte van een kind in een BRP
+gemeente, terwijl de eerste inschrijving moet
+plaatsvinden in een LO3 gemeente.
+Deze geboorte wordt doorgegeven aan de LO3
+gemeente.
+De UC is niet van toepassing voor RNI.
+
+UC307
+
+Stuur toevallige
+geboorte in LO3 GBA
+door
+
+Deze UC betreft de geboorte van een kind in een LO3
+gemeente, terwijl de eerste inschrijving moet
+plaatsvinden in een BRP gemeente. Deze geboorte moet
+doorgegeven worden aan BRP.
+De UC is niet van toepassing voor RNI.
+
+UC308
+
+Stuur toevallige
+gebeurtenis in BRP
+door
+
+Deze UC betreft een zogeheten toevallige gebeurtenis in
+een BRP gemeente die betrekking heeft op een persoon
+die ingeschreven is in een LO3 gemeente. Deze
+gebeurtenis dient naar de desbetreffende LO3 gemeente
+doorgestuurd te worden.
+De UC is niet van toepassing voor RNI.
+
+UC309
+
+Stuur toevallige
+gebeurtenis in LO3
+GBA door
+
+In een LO3 gemeente wordt een toevallige gebeurtenis
+gemeld die betrekking heeft op een persoon die in een
+BRP gemeente staat ingeschreven. Deze gebeurtenis
+dient naar BRP doorgestuurd te worden, zodat de
+betreffende persoonsgegevens in BRP geactualiseerd
+worden.
+In Logisch Ontwerp GBA [1], onderdeel III.2.17.1
+Inleiding, staat de lijst van binnen de UC te
+onderscheiden rechtsfeiten. Voor de leesbaarheid worden
+deze rechtsfeiten hieronder ook vermeld:
+
+4 Voor de omgekeerde richting is er geen Use case. De BRP kent geen verwijsgegevens en daarom is er geen behoefte aan berichten
+met verwijsgegevens. Het is echter niet uitgesloten dat een LO3 gemeente of LO3 RNI een Iv11-bericht stuurt of juist heeft
+gestuurd naar een gemeente/RNI die op dat moment is overgeschakeld naar BRP. Het Iv11-bericht zal dan worden behandeld als
+'onbekend bericht' en worden beantwoord met een Pf01-bericht.
+
+Operatie BRP
+
+Pagina 9 van 16
+
+Definitief | 2.3 | MV Use Case Model | 13-04-2017
+
+Code
+
+Use case
+
+Omschrijving
+1•C erkenning
+1•E ontkenning vaderschap
+1•H geslachtsnaamwijziging (eventueel t.g.v.
+geslachtsnaamwijziging ouder)
+1•J notariële akte van erkenning
+1•M voornaamswijziging
+1•N vernietiging erkenning
+1•Q adoptie
+1•S transseksualiteit
+1•U verklaring ontkenning vaderschap
+1•V gerechtelijke vaststelling vaderschap
+2•A overlijden
+2•G lijkvinding
+3•A huwelijkssluiting
+3•B echtscheiding
+3•H omzetten geregistreerd partnerschap in huwelijk
+5•A aangaan geregistreerd partnerschap
+5•B beëindiging geregistreerd partnerschap door
+overeenkomst of ontbinding
+5•H omzetten huwelijk in geregistreerd partnerschap
+Als er twee hoofdpersonen zijn (zoals bijvoorbeeld bij
+een huwelijkssluiting), dan wordt deze cyclus voor elk
+van deze hoofdpersonen uitgevoerd.
+De UC is niet van toepassing voor RNI.
+
+UC310
+
+Verwerk wijziging Anummer in LO3
+
+Als in LO3 op een PL het A-nummer wijzigt, dan worden
+alle gemeenten en/of RNI waar de persoon voorheen
+ingeschreven is geweest (en de geboortegemeente,
+indien deze in Nederland ligt en het een geboorte na 110-1994 betreft) geïnformeerd. Deze gemeenten/RNI
+bewaren verwijsgegevens en worden daarom op de
+hoogte gesteld van de A-nummer wijziging via een
+Wa01-bericht.
+Het migratiecomponent ontvangt de Wa01-berichten
+gericht aan BRP gemeenten of de BRP afdeling nietingezetenen. BRP kent geen verwijsgegevens en daarom
+is het niet noodzakelijk om dit bericht door te sturen
+naar BRP. De exacte afhandeling van de berichten wordt
+bij de uitwerking van de UC bepaald.
+
+UC311
+
+Verwerk wijziging Anummer in BRP
+
+Als van een persoon in BRP het A-nummer wordt
+gewijzigd, worden alle LO3 gemeenten en/of LO3 RNI
+met verwijsgegevens hiervan op de hoogte gesteld.
+Uitgangspunt is dat ISC de actualisering in BRP signaleert
+(bijv. via interceptie) en vervolgens de betreffende LO3
+gemeenten/RNI een Wa01-bericht stuurt.
+
+UC312
+
+Opnemen/wijzigen
+Deze UC wordt pas dan gebruikt als de IND - voor het
+verblijfstitel vanuit BRP muteren van verblijfstitels – is aangesloten op het BRP
+stelsel
+stelsel.
+Als de IND een mutatie op een verblijfstitel doorgeeft die
+betrekking heeft op een persoon die is ingeschreven in
+een LO3 gemeente of LO3 RNI, dan stuurt ISC de
+verblijfstitelgegevens door naar de LO3 gemeente of LO3
+RNI in de vorm van een Og11-bericht.
+
+Operatie BRP
+
+Pagina 10 van 16
+
+Definitief | 2.3 | MV Use Case Model | 13-04-2017
+
+3.4
+
+N-MV-4 Het uitwisselen van gegevens over terugmeldingen
+
+UC405 Doorsturen
+TMV bericht
+TMV
+LO3 Afnemer
+
+Code
+UC405
+
+3.5
+
+Use case
+Doorsturen TMV
+bericht
+
+Omschrijving
+Aangezien er geen aparte mailbox is voor TMV-berichten
+moet het systeem een ontvangen TMV-bericht, welke
+ontvangen wordt in de mailbox van GBA-V, doorsturen
+naar de Digimeldingvoorziening van TMV. TMV kan de
+mailbox niet zelf overnemen aangezien daar allerlei
+verschillende soorten berichten op binnenkomen.
+
+N-MV-5 Het vertalen en doorgeven van vrije berichten.
+
+UC502 Stuur v rij
+bericht uit BRP door
+
+BRP partij
+GBA partij
+UC501 Stuur v rij
+bericht uit LO3 door
+
+Code
+UC501
+
+Use case
+Stuur vrij bericht uit
+LO3 door
+
+Omschrijving
+Vanuit een LO3 GBA-gemeente, LO3 afnemer of LO3 RNI
+wordt een vrij bericht gestuurd aan een BRP-gemeente of
+aan een BRP-afnemer.
+Denk hierbij aan het adresseren van BRP afnemers.
+
+UC502
+
+Stuur vrij bericht uit
+BRP door
+
+Vanuit een BRP-gemeente of BRP-afnemer wordt een vrij
+bericht gestuurd aan een GBA-gemeente of aan een
+GBA-afnemer.
+
+Operatie BRP
+
+Pagina 11 van 16
+
+Definitief | 2.3 | MV Use Case Model | 13-04-2017
+
+3.6
+
+N-MV-6 Componenten voor de overgang van een gemeente naar BRP
+
+UC601 Configureer dat een
+gemeente op BRP is
+aangesloten
+Beheerder
+
+Code
+UC601
+
+3.7
+
+Use case
+Configureer dat een
+gemeente op BRP is
+aangesloten
+
+Omschrijving
+Als onderdeel van het aansluiten van een gemeente bij
+het BRP-stelsel, moet dit geconfigureerd worden.
+
+N-MV-7 Componenten voor de overgang van een afnemer naar BRP
+
+UC701 Configureer dat
+een afnemer op BRP is
+aangesloten
+Beheerder
+
+Code
+UC701
+
+Operatie BRP
+
+Use case
+Configureer dat een
+afnemer op BRP is
+aangesloten
+
+Omschrijving
+Als onderdeel van het aansluiten van een afnemer bij het
+BRP-stelsel, moet dit geconfigureerd worden.
+
+Pagina 12 van 16
+
+Definitief | 2.3 | MV Use Case Model | 13-04-2017
+
+3.8
+
+N-MV-9 Componenten binnen GGO
+
+UC905 Controleer
+Baseline 1 op basis
+v an GBA-V
+
+UC902 Voer specifieke
+controles adhoc uit en
+rapporteer in GGO-lab
+
+UC904 Vergelij k LO3
+bron met terugconv ersie
+uit BRP
+
+Beheerder
+
+UC906 Controleer
+Baseline 2 op basis
+v an GBA-V
+BCM
+
+UC903 Conv erteer
+BRP terug naar LO3
+
+UC907 Controleer
+Baseline 2 op basis
+v an BRP
+
+UC908 Raadpleeg
+uitkomsten Baseline
+controles
+(kw aliteitsmonitor)
+UC910 Raadpleeg
+LO3 PL
+
+Gemeente
+
+UC911 Raadpleeg BRP
+PL (geconv erteerd
+v anuit LO3)
+
+«extend»
+UC909 Raadpleeg
+gegev ens in GGOlab
+
+«extend»
+
+«extend»
+«extend»
+
+UC914 Raadpleeg v erschil
+tussen bron LO3 PL en v anuit
+BRP teruggeconv erteerde LO3
+PL
+
+Code
+UC902
+
+UC903
+
+Use case
+Voer specifieke
+controles adhoc uit en
+rapporteer in GGO-lab
+Converteer BRP terug
+naar LO3
+
+UC912 Raadpleeg
+(conv ersie)signaleringen
+
+«extend»
+
+UC913 Raadpleeg
+teruggeconv erteerde
+LO3 PL
+
+Omschrijving
+
+Als controlemiddel op de initiële vulling (UC101) worden
+alle Persoonslijst ook weer terug geconverteerd naar het
+LO3 formaat
+
+UC904
+
+Vergelijk LO3 bron met De LO3 PL-en die als bron dienen voor UC101 worden
+terugconversie uit BRP vergeleken met de LO3 PL-en die het resultaat zijn van
+UC903.
+
+UC905
+
+Controleer Baseline 1
+op basis van GBA-V
+
+UC906
+
+Controleer Baseline 2
+op basis van GBA-V
+
+Operatie BRP
+
+Alle PL-en die in GBA-V staan gecontroleerd tegen de
+controles uit Baseline 1. Per PL wordt aangegeven aan
+welke controles niet voldaan wordt en welke specifieke
+voorkomens dat betreft
+Alle PL-en die in GBA-V staan gecontroleerd tegen de
+controles uit Baseline 2. Per PL wordt aangegeven aan
+welke controles niet voldaan wordt en welke specifieke
+
+Pagina 13 van 16
+
+Definitief | 2.3 | MV Use Case Model | 13-04-2017
+
+Code
+
+Use case
+
+Omschrijving
+voorkomens dat betreft.
+
+UC907
+
+Controleer Baseline 2
+op basis van BRP
+
+Alle PL-en die in BRP staan gecontroleerd tegen de
+controles uit Baseline 2. Per PL wordt aangegeven aan
+welke controles niet voldaan wordt en welke specifieke
+voorkomens dat betreft.
+
+UC908
+
+Raadpleeg uitkomsten
+Baseline controles
+(kwaliteitsmonitor)
+
+Alle controles uit de baseline waaraan persoonslijst niet
+voldeden kunnen raadpleegt worden. Hierbij is tevens
+inzichtelijk welke gegevens niet voldeden en welke
+controle dat betrof.
+
+UC909
+
+Raadpleeg gegevens in De gebruikers kan gegevens inzien met betrekking tot de
+GGO-lab
+conversie naar BRP en weer terug naar LO3.
+
+UC910
+
+Raadpleeg LO3 PL
+
+Alle gegevens, zowel de algemene als administratieve
+gegevens, van een specifieke PL in LO3 formaat wordt
+getoond aan de gebruiker.
+
+UC911
+
+Raadpleeg BRP PL
+(geconverteerd vanuit
+LO3)
+
+Alle gegevens, zowel de algemene als administratieve
+gegevens, van een specifieke PL in BRP formaat wordt
+getoond aan de gebruiker.
+
+UC912
+
+Raadpleeg
+Alle signaleringen die tijdens de conversie van een PL
+(conversie)signaleringe zijn gedaan, kunnen geraadpleegd worden. Deze
+n
+signaleringen betreffen bijzondere situaties die zich
+tijdens de conversie voorgedaan hebben, die kunnen
+leiden tot informatieverlies dan wel waar de
+conversiesoftware een aanname heeft gedaan met
+betekenis van gegevens.
+
+UC913
+
+Raadpleeg terug
+geconverteerd LO3 PL
+
+Alle gegevens, zowel de algemene als administratieve
+gegevens, van een specifieke PL in LO3 formaat, die het
+resultaat is van conversie naar BRP en vervolgens
+conversie terug naar LO3, wordt getoond aan de
+gebruiker.
+
+UC914
+
+Raadpleeg verschil
+tussen bron LO3 PL en
+vanuit BRP terug
+geconverteerde LO3 PL
+
+Voor de gebruiker wordt inzichtelijk gemaakt of er na
+conversie naar de BRP en weer terug op een specifieke
+PL verschillen zijn tussen de bron PL en resultaat PL. Als
+er verschillen zijn wordt in detail getoond wat de
+verschillen zijn.
+
+Operatie BRP
+
+Pagina 14 van 16
+
+Definitief | 2.3 | MV Use Case Model | 13-04-2017
+
+3.9
+
+N-MV-10 Afhandelen berichten LO3 partijen
+
+UC1006 Ondersteunen
+alternatief medium bij
+v erstrekking berichten
+
+UC1005 Ondersteunen
+selecties BRP > LO3
+GBA
+
+UC1001 Verw erken
+spontane
+gegev ensv erstrekkingcyclus
+
+LO3 Afnemer
+
+BRP
+
+UC1003 Verw erken handmatig
+plaatsen en v erw ij deren
+afnemersindicatie
+
+UC1004 Ondersteunen adres- en
+persoonsv raag berichten LO3
+GBA -> BRP en BRP -> LO3
+
+Code
+UC1001
+
+UC1003
+
+UC1004
+
+UC1005
+
+UC1006
+
+Operatie BRP
+
+Use case
+MV UC1001
+Verwerken spontane
+gegevensverstrekking
+-cyclus
+MV UC1003
+Verwerken
+handmatig plaatsen
+en verwijderen
+afnemersindicatie
+Ondersteunen adresen persoonsvraag
+berichten LO3 GBA > BRP en BRP -> LO3
+
+Omschrijving
+De LO3-gemeente of afnemer kan van de BRP LO3spontane- en vulberichten ontvangen.
+
+Ondersteunen
+selecties BRP -> LO3
+GBA
+Ondersteunen
+alternatief medium
+bij verstrekking
+berichten.
+
+LO3-gemeente of afnemer kan specifieke
+selectieberichten ontvangen van de BRP.
+
+De LO3-gemeente of afnemer kan bij de BRP een
+afnemerindicatie plaatsen of verwijderen doormiddel van
+LO3 berichten.
+
+LO3-gemeente of afnemer kan adres- en persoonsvragen
+stellen aan de BRP- via LO3-berichten. De BRP antwoordt
+de gebruiker met LO3-berichten.
+Verder moeten de adres- en persoonsvragen die via de
+LO3 Ad Hoc webservice gedaan werden nog steeds
+mogelijk zijn, maar dan wordt de vraag afgehandeld door
+de BRP.
+
+Deze UC geeft de mogelijkheid om de door de LO3gemeente of afnemer gevraagde berichten via het
+alternatief medium te ontvangen.
+
+Pagina 15 van 16
+
+Definitief | 2.3 | MV Use Case Model | 13-04-2017
+
+4
+
+Opmerkingen
+• Sommige namen van use cases zijn onduidelijk. Deze worden aangepast als ze onderhanden
+zijn.
+• Sommige namen van actoren zijn onduidelijk. Deze worden aangepast als ze onderhanden
+zijn.
+• UC105 ontbreekt in het use case model.
+
+Operatie BRP
+
+Pagina 16 van 16
+
+

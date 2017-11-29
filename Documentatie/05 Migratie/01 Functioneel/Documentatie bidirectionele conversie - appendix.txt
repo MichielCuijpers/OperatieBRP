@@ -1,0 +1,2123 @@
+Documentatie bidirectionele conversie Appendix
+
+Versie 1.6
+
+Datum
+Status
+
+12-04-2017
+Definitief
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+Inhoud
+
+1
+
+INLEIDING ...................................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+DOEL ............................................................................................................................................... 3
+REFERENTIES.................................................................................................................................. 3
+DOCUMENTVERSIES ....................................................................................................................... 3
+
+LOGGING .......................................................................................................................................... 5
+2.1 STRUCTUUR LOGREGEL .................................................................................................................. 5
+2.2 BIJZONDERE SITUATIES BIJ CONVERSIE VAN LO3 NAAR BRP .................................................. 6
+2.3 BIJZONDERE SITUATIES BIJ CONVERSIE VAN BRP NAAR LO3 ................................................ 13
+2.4 TRACEERBAARHEID VAN CONVERSIE .......................................................................................... 18
+2.4.1 LO3 naar BRP .................................................................................................................... 18
+2.4.2 BRP naar LO3 .................................................................................................................... 19
+2.5 VOORBEELD: LOGGING BIJ CONTROLEREN VAN PRECONDITIES EN CONVERSIE ..................... 20
+2.5.1 Stap 1: controleren van de precondities ................................................................ 20
+2.5.2 Stap 2: conversie van LO3 naar BRP ...................................................................... 21
+
+Operatie BRP
+
+Pagina 2 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+1
+
+Inleiding
+
+1.1
+
+Doel
+Dit document vormt een aanvulling het document Documentatie bidirectionele conversie [BICONV]. In dit document worden onderwerpen behandeld die gerelateerd zijn aan de
+conversieregels. Omdat het echter niet de conversieregels zelf betreffen, zijn deze
+onderwerpen bewust niet in het eerder genoemde document opgenomen, maar in deze
+appendix.
+
+1.2
+
+Referenties
+#
+[HUP]
+[BICONV]
+
+1.3
+
+Document
+Handleiding uitvoeringsprocedures
+Documentatie bidirectionele
+conversie
+
+Versie
+2.5
+-
+
+Datum
+15-11-2016
+-
+
+Documentversies
+Versie
+0.1
+0.2
+
+Datum
+03-10-2012
+19-03-2013
+
+0.3
+
+30-08-2013
+
+0.4
+
+01-11-2013
+
+0.5
+
+2-5-2014
+
+0.6
+
+17-09-2014
+
+0.7
+
+01-10-2014
+
+1.0
+1.1
+1.2
+
+30-07-2015
+21-08-2015
+30-09-2015
+
+1.3
+1.4
+1.5
+
+26-01-2016
+22-12-2016
+29-03-2017
+
+1.6
+
+12-04-2017
+
+Operatie BRP
+
+Wijziging
+Creatie
+Traceerbaarheid van conversie, structuur
+van logregel uitgewerkt
+Review commentaar nav QA-review
+verwerkt
+Bijzonder situatie BIJZ_CONV_LB024
+toegevoegd
+Bijzonder situatie BIJZ_CONV_LB018, 019
+en 020 verwijderd
+Bijzonder situatie BIJZ_CONV_LB027 t/m
+036 toegevoegd
+Bijzonder situatie BIJZ_CONV_LB037 en
+038 toegevoegd
+Bijzonder situatie BIJZ_CONV_LB028
+aangepast
+Document definitief gemaakt voor release
+2.2
+Wijzigingsverzoek 201410
+Bijzonder situatie BIJZ_CONV_LB040
+toegevoegd
+Wijzigingsverzoek 201415
+Bijzonder situatie BIJZ_CONV_LB038
+verwijderd
+Par 1.4 Referenties bijgewerkt
+Referenties bijgewerkt agv LO 3.9
+INTEST-41: omschrijving van
+BIJZ_CONV_LB016 aangepast
+Referenties bijgewerkt
+BIJZ_CONV_LB041 toegevoegd
+tekstuele aanpassingen
+Referenties bijgewerkt
+BIJZ_CONV_LB042 toegevoegd
+BIJZ_CONV_LB029 verwijderd
+Verwerken reviewcommentaar
+documentatierichtlijnen
+
+Auteur
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+
+Operatie BRP
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+Operatie BRP
+
+Pagina 4 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+2
+
+Logging
+Bij het uitvoeren van de conversie wordt er door middel van logging vastgelegd hoe de
+conversie heeft plaatsgevonden (traceerbaarheid) en welke uitzonderlijke situaties zich
+hebben voorgedaan. In Documentatie bidirectionele conversie [BI-CONV] staan bijvoorbeeld
+de precondities beschreven die randvoorwaardelijk zijn om de conversie te kunnen uitvoeren.
+Overtredingen op deze precondities dienen gelogd te worden. In dit hoofdstuk staan nog twee
+andere vormen van logging beschreven. Daarnaast wordt in de eerste paragraaf beschreven
+welke structuur voor de logging gehanteerd wordt.
+
+2.1
+
+Structuur logregel
+Een logregel bevat de volgende attributen:
+•
+Procestype (verplicht)
+De use case waarbinnen deze logging plaatsvindt. Dit wordt gedaan door middel van
+de use case codering zoals gehanteerd in het use case model. Bijvoorbeeld UC101 in
+geval van de initiële vulling
+•
+Procesinstantie (optioneel)
+Specifieke instantie van het proces waarbinnen deze logging plaatsvindt. Dit kan
+bijvoorbeeld een identificatie zijn die door JBoss toegekend is.
+•
+Bericht id (verplicht)
+unieke identificatie van het bericht waaruit de bron PL gehaald is
+•
+LO3 Categorie (optioneel)
+Het categorienummer. Hierbij wordt geen onderscheid gemaakt in het feit of het een
+actueel of historisch voorkomen is (categorie 01 vs 51). De notatiewijze die gebruikt
+wordt is de combinatie van het nummer van actueel en historisch categorienummer.
+Bijvoorbeeld: 01/51.
+•
+LO3 Stapel (optioneel)
+Het nummer van de stapel.
+•
+LO3 Voorkomen (optioneel)
+Het nummer van het voorkomen binnen de stapel.
+•
+BRP Actie
+Het ID van de actie waar de logregel betrekking op heeft.
+•
+BRP Gegevensgroep (optioneel)
+De groep binnen een BRP objecttype waar de logregel betrekking op heeft.
+•
+BRP Rij (optioneel)
+In principe bevat dit attribuut het ID van BRP rij op C/D-laag waar de logregel
+betrekking op heeft. Als het een gegeven betreft waarvan er geen historie vastgelegd
+wordt, dan is er geen C/D-laag. In dat geval betreft dit het ID van de rij op de A-laag.
+•
+Severity (verplicht)
+De ernst van de situatie
+Mogelijke waarden: Info, Warning, Error.
+•
+Type (verplicht)
+Mogelijke waarden: Preconditie, Bijzondere situatie, Tracing.
+Met Bijzondere situatie wordt aangegeven dat bij de conversie brongegevens zijn
+aangetroffen die uitzonderlijk zijn. In veel gevallen zal dit tijdens conversie leiden tot
+informatieverlies.
+•
+fout/situatie code (verplicht)
+Code die aangeeft welke specifieke situatie zich heeft voorgedaan
+•
+fout/situatie omschrijving (optioneel)
+Omschrijving van de specifieke situatie zich heeft voorgedaan
+
+Operatie BRP
+
+Pagina 5 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+2.2
+
+Bijzondere situaties bij conversie van LO3 naar BRP
+De volgende bijzondere situaties dienen gelogd te worden bij de iedere conversie van LO3
+naar BRP die plaatsvindt. Dit gebeurt dus zowel bij de initiële vulling, de synchronisatie, als
+bij andere (interstelselcommunicatie) use cases. Het betreft opmerkelijke situaties in de
+brongegevens, die mogelijk kunnen leiden tot informatieverlies bij de conversie.
+De bijzondere situaties gelden zowel voor actuele, historische als onjuiste voorkomens. Deze
+bijzondere situaties worden gelogd, waarbij altijd vermeld wordt op welk bericht en welke
+categorie, stapel en rij deze betrekking hadden. Daarnaast wordt vastgelegd welke specifieke
+situatie het betreft. In deze situaties worden onderstaande attributen als volgt gevuld:
+•
+Severity: Info
+•
+Type: Bijzondere situatie
+Hieronder volgt een opsomming van alle situaties die gelogd dienen te worden.
+Er is een geboorte geregistreerd in een onbekend land of een internationaal gebied.
+Het element 03.30 Geboorteland persoon uit categorie 01/51
+Situatie
+Persoon is gevuld met:
+
+•
+
+‘0000’ (standaardwaarde)
+
+•
+‘9999’ (internationaal gebied)
+Dit betreft DEF003 uit Documentatie bidirectionele conversie [BICONV], specifiek voor de gebeurtenisplaats van de geboorte.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB001
+Zie titel
+
+Er is een overlijden geregistreerd in een onbekend land of een internationaal gebied.
+Het element 08.30 Land overlijden uit categorie 06/56 Overlijden is
+Situatie
+gevuld met:
+
+•
+
+‘0000’ (standaardwaarde)
+‘9999’ (internationaal gebied)
+
+•
+Dit betreft DEF003 uit Documentatie bidirectionele conversie [BICONV], specifiek voor de gebeurtenisplaats van het overlijden.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB002
+Zie titel
+
+Er is een huwelijk gesloten/geregistreerd partnerschap aangegaan in een onbekend land of
+een internationaal gebied.
+Het element 06.30 Land huwelijkssluiting/aangaan
+Situatie
+geregistreerd partnerschap uit categorie 05/55
+Huwelijk/geregistreerd partnerschap is gevuld met:
+
+•
+
+‘0000’ (standaardwaarde)
+
+•
+‘9999’ (internationaal gebied)
+Dit betreft DEF003 uit Documentatie bidirectionele conversie [BICONV], specifiek voor de gebeurtenisplaats van de huwelijkssluiting.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB003
+Zie titel
+
+Er is een huwelijk/geregistreerd partnerschap ontbonden in een onbekend land of een
+internationaal gebied.
+
+Operatie BRP
+
+Pagina 6 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+Situatie
+
+Het element 07.30 Land ontbinding huwelijk/geregistreerd
+partnerschap uit categorie 05/55 Huwelijk/geregistreerd
+partnerschap is gevuld met:
+
+•
+
+‘0000’ (standaardwaarde)
+
+•
+‘9999’ (internationaal gebied)
+Dit betreft DEF003 uit Documentatie bidirectionele conversie [BICONV], specifiek voor de gebeurtenisplaats van de ontbinding van het
+huwelijk.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB004
+Zie titel
+
+Het A-nummer is gewijzigd omdat er verschillende personen waren met hetzelfde A-nummer
+(zie [HUP], par 7.8):
+Element 20.10 Vorige A-nummer uit categorie 01/51 Persoon is
+Situatie
+gevuld en deze wijkt af van element 01.10 A-nummer in hetzelfde
+categorie voorkomen.
+Logging
+fout/situatie code BIJZ_CONV_LB005
+fout/situatie
+Zie titel
+omschrijving
+Er is sprake van een dubbele inschrijving, waarbij één persoon met verschillende PL'en is
+ingeschreven met hetzelfde A-nummer (zie Handleiding uitvoeringsprocedures [HUP],
+paragraaf 7.9). Het betreft hier de overblijvende PL.
+Het element 20.10 Vorige A-nummer uit categorie 01/51 Persoon is
+Situatie
+gevuld en deze komt overeen met element 01.10 A-nummer in
+dezelfde categorie voorkomen.
+Logging
+fout/situatie code BIJZ_CONV_LB006
+fout/situatie
+Zie titel
+omschrijving
+Er is sprake van een dubbele inschrijving, waarbij één persoon met verschillende PL'en is
+ingeschreven met hetzelfde A-nummer (zie Handleiding uitvoeringsprocedures [HUP], par
+7.9). Het betreft hier de overbodige/vervallen PL.
+Het element 20.20 Volgend A-nummer uit categorie 01/51 Persoon
+Situatie
+is gevuld en deze komt overeen met element 01.10 A-nummer in
+dezelfde categorie voorkomen.
+Logging
+fout/situatie code BIJZ_CONV_LB007
+fout/situatie
+Zie titel
+omschrijving
+Er is sprake van een dubbele inschrijving, waarbij één persoon met verschillende PL'en is
+ingeschreven met verschillende A-nummers (zie Handleiding uitvoeringsprocedures [HUP],
+par 7.10). Het betreft hier de overbodige/vervallen PL.
+Het element 20.20 Volgend A-nummer uit categorie 01/51 Persoon
+Situatie
+is gevuld en deze wijkt af van element 01.10 A-nummer in dezelfde
+categorie voorkomen.
+Logging
+fout/situatie code BIJZ_CONV_LB008
+fout/situatie
+Zie titel
+omschrijving
+
+Operatie BRP
+
+Pagina 7 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+Er is sprake van een gedeeltelijke verstrekkingsbeperking.
+Element 70.10 Indicatie geheim uit categorie 07 Inschrijving is
+Situatie
+gevuld met waarde 1 - 6.
+Dit betreft DEF037 uit Documentatie bidirectionele conversie [BICONV]
+Logging
+fout/situatie code BIJZ_CONV_LB009
+fout/situatie
+Zie titel
+omschrijving
+De persoonslijst is opgeschort met reden Fout.
+Element 67.20 Omschrijving reden opschorting bijhouding uit
+Situatie
+categorie 07 Inschrijving is gevuld met waarde ‘F’.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB011
+Zie titel
+
+De persoon is geprivilegieerd.
+Het element 82.30 Beschrijving document uit de categorie 04/54
+Situatie
+Nationaliteit begint met de tekst ‘PROBAS’1.
+Dit betreft DEF038 uit Documentatie bidirectionele conversie [BICONV], met dat verschil dat hier ook historische voorkomens
+beoordeeld worden.
+Logging
+fout/situatie code BIJZ_CONV_LB012
+fout/situatie
+Zie titel
+omschrijving
+Er is sprake van een onbekende ouder.
+In categorie 02/52 Ouder1 of 03/53 Ouder2 zijn, naast de gegevens
+Situatie
+uit de groepen 81 t/m 862, uitsluitend de elementen 02.40
+geslachtsnaam en 62.10 Datum ingang familierechtelijke
+betrekking opgenomen. Element 02.40 Geslachtsnaam Ouder heeft
+als waarde ‘.’.
+Logging
+fout/situatie code BIJZ_CONV_LB013
+fout/situatie
+Zie titel
+omschrijving
+Er is sprake van juridisch gezien geen ouder.
+In categorie 02/52 Ouder1 of 03/53 Ouder2 zijn uitsluitend gegevens
+Situatie
+uit de groepen 81 t/m 863 opgenomen.
+Logging
+fout/situatie code BIJZ_CONV_LB014
+fout/situatie
+Zie titel
+omschrijving
+In één Huwelijk/geregistreerd partnerschap stapel zijn gegevens geregistreerd over zowel
+een huwelijk als een geregistreerd partnerschap.
+
+Het vergelijken van deze tekst vindt niet case sensitive plaats, wat inhoud dat er geen onderscheid wordt gemaakt in het
+gebruik van hoofdletters en kleine letters.
+2
+Niet al deze groepen hoeven opgenomen te zijn.
+3
+Niet al deze groepen hoeven opgenomen te zijn.
+1
+
+Operatie BRP
+
+Pagina 8 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+Situatie
+
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+In één stapel van categorie 05/55 Huwelijk/geregistreerd
+partnerschap komt in element 15.10 Soort verbintenis zowel de
+waarde ‘P’ als ‘H’ voor over de verschillende voorkomens. Met andere
+woorden: in de BRP worden er aan de hand één Huwelijk/geregistreerd
+partnerschap stapel meerdere Relaties aangemaakt
+BIJZ_CONV_LB015
+Zie titel
+
+In Ouder1 dan wel Ouder2 zijn meerdere personen opgenomen.
+Situatie
+In de BRP worden er aan de hand van één ouder-categorie meerdere
+Personen door middel van een ouder-Betrokkenheid gekoppeld.
+Logging
+fout/situatie code BIJZ_CONV_LB016
+fout/situatie
+Zie titel
+omschrijving
+De geldigheid van het Ouderlijk gezag loopt nog door terwijl de geldigheid van desbetreffende
+persoon al beëindigd is.
+In categorie 11/61 Gezagsverhouding is het element 32.10
+Situatie
+Indicatie gezag minderjarige opgenomen (deze wordt bij precies
+één ouder-betrokkenheid opgenomen). De actuele geldigheidsperiode
+van gezag minderjarige, loopt langer door dan de actuele
+geldigheidsperiode van ouder-betrokkenheid.
+Met actuele geldigheidperiode wordt de materiële geldigheid bedoeld
+op basis van uitsluitend niet-onjuiste voorkomens (LO3) dan wel niet
+vervallen rijen (BRP)
+Logging
+fout/situatie code BIJZ_CONV_LB017
+fout/situatie
+Zie titel
+omschrijving
+Zwakke adoptie
+Situatie
+
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+Het element 82.30 Beschrijving document uit de categorie 02/52
+Ouder1 of 03/53 Ouder2 begint met de tekst ‘akte (zwak) Haags
+adoptieverdrag’ of ‘akte (zwak) Wet conflictenrecht adoptie’4
+BIJZ_CONV_LB021
+Zie titel
+
+Gegevens zijn strijdig met de openbare orde
+Het element 84.10 Indicatie onjuist is gevuld met de waarde ‘S’.
+Situatie
+Dit kan iedere categorie betreffen waarin element 84.10 Indicatie
+onjuist kan voorkomen.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB022
+Zie titel
+
+Actuele categorie op LO3 PL is na conversie niet meer actueel in BRP
+
+4
+
+Het vergelijken van deze teksten vindt niet case sensitive plaats, wat inhoud dat er geen onderscheid wordt gemaakt in het
+gebruik van hoofdletters en kleine letters.
+
+Operatie BRP
+
+Pagina 9 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+Situatie
+
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+In LO3 is het voorkomen met categorienummer onder de vijftig
+actueel (NB: categorienummers boven de vijftig zijn historische
+voorkomens).
+
+BIJZ_CONV_LB023
+Zie titel
+
+Er is een juiste historische categorie die een recentere ingangsdatum geldigheid heeft dan de
+actuele categorie
+Situatie
+Er is een historisch niet-onjuist voorkomen in een stapel die een
+recentere 85.10 ingangsdatum geldigheid heeft dan het actuele
+voorkomen.
+NB: Voor een (gedeeltelijk) onbekende datum in het actuele
+voorkomen wordt gekeken of deze theoretisch gelijk of recentere kan
+zijn dan de historische niet-onjuiste voorkomens5. Als dat het geval is,
+is er geen sprake van deze bijzondere situatie.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB024
+Zie titel
+
+Er is een overlijden geregistreerd waarbij 85.10 Ingangsdatum geldigheid niet gelijk is aan
+08.10 Datum overlijden
+In categorie 06/56 Overlijden is het element 08.10 Datum
+Situatie
+overlijden opgenomen, en deze komt niet overeen met element
+85.10 Ingangsdatum geldigheid.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB025
+Zie titel
+
+Er is een signalering verstrekking Nederlands reisdocument geregistreerd waarbij 85.10
+Ingangsdatum geldigheid niet gelijk is aan 86.10 Datum van opneming
+In categorie 12 Reisdocument is het element 36.10 Signalering
+Situatie
+met betrekking tot verstrekken Nederlands reisdocument
+opgenomen, en de elementen 85.10 Ingangsdatum geldigheid en
+86.10 Datum van opneming komen niet met elkaar overeen.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB026
+Zie titel
+
+Een voorkomen uit LO3 heeft niet geleid tot gegevens in de BRP.
+Situatie
+Zie titel
+Logging
+fout/situatie code BIJZ_CONV_LB027
+fout/situatie
+Bij conversie naar BRP is dit LO3-voorkomen genegeerd.
+omschrijving
+
+5
+
+Als het actuele voorkomen een ingangsdatum geldigheid heeft van 00001950, en een historisch voorkomen heeft een geldigheid
+van 12121950 dan kan de datum van het actuele voorkomen gelijk of recenter zijn.
+Als het actuele voorkomen een ingangsdatum geldigheid heeft van 00001949, en een historisch voorkomen heeft een geldigheid
+van 12121950 dan kan de datum van het actuele voorkomen NIET gelijk of recenter zijn.
+
+Operatie BRP
+
+Pagina 10 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+NB: In de algoritmes voor de historieconversie worden voorkomens soms genegeerd. Dit
+omdat er meerdere elkaar opvolgende voorkomens zijn die geen gegevens bevatten voor de
+desbetreffende BRP-groep, bijvoorbeeld stap 5c van CHP001-LB23. Als het voorkomen voor
+geen enkele groep gebruikt wordt (dus bij alle mogelijke groepen genegeerd wordt), dan is
+deze bijzondere situatie van toepassing.
+Er is een Adres buitenland geregistreerd waarbij 85.10 Ingangsdatum geldigheid niet gelijk is
+aan de meest recente datum van 13.20 Datum aanvang adres buitenland en 09.20 Datum
+inschrijving in de gemeente in hetzelfde voorkomen
+In categorie 08/58 Verblijfplaats is het element 13.20 Datum
+Situatie
+aanvang adres buitenland opgenomen, en element 85.10
+Ingangsdatum geldigheid komt niet overeen met de meest recente
+datum van de volgende twee elementen in hetzelfde voorkomen:
+•
+13.20 Datum aanvang adres buitenland
+•
+09.20 Datum inschrijving in de gemeente.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB028
+Zie titel
+
+Er is een verificatie uitgevoerd zonder dat de RNI-deelnemer geregistreerd is.
+In categorie 07 Inschrijving is Groep 71 Verificatie
+Situatie
+opgenomen, maar element 88.10 RNI-deelnemer ontbreekt.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB030
+Zie titel
+
+Er is in categorie 07 een RNI-deelnemer geregistreerd zonder dat er een verificatie is
+uitgevoerd.
+In categorie 07 Inschrijving is element 88.10 RNI-deelnemer
+Situatie
+opgenomen, maar groep 71 Verificatie ontbreekt.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB031
+Zie titel
+
+Er is in categorie 07 een verdrag geregistreerd.
+In categorie 07 Inschrijving is element 88.20 Omschrijving
+Situatie
+verdrag opgenomen.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB032
+Zie titel
+
+Bij een buitenlands adres is uitsluitend Regel 1 adres buitenland opgenomen.
+In categorie 08/58 Verblijfplaats is 13.30 Regel 1 adres
+Situatie
+buitenland opgenomen en zijn 13.40 Regel 2 adres buitenland en
+13.50 Regel 3 adres buitenland niet opgenomen.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB033
+Zie titel
+
+In categorie 07 is een blokkering opgenomen.
+
+Operatie BRP
+
+Pagina 11 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+Situatie
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+In categorie 07 Inschrijving is 66.20 Datum ingang blokkering
+PL opgenomen.
+BIJZ_CONV_LB034
+Zie titel
+
+In categorie 01/51 is een ongeldige combinatie van adellijke titel/predicaat en
+geslachtsaanduiding opgenomen.
+In categorie 01/51 Persoon is 02.20 adellijke titel/predikaat
+Situatie
+opgenomen. Deze hoort echter niet bij het geregistreerde geslacht
+(04.10 geslachtsaanduiding). Dit kan vastgesteld worden op basis van
+de conversietabel adellijke titel/predikaat (zie Documentatie
+bidirectionele conversie [BI_CONV], bijlage 2) waarin de combinatie
+van adellijke titel/predicaat en geslacht is vastgelegd.
+Logging
+fout/situatie code BIJZ_CONV_LB035
+fout/situatie
+Zie titel
+omschrijving
+In categorie 08/58 is Woonplaatsnaam gevuld met standaardwaarde en is minstens een van
+de volgende elementen niet opgenomen: Naam openbare ruimte, Identificatiecode
+verblijfplaats of Identificatiecode nummeraanduiding.
+In categorie 08/58 Verblijfplaats is 11.70 Woonplaatsnaam
+Situatie
+gevuld met ‘.’ (standaardwaarde). Daarnaast is minstens 1 van de
+volgende elementen niet opgenomen: 11.15 Naam openbare ruimte,
+11.80 Identificatiecode verblijfplaats of 11.90
+Identificatiecode nummeraanduiding.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB036
+Zie titel
+
+In categorie 08/58 is Woonplaatsnaam niet opgenomen, maar alle volgende elementen zijn
+wel opgenomen: Naam openbare ruimte, Identificatiecode verblijfplaats en Identificatiecode
+nummeraanduiding.
+In categorie 08/58 Verblijfplaats is 11.70 Woonplaatsnaam niet
+Situatie
+opgenomen. Daarnaast zijn alle volgende elementen wel opgenomen:
+11.15 Naam openbare ruimte, 11.80 Identificatiecode
+verblijfplaats en 11.90 Identificatiecode nummeraanduiding.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB037
+Zie titel
+
+Een onderzoek dat in GBA is opgenomen, heeft niet geleid tot plaatsen van gegevens in
+onderzoek in de BRP.
+Situatie
+In een categorie is groep 83 Procedure opgenomen. Dit heeft niet
+geleid tot het aanmaken van een Onderzoek in de BRP. Dit geldt niet
+voor voorkomens die uitsluitend in de IST-tabel vastgelegd worden.
+NB: deze situatie treedt bijvoorbeeld op als een specifieke groep in de
+GBA in onderzoek staat, die niet opgenomen is. In dat geval kan er
+ook geen onderzoek aangemaakt worden in de BRP omdat er geen
+gegevens (die ontbreken immers)aan gekoppeld kunnen worden.
+
+Operatie BRP
+
+Pagina 12 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB039
+Zie titel
+
+In categorie 01/51 is Aanduiding naamgebruik niet opgenomen.
+In categorie 01/51 is 61.10 Aanduiding naamgebruik niet
+Situatie
+opgenomen
+Logging
+fout/situatie code BIJZ_CONV_LB040
+fout/situatie
+Zie titel
+omschrijving
+In een stapel van categorie 05 komen één of meer omzettingen voor, waarbij in een
+oorspronkelijke relatie een niet-onjuist voorkomen is opgenomen die ontbindingsgegevens
+bevat.
+Een stapel van categorie 05 is vanwege omzettingen gesplitst in
+Situatie
+meerdere substapels (zie Documentatie bidirectionele conversie [BICONV], paragraaf 8.1.3.1 Huwelijk / geregistreerd partnerschap).
+Hierbij komt in één of meerdere substapels, zijnde niet de recente, een
+niet-onjuist voorkomen voor, waarin groep 07 Ontbinding
+huwelijk/geregistreerd partnerschap is opgenomen.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_LB041
+Zie titel
+
+Het Ouderlijk gezag start op een datum waarop geen familierechtelijke betrekking met een
+ouder bestaat.
+In een niet-onjuiste categorie 11/61 Gezagsverhouding is het
+Situatie
+element 32.10 Indicatie gezag minderjarige opgenomen. De
+geldigheidsperiode van gezag minderjarige start op een datum die niet
+binnen de geldigheidsperiode van een ouder-betrokkenheid valt.
+Logging
+fout/situatie code BIJZ_CONV_LB042
+fout/situatie
+Zie titel
+omschrijving
+
+2.3
+
+Bijzondere situaties bij conversie van BRP naar LO3
+De volgende bijzondere situaties dienen gelogd te worden bij de iedere conversie van BRP
+naar LO3 die plaatsvindt. Dit gebeurt dus zowel bij de synchronisatie als bij andere
+(interstelselcommunicatie) use cases.
+De bijzondere situaties gelden zowel voor actuele, historische als onjuiste voorkomens. Deze
+bijzondere situaties worden gelogd, waarbij altijd vermeld wordt op welk bericht en welke
+categorie, stapel en rij dit betrekking had. Daarnaast wordt vastgelegd welke specifieke
+situatie het betreft. In alle gevallen geldt dat de severity gevuld wordt met Warning.
+
+Er is een geboorte geregistreerd waarbij buitenlandse regio opgenomen is
+Het element Buitenlandse regio geboorte in Objecttype Persoon is
+Situatie
+ingevuld.
+Logging
+fout/situatie code BIJZ_CONV_BL001
+
+Operatie BRP
+
+Pagina 13 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+fout/situatie
+omschrijving
+
+Zie titel
+
+Bij conversie is de LO3 geboorteplaats (03.20 Plaats) afgekapt
+Situatie
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+Bij het uitvoeren van conversieregel CGR03-BL02 is de tekst die in
+03.20 Plaats geplaatst moet worden afgekapt.
+BIJZ_CONV_BL002
+Zie titel
+
+Er is een overlijden geregistreerd waarbij buitenlandse regio opgenomen is
+Het element Buitenlandse regio overlijden in Objecttype Persoon is
+Situatie
+ingevuld.
+Logging
+fout/situatie code BIJZ_CONV_BL003
+fout/situatie
+Zie titel
+omschrijving
+Bij conversie is de LO3 overlijdensplaats (08.20 Plaats) afgekapt
+Situatie
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+Bij het uitvoeren van conversieregel CGR08-BL02 is de tekst die in
+08.20 Plaats geplaatst moet worden afgekapt.
+BIJZ_CONV_BL004
+Zie titel
+
+Gebeurtenisplaats ontbinden huwelijk
+Er is een huwelijk gesloten/geregistreerd partnerschap aangegaan waarbij buitenlandse regio
+opgenomen is
+Het element Buitenlandse regio aanvang in Objecttype Relatie is
+Situatie
+ingevuld.
+Logging
+fout/situatie code BIJZ_CONV_BL005
+fout/situatie
+Zie titel
+omschrijving
+Bij conversie is de LO3 plaats waar huwelijk gesloten/geregistreerd partnerschap aangegaan
+is (06.20 Plaats) afgekapt
+Situatie
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+Bij het uitvoeren van conversieregel CGR03-BL02 is de tekst die in
+06.20 Plaats geplaatst moet worden afgekapt.
+BIJZ_CONV_BL006
+Zie titel
+
+Gebeurtenisplaats overlijden
+Er is een huwelijk/geregistreerd partnerschap ontbonden waarbij buitenlandse regio
+opgenomen is
+Het element Buitenlandse regio einde in Objecttype Relatie is
+Situatie
+ingevuld.
+Logging
+
+Operatie BRP
+
+Pagina 14 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_BL007
+Zie titel
+
+Bij conversie is de LO3 plaats waar huwelijk/geregistreerd partnerschap ontbonden is (07.20
+Plaats) afgekapt
+Situatie
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+Bij het uitvoeren van conversieregel CGR03-BL02 is de tekst die in
+07.20 Plaats geplaatst moet worden afgekapt.
+BIJZ_CONV_BL008
+Zie titel
+
+De samengestelde naam is niet algoritmisch afgeleid van de geslachtsnaamcomponenten en
+voornamen
+Het element Algoritmisch afgeleid? in Objecttype Persoon heeft de
+Situatie
+waarde ‘Nee’.
+Logging
+fout/situatie code BIJZ_CONV_BL009
+fout/situatie
+Zie titel
+omschrijving
+
+De aanschrijving is niet algoritmisch afgeleid van de naamsgebruikgegevens
+Het element Aanschrijving algoritmisch afgeleid? in Objecttype
+Situatie
+Persoon heeft de waarde ‘Nee’.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_BL010
+Zie titel
+
+Er zijn meerdere geslachtsnaamcomponenten vastgelegd
+Er zijn meerdere voorkomens van het geslachtsnaamcomponent
+Situatie
+objecttype vastgelegd (die formeel en materieel gelijktijdig geldig
+zijn).
+Logging
+fout/situatie code BIJZ_CONV_BL011
+fout/situatie
+Zie titel
+omschrijving
+
+Datum aaneensluitend verblijfsrecht is opgenomen
+Het element Datum aaneensluitend verblijfsrecht in Objecttype
+Situatie
+Persoon is ingevuld.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_BL012
+Zie titel
+
+Buitenlands adres regel 4, 5 en/of 6 is ingevuld
+Buitenlands adres regel 4, 5 en/of 6 in Objecttype Persoon\adres
+Situatie
+is ingevuld.
+Logging
+
+Operatie BRP
+
+Pagina 15 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_BL013
+Zie titel
+
+Buitenlands adres regel 1,2 en/of 3 bevat meer dan 35 tekens
+Buitenlands adres regel 1, 2 en/of 3 in Objecttype Persoon\adres
+Situatie
+meer dan 35 tekens.
+Logging
+fout/situatie code BIJZ_CONV_BL014
+fout/situatie
+Zie titel
+omschrijving
+
+Er is een Huwelijk omgezet in een geregistreerd partnerschap of vice versa
+Er is een Relatie waarbij element Soort is gevuld met ‘H’ of ‘G’ en
+Situatie
+element Reden einde is gevuld met ‘Z’.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_BL015
+Zie titel
+
+Indicatie Geprivilegieerde bevat historische voorkomens
+Er zijn historische voorkomens voor de indicatie Geprivilegieerde? in
+Situatie
+Objecttype Persoon\indicatie.
+Een voorkomen is historisch als de Tijdstip verval en/of Datum
+einde geldigheid ingevuld is.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+Zwakke adoptie
+Situatie
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_BL016
+Zie titel
+
+BIJZ_CONV_BL017
+
+Gegevensgroep Opschorting bevat historische voorkomens
+Er zijn historische voorkomens voor de groep Opschorting in
+Situatie
+Objecttype Persoon.
+Een voorkomen is historisch als de Tijdstip verval en/of Datum
+einde geldigheid ingevuld is.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_BL018
+Zie titel
+
+Gegevensgroep Inschrijving bevat historische voorkomens
+
+Operatie BRP
+
+Pagina 16 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+Situatie
+
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+Er zijn historische voorkomens voor de groep Inschrijving in
+Objecttype Persoon.
+Een voorkomen is historisch als de Tijdstip verval en/of datum
+einde geldigheid ingevuld is.
+BIJZ_CONV_BL019
+Zie titel
+
+Gegevensgroep Verstrekkingsbeperking bevat historische voorkomens
+Situatie
+Er zijn historische voorkomens voor de groep
+Verstrekkingsbeperking in Objecttype Persoon.
+Een voorkomen is historisch als de Tijdstip verval en/of Datum
+einde geldigheid ingevuld is.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_BL020
+Zie titel
+
+Gegevensgroep Persoonskaart bevat historische voorkomens
+Er zijn historische voorkomens voor de groep Persoonskaart in
+Situatie
+Objecttype Persoon.
+Een voorkomen is historisch als de Tijdstip verval en/of Datum
+einde geldigheid ingevuld is.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_BL021
+Zie titel
+
+Gegevensgroep Bijhoudingsverantwoordelijkheid bevat historische voorkomens
+Situatie
+Er zijn historische voorkomens voor de groep
+Bijhoudingsverantwoordelijkheid in Objecttype Persoon.
+Een voorkomen is historisch als de Tijdstip verval en/of datum
+einde geldigheid ingevuld is.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_BL022
+Zie titel
+
+Gegevensgroep Uitsluiting NL kiesrecht bevat historische voorkomens
+Er zijn historische voorkomens voor de groep Uitsluiting NL
+Situatie
+kiesrecht in Objecttype Persoon.
+Een voorkomen is historisch als de Tijdstip verval en/of Datum
+einde geldigheid ingevuld is.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_BL023
+Zie titel
+
+Gegevensgroep EU verkiezingen bevat historische voorkomens
+
+Operatie BRP
+
+Pagina 17 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+Er zijn historische voorkomens voor de groep EU verkiezingen in
+Objecttype Persoon.
+Een voorkomen is historisch als de Tijdstip verval en/of Datum
+einde geldigheid ingevuld is.
+
+Situatie
+
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_BL024
+Zie titel
+
+De Actie bevat meer dan één document (documenten en/of akten)
+Aan een voorkomen van Objecttype Actie zijn meerdere voorkomens
+Situatie
+van Objecttype Document gekoppeld. De koppeling van deze twee
+Objecttypen is door middel van het objecttype Actie/Bron.
+Logging
+fout/situatie code
+fout/situatie
+omschrijving
+
+BIJZ_CONV_BL025
+Zie titel
+
+2.4
+
+Traceerbaarheid van conversie
+Om achteraf na te kunnen welke gegevens uit het bronformaat (LO3 of BRP) geleid hebben
+tot welke gegevens in het doelformaat, dient tijdens het uitvoeren de conversie deze
+informatie vastgelegd te worden. Deze vorm van logging, de traceerbaarheid tussen bron- en
+doelgegevens wordt bijvoorbeeld gebruikt in de GGO-viewer.
+
+2.4.1
+
+LO3 naar BRP
+Bij de conversie van LO3 naar BRP is er een 1:1 verband tussen een LO3 voorkomen en een
+BRP Actie. Daarnaast leidt een LO3 voorkomen tot één of meerdere rijen in BRP groepen. In
+het gegevensmodel van de BRP ligt een expliciete relatie tussen Actie en rijen in de BRP
+groepen, namelijk de relaties Actie inhoud, Actie aanpassing geldigheid en Actie verval.
+Hierdoor is het afdoende om voor de traceerbaarheid tussen LO3 en BRP uitsluitend vast te
+leggen (te loggen) tot welke Actie een LO3 Voorkomen heeft geleid. Aan de hand hiervan
+zijn, op basis van de eerder genoemde relaties, de bijbehorende rijen uit de BRP groepen
+traceerbaar.
+BRP Groep rij
+
+LO3 Voorkomen
+
+BRP Actie rij
+
+LO3 Voorkomen
+
+BRP Actie rij
+
+,,,
+
+...
+
+BRP Groep rij
+
+BRP Groep rij
+
+BRP Groep rij
+Conversie
+logging
+
+Dit betekent dat voor het vastleggen van de traceerbaarheid de onderstaande gegevens in
+het log vastgelegd moeten worden:
+•
+LO3 Categorie
+•
+LO3 Stapel
+•
+LO3 voorkomen
+•
+BRP Actie Id
+Daarnaast dienen algemene gegevens vastgelegd te worden, zoals in welk proces dit
+plaatsvond en welk LO3 bericht hieraan ten grondslag lag. De severity van deze logging is
+Info.
+
+Operatie BRP
+
+Pagina 18 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+2.4.2
+
+BRP naar LO3
+Bij de conversie van BRP naar LO3 is er niet in alle gevallen een 1:1 verband tussen een BRP
+Actie en een LO3 Voorkomen. Dit wordt veroorzaakt doordat bij deze conversie niet alleen
+gegevens geconverteerd worden die ontstaan zijn uit de conversie vanuit LO3, maar de BRP
+ook gegevens bevat die ontstaan zijn door bijhoudingen vanuit de BZM's. Voor een dergelijke
+bijhouding (of BRP Actie) kan gelden dat:
+•
+De actie bevat meerdere BRP groep rijen die onafhankelijk van elkaar tot
+verschillende LO3 voorkomens kunnen leiden.
+•
+De actie bevat meerdere BRP groep rijen die wel samengevoegd worden tot één LO3
+voorkomen.
+Daarnaast geldt nog dat één BRP groep rij gekoppeld kan zijn aan meerdere BRP Acties,
+namelijk als Actie inhoud, Actie aanpassing geldigheid en Actie verval. Ook dient rekening
+gehouden te worden met situaties waarbij in de BRP een Actie leidt tot het laten vervallen
+van één of meerdere groep rijen, dat als gevolg hiervan LO3 voorkomens onjuist gemaakt
+worden.
+Om tot een sluitende traceerbaarheid te komen voor de conversie van BRP naar LO3, zal per
+combinatie van Actie en groep rij vastgelegd moeten worden tot welk(e) voorkomen(s) dit in
+de LO3 PL heeft geleid.
+Dit betekent dat voor het vastleggen van de traceerbaarheid de onderstaande gegevens in
+het log vastgelegd moeten worden:
+•
+BRP Actie Id
+•
+BRP Gegevensgroep
+•
+BRP Rij Id
+•
+LO3 Categorie
+•
+LO3 Stapel
+•
+LO3 voorkomen
+Daarnaast dienen, net als bij de traceerbaarheid van LO3 naar BRP, ook dezelfde algemene
+gegevens vastgelegd te worden, namelijk het proces en bericht dat hieraan ten grondslag lag.
+De severity van deze logging is wederom Info.
+
+Operatie BRP
+
+Pagina 19 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+2.5
+
+Voorbeeld: logging bij controleren van precondities en conversie
+Het converteren van een PL is onlosmakelijk verbonden met controleren van precondities en
+het loggen van de conversie en bijzondere situaties daarbinnen. Door middel van het
+onderstaande voorbeeld wordt een beeld gegeven van hoe deze stappen verlopen en welke
+logging plaats vindt. In dit voorbeeld is geen complete persoonslijst uitgewerkt, maar
+uitsluitend categorie 04/54 en categorie 06/56.
+LO3-PL (bron)
+Categorie 04/54 Nationaliteit
+
+<stapel 1>
+
+05.10
+
+82.10
+
+82.20
+
+82.30
+
+1
+
+0216
+
+0363
+
+16-07-2004
+
+PROBAS Pas vr 0216
+
+2
+
+0216
+
+0363
+
+15-07-2004
+
+Pas vr 0216
+
+Categorie 04/54 Nationaliteit
+05.10
+1
+
+84.10
+
+85.10
+
+86.10
+
+00-00-0000
+
+16-07-2004
+
+O
+
+00-00-0000
+
+00-00-0000
+
+84.10
+
+<stapel 2>
+
+82.10
+
+82.20
+
+82.30
+
+85.10
+
+86.10
+
+0363
+
+25-01-2003
+
+Verlies nat
+
+30-08-2002
+
+25-01-2003
+
+11-09-1970
+
+08-04-2002
+
+09-11-1970
+
+03-04-2002
+
+2
+
+0219
+
+0363
+
+08-04-2002
+
+verkl nation
+
+3
+
+0219
+
+0363
+
+03-04-2002
+
+verkl nation
+
+O
+
+Categorie 06/56 Overlijden <stapel 1>
+
+2.5.1
+
+08.10
+
+08.20
+
+08.30
+
+81.10
+
+81.20
+
+1
+
+10-01-2008
+
+0363
+
+6030
+
+0363
+
+2 A1234
+
+2
+
+10-01-2008
+
+3630
+
+6030
+
+0363
+
+2 A1234
+
+84.10
+O
+
+85.10
+
+86.10
+
+10-01-2008
+
+13-01-2008
+
+10-01-2008
+
+12-01-2008
+
+Stap 1: controleren van de precondities
+In dit voorbeeld wordt bij het controleren van de precondities geconstateerd dat er twee
+categorievoorkomens zijn die niet aan de precondities voldoen. Omdat dit onjuiste
+voorkomens zijn, is dit geen belemmering om de persoonslijst te converteren (zie
+Documentatie bidirectionele conversie [BI-CONV], paragraaf 4.2). Deze specifieke
+voorkomens zullen bij de conversie genegeerd worden. In de onderstaande uitwerking zijn
+deze voorkomens doorgestreept weergegeven. Het gegeven dat niet aan de preconditie
+voldoet is ter verduidelijk geel gemarkeerd. In de logging zijn twee rijen opgenomen waarin
+melding wordt gemaakt van deze overtredingen op de precondities. Omdat in dit geval de
+conversie van de PL alsnog uitgevoerd kan worden, betreffen het Warnings. Als er één (of
+meerdere) precondities geschonden worden waardoor de PL als geheel niet geconverteerd
+wordt (zie Documentatie bidirectionele conversie [BI-CONV], paragraaf 4.2), dan wordt dit
+gelogd als zijnde een Error.
+LO3-PL na precondities
+Categorie 04/54 Nationaliteit
+
+<stapel 1>
+
+05.10
+
+82.10
+
+82.20
+
+82.30
+
+1
+
+0216
+
+0363
+
+16-07-2004
+
+PROBAS Pas vr
+0216
+
+2
+
+0216
+
+0363
+
+15-07-2004
+
+Pas vr 0216
+
+Categorie 04/54 Nationaliteit
+05.10
+1
+
+84.10
+
+85.10
+
+86.10
+
+00-00-0000
+
+16-07-2004
+
+O
+
+00-00-0000
+
+00-00-0000
+
+84.10
+
+85.10
+
+86.10
+
+30-08-2002
+
+25-01-2003
+
+11-09-1970
+
+08-04-2002
+
+09-11-1970
+
+03-04-2002
+
+<stapel 2>
+
+82.10
+
+82.20
+
+82.30
+
+0363
+
+25-01-2003
+
+Verlies nat
+
+2
+
+0219
+
+0363
+
+08-04-2002
+
+verkl nation
+
+3
+
+0219
+
+0363
+
+03-04-2002
+
+verkl nation
+
+O
+
+Categorie 06/56 Overlijden <stapel 1>
+1
+
+08.10
+
+08.20
+
+08.30
+
+81.10
+
+81.20
+
+10-01-2008
+
+0363
+
+6030
+
+0363
+
+2 A1234
+
+Operatie BRP
+
+84.10
+
+85.10
+
+86.10
+
+10-01-2008
+
+13-01-2008
+
+Pagina 20 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+2
+
+10-01-2008
+
+3630
+
+6030
+
+0363
+
+2 A1234
+
+O
+
+10-01-2008
+
+12-01-2008
+
+Logging
+
+2.5.2
+
+LO3
+Cat
+
+LO3
+Stapel
+
+LO3
+Voorkomen
+
+04
+
+1
+
+06
+
+1
+
+BRP
+Actie
+
+Severity
+
+Type
+
+fout/situatie
+code
+
+fout/situatie omschrijving
+
+2
+
+Warning
+
+Preconditie
+
+PRE031
+
+Het element 86.10 Datum
+van opneming moet
+gevuld zijn en mag geen
+standaardwaarde hebben
+en mag niet gedeeltelijk
+onbekend zijn.
+Deze onjuiste rij is niet
+geconverteerd.
+
+2
+
+Warning
+
+Preconditie
+
+PRE054
+
+Als er gegevens aan de
+hand van een
+conversietabel vertaald
+moeten worden, dan moet
+de desbetreffende waarde
+voorkomen in de
+conversietabel.
+Deze onjuiste rij is niet
+geconverteerd.
+
+Stap 2: conversie van LO3 naar BRP
+Bij het uitvoeren van de daadwerkelijke conversie vinden er twee vormen van logging plaats:
+Bijzondere situaties
+Als zich bijzondere situaties voordoen, zoals beschreven in hoofdstuk 2 wordt dit
+gelogd als zijnde Info.
+Traceerbaarheid van geconverteerde voorkomens
+Iedere afzonderlijk voorkomen uit de LO3 PL leidt tot precies één Actie rij in de BRP.
+Voor ieder voorkomen uit de LO3 PL wordt een rij in de logging aangemaakt als zijnde
+Info.
+BRP-PL
+Nationaliteit
+Nationaliteit
+(groep
+identiteit)
+
+…
+
+D.A.G.6
+
+0216
+
+00-00-0000
+
+0219
+
+11-09-1970
+
+D.E.G7
+
+30-08-2002
+
+09-11-1970
+
+Tijdstip
+registratie
+
+Tijdstip
+verval
+
+Actie
+Actie
+Actie
+inhoud aanp.
+verval
+geldigheid
+
+16-07-2004
+01:00
+
+1
+
+08-04-2002
+01:00
+
+3
+
+03-04-2002
+01:00
+
+03-04-2002
+01:00
+
+4
+
+2
+
+2
+
+Overlijden
+Id
+
+Datum
+overlijden
+
+Gemeente
+overlijden
+
+Land
+overlijden
+
+123
+
+10-012008
+
+0363
+
+6030
+
+…
+
+Tijdstip
+registratie
+13-01-2008
+
+Tijdstip
+verval
+
+Actie
+inhoud
+
+Actie verval
+
+5
+
+Actie
+Id
+
+6
+7
+
+Tijdstip registratie
+
+…
+
+D.A.G.: Datum aanvang geldigheid
+D.E.G.: Datum einde geldigheid
+
+Operatie BRP
+
+Pagina 21 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+1
+
+16-07-2004 01:00
+
+2
+
+25-01-2003 01:00
+
+3
+
+08-04-2002 01:00
+
+4
+
+03-04-2002 01:00
+
+5
+
+13-01-2008 01:00
+
+Bron
+Actie
+
+Document
+
+1
+
+101
+
+2
+
+102
+
+3
+
+103
+
+4
+
+104
+
+5
+
+105
+
+Document
+Id
+
+…
+
+Aktenummer
+
+101
+102
+103
+104
+105
+
+Omschrijving
+
+Partij
+
+PROBAS Pas
+vr 0216
+
+0363
+
+verkl nation
+
+0363
+
+verkl nation
+
+0363
+
+Verlies nat
+
+0363
+
+2 A1234
+
+0363
+
+Logging
+LO3
+Cat
+
+LO3
+Stapel
+
+LO3
+Voorkomen
+
+04/54
+
+1
+
+06/56
+
+Severity
+
+Type
+
+fout/situatie code
+
+fout/situatie
+omschrijving
+
+2
+
+Warning
+
+Preconditie
+
+PRE031
+
+Het element 86.10
+Datum van
+opneming moet
+gevuld zijn en
+mag geen
+standaardwaarde
+hebben en mag
+niet gedeeltelijk
+onbekend zijn.
+Onjuiste rij
+verwijderd.
+
+1
+
+2
+
+Warning
+
+Preconditie
+
+PRE054
+
+Als er gegevens
+aan de hand van
+een conversietabel
+vertaald moeten
+worden, dan moet
+de desbetreffende
+waarde
+voorkomen in de
+conversietabel.
+Onjuiste rij
+verwijderd.
+
+04/54
+
+1
+
+1
+
+Info
+
+Bijzondere
+situatie
+
+BIJZ_CONV_LB012
+
+De persoon is
+geprivilegieerd
+
+04/54
+
+1
+
+1
+
+1
+
+Info
+
+Conversie
+
+LO3_ BRP
+
+04/54
+
+2
+
+1
+
+4
+
+Info
+
+Conversie
+
+LO3_ BRP
+
+04/54
+
+2
+
+2
+
+3
+
+Info
+
+Conversie
+
+LO3_ BRP
+
+04/54
+
+2
+
+3
+
+2
+
+Info
+
+Conversie
+
+LO3_ BRP
+
+06/56
+
+1
+
+1
+
+5
+
+Info
+
+Conversie
+
+LO3_ BRP
+
+Operatie BRP
+
+BRP
+Actie
+
+Pagina 22 van 23
+
+Status Definitief | Documentatie bidirectionele conversie - Appendix | 12-04-2017
+
+Operatie BRP
+
+Pagina 23 van 23
+
+

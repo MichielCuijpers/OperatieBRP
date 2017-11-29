@@ -1,0 +1,374 @@
+UCS BY.1.AB – Archiveer bericht
+Versie
+
+0.10
+
+Datum
+
+11 mei 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+12-08-2016
+
+0.1
+
+Initiële versie
+
+Operatie BRP
+
+26-08-2016
+
+0.2
+
+Reviewcommentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+02-09-2016
+
+0.3
+
+Opmerkingen voor verwerking van een Bijhoudingsnotificatiebericht toegevoegd aan paragraaf 2.1.
+
+Operatie BRP
+
+06-09-2016
+
+0.4
+
+Reviewcommentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+19-09-2016
+
+0.5
+
+Openstaand punt over Bericht \ Persoon verwijderd. Dit
+heeft niet tot inhoudelijke aanpassingen geleid.
+
+Operatie BRP
+
+27-09-2016
+
+0.6
+
+Kolom Datum uit tabel met reviewhistorie verwijderd.
+Referenties bijgewerkt.
+
+Operatie BRP
+
+03-11-2016
+
+0.7
+
+Reviewcommentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+05-04-2017
+
+0.8
+
+UCS beschrijving specifieker gemaakt voor Bijhoudingen
+omdat Levering geen gebruik maakt van deze UCS.
+
+Operatie BRP
+
+03-05-2017
+
+0.9
+
+Element ‘Bericht.Antwoord op’ verwijderd
+
+Operatie BRP
+
+11-05-2017
+
+0.10
+
+Element ‘Bericht.Rol’ verwijderd
+
+Operatie BRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Operatie BRP
+
+0.3
+
+Operatie BRP
+
+0.4
+
+Operatie BRP
+
+0.9
+
+Operatie BRP
+
+UCS BY.1.AB – Archiveer bericht
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+
+2
+
+Archivering van berichten ......................................................................................... 4
+2.1
+2.2
+
+3
+
+Doel ....................................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Objecttype Bericht ................................................................................................................4
+Objecttype Bericht \ Persoon ..................................................................................................5
+
+Openstaande punten ................................................................................................. 6
+3.1
+
+Afhandeling technische fout....................................................................................................6
+
+Status: Concept, versie: 0.10
+
+Pagina 2 van 6
+
+UCS BY.1.AB – Archiveer bericht
+
+1 Inleiding
+1.1
+
+Doel
+
+Deze use case beschrijft het archiveren van de ingaande en uitgaande berichten van de centrale
+voorzieningen.
+De berichten die door de centrale voorzieningen worden ontvangen (ingaande berichten) en de
+berichten die worden verzonden (uitgaande berichten) worden gearchiveerd. Voor ingaande berichten geldt dat uitsluitend berichten die aan de XSD voldoen, worden gearchiveerd.
+De archivering bestaat enerzijds uit het ongestructureerd vastleggen van het complete bericht dat
+ontvangen dan wel verzonden is. Daarnaast vindt er ook een gestructureerde opslag plaatst van
+specifieke attributen uit het bericht en andere kenmerken met betrekking tot het bericht dan wel
+de verwerking daarvan.
+
+1.2
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+UCS BY.0.AV - Afhandelen verzoek
+
+Operatie BRP
+
+-
+
+-
+
+Status: Concept, versie: 0.10
+
+Pagina 3 van 6
+
+UCS BY.1.AB – Archiveer bericht
+
+2 Archivering van berichten
+Voor de archivering van berichten zijn er meerdere objecttypen waarin archiveringsinformatie
+vastgelegd wordt. In dit hoofdstuk wordt voor de afzonderlijke attributen van die objecttypen beschreven hoe ze moeten worden gevuld bij het persisteren.
+
+2.1
+
+Objecttype Bericht
+
+Voor elk ingaand of uitgaand bericht in de centrale voorzieningen wordt een voorkomen van ‘Bericht’ aangemaakt. Bij het bepalen van de te registreren gegevens wordt gebruik gemaakt van
+onderstaande kenmerk:
+(1) Of het, bezien vanuit de centrale voorzieningen, een ‘Ingaand’ of ‘Uitgaand’ bericht betreft.
+In onderstaande tabellen wordt per gegevensgroep aangegeven hoe de afzonderlijke attributen
+gevuld moeten worden.
+
+Groep Identiteit
+Gegevenselement
+
+Afleiding
+
+Tijdstip registratie
+
+Systeemtijd
+
+Soort
+
+Soort bericht.Naam (b.v, 'bhg_afsRegistreerGeboorte')
+
+Richting
+
+De waarde van (1): ‘Ingaand’ of ‘Uitgaand’
+
+Groep Stuurgegevens
+Gegevenselement
+
+Afleiding
+
+Zendende partij
+
+Overnemen van het gelijknamige attribuut uit de stuurgegevens van
+het bericht
+
+Zendende systeem
+Ontvangende partij
+Ontvangende systeem
+Referentienummer
+Cross referentienummer
+Datum/tijd verzending
+Datum/tijd ontvangst
+
+Als (1)=‘Ingaand’:
+Datum/tijd van binnenkomst van het bericht in de BRP service.
+Als (1)=‘Uitgaand’:
+'leeg'
+
+Groep Parameters
+Gegevenselement
+
+Afleiding
+
+Verwerkingswijze
+
+Overnemen uit stuurgegeven Verwerkingswijze van het inkomende
+bericht ('Prevalidatie' of 'Bijhouding')
+
+Status: Concept, versie: 0.10
+
+Pagina 4 van 6
+
+UCS BY.1.AB – Archiveer bericht
+
+Gegevenselement
+
+Afleiding
+NB Voor Bijhoudingsnotificatieberichten is dit altijd ‘Bijhouding’
+
+Rol
+
+'leeg'
+
+Groep Resultaat
+Gegevenselement
+
+Afleiding
+
+Verwerking
+
+Als (1) gelijk is aan ‘Uitgaand’:
+Overnemen van gelijknamige attribuut uit (antwoord) bericht;
+
+Bijhouding
+Hoogste meldingsniveau
+
+In alle andere gevallen:
+'leeg'
+NB Voor Bijhoudingsnotificatieberichten zijn deze gegevens elementen niet van toepassing, dus ‘leeg’
+
+Groep Standaard
+Gegevenselement
+
+Afleiding
+
+Administratieve handeling
+
+Als de handeling ook echt wordt opgeslagen, dus niet bij prevalidatie
+dan wel als er overtredingen op regels zijn:
+De Administratieve handeling die als gevolg van deze bijhouding wordt vastgelegd.
+In alle andere gevallen:
+'leeg'
+
+Data
+
+De inhoud van het bericht zelf (inclusief protocol headers/envelope)
+
+Groep Identificatiecriteria
+Er worden geen gegevens van deze groep ingevuld.
+NB In de bovenstaande tabellen wordt onder andere gerefereerd aan gegevens in het bericht. Als
+een gegeven niet voorkomt in een bericht, dan moet dit beschouwd worden alsof het gegeven leeg
+is. Bijvoorbeeld: In het bericht is het gegeven Ontvangende systeem niet opgenomen. Omdat het
+gelijknamige attribuut uit objecttype Bericht aan de hand hiervan gevuld moet worden, blijft dit
+attribuut leeg.
+
+2.2
+
+Objecttype Bericht \ Persoon
+
+Indien een bericht wordt gearchiveerd, dan wordt per in het bericht gerefereerde ‘Persoon’ een
+voorkomen van ‘Bericht \ Persoon’ vastgelegd. In onderstaande opsomming staat voor welke personen een voorkomen aangemaakt moet worden.
+•
+
+Bijhouding (alle huidige handelingen/berichten)
+o Ingaand: Opnemen van de personen die direct in het bericht zijn opgenomen. Dit is
+de persoon waarvan de persoonslijst bijgehouden wordt (mits reeds bekend in de
+BRP). Als het gaat om het bijhouden van een Relatie dan alle personen die een betrokkenheid hebben met die relatie.
+NB 1 In het berichtdeel Bezien Vanuit Persoon (BZVU) kan de verzendende partij
+aangeven tot welke personen de bijhouding moet worden beperkt. Het opnemen
+van personen in de BZVU heeft invloed op welke personen wel/niet opgenomen
+wordt in Bericht \ Persoon.
+
+Status: Concept, versie: 0.10
+
+Pagina 5 van 6
+
+UCS BY.1.AB – Archiveer bericht
+
+o
+
+NB 2 In geval van een bericht waarbij een nieuwe persoonslijst wordt aangelegd,
+bijvoorbeeld geboorte en vestiging niet-ingeschrevene, wordt geen Bericht \ Persoon aangemaakt voor deze in te schrijven persoon. Dit omdat deze op het moment van archiveren nog niet vastgelegd is, zie paragraaf 3.2 van UCS BY.0.AV Afhandeling verzoek [1]. Indien er ook andere personen direct in het bericht zijn
+opgenomen dan worden daarvoor wel voorkomens in Bericht \ Persoon aangemaakt.
+Uitgaand1: Opnemen van de personen die in de lijst 'bijgehouden personen' in het
+bericht zijn opgenomen, dus indien het gaat om een Persoon als rootobject, dan die
+persoon (mits reeds bekend in de BRP) en als het gaat om een Relatie als rootobject dan alle personen die een betrokkenheid hebben met die relatie.
+
+Als er in een ingaand bericht wordt gerefereerd aan een ‘Persoon’ die niet bekend is in de BRP, dan
+wordt er geen voorkomen van ‘Bericht \ Persoon’ aangemaakt. Dit geldt ook voor het resultaatbericht dat naar aanleiding van dit ingaande bericht wordt verstuurd. Dit is bijvoorbeeld het geval als
+in het ingaande bericht een foutieve BSN of objectsleutel wordt opgenomen.
+
+3 Openstaande punten
+3.1
+
+Afhandeling technische fout
+
+Nagaan of er functioneel gezien nog iets gespecificeerd moet worden als het archiveren van het
+bericht faalt. Dit heeft wellicht ook nog een relatie met de nog niet gerealiseerde aspectbeschrijving over logging.
+
+1
+
+Dit betreft zowel het bijhoudingsresultaatbericht als het notifcatiebericht
+
+Status: Concept, versie: 0.10
+
+Pagina 6 van 6
+
+

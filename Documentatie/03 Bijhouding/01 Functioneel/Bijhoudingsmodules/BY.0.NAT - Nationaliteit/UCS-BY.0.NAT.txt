@@ -1,0 +1,1648 @@
+UCS BY.0.NAT - Nationaliteit
+Versie
+
+0.7
+
+Datum
+
+11 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+19-06-2017
+
+0.1
+
+Initiële opzet
+
+Operatie BRP
+
+23-06-2017
+
+0.2
+
+Reviewcommentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+27-06-2017
+
+0.3
+
+Reviewcommentaar Operatie BRP
+
+Operatie BRP
+
+30-06-2017
+
+0.4
+
+UCM + nationaliteits-handelingen toegevoegd
+Reviewcommentaar Operatie BRP verwerkt
+
+Operatie BRP
+
+03-07-2017
+
+0.5
+
+Reviewcommentaar Operatie BRP verwerkt (nationaliteitsAH’s).
+
+Operatie BRP
+
+05-07-2017
+
+0.6
+
+Reviewcommentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+11-07-2017
+
+0.7
+
+Reviewcommentaar Operatie BRP verwerkt.
+
+Operatie BRP
+
+Reviewhistorie
+Versie Review
+0.1
+
+Operatie BRP
+
+0.2
+
+Operatie BRP
+
+0.4
+
+Operatie BRP
+
+0.5
+
+Operatie BRP
+
+0.6
+
+Operatie BRP
+
+UCS BY.0.NAT - Nationaliteit
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+Doel ....................................................................................................................................4
+Leeswijzer ............................................................................................................................4
+Referenties ..........................................................................................................................4
+Use case model ....................................................................................................................5
+
+Verkrijging Nederlandse nationaliteit ....................................................................... 6
+2.1
+Functionele context ...............................................................................................................6
+2.1.1
+Brondocumenten ..............................................................................................................6
+2.1.2
+Betrokken personen ..........................................................................................................6
+2.1.3
+Proces .............................................................................................................................6
+2.1.4
+Bijhoudings(voorstel)partijen .............................................................................................6
+2.1.5
+Vastgelegde gegevens .......................................................................................................6
+2.2
+Specifieke verwerking............................................................................................................7
+
+3
+
+Verlies Nederlandse nationaliteit .............................................................................. 8
+3.1
+Functionele context ...............................................................................................................8
+3.1.1
+Brondocumenten ..............................................................................................................8
+3.1.2
+Betrokken personen ..........................................................................................................8
+3.1.3
+Proces .............................................................................................................................8
+3.1.4
+Bijhoudings(voorstel)partijen .............................................................................................8
+3.1.5
+Vastgelegde gegevens .......................................................................................................8
+3.2
+Specifieke verwerking............................................................................................................8
+
+4
+
+Verkrijging vreemde nationaliteit ............................................................................. 9
+4.1
+Functionele context ...............................................................................................................9
+4.1.1
+Brondocumenten ..............................................................................................................9
+4.1.2
+Betrokken personen ..........................................................................................................9
+4.1.3
+Proces .............................................................................................................................9
+4.1.4
+Bijhoudings(voorstel)partijen .............................................................................................9
+4.1.5
+Vastgelegde gegevens .......................................................................................................9
+4.2
+Specifieke verwerking............................................................................................................9
+
+5
+
+Verlies vreemde nationaliteit .................................................................................. 10
+5.1
+Functionele context ............................................................................................................. 10
+5.1.1
+Brondocumenten ............................................................................................................ 10
+5.1.2
+Betrokken personen ........................................................................................................ 10
+5.1.3
+Proces ........................................................................................................................... 10
+5.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 10
+5.1.5
+Vastgelegde gegevens (indicatoren) .................................................................................. 10
+5.2
+Specifieke verwerking.......................................................................................................... 10
+
+6
+
+Beëindiging bijhouding vreemde nationaliteit ......................................................... 11
+6.1
+Functionele context ............................................................................................................. 11
+6.1.1
+Brondocumenten ............................................................................................................ 11
+6.1.2
+Betrokken personen ........................................................................................................ 11
+6.1.3
+Proces ........................................................................................................................... 11
+6.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 11
+6.1.5
+Vastgelegde gegevens (indicatoren) .................................................................................. 11
+6.2
+Specifieke verwerking.......................................................................................................... 11
+
+7
+
+Wijziging indicatie nationaliteit .............................................................................. 12
+7.1
+Functionele context ............................................................................................................. 12
+7.1.1
+Brondocumenten ............................................................................................................ 12
+7.1.2
+Betrokken personen ........................................................................................................ 12
+7.1.3
+Proces ........................................................................................................................... 12
+
+Status: Definitief, versie: 0.7
+
+Pagina 2 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+7.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 13
+7.1.5
+Vastgelegde gegevens (indicatoren) .................................................................................. 13
+7.2
+Specifieke verwerking.......................................................................................................... 13
+
+8
+
+Correctie indicatie nationaliteit ............................................................................... 14
+8.1.1
+Brondocumenten ............................................................................................................ 14
+8.1.2
+Betrokken personen ........................................................................................................ 14
+8.1.3
+Proces ........................................................................................................................... 14
+8.1.4
+Bijhoudings(voorstel)partijen ........................................................................................... 14
+8.1.5
+Vastgelegde gegevens ..................................................................................................... 14
+8.2
+Specifieke verwerking.......................................................................................................... 14
+
+9
+
+Acties ...................................................................................................................... 16
+9.1
+9.2
+9.3
+9.4
+9.5
+9.6
+9.7
+9.8
+9.9
+9.10
+9.11
+9.12
+9.13
+9.14
+9.15
+9.16
+
+Registratie staatloos ............................................................................................................ 16
+Beëindiging staatloos........................................................................................................... 16
+Registratie vastgesteld niet Nederlander ................................................................................ 16
+Beëindiging vastgesteld niet Nederlander ............................................................................... 16
+Registratie behandeld als Nederlander ................................................................................... 16
+Beëindiging behandeld als Nederlander .................................................................................. 16
+Correctieverval staatloos...................................................................................................... 17
+Correctieregistratie staatloos ................................................................................................ 17
+Correctieverval vastgesteld niet-Nederlander.......................................................................... 17
+Correctieregistratie vastgesteld niet-Nederlander .................................................................... 17
+Correctieverval behandeld als Nederlander ............................................................................. 17
+Correctieregistratie behandeld als Nederlander ....................................................................... 17
+Registratie nationaliteit ........................................................................................................ 18
+Registratie geslachtsnaam voornaam..................................................................................... 18
+Beëindiging nationaliteit....................................................................................................... 19
+Beëindiging bijhouding nationaliteit ....................................................................................... 19
+
+10
+
+Openstaande punten ............................................................................................... 20
+
+11
+
+Appendix A – BZVU en plaatsonafhankelijke bijhouding ......................................... 21
+
+Status: Definitief, versie: 0.7
+
+Pagina 3 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+1 Inleiding
+1.1
+
+Doel
+
+De module ‘Nationaliteit’ bevat administratieve handelingen om nationaliteiten, en specifieke
+indicaties met betrekking tot nationaliteiten, te registreren, te beëindigen, de bijhouding van de
+vreemde nationaliteit te beëindigen of te corrigeren. Het doel van dit document is om de
+afhandeling van deze handelingen te beschrijven.
+
+1.2
+
+Leeswijzer
+
+Per administratieve handeling wordt de functionele context en specifieke verwerking beschreven.
+De functionele context beschrijft de situatie waarin de administratieve handeling van toepassing is.
+In de specifieke verwerking wordt beschreven welke acties relevant zijn voor de administratieve
+handeling en wordt per actie eventuele specifieke functionaliteit binnen de context van de
+handeling benoemd. Voor de definitie van het invoerbericht en bedrijfsregels die bij een
+administratieve handeling horen wordt verwezen naar ‘UCS-BY.0.NAT - Bijlage Registreer
+nationaliteit’ [4] en ‘UCS-BY.0.NAT - Bijlage Corrigeer nationaliteit’ [5]. Verder wordt het
+‘peilmoment’ voor regels met een tijdsaspect gedefinieerd.
+De beschrijving van de generieke functionaliteit van de acties staat beschreven in hoofdstuk 9.
+NB Bij enkele use cases is een paragraaf opgenomen met de titel ‘Aanvullende informatie voor LO
+en HUP’. Deze paragraaf heeft geen functionele impact, maar dient als kapstok voor het schrijven
+van het LO en de HUP.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+UCS BY.1.ON – Ontrelateren
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+UCS BY.0.AV – Afhandeling verzoek
+
+Operatie BRP
+
+-
+
+-
+
+3
+
+Aspectbeschrijving – Naamopbouw
+
+Operatie BRP
+
+-
+
+-
+
+4
+
+UCS BY.0.NAT - Bijlage Registreer nationaliteit
+
+Operatie BRP
+
+-
+
+-
+
+5
+
+UCS BY.0.NAT - Bijlage Corrigeer nationaliteit
+
+Operatie BRP
+
+-
+
+-
+
+6
+
+Aspectbeschrijving – Corrigeren
+
+Operatie BRP
+
+-
+
+-
+
+Status: Definitief, versie: 0.7
+
+Pagina 4 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+1.4
+
+Use case model
+
+In onderstaand use case model staan alle administratieve handelingen voor de module
+‘Nationaliteit’. Hierin is te zien dat alle administratieve handelingen subtype zijn van het supertype
+‘Afhandeling verzoek’. De laatste beschrijft de generieke afhandeling van een verzoek wat relevant
+is voor de verwerking van alle handelingen.
+
+Status: Definitief, versie: 0.7
+
+Pagina 5 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+2 Verkrijging Nederlandse nationaliteit
+2.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Verkrijging Nederlandse nationaliteit’ is het registreren
+van de Nederlandse nationaliteit bij een persoon.
+De Wet BRP schrijft voor dat naast het Nederlanderschap géén vreemde nationaliteit mag worden
+bijgehouden. Voor eventueel geregistreerde vreemde nationaliteiten wordt de bijhouding
+beëindigd.
+De hoofdpersoon kan ingezetene, vreemdeling of staatloos zijn. Ook kan de persoon overleden
+zijn, waarbij de gegevens worden opgenomen na datum van overlijden1.
+Bij de registratie van de Nederlandse nationaliteit wordt altijd de reden van verkrijging van de
+Nederlandse nationaliteit opgenomen.
+Een reisdocument van het soort Vluchtelingen/Vreemdelingen vervalt van rechtswege. Dit wordt
+echter niet direct geregistreerd. In plaats daarvan wordt een waarschuwing gegeven opdat de
+ambtenaar actie onderneemt tot inname van het reisdocument.
+Het is mogelijk dat de voornaam en/of geslachtsnaam van de persoon wijzigt. Dit is het geval als
+de persoon geen voornaam of geslachtsnaam heeft of indien de spelling van zijn/haar naam niet
+voldoet aan de in het Koninkrijk gebruikelijke lettertekens.
+2.1.1
+•
+•
+•
+•
+•
+•
+•
+
+Mededeling Minister inzake nationaliteit en geboorte
+Akte Nederlandse nationaliteit
+Rechterlijke uitspraak Nederlandse nationaliteit
+Optieverklaring verkrijging Nederlanderschap
+Koninklijk besluit naturalisatie
+Verklaring van verbondenheid
+Overig (meestal voor Rijkswet op het Nederlanderschap)
+
+2.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+Hoofdpersoon (ingezetene)
+
+2.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [2].
+2.1.4
+•
+
+De bijhoudingspartij van de persoon.
+
+2.1.5
+•
+•
+•
+•
+•
+•
+
+1
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Nationaliteit (bijhouding vreemde nationaliteiten wordt beëindigd bij registratie Nederlandse
+nationaliteit)
+Verblijfsrecht (vervalt bij het verkrijgen van de Nederlandse nationaliteit)
+Bijzondere verblijfsrechtelijke positie (vervalt bij het verkrijgen van de Nederlandse
+nationaliteit)
+Staatloos (wordt beëindigd bij het verkrijgen van de Nederlandse nationaliteit)
+Behandeld als Nederlander (wordt beëindigd bij het verkrijgen van de Nederlandse
+nationaliteit)
+Vastgesteld niet-Nederlander (wordt beëindigd bij het verkrijgen van de Nederlandse
+nationaliteit)
+De reden hiervan is dat ook na het overlijden van rechtswege kan worden vastgesteld dat een persoon Nederlander is.
+
+Status: Definitief, versie: 0.7
+
+Pagina 6 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+•
+•
+
+2.2
+
+Deelname EU verkiezingen (vervalt bij het verkrijgen van de Nederlandse nationaliteit)
+Naam (voornamen, geslachtsnaamcomponent, samengestelde naam en naamgebruik, waarbij
+samengestelde naam en naamgebruik worden afgeleid). Let op: Door een namenreeks kunnen
+voornamen verdwijnen of juist opgenomen worden.
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie nationaliteit
+Alle vreemde nationaliteiten vervallen en krijgen de indicatie ‘Bijhouding beëindigd?’ met
+waarde ‘Ja’. Hiertoe behoren ook eventuele beëindigde nationaliteiten, zodat deze ook niet
+meer geleverd of gewijzigd kunnen worden.
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+
+•
+
+•
+
+Persoon.Verblijfsrecht
+Het verblijfsrecht bij deze persoon komt, indien aanwezig, afgeleid te vervallen.
+
+•
+
+Persoon.Bijzondere verblijfsrechtelijke positie
+De bijzondere verblijfsrechtelijke positie komt, indien aanwezig, afgeleid te vervallen.
+
+•
+
+Persoon.Deelname EU verkiezingen
+Gegevens met betrekking tot Europees Kiesrecht komen, indien aanwezig, afgeleid
+vervallen.
+
+•
+
+Persoon.Vastgesteld niet-Nederlander
+Indien er een niet beëindigd voorkomen van ‘Vastgesteld niet-Nederlander’
+geregistreerd staat, moet dit voorkomen afgeleid beëindigd worden op de datum
+aanvang geldigheid van de Nationaliteit.
+
+•
+
+Persoon.Behandeld als Nederlander
+Indien er een niet beëindigd voorkomen van ‘Behandeld als Nederlander’ geregistreerd
+staat, moet dit voorkomen afgeleid beëindigd worden op de datum aanvang geldigheid
+van de Nationaliteit.
+
+Nevenactie Registratie geslachtsnaam voornaam
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’ van de actie ‘Registratie nationaliteit’.
+
+Status: Definitief, versie: 0.7
+
+Pagina 7 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+3 Verlies Nederlandse nationaliteit
+3.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Verlies Nederlandse nationaliteit’ is het registreren van
+het verlies van de Nederlandse nationaliteit bij een persoon door intrekking ervan door de Minister
+of verkrijging van een vreemde nationaliteit.
+De hoofdpersoon is Nederlander en is ingezetene. De persoon kan overleden zijn, waarbij de
+gegevens worden opgenomen na datum van overlijden2.
+Bij de registratie van het verlies van de Nederlandse nationaliteit wordt altijd de reden van verlies
+van de Nederlandse nationaliteit opgenomen.
+Door het verlies van de Nederlandse nationaliteit kan de persoon staatloos worden. Dit moet
+worden geregistreerd met de administratieve handeling ‘Wijziging indicatie nationaliteit’.
+Het verlies van de Nederlandse nationaliteit kan terugwerken tot de ‘datum aanvang geldigheid’
+van de Nederlandse nationaliteit. Dit is het geval als het Nederlanderschap wordt ingetrokken
+omdat de persoon onvoldoende heeft gedaan om afstand te doen van zijn vreemde nationaliteit.
+Het nog geldige Nederlandse reisdocument vervalt van rechtswege. Dit wordt echter niet direct
+geregistreerd. In plaats daarvan wordt een waarschuwing gegeven opdat de ambtenaar actie
+onderneemt tot inname van het reisdocument.
+3.1.1
+•
+•
+•
+•
+•
+
+Brondocumenten
+
+Mededeling Minister inzake nationaliteit en geboorte
+Rechterlijke uitspraak Nederlandse nationaliteit
+Beschikking/uitspraak vreemde nationaliteit
+Verklaring van afstand Nederlanderschap
+Overig (meestal voor Rijkswet op het Nederlanderschap)
+
+3.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon (ingezetene)
+
+3.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [2].
+3.1.4
+•
+
+Bijhoudings(voorstel)partijen
+
+De bijhoudingspartij van de persoon.
+
+3.1.5
+•
+
+Vastgelegde gegevens
+
+Nationaliteit
+
+3.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Beëindiging nationaliteit
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’ van de actie ‘Beëindiging nationaliteit’.
+
+2
+
+De reden hiervan is dat ook na het overlijden van rechtswege kan worden vastgesteld dat een persoon Nederlander is.
+
+Status: Definitief, versie: 0.7
+
+Pagina 8 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+4 Verkrijging vreemde nationaliteit
+4.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Verkrijging vreemde nationaliteit’ is het registreren van
+een vreemde nationaliteit bij een persoon.
+De hoofdpersoon kan ingezetene, vreemdeling of staatloos zijn en mag alleen vreemde
+nationaliteiten hebben. De persoon mag niet overleden zijn.
+Het is mogelijk dat de voornaam en/of geslachtsnaam van de persoon wijzigt. Dit is het geval als
+de persoon geen voornaam of geslachtsnaam heeft of indien de spelling van zijn/haar naam niet
+voldoet aan de in het Koninkrijk gebruikelijke lettertekens.
+4.1.1
+•
+•
+•
+•
+
+Beschikking/uitspraak vreemde nationaliteit
+Geschrift vreemde nationaliteit
+Buitenlands reisdocument of identiteitsbewijs.
+Overig (meestal voor vreemd nationaliteitsrecht)
+
+4.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+Hoofdpersoon (ingezetene)
+
+4.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [2].
+4.1.4
+•
+
+De bijhoudingspartij van de persoon.
+
+4.1.5
+•
+•
+•
+
+4.2
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens
+
+Nationaliteit
+Staatloos (wordt beëindigd bij het verkrijgen van een vreemde nationaliteit)
+Naam (voornamen, geslachtsnaamcomponent, samengestelde naam en naamgebruik, waarbij
+samengestelde naam en naamgebruik worden afgeleid). Let op: Door een namenreeks kunnen
+voornamen verdwijnen of juist opgenomen worden.
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie nationaliteit
+Geen bijzonderheden voor deze actie.
+
+•
+
+Nevenactie Registratie geslachtsnaam voornaam
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’ van de actie ‘Registratie nationaliteit’.
+
+Status: Definitief, versie: 0.7
+
+Pagina 9 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+5 Verlies vreemde nationaliteit
+5.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Verlies vreemde nationaliteit’ is het registreren van het
+verlies van een vreemde nationaliteit bij een persoon.
+De hoofdpersoon is vreemdeling, in bezit van één of meerdere nationaliteiten, waarvan hij/zij er
+één of meerdere verliest. Ook kan de persoon overleden zijn, waarbij de gegevens worden
+opgenomen na datum van overlijden3.
+Door het verlies van een vreemde nationaliteit kan de persoon staatloos worden. Dit moet worden
+geregistreerd met de administratieve handeling ‘Wijziging indicatie nationaliteit’.
+5.1.1
+•
+•
+•
+
+Brondocumenten
+
+Beschikking/uitspraak vreemde nationaliteit
+Geschrift vreemde nationaliteit
+Overige (meestal voor vreemd nationaliteitsrecht)
+
+5.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon (ingezetene)
+
+5.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [2].
+5.1.4
+•
+
+Bijhoudings(voorstel)partijen
+
+De bijhoudingspartij van de persoon.
+
+5.1.5
+•
+
+Vastgelegde gegevens (indicatoren)
+
+Nationaliteit
+
+5.2
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Beëindiging nationaliteit
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’ van de actie ‘Beëindiging nationaliteit’.
+
+3
+
+De reden hiervan is dat ook na het overlijden van rechtswege kan worden vastgesteld dat een persoon Nederlander is.
+
+Status: Definitief, versie: 0.7
+
+Pagina 10 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+6 Beëindiging bijhouding vreemde nationaliteit
+6.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Beëindiging bijhouding vreemde nationaliteit’ is het
+beëindigen van de bijhouding van de vreemde nationaliteit die ten onrechte bij de verkrijging van
+de Nederlandse nationaliteit nog niet geregistreerd is bij de hoofdpersoon. De persoon heeft de
+Nederlandse nationaliteit wel al eerder verkregen.
+De Wet BRP schrijft voor dat naast het Nederlanderschap géén vreemde nationaliteit mag worden
+geregistreerd.
+De persoon is Nederlander en ingezetene. De persoon kan overleden zijn, waarbij de gegevens
+worden opgenomen na datum van overlijden.
+6.1.1
+•
+
+Overige (altijd voor Wet BRP)
+
+6.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+Hoofdpersoon (ingezetene)
+
+6.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [2].
+6.1.4
+•
+
+De bijhoudingspartij van de persoon.
+
+6.1.5
+•
+
+6.2
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens (indicatoren)
+
+Nationaliteit
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Beëindiging bijhouding nationaliteit
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’ van de actie ‘Beëindiging bijhouding nationaliteit’.
+
+Status: Definitief, versie: 0.7
+
+Pagina 11 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+7 Wijziging indicatie nationaliteit
+7.1
+
+Functionele context
+
+Het doel van de administratieve handeling ‘Wijziging indicatie nationaliteit’ is:
+-
+
+het registreren van het verkrijgen of het verliezen van de staatloosheid
+het registreren of het beëindigen van de registratie van de vaststelling dat een persoon de
+Nederlandse nationaliteit niet heeft en
+het registreren of het beëindigen van de registratie van de behandeling als Nederlander.
+
+Deze handeling wordt in de volgende situaties gebruikt:
+Persoon is/was staatloos
+Staatloosheid moet worden vastgesteld4 en moet daarom expliciet geregistreerd worden.
+Staatloosheid wordt altijd automatisch beëindigd bij het verkrijgen van een nationaliteit, zowel bij
+de Nederlandse als bij een vreemde nationaliteit, maar kan ook expliciet worden beëindigd.
+Persoon is/was vastgesteld niet-Nederlander (vreemdeling)
+Registratie van ‘Vastgesteld niet-Nederlander’ wordt geregistreerd naar aanleiding van een
+uitspraak/besluit van de Minister van Veiligheid & Justitie.
+‘Vastgesteld niet-Nederlander’ wordt altijd automatisch beëindigd bij het verkrijgen van de
+Nederlandse nationaliteit, maar kan ook expliciet worden beëindigd.
+In een openbaar register wordt bijgehouden wie het Nederlanderschap heeft verkregen of heeft
+verloren. In dit register worden ook de uitspraken/besluiten opgenomen dat is vastgesteld dat een
+persoon de Nederlandse nationaliteit al dan niet bezit.
+NB In deze situatie kan de persoon overleden zijn.
+Persoon wordt/werd behandeld als Nederlander
+Registratie van ‘Behandeld als Nederlander’ betreft een bijzondere status die ooit werd toegekend
+aan personen uit de Molukken die geen nationaliteit bezaten. Kinderen daarvan verkregen ook de
+status. Inmiddels is het zeer onwaarschijnlijk dat er, gelet op de leeftijd van de ouders, nog nieuwe
+registraties plaatsvinden.
+‘Behandeld als Nederlander’ wordt altijd automatisch beëindigd bij het verkrijgen van de
+Nederlandse nationaliteit, maar kan ook expliciet worden beëindigd.
+Vanwege eventuele vervuiling vanuit conversie zijn ook mogelijkheden aanwezig om de registratie
+van een indicator te kunnen beëindigen.
+7.1.1
+•
+•
+
+De Rijkswet op het Nederlanderschap;
+Een afschrift/uittreksel uit het openbare register van de Minister van Veiligheid & Justitie,
+Aruba, Curaçao en Sint Maarten m.b.t. het Nederlanderschap.
+
+7.1.2
+•
+
+Brondocumenten
+
+Betrokken personen
+
+Hoofdpersoon (ingezetene)
+
+7.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [2].
+
+4
+
+Hierop is echter een uitzondering: Wanneer bij een persoon de Nederlandse nationaliteit wordt ingetrokken, bijvoorbeeld
+omdat hij/zijn zich niet voldoende heeft ingespannen om van zijn vreemde nationaliteit af te komen, wordt deze persoon
+automatisch staatloos. Dit wordt echter niet afgeleid beëindigd door de administratieve handeling ‘Wijziging nationaliteit’,
+maar moet met de administratieve handeling ‘Wijziging indicatie nationaliteit’ worden vastgelegd.
+
+Status: Definitief, versie: 0.7
+
+Pagina 12 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+7.1.4
+•
+
+De bijhoudingspartij van de persoon.
+
+7.1.5
+•
+•
+•
+
+7.2
+
+Bijhoudings(voorstel)partijen
+
+Vastgelegde gegevens (indicatoren)
+
+Staatloos
+Vastgesteld niet Nederlander
+Behandeld als Nederlander
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Registratie staatloos (optioneel)
+Geen bijzonderheden voor deze actie.
+
+•
+
+Hoofdactie Beëindiging staatloos (optioneel)
+Geen bijzonderheden voor deze actie.
+
+•
+
+Hoofdactie Registratie vastgesteld niet Nederlander (optioneel)
+Geen bijzonderheden voor deze actie.
+
+•
+
+Hoofdactie Beëindiging vastgesteld niet Nederlander (optioneel)
+Geen bijzonderheden voor deze actie.
+
+•
+
+Hoofdactie Registratie behandeld als Nederlander (optioneel)
+Geen bijzonderheden voor deze actie.
+
+•
+
+Hoofdactie Beëindiging behandeld als Nederlander (optioneel)
+Geen bijzonderheden voor deze actie.
+
+Een registratieactie en een beëindigingsactie van hetzelfde gegeven is niet toegestaan in het
+bericht.
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling ‘Datum aanvang geldigheid’ dan wel ‘Datum einde geldigheid’ van bovenstaande acties.
+
+Status: Definitief, versie: 0.7
+
+Pagina 13 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+8 Correctie indicatie nationaliteit
+Het doel van de administratieve handeling ‘Correctie indicatie nationaliteit is het herstellen van een
+fout in de registratie van ‘Behandeld als Nederlander’, de registratie van het verkrijgen of verlies
+van de staatloosheid en/of de registratie van de vaststelling dat een persoon de Nederlandse
+nationaliteit niet heeft.
+Persoon is/was staatloos
+Correctie van de registratie van de indicatie ‘Staatloos’ moet plaatsvinden wanneer de indicatie ten
+onrechte is opgenomen of niet is opgenomen. Staatloosheid vervalt altijd bij het verkrijgen van een
+nationaliteit, Nederlandse of vreemde. Wanneer dit per abuis niet is gebeurd moet hiervoor de
+administratieve handeling ‘Wijziging indicatie nationaliteit’ worden gebruikt.
+Persoon is/was vastgesteld niet-Nederlander (vreemdeling)
+Correctie van de registratie van de indicatie ‘Vastgesteld niet- Nederlander’ moet plaatsvinden
+wanneer de indicatie ten onrechte is opgenomen of niet is opgenomen. Een persoon waarvan is
+vastgesteld dat hij/zij Nederlandse is, of juist niet, kan ook een overledene betreffen.
+Persoon word/werd behandeld als Nederlander
+Correctie van de registratie van de indicatie ‘Behandeld als Nederlander’ moet plaatsvinden
+wanneer de indicatie ten onrechte is opgenomen of niet is opgenomen. Wanneer bij verkrijging van
+de Nederlandse nationaliteit per abuis de indicatie niet is vervallen moet deze wijziging worden
+aangebracht met de AH ‘Wijziging indicatie nationaliteit’.
+8.1.1
+
+Brondocumenten
+
+Voor correctiehandelingen geldt dat alle soorten brondocumenten worden toegestaan. Zie
+ontwerpbeslissing in paragraaf 3.5 van Aspectbeschrijving – Corrigeren [6]. Voor de hand ligt
+echter dat als bron dezelfde bron wordt gebruikt als bij de AH ‘Wijziging indicatie nationaliteit’.
+8.1.2
+•
+
+Betrokken personen
+
+Hoofdpersoon (ingezetene of overledende i.g.v. vastgesteld niet-Nederlander)
+
+8.1.3
+
+Proces
+
+Bij deze administratieve handeling is het reguliere bijhoudingsproces van toepassing, zoals
+beschreven in UCS BY.0.AV – Afhandeling verzoek [2].
+8.1.4
+•
+
+Bijhoudings(voorstel)partijen
+
+De bijhoudingspartij van de persoon.
+
+8.1.5
+
+Vastgelegde gegevens
+
+Met deze administratieve handeling kunnen bestaande voorkomens van de onderstaande groepen
+van de gerelateerde persoon naar de formele historie vervallen en kunnen nieuwe voorkomens
+worden geregistreerd:
+•
+•
+•
+
+8.2
+
+Staatloos
+Vastgesteld niet Nederlander
+Behandeld als Nederlander
+
+Specifieke verwerking
+
+Het verwerken van deze administratieve handeling gebeurt met de onderstaande acties.
+•
+
+Hoofdactie Correctieverval staatloos (optioneel)
+Geen bijzonderheden voor deze actie.
+
+•
+
+Hoofdactie Correctieregistratie staatloos (optioneel)
+Geen bijzonderheden voor deze actie.
+
+Status: Definitief, versie: 0.7
+
+Pagina 14 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+•
+
+Hoofdactie Correctieverval vastgesteld niet-Nederlander (optioneel)
+Geen bijzonderheden voor deze actie.
+
+•
+
+Hoofdactie Correctieregistratie vastgesteld niet-Nederlander (optioneel)
+Geen bijzonderheden voor deze actie.
+
+•
+
+Hoofdactie Correctieverval behandeld als Nederlander (optioneel)
+Geen bijzonderheden voor deze actie.
+
+•
+
+Hoofdactie Correctieregistratie behandeld als Nederlander (optioneel)
+Geen bijzonderheden voor deze actie.
+
+De ‘peildatum’ voor het controleren van regels met een tijdsaspect is voor deze administratieve
+handeling is de systeemdatum.
+
+Status: Definitief, versie: 0.7
+
+Pagina 15 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+9 Acties
+De generiek functionaliteit van de relevante acties binnen de context van deze module is in dit
+hoofdstuk per actie beschreven.
+
+9.1
+
+Registratie staatloos
+
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+9.2
+
+Persoon.Staatloos
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Beëindiging staatloos
+
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+9.3
+
+Persoon.Staatloos
+Element
+
+Afleiding
+
+Datum einde geldigheid
+
+Actie.Datum einde geldigheid
+
+Registratie vastgesteld niet Nederlander
+
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+9.4
+
+Persoon.Vastgesteld niet Nederlander
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Beëindiging vastgesteld niet Nederlander
+
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+9.5
+
+Persoon.Vastgesteld niet Nederlander
+Element
+
+Afleiding
+
+Datum einde geldigheid
+
+Actie.Datum einde geldigheid
+
+Registratie behandeld als Nederlander
+
+Met de actie worden gegevens van de volgende groep geregistreerd:
+•
+
+9.6
+
+Persoon.Behandeld als Nederlander
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Beëindiging behandeld als Nederlander
+
+Met de actie worden gegevens van de volgende groep geregistreerd:
+
+Status: Definitief, versie: 0.7
+
+Pagina 16 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+•
+
+9.7
+
+Persoon.Behandeld als Nederlander
+Element
+
+Afleiding
+
+Datum einde geldigheid
+
+Actie.Datum einde geldigheid
+
+Correctieverval staatloos
+
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep:
+•
+
+9.8
+
+Persoon.Staatloos
+
+Correctieregistratie staatloos
+
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+
+9.9
+
+Persoon.Staatloos
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Datum einde geldigheid
+
+Actie.Datum einde geldigheid (indien aanwezig)
+
+Correctieverval vastgesteld niet-Nederlander
+
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep:
+•
+
+Persoon.Vastgesteld niet-Nederlander
+
+9.10 Correctieregistratie vastgesteld niet-Nederlander
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+
+Persoon.Vastgesteld niet-Nederlander
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Datum einde geldigheid
+
+Actie.Datum einde geldigheid (indien aanwezig)
+
+9.11 Correctieverval behandeld als Nederlander
+Het verval wordt geregistreerd van het in het bericht aangewezen voorkomen van de volgende
+groep:
+•
+
+Persoon.Behandeld als Nederlander
+
+9.12 Correctieregistratie behandeld als Nederlander
+Met de actie wordt een nieuw voorkomen van de volgende groep geregistreerd:
+•
+
+Persoon.Behandeld als Nederlander
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Status: Definitief, versie: 0.7
+
+Pagina 17 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+Datum einde geldigheid
+
+Actie.Datum einde geldigheid (indien aanwezig)
+
+9.13 Registratie nationaliteit
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+Persoon \ Nationaliteit.Identiteit
+
+•
+
+Persoon \ Nationaliteit. Standaard
+
+•
+
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon.Staatloos
+Als een Nationaliteit bij een Persoon wordt geregistreerd dan moet, indien er een niet
+beëindigd voorkomen van Staatloos geregistreerd staat, dit voorkomen afgeleid
+beëindigd worden op de datum aanvang geldigheid van de Nationaliteit.
+
+9.14 Registratie geslachtsnaam voornaam
+Met de actie worden gegevens van de volgende groepen geregistreerd:
+•
+
+Persoon \ Voornaam.Identiteit
+Deze groep wordt bij de persoon geregistreerd. Let op: Nieuwe voornamen worden
+altijd in zijn totaliteit meegegeven in het bericht. De oude voornamen worden allemaal
+materieel beëindigd.
+
+•
+
+Persoon \ Voornaam.Standaard
+Voor deze groep zijn er twee mogelijkheden:
+o
+
+o
+
+•
+
+•
+
+Als de groep aanwezig is in het bericht moet deze worden geregistreerd.
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Als de Namenreeks uit ‘Persoon.Samengestelde naam’ wordt gewijzigd in ‘Ja’
+worden alle voornamen afgeleid beëindigd.
+Element
+
+Afleiding
+
+Datum einde geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon \ Geslachtsnaamcomponent.Standaard
+De volgende elementen worden afgeleid geregistreerd:
+Element
+
+Afleiding
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon.Samengestelde naam
+Indien ‘Persoon.Samengestelde naam.Afgeleid?’ gelijk is aan ‘Nee’ dan wordt er niets
+afgeleid en wijzigt Persoon.Samengestelde naam niet.
+Indien ‘Persoon.Samengestelde naam.Afgeleid?’ gelijk is aan ‘Ja’ dan worden de
+volgende elementen afgeleid geregistreerd:
+Element
+
+Status: Definitief, versie: 0.7
+
+Afleiding
+
+Pagina 18 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+•
+
+Voornamen
+
+Algoritme, zie Aspectbeschrijving - Naamopbouw [3]
+
+Voorvoegsel
+
+Idem
+
+Scheidingsteken
+
+Idem
+
+Geslachtsnaamstam
+
+Idem
+
+Predicaat
+
+Idem
+
+Adellijke titel
+
+Idem
+
+Afgeleid?
+
+Overnemen uit het voorkomen dat door deze actie komt te vervallen.
+
+Datum aanvang geldigheid
+
+Actie.Datum aanvang geldigheid
+
+Persoon.Naamgebruik
+Deze groep wordt afgeleid geregistreerd.
+Element
+
+Afleiding
+
+Voornamen naamgebruik
+
+Algoritme, zie Aspectbeschrijving - Naamopbouw [3]
+
+Voorvoegsel naamgebruik
+
+Idem
+
+Scheidingsteken
+naamgebruik
+
+Idem
+
+Geslachtsnaamstam
+naamgebruik
+
+Idem
+
+Predicaat naamgebruik
+
+Idem
+
+Adellijke titel naamgebruik
+
+Idem
+
+Naamgebruik Afgeleid?
+
+Overnemen uit het voorkomen dat door deze actie komt te vervallen.
+
+9.15 Beëindiging nationaliteit
+Met de actie worden gegevens van de volgende groep beëindigd:
+•
+
+Persoon \ Nationaliteit. Standaard
+Element
+
+Afleiding
+
+Datum einde geldigheid
+
+Actie.Datum einde geldigheid
+
+9.16 Beëindiging bijhouding nationaliteit
+Met de actie vervalt de nationaliteit en krijgt deze de indicatie Bijhouding beëindigd?. Dit geldt ook
+als de nationaliteit al beëindigde is, zodat deze niet meer geleverd kan worden.
+
+Status: Definitief, versie: 0.7
+
+Pagina 19 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+10 Openstaande punten
+1. De uitwerking van het bericht en de bijbehorende regel van de administratieve handeling
+‘Correctie nationaliteit’ zoals deze is opgenomen in UCS BY.0.NAT - Bijlage Corrigeer
+nationaliteit [5] betreft een initiële aanzet hiervan en zijn nog niet gecontroleerd.
+
+Status: Definitief, versie: 0.7
+
+Pagina 20 van 21
+
+UCS BY.0.NAT - Nationaliteit
+
+11 Appendix A – BZVU en plaatsonafhankelijke bijhouding
+In onderstaande tabel staat per handeling aangegeven of het berichtelement BZVU (Bezien vanuit
+persoon) van toepassing is – inclusief motivatie – en de toegestane indienende partijen – ook
+inclusief motivatie.
+Wanneer BZVU niet van toepassing is zal het berichtelement niet aanwezig zijn in het bericht. Voor
+meer informatie over BZVU zie UCS BY.1.ON – Ontrelateren [1].
+Bij toegestane indienende partijen wordt vermeld of het bijhoudingsvoorstel (ook) door andere dan
+de eigen gemeente mag worden ingestuurd. In onderstaande tabel kan deze kolom de volgende
+waarden aannemen:
+•
+•
+•
+
+A(lle): het bijhoudingsvoorstel mag door elke bijhoudingspartij worden ingediend;
+H(uidige): het bijhoudingsvoorstel mag alleen door de huidige bijhoudingspartij worden
+ingediend;
+B(eperkt): het bijhoudingsvoorstel mag door een beperkt aantal bijhoudingspartijen
+worden ingediend. In de motivatie staat vermeld welke partijen dat zijn.
+
+Administratieve
+Handeling
+
+BZVU?
+
+Motivatie
+
+Plaatsonafh.
+bijh.?
+
+Toegestane indienende
+partij(en)
+
+Verkrijging Nederlandse
+nationaliteit
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Verlies Nederlandse
+nationaliteit
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Verkrijging vreemde
+nationaliteit
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Verlies vreemde
+nationaliteit
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Beëindiging bijhouding
+vreemde nationaliteit
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Correctie nationaliteit
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Wijziging indicatie
+nationaliteit
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Correctie indicatie
+nationaliteit
+
+N
+
+Het betreft slechts één
+persoonslijst.
+
+H
+
+Huidige bijhoudingspartij
+
+Status: Definitief, versie: 0.7
+
+Pagina 21 van 21
+
+

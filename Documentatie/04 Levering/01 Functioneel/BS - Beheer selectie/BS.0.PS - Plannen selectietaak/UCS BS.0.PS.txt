@@ -1,0 +1,1027 @@
+UCS BS.0.PS - Plannen selectietaak
+Versie
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Datum
+
+17 juli 2017
+
+Status
+
+Definitief
+
+Locatie
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+12-06-2017
+
+0.1
+
+oBRP
+
+Initiële opzet
+
+13-06-2017
+
+0.2
+
+Zoeken geen aparte UC’s, verder UC verder aangevuld
+
+oBRP
+
+14-06-2017
+
+0.3
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+15-06-2017
+
+0.4
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+19-06-2017
+
+0.5
+
+Schema regulier verloop aangepast, registreren
+planningsgegevens toegevoegd
+
+oBRP
+
+20-06-2017
+
+0.6
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+23-06-2017
+
+0.7
+
+‘Uploaden bestand’ uitgewerkt.
+
+oBRP
+
+27-06-2017
+
+0.8
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+27-06-2017
+
+0.9
+
+Aanvullende gegevens t.b.v. beheer verwijderd
+
+oBRP
+
+17-07-2017
+
+1.0
+
+Definitief gemaakt. Hfd openstaande punten toegevoegd
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.2
+
+Interne review
+
+0.3
+
+Interne review
+
+0.5
+
+Interne review
+
+0.7
+
+Interne review
+
+UCS BS.0.PS - Plannen selectietaak
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Gebruikersinteractie ................................................................................................. 4
+2.1
+2.2
+2.3
+2.4
+2.5
+2.5.1
+2.5.2
+2.5.3
+2.5.4
+
+3
+
+Aanleiding ............................................................................................................................4
+Preconditie ...........................................................................................................................4
+Postconditie .........................................................................................................................4
+Regulier verloop....................................................................................................................4
+Alternatief verloop ................................................................................................................5
+Geen in te plannen selectie gevonden..................................................................................5
+Uploaden bestand .............................................................................................................6
+Detailgegevens selectiedienst .............................................................................................6
+Gegevens onjuist ingevoerd ...............................................................................................6
+
+Systeemfuncties ....................................................................................................... 7
+3.1
+3.2
+3.3
+3.4
+
+4
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Beschrijving .........................................................................................................................7
+Schematische weergave.........................................................................................................7
+Beschrijving Use Cases ..........................................................................................................7
+Bedrijfsregels .......................................................................................................................9
+
+Ontwerpbeslissingen .............................................................................................. 10
+
+Bijlage I: Registratie plangegevens ................................................................................ 11
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 2 van 12
+
+UCS BS.0.PS - Plannen selectietaak
+
+1 Inleiding
+1.1
+
+Doel
+
+Een selectiedienst wordt uitgevoerd door selectietaken. Een selectietaak moet door de beheerder in
+de beheerapplicatie ingepland worden.
+Deze Use Case beschrijft de stappen die gezet moeten worden om een selectietaak in te plannen.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de gebruikersinteractie. In hoofdstuk 3 staan de systeemfuncties benoemd.
+In hoofdstuk 4 staan de Use Case specifieke ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+1.4
+
+Openstaande punten
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 3 van 12
+
+UCS BS.0.PS - Plannen selectietaak
+
+2 Gebruikersinteractie
+2.1
+
+Aanleiding
+
+De actor wil een selectietaak inplannen of een reeds ingeplande selectietaak wijzigen.
+
+2.2
+
+Preconditie
+
+De beheerder heeft in de beheerapplicatie de functie “Plannen selectie” aangeroepen.
+Er is een partij met een autorisatie voor de dienst Selecties. Bij deze selectiedienst is een
+selectiecriterium opgegeven en de eerste selectiedatum is gevuld.
+In het geval van een selectie op basis van een invoerbestand dan is het invoerbestand beschikbaar
+voor de gebruiker.
+
+2.3
+
+Postconditie
+
+Er is een selectietaak ingepland (selectietaak heeft de status ‘Ingepland’ of ‘Uitvoerbaar’) of de
+gegevens van een reeds ingeplande selectietaak zijn gewijzigd.
+
+2.4
+
+Regulier verloop
+
+In het regulier verloop wordt de interactie van de gebruiker met het systeem beknopt beschreven.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 4 van 12
+
+UCS BS.0.PS - Plannen selectietaak
+
+Stap
+
+Actor
+
+Actie
+
+Alternatief
+
+1.
+
+Systeem
+
+Geeft de gebruiker de mogelijkheid om een
+zoekvraag samen te stellen.
+
+2.
+
+Gebruiker
+
+Geeft de periode op waarbinnen de in te
+plannen selectie valt en eventuele
+aanvullende zoekcriteria.
+
+3.
+
+Systeem
+
+Stelt vast dat de ingevoerde gegevens juist
+zijn.
+
+4.
+
+Gebruiker
+
+Kiest welke selectietaak hij wil inplannen
+
+5.
+
+Systeem
+
+Geeft de gebruiker de mogelijkheid om
+gegevens met betrekking tot de
+selectietaak in te voeren of te wijzigen.
+Toont hierbij de gegevens van de
+betreffende selectiedienst.
+
+Geen in te plannen
+selectie gevonden
+(2.5.1)
+
+Uploaden bestand
+(2.5.2)
+Detailgegevens
+selectiedienst (2.5.3)
+
+Toont de berekende peilmomenten
+materieel en formeel resultaat aan de hand
+van de eenheid en het interval.
+Wanneer bij de selectiedienst is
+aangegeven dat aanvullend een
+invoerbestand gebruikt dient te worden met
+een lijst van Administratienummers of
+Burgerservicenummers dan geeft het
+systeem de mogelijkheid om het bestand te
+uploaden.
+6.
+
+Gebruiker
+
+Registreert en/of wijzigt de plangegevens
+van de selectietaak.
+Zie BS.1.PS.PS – Plangegevens registreren
+onder paragraaf 3.3.
+
+7.
+
+Gebruiker
+
+Wijzigt de status van de selectietaak.
+De status van de selectietaak kan alleen
+één van de volgende waarden krijgen:
+•
+•
+
+Gepland
+Geannuleerd
+
+8.
+
+Systeem
+
+Controleert de gegevens van de
+selectietaak en stelt vast of deze juist zijn
+ingevoerd.
+
+9.
+
+Systeem
+
+Slaat de gegevens van de selectietaak op.
+
+2.5
+
+Gegevens onjuist
+ingevoerd (2.5.4)
+
+Alternatief verloop
+
+In het alternatief verloop wordt de interactie van de gebruiker met het systeem beschreven
+wanneer deze interactie afwijkt van het regulier verloop.
+(Afkortingen: S = Stap, C = Conditie, A = Actie, V = Vervolg)
+2.5.1
+
+Geen in te plannen selectie gevonden
+
+S
+
+Stap 3 uit het regulier verloop
+
+C
+
+Er worden geen in te plannen selecties gevonden
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 5 van 12
+
+UCS BS.0.PS - Plannen selectietaak
+
+A
+
+Systeem geeft een melding: ‘Er zijn geen ingeplande selecties gevonden’
+
+V
+
+Stap 1 uit het regulier verloop
+
+2.5.2
+
+Uploaden bestand
+
+S
+
+Stap 5 uit het regulier verloop
+
+C
+
+Wanneer de gebruiker aangeeft bij de selectietaak dat er een selectielijst gebruikt moet
+worden.
+
+A
+
+•
+•
+•
+
+•
+•
+•
+V
+
+2.5.3
+
+Het systeem biedt de gebruiker de mogelijkheid om de selectielijst te uploaden
+wanneer dit is aangegeven bij de selectietaak.
+De gebruiker zoekt en selecteert het juiste bestand en slaat deze op bij de
+selectietaak.
+Voordat de selectie wordt opgeslagen wordt eerst het bestand gecontroleerd om
+te valideren of de inhoud overeenkomt met de gedefinieerde rubriek in de
+header. Dit houdt in:
+o Bestand is een CSV bestand
+o Eerste regel is de header en bevat ‘Administratienummer’ of
+‘Burgerservicenummer’
+o Onder de header staan numerieke waardes per regel
+o In het geval van een Administratienummer geldt: lengte 10
+o In het geval van een Burgerservicenummer geldt: lengte 9
+Indien niet aan deze voorwaarde wordt voldaan dan wordt er een foutmelding
+teruggegeven.
+De gebruiker geeft aan dat het bestand definitief geselecteerd en opgeslagen
+dient te worden bij de betreffende selectietaak.
+De bestandsnaam wordt vervolgens bij de selectietaak opgeslagen.
+
+Stap 6 uit het regulier verloop
+
+Detailgegevens selectiedienst
+
+S
+
+Stap 5 uit het regulier verloop
+
+C
+
+Wanneer de gebruiker aangeeft de selectiedienst bij de selectietaak in te willen zien.
+
+A
+
+Het systeem toont het detailoverzicht van de selectiedienst.
+De gebruiker heeft de mogelijkheid één of meerder gegevens te wijzigen en op te slaan.
+Het systeem controleert de ingevoerde gegevens en slaat de gegevens op.
+
+V
+
+2.5.4
+
+Stap 5 uit het regulier verloop
+
+Gegevens onjuist ingevoerd
+
+S
+
+Stap 8 uit het regulier verloop
+
+C
+
+Het systeem heeft vastgesteld dat één of meerdere gegevens onjuist zijn ingevoerd.
+In het geval er sprake is van een selectie op basis van een bestand dan wordt er ook
+gecontroleerd of er een bestand is toegevoegd.
+
+A
+
+Het systeem meldt dat er één of meerdere gegevens onjuist zijn ingevoerd.
+
+V
+
+Stap 5 uit het regulier verloop
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 6 van 12
+
+UCS BS.0.PS - Plannen selectietaak
+
+3 Systeemfuncties
+3.1
+
+Beschrijving
+
+Dit hoofdstuk beschrijft de hoofdfuncties met betrekking tot het plannen van een selectietaak.
+
+3.2
+
+Schematische weergave
+
+Voor een toelichting op de symbolen en kleurstelling die gebruikt zijn in de Use Case modellen
+wordt verwezen naar de Leeswijzer [1].
+
+3.3
+
+Beschrijving Use Cases
+
+Voor een meer gedetailleerde beschrijving van de functionaliteit en bijbehorende voorwaarden
+wordt verwezen naar de specificatie van de Use Cases en de aan de Use Cases gekoppelde regels
+in BMR.
+
+•
+
+BS.1.CS – Creëer selectietaken
+Met deze Use Case worden de initiële selectietaken gecreëerd op basis van de instellingen
+bij de selectiedienst en de overzichtsperiode met eventueel aanvullende zoekcriteria op het
+overzicht ‘In te plannen selectietaken’.
+Wanneer de functie ‘Plannen selectietaak’ wordt aangeroepen door de gebruiker worden er
+eerst selectietaken gecreëerd met een berekende selectiedatum die ligt in de periode vanaf
+een maand voor <vandaag> tot en met drie maanden na <vandaag>.
+
+•
+
+BS.1.RI – Raadplegen in te plannen selectietaken
+In deze stap worden de ‘in te plannen’ selectietaken en de reeds geplande selectietaken
+getoond op het scherm ‘Overzicht in te plannen selectietaken’.
+De gebruiker heeft hier de mogelijkheid om specifieke selectietaken te zoeken door het
+aanpassen van de overzichtsperiode en aanvullende zoekcriteria op te geven.
+Gegevens in het overzicht kunnen worden gesorteerd en gegroepeerd.
+
+•
+
+BS.1.RDS – Raadplegen detailgegevens selectietaak
+Vanuit het scherm ‘Raadplegen in te plannen selecties’ kan de gebruiker één selectietaak
+selecteren waarop de detailgegevens van de betreffende selectietaak worden getoond in
+het scherm ‘Detailgegevens selectietaak’. Op dit scherm worden de gegevens van de
+geselecteerde selectietaak getoond met de daarbij behorende dienst gegevens.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 7 van 12
+
+UCS BS.0.PS - Plannen selectietaak
+
+•
+
+BS.1.RDD – Raadplegen detailgegevens selectiedienst
+Vanuit het scherm ‘Detailgegevens selectietaak’ kan de gebruiker het detailscherm van de
+selectiedienst aanroepen. Op het detailscherm van de selectiedienst staan de gegevens van
+de betreffende dienst. Alle toegang leveringsautorisaties bij deze dienst en alle
+selectietaken.
+
+•
+
+BS.1.UB – Uploaden bestand
+Op het scherm ‘Detailgegevens selectietaak’ krijgt de gebruiker de mogelijkheid om een
+bestand met een selectielijst te uploaden wanneer de ‘Selectielijst gebruiken?’ indicator dit
+aangeeft.
+Wanneer de functionaliteit ‘Uploaden bestand’ wordt gekozen door de gebruiker dan kan de
+gebruiker het gewenste bestand zoeken en selecteren.
+In het bestand kan of een lijst met Administratienummers of een lijst met
+Burgerservicenummers opgenomen zijn.
+Het bestand is een CSV bestand met in de kopregel of de tekst Administratienummer of
+Burgerservicenummer. Daaronder een lijst met de betreffende nummers.
+Het systeem controleert of het geselecteerde bestand aan deze voorwaarden voldoet en
+geeft hiervan een melding aan de gebruiker.
+De bestandsnaam wordt vervolgens bij de selectietaak opgeslagen. Het is alleen mogelijk
+om een ander bestand te selecteren indien de status van de selectietaak ‘In te plannen’ is
+of ‘Gepland’.
+
+•
+
+BS.1.PS.PR – Plangegevens registreren
+Op het scherm ‘Detailgegevens selectietaak’ heeft de gebruiker de mogelijkheid om de
+planning gegevens van de selectietaak te registreren of te wijzigen.
+Om een selectietaak in te plannen moeten minimaal de volgende gegevens worden
+geregistreerd door de gebruiker:
+o
+o
+
+Datum planning, hier wordt de gewenste selectiedatum in gezet.
+Status, de status van de selectietaak wordt op ‘Ingepland’ gezet.
+
+In het overzicht in Bijlage I staat aangegeven welke gegevens initieel worden gevuld
+wanneer een selectietaak voor het eerst wordt ingepland. Ook staat in het overzicht welke
+gegevens tijdens het plannen geregistreerd kunnen worden of kunnen worden aangepast
+op het overzicht ‘Detailgegevens selectietaak’.
+Historie status selectietaak kan niet worden aangepast in dit overzicht door de gebruiker.
+
+Wijzigen selectiesoort
+Initieel wordt de selectiesoort van de selectietaak overgenomen vanuit de selectiedienst.
+Ten behoeve van het “controle en herstel” proces van de beheerder is het mogelijk om de
+soort selectiedienst van een selectietaak aan te passen. Voor een selectiedienst met
+plaatsing of verwijdering afnemerindicatie kan zo eerst een standaard selectiedienst
+uitgevoerd worden zodat het resultaat gecontroleerd kan worden.
+Hieronder zijn de toegestane wijzigingen met betrekking tot de selectiesoorten
+weergegeven:
+Geautoriseerd (Dienst)
+
+Controle
+
+Herstel
+
+Standaard selectiedienst
+
+nvt
+
+Nvt
+
+Selectiedienst met plaatsing
+afnemerindicatie
+
+Standaard selectiedienst
+
+Selectiedienst met verwijdering
+afnemerindicatie
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 8 van 12
+
+UCS BS.0.PS - Plannen selectietaak
+
+Selectiedienst met
+verwijdering afnemerindicatie
+
+Standaard selectiedienst
+
+Selectiedienst met plaatsing
+afnemerindicatie
+
+Wanneer een wijziging wordt opgeslagen naar een soort selectiedienst anders dan de
+Standaard selectiedienst dan geeft de beheerapplicatie een melding:
+“Let op! Deze soort selectiedienst wijkt af van de voor deze partij geautoriseerde soort
+selectiedienst.”
+
+3.4
+
+Bedrijfsregels
+
+Voor een toelichting op de verschillende soorten bedrijfsregels, de meldingsniveaus, de toepassing
+en werking ervan in het bijhoudingsproces, wordt verwezen naar de daartoe opgestelde
+aspectbeschrijving Controles [2].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels, verwerkingslogica en definitieregels zijn opgenomen de bijlage: BS.0.PS – Bijlage
+Plannen selectietaak.doc
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 9 van 12
+
+UCS BS.0.PS - Plannen selectietaak
+
+4 Ontwerpbeslissingen
+Er zijn geen Use Case specifieke ontwerpbeslissingen.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 10 van 12
+
+UCS BS.0.PS - Plannen selectietaak
+
+Bijlage I: Registratie plangegevens
+Selectiedienst
+Dienst ID
+
+Initieel gevuld
+
+Niet aanpasbaar
+
+Partijcode
+
+Initieel gevuld
+
+Niet aanpasbaar
+
+Partij
+
+Initieel gevuld
+
+Niet aanpasbaar
+
+Stelsel
+
+Initieel gevuld
+
+Niet aanpasbaar
+
+Selectiesoort dienst
+
+Initieel gevuld
+
+Niet aanpasbaar
+
+Eerste selectiedatum
+
+Initieel gevuld
+
+Niet aanpasbaar
+
+Selectie interval
+
+Initieel gevuld / of leeg
+
+Niet aanpasbaar
+
+Eenheid selectie
+interval
+
+Initieel gevuld / of leeg
+
+Niet aanpasbaar
+
+Selectiecriterium
+
+Initieel gevuld / of leeg
+
+Niet aanpasbaar
+
+Dienst peilmoment
+materieel resultaat
+
+Initieel gevuld / of leeg
+
+Niet aanpasbaar
+
+Dienst peilmoment
+formeel resultaat
+
+Initieel gevuld / of leeg
+
+Niet aanpasbaar
+
+Historievorm selectie
+
+Initieel gevuld / of leeg
+
+Niet aanpasbaar
+
+Selectieresultaat
+controleren?
+
+Initieel gevuld
+
+Aanpasbaar
+
+Maximaal aantal
+personen per
+selectiebestand
+
+Initieel gevuld / of leeg
+
+Aanpasbaar, mits de status van de
+selectietaak één van de volgende
+waarde heeft:
+•
+•
+
+Maximale grootte
+selectiebestand
+
+Initieel gevuld / of leeg
+
+In te plannen
+Gepland
+
+Aanpasbaar, mits de status van de
+selectietaak één van de volgende
+waarde heeft:
+•
+•
+
+In te plannen
+Gepland
+
+Verzend volledig
+bericht bij wijziging
+afnemerindicatie na
+selectie?
+
+Initieel gevuld / of leeg
+
+Aanpasbaar
+
+Leverwijze selectie
+
+Initieel gevuld / of leeg
+
+Aanpasbaar
+
+Aanvullende gegevens selectiedienst t.b.v. beheer
+Medium selectie
+
+Initieel gevuld / of leeg
+
+Aanpasbaar
+
+Verwacht aantal
+personen
+
+Initieel gevuld / of leeg
+
+Aanpasbaar
+
+Certificaat selectie
+
+Initieel gevuld / of leeg
+
+Aanpasbaar
+
+Bewerker selectie
+
+Initieel gevuld / of leeg
+
+Aanpasbaar
+
+E-mail
+contactpersoon
+
+Initieel gevuld / of leeg
+
+Aanpasbaar
+
+Selectietaak
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 11 van 12
+
+UCS BS.0.PS - Plannen selectietaak
+
+Selectietaak ID
+
+Initieel gevuld
+
+Niet aanpasbaar
+
+Toegang
+leveringsautorisatie
+
+Initieel gevuld
+
+Niet aanpasbaar
+
+Selectiesoort taak
+
+Initieel gevuld vanuit de dienst
+
+Aanpasbaar, mits de status van de
+selectietaak één van de volgende
+waarde heeft:
+•
+•
+
+In te plannen
+Gepland
+
+Berekende
+selectiedatum
+
+Initieel gevuld, berekend
+
+Niet aanpasbaar
+
+Datum planning
+
+Leeg
+
+Aanpasbaar, mits de status van de
+selectietaak één van de volgende
+waarde heeft:
+•
+•
+
+In te plannen
+Gepland
+
+Datum uitvoer
+
+Leeg
+
+Niet aanpasbaar
+
+Peilmoment formeel
+resultaat selectietaak
+
+Initieel gevuld met peilmomenten
+uit de dienst. Bij een periodieke
+selectie worden de peilmomenten
+opgehoogd met het interval en de
+eenheid conform de berekende
+selectiedatum / of leeg
+
+Aanpasbaar, mits de status van de
+selectietaak één van de volgende
+waarde heeft:
+
+Initieel gevuld met peilmomenten
+uit de dienst. Bij een periodieke
+selectie worden de peilmomenten
+opgehoogd met het interval en de
+eenheid conform de berekende
+selectiedatum / of leeg
+
+Aanpasbaar, mits de status van de
+selectietaak één van de volgende
+waarde heeft:
+
+Initieel gevuld
+
+Aanpasbaar, mits de status van de
+selectietaak één van de volgende
+waarde heeft:
+
+Peilmoment materieel
+resultaat selectietaak
+
+Selectielijst
+gebruiken?
+
+•
+•
+
+•
+•
+
+•
+•
+
+In te plannen
+Gepland
+
+In te plannen
+Gepland
+
+In te plannen
+Gepland
+
+Bestandsnaam
+selectielijst
+
+Leeg
+
+Niet aanpasbaar
+
+Selectierun
+
+Leeg, wordt gevuld nadat
+selectietaak is uitgevoerd
+
+Niet aanpasbaar
+
+Status
+
+Initieel de waarde ‘In te plannen’
+
+Aanpasbaar, mogelijke waarden:
+•
+•
+
+‘Gepland’
+‘Geannuleerd’
+
+Status gewijzigd door
+
+Initieel gevuld met de waarde
+‘Systeem’
+
+Niet aanpasbaar, wordt
+automatisch gevuld bij
+statuswijzigingen.
+
+Status toelichting
+
+Leeg
+
+Aanpasbaar
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 12 van 12
+
+

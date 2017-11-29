@@ -1,0 +1,483 @@
+UCS BS.1.RV – Raadplegen vrij te geven
+selectietaken
+Versie
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Datum
+
+17 juli 2017
+
+Status
+
+Definitief
+
+Documenthistorie
+Datum
+
+Versie Beschrijving
+
+Auteur
+
+29-06-2017
+
+0.1
+
+Eerste opzet
+
+oBRP
+
+03-07-2017
+
+0.2
+
+Reviewcommentaar verwerkt
+
+oBRP
+
+17-07-2017
+
+1.0
+
+Definitief gemaakt. Hfd openstaande punten toegevoegd
+
+oBRP
+
+Reviewhistorie
+Versie Reviewer
+0.1
+
+Interne review
+
+UCS BS.1.RV – Raadplegen vrij te geven selectietaken
+
+Inhoudsopgave
+
+1
+
+Inleiding ................................................................................................................... 3
+1.1
+1.2
+1.3
+
+2
+
+Gebruikersinteractie ................................................................................................. 4
+2.1
+2.2
+2.3
+2.4
+2.4.1
+2.4.2
+
+3
+
+Doel ....................................................................................................................................3
+Leeswijzer ............................................................................................................................3
+Referenties ..........................................................................................................................3
+
+Preconditie ...........................................................................................................................4
+Postconditie .........................................................................................................................4
+Regulier verloop....................................................................................................................4
+Alternatief verloop ................................................................................................................4
+Ingevoerde gegevens onjuist..............................................................................................5
+Geen vrij te geven selecties gevonden .................................................................................5
+
+Schermonderdelen .................................................................................................... 6
+3.1
+3.2
+3.3
+3.4
+3.5
+
+Overzicht in te plannen selectietaken.......................................................................................6
+Zoekcriteria..........................................................................................................................6
+Sorteren ..............................................................................................................................6
+Selecteren............................................................................................................................6
+Overige functionaliteiten ........................................................................................................7
+
+4
+
+Bedrijfsregels ........................................................................................................... 8
+
+5
+
+Ontwerpbeslissingen ................................................................................................ 9
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 2 van 9
+
+UCS BS.1.RV – Raadplegen vrij te geven selectietaken
+
+1 Inleiding
+1.1
+
+Doel
+
+Deze Use Case beschrijft de wijze waarop de gebruiker een overzicht krijgt van de vrij te geven
+selectietaken.
+Vanuit dit overzicht kunnen de Use Cases met betrekking tot het raadplegen van de detailgegevens
+van de selectietaak of het raadplegen van de detailgegevens van de selectiedienst aangeroepen
+worden.
+Bij het openen van het scherm toont het overzicht alle vrij te geven selectietaken waarvoor geldt
+dat de status van de selectietaak ‘Gepland’ is.
+De gebruiker heeft de mogelijkheid om één of meerdere selectietaken te selecteren om deze
+vervolgens vrij te geven.
+
+Ook kan de gebruiker het overzicht op verscheidene gegevens sorteren.
+
+1.2
+
+Leeswijzer
+
+Hoofdstuk 2 beschrijft de gebruikersinteractie. In hoofdstuk 3 staan de schermonderdelen
+beschreven. In hoofdstuk 4 staan de Use Case specifieke ontwerpbeslissingen beschreven.
+
+1.3
+
+Referenties
+
+Nr.
+
+Documentnaam
+
+Organisatie
+
+Versie
+
+Datum
+
+1
+
+Leeswijzer BRP
+
+Operatie BRP
+
+-
+
+-
+
+2
+
+Aspectbeschrijving Controles
+
+Operatie BRP
+
+-
+
+-
+
+1.4
+
+Openstaande punten
+•
+
+Ondersteunen dat een gebruiker alleen niet door zichtzelf geplande selectietaken kan
+vrijgeven?
+
+•
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 3 van 9
+
+UCS BS.1.RV – Raadplegen vrij te geven selectietaken
+
+2 Gebruikersinteractie
+2.1
+
+Preconditie
+
+De gebruiker heeft de functie ‘Vrijgeven selectietaken” aangeroepen.
+Er zijn één of meerdere selectietaken gepland, deze hebben de status ‘Gepland’.
+
+2.2
+
+Postconditie
+
+De gebruiker heeft een overzicht van vrij te geven selecties gekregen.
+
+2.3
+
+Regulier verloop
+
+In het regulier verloop wordt de interactie van de actor met het systeem beknopt beschreven.
+
+Stap
+
+Actor
+
+Actie
+
+1.
+
+Gebruiker
+
+Vraagt een overzicht op van vrij te geven
+selecties.
+
+2.
+
+Systeem
+
+Toont een overzicht van vrij te geven
+selectietaken.
+De selectietaken worden oplopend gesorteerd
+op ‘Datum planning’ en vervolgens op ‘Partij’.
+
+Alternatief
+
+Geen vrij te geven
+selecties gevonden
+(2.4.2)
+
+Voor de gegevens in het overzicht zie
+paragraaf (3.1).
+De gebruiker heeft de mogelijkheid om de
+gegevens in het overzicht te sorteren (zie
+paragraven 3.3).
+3.
+
+Systeem
+
+Geeft de gebruiker de mogelijkheid om een
+zoekvraag samen te stellen.
+
+4.
+
+Gebruiker
+
+Stelt een zoekvraag samen..
+De gebruiker kan een zoekcriterium invullen
+(zie paragraaf 3.2).
+
+5.
+
+Systeem
+
+Stelt vast dat de ingevoerde gegevens juist
+zijn.
+
+Ingevoerde gegevens
+onjuist (2.4.1)
+
+6.
+
+Systeem
+
+Toont een overzicht van vrij te geven selecties
+op basis van de ingevoerde zoekvraag.
+
+Geen vrij te geven
+selecties gevonden
+(2.4.2)
+
+2.4
+
+Alternatief verloop
+
+In het alternatief verloop wordt de interactie van de actor met het systeem beschreven wanneer
+deze interactie afwijkt van het regulier verloop.
+(Afkortingen: S = Stap, C = Conditie, A = Actie, V = Vervolg)
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 4 van 9
+
+UCS BS.1.RV – Raadplegen vrij te geven selectietaken
+
+2.4.1
+
+Ingevoerde gegevens onjuist
+
+S
+
+Stap 5 uit het regulier verloop
+
+C
+
+Het systeem stelt vast dat er één of meerdere ingevoerde gegevens onjuist zijn.
+
+A
+
+Het systeem geeft een melding dat één of meer gegevens onjuist zijn ingevoerd.
+
+V
+
+Stap 3 uit het regulier verloop
+
+2.4.2
+
+Geen vrij te geven selecties gevonden
+
+S
+
+Stap 2 en stap 6 uit het regulier verloop
+
+C
+
+Er worden geen vrij te geven selecties gevonden
+
+A
+
+Systeem geeft een melding: ‘Er zijn geen vrij te geven selecties gevonden’.
+
+V
+
+Stap 3 uit het regulier verloop
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 5 van 9
+
+UCS BS.1.RV – Raadplegen vrij te geven selectietaken
+
+3 Schermonderdelen
+3.1
+
+Overzicht in te plannen selectietaken
+
+Het overzicht toont alle vrij te geven selecties.
+In de onderstaande tabel is een overzicht te vinden van de gegevens die getoond worden van de
+vrij te geven selectietaken.
+Naam
+
+BRP Attribuut
+
+Dienst ID
+
+Selectietaak.Dienst
+
+Selectietaak ID
+
+Selectietaak.SelectietaakID
+
+Toegang
+leveringsautorisatie
+
+Selectietaak.Toegang leveringsautorisatie
+
+Partij
+
+Toegang Leveringsautorisatie.Geautoriseerde.Partij.Naam
+
+Selectiesoort
+
+Dienst.Soort selectie
+
+Berekende selectiedatum
+
+<berekende waarde>
+
+Datum planning
+
+Selectietaak.Datum planning
+
+Status
+
+Selectietaak.Status
+
+Gewijzigd door
+
+Selectietaak.Status gewijzigd door
+
+Toelichting status
+
+Indicator of Selectietaak.Status Toelichting aanwezig is.
+
+Indien er een toelichting bij de status aanwezig is dan wordt dit in het overzicht weergegeven. De
+gebruiker kan er vervolgens voor kiezen om de toelichting getoond te krijgen.
+
+3.2
+
+Zoekcriteria
+•
+•
+
+3.3
+
+Elk gegeven op het overzicht kan als aanvullend zoekcriterium toegevoegd worden door de
+gebruiker met uitzondering van de “Toelichting status”.
+In het overzicht staan de vrij te geven selectietaken (status selectietaak is gelijk aan
+‘Gepland’).
+
+Sorteren
+
+De selectietaken in het overzicht worden standaard oplopend gesorteerd op de geplande
+selectiedatum.
+De gebruiker heeft de mogelijkheid om ook de sortering aan te passen. De sortering kan aangepast
+worden naar elk gegeven dat getoond wordt van de selectietaak in het overzicht.
+
+3.4
+
+Selecteren
+
+Een selectietaak kan uit het overzicht geselecteerd worden om deze selectietaak vervolgens direct
+vrij te geven zonder raadplegen van het detailoverzicht van de selectietaak.
+Ook kan de gebruiker meerdere selectietaken selecteren om deze direct vrij te geven.
+Daarnaast heeft de gebruiker de mogelijkheid om een enkele selectietaak te selecteren uit het
+overzicht waarna het detailoverzicht van de selectietaak wordt getoond.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 6 van 9
+
+UCS BS.1.RV – Raadplegen vrij te geven selectietaken
+
+3.5
+
+Overige functionaliteiten
+•
+•
+
+Het totaal aantal resultaten in het overzicht selectietaken wordt als getal getoond.
+De gebruiker krijgt de mogelijkheid om door de resultaten te ‘bladeren’ op de volgende
+manieren:
+o Vooruit/achteruit bladeren per pagina
+o Eerste/laatste pagina te selecteren
+o Een blad nummer te kunnen kiezen
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 7 van 9
+
+UCS BS.1.RV – Raadplegen vrij te geven selectietaken
+
+4 Bedrijfsregels
+Voor een toelichting op de verschillende soorten bedrijfsregels wordt verwezen naar de daartoe
+opgestelde aspectbeschrijving Controles [2].
+De in de procesflow van deze Use Case betrokken invoervalidatieregels, autorisatieregels,
+controleregels, verwerkingslogica en definitieregels zijn opgenomen de bijlage: BS.1.RV – Bijlage
+Raadplegen vrij te geven selectietaken.doc
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 8 van 9
+
+UCS BS.1.RV – Raadplegen vrij te geven selectietaken
+
+5 Ontwerpbeslissingen
+Er zijn geen Use Case specifieke ontwerpbeslissingen.
+
+Status: Definitief, versie:
+
+Fout! Onbekende naam voor documenteigenschap.
+
+Pagina 9 van 9
+
+

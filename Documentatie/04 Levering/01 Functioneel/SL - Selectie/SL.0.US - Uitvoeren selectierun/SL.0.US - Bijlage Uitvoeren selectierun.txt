@@ -1,0 +1,716 @@
+SL.0.US - Bijlage Uitvoeren selectierun
+Versie: Werk
+Gegenereerd op: 21 juli 2017
+Status: Definitief
+
+1 Regels voor usecase SL.1.US.RS - Registreer selectierun
+1.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2571
+
+1
+
+Registreer selectierun
+
+2 Regels voor usecase SL.1.US.CU - Controleer uitvoerbare
+selectietaken
+2.1
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2016
+
+1
+
+2.2
+
+'Systeemdatum'
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2570
+
+2
+
+Controleer uitvoerbare selectietaken
+
+3 Regels voor usecase SL.1.US.CA - Controleer autorisatie
+selectietaak
+3.1
+
+Autorisatieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R1262
+
+11
+
+F
+
+De gevraagde dienst moet geldig zijn
+
+R1263
+
+7
+
+F
+
+De leveringsautorisatie mag niet geblokkeerd zijn
+
+R1264
+
+6
+
+F
+
+De gevraagde dienst mag niet geblokkeerd zijn
+
+R2052
+
+5
+
+F
+
+De toegang leveringsautorisatie mag niet geblokkeerd zijn
+
+R2056
+
+6
+
+F
+
+De dienstbundel van de gevraagde dienst mag niet geblokkeerd zijn
+
+R2239
+
+5
+
+F
+
+De dienstbundel waarin de gevraagde dienst is opgenomen moet geldig zijn
+
+R2647
+
+2
+
+F
+
+De toegang leveringsautorisatie van de selectietaak moet geldig zijn
+
+R2648
+
+1
+
+F
+
+De leveringsautorisatie waarvoor de selectietaak wordt uitgevoerd moet
+geldig zijn
+
+R2649
+
+2
+
+F
+
+De combinatie partij en rol van de toegang leveringsautorisatie moet geldig
+zijn
+
+R2650
+
+1
+
+F
+
+De geautoriseerde partij moet geldig zijn
+
+3.2
+
+Definitieregels
+
+Code
+
+Versie Niveau Omschrijving
+
+R2016
+
+1
+
+'Systeemdatum'
+
+R2050
+
+2
+
+De toegang leveringsautorisatie van een verzoekbericht
+
+R2085
+
+3
+
+De dienst die gevraagd wordt
+
+R2129
+
+2
+
+Geldig
+
+3.3
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2258
+
+5
+
+Dienstbundels met onvolledig geconverteerde populatiebeperkingen buiten
+beschouwing laten
+
+R2574
+
+3
+
+Aanmaken logregel na autorisatie fout bij selecties
+
+4 Regels voor usecase SL.1.US.VS - Voeg selectietaak toe aan
+run
+4.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2572
+
+2
+
+Voeg selectierun toe aan selectietaak
+
+5 Regels voor usecase SL.1.US.AS - Afronden selectierun
+5.1
+
+Verwerkingslogica
+
+Code
+
+Versie Niveau Omschrijving
+
+R2575
+
+1
+
+Rond selectierun af
+
+6 Uitwerking regels
+R1262
+De gevraagde dienst moet geldig zijn
+Definitie:
+
+De De dienst die gevraagd wordt (R2085) moet Geldig (R2129) zijn op
+'Systeemdatum' (R2016).
+
+Versie:
+
+11
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De gevraagde dienst is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R1263
+De leveringsautorisatie mag niet geblokkeerd zijn
+Definitie:
+
+Bij de Leveringsautorisatie bij De dienst die gevraagd wordt (R2085) moet
+Leveringsautorisatie.Geblokkeerd? ongelijk zijn aan "Ja"
+
+Versie:
+
+7
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven leveringsautorisatie is geblokkeerd door de beheerder.
+
+Loggingsniveau:
+
+Illegale poging
+
+R1264
+De gevraagde dienst mag niet geblokkeerd zijn
+Definitie:
+
+Bij De dienst die gevraagd wordt (R2085) moet de Dienst.Geblokkeerd? ongelijk zijn
+aan "Ja".
+
+Versie:
+
+6
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De gevraagde dienst is geblokkeerd door de beheerder.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2016
+'Systeemdatum'
+Definitie:
+
+De systeemdatum is de actuele datum tijdens het evalueren van een regel van het
+BRP syteem en heeft het formaat 'jjjjmmdd'.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2050
+De toegang leveringsautorisatie van een verzoekbericht
+Definitie:
+
+Bij een leveringsverzoek kunnen we het voorkomen van Toegang
+leveringsautorisatie aanwijzen dat overeenkomt met de inhoud van de
+stuurgegevens en de OIN's uit de gebruikte certificaten voor ondertekening en
+transport van het bericht. Dit noemen we 'de toegang leveringsautorisatie van het
+verzoekbericht'.
+De context van deze definitie bestaat uit de volgende input:
+
+•
+•
+•
+•
+•
+
+De waarde van Bericht.Zendende partij uit de stuurgegevens van het
+inkomende bericht. Deze bevat een Partij.Code die de 'Geautoriseerde Partij'
+aanduidt.
+Alleen bij bevragingen: De waarde van Bericht.Rol uit de parameters van het
+inkomende bericht. Deze bevat een Rol.Naam die de 'Rol' aanduidt.
+De waarde van Bericht.Leveringsautorisatie uit de parameters van het
+inkomende bericht. Deze bevat een Leveringsautorisatie.ID die de
+'Leveringsautorisatie' aanduidt.
+Het OIN van het PKI-overheidscertificaat waarmee het bericht was
+ondertekend. Dit OIN noemen we de 'Ondertekenaar'.
+Het OIN van het PKI-overheidscertificaat waarmee de beveiligde verbinding
+was opgezet. Dit OIN noemen we de 'Transporteur'
+
+'De toegang leveringsautorisatie van een verzoekbericht' is het voorkomen van
+Toegang leveringsautorisatie waarvoor geldt dat:
+Bij bevragingen (Bericht.Rol is opgegeven):
+• Toegang leveringsautorisatie.Geautoriseerde verwijst naar de Partij \ Rol van
+'Geautoriseerde Partij' en 'Rol'
+Bij niet-bevragingen (Bericht.Rol niet opgegeven):
+• Toegang leveringsautorisatie.Geautoriseerde verwijst naar een Partij \ Rol van
+'Geautoriseerde Partij'
+En bovendien (in alle gevallen):
+• Toegang leveringsautorisatie.Leveringsautorisatie verwijst naar
+de'Leveringsautorisatie'
+• De ondertekenaar klopt:
+• Het OIN van de partij Toegang leveringsautorisatie.Ondertekenaar gelijk is
+aan de 'Ondertekenaar' OF
+• Toegang leveringsautorisatie.Ondertekenaar leeg is en 'Ondertekenaar'
+gelijk is aan de OIN van de 'Geautoriseerde Partij'
+• De transporteur klopt:
+• Het OIN van de Partij Toegang leveringsautorisatie.Transporteur gelijk is
+aan de 'Transporteur' OF
+• Toegang leveringsautorisatie.Transporteur leeg is en 'Transporteur' gelijk
+is aan de OIN van de 'Geautoriseerde Partij'
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2052
+De toegang leveringsautorisatie mag niet geblokkeerd zijn
+Definitie:
+
+De Toegang leveringsautorisatie.Geblokkeerd? bij de te controleren
+Leveringsautorisatie moet ongelijk zijn aan "Ja".
+Indien het een afhandeling van een leveringsverzoek betreft dan dient De toegang
+leveringsautorisatie van een verzoekbericht (R2050) gecontroleerd te worden.
+Indien het een Selectie betreft dan dient de Selectietaak.Toegang
+leveringsautorisatie gecontroleerd te worden.
+
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De toegang leveringsautorisatie is geblokkeerd door de beheerder.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2056
+De dienstbundel van de gevraagde dienst mag niet geblokkeerd zijn
+Definitie:
+
+Bij de Dienstbundel van De dienst die gevraagd wordt (R2085) moet
+Dienstbundel.Geblokkeerd? ongelijk zijn aan "Ja".
+
+Versie:
+
+6
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De dienstbundel van de gevraagde dienst is geblokkeerd door de beheerder.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2085
+De dienst die gevraagd wordt
+Definitie:
+
+De _'Dienst die gevraagd wordt'_ leiden we als volgt af:
+
+•
+
+In het geval van een bevraging (het verzoekbericht bevat de parameter
+Bericht.Dienst):
+De Dienst met Dienst.ID gelijk aan de berichtparameter Bericht.Dienst
+
+•
+
+Voor overige verzoekberichten (het bericht bevat NIET de parameter
+Bericht.Dienst) betekent dit:
+Het voorkomen van Dienst:
+• Zich bevindt onder de Leveringsautorisatie die in het bericht is opgegeven
+middels berichtparameter Bericht.Leveringsautorisatie
+• De Soort dienst heeft, die volgt uit de berichtsoort en de handeling in het
+bericht:
+• Registreer afnemerindicatie => waarbij de berichtparameter
+Bericht.Administratieve handeling = "Plaatsing afnemerindicatie"
+• Registreer afnemerindicatie => waarbij de berichtparameter
+Bericht.Administratieve handeling = "Verwijdering afnemerindicatie"
+• Geef synchronisatie persoon => Synchronisatie persoon
+• Geef synchronisatie stamgegeven => Synchronisatie stamgegeven
+• Geef StUF BG bericht => Geef StUF BG bericht
+
+•
+
+Voor selecties (is er geen verzoekbericht):
+De Dienst met Dienst.ID gelijk aan Selectietaak.Dienst
+
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R2129
+Geldig
+Definitie:
+
+Een object is geldig op een peildatum als:
+De Datum aanvang geldigheid op of voor de peildatum ligt en de Datum einde
+geldigheid na de peildatum ligt.
+of
+De Datum ingang op of voor de peildatum ligt en de Datum einde na de peildatum
+ligt.
+
+(dus: de geldigeheidsperiode is inclusief de ingangsdatum, maar exclusief de
+einddatum)
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2239
+De dienstbundel waarin de gevraagde dienst is opgenomen moet geldig zijn
+Definitie:
+
+De Dienstbundel die behoort bij de De dienst die gevraagd wordt (R2085) moet
+Geldig (R2129) zijn op 'Systeemdatum' (R2016).
+
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De dienstbundel is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2258
+Dienstbundels met onvolledig geconverteerde populatiebeperkingen buiten beschouwing
+laten
+Definitie:
+
+Dienstbundels waarbij Dienstbundel.Nadere populatiebeperking volledig
+geconverteerd? gelijk is aan "Nee" dienen buiten beschouwing gelaten te worden.
+
+Versie:
+
+5
+
+Soort:
+
+Verwerkingslogica
+
+R2570
+Controleer uitvoerbare selectietaken
+Definitie:
+
+Selectietaak.Datum planning moet gelijk zijn aan 'Systeemdatum' (R2016)
+EN
+Selectietaak.Status = 'Uitvoerbaar'
+
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R2571
+Registreer selectierun
+Definitie:
+
+Registreer een nieuwe Selectierun waarbij
+Selectierun.Tijdstip start is gelijk aan Datum\tijd systeem.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2572
+Voeg selectierun toe aan selectietaak
+Definitie:
+
+Voeg Selectierun.ID toe aan Selectietaak.Uitgevoerd in
+EN
+wijzig de status van de selectietaak naar
+Selectietaak.Status = 'In uitvoering'
+
+Versie:
+
+2
+
+Soort:
+
+Verwerkingslogica
+
+R2574
+Aanmaken logregel na autorisatie fout bij selecties
+Definitie:
+
+Indien een selectietaak niet door de autorisatiecontrole komt dan moet dit in de log
+geregistreerd worden.
+
+Versie:
+
+3
+
+Soort:
+
+Verwerkingslogica
+
+R2575
+Rond selectierun af
+Definitie:
+
+Rond de selectierun af door
+Selectierun.Tijdstip gereed te vullen met Datum\tijd systeem.
+
+Versie:
+
+1
+
+Soort:
+
+Verwerkingslogica
+
+R2647
+De toegang leveringsautorisatie van de selectietaak moet geldig zijn
+Definitie:
+
+De Selectietaak.Toegang leveringsautorisatie moet Geldig (R2129) zijn op
+'Systeemdatum' (R2016)
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De toegang leveringsautorisatie is niet geldig
+
+R2648
+De leveringsautorisatie waarvoor de selectietaak wordt uitgevoerd moet geldig zijn
+Definitie:
+
+De Leveringsautorisatie waarvoor de selectietaak wordt uitgevoerd moet Geldig
+(R2129) zijn op 'Systeemdatum' (R2016)
+
+Versie:
+
+1
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De leveringsautorisatie is niet geldig
+
+R2649
+De combinatie partij en rol van de toegang leveringsautorisatie moet geldig zijn
+Definitie:
+
+De Toegang leveringsautorisatie moet verwijzen naar Geldig (R2129) voorkomen op
+'Systeemdatum' (R2016) in Partij \ Rol
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De combinatie partij en rol is niet geldig
+
+R2650
+De geautoriseerde partij moet geldig zijn
+Definitie:
+
+De Partij moet Geldig (R2129) zijn op 'Systeemdatum' (R2016)
+
+Versie:
+
+1
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De partij is niet geldig
+
+

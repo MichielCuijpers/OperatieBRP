@@ -1,0 +1,91 @@
+Regel
+
+Rel
+
+Identiteit
+
+-
+
+ID
+
+D
+
+Regel ID
+
+*i
+
+Code
+
+D
+
+Regel code
+
+*l
+
+Soort melding
+
+.
+
+Meldingtekst
+
+.
+
+Soort melding > D
+Melding
+
+D
+
+LGM 12 Regels
+
+M1
+
+Release 59 17-7-2017
+
+Gedeblokkeerde melding
+Identiteit
+Regel >
+
+Dyn
+-
+
+DX
+
+Regel
+
+-
+
+*
+
+Melding DX Meldingtekst .
+
+Melding
+
+Dyn
+
+Identiteit
+
+-
+
+-
+
+Regel >
+
+DX
+
+Regel
+
+*
+
+Soort >
+
+DX
+
+Soort melding
+
+*
+
+Melding DX Meldingtekst
+
+*
+
+

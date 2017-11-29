@@ -1,0 +1,607 @@
+MV Aanvullende specificaties
+
+1.6
+
+Datum
+Status
+
+03-07-2017
+Definitief
+
+Definitief | 1.6 | MV Aanvullende specificaties | 03-07-2017
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+
+2
+
+ONTWERPKADERS .............................................................................................................................5
+2.1
+
+3
+
+PROCESSEN ...........................................................................................................................................5
+
+BRUIKBAARHEID ................................................................................................................................6
+3.1
+3.2
+3.3
+3.4
+3.5
+
+4
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................4
+LEESWIJZER ..........................................................................................................................................4
+
+PROCESSEN (RD-BEV-040) .............................................................................................................6
+TAKEN....................................................................................................................................................6
+FOUTEN (RD-BEV-023) ....................................................................................................................6
+TRANSACTIES EN INTEGRITEIT (RD-BET-002) ...............................................................................6
+CONTEXT BIJ TECHNISCHE LOGGING ..................................................................................................7
+
+LO3-BERICHTVERWERKING ........................................................................................................8
+4.1 ALGEMEEN .............................................................................................................................................8
+4.2 BERICHTEN EN PROCESSEN (RD-BET-004) ....................................................................................8
+4.2.1 Nieuw proces .............................................................................................................................9
+4.2.2 Bestaand proces .......................................................................................................................9
+4.2.3 Foutafhandelingsproces .........................................................................................................9
+4.2.4 Technische fouten (RD-BET-004) ......................................................................................9
+4.3 HERHAALBERICHTEN ..........................................................................................................................10
+4.4 ARCHIVEREN .......................................................................................................................................10
+
+5
+
+PERFORMANCE ..................................................................................................................................11
+5.1
+
+6
+
+BEVEILIGING ......................................................................................................................................12
+6.1
+6.2
+
+7
+
+OPSCHONEN VAN INFORMATIE ..........................................................................................................11
+VERSTREKKEN GEGEVENS (RD-BEV-044) ....................................................................................12
+TOEGANG LOGGEN (RD-BEV-023) ................................................................................................12
+
+OPMERKINGEN ..................................................................................................................................13
+
+Operatie BRP
+
+Pagina 2 van 13
+
+Definitief | 1.6 | MV Aanvullende specificaties | 03-07-2017
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+07-04-2014
+
+0.1
+
+Operatie BRP
+
+09-04-2015
+11-04-2015
+30-04-2015
+
+0.1
+0.1
+0.2
+
+01-09-2014
+28-07-2015
+15-10-2015
+23-11-2015
+
+0.3
+1.0
+1.1
+1.2
+
+03-12-2015
+11-04-2016
+06-02-2017
+03-07-2017
+
+1.3
+1.4
+1.5
+1.6
+
+Nieuwe versie waarbij is gefocust op een
+functionele beschrijving. Zaken die in het
+[LO] beschreven worden zijn ook
+weggelaten. Wel wordt daar waar nodig naar
+het [LO] verwezen. De zaken die verwijderd
+zijn, zouden hun plek moeten krijgen in een
+UCR/TO.
+Reviewcommentaar verwerkt
+Reviewcommentaar verwerkt
+Beschrijving van taken en processen
+aangescherpt.
+Definitief gemaakt voor release 2.2
+Versie aangemaakt voor release 3.1
+Afhandeling technische fouten toegevoegd
+Archiveren van berichten beschreven
+(reviewcommentaar direct verwerkt).
+NFR’s en bijbehorende codes opgenomen
+Vb01 na het versturen van Pf03 verwijderd
+Context bij technische logging
+Ontvangende systeem verwijderd bij
+archivering
+
+Operatie BRP
+Operatie BRP
+Operatie BRP
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+
+Operatie
+Operatie
+Operatie
+Operatie
+
+BRP
+BRP
+BRP
+BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+08-04-2014
+
+0.1
+
+Review
+
+Operatie BRP
+
+23-11-2015
+
+1.2
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 13
+
+Definitief | 1.6 | MV Aanvullende specificaties | 03-07-2017
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+In dit document wordt beschreven welke aanvullende specificaties er voor de
+migratievoorziening gelden.
+
+1.2
+
+Referenties
+#
+[LO]
+
+1.3
+
+Document
+Logisch Ontwerp
+
+Organisatie
+RvIG
+
+Versie
+3.9
+
+Datum
+31-01-2015
+
+Leeswijzer
+Daar waar in de specificaties gesproken wordt over een proces wordt een jBPM proces bedoeld.
+
+Operatie BRP
+
+Pagina 4 van 13
+
+Definitief | 1.6 | MV Aanvullende specificaties | 03-07-2017
+
+2
+
+Ontwerpkaders
+
+2.1
+
+Processen
+Er is voor het modelleren, beheren en uitvoeren van processen binnen de migratievoorziening
+gekozen voor jBPM. Dit heeft niet alleen consequenties voor de wijze waarop zaken binnen het
+systeem geregistreerd worden maar ook de wijze waarop de beheerder zijn taken uit kan voeren
+in bijvoorbeeld de beheerapplicatie (user interface).
+Met dit gegeven wordt in de specificaties rekening gehouden.
+
+Operatie BRP
+
+Pagina 5 van 13
+
+Definitief | 1.6 | MV Aanvullende specificaties | 03-07-2017
+
+3
+
+Bruikbaarheid
+
+3.1
+
+Processen (RD-BEV-040)
+Daar waar nodig kan de beheerder processen, pauzeren en herstarten. Eventuele gerelateerde
+taken en processen worden ook gepauzeerd en herstart.
+
+3.2
+
+Taken
+Wanneer het systeem verwacht dat een beheerder actie onderneemt wordt een taak gemaakt.
+Bijvoorbeeld wanneer tijdens de berichtverwerking een onduidelijke situatie is geconstateerd of
+wanneer een fout is opgetreden. Een taak is een speciaal soort proces dat niet gepauzeerd of
+herstart kan worden.
+
+3.3
+
+Fouten (RD-BEV-023)
+Alle fouten die in het systeem optreden dienen zichtbaar te zijn voor de beheerder. Daar waar
+mogelijk en nodig worden fouten gemeld in de beheerapplicatie. Indien dat niet mogelijk is
+worden fouten in logfiles geregistreerd. Onder fouten wordt onder andere verstaan:
+•
+•
+•
+•
+
+3.4
+
+Software fouten (die bijvoorbeeld een nullpointer exceptie veroorzaken)
+Fouten in de infrastructuur (database server valt bijvoorbeeld uit)
+Fouten die het systeem zelf probeert te herstellen maar waarbij dat bij herhaling mislukt
+Functionele fouten waarbij de beheerder actie moet ondernemen (berichten die op een
+verkeerd moment in de berichtcyclus ontvangen worden)
+
+Transacties en integriteit (RD-BET-002)
+De integriteit van gegevens is gewaarborgd wanneer deze gewijzigd worden. Ofwel, mocht er
+bijvoorbeeld tijdens het opslaan van gegevens iets fout gaan, dan mag dit niet leiden tot een
+situatie waarbij de helft van de gegevens wel is opgeslagen en de helft niet.
+
+Operatie BRP
+
+Pagina 6 van 13
+
+Definitief | 1.6 | MV Aanvullende specificaties | 03-07-2017
+
+3.5
+
+Context bij technische logging
+Om technische fouten in de migratievoorziening te kunnen analyseren dient er bij de logging van
+deze technische fouten extra functionele informatie gelogd te worden. Wat er aan functionele
+informatie gelogd dient te worden hangt af van de functionele context waarin de technische fout
+optreedt. In de onderstaande tabel staat beschreven in welke context welke informatie gelogd
+dient te worden.
+Context
+MV UC101
+initieel
+MV UC102
+initieel
+MV UC103
+initieel
+MV UC104
+
+Vul persoonsgegevens in BRP
+
+Te loggen informatie
+A-nummer, PL_ID
+
+Vul autorisatietabelregels in BRP
+
+Afnemercode, versienummer
+
+Vul afnemersindicaties in BRP
+
+A-nummer, PL_ID, afnemercode
+
+Vul protocollering in BRP initieel
+
+Activiteit_id van activiteiten met activiteit_type
+101 of 202.
+
+Deze tabel beperkt zich op dit moment tot de use cases van de initiële vulling van de BRP en zal
+op een later moment uitgebreid met overige contexten.
+
+Operatie BRP
+
+Pagina 7 van 13
+
+Definitief | 1.6 | MV Aanvullende specificaties | 03-07-2017
+
+4
+
+LO3-berichtverwerking
+
+4.1
+
+Algemeen
+Om beter te begrijpen hoe berichten in het GBA-netwerk worden verstuurd en opgehaald dient
+het [LO] geraadpleegd te worden. Onder andere de volgende paragrafen in het [LO] zijn
+belangrijk:
+• 6 Berichtenafhandelingssysteem
+• IV.4 De koppeling met het eindsysteem
+In dit document wordt niet beschreven hoe het Berichtenafhandelingssysteem (BAS) van de
+migratievoorziening dient te werken en hoe berichten gecorreleerd worden. Deze informatie
+wordt reeds in het [LO] beschreven.
+
+4.2
+
+Berichten en processen (RD-BET-004)
+
+Alle verstuurde of ontvangen LO3-berichten worden door de migratievoorziening opgeslagen.
+Voor alle LO3-berichten die een LO3-cyclus starten geldt dat hiervoor een eigen identificeerbaar
+proces gestart wordt waar het LO3-bericht aan gekoppeld wordt. Vervolgens dienen alle
+verstuurde en ontvangen berichten in het kader van die LO3-cyclus aan hetzelfde proces
+gekoppeld te worden. Dat geldt ook voor ontvangen/verstuurde herhaalberichten, dubbele
+berichten en berichten die fout zijn. Het betreft de volgende berichtcycli:
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Vervolginschrijving (Ii01, If01, Ib01, If21, Iv01, If31)
+Toevallige geboorte (Tb01, Tf01, Tv01, Tf11)
+Opnemen verwijsgegevens (Iv11, If41, Iv21)
+Wijzigen a-nummer in de verwijsgegevens (Wa01, Wf01)
+Vrij bericht (Vb01)
+Opnemen/wijzigen verblijfstitel (Og11, Of11)
+Toevallige gebeurtenis (Tb02, Tf21)
+Synchronisatie met GBA-V (Lg01)
+Synchronisatievraag (Lq01, Lf01, La01)
+Ad hoc vragen (Hq01, Hf01, Ha01)
+Ad hoc adresvragen (Xq01, Xa01, Xf01)
+Plaatsen afnemersindicatie op persoonslijst (Ap01, Af01, Ag01)
+Verwijderen afnemersindicatie op persoonslijst (Av01, Af11)
+Doorsturen dossier (Qv01, Qf01)
+Bijwerken dossier (Qs01, Qf11)
+Vervolginschrijving van gemeente naar RNI (Rb01, Rf01, Rv01)
+Vervolginschrijving van RNI naar gemeente (Ji01, Jf01, Jb01, Jf21, Jv01, Jf31)
+
+De onderstaande berichtcycli worden niet ondersteund omdat hiervoor een andere voorziening
+dan de migratievoorziening zorg draagt gedurende de migratieperiode:
+• Onderhouden autorisatietabel (Ct01, Cw01, Cb01)
+• Onderhoud overige tabellen (Dt01, Dw01)
+Het is nog onduidelijk wat precies gedaan dient te worden met de berichtcyclus Foutherstel
+(Ag31).
+
+Operatie BRP
+
+Pagina 8 van 13
+
+Definitief | 1.6 | MV Aanvullende specificaties | 03-07-2017
+
+Alle berichtcycli die te maken hebben met het leveren van berichten aan afnemers hoeven niet
+aan een proces gekoppeld te worden. Deze berichtcycli zijn eenvoudig van aard (meestal één
+bericht) en hebben een hoog volume dat tot performanceproblemen kan leiden:
+• Spontane gegevensverstrekking (Ng01, Gv01, Gv02, Wa11, Ag21, Ag11, Ag31)
+• Selecties (Sv11, Sv01, Sf01, Ag11)
+Voor deze berichtcycli geldt dat bij eventuele fouten alsnog een foutafhandelingsproces gestart
+wordt waaraan alle bijbehorende berichten gekoppeld dienen te worden.
+Wat precies in elke berichtcyclus plaats vindt wordt beschreven in een use case. Deze use cases
+zijn te herkennen aan de naamgeving:
+MV UC<nummer> Verwerken <naam van de cyclus>-cyclus.
+
+4.2.1
+
+Nieuw proces
+Voor een bericht dient een nieuw proces gestart te worden als:
+• het berichtnummer de start van een berichtcyclus is, en
+• het bericht niet eerder is ontvangen (dubbel), en
+• het bericht geen herhaalbericht is of dat het herhaalbericht niet aan een bestaand proces
+gekoppeld kan worden
+Let op: een herhaalbericht is niet hetzelfde als een eerder ontvangen bericht.
+
+4.2.2
+
+Bestaand proces
+Een bericht dient aan een proces gekoppeld te worden als:
+• het bericht een antwoord is op een eerder ontvangen/verzonden bericht, of
+• het bericht een herhaalbericht is, of
+• het bericht al eens eerder is ontvangen (dubbel)
+
+4.2.3
+
+Foutafhandelingsproces
+Indien een bericht niet aan een nieuw of bestaand proces gekoppeld kan worden, dient het
+bericht aan een nieuw foutafhandelingsproces gekoppeld te worden.
+
+4.2.4
+
+Technische fouten (RD-BET-004)
+Tijdens het verwerken van LO3-berichten kan het voorkomen dat er onverwachte technische
+fouten optreden. Een dergelijke fout dient onder de aandacht van de beheerder gebracht te
+worden. Er wordt daarvoor een beheerderstaak gestart. De beheerder krijgt hierbij de volgende
+keuzes:
+• De stap in het proces waar de fout is opgetreden opnieuw uitvoeren
+• Geen Pf03-bericht sturen en het proces/cyclus afbreken
+• Wel een Pf03-bericht sturen en het proces/cyclus afbreken (alleen mogelijk als de LO3-cyclus
+nog niet is afgerond)
+
+Operatie BRP
+
+Pagina 9 van 13
+
+Definitief | 1.6 | MV Aanvullende specificaties | 03-07-2017
+
+4.3
+
+Herhaalberichten
+Herhaalberichten mogen genegeerd worden als er nog geen antwoord is verstuurd of als een
+antwoord twee dagen of minder geleden verstuurd is. In alle andere gevallen dient het antwoord
+alsnog gestuurd te worden. Deze berichten dienen wel aan het bijbehorende proces gekoppeld te
+worden.
+
+4.4
+
+Archiveren
+Alle berichten die door de migratievoorziening worden ontvangen en verstuurd, worden
+gearchiveerd. Dit wordt gedaan op dezelfde plek waar de BRP zijn berichten archiveert. Hierbij
+dient het gebruik gemaakt te worden van het objecttype Ber.Bericht. Meer informatie over dit
+objecttype is te vinden in het [BMR].
+De volgende attributen van het Ber.Bericht objecttype worden gevuld. Alle overige attributen
+worden leeggelaten.
+Attribuut
+Soort
+
+Richting
+Data
+Zendende partij
+Zendende systeem
+Ontvangen partij
+Referentienummer
+Cross referentienummer
+Datum/tijd verzending
+
+Datum/tijd ontvangst
+
+Operatie BRP
+
+Toelichting
+Het berichtnummer van het bericht (Lg01,
+Vb01 et cetera). Indien het bericht niet bekend
+is in de BRP wordt dit leeggelaten.
+Ingaand of uitgaand
+Het hele bericht
+Indien het een inkomend bericht is de partij die
+het bericht verstuurd heeft, anders <leeg>
+Indien het een uitgaand bericht is VOISC,
+anders <leeg>.
+Indien het een uitgaand bericht is de partij aan
+wie het bericht is verstuurd, anders <leeg>
+EREF van het bericht.
+BREF van het bericht.
+Datum/tijd waarop het bericht is verzonden
+door de migratievoorziening. Wordt alleen
+gevuld bij uitgaande berichten.
+Datum/tijd waarop het bericht is ontvangen
+door de migratievoorziening. Wordt alleen
+gevuld bij inkomende berichten.
+
+Pagina 10 van 13
+
+Definitief | 1.6 | MV Aanvullende specificaties | 03-07-2017
+
+5
+
+Performance
+
+5.1
+
+Opschonen van informatie
+Door de grote hoeveelheid van berichten en processen is het van belang dat rekening gehouden
+wordt met de performance van het systeem. Opslag van grote hoeveelheden data zal de werking
+van het systeem uiteindelijk negatief beïnvloeden.
+Het systeem zal daarom automatisch na een instelbare periode, informatie van afgeronde
+processen en bijbehorende berichten opschonen (verwijderen). Dit geldt ook voor berichten die
+niet aan een proces zijn gekoppeld. Standaard is de instelbare periode veertien dagen.
+Om te voorkomen dat bepaalde LO3-cycli een onwenselijk situatie opleveren is de instelbare
+periode tenminste vier dagen. Een voorbeeld waarbij dit fout zou kunnen gaan is bij
+herhaalberichten. Wanneer een herhaalbericht ontvangen wordt terwijl het proces al is afgerond
+en opgeruimd, dan zou het herhaalbericht aanleiding zijn om een nieuw proces te starten.
+Informatie die relevant is voor, niet afgeronde processen (dus ook berichten),
+rapportagedoeleinden en protocollering wordt niet opgeschoond.
+
+Operatie BRP
+
+Pagina 11 van 13
+
+Definitief | 1.6 | MV Aanvullende specificaties | 03-07-2017
+
+6
+
+Beveiliging
+
+6.1
+
+Verstrekken gegevens (RD-BEV-044)
+De migratievoorziening zal nooit meer gegevens verstrekken aan een afnemer, dan waarvoor de
+afnemer is geautoriseerd.
+
+6.2
+
+Toegang loggen (RD-BEV-023)
+Elke poging om toegang op het systeem te verkrijgen, geslaagd en niet geslaagd, dient gelogd te
+worden. De volgende gegevens dienen, tot zover dat mogelijk is, vastgelegd te worden:
+•
+•
+•
+•
+
+De datum en het tijdstip
+Het netwerkadres
+De service instantie/node, netwerk of systeem
+De gebruiker
+
+Operatie BRP
+
+Pagina 12 van 13
+
+Definitief | 1.6 | MV Aanvullende specificaties | 03-07-2017
+
+7
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 13 van 13
+
+

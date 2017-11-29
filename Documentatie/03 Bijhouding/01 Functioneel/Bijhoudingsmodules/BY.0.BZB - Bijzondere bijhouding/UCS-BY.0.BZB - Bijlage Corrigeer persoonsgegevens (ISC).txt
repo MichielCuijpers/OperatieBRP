@@ -1,0 +1,1686 @@
+Bijlage Corrigeer persoonsgegevens (ISC)
+Versie: Release 59
+Gegenereerd op: 19 juli 2017
+Status: Definitief
+
+1 Handeling: GBA - Wissen persoon
+Berichtspecificatie
+
+Corrigeer persoonsgegevens (ISC)
+(isc_migCorrigeerPersoonsgegevens)
+Stuurgegevens (communicatieID)
+
+Kardinaliteit
+
+1
+
+Zendende partij, Zendende systeem, Referentienummer, Datum/tijd verzending
+
+1
+
+Parameters (communicatieID)
+Verwerkingswijze
+
+GBA - Wissen persoon
+
+(objecttype="AdministratieveHandeling", communicatieID)
+
+1
+
+Partij, Toelichting ontlening
+
+Gedeblokkeerde meldingen
+Gedeblokkeerde melding (objecttype="GedeblokkeerdeMelding", referentieID,
+
+0..1
+1..n
+
+communicatieID)
+Regel
+
+Acties
+
+1
+
+Registratie bijhouding (objecttype="Actie", communicatieID)
+
+1
+
+Datum aanvang geldigheid
+
+Persoon (objecttype="Persoon", objectSleutel, communicatieID)
+Bijhouding (communicatieID)
+
+1
+1
+
+Nadere bijhoudingsaard
+
+Gegevensvalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2428
+
+2
+
+1.1
+
+F
+
+Een opgegeven gedeblokkeerde melding moet verwijzen naar een regel die
+als deblokkeerbaar is vastgelegd
+
+Use case: Controleer inhoud
+
+Generieke regels voor deze use case
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1579
+
+19
+
+D
+
+Van een overleden persoon mag uitsluitend een beperkte set van gegevens
+worden bijgehouden
+
+R1580
+
+7
+
+F
+
+Een persoon mag niet worden bijgehouden als de reden van opschorting
+foutief is
+
+R1833
+
+7
+
+F
+
+De objectsleutel waarmee een persoon in het bericht wordt aangewezen
+moet geldig zijn
+
+R1835
+
+10
+
+F
+
+Objectsleutel in bijhouding moet verwijzen naar bestaand object in BRP van
+juiste type
+
+R1839
+
+3
+
+F
+
+Gedeblokkeerde meldingen moeten in verwerking daadwerkelijk optreden
+
+R2098
+
+6
+
+F
+
+Bijhouding geblokkeerd wegens verhuizing
+
+R2511
+
+3
+
+F
+
+Objectsleutel die verwijst naar relatie moet verwijzen naar relatie van juiste
+soort
+
+R2512
+
+3
+
+F
+
+Objectsleutel die verwijst naar betrokkenheid moet verwijzen naar
+betrokkenheid met de juiste rol
+
+R2626
+
+4
+
+W
+
+Waarschuwing bij bijhouding indien gegevens van een hoofdpersoon in
+onderzoek staan
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1838
+
+4
+
+F
+
+In een bijhouding moet ReferentieID verwijzen naar CommunicatieID in
+berichtelement van het juiste type.
+
+R2348
+
+1
+
+F
+
+Partij van de Administratieve handeling moet gelijk zijn aan de Zendende
+partij
+
+R2413
+
+3
+
+F
+
+Een toelichting ontlening is verplicht bij het deblokkeren van een melding
+
+1.2
+
+Use case: Autorisatie administratieve handeling
+
+Generieke regels voor deze use case
+Autorisatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2106
+
+7
+
+F
+
+De administratieve handeling moet zijn toegestaan voor de
+bijhoudingsautorisatie
+
+R2115
+
+4
+
+F
+
+De bijhoudingsautorisatie mag niet geblokkeerd zijn
+
+R2247
+
+4
+
+F
+
+De toegang bijhoudingsautorisatie moet geldig zijn
+
+R2248
+
+4
+
+F
+
+De toegang bijhoudingsautorisatie mag niet geblokkeerd zijn
+
+R2250
+
+6
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij en rol
+bestaan
+
+R2251
+
+5
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en
+ondertekenaar bestaan
+
+R2252
+
+5
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en
+transporteur bestaan
+
+R2268
+
+2
+
+F
+
+De geautoriseerde partij moet een geldige partij zijn
+
+R2269
+
+2
+
+F
+
+De ondertekenaar moet een geldige partij zijn
+
+R2270
+
+2
+
+F
+
+De transporteur moet een geldige partij zijn
+
+R2271
+
+2
+
+F
+
+De combinatie partij met rol voor toegang bijhoudingsautorisatie moet geldig
+zijn
+
+R2299
+
+2
+
+F
+
+De bijhoudingsautorisatie moet geldig zijn
+
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R2343
+
+4
+
+1.3
+
+F
+
+Algemene foutmelding bij schending autorisatieregels
+
+Actie: Registratie bijhouding
+
+Specifieke regels voor deze combinatie Handeling \ Actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R2117
+
+3
+
+F
+
+De persoon die met een objectsleutel wordt aangewezen moet een
+ingeschrevene zijn
+
+R2727
+
+1
+
+F
+
+Bijhoudingspartij van de hoofdpersoon moet zich in het GBA-stelsel bevinden
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2724
+
+1
+
+F
+
+Nadere bijhoudingsaard moet gelijk zijn aan "W"
+
+R2726
+
+1
+
+F
+
+Datum aanvang geldigheid van de actie moet gelijk zijn aan systeemdatum
+
+Gegevensvalidatieregels
+Code
+
+Versie Vorm
+
+Niveau Omschrijving
+
+R2354
+
+8
+
+F
+
+Datum aanvang geldigheid van de actie mag niet in de toekomst
+liggen
+
+Integriteitsregels
+Code
+
+Versie Vorm
+
+Niveau Omschrijving
+
+R1274
+
+6
+
+F
+
+R2690
+
+1
+
+XSD / Afl. F
+
+Datum moet een geldige kalenderdatum zijn
+Nadere bijhoudingsaard moet verwijzen naar bestaand
+stamgegeven
+
+2 Uitwerking regels
+R1273
+Datum (deels) onbekend
+Definitie:
+
+Een Datum evt. (deels) onbekend heeft het formaat 'jjjj-mm-dd'. Als een datum
+deels onbekend is dan moet:
+• indien dag onbekend is voor dag ('dd') de waarde 00 zijn ingevuld;
+• indien maand onbekend is voor zowel dag ('dd') als maand ('mm') de waarde
+00 zijn ingevuld;
+• indien jaar onbekend is zowel dag ('dd') als maand ('mm') de waarde 00 zijn
+ingevuld en voor jaar ('jjjj') de waarde 0000.
+
+Versie:
+
+7
+
+Soort:
+
+Definitieregel
+
+R1274
+Datum moet een geldige kalenderdatum zijn
+Definitie:
+
+Indien de datum een 'Volledig bekende datum' (R2547) betreft moet deze in de
+combinatie van jaar, maand en dag geldig zijn binnen de Gregoriaanse kalender.
+Toelichting:
+Omdat de XSD afdwingt dat een datum met het attribuuttype Datum altijd een
+'Volledig bekende datum' (R2547) betreft moet deze altijd in de combinatie van
+jaar, maand en dag geldig zijn binnen de Gregoriaanse kalender.
+De XSD dwingt voor een datum met het attribuuttype Datum evt. (deels) onbekend
+af dat deze voldoet aan de definitie van Datum (deels) onbekend (R1273).
+
+Versie:
+
+6
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven datum is geen geldige kalenderdatum.
+
+R1278
+Hoofdactie
+Definitie:
+
+De eerste Actie die voorkomt binnen een Administratieve handeling wordt de
+Hoofdactie genoemd.
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1284
+Geldig voorkomen stamgegeven op peildatum
+Definitie:
+
+Een Stamgegeven is geldig op een zekere peildatum, indien aan de volgende
+voorwaarden is voldaan:
+1.
+2.
+
+indien gevuld moet DatumAanvangGeldigheid van Stamgegeven <= peildatum;
+indien gevuld moet DatumEindeGeldigheid van Stamgegeven > peildatum.
+
+Als er sprake is van Datum (deels) onbekend (R1273) dan moet de R1283 Vergelijken (partiële) datums streng uitgevoerd worden.
+Toelichting
+• het Stamgegeven is geldig op elke peildatum indien DatumAanvangGeldigheid
+en DatumEindeGeldigheid leeg zijn.
+
+•
+•
+
+Voor de stamtabel Partij geldt dat Partij.Datum ingang en Partij.Datum einde
+ipv respectievelijk DatumAanvangGeldigheid en DatumEindeGeldigheid gebruikt
+moeten worden.
+Voor de stamtabel Partij \ Rol geldt dat Partij \ Rol.Datum ingang en Partij \
+Rol.Datum einde ipv respectievelijk DatumAanvangGeldigheid en
+DatumEindeGeldigheid gebruikt moeten worden.
+
+Versie:
+
+7
+
+Soort:
+
+Definitieregel
+
+R1287
+Hoofdpersoon
+Definitie:
+
+De Persoon wiens gegevens worden gewijzigd in de Hoofdactie (R1278) wordt de
+Hoofdpersoon genoemd.
+Opmerkingen:
+1. In gevallen dat de Hoofdactie (R1278) slechts wijzigingen op gegevens van 1
+Persoon bevat, is dat de Hoofdpersoon.
+2. In gevallen dat de Hoofdactie (R1278) wijzigingen op gegevens van meerdere
+personen bevat, gaat het om de volgende situaties met de volgende
+Hoofdpersonen:
+a. een 'Huwelijk' (H) of 'Geregistreerd partnerschap' (G): als beide partners
+'Ingeschrevene' (I) zijn, zijn beide partners Hoofdpersoon. Als een van beide
+partners 'Pseudo-persoon' (P) is, is de andere partner (de 'Ingeschrevene' (I)) de
+Hoofdpersoon.
+b. een 'Familierechtelijke betrekking' (F): hier is de Persoon met de rol 'Kind' (K)
+altijd de Hoofdpersoon, tenzij er sprake is van een bijschrijving van een Soort
+Persoon 'Pseudo-persoon' (P) in de rol van 'Kind' (K) bij een 'Ingeschrevene' (I) in
+de rol van 'Ouder' (O), dan is de Persoon met de rol 'Ouder' (O) de Hoofdpersoon.
+3. Een Persoon in de soort 'Pseudo-persoon' (P) kan dus nooit een Hoofdpersoon
+zijn!
+4. Een Persoon waarvan de gewijzigde gegevens slechts voorkomen als gegeven
+van een gerelateerde Persoon, kan nooit een Hoofdpersoon zijn.
+
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R1325
+'Datum aanvang volledige opschorting'
+Definitie:
+
+De 'Datum aanvang volledige opschorting' (R1325) is de datum van het begin van
+de actuele periode dat de bijhouding van een Persoon aaneengesloten 'Volledig
+opgeschort' (R2212) is. Dit is dus de Datum aanvang geldigheid van het oudste niet
+vervallen voorkomen van Persoon.Bijhouding in deze periode.
+De 'Datum aanvang volledige opschorting' (R1325) kan (deels) onbekend zijn.
+Toelichting:
+Omdat de datum van overlijden van een persoon (deels) onbekend kan zijn kan ook
+de 'Datum aanvang volledige opschorting' (R1325) (deels) onbekend zijn.
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1540
+'Inhoudelijke groep'
+
+Definitie:
+
+Inhoudelijke groepen zijn groepen van de Persoonslijst die bij de Persoon horen. Dit
+zijn alle groepen onder Objecttypen Persoon, Persoon \ Adres, Persoon \
+Geslachtsnaamcomponent, Persoon \ Indicatie, Persoon \ Nationaliteit, Persoon \
+Reisdocument, Persoon \ Verificatie, Persoon \ Verstrekkingsbeperking, Persoon \
+Voornaam, Persoon \ Buitenlands persoonsnummer, Relatie (soorten Huwelijk en
+Geregistreerd partnerschap) en Betrokkenheid (rol Ouder).
+(Dit zijn dus de groepen uit het persoonsdeel van het bericht over de persoon, in
+tegenstelling tot de groepen uit bijvoorbeeld het verantwoordingsdeel en het
+onderzoeksdeel)
+
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R1541
+'Verantwoordingsgroep'
+Definitie:
+
+Verantwoordingsgroepen zijn groepen van de Persoonslijst die de verantwoording
+van de 'Inhoudelijke groep' (R1540) vormen. Dit zijn groepen onder de Objecttypen
+Administratieve handeling, Actie, Actie \ Bron, Document, Gedeblokkeerde melding
+en de koppelingen tussen die Objecttypen.
+(Dit zijn dus de groepen uit het verantwoordingsdeel van het bericht over de
+persoon)
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1543
+'Onderzoeksgroep'
+Definitie:
+
+Een Onderzoeksgroep is een groep die gegevens bevat omtrent onderzoeken op bij
+de Persoon aanwezige of ontbrekende gegevens. We hebben het hier altijd over de
+aan de Persoon gerelateerde Onderzoeken. Dus de Persoon \ Onderzoek gegevens,
+die direct gerelateerd zijn aan de uitgangspersoon.
+Voor het 'Onderzoeksdeel' worden de volgende begrippen gehanteerd:
+• Onderzoeksdeel: het deel binnen het bericht, dat informatie bevat over de
+onderzoeken.
+• Onderzoek: Binnen het onderzoeksdeel komen de 'Onderzoeken' voor, die de
+o.a. de Onderzoek.Datum aanvang, Onderzoek.Status en eventueel
+Onderzoek.Datum einde van het onderzoek bevatten
+• Gegeven in onderzoek: Als onderdeel van 'Onderzoek', zijn de in het onderzoek
+betrokken gegevens vastgelegd in Gegeven in onderzoek. Deze geeft aan
+welke gegevens (Gegeven in onderzoek.Element en optioneel: Gegeven in
+onderzoek.Object sleutel gegeven en Gegeven in onderzoek.Voorkomen sleutel
+gegeven) in het Onderzoek zijn betrokken.
+• Persoon \ Adres.Persoon aangetroffen op adres? valt ook onder het
+onderzoekdeel. Bijzonder aan dit attribuut is dat deze geen onderdeel is van
+Onderzoek of Gegeven in onderzoek, maar van Persoon \ Adres.
+Een onderzoeksgroep gedraagt zich verder hetzelfde als een Inhoudelijke groep, er
+is dus sprake van een afgeleid administratief en verantwoording d.m.v. een
+administratieve handeling met acties en bronnen.
+(Het betreft hier de groepen uit het Onderzoeksdeel van het bericht, deze hebben
+betrekking op de onderzoeken op persoonsgegevens, in tegenstelling tot de
+groepen uit bijvoorbeeld het Verantwoordingsdeel en het Persoonsdeel)
+
+Versie:
+
+4
+
+Soort:
+
+Definitieregel
+
+R1579
+Van een overleden persoon mag uitsluitend een beperkte set van gegevens worden
+bijgehouden
+Definitie:
+
+Indien de Persoon Hoofdpersoon (R1287) is en de Persoon.Nadere bijhoudingsaard
+'Overleden' (O) is mag van deze Persoon uitsluitend het volgende worden
+bijgehouden:
+• elke "Groep" van de 'Volledig persoon' (R1998) waarvoor Materiële historie
+wordt bijgehouden, waarvan de Datum aanvang geldigheid voor de 'Datum
+aanvang volledige opschorting' (R1325) ligt.
+• elke Relatie waarbij deze persoon een Betrokkenheid heeft waarvan de
+Relatie.Datum aanvang voor de 'Datum aanvang volledige opschorting'
+(R1325) ligt, indien de aanvang van de relatie wordt geregistreerd,
+• elke Relatie waarbij deze persoon een Betrokkenheid heeft waarvan de
+Relatie.Datum einde voor de 'Datum aanvang volledige opschorting' (R1325)
+ligt, indien het einde van de relatie wordt geregistreerd.
+• De groep Persoon.Verblijfsrecht indien de Persoon.Datum aanvang
+verblijfsrecht voor de 'Datum aanvang volledige opschorting' (R1325) ligt.
+• De groep Persoon.Bijhouding indien het Wijziging gemeente infrastructureel bij
+overledene of Correctie bijhouding betreft.
+• Onderzoeksgegevens: Onderzoek en Gegeven in onderzoek.
+• Groep Persoon.Vastgesteld niet Nederlander
+• Persoon \ Nationaliteit
+
+Versie:
+
+19
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+De aanvangsdatum van de bijhouding ligt ná overlijdensdatum van de persoon en
+kan daarom niet meer worden bijgehouden.
+
+R1580
+Een persoon mag niet worden bijgehouden als de reden van opschorting foutief is
+Definitie:
+
+Indien de Persoon.Nadere bijhoudingsaard 'Fout' (F) of 'Gewist' (W) is mogen van
+deze Persoon geen gegevens worden bijgehouden.
+Opmerking: Over "Gewist" (code W) wordt verder niet gesproken in de
+meldingstekst omdat er over deze nadere bijhoudingsaard niets gecommuniceerd
+wordt in het LO. Het betreft een 'technische' nadere bijhoudingsaard.
+
+Versie:
+
+7
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Een persoon mag niet worden bijgehouden als de reden van opschorting foutief is.
+
+R1833
+De objectsleutel waarmee een persoon in het bericht wordt aangewezen moet geldig zijn
+Definitie:
+
+De 'Gemaskeerde objectsleutel' (R1834) waarmee een Persoon in het Bericht wordt
+aangewezen moet geldig zijn.
+
+Versie:
+
+7
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De objectsleutel waarmee de persoon in het bericht wordt aangewezen is niet
+geldig.
+
+R1834
+
+'Gemaskeerde objectsleutel'
+Definitie:
+
+De 'Gemaskeerde objectsleutel' (R1834) wijst een Persoon aan en maskeert de
+interne objectsleutel. Deze 'Gemaskeerde objectsleutel' (R1834) moet een beperkte
+tijd geldig zijn. De objectsleutel verliest z'n geldigheid, zodra zich een wijziging in
+de persoonsgegevens heeft voorgedaan nadat de gemaskeerde sleutel aan een
+partij is verstrekt
+Toelichting:
+• Er moet voorkomen worden dat de objectsleutel een sterkere sleutel wordt dan
+het BSN en afnemers deze sleutel gaan gebruiken i.p.v. het BSN. Dit houdt in
+dat voorkomen moet worden dat de objectsleutel 'as-is' wordt
+gecommuniceerd. Er zal een vorm van maskering toegepast worden met een
+beperkte geldigheid. De concrete invulling hiervan is een technisch
+implementatie en wordt dus niet verder (functioneel) beschreven.
+
+Versie:
+
+8
+
+Soort:
+
+Definitieregel
+
+R1835
+Objectsleutel in bijhouding moet verwijzen naar bestaand object in BRP van juiste type
+Definitie:
+
+Een objectsleutel in een bericht moet verwijzen naar een bestaand object in de BRP
+van het juiste type.
+Opmerking:
+De regel geldt voor elke specialisatie van het 'abstracte root' Object zoals Persoon,
+Relatie, Betrokkenheid etc.
+
+Versie:
+
+10
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De in het bericht opgenomen objectsleutel bestaat niet of is niet van de juiste type.
+
+R1838
+In een bijhouding moet ReferentieID verwijzen naar CommunicatieID in berichtelement van
+het juiste type.
+Definitie:
+
+Elk referentieID in een Bijhoudingsvoorstel moet verwijzen naar een
+communicatieID dat behoort bij een berichtelement van hetzelfde type als het
+berichtelement dat behoort bij het referentieID.
+Uitzondering hierop zijn referentieID's in berichtelementen van het type
+Gedeblokkeerde melding. Want deze referentieID's mogen verwijzen naar
+berichtelementen van een ander type.
+Toelichting:
+Onderstaand voorbeeld toont twee regels uit een berichtdefinitie. De tweede regel
+bevat een referentieID die naar het communicatieID van de eerste regel kan
+verwijzen. Het type berichtelement is bij beide regels Bron.
+Bron (objecttype="AdministratieveHandelingBron", communicatieID="123")
+Bron (objecttype="ActieBron", referentieID="123", communicatieID="987")
+
+Versie:
+
+4
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het referentieID verwijst niet naar een juist CommunicatieID.
+
+R1839
+Gedeblokkeerde meldingen moeten in verwerking daadwerkelijk optreden
+Definitie:
+
+Elke Gedeblokkeerde melding moet in de verwerking van het Bijhoudingsvoorstel
+ook daadwerkelijk optreden.
+De gedeblokkeerde melding moet optreden in het element dat in de deblokkade is
+gespecificeerd m.b.v. referentieID.
+Toelichting:
+1. Met deze regel wordt voorkomen dat meldingen "op voorhand" worden
+gedeblokkeerd.
+2. Deze regel mag niet gewijzigd worden van Blokkerend naar Deblokkerend (of
+Melding) omdat deze regel dan ook "op voorhand" gedeblokkeerd kan worden
+en daarmee zinloos is.
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De gedeblokkeerde melding is niet opgetreden.
+
+R1998
+'Volledig persoon'
+Definitie:
+
+Een volledig Persoon is het complete beeld van de persoon zoals deze in de BRP is
+geadministreerd. Het gaat om de administratie van alle gegevens (Element) van het
+Element.Soort 'Attribuut' met Element.Autorisatie: 'Optioneel', 'Via
+groepsautorisatie', 'Verplicht', 'Aanbevolen', 'Uitzondering' en
+'Bijhoudingsgegevens'.
+Een volledig persoon bevat attributen uit:
+Inhoudelijke groepen ('Inhoudelijke groep' (R1540))
+Verantwoordingsgroepen ('Verantwoordingsgroep' (R1541))
+De verantwoordingsinformatie betreft alle Administratieve handeling die de
+Persoonslijst van de hoofdpersoon hebben bijgehouden of hebben geleid tot een
+mutatie van het onderzoeksdeel ('Onderzoeksgroep' (R1543)). Dit betreft alle
+Administratieve handelingen die voorkomen in de groep Persoon.Afgeleid
+administratief van de hoofdpersoon. Ook de Actie en Actie \ Bron die bij die
+Administratieve handelingen horen, worden opgenomen.
+Onderzoeksgroepen ('Onderzoeksgroep' (R1543))
+De gegevens uit Onderzoek, die betrekking hebben op de te leveren Persoon
+moeten worden opgenomen. Het betreft altijd aan de Persoon gerelateerde
+Onderzoeken. Dus de Persoon \ Onderzoek gegevens, die gerelateerd zijn aan de
+persoon.
+
+Versie:
+
+5
+
+Soort:
+
+Definitieregel
+
+R2016
+'Systeemdatum'
+Definitie:
+
+De systeemdatum is de actuele datum tijdens het evalueren van een regel van het
+BRP syteem en heeft het formaat 'jjjjmmdd'.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2098
+Bijhouding geblokkeerd wegens verhuizing
+Definitie:
+
+Als een bijhoudingsvoorstel (Verwerkingswijze 'Bijhouding') ter verwerking wordt
+aangeboden en een Hoofdpersoon (R1287) van het bijhoudingsvoorstel is op dat
+moment betrokken in een verhuizing en de AH betreft niet GBA - Verhuizing
+intergemeentelijk GBA naar BRP, dan geldt dat het bijhoudingsvoorstel niet in
+behandeling kan worden genomen.
+Toelichting
+• Een Persoon is betrokken in een verhuizing, als
+Blokkering.Administratienummer = Persoon.Administratienummer
+• De blokkade op de PL is gezet vanwege de AH GBA - Verhuizing
+intergemeentelijk GBA naar BRP. Daarom moet deze AH juist wel verwerkt
+worden.
+• Deze regel is niet van toepassing voor de AH's Constatering verblijf kind en
+Vestiging niet-ingeschrevene.
+
+Versie:
+
+6
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Bijhouding is geblokkeerd wegens verhuizing.
+
+R2106
+De administratieve handeling moet zijn toegestaan voor de bijhoudingsautorisatie
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient de Soort
+administratieve handeling toegestaan te zijn bij de Bijhoudingsautorisatie.
+Dit is het geval als de Soort administratieve handeling via een
+Bijhoudingsautorisatie \ Soort administratieve handeling is gekoppeld aan de
+Bijhoudingsautorisatie.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+7
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De soort administratieve handeling is niet toegestaan voor deze autorisatie.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2115
+De bijhoudingsautorisatie mag niet geblokkeerd zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan mag
+Bijhoudingsautorisatie.Geblokkeerd? niet de waarde 'Ja' hebben.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+4
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De autorisatie is door de beheerder tijdelijk geblokkeerd.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2117
+
+De persoon die met een objectsleutel wordt aangewezen moet een ingeschrevene zijn
+Definitie:
+
+De Persoon die met een objectsleutel wordt aangewezen moet een 'Ingeschrevene'
+(I) zijn.
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De persoon die met een objectsleutel wordt aangewezen moet een ingeschrevene
+zijn.
+
+R2129
+Geldig
+Definitie:
+
+Een object is geldig op een peildatum als:
+De Datum aanvang geldigheid op of voor de peildatum ligt en de Datum einde
+geldigheid na de peildatum ligt.
+of
+De Datum ingang op of voor de peildatum ligt en de Datum einde na de peildatum
+ligt.
+(dus: de geldigeheidsperiode is inclusief de ingangsdatum, maar exclusief de
+einddatum)
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2212
+'Volledig opgeschort'
+Definitie:
+
+Een Persoon is volledig opgeschort indien de Persoon.Nadere bijhoudingsaard
+'Overleden' (O), 'Fout' (F), 'Onbekend' (?) of 'Gewist' (W) is.
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2247
+De toegang bijhoudingsautorisatie moet geldig zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient de
+bijbehorende Toegang bijhoudingsautorisatie Geldig (R2129) te zijn op de
+'Systeemdatum' (R2016).
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+4
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De toegang bijhoudingsautorisatie is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2248
+De toegang bijhoudingsautorisatie mag niet geblokkeerd zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient Toegang
+bijhoudingsautorisatie.Geblokkeerd? ongelijk aan "Ja" te zijn.
+
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd.
+Versie:
+
+4
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De toegang bijhoudingsautorisatie is geblokkeerd door de beheerder.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2250
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij en rol bestaan
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient er
+tenminste één voorkomen van Toegang bijhoudingsautorisatie te bestaan die hoort
+bij de Toegang bijhoudingsautorisatie.Geautoriseerde.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd. Door bij dat
+selectieproces de Toegang bijhoudingsautorisatie.Ondertekenaar en Toegang
+bijhoudingsautorisatie.Transporteur buiten beschouwing te laten, worden de voor
+deze regel benodigde voorkomens van Toegang bijhoudingsautorisatie geselecteerd.
+
+Versie:
+
+6
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Geen autorisatie voor de opgegeven combinatie van partij en rol.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2251
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en ondertekenaar
+bestaan
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient er
+tenminste één voorkomen van Toegang bijhoudingsautorisatie te bestaan die hoort
+bij de combinatie van Toegang bijhoudingsautorisatie.Geautoriseerde en Toegang
+bijhoudingsautorisatie.Ondertekenaar.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd. Door bij dat
+selectieproces de Toegang bijhoudingsautorisatie.Transporteur buiten beschouwing
+te laten, worden de voor deze regel benodigde voorkomens van Toegang
+bijhoudingsautorisatie geselecteerd.
+
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven combinatie van partij, rol en ondertekenaar is niet juist.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2252
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en transporteur
+bestaan
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient er
+tenminste één voorkomen van Toegang bijhoudingsautorisatie te bestaan die hoort
+bij de combinatie van Toegang bijhoudingsautorisatie.Geautoriseerde en Toegang
+bijhoudingsautorisatie.Transporteur.
+
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd. Door bij dat
+selectieproces de Toegang bijhoudingsautorisatie.Ondertekenaar buiten
+beschouwing te laten, worden de voor deze regel benodigde voorkomens van
+Toegang bijhoudingsautorisatie geselecteerd.
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven combinatie van partij, rol en transporteur is niet juist.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2268
+De geautoriseerde partij moet een geldige partij zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient
+Bericht.Zendende partij te verwijzen naar een Geldig voorkomen stamgegeven op
+peildatum (R1284) op 'Systeemdatum' (R2016) van Partij.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De verzendende partij is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2269
+De ondertekenaar moet een geldige partij zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient het OIN van
+het PKI-overheidscertificaat waarmee het bericht is ondertekend (de
+ondertekenaar) te verwijzen naar een Geldig voorkomen stamgegeven op peildatum
+(R1284) op 'Systeemdatum' (R2016) van Partij.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De ondertekenaar is geen geldige partij.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2270
+De transporteur moet een geldige partij zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient het OIN van
+het PKI-overheidscertificaat waarmee de beveiligde verbinding is opgezet (de
+transporteur) te verwijzen naar Geldig voorkomen stamgegeven op peildatum
+(R1284) op 'Systeemdatum' (R2016) van Partij.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De transporteur is geen geldige partij.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2271
+De combinatie partij met rol voor toegang bijhoudingsautorisatie moet geldig zijn
+
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient de
+bijbehorende Toegang bijhoudingsautorisatie te verwijzen naar een Geldig
+voorkomen stamgegeven op peildatum (R1284) op 'Systeemdatum' (R2016) van
+Partij \ Rol.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De combinatie partij en rol is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2299
+De bijhoudingsautorisatie moet geldig zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient de bij de
+Toegang bijhoudingsautorisatie behorende Bijhoudingsautorisatie Geldig (R2129) te
+zijn op de 'Systeemdatum' (R2016).
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De bijhoudingsautorisatie is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2343
+Algemene foutmelding bij schending autorisatieregels
+Definitie:
+
+Bij schending van één of meer van de autorisatieregels die zijn gekoppeld aan Use
+Case BY.1.AA, Use Case LV.1.AL of Use Case VB.1.AV.CA wordt in plaats van de
+meldingstekst bij de geschonden regel, de in deze regel opgenomen meldingstekst
+opgenomen in het berichtonderdeel Meldingen van het resultaatbericht. Zodat niet
+precies blijkt wat er aan de hand is.
+
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Er is een autorisatiefout opgetreden.
+
+R2348
+Partij van de Administratieve handeling moet gelijk zijn aan de Zendende partij
+Definitie:
+
+Administratieve handeling.Partij moet gelijk zijn aan Bericht.Zendende partij.
+
+Versie:
+
+1
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Partij van de administratieve handeling moet gelijk zijn aan de zendende partij.
+
+R2354
+Datum aanvang geldigheid van de actie mag niet in de toekomst liggen
+Definitie:
+
+Indien aanwezig moet Actie.Datum aanvang geldigheid <= 'Systeemdatum'
+(R2016)
+
+Versie:
+
+8
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum aanvang geldigheid van de actie mag niet in de toekomst liggen.
+
+R2413
+Een toelichting ontlening is verplicht bij het deblokkeren van een melding
+Definitie:
+
+Indien een bijhoudingsbericht minimaal één Gedeblokkeerde melding bevat, moet in
+het bericht een Administratieve handeling.Toelichting ontlening worden opgegeven.
+
+Versie:
+
+3
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Bij het deblokkeren van een melding is het opgeven van een toelichting ontlening
+verplicht.
+
+R2428
+Een opgegeven gedeblokkeerde melding moet verwijzen naar een regel die als
+deblokkeerbaar is vastgelegd
+Definitie:
+
+Regel.Code in een Gedeblokkeerde melding.Regel moet verwijzen naar een
+stamgegeven waarbij Regel.Soort melding 'Deblokkeerbaar' is in de stamtabel
+Regel.
+
+Versie:
+
+2
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven gedeblokkeerde melding moet verwijzen naar een regel die als
+deblokkeerbaar is vastgelegd in de stamtabel Regel.
+
+R2511
+Objectsleutel die verwijst naar relatie moet verwijzen naar relatie van juiste soort
+Definitie:
+
+Een objectsleutel in een bericht dat verwijst naar een object van het type Relatie
+moet verwijzen naar een Relatie van het juiste Relatie.Soort. Het juiste soort relatie
+is in het bericht opgenomen als label bij de objectsleutel die naar een relatie
+verwijst.
+Toelichting:
+• Onderstaand voorbeeld toont een regel uit de berichtdefinitie waarin het label
+aangeeft dat de relatie waarnaar de objectsleutel verwijst van het soort
+Geregistreerd partnerschap moet zijn.
+Geregistreerd partnerschap (objecttype="Relatie", objectsleutel,
+communicatieID)
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De in het bericht opgenomen objectsleutel die naar een relatie verwijst, verwijst
+niet naar het juiste soort relatie.
+
+R2512
+Objectsleutel die verwijst naar betrokkenheid moet verwijzen naar betrokkenheid met de
+juiste rol
+
+Definitie:
+
+Een objectsleutel in een bericht die verwijst naar een object van het type
+Betrokkenheid moet verwijzen naar een betrokkenheid met de juiste
+Betrokkenheid.Rol. De juiste rol van de betrokkenheid is in het bericht opgenomen
+als label bij de objectsleutel die naar een betrokkenheid verwijst.
+Toelichting:
+• Onderstaan voorbeeld toont een regel uit de berichtdefinitie waarin het label
+aangeeft dat de betrokkenheid waarnaar de objectsleutel verwijst de rol van
+Partner moet hebben.
+Partner (objecttype="Betrokkenheid", objectsleutel, communicatieID)
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De in het bericht opgenomen objectsleutel die naar een betrokkenheid verwijst,
+verwijst niet naar een betrokkenheid met de juiste rol.
+
+R2547
+'Volledig bekende datum'
+Definitie:
+
+Een volledig bekende datum heeft het formaat 'jjjj-mm-dd', waarbij:
+• 'mm' niet de waarde 00 heeft
+EN
+• 'dd' niet de waarde 00 heeft.
+Toelichting:
+Als het jaar de waarde 0000 heeft en maand en dag zijn bekend (hebben niet de
+waarde 00) dan betekent dit het jaar 0. Het jaar 0 voldoet niet aan de Gregoriaanse
+kalender. De controle op Gregoriaanse kalender gebeurt in een andere regel.
+
+Versie:
+
+5
+
+Soort:
+
+Definitieregel
+
+R2626
+Waarschuwing bij bijhouding indien gegevens van een hoofdpersoon in onderzoek staan
+Definitie:
+
+Geef een waarschuwing als een Hoofdpersoon (R1287) aan een Onderzoek met de
+Onderzoek.Status <> 'Afgesloten' is gekoppeld.
+
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+Bij één of meer hoofdpersonen van het bijhoudingsverzoek staan gegevens in
+onderzoek.
+
+R2690
+Nadere bijhoudingsaard moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+Persoon.Nadere bijhoudingsaard moet verwijzen naar een stamgegeven in Nadere
+bijhoudingsaard.
+
+Versie:
+
+1
+
+Soort:
+
+Integriteitsregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven nadere bijhoudingsaard bestaat niet.
+
+R2724
+
+Nadere bijhoudingsaard moet gelijk zijn aan "W"
+Definitie:
+
+Persoon.Nadere bijhoudingsaard moet gelijk zijn aan 'Gewist' (W).
+
+Versie:
+
+1
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Nadere bijhoudingsaard moet gelijk zijn aan "W"
+
+R2726
+Datum aanvang geldigheid van de actie moet gelijk zijn aan systeemdatum
+Definitie:
+
+Actie.Datum aanvang geldigheid moet gelijk zijn aan 'Systeemdatum' (R2016)
+
+Versie:
+
+1
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Datum aanvang geldigheid van de actie moet gelijk zijn aan systeemdatum
+
+R2727
+Bijhoudingspartij van de hoofdpersoon moet zich in het GBA-stelsel bevinden
+Definitie:
+
+De Persoon.Bijhoudingspartij van de Hoofdpersoon (R1287) moet zich in GBAstelsel bevinden.
+Toelichting
+Het stelsel van een Partij is:
+• "BRP" als de Partij.Datum overgang naar BRP gevuld is en deze gelijk is aan of
+voor de 'Systeemdatum' (R2016) ligt,
+• "GBA" in de overige gevallen.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Bijhoudingspartij van de hoofdpersoon moet zich in het GBA-stelsel bevinden
+
+

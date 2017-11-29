@@ -1,0 +1,354 @@
+UC801 Beheren processen
+migratievoorziening
+
+1.3
+
+Datum
+Status
+
+17-03-2016
+Definitief
+
+Definitief | 1.3 | UC801 Beheren processen migratievoorziening | 17-03-2016
+
+Inhoudsopgave
+
+1
+
+INLEIDING .............................................................................................................................................4
+1.1
+1.2
+1.3
+1.4
+
+2
+
+VERLOOP .................................................................................................................................................6
+2.1
+2.2
+2.3
+
+3
+
+BEKNOPTE OMSCHRIJVING ...................................................................................................................4
+REFERENTIES ........................................................................................................................................5
+PRECONDITIE ........................................................................................................................................5
+POSTCONDITIE......................................................................................................................................5
+REGULIER VERLOOP ..............................................................................................................................6
+ALTERNATIEF VERLOOP: GERELATEERDE BERICHTEN TONEN ............................................................6
+ALTERNATIEF VERLOOP: GERELATEERDE TAKEN TONEN ....................................................................6
+
+SPECIAL REQUIREMENTS ..............................................................................................................7
+3.1 TE TONEN PROCESSEN .........................................................................................................................7
+3.1.1 Type proces................................................................................................................................7
+3.1.2 Status van het proces ............................................................................................................7
+3.1.3 Partij .............................................................................................................................................7
+3.1.4 A-nummer ..................................................................................................................................7
+3.1.5 ID van het proces ....................................................................................................................7
+3.1.6 Alleen hoofdprocessen ...........................................................................................................8
+3.1.7 Administratieve handeling ....................................................................................................8
+3.2 TONEN VAN LIJST VAN PROCESSEN .....................................................................................................8
+3.3 PROCESSEN OPSCHORTEN EN HERVATTEN..........................................................................................8
+3.4 DETAILS VAN HET PROCES ...................................................................................................................8
+
+4
+
+OPMERKINGEN ....................................................................................................................................9
+
+Operatie BRP
+
+Pagina 2 van 9
+
+Definitief | 1.3 | UC801 Beheren processen migratievoorziening | 17-03-2016
+
+Versiehistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Auteur
+
+06-02-2014
+14-03-2014
+01-09-2014
+25-06-2015
+
+0.1
+1.0
+1.1
+1.2
+
+Operatie
+Operatie
+Operatie
+Operatie
+
+17-03-2016
+
+1.3
+
+Initiële versie
+Aanpassingen n.a.v. review
+Definitief gemaakt voor release 2.2
+Definitief gemaakt ten behoeve van release
+3.1
+INTEST-1759 bevindingen verwerkt
+
+BRP
+BRP
+BRP
+BRP
+
+Operatie BRP
+
+Reviewhistorie
+Datum
+
+Versie
+
+Omschrijving
+
+Reviewers
+
+14-03-2014
+
+0.1
+
+Review
+
+Operatie BRP
+
+Operatie BRP
+
+Pagina 3 van 9
+
+Definitief | 1.3 | UC801 Beheren processen migratievoorziening | 17-03-2016
+
+1
+
+Inleiding
+
+1.1
+
+Beknopte omschrijving
+De migratievoorziening is een complex systeem dat een veelheid van activiteiten uitvoert. Het is
+daarom belangrijk dat het systeem goed beheerd kan worden. Om dit mogelijk te maken is er
+voor gekozen om alle activiteiten in processen te vatten waarbij elk proces bestaat uit meerdere
+voor gedefinieerde stappen.
+Deze use case beschrijft op welke wijze de beheerder inzicht krijgt in de processen van het
+systeem en hoe deze beheerd kunnen worden.
+
+Operatie BRP
+
+Pagina 4 van 9
+
+Definitief | 1.3 | UC801 Beheren processen migratievoorziening | 17-03-2016
+
+1.2
+
+1.3
+
+Referenties
+#
+[UC814]
+
+Document
+UC814 Beheren berichten
+
+Organisatie
+Operatie BRP
+
+Versie
+-
+
+Datum
+-
+
+[UC815]
+
+UC815 Beheren taken
+
+Operatie BRP
+
+-
+
+-
+
+Preconditie
+N.v.t.
+
+1.4
+
+Postconditie
+N.v.t.
+
+Operatie BRP
+
+Pagina 5 van 9
+
+Definitief | 1.3 | UC801 Beheren processen migratievoorziening | 17-03-2016
+
+2
+
+Verloop
+
+2.1
+
+Regulier verloop
+1. De beheerder meldt het systeem welke processen getoond dienen te worden (3.1)
+2. Het systeem toont een lijst van gevonden processen (3.2)
+3. De beheerder selecteert een proces
+4. Het systeem toont de details van het proces (3.4)
+5. De beheerder meldt het systeem de gerelateerde processen te tonen (AF: 2.2, 2.3)
+6. De use case eindigt
+
+2.2
+
+Alternatief verloop: gerelateerde berichten tonen
+1. De beheerder meldt het systeem de gerelateerde berichten te tonen
+2. Use case [UC814] wordt gestart
+3. De use case eindigt
+
+2.3
+
+Alternatief verloop: gerelateerde taken tonen
+1. De beheerder meldt het systeem de gerelateerde taken te tonen
+2. Use case [UC815] wordt gestart
+3. De use case eindigt
+
+Operatie BRP
+
+Pagina 6 van 9
+
+Definitief | 1.3 | UC801 Beheren processen migratievoorziening | 17-03-2016
+
+3
+
+Special requirements
+
+3.1
+
+Te tonen processen
+
+Indien gewenst kan de beheerder een filter toepassen op de volgende kenmerken van een
+proces:
+•
+•
+•
+•
+•
+•
+•
+
+3.1.1
+
+Het type proces (zie par. 3.1.1)
+De status van het proces (zie par. 3.1.2)
+Partij (zie par. 3.1.3)
+A-nummer (zie par. 3.1.4)
+Het ID van een proces (zie par. 3.1.5)
+De administratieve handeling (zie par. 3.1.7)
+Alleen hoofdprocessen (zie par. 3.1.6)
+
+Type proces
+Indien gewenst kan een type proces in het filter opgenomen worden. Het systeem toont dan alle
+processen van dat type.
+
+3.1.2
+
+Status van het proces
+Indien gewenst kan een of meer statussen van processen in het filter opgenomen worden. Het
+systeem toont dan alle processen die aan een van de statussen voldoen. De volgende statussen
+zijn mogelijk (jBPM termen):
+• In uitvoering (Running)
+• Opgeschort (Suspended)
+• Beëindigd (Ended)
+
+3.1.3
+
+Partij
+Indien gewenst kan een partijcode in het filter opgenomen worden. Het systeem toont dan alle
+processen waarin berichten zijn ontvangen en verstuurd waarbij de verzendende- of
+ontvangende partij overeenkomt met de partijcode van het filter.
+
+3.1.4
+
+A-nummer
+Indien gewenst kan een a-nummer in het filter opgenomen worden. Het systeem toont dan alle
+processen waarin berichten zijn ontvangen en verstuurd waarbij het actuele a-nummer in het
+bericht overeenkomt met het a-nummer van het filter (let op: een actueel a-nummer komt niet
+voor in alle berichten).
+
+3.1.5
+
+ID van het proces
+Indien gewenst kan een ID van een proces in het filter opgenomen worden. Het systeem toont
+dan alle processen waaraan het opgegeven proces is gerelateerd.
+
+Operatie BRP
+
+Pagina 7 van 9
+
+Definitief | 1.3 | UC801 Beheren processen migratievoorziening | 17-03-2016
+
+3.1.6
+
+Alleen hoofdprocessen
+De beheerder kan in het filter aangeven dat alleen hoofdprocessen getoond dienen te worden.
+Hoofdprocessen zijn processen die zelfstandig kunnen bestaan. Foutprocessen kunnen dit
+bijvoorbeeld niet en zijn altijd onderdeel van een hoofdproces.
+
+3.1.7
+
+Administratieve handeling
+De beheerder kan een in het filter het ID van een administratieve handeling opnemen. Het
+systeem toont dan alle processen die gerelateerd zijn aan de opgegeven administratieve
+handeling.
+
+3.2
+
+Tonen van lijst van processen
+Standaard worden alle typen proces getoond die in uitvoering of opgeschort zijn. De processen
+zijn gesorteerd van nieuw naar oud.
+
+3.3
+
+Processen opschorten en hervatten
+De beheerder kan een proces opschorten of hervatten. Wanneer een proces wordt opgeschort of
+hervat worden ook alle eventuele subprocessen opgeschort of hervat.
+
+3.4
+
+Details van het proces
+De beheerder kan de volgende details van het proces zien:
+•
+•
+•
+•
+
+Wanneer het proces is gestart.
+Wanneer het proces is geëindigd.
+Het type van het proces.
+De procesplaat van het volledige proces met daarin aangegeven waar het proces zich op dat
+moment bevindt.
+• De stappen uit het proces die zijn gevolgd.
+
+Operatie BRP
+
+Pagina 8 van 9
+
+Definitief | 1.3 | UC801 Beheren processen migratievoorziening | 17-03-2016
+
+4
+
+Opmerkingen
+
+N.v.t.
+
+Operatie BRP
+
+Pagina 9 van 9
+
+

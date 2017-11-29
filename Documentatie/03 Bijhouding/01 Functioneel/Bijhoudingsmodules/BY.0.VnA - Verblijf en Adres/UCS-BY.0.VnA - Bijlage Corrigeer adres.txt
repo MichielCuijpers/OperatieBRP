@@ -1,0 +1,4993 @@
+Bijlage Corrigeer adres
+Versie: Release 59
+Gegenereerd op: 19 juli 2017
+Status: Definitief
+
+1 Handeling: Correctie adres
+Berichtspecificatie
+
+Corrigeer adres (bhg_vbaCorrigeerAdres)
+Stuurgegevens (communicatieID)
+
+Kardinaliteit
+1
+
+Zendende partij, Zendende systeem, Referentienummer, Datum/tijd verzending
+
+1
+
+Parameters (communicatieID)
+Verwerkingswijze
+
+Correctie adres
+
+(objecttype="AdministratieveHandeling", communicatieID)
+
+1
+
+Partij, Toelichting ontlening
+
+Gedeblokkeerde meldingen
+Gedeblokkeerde melding (objecttype="GedeblokkeerdeMelding", referentieID, communicatieID)
+
+0..1
+1..n
+
+Regel
+
+Bronnen
+
+0..1
+
+Bron (objecttype="AdministratieveHandelingBron", communicatieID)
+
+1
+
+Rechtsgrond
+
+Acties
+
+1
+
+Correctieverval adres (objecttype="Actie", communicatieID)
+
+0..n
+
+Nadere aanduiding verval
+
+Bronnen
+
+0..1
+
+Bron (objecttype="ActieBron", referentieID, communicatieID)
+Persoon (objecttype="Persoon", objectSleutel, communicatieID)
+Adressen
+
+1..n
+1
+1
+
+Persoon \ Adres (objecttype="PersoonAdres", objectSleutel, voorkomenSleutel, communicatieID)
+Correctieregistratie adres (objecttype="Actie", communicatieID)
+
+1
+0..n
+
+Datum aanvang geldigheid, Datum einde geldigheid
+
+Persoon (objecttype="Persoon", objectSleutel, communicatieID)
+Adressen
+
+1
+
+Persoon \ Adres (objecttype="PersoonAdres", communicatieID)
+Soort, Reden wijziging, Aangever adreshouding, Datum aanvang adreshouding, Identificatiecode
+adresseerbaar object, Identificatiecode nummeraanduiding, Gemeente, Naam openbare ruimte,
+Afgekorte naam openbare ruimte, Gemeentedeel, Huisnummer, Huisletter,
+Huisnummertoevoeging, Postcode, Woonplaatsnaam, Locatie ten opzichte van adres,
+Locatieomschrijving, Buitenlands adres regel 1, Buitenlands adres regel 2, Buitenlands adres regel
+3, Buitenlands adres regel 4, Buitenlands adres regel 5, Buitenlands adres regel 6, Land/gebied,
+Persoon aangetroffen op adres?
+
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1836
+
+7
+
+F
+
+1
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+1
+
+R2714
+
+1
+
+F
+
+De datum aanvang adreshouding moet op of na de datum aanvang
+adreshouding van het voorgaande adres liggen
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2577
+
+1
+
+F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+Gegevensvalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2428
+
+2
+
+F
+
+Een opgegeven gedeblokkeerde melding moet verwijzen naar een regel die
+als deblokkeerbaar is vastgelegd
+
+Integriteitsregels
+Code
+
+Versie Niveau Omschrijving
+
+R2430
+
+1
+
+1.1
+
+F
+
+Rechtsgrond moet verwijzen naar bestaand stamgegeven
+
+Use case: Controleer inhoud
+
+Generieke regels voor deze use case
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1579
+
+19
+
+D
+
+Van een overleden persoon mag uitsluitend een beperkte set van gegevens
+worden bijgehouden
+
+R1580
+
+7
+
+F
+
+Een persoon mag niet worden bijgehouden als de reden van opschorting
+foutief is
+
+R1833
+
+7
+
+F
+
+De objectsleutel waarmee een persoon in het bericht wordt aangewezen
+moet geldig zijn
+
+R1835
+
+10
+
+F
+
+Objectsleutel in bijhouding moet verwijzen naar bestaand object in BRP van
+juiste type
+
+R1839
+
+3
+
+F
+
+Gedeblokkeerde meldingen moeten in verwerking daadwerkelijk optreden
+
+R2098
+
+6
+
+F
+
+Bijhouding geblokkeerd wegens verhuizing
+
+R2511
+
+3
+
+F
+
+Objectsleutel die verwijst naar relatie moet verwijzen naar relatie van juiste
+soort
+
+R2512
+
+3
+
+F
+
+Objectsleutel die verwijst naar betrokkenheid moet verwijzen naar
+betrokkenheid met de juiste rol
+
+R2536
+
+4
+
+F
+
+Minimaal één hoofdpersoon moet een ingezetene of overledene zijn
+
+R2626
+
+4
+
+W
+
+Waarschuwing bij bijhouding indien gegevens van een hoofdpersoon in
+onderzoek staan
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1838
+
+4
+
+F
+
+In een bijhouding moet ReferentieID verwijzen naar CommunicatieID in
+berichtelement van het juiste type.
+
+R2348
+
+1
+
+F
+
+Partij van de Administratieve handeling moet gelijk zijn aan de Zendende
+partij
+
+R2413
+
+3
+
+F
+
+Een toelichting ontlening is verplicht bij het deblokkeren van een melding
+
+1.2
+
+Use case: Controleer inhoud (correctie)
+
+Generieke regels voor deze use case
+Autorisatieregels
+Code
+
+Versie Vorm
+
+Niveau Omschrijving
+
+R1610
+
+5
+
+F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de
+administratieve handeling aanbieden
+
+Controleregels
+Code
+
+Versie Vorm
+
+Niveau Omschrijving
+
+R1845
+
+6
+
+F
+
+In het bijhoudingsbericht gerelateerde objectsleutels en
+voorkomensleutels moeten verwijzen naar gerelateerde objecten
+en voorkomens in de BRP
+
+R2334
+
+3
+
+F
+
+Alleen een niet-vervallen voorkomen kan vervallen
+
+R2429
+
+2
+
+XSD / Afl. F
+
+R2432
+
+1
+
+D
+
+Rechtsgrond verplicht bij nadere aanduiding verval 'S'
+
+R2530
+
+3
+
+F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2675
+
+3
+
+F
+
+Tijdlijncontrole groepen met niet-aaneengesloten materiële historie
+
+R2691
+
+4
+
+F
+
+Na verwerking van de AH moet een gecorrigeerde materiele groep
+een actueel niet-beëindigd voorkomen hebben
+
+Nadere aanduiding verval moet een geldige waarde hebben
+
+Invoervalidatieregels
+Code
+
+Versie Vorm
+
+Niveau Omschrijving
+
+R2431
+
+1
+
+D
+
+Rechtsgrond moet geldig zijn op systeemdatum
+
+R2448
+
+4
+
+D
+
+Elke actie heeft minimaal één bron met uitzondering van correcties
+op de groepen Adres, Bijhouding en Onverwerkt document
+aanwezig
+
+R2528
+
+3
+
+F
+
+Datum einde geldigheid van de actie moet na datum aanvang van
+de actie liggen
+
+R2535
+
+3
+
+F
+
+Datum einde geldigheid van de actie moet op of na datum aanvang
+van de actie liggen
+
+R2668
+
+1
+
+F
+
+Bron moet een Document of een rechtsgrond bevatten
+
+1.3
+
+Use case: Autorisatie administratieve handeling
+
+Generieke regels voor deze use case
+Autorisatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2106
+
+7
+
+F
+
+De administratieve handeling moet zijn toegestaan voor de
+bijhoudingsautorisatie
+
+R2115
+
+4
+
+F
+
+De bijhoudingsautorisatie mag niet geblokkeerd zijn
+
+R2247
+
+4
+
+F
+
+De toegang bijhoudingsautorisatie moet geldig zijn
+
+R2248
+
+4
+
+F
+
+De toegang bijhoudingsautorisatie mag niet geblokkeerd zijn
+
+R2250
+
+6
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij en rol
+bestaan
+
+R2251
+
+5
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en
+ondertekenaar bestaan
+
+R2252
+
+5
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en
+transporteur bestaan
+
+R2268
+
+2
+
+F
+
+De geautoriseerde partij moet een geldige partij zijn
+
+R2269
+
+2
+
+F
+
+De ondertekenaar moet een geldige partij zijn
+
+R2270
+
+2
+
+F
+
+De transporteur moet een geldige partij zijn
+
+R2271
+
+2
+
+F
+
+De combinatie partij met rol voor toegang bijhoudingsautorisatie moet geldig
+zijn
+
+R2299
+
+2
+
+F
+
+De bijhoudingsautorisatie moet geldig zijn
+
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R2343
+
+4
+
+F
+
+Algemene foutmelding bij schending autorisatieregels
+
+1.4
+
+Actie: Correctieverval adres
+
+Specifieke regels voor deze combinatie Handeling \ Actie
+
+1.5
+
+Actie: Correctieregistratie adres
+
+Specifieke regels voor deze combinatie Handeling \ Actie
+Gegevensvalidatieregels
+Code
+
+Versie Vorm
+
+Niveau Omschrijving
+
+R1356
+
+5
+
+XSD / Afl. F
+
+R1357
+
+7
+
+F
+
+Locatieomschrijving mag uitsluitend ingevuld zijn bij een Niet-BAG
+adres met locatieomschrijving
+
+R1358
+
+6
+
+F
+
+Afgekorte naam openbare ruimte moet ingevuld zijn bij een BAG
+adres en een Niet-BAG adres met openbare ruimte
+
+R1367
+
+7
+
+F
+
+Huisnummer moet ingevuld zijn bij een BAG adres en een NietBAG adres met openbare ruimte
+
+R1368
+
+6
+
+F
+
+Huisletter mag alleen ingevuld zijn bij een BAG adres en een NietBAG adres met openbare ruimte
+
+R1369
+
+5
+
+F
+
+Huisnummertoevoeging mag alleen ingevuld zijn bij een BAG adres
+en een Niet-BAG adres met openbare ruimte
+
+R1370
+
+6
+
+F
+
+Locatie ten opzichte van adres mag alleen ingevuld zijn bij een
+BAG adres en een niet-BAG adres met openbare ruimte
+
+R1371
+
+5
+
+F
+
+Postcode mag alleen ingevuld zijn bij een BAG adres en een nietBAG adres met openbare ruimte
+
+R1374
+
+9
+
+D
+
+Datum aanvang adreshouding moet een volledig bekende datum
+zijn
+
+R1375
+
+5
+
+F
+
+Locatieomschrijving mag uit niet meer dan 35 karakters bestaan
+
+R1376
+
+6
+
+XSD / Afl. F
+
+R1379
+
+4
+
+F
+
+Gemeente in het adres moet geldig zijn op datum aanvang
+adreshouding
+
+R1926
+
+7
+
+F
+
+Aangever adreshouding moet ingevuld zijn bij aangifte door
+persoon
+
+R2307
+
+5
+
+F
+
+Datum aanvang adreshouding moet ingevuld zijn bij een
+Nederlands adres
+
+R2309
+
+4
+
+F
+
+Identificatiecode nummeraanduiding moet ingevuld zijn bij een
+BAG adres
+
+R2310
+
+6
+
+F
+
+Gemeente is verplicht bij een Nederlands adres
+
+R2313
+
+4
+
+F
+
+Naam openbare ruimte moet ingevuld zijn bij een BAG-adres
+
+R2314
+
+4
+
+F
+
+Woonplaatsnaam moet ingevuld zijn bij een BAG adres
+
+R2317
+
+2
+
+F
+
+Huisnummertoevoeging en locatie ten opzichte van adres mogen
+niet beide gevuld zijn
+
+R2329
+
+5
+
+F
+
+Identificatiecode adresseerbaar object moet ingevuld zijn bij een
+BAG adres
+
+R2354
+
+8
+
+F
+
+Datum aanvang geldigheid van de actie mag niet in de toekomst
+liggen
+
+R2355
+
+6
+
+F
+
+Datum aanvang adreshouding mag niet in de toekomst liggen
+
+R2416
+
+1
+
+F
+
+Afgekorte naam openbare ruimte mag alleen ingevuld zijn bij een
+BAG adres en een niet-BAG adres met openbare ruimte
+
+R2417
+
+1
+
+F
+
+Huisnummer mag alleen ingevuld zijn bij een BAG adres en een
+Niet-BAG adres met openbare ruimte
+
+R2420
+
+1
+
+F
+
+Aangever adreshouding mag alleen gevuld zijn bij aangifte door
+persoon
+
+Postcode moet Nederlands formaat hebben
+
+Locatie ten opzichte van adres mag alleen toegestane waarde
+bevatten
+
+R2421
+
+2
+
+F
+
+Datum aanvang adreshouding mag alleen gevuld zijn bij een
+Nederlands adres
+
+R2423
+
+3
+
+F
+
+Gemeente mag alleen ingevuld zijn bij een Nederlands adres
+
+R2504
+
+2
+
+F
+
+Buitenlands adres regel mag uit niet meer dan 35 karakters
+bestaan
+
+R2527
+
+3
+
+F
+
+Datum einde geldigheid van de actie mag niet in de toekomst
+liggen
+
+R2660
+
+1
+
+F
+
+Een buitenlands adres regel mag niet worden overgeslagen
+
+R2744
+
+1
+
+F
+
+Buitenlands adres regel 4, 5 en 6 moeten leeg zijn
+
+Integriteitsregels
+Code
+
+Versie Vorm
+
+Niveau Omschrijving
+
+R1274
+
+6
+
+F
+
+R1355
+
+6
+
+XSD / Afl. F
+
+R1378
+
+7
+
+D
+
+Land/gebied adres moet verwijzen naar geldig stamgegeven
+
+R1650
+
+6
+
+F
+
+Gemeente in het adres moet verwijzen naar bestaand
+stamgegeven
+
+R1924
+
+3
+
+F
+
+Reden wijziging adres moet verwijzen naar bestaand stamgegeven
+
+R1925
+
+3
+
+F
+
+Aangever adreshouding moet verwijzen naar bestaand
+stamgegeven
+
+R2316
+
+3
+
+D
+
+Woonplaatsnaam moet verwijzen naar een bestaand stamgegeven
+
+R2318
+
+1
+
+F
+
+Land/gebied adres moet verwijzen naar een bestaand
+stamgegeven
+
+Datum moet een geldige kalenderdatum zijn
+Soort adres moet verwijzen naar bestaand stamgegeven
+
+Algemene regels voor deze actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R2487
+
+1
+
+W
+
+Waarschuwing als een persoon een Nederlands adres heeft in de
+buitenlandse adresregels
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2500
+
+2
+
+D
+
+Datum aanvang geldigheid van de actie moet gelijk zijn aan datum aanvang
+adreshouding
+
+R2659
+
+1
+
+F
+
+Adres moet een Nederlandse adres of buitenlands adres zijn
+
+R2722
+
+1
+
+F
+
+De datum aanvang adreshouding moet op of voor de datum aanvang
+geldigheid van het adres liggen.
+
+R2749
+
+1
+
+F
+
+Een buitenlands adres moet een woonadres zijn
+
+2 Handeling: Correctie migratie
+Berichtspecificatie
+
+Corrigeer adres (bhg_vbaCorrigeerAdres)
+Stuurgegevens (communicatieID)
+
+Kardinaliteit
+1
+
+Zendende partij, Zendende systeem, Referentienummer, Datum/tijd verzending
+
+1
+
+Parameters (communicatieID)
+Verwerkingswijze
+
+Correctie migratie
+
+(objecttype="AdministratieveHandeling", communicatieID)
+
+1
+
+Partij, Toelichting ontlening
+
+Gedeblokkeerde meldingen
+Gedeblokkeerde melding (objecttype="GedeblokkeerdeMelding", referentieID, communicatieID)
+
+0..1
+1..n
+
+Regel
+
+Bronnen
+
+0..1
+
+Bron (objecttype="AdministratieveHandelingBron", communicatieID)
+Document (objecttype="Document", communicatieID)
+
+1..n
+0..1
+
+Soort, Omschrijving, Partij
+Rechtsgrond
+
+Acties
+
+1
+
+Correctieverval migratie (objecttype="Actie", communicatieID)
+
+0..n
+
+Nadere aanduiding verval
+
+Bronnen
+
+0..1
+
+Bron (objecttype="ActieBron", referentieID, communicatieID)
+Persoon (objecttype="Persoon", objectSleutel, communicatieID)
+Migratie (voorkomenSleutel, communicatieID)
+
+Correctieregistratie migratie (objecttype="Actie", communicatieID)
+
+1..n
+1
+1
+0..n
+
+Datum aanvang geldigheid, Datum einde geldigheid
+
+Bronnen
+
+0..1
+
+Bron (objecttype="ActieBron", referentieID, communicatieID)
+Persoon (objecttype="Persoon", objectSleutel, communicatieID)
+Migratie (communicatieID)
+Soort migratie, Reden wijziging migratie, Aangever migratie, Land/gebied migratie, Buitenlands adres regel
+1 migratie, Buitenlands adres regel 2 migratie, Buitenlands adres regel 3 migratie, Buitenlands adres regel
+4 migratie, Buitenlands adres regel 5 migratie, Buitenlands adres regel 6 migratie
+
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1836
+
+7
+
+F
+
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2577
+
+1
+
+F
+
+Administratieve handeling moet minimaal 1 actie bevatten
+
+Gegevensvalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+1..n
+1
+1
+
+R1850
+
+5
+
+F
+
+Uitsluitend indien een document geen Nederlandse registerakte is mag de
+omschrijving gevuld zijn
+
+R2428
+
+2
+
+F
+
+Een opgegeven gedeblokkeerde melding moet verwijzen naar een regel die
+als deblokkeerbaar is vastgelegd
+
+Integriteitsregels
+Code
+
+Versie Niveau Omschrijving
+
+R1605
+
+5
+
+F
+
+Soort document moet verwijzen naar bestaand stamgegeven
+
+R2235
+
+4
+
+F
+
+Partij in document moet verwijzen naar bestaande partij
+
+R2430
+
+1
+
+F
+
+Rechtsgrond moet verwijzen naar bestaand stamgegeven
+
+2.1
+
+Use case: Controleer inhoud
+
+Generieke regels voor deze use case
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1579
+
+19
+
+D
+
+Van een overleden persoon mag uitsluitend een beperkte set van gegevens
+worden bijgehouden
+
+R1580
+
+7
+
+F
+
+Een persoon mag niet worden bijgehouden als de reden van opschorting
+foutief is
+
+R1833
+
+7
+
+F
+
+De objectsleutel waarmee een persoon in het bericht wordt aangewezen
+moet geldig zijn
+
+R1835
+
+10
+
+F
+
+Objectsleutel in bijhouding moet verwijzen naar bestaand object in BRP van
+juiste type
+
+R1839
+
+3
+
+F
+
+Gedeblokkeerde meldingen moeten in verwerking daadwerkelijk optreden
+
+R2098
+
+6
+
+F
+
+Bijhouding geblokkeerd wegens verhuizing
+
+R2511
+
+3
+
+F
+
+Objectsleutel die verwijst naar relatie moet verwijzen naar relatie van juiste
+soort
+
+R2512
+
+3
+
+F
+
+Objectsleutel die verwijst naar betrokkenheid moet verwijzen naar
+betrokkenheid met de juiste rol
+
+R2536
+
+4
+
+F
+
+Minimaal één hoofdpersoon moet een ingezetene of overledene zijn
+
+R2626
+
+4
+
+W
+
+Waarschuwing bij bijhouding indien gegevens van een hoofdpersoon in
+onderzoek staan
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1838
+
+4
+
+F
+
+In een bijhouding moet ReferentieID verwijzen naar CommunicatieID in
+berichtelement van het juiste type.
+
+R2348
+
+1
+
+F
+
+Partij van de Administratieve handeling moet gelijk zijn aan de Zendende
+partij
+
+R2413
+
+3
+
+F
+
+Een toelichting ontlening is verplicht bij het deblokkeren van een melding
+
+2.2
+
+Use case: Controleer inhoud (correctie)
+
+Generieke regels voor deze use case
+Autorisatieregels
+Code
+
+Versie Vorm
+
+Niveau Omschrijving
+
+R1610
+
+5
+
+F
+
+Alleen de bijhoudingspartij van de hoofdpersoon mag de
+administratieve handeling aanbieden
+
+Controleregels
+Code
+
+Versie Vorm
+
+Niveau Omschrijving
+
+R1845
+
+6
+
+F
+
+In het bijhoudingsbericht gerelateerde objectsleutels en
+voorkomensleutels moeten verwijzen naar gerelateerde objecten
+en voorkomens in de BRP
+
+R2334
+
+3
+
+F
+
+Alleen een niet-vervallen voorkomen kan vervallen
+
+R2429
+
+2
+
+XSD / Afl. F
+
+R2432
+
+1
+
+D
+
+Rechtsgrond verplicht bij nadere aanduiding verval 'S'
+
+R2530
+
+3
+
+F
+
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+
+R2675
+
+3
+
+F
+
+Tijdlijncontrole groepen met niet-aaneengesloten materiële historie
+
+R2691
+
+4
+
+F
+
+Na verwerking van de AH moet een gecorrigeerde materiele groep
+een actueel niet-beëindigd voorkomen hebben
+
+Nadere aanduiding verval moet een geldige waarde hebben
+
+Invoervalidatieregels
+Code
+
+Versie Vorm
+
+Niveau Omschrijving
+
+R2431
+
+1
+
+D
+
+Rechtsgrond moet geldig zijn op systeemdatum
+
+R2448
+
+4
+
+D
+
+Elke actie heeft minimaal één bron met uitzondering van correcties
+op de groepen Adres, Bijhouding en Onverwerkt document
+aanwezig
+
+R2528
+
+3
+
+F
+
+Datum einde geldigheid van de actie moet na datum aanvang van
+de actie liggen
+
+R2535
+
+3
+
+F
+
+Datum einde geldigheid van de actie moet op of na datum aanvang
+van de actie liggen
+
+R2668
+
+1
+
+F
+
+Bron moet een Document of een rechtsgrond bevatten
+
+2.3
+
+Use case: Autorisatie administratieve handeling
+
+Generieke regels voor deze use case
+Autorisatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2106
+
+7
+
+F
+
+De administratieve handeling moet zijn toegestaan voor de
+bijhoudingsautorisatie
+
+R2115
+
+4
+
+F
+
+De bijhoudingsautorisatie mag niet geblokkeerd zijn
+
+R2247
+
+4
+
+F
+
+De toegang bijhoudingsautorisatie moet geldig zijn
+
+R2248
+
+4
+
+F
+
+De toegang bijhoudingsautorisatie mag niet geblokkeerd zijn
+
+R2250
+
+6
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij en rol
+bestaan
+
+R2251
+
+5
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en
+ondertekenaar bestaan
+
+R2252
+
+5
+
+F
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en
+transporteur bestaan
+
+R2268
+
+2
+
+F
+
+De geautoriseerde partij moet een geldige partij zijn
+
+R2269
+
+2
+
+F
+
+De ondertekenaar moet een geldige partij zijn
+
+R2270
+
+2
+
+F
+
+De transporteur moet een geldige partij zijn
+
+R2271
+
+2
+
+F
+
+De combinatie partij met rol voor toegang bijhoudingsautorisatie moet geldig
+zijn
+
+R2299
+
+2
+
+F
+
+De bijhoudingsautorisatie moet geldig zijn
+
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R2343
+
+4
+
+F
+
+Algemene foutmelding bij schending autorisatieregels
+
+2.4
+
+Actie: Correctieverval migratie
+
+Specifieke regels voor deze combinatie Handeling \ Actie
+
+2.5
+
+Actie: Correctieregistratie migratie
+
+Specifieke regels voor deze combinatie Handeling \ Actie
+Gegevensvalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R1377
+
+6
+
+F
+
+Buitenlands adres regel migratie mag uit niet meer dan 35 karakters bestaan
+
+R1663
+
+5
+
+D
+
+Land/gebied migratie moet verwijzen naar geldig stamgegeven
+
+R1669
+
+4
+
+F
+
+Buitenlands adres regel mag alleen zijn opgegeven bij emigratie naar bekend
+land
+
+R2354
+
+8
+
+F
+
+Datum aanvang geldigheid van de actie mag niet in de toekomst liggen
+
+R2363
+
+1
+
+F
+
+Aangever migratie moet ingevuld zijn bij aangifte door persoon
+
+R2393
+
+2
+
+F
+
+Buitenlands adres regel migratie 4, 5 en 6 moeten leeg zijn
+
+R2394
+
+1
+
+F
+
+Een buitenlands adres regel migratie mag niet worden overgeslagen
+
+R2427
+
+1
+
+F
+
+Aangever migratie mag alleen ingevuld zijn bij aangifte door persoon
+
+R2527
+
+3
+
+F
+
+Datum einde geldigheid van de actie mag niet in de toekomst liggen
+
+Integriteitsregels
+Code
+
+Versie Niveau Omschrijving
+
+R1274
+
+6
+
+F
+
+Datum moet een geldige kalenderdatum zijn
+
+R1664
+
+7
+
+F
+
+Land/gebied migratie moet verwijzen naar bestaand stamgegeven
+
+R2361
+
+1
+
+F
+
+Reden wijziging migratie moet verwijzen naar een bestaand stamgegeven
+
+R2366
+
+1
+
+F
+
+Aangever migratie moet verwijzen naar bestaand stamgegeven
+
+Algemene regels voor deze actie
+Controleregels
+Code
+
+Versie Niveau Omschrijving
+
+R1666
+
+3
+
+F
+
+Land/gebied migratie mag niet Nederland zijn
+
+Invoervalidatieregels
+Code
+
+Versie Niveau Omschrijving
+
+R2362
+
+2
+
+F
+
+Opgaaf van reden wijziging migratie met waarde 'Technische wijzigingen
+i.v.m. BAG', 'Infrastructurele wijziging' of 'Onbekend' is niet toegestaan
+
+3 Uitwerking regels
+R1273
+Datum (deels) onbekend
+Definitie:
+
+Een Datum evt. (deels) onbekend heeft het formaat 'jjjj-mm-dd'. Als een datum
+deels onbekend is dan moet:
+• indien dag onbekend is voor dag ('dd') de waarde 00 zijn ingevuld;
+• indien maand onbekend is voor zowel dag ('dd') als maand ('mm') de waarde
+00 zijn ingevuld;
+• indien jaar onbekend is zowel dag ('dd') als maand ('mm') de waarde 00 zijn
+ingevuld en voor jaar ('jjjj') de waarde 0000.
+
+Versie:
+
+7
+
+Soort:
+
+Definitieregel
+
+R1274
+Datum moet een geldige kalenderdatum zijn
+Definitie:
+
+Indien de datum een 'Volledig bekende datum' (R2547) betreft moet deze in de
+combinatie van jaar, maand en dag geldig zijn binnen de Gregoriaanse kalender.
+Toelichting:
+Omdat de XSD afdwingt dat een datum met het attribuuttype Datum altijd een
+'Volledig bekende datum' (R2547) betreft moet deze altijd in de combinatie van
+jaar, maand en dag geldig zijn binnen de Gregoriaanse kalender.
+De XSD dwingt voor een datum met het attribuuttype Datum evt. (deels) onbekend
+af dat deze voldoet aan de definitie van Datum (deels) onbekend (R1273).
+
+Versie:
+
+6
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven datum is geen geldige kalenderdatum.
+
+R1278
+Hoofdactie
+Definitie:
+
+De eerste Actie die voorkomt binnen een Administratieve handeling wordt de
+Hoofdactie genoemd.
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1279
+Nevenactie
+Definitie:
+
+Een Actie die binnen een Administratieve handeling niet de Hoofdactie (R1278) is,
+wordt een "Nevenactie" genoemd.
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1284
+Geldig voorkomen stamgegeven op peildatum
+Definitie:
+
+Een Stamgegeven is geldig op een zekere peildatum, indien aan de volgende
+voorwaarden is voldaan:
+1.
+
+indien gevuld moet DatumAanvangGeldigheid van Stamgegeven <= peildatum;
+
+2.
+
+indien gevuld moet DatumEindeGeldigheid van Stamgegeven > peildatum.
+
+Als er sprake is van Datum (deels) onbekend (R1273) dan moet de R1283 Vergelijken (partiële) datums streng uitgevoerd worden.
+Toelichting
+• het Stamgegeven is geldig op elke peildatum indien DatumAanvangGeldigheid
+en DatumEindeGeldigheid leeg zijn.
+• Voor de stamtabel Partij geldt dat Partij.Datum ingang en Partij.Datum einde
+ipv respectievelijk DatumAanvangGeldigheid en DatumEindeGeldigheid gebruikt
+moeten worden.
+• Voor de stamtabel Partij \ Rol geldt dat Partij \ Rol.Datum ingang en Partij \
+Rol.Datum einde ipv respectievelijk DatumAanvangGeldigheid en
+DatumEindeGeldigheid gebruikt moeten worden.
+Versie:
+
+7
+
+Soort:
+
+Definitieregel
+
+R1287
+Hoofdpersoon
+Definitie:
+
+De Persoon wiens gegevens worden gewijzigd in de Hoofdactie (R1278) wordt de
+Hoofdpersoon genoemd.
+Opmerkingen:
+1. In gevallen dat de Hoofdactie (R1278) slechts wijzigingen op gegevens van 1
+Persoon bevat, is dat de Hoofdpersoon.
+2. In gevallen dat de Hoofdactie (R1278) wijzigingen op gegevens van meerdere
+personen bevat, gaat het om de volgende situaties met de volgende
+Hoofdpersonen:
+a. een 'Huwelijk' (H) of 'Geregistreerd partnerschap' (G): als beide partners
+'Ingeschrevene' (I) zijn, zijn beide partners Hoofdpersoon. Als een van beide
+partners 'Pseudo-persoon' (P) is, is de andere partner (de 'Ingeschrevene' (I)) de
+Hoofdpersoon.
+b. een 'Familierechtelijke betrekking' (F): hier is de Persoon met de rol 'Kind' (K)
+altijd de Hoofdpersoon, tenzij er sprake is van een bijschrijving van een Soort
+Persoon 'Pseudo-persoon' (P) in de rol van 'Kind' (K) bij een 'Ingeschrevene' (I) in
+de rol van 'Ouder' (O), dan is de Persoon met de rol 'Ouder' (O) de Hoofdpersoon.
+3. Een Persoon in de soort 'Pseudo-persoon' (P) kan dus nooit een Hoofdpersoon
+zijn!
+4. Een Persoon waarvan de gewijzigde gegevens slechts voorkomen als gegeven
+van een gerelateerde Persoon, kan nooit een Hoofdpersoon zijn.
+
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R1325
+'Datum aanvang volledige opschorting'
+Definitie:
+
+De 'Datum aanvang volledige opschorting' (R1325) is de datum van het begin van
+de actuele periode dat de bijhouding van een Persoon aaneengesloten 'Volledig
+opgeschort' (R2212) is. Dit is dus de Datum aanvang geldigheid van het oudste niet
+vervallen voorkomen van Persoon.Bijhouding in deze periode.
+De 'Datum aanvang volledige opschorting' (R1325) kan (deels) onbekend zijn.
+Toelichting:
+Omdat de datum van overlijden van een persoon (deels) onbekend kan zijn kan ook
+de 'Datum aanvang volledige opschorting' (R1325) (deels) onbekend zijn.
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1355
+Soort adres moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+In een Persoon \ Adres moet de waarde van Persoon \ Adres.Soort verwijzen naar
+een stamgegeven in de Stamtabel Soort adres.
+
+Versie:
+
+6
+
+Soort:
+
+Integriteitsregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het soort adres bestaat niet.
+
+R1356
+Postcode moet Nederlands formaat hebben
+Definitie:
+
+Indien gevuld moet de Persoon \ Adres.Postcode van een Persoon \ Adres 6
+karakters bevatten, waarvan de eerste 4 een cijfer en de laatste 2 een letter.
+
+Versie:
+
+5
+
+Soort:
+
+Gegevensvalidatieregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Postcode moet bestaan uit 4 cijfers gevolgd door 2 letters.
+
+R1357
+Locatieomschrijving mag uitsluitend ingevuld zijn bij een Niet-BAG adres met
+locatieomschrijving
+Definitie:
+
+Persoon \ Adres.Locatieomschrijving mag uitsluitend een waarde hebben bij een
+'Niet-BAG-adres met locatieomschrijving' (R2306).
+Toelichting
+Door het invullen van dit attribuut gaan de regels er tevens vanuit dat de gebruiker
+een 'Niet-BAG-adres met locatieomschrijving' (R2306) aan het invoeren is. M.a.w.
+het attribuut dient als herkenning van een 'Niet-BAG-adres met locatieomschrijving'
+(R2306).
+
+Versie:
+
+7
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Locatieomschrijving mag alleen ingevuld worden bij een niet-BAG adres met
+locatieomschrijving.
+
+R1358
+Afgekorte naam openbare ruimte moet ingevuld zijn bij een BAG adres en een Niet-BAG
+adres met openbare ruimte
+Definitie:
+
+Persoon \ Adres.Afgekorte naam openbare ruimte moet ingevuld zijn bij een 'BAGadres' (R2304) en een 'Niet-BAG-adres met openbare ruimte' (R2305).
+
+Versie:
+
+6
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Afgekorte naam openbare ruimte moet opgegeven worden bij een BAG adres en
+een niet-BAG adres met openbare ruimte.
+
+R1367
+Huisnummer moet ingevuld zijn bij een BAG adres en een Niet-BAG adres met openbare
+ruimte
+Definitie:
+
+Persoon \ Adres.Huisnummer moet ingevuld zijn bij een 'BAG-adres' (R2304) en
+een 'Niet-BAG-adres met openbare ruimte' (R2305).
+
+Versie:
+
+7
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Huisnummer moet opgegeven worden bij een BAG adres en een niet-BAG adres met
+openbare ruimte.
+
+R1368
+Huisletter mag alleen ingevuld zijn bij een BAG adres en een Niet-BAG adres met openbare
+ruimte
+Definitie:
+
+Persoon \ Adres.Huisletter mag uitsluitend ingevuld zijn bij een 'BAG-adres' (R2304)
+en een 'Niet-BAG-adres met openbare ruimte' (R2305).
+
+Versie:
+
+6
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Huisletter mag alleen worden opgegeven bij een BAG adres of een niet-BAG adres
+met openbare ruimte.
+
+R1369
+Huisnummertoevoeging mag alleen ingevuld zijn bij een BAG adres en een Niet-BAG adres
+met openbare ruimte
+Definitie:
+
+Persoon \ Adres.Huisnummertoevoeging mag alleen ingevuld zijn bij een 'BAGadres' (R2304) en een 'Niet-BAG-adres met openbare ruimte' (R2305).
+
+Versie:
+
+5
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Huisnummertoevoeging mag alleen worden opgegeven bij een BAG adres of een
+niet-BAG adres met openbare ruimte.
+
+R1370
+Locatie ten opzichte van adres mag alleen ingevuld zijn bij een BAG adres en een niet-BAG
+adres met openbare ruimte
+Definitie:
+
+Persoon \ Adres.Locatie ten opzichte van adres mag alleen ingevuld zijn bij een
+'BAG-adres' (R2304) en een 'Niet-BAG-adres met openbare ruimte' (R2305).
+
+Versie:
+
+6
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Locatie ten opzichte van adres mag alleen worden opgegeven bij een BAG adres en
+een niet-BAG adres met openbare ruimte.
+
+R1371
+Postcode mag alleen ingevuld zijn bij een BAG adres en een niet-BAG adres met openbare
+ruimte
+
+Definitie:
+
+Persoon \ Adres.Postcode mag alleen ingevuld zijn bij een 'BAG-adres' (R2304) en
+een 'Niet-BAG-adres met openbare ruimte' (R2305).
+
+Versie:
+
+5
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Postcode mag alleen worden opgegeven bij een BAG adres en een niet-BAG adres
+met openbare ruimte.
+
+R1374
+Datum aanvang adreshouding moet een volledig bekende datum zijn
+Definitie:
+
+Persoon \ Adres.Datum aanvang adreshouding moet een 'Volledig bekende datum'
+(R2547) bevatten.
+
+Versie:
+
+9
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Datum aanvang adreshouding bevat geen volledig bekende datum.
+
+R1375
+Locatieomschrijving mag uit niet meer dan 35 karakters bestaan
+Definitie:
+
+De Persoon \ Adres.Locatieomschrijving van een Persoon \ Adres mag uit niet meer
+dan 35 karakters bestaan.
+Toelichting:
+Dit is de maximale lengte van het overeenkomende attribuut Locatiebeschrijving in
+LO GBA 3.x.
+
+Versie:
+
+5
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Locatieomschrijving bevat meer dan 35 karakters. Er worden maximaal 35
+karakters in het adres getoond.
+
+R1376
+Locatie ten opzichte van adres mag alleen toegestane waarde bevatten
+Definitie:
+
+Als Persoon \ Adres.Locatie ten opzichte van adres een waarde heeft, moet
+Persoon \ Adres.Locatie ten opzichte van adres van een Persoon \ Adres de
+waarde "by" (bij) of "to" (tegen over) bevatten.
+
+Versie:
+
+6
+
+Soort:
+
+Gegevensvalidatieregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Locatie ten opzichte van adres mag alleen de waarde 'by' (bij) of 'to' (tegen over)
+bevatten.
+
+R1377
+Buitenlands adres regel migratie mag uit niet meer dan 35 karakters bestaan
+Definitie:
+
+Elke buitenlands adres regel die bij een migratie wordt vastgelegd mag uit niet
+meer dan 35 karakters bestaan.
+Het gaat dan om de volgende adresregels uit Persoon.Migratie:
+• Persoon.Buitenlands adres regel 1 migratie
+• Persoon.Buitenlands adres regel 2 migratie
+
+•
+
+Persoon.Buitenlands adres regel 3 migratie
+
+Toelichting:
+1. Vanwege duale periode mogen buitenlandse adresregels niet meer dan 35
+tekens bevatten (de maximale lengte in LO 3.7).
+2. Voor de buitenlandse adresregels die bij het woon/briefadres worden
+vastgelegd is een separate regel opgenomen (R2504 - Buitenlands adres regel
+mag uit niet meer dan 35 karakters bestaan).
+3. Buitenlands adres regel 4 t/m 6 worden tijdens de duale periode niet gebruikt.
+Versie:
+
+6
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Buitenlands adres regel mag niet meer dan 35 karakters bevatten.
+
+R1378
+Land/gebied adres moet verwijzen naar geldig stamgegeven
+Definitie:
+
+Indien gevuld moet Persoon \ Adres.Land/gebied op de Persoon \ Adres.Datum
+aanvang adreshouding verwijzen naar een Geldig voorkomen stamgegeven op
+peildatum (R1284) in de Stamtabel Land/gebied.
+
+Versie:
+
+7
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Het opgegeven land/gebied is niet geldig op datum aanvang adreshouding.
+
+R1379
+Gemeente in het adres moet geldig zijn op datum aanvang adreshouding
+Definitie:
+
+Indien gevuld moet Persoon \ Adres.Gemeente op de Persoon \ Adres.Datum
+aanvang adreshouding verwijzen naar een Geldig voorkomen stamgegeven op
+peildatum (R1284) in de Stamtabel Gemeente.
+
+Versie:
+
+4
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven gemeente is niet geldig op datum aanvang adreshouding.
+
+R1540
+'Inhoudelijke groep'
+Definitie:
+
+Inhoudelijke groepen zijn groepen van de Persoonslijst die bij de Persoon horen. Dit
+zijn alle groepen onder Objecttypen Persoon, Persoon \ Adres, Persoon \
+Geslachtsnaamcomponent, Persoon \ Indicatie, Persoon \ Nationaliteit, Persoon \
+Reisdocument, Persoon \ Verificatie, Persoon \ Verstrekkingsbeperking, Persoon \
+Voornaam, Persoon \ Buitenlands persoonsnummer, Relatie (soorten Huwelijk en
+Geregistreerd partnerschap) en Betrokkenheid (rol Ouder).
+(Dit zijn dus de groepen uit het persoonsdeel van het bericht over de persoon, in
+tegenstelling tot de groepen uit bijvoorbeeld het verantwoordingsdeel en het
+onderzoeksdeel)
+
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R1541
+'Verantwoordingsgroep'
+Definitie:
+
+Verantwoordingsgroepen zijn groepen van de Persoonslijst die de verantwoording
+van de 'Inhoudelijke groep' (R1540) vormen. Dit zijn groepen onder de Objecttypen
+
+Administratieve handeling, Actie, Actie \ Bron, Document, Gedeblokkeerde melding
+en de koppelingen tussen die Objecttypen.
+(Dit zijn dus de groepen uit het verantwoordingsdeel van het bericht over de
+persoon)
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R1543
+'Onderzoeksgroep'
+Definitie:
+
+Een Onderzoeksgroep is een groep die gegevens bevat omtrent onderzoeken op bij
+de Persoon aanwezige of ontbrekende gegevens. We hebben het hier altijd over de
+aan de Persoon gerelateerde Onderzoeken. Dus de Persoon \ Onderzoek gegevens,
+die direct gerelateerd zijn aan de uitgangspersoon.
+Voor het 'Onderzoeksdeel' worden de volgende begrippen gehanteerd:
+• Onderzoeksdeel: het deel binnen het bericht, dat informatie bevat over de
+onderzoeken.
+• Onderzoek: Binnen het onderzoeksdeel komen de 'Onderzoeken' voor, die de
+o.a. de Onderzoek.Datum aanvang, Onderzoek.Status en eventueel
+Onderzoek.Datum einde van het onderzoek bevatten
+• Gegeven in onderzoek: Als onderdeel van 'Onderzoek', zijn de in het onderzoek
+betrokken gegevens vastgelegd in Gegeven in onderzoek. Deze geeft aan
+welke gegevens (Gegeven in onderzoek.Element en optioneel: Gegeven in
+onderzoek.Object sleutel gegeven en Gegeven in onderzoek.Voorkomen sleutel
+gegeven) in het Onderzoek zijn betrokken.
+• Persoon \ Adres.Persoon aangetroffen op adres? valt ook onder het
+onderzoekdeel. Bijzonder aan dit attribuut is dat deze geen onderdeel is van
+Onderzoek of Gegeven in onderzoek, maar van Persoon \ Adres.
+Een onderzoeksgroep gedraagt zich verder hetzelfde als een Inhoudelijke groep, er
+is dus sprake van een afgeleid administratief en verantwoording d.m.v. een
+administratieve handeling met acties en bronnen.
+(Het betreft hier de groepen uit het Onderzoeksdeel van het bericht, deze hebben
+betrekking op de onderzoeken op persoonsgegevens, in tegenstelling tot de
+groepen uit bijvoorbeeld het Verantwoordingsdeel en het Persoonsdeel)
+
+Versie:
+
+4
+
+Soort:
+
+Definitieregel
+
+R1579
+Van een overleden persoon mag uitsluitend een beperkte set van gegevens worden
+bijgehouden
+Definitie:
+
+Indien de Persoon Hoofdpersoon (R1287) is en de Persoon.Nadere bijhoudingsaard
+'Overleden' (O) is mag van deze Persoon uitsluitend het volgende worden
+bijgehouden:
+• elke "Groep" van de 'Volledig persoon' (R1998) waarvoor Materiële historie
+wordt bijgehouden, waarvan de Datum aanvang geldigheid voor de 'Datum
+aanvang volledige opschorting' (R1325) ligt.
+• elke Relatie waarbij deze persoon een Betrokkenheid heeft waarvan de
+Relatie.Datum aanvang voor de 'Datum aanvang volledige opschorting'
+(R1325) ligt, indien de aanvang van de relatie wordt geregistreerd,
+• elke Relatie waarbij deze persoon een Betrokkenheid heeft waarvan de
+Relatie.Datum einde voor de 'Datum aanvang volledige opschorting' (R1325)
+ligt, indien het einde van de relatie wordt geregistreerd.
+
+•
+•
+•
+•
+•
+
+De groep Persoon.Verblijfsrecht indien de Persoon.Datum aanvang
+verblijfsrecht voor de 'Datum aanvang volledige opschorting' (R1325) ligt.
+De groep Persoon.Bijhouding indien het Wijziging gemeente infrastructureel bij
+overledene of Correctie bijhouding betreft.
+Onderzoeksgegevens: Onderzoek en Gegeven in onderzoek.
+Groep Persoon.Vastgesteld niet Nederlander
+Persoon \ Nationaliteit
+
+Versie:
+
+19
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+De aanvangsdatum van de bijhouding ligt ná overlijdensdatum van de persoon en
+kan daarom niet meer worden bijgehouden.
+
+R1580
+Een persoon mag niet worden bijgehouden als de reden van opschorting foutief is
+Definitie:
+
+Indien de Persoon.Nadere bijhoudingsaard 'Fout' (F) of 'Gewist' (W) is mogen van
+deze Persoon geen gegevens worden bijgehouden.
+Opmerking: Over "Gewist" (code W) wordt verder niet gesproken in de
+meldingstekst omdat er over deze nadere bijhoudingsaard niets gecommuniceerd
+wordt in het LO. Het betreft een 'technische' nadere bijhoudingsaard.
+
+Versie:
+
+7
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Een persoon mag niet worden bijgehouden als de reden van opschorting foutief is.
+
+R1605
+Soort document moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+In de groep Document.Identiteit moet de waarde van Document.Soort voorkomen
+in "Stamgegeven" Soort document.
+
+Versie:
+
+5
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het opgegeven soort document is geen bestaand stamgegeven.
+
+R1610
+Alleen de bijhoudingspartij van de hoofdpersoon mag de administratieve handeling
+aanbieden
+Definitie:
+
+Indien de Administratieve handeling.Partij de Rol 'Bijhoudingsorgaan College' heeft
+moet deze overeenkomen met de Persoon.Bijhoudingspartij van een Hoofdpersoon
+(R1287) van de Administratieve handeling.
+
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Alleen bijhoudingsgemeente van de hoofdpersoon mag de administratieve handeling
+uitvoeren.
+
+R1650
+Gemeente in het adres moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+Indien gevuld moet Persoon \ Adres.Gemeente verwijzen naar een stamgegeven in
+Gemeente.
+
+Versie:
+
+6
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven gemeente bij adres is geen bestaand stamgegeven.
+
+R1663
+Land/gebied migratie moet verwijzen naar geldig stamgegeven
+Definitie:
+
+Indien gevuld moet de Persoon.Land/gebied migratie van een Persoon \ Adres op
+Persoon.Migratie.Datum aanvang geldigheid verwijzen naar een Geldig voorkomen
+stamgegeven op peildatum (R1284) in de Stamtabel Land/gebied.
+
+Versie:
+
+5
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Land/gebied migratie is niet geldig op datum aanvang geldigheid migratie.
+
+R1664
+Land/gebied migratie moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+Indien gevuld moet Persoon.Land/gebied migratie verwijzing naar een stamgegeven
+in Land/gebied.
+
+Versie:
+
+7
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het opgegeven land/gebied is geen bestaand stamgegeven.
+
+R1666
+Land/gebied migratie mag niet Nederland zijn
+Definitie:
+
+Persoon.Land/gebied migratie mag niet "Nederland" zijn, tenzij de Persoon de
+indicatie Persoon.Bijzondere verblijfsrechtelijke positie? heeft of krijgt.
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het land/gebied van migratie mag niet Nederland zijn.
+
+R1669
+Buitenlands adres regel mag alleen zijn opgegeven bij emigratie naar bekend land
+Definitie:
+
+Persoon.Buitenlands adres regel 1 migratie, Persoon.Buitenlands adres regel 2
+migratie, Persoon.Buitenlands adres regel 3 migratie, Persoon.Buitenlands adres
+regel 4 migratie, Persoon.Buitenlands adres regel 5 migratie en Persoon.Buitenlands
+adres regel 6 migratie mag alleen een waarde hebben als Persoon.Soort migratie
+gelijk is aan 'Emigratie' (E) én Persoon.Land/gebied migratie een waarde heeft
+ongelijk aan "Onbekend".
+
+Versie:
+
+4
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Alleen bij emigratie naar een bekend land mag een buitenlands adres migratie
+worden ingevuld.
+
+R1833
+De objectsleutel waarmee een persoon in het bericht wordt aangewezen moet geldig zijn
+
+Definitie:
+
+De 'Gemaskeerde objectsleutel' (R1834) waarmee een Persoon in het Bericht wordt
+aangewezen moet geldig zijn.
+
+Versie:
+
+7
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De objectsleutel waarmee de persoon in het bericht wordt aangewezen is niet
+geldig.
+
+R1834
+'Gemaskeerde objectsleutel'
+Definitie:
+
+De 'Gemaskeerde objectsleutel' (R1834) wijst een Persoon aan en maskeert de
+interne objectsleutel. Deze 'Gemaskeerde objectsleutel' (R1834) moet een beperkte
+tijd geldig zijn. De objectsleutel verliest z'n geldigheid, zodra zich een wijziging in
+de persoonsgegevens heeft voorgedaan nadat de gemaskeerde sleutel aan een
+partij is verstrekt
+Toelichting:
+• Er moet voorkomen worden dat de objectsleutel een sterkere sleutel wordt dan
+het BSN en afnemers deze sleutel gaan gebruiken i.p.v. het BSN. Dit houdt in
+dat voorkomen moet worden dat de objectsleutel 'as-is' wordt
+gecommuniceerd. Er zal een vorm van maskering toegepast worden met een
+beperkte geldigheid. De concrete invulling hiervan is een technisch
+implementatie en wordt dus niet verder (functioneel) beschreven.
+
+Versie:
+
+8
+
+Soort:
+
+Definitieregel
+
+R1835
+Objectsleutel in bijhouding moet verwijzen naar bestaand object in BRP van juiste type
+Definitie:
+
+Een objectsleutel in een bericht moet verwijzen naar een bestaand object in de BRP
+van het juiste type.
+Opmerking:
+De regel geldt voor elke specialisatie van het 'abstracte root' Object zoals Persoon,
+Relatie, Betrokkenheid etc.
+
+Versie:
+
+10
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De in het bericht opgenomen objectsleutel bestaat niet of is niet van de juiste type.
+
+R1836
+Nevenactie mag alleen betrekking hebben op een hoofdpersoon
+Definitie:
+
+Een Nevenactie (R1279) mag alleen betrekking hebben op een Hoofdpersoon
+(R1287).
+
+Versie:
+
+7
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De nevenactie mag niet voor deze persoon worden uitgevoerd.
+
+R1838
+
+In een bijhouding moet ReferentieID verwijzen naar CommunicatieID in berichtelement van
+het juiste type.
+Definitie:
+
+Elk referentieID in een Bijhoudingsvoorstel moet verwijzen naar een
+communicatieID dat behoort bij een berichtelement van hetzelfde type als het
+berichtelement dat behoort bij het referentieID.
+Uitzondering hierop zijn referentieID's in berichtelementen van het type
+Gedeblokkeerde melding. Want deze referentieID's mogen verwijzen naar
+berichtelementen van een ander type.
+Toelichting:
+Onderstaand voorbeeld toont twee regels uit een berichtdefinitie. De tweede regel
+bevat een referentieID die naar het communicatieID van de eerste regel kan
+verwijzen. Het type berichtelement is bij beide regels Bron.
+Bron (objecttype="AdministratieveHandelingBron", communicatieID="123")
+Bron (objecttype="ActieBron", referentieID="123", communicatieID="987")
+
+Versie:
+
+4
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het referentieID verwijst niet naar een juist CommunicatieID.
+
+R1839
+Gedeblokkeerde meldingen moeten in verwerking daadwerkelijk optreden
+Definitie:
+
+Elke Gedeblokkeerde melding moet in de verwerking van het Bijhoudingsvoorstel
+ook daadwerkelijk optreden.
+De gedeblokkeerde melding moet optreden in het element dat in de deblokkade is
+gespecificeerd m.b.v. referentieID.
+Toelichting:
+1. Met deze regel wordt voorkomen dat meldingen "op voorhand" worden
+gedeblokkeerd.
+2. Deze regel mag niet gewijzigd worden van Blokkerend naar Deblokkerend (of
+Melding) omdat deze regel dan ook "op voorhand" gedeblokkeerd kan worden
+en daarmee zinloos is.
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De gedeblokkeerde melding is niet opgetreden.
+
+R1845
+In het bijhoudingsbericht gerelateerde objectsleutels en voorkomensleutels moeten
+verwijzen naar gerelateerde objecten en voorkomens in de BRP
+Definitie:
+
+Als in de hiërarchie van een Bijhoudingsbericht in een Actie een tweetal elementen
+is verbonden én elk element met een sleutel naar een geregistreerd Object of
+Voorkomen in de BRP verwijst, dan moet in de BRP het ene Object of Voorkomen
+waarnaar wordt verwezen gerelateerd zijn aan het andere Object of Voorkomen.
+Gerelateerde objecten en voorkomens in berichten:
+1. Deze regel heeft betrekking op objecten of voorkomens die in het bericht met
+een object- of voorkomensleutel worden aangewezen.
+
+2.
+
+3.
+
+4.
+
+In de bericht hiërarchie zijn elementen verbonden met parent en child relaties.
+Elementen kunnen via meerdere hiërarchische lagen verbonden zijn. In
+bijvoorbeeld de actie Registratie einde geregistreerd partnerschap is het
+element Geregistreerd partnerschap een parent van het element
+Betrokkenheden en het element Partner een child van het element
+Betrokkenheden. Dus zijn het element Geregistreerd partnerschap en het
+element Partner verbonden (Partner is een subchild van Geregistreerd
+partnerschap).
+Een Object is alleen met het eerste Object met sleutel dat in de hiërarchie
+voorkomt verbonden. In bijvoorbeeld de actie Registratie einde geregistreerd
+partnerschap is de Relatie wel verbonden met de Betrokkenheid maar niet met
+de Persoon.
+Een voorkomensleutel in een bericht moet verwijzen naar een bestaand
+voorkomen van de juiste groep. De juiste groep is in het bericht opgenomen
+als label bij de voorkomensleutel. Bij de groep Standaard van een object is de
+naam van het objecttype als label in het bericht opgenomen in plaats van de
+naam van de groep.
+
+Gerelateerde objecten en voorkomens in het LGM:
+1. In het LGM is een object gerelateerd aan een ander object indien één van deze
+objecten verwijst naar het andere object. Een Betrokkenheid is bijvoorbeeld
+gerelateerd aan een Relatie indien in Betrokkenheid.Persoon wordt verwezen
+naar die Relatie.
+2. In het LGM is een voorkomen van een Groep gerelateerd aan een object als het
+onderdeel is van het Object. Andersom is het object aan een voorkomen
+verbonden als het eigenaar is van de Groep. Een voorkomenen van de groep
+Persoon.Verblijfsrecht is bijvoorbeeld gerelateerd aan de Persoon waar deze
+groep onderdeel van is.
+Versie:
+
+6
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven objectsleutels en voorkomensleutels vormen geen gerelateerde set
+aan gegevens in de BRP.
+
+R1850
+Uitsluitend indien een document geen Nederlandse registerakte is mag de omschrijving
+gevuld zijn
+Definitie:
+
+Uitsluitend indien een document geen Nederlandse registerakte (R2149) is mag de
+Document.Omschrijving gevuld zijn.
+
+Versie:
+
+5
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Uitsluitend indien een document geen Nederlandse registerakte is mag de
+omschrijving gevuld zijn.
+
+R1924
+Reden wijziging adres moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+Persoon \ Adres.Reden wijziging moet verwijzen naar een stamgegeven in Reden
+wijziging verblijf.
+
+Versie:
+
+3
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven reden wijziging van het adres is geen bestaand stamgegeven.
+
+R1925
+Aangever adreshouding moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+Persoon \ Adres.Aangever adreshouding moet verwijzen naar een stamgegeven in
+Aangever.
+
+Versie:
+
+3
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven aangever adreshouding is geen bestaand stamgegeven.
+
+R1926
+Aangever adreshouding moet ingevuld zijn bij aangifte door persoon
+Definitie:
+
+Persoon \ Adres.Aangever adreshouding moet een waarde hebben als Persoon \
+Adres.Reden wijziging 'Aangifte door persoon' (P) is.
+
+Versie:
+
+7
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De aangever adreshouding moet ingevuld zijn bij aangifte door persoon.
+
+R1998
+'Volledig persoon'
+Definitie:
+
+Een volledig Persoon is het complete beeld van de persoon zoals deze in de BRP is
+geadministreerd. Het gaat om de administratie van alle gegevens (Element) van het
+Element.Soort 'Attribuut' met Element.Autorisatie: 'Optioneel', 'Via
+groepsautorisatie', 'Verplicht', 'Aanbevolen', 'Uitzondering' en
+'Bijhoudingsgegevens'.
+Een volledig persoon bevat attributen uit:
+Inhoudelijke groepen ('Inhoudelijke groep' (R1540))
+Verantwoordingsgroepen ('Verantwoordingsgroep' (R1541))
+De verantwoordingsinformatie betreft alle Administratieve handeling die de
+Persoonslijst van de hoofdpersoon hebben bijgehouden of hebben geleid tot een
+mutatie van het onderzoeksdeel ('Onderzoeksgroep' (R1543)). Dit betreft alle
+Administratieve handelingen die voorkomen in de groep Persoon.Afgeleid
+administratief van de hoofdpersoon. Ook de Actie en Actie \ Bron die bij die
+Administratieve handelingen horen, worden opgenomen.
+Onderzoeksgroepen ('Onderzoeksgroep' (R1543))
+De gegevens uit Onderzoek, die betrekking hebben op de te leveren Persoon
+moeten worden opgenomen. Het betreft altijd aan de Persoon gerelateerde
+Onderzoeken. Dus de Persoon \ Onderzoek gegevens, die gerelateerd zijn aan de
+persoon.
+
+Versie:
+
+5
+
+Soort:
+
+Definitieregel
+
+R2016
+'Systeemdatum'
+Definitie:
+
+De systeemdatum is de actuele datum tijdens het evalueren van een regel van het
+BRP syteem en heeft het formaat 'jjjjmmdd'.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2098
+
+Bijhouding geblokkeerd wegens verhuizing
+Definitie:
+
+Als een bijhoudingsvoorstel (Verwerkingswijze 'Bijhouding') ter verwerking wordt
+aangeboden en een Hoofdpersoon (R1287) van het bijhoudingsvoorstel is op dat
+moment betrokken in een verhuizing en de AH betreft niet GBA - Verhuizing
+intergemeentelijk GBA naar BRP, dan geldt dat het bijhoudingsvoorstel niet in
+behandeling kan worden genomen.
+Toelichting
+• Een Persoon is betrokken in een verhuizing, als
+Blokkering.Administratienummer = Persoon.Administratienummer
+• De blokkade op de PL is gezet vanwege de AH GBA - Verhuizing
+intergemeentelijk GBA naar BRP. Daarom moet deze AH juist wel verwerkt
+worden.
+• Deze regel is niet van toepassing voor de AH's Constatering verblijf kind en
+Vestiging niet-ingeschrevene.
+
+Versie:
+
+6
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Bijhouding is geblokkeerd wegens verhuizing.
+
+R2106
+De administratieve handeling moet zijn toegestaan voor de bijhoudingsautorisatie
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient de Soort
+administratieve handeling toegestaan te zijn bij de Bijhoudingsautorisatie.
+Dit is het geval als de Soort administratieve handeling via een
+Bijhoudingsautorisatie \ Soort administratieve handeling is gekoppeld aan de
+Bijhoudingsautorisatie.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+7
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De soort administratieve handeling is niet toegestaan voor deze autorisatie.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2115
+De bijhoudingsautorisatie mag niet geblokkeerd zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan mag
+Bijhoudingsautorisatie.Geblokkeerd? niet de waarde 'Ja' hebben.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+4
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De autorisatie is door de beheerder tijdelijk geblokkeerd.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2129
+Geldig
+
+Definitie:
+
+Een object is geldig op een peildatum als:
+De Datum aanvang geldigheid op of voor de peildatum ligt en de Datum einde
+geldigheid na de peildatum ligt.
+of
+De Datum ingang op of voor de peildatum ligt en de Datum einde na de peildatum
+ligt.
+(dus: de geldigeheidsperiode is inclusief de ingangsdatum, maar exclusief de
+einddatum)
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2149
+Nederlandse registerakte
+Definitie:
+
+Een Nederlandse registerakte is een Document, waarvoor geldt dat Soort
+document.Registersoort een waarde heeft.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2212
+'Volledig opgeschort'
+Definitie:
+
+Een Persoon is volledig opgeschort indien de Persoon.Nadere bijhoudingsaard
+'Overleden' (O), 'Fout' (F), 'Onbekend' (?) of 'Gewist' (W) is.
+
+Versie:
+
+2
+
+Soort:
+
+Definitieregel
+
+R2235
+Partij in document moet verwijzen naar bestaande partij
+Definitie:
+
+In de groep Document.Identiteit moet de waarde van Document.Partij voorkomen
+in Partij.
+
+Versie:
+
+4
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven partij is geen bestaand stamgegeven.
+
+R2247
+De toegang bijhoudingsautorisatie moet geldig zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient de
+bijbehorende Toegang bijhoudingsautorisatie Geldig (R2129) te zijn op de
+'Systeemdatum' (R2016).
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+4
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De toegang bijhoudingsautorisatie is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2248
+De toegang bijhoudingsautorisatie mag niet geblokkeerd zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient Toegang
+bijhoudingsautorisatie.Geblokkeerd? ongelijk aan "Ja" te zijn.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+4
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De toegang bijhoudingsautorisatie is geblokkeerd door de beheerder.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2250
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij en rol bestaan
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient er
+tenminste één voorkomen van Toegang bijhoudingsautorisatie te bestaan die hoort
+bij de Toegang bijhoudingsautorisatie.Geautoriseerde.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd. Door bij dat
+selectieproces de Toegang bijhoudingsautorisatie.Ondertekenaar en Toegang
+bijhoudingsautorisatie.Transporteur buiten beschouwing te laten, worden de voor
+deze regel benodigde voorkomens van Toegang bijhoudingsautorisatie geselecteerd.
+
+Versie:
+
+6
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Geen autorisatie voor de opgegeven combinatie van partij en rol.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2251
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en ondertekenaar
+bestaan
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient er
+tenminste één voorkomen van Toegang bijhoudingsautorisatie te bestaan die hoort
+bij de combinatie van Toegang bijhoudingsautorisatie.Geautoriseerde en Toegang
+bijhoudingsautorisatie.Ondertekenaar.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd. Door bij dat
+selectieproces de Toegang bijhoudingsautorisatie.Transporteur buiten beschouwing
+te laten, worden de voor deze regel benodigde voorkomens van Toegang
+bijhoudingsautorisatie geselecteerd.
+
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven combinatie van partij, rol en ondertekenaar is niet juist.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2252
+
+Er moet een toegang bijhoudingsautorisatie voor de opgegeven partij, rol en transporteur
+bestaan
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient er
+tenminste één voorkomen van Toegang bijhoudingsautorisatie te bestaan die hoort
+bij de combinatie van Toegang bijhoudingsautorisatie.Geautoriseerde en Toegang
+bijhoudingsautorisatie.Transporteur.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd. Door bij dat
+selectieproces de Toegang bijhoudingsautorisatie.Ondertekenaar buiten
+beschouwing te laten, worden de voor deze regel benodigde voorkomens van
+Toegang bijhoudingsautorisatie geselecteerd.
+
+Versie:
+
+5
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven combinatie van partij, rol en transporteur is niet juist.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2268
+De geautoriseerde partij moet een geldige partij zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient
+Bericht.Zendende partij te verwijzen naar een Geldig voorkomen stamgegeven op
+peildatum (R1284) op 'Systeemdatum' (R2016) van Partij.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De verzendende partij is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2269
+De ondertekenaar moet een geldige partij zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient het OIN van
+het PKI-overheidscertificaat waarmee het bericht is ondertekend (de
+ondertekenaar) te verwijzen naar een Geldig voorkomen stamgegeven op peildatum
+(R1284) op 'Systeemdatum' (R2016) van Partij.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De ondertekenaar is geen geldige partij.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2270
+De transporteur moet een geldige partij zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient het OIN van
+het PKI-overheidscertificaat waarmee de beveiligde verbinding is opgezet (de
+transporteur) te verwijzen naar Geldig voorkomen stamgegeven op peildatum
+(R1284) op 'Systeemdatum' (R2016) van Partij.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De transporteur is geen geldige partij.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2271
+De combinatie partij met rol voor toegang bijhoudingsautorisatie moet geldig zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient de
+bijbehorende Toegang bijhoudingsautorisatie te verwijzen naar een Geldig
+voorkomen stamgegeven op peildatum (R1284) op 'Systeemdatum' (R2016) van
+Partij \ Rol.
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De combinatie partij en rol is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2299
+De bijhoudingsautorisatie moet geldig zijn
+Definitie:
+
+Als een bijhoudingsbericht ter verwerking wordt aangeboden, dan dient de bij de
+Toegang bijhoudingsautorisatie behorende Bijhoudingsautorisatie Geldig (R2129) te
+zijn op de 'Systeemdatum' (R2016).
+In use case BY.1.AA is gedefinieerd hoe bij een bijhoudingsbericht de bijbehorende
+Toegang bijhoudingsautorisatie kan worden geselecteerd.
+
+Versie:
+
+2
+
+Soort:
+
+Autorisatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De bijhoudingsautorisatie is niet geldig.
+
+Loggingsniveau:
+
+Illegale poging
+
+R2302
+'Nederlands adres'
+Definitie:
+
+Een Nederlands adres is een Persoon \ Adres waar Persoon \ Adres.Land/gebied =
+"Nederland" (landcode 6030) EN Adres.Buitenland adres regel 1 t/m 6 leeg zijn.
+Toelichting
+Door conversie vanuit de RNI komen nederlandse adressen in de buitenlandse
+adresregels van de BRP terecht. Dat levert verwarring op over de term nederlands
+adres. In bovenstaande definitie worden alleen de adressen bedoeld die NIET in de
+buitenlandse adresregels opgeslagen zijn.
+
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2303
+'Buitenlands adres'
+Definitie:
+
+Een buitenlands adres is een Persoon \ Adres waarbij minimaal 1 van de attributen
+Persoon \ Adres.Buitenlands adres regel 1 t/m 6 gevuld is.
+Toelichting
+• Door conversie vanuit de RNI komen nederlandse adressen in de buitenlandse
+adresregels van de BRP terecht. Dat levert verwarring op over de term
+
+buitenlands adres. In bovenstaande definitie worden alle adressen bedoeld die
+in de buitenlandse adresregels opgeslagen zijn. Dit kunnen dus ook
+'ongestructureerde' nederlandse adressen zijn waarbij Persoon \
+Adres.Land/gebied = "Nederland"!
+Versie:
+
+1
+
+Soort:
+
+Definitieregel
+
+R2304
+'BAG-adres'
+Definitie:
+
+Een BAG-adres is een 'Nederlands adres' (R2302) waar minimaal één van de
+volgende attributen gevuld is:
+• Persoon \ Adres.Identificatiecode adresseerbaar object
+• Persoon \ Adres.Identificatiecode nummeraanduiding
+• Persoon \ Adres.Naam openbare ruimte
+• Persoon \ Adres.Woonplaatsnaam
+Toelichting
+• Bij de officiële definitie van een BAG-adres zijn al deze attributen verplicht. Het
+systeem gebruikt echter bovenstaande minder strenge definitie om te bepalen
+of de bijhouder een BAG-adres poogt in te voeren. Indien dit het geval is zullen
+ook de bij een BAG-adres behorende validatieregels afgaan. Middels die regels
+wordt afgedwongen dat alle bovenstaande attributen ingevuld zijn.
+• Bovendien wordt hiermee een controle toegevoegd op het invoeren van puntadressen. Zie ontwerpbeslissing 5 in Besluiten.xlsx.
+
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R2305
+'Niet-BAG-adres met openbare ruimte'
+Definitie:
+
+Een Niet-BAG-adres met openbare ruimte is een 'Nederlands adres' (R2302), maar
+geen 'BAG-adres' (R2304), en Persoon \ Adres.Locatieomschrijving NIET gevuld is.
+Toelichting
+Bij dit type adres zijn een aantal adres-attributenn verplicht. Deze zijn verder
+uitgewerkt in regels per attribuut. Hiermee wordt tegelijkertijd een controle
+toegevoegd op het invoeren van punt-adressen. Zie ontwerpbeslissing 5 in
+Besluiten.xlsx.
+
+Versie:
+
+4
+
+Soort:
+
+Definitieregel
+
+R2306
+'Niet-BAG-adres met locatieomschrijving'
+Definitie:
+
+Een Niet-BAG-adres met locatieomschrijving is een 'Nederlands adres' (R2302),
+maar geen 'BAG-adres' (R2304), en Persoon \ Adres.Locatieomschrijving WEL
+gevuld is.
+
+Versie:
+
+3
+
+Soort:
+
+Definitieregel
+
+R2307
+Datum aanvang adreshouding moet ingevuld zijn bij een Nederlands adres
+Definitie:
+
+Persoon \ Adres.Datum aanvang adreshouding moet een waarde hebben bij een
+'Nederlands adres' (R2302).
+
+Versie:
+
+5
+
+Soort:
+
+Gegevensvalidatieregel
+
+Verschijningsvorm: Nadere specificatie per handeling
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Datum aanvang adreshouding moet ingevuld zijn bij een Nederlands adres.
+
+R2309
+Identificatiecode nummeraanduiding moet ingevuld zijn bij een BAG adres
+Definitie:
+
+Persoon \ Adres.Identificatiecode nummeraanduiding moet een waarde hebben bij
+bij een 'BAG-adres' (R2304).
+
+Versie:
+
+4
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De identificatiecode nummeraanduiding moet ingevuld zijn bij een BAG adres.
+
+R2310
+Gemeente is verplicht bij een Nederlands adres
+Definitie:
+
+Persoon \ Adres.Gemeente moet ingevuld zijn bij een 'Nederlands adres' (R2302).
+
+Versie:
+
+6
+
+Soort:
+
+Gegevensvalidatieregel
+
+Verschijningsvorm: Nadere specificatie per handeling
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De gemeente moet ingevuld zijn bij een Nederlands adres.
+
+R2313
+Naam openbare ruimte moet ingevuld zijn bij een BAG-adres
+Definitie:
+
+Persoon \ Adres.Naam openbare ruimte moet ingevuld zijn bij een 'BAG-adres'
+(R2304).
+
+Versie:
+
+4
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De naam openbare ruimte moet ingevuld zijn bij een BAG adres.
+
+R2314
+Woonplaatsnaam moet ingevuld zijn bij een BAG adres
+Definitie:
+
+Persoon \ Adres.Woonplaatsnaam moet ingevuld zijn bij een 'BAG-adres' (R2304).
+
+Versie:
+
+4
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De woonplaatsnaam moet ingevuld zijn bij een BAG adres.
+
+R2316
+Woonplaatsnaam moet verwijzen naar een bestaand stamgegeven
+Definitie:
+
+Als de Persoon \ Adres.Woonplaatsnaam is ingevuld, dan moet deze verwijzen naar
+een stamgegeven in de Stamtabel Plaats.
+
+Versie:
+
+3
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+De opgegeven woonplaatsnaam is geen bestaand stamgegeven.
+
+R2317
+Huisnummertoevoeging en locatie ten opzichte van adres mogen niet beide gevuld zijn
+Definitie:
+
+Persoon \ Adres.Huisnummertoevoeging en Persoon \ Adres.Locatie ten opzichte
+van adres mogen niet gelijktijdig voorkomen.
+
+Versie:
+
+2
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Huisnummertoevoeging en locatie ten opzichte van adres mogen niet beide gevuld
+zijn.
+
+R2318
+Land/gebied adres moet verwijzen naar een bestaand stamgegeven
+Definitie:
+
+Persoon \ Adres.Land/gebied adres moet verwijzen naar een stamgegeven in de
+Stamtabel Land/gebied.
+
+Versie:
+
+1
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het opgegeven land/gebied is geen bestaand stamgegeven.
+
+R2329
+Identificatiecode adresseerbaar object moet ingevuld zijn bij een BAG adres
+Definitie:
+
+Persoon \ Adres.Identificatiecode adresseerbaar object moet een waarde hebben bij
+bij een 'BAG-adres' (R2304).
+Toelichting
+Door het invullen van dit attribuut gaan de regels er tevens vanuit dat de gebruiker
+een 'BAG-adres' (R2304) aan het invoeren is. M.a.w. het attribuut dient als
+herkenning van een 'BAG-adres' (R2304).
+
+Versie:
+
+5
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Identificatiecode adresseerbaar object moet ingevuld zijn bij een BAG adres.
+
+R2334
+Alleen een niet-vervallen voorkomen kan vervallen
+Definitie:
+
+Uitsluitend een voorkomen van een groep waarbij Tijdstip verval leeg is kan
+vervallen.
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het voorkomen waarvan het verval moet worden geregistreerd is reeds vervallen.
+
+R2343
+Algemene foutmelding bij schending autorisatieregels
+Definitie:
+
+Bij schending van één of meer van de autorisatieregels die zijn gekoppeld aan Use
+Case BY.1.AA, Use Case LV.1.AL of Use Case VB.1.AV.CA wordt in plaats van de
+meldingstekst bij de geschonden regel, de in deze regel opgenomen meldingstekst
+opgenomen in het berichtonderdeel Meldingen van het resultaatbericht. Zodat niet
+precies blijkt wat er aan de hand is.
+
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Er is een autorisatiefout opgetreden.
+
+R2348
+Partij van de Administratieve handeling moet gelijk zijn aan de Zendende partij
+Definitie:
+
+Administratieve handeling.Partij moet gelijk zijn aan Bericht.Zendende partij.
+
+Versie:
+
+1
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Partij van de administratieve handeling moet gelijk zijn aan de zendende partij.
+
+R2354
+Datum aanvang geldigheid van de actie mag niet in de toekomst liggen
+Definitie:
+
+Indien aanwezig moet Actie.Datum aanvang geldigheid <= 'Systeemdatum'
+(R2016)
+
+Versie:
+
+8
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum aanvang geldigheid van de actie mag niet in de toekomst liggen.
+
+R2355
+Datum aanvang adreshouding mag niet in de toekomst liggen
+Definitie:
+
+Indien gevuld moet Persoon \ Adres.Datum aanvang adreshouding <=
+'Systeemdatum' (R2016)
+
+Versie:
+
+6
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum aanvang adreshouding mag niet in de toekomst liggen.
+
+R2361
+Reden wijziging migratie moet verwijzen naar een bestaand stamgegeven
+Definitie:
+
+Persoon.Reden wijziging migratie moet verwijzen naar een stamgegeven in Reden
+wijziging verblijf.
+
+Versie:
+
+1
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Reden wijziging migratie is geen bestaand stamgegeven.
+
+R2362
+Opgaaf van reden wijziging migratie met waarde 'Technische wijzigingen i.v.m. BAG',
+'Infrastructurele wijziging' of 'Onbekend' is niet toegestaan
+Definitie:
+
+Persoon.Reden wijziging migratie mag niet de waarde 'Technische wijzigingen i.v.m.
+BAG' (B), 'Infrastructurele wijziging' (I) of 'Onbekend' (?) hebben.
+Toelichting:
+De waarde 'Onbekend' (?) is uitsluitend opgenomen om ontbrekende 'reden
+wijziging migratie' vanuit Conversie (LO3) op te kunnen nemen in de BRP.
+
+Versie:
+
+2
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De reden wijziging migratie mag niet de waarde 'Technische wijzigingen i.v.m.
+BAG', 'Infrastructurele wijziging' of 'Onbekend' bevatten.
+
+R2363
+Aangever migratie moet ingevuld zijn bij aangifte door persoon
+Definitie:
+
+Persoon.Aangever migratie moet een waarde hebben als Persoon.Reden wijziging
+migratie 'Aangifte door persoon' (P) is.
+
+Versie:
+
+1
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De aangever migratie moet ingevuld zijn bij aangifte door persoon.
+
+R2366
+Aangever migratie moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+Persoon.Aangever migratie moet verwijzen naar een stamgegeven in Aangever.
+
+Versie:
+
+1
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Aangever migratie is geen bestaand stamgegeven.
+
+R2393
+Buitenlands adres regel migratie 4, 5 en 6 moeten leeg zijn
+Definitie:
+
+Persoon.Buitenlands adres regel 4 migratie, Persoon.Buitenlands adres regel 5
+migratie en Persoon.Buitenlands adres regel 6 migratie moeten leeg zijn.
+Toelichting:
+Tijdens de duale periode mogen Persoon.Buitenlands adres regel 4 migratie,
+Persoon.Buitenlands adres regel 5 migratie en Persoon.Buitenlands adres regel 6
+migratie niet gebruikt worden omdat de GBA deze niet kent. Bij migratie van BRP
+naar GBA zou er dan informatie verloren gaan.
+
+Versie:
+
+2
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Buitenlandse adres regels migratie 4, 5 en 6 moeten leeg zijn.
+
+R2394
+Een buitenlands adres regel migratie mag niet worden overgeslagen
+Definitie:
+
+Een Buitenlands adres regel mag niet leeg zijn als een volgende Buitenlands adres
+regel gevuld is.
+Toelichting:
+Als bijvoorbeeld Persoon.Buitenlands adres regel 3 migratie gevuld is mogen
+Persoon.Buitenlands adres regel 1 migratie en Persoon.Buitenlands adres regel 2
+migratie niet leeg zijn.
+
+Versie:
+
+1
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Een buitenlandse adres regel migratie mag niet worden overgeslagen.
+
+R2413
+Een toelichting ontlening is verplicht bij het deblokkeren van een melding
+Definitie:
+
+Indien een bijhoudingsbericht minimaal één Gedeblokkeerde melding bevat, moet in
+het bericht een Administratieve handeling.Toelichting ontlening worden opgegeven.
+
+Versie:
+
+3
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Bij het deblokkeren van een melding is het opgeven van een toelichting ontlening
+verplicht.
+
+R2416
+Afgekorte naam openbare ruimte mag alleen ingevuld zijn bij een BAG adres en een nietBAG adres met openbare ruimte
+Definitie:
+
+Persoon \ Adres.Afgekorte naam openbare ruimte mag alleen ingevuld zijn bij een
+'BAG-adres' (R2304) en een 'Niet-BAG-adres met openbare ruimte' (R2305).
+
+Versie:
+
+1
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Afgekorte naam openbare ruimte mag alleen worden opgegeven bij een BAG adres
+en een niet-BAG adres met openbare ruimte.
+
+R2417
+Huisnummer mag alleen ingevuld zijn bij een BAG adres en een Niet-BAG adres met
+openbare ruimte
+Definitie:
+
+Persoon \ Adres.Huisnummer mag alleen ingevuld zijn bij een 'BAG-adres' (R2304)
+en een 'Niet-BAG-adres met openbare ruimte' (R2305).
+
+Versie:
+
+1
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Huisnummer mag alleen worden opgegeven bij een BAG adres en een niet-BAG
+adres met openbare ruimte.
+
+R2420
+Aangever adreshouding mag alleen gevuld zijn bij aangifte door persoon
+Definitie:
+
+Persoon \ Adres.Aangever adreshouding mag alleen ingevuld zijn als Persoon \
+Adres.Reden wijziging gelijk is aan de waarde 'Aangifte door persoon' (P) is.
+
+Versie:
+
+1
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Aangever adreshouding mag alleen gevuld zijn bij aangifte door persoon.
+
+R2421
+Datum aanvang adreshouding mag alleen gevuld zijn bij een Nederlands adres
+Definitie:
+
+Persoon \ Adres.Datum aanvang adreshouding mag alleen een waarde hebben bij
+een 'Nederlands adres' (R2302).
+
+Versie:
+
+2
+
+Soort:
+
+Gegevensvalidatieregel
+
+Verschijningsvorm: Nadere specificatie per handeling
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Datum aanvang adreshouding mag alleen ingevuld zijn bij een Nederlands adres.
+
+R2423
+Gemeente mag alleen ingevuld zijn bij een Nederlands adres
+Definitie:
+
+Persoon \ Adres.Gemeente mag alleen ingevuld zijn bij een 'Nederlands adres'
+(R2302).
+
+Versie:
+
+3
+
+Soort:
+
+Gegevensvalidatieregel
+
+Verschijningsvorm: Nadere specificatie per handeling
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Gemeente mag alleen ingevuld zijn bij een Nederlands adres.
+
+R2427
+Aangever migratie mag alleen ingevuld zijn bij aangifte door persoon
+Definitie:
+
+Persoon.Aangever migratie mag alleen ingevuld zijn als Persoon.Reden wijziging
+migratie 'Aangifte door persoon' (P) is.
+
+Versie:
+
+1
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Aangever migratie mag alleen ingevuld zijn bij een aangifte door persoon.
+
+R2428
+Een opgegeven gedeblokkeerde melding moet verwijzen naar een regel die als
+deblokkeerbaar is vastgelegd
+Definitie:
+
+Regel.Code in een Gedeblokkeerde melding.Regel moet verwijzen naar een
+stamgegeven waarbij Regel.Soort melding 'Deblokkeerbaar' is in de stamtabel
+Regel.
+
+Versie:
+
+2
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven gedeblokkeerde melding moet verwijzen naar een regel die als
+deblokkeerbaar is vastgelegd in de stamtabel Regel.
+
+R2429
+Nadere aanduiding verval moet een geldige waarde hebben
+Definitie:
+
+Als in een groep Nadere aanduiding verval is gevuld, dan moet deze de waarde O
+(Onjuist) of S (In strijd met openbare orde) hebben.
+
+Versie:
+
+2
+
+Soort:
+
+Controleregel
+
+Verschijningsvorm: Validatie via XSD / afleiding
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven nadere aanduding verval is niet toegestaan.
+
+R2430
+Rechtsgrond moet verwijzen naar bestaand stamgegeven
+Definitie:
+
+Als de Administratieve handeling \ Bron.Rechtsgrond is gevuld, dan moet deze
+verwijzen naar een voorkomen in het stamgegeven Rechtsgrond.
+
+Versie:
+
+1
+
+Soort:
+
+Integriteitsregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De opgegeven rechtsgrond is geen bestaand stamgegeven.
+
+R2431
+Rechtsgrond moet geldig zijn op systeemdatum
+Definitie:
+
+Actie \ Bron.Rechtsgrond moet verwijzen naar een Geldig voorkomen stamgegeven
+op peildatum (R1284) in de Stamtabel Rechtsgrond, met als peildatum de
+systeemdatum.
+
+Versie:
+
+1
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+De rechtsgrond is niet geldig.
+
+R2432
+Rechtsgrond verplicht bij nadere aanduiding verval 'S'
+Definitie:
+
+Als Nadere aanduiding verval in een groep wordt gevuld met de waarde S (Strijdig
+met openbare orde), dan moet bij de Actie minimaal één Rechtsgrond worden
+opgegeven waarvoor geldt dat Rechtsgrond.Leidt tot strijdigheid? de waarde J
+heeft.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+De bij de actie opgegeven rechtsgrond is niet toegestaan voor deze nadere
+aanduiding verval.
+
+R2448
+Elke actie heeft minimaal één bron met uitzondering van correcties op de groepen Adres,
+Bijhouding en Onverwerkt document aanwezig
+Definitie:
+
+Een Actie moet minimaal één Actie \ Bron hebben indien deze ongelijk is aan
+• Correctieverval adres
+• Correctieregistratie adres
+• Correctieverval bijhouding
+• Correctieregistratie bijhouding
+• Correctieverval onverwerkt document aanwezig
+• Correctieregistratie onverwerkt document aanwezig .
+Toelichting:
+Deze regel geldt voor alle niet uitgezonderde acties en is deblokkeerbaar. Het heeft
+de voorkeur om een specifiek brondocument bij deze acties op te nemen. Als dat
+niet mogelijk is, kan na deblokkeren van de regel worden volstaan met een
+ontleningstoelichting (via R2413 - Een toelichting ontlening is verplicht bij het
+deblokkeren van een melding).
+
+Versie:
+
+4
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+Er moet minimaal één bron bij elke actie van de administratieve handeling worden
+opgegeven.
+
+R2487
+Waarschuwing als een persoon een Nederlands adres heeft in de buitenlandse adresregels
+Definitie:
+
+Er moet een waarschuwing getoond worden als een Persoon een Persoon \ Adres
+heeft waarbij:
+
+•
+
+Persoon \ Adres.Land/gebied = "Nederland"
+
+EN
+
+•
+
+Persoon \ Adres.Buitenlands adres regel 1 is gevuld
+
+OF
+
+•
+
+Persoon \ Adres.Buitenlands adres regel 2 is gevuld
+
+OF
+
+•
+
+Persoon \ Adres.Buitenlands adres regel 3 is gevuld
+
+OF
+
+•
+
+Persoon \ Adres.Buitenlands adres regel 4 is gevuld
+
+OF
+
+•
+
+Persoon \ Adres.Buitenlands adres regel 5 is gevuld
+
+OF
+
+•
+
+Persoon \ Adres.Buitenlands adres regel 6 is gevuld
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+Bij de persoon staat een Nederlands adres in de buitenlandse adresregels
+geregistreerd.
+
+R2500
+Datum aanvang geldigheid van de actie moet gelijk zijn aan datum aanvang adreshouding
+Definitie:
+
+In het Bericht moeten binnen de Actie de Actie.Datum aanvang geldigheid en
+Persoon \ Adres.Datum aanvang adreshouding dezelfde waarde hebben.
+
+Versie:
+
+2
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen, melding deblokkeerbaar of herstelactie ondernemen
+
+Meldingstekst:
+
+De datum aanvang geldigheid van de actie moet dezelfde waarde hebben als de
+datum aanvang adreshouding.
+
+R2504
+Buitenlands adres regel mag uit niet meer dan 35 karakters bestaan
+Definitie:
+
+Elke buitenlands adres regel die bij een woon/brief adres wordt vastgelegd mag uit
+niet meer dan 35 karakters bestaan.
+Het gaat om de volgende adresregels uit Persoon \ Adres:
+• Persoon \ Adres.Buitenlands adres regel 1
+• Persoon \ Adres.Buitenlands adres regel 2
+• Persoon \ Adres.Buitenlands adres regel 3
+Toelichting:
+1. Vanwege de duale periode mogen buitenlandse adresregels niet meer dan 35
+tekens bevatten (de maximale lengte in LO 3.7).
+2. Voor de buitenland adres regels uit de groep Migratie is een separate regel
+opgenomen (R1377 - Buitenlands adres regel migratie mag uit niet meer dan
+35 karakters bestaan).
+3. Buitenlands adres regel 4 t/m 6 worden tijdens de duale periode niet gebruikt.
+
+Versie:
+
+2
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Buitenlands adres regel mag niet meer dan 35 karakters bevatten.
+
+R2511
+
+Objectsleutel die verwijst naar relatie moet verwijzen naar relatie van juiste soort
+Definitie:
+
+Een objectsleutel in een bericht dat verwijst naar een object van het type Relatie
+moet verwijzen naar een Relatie van het juiste Relatie.Soort. Het juiste soort relatie
+is in het bericht opgenomen als label bij de objectsleutel die naar een relatie
+verwijst.
+Toelichting:
+• Onderstaand voorbeeld toont een regel uit de berichtdefinitie waarin het label
+aangeeft dat de relatie waarnaar de objectsleutel verwijst van het soort
+Geregistreerd partnerschap moet zijn.
+Geregistreerd partnerschap (objecttype="Relatie", objectsleutel,
+communicatieID)
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De in het bericht opgenomen objectsleutel die naar een relatie verwijst, verwijst
+niet naar het juiste soort relatie.
+
+R2512
+Objectsleutel die verwijst naar betrokkenheid moet verwijzen naar betrokkenheid met de
+juiste rol
+Definitie:
+
+Een objectsleutel in een bericht die verwijst naar een object van het type
+Betrokkenheid moet verwijzen naar een betrokkenheid met de juiste
+Betrokkenheid.Rol. De juiste rol van de betrokkenheid is in het bericht opgenomen
+als label bij de objectsleutel die naar een betrokkenheid verwijst.
+Toelichting:
+• Onderstaan voorbeeld toont een regel uit de berichtdefinitie waarin het label
+aangeeft dat de betrokkenheid waarnaar de objectsleutel verwijst de rol van
+Partner moet hebben.
+Partner (objecttype="Betrokkenheid", objectsleutel, communicatieID)
+
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De in het bericht opgenomen objectsleutel die naar een betrokkenheid verwijst,
+verwijst niet naar een betrokkenheid met de juiste rol.
+
+R2527
+Datum einde geldigheid van de actie mag niet in de toekomst liggen
+Definitie:
+
+Indien aanwezig moet Actie.Datum einde geldigheid <= 'Systeemdatum' (R2016)
+
+Versie:
+
+3
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum einde geldigheid van de actie mag niet in de toekomst liggen.
+
+R2528
+Datum einde geldigheid van de actie moet na datum aanvang van de actie liggen
+Definitie:
+
+Indien aanwezig moet Datum einde geldigheid van de Actie > Datum aanvang
+geldigheid van de Actie
+
+Toelichting:
+• Deze regel geldt voor groepen waarbij geen 1-dagsvliegen zijn toegestaan.
+• In de BMR staat per groep aangegeven of 1-dagsvliegen toegestaan zijn. Hier
+zijn de volgende waarde mogelijk:
+1.
+2.
+
+Ja
+Nee
+
+Indien de waarde 2 is dan moet aan de regel voldaan worden.
+Indien de waarde 1 is hoeft hier niet aan voldaan te worden. Hier is dan R2535 Datum einde geldigheid van de actie moet op of na datum aanvang van de actie
+liggen van toepassing.
+Versie:
+
+3
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum einde geldigheid van de actie moet na de datum aanvang geldigheid van
+de actie liggen.
+
+R2530
+Tijdlijncontrole groepen met aaneengesloten materiële historie
+Definitie:
+
+Voor groepen met verplicht aaneengesloten materiële historie geldt - na verwerking
+van de Administratieve handeling - dat er op elk moment van de materiële tijdlijn
+precies één niet-vervallen voorkomen moet zijn. Als startpunt van de materiële
+tijdlijn wordt de oudste bekende (dus niet geheel of gedeeltelijk onbekende) Datum
+aanvang geldigheid van een voorkomen van de groep genomen.
+Toelichting:
+• De regel controleert in feite of er geen gaten in de tijdlijn zitten en er geen
+overlap tussen voorkomens is.
+• In de BMR staat per groep aangegeven of de Materiele historie aaneengesloten
+moet zijn. Hier zijn de volgende waarde mogelijk:
+1.
+2.
+3.
+
+Ja
+Nee, gaten kunnen alléén in het begin door correcties voorkomen
+Nee, gaten kunnen overal in tijdlijn voorkomen
+
+Indien de waarde 1 of 2 is dan moet aan de regel voldaan worden.
+Indien de waarde 3 is hoeft hier niet aan voldaan te worden. Hier is dan R2675 Tijdlijncontrole groepen met niet-aaneengesloten materiële historie van toepassing.
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Groepen met verplicht aansluitende materiële historie mogen geen gaten en/of
+overlap bevatten.
+
+R2535
+Datum einde geldigheid van de actie moet op of na datum aanvang van de actie liggen
+Definitie:
+
+Indien aanwezig moet Datum einde geldigheid van de Actie >= Datum aanvang
+geldigheid van de Actie
+Toelichting:
+• Deze regel geldt voor groepen waarbij 1-dagsvliegen zijn toegestaan.
+• In de BMR staat per groep aangegeven of 1-dagsvliegen toegestaan zijn. Hier
+zijn de volgende waarde mogelijk:
+
+1.
+2.
+
+Ja
+Nee
+
+Indien de waarde 1 is dan moet aan de regel voldaan worden.
+Indien de waarde 2 is hoeft hier niet aan voldaan te worden. Hier is dan R2528 Datum einde geldigheid van de actie moet na datum aanvang van de actie liggen
+van toepassing.
+Versie:
+
+3
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum einde geldigheid van de actie moet op of na de datum aanvang
+geldigheid van de actie liggen.
+
+R2536
+Minimaal één hoofdpersoon moet een ingezetene of overledene zijn
+Definitie:
+
+Indien de Administratieve handeling.Partij de Rol 'Bijhoudingsorgaan College' heeft
+moet minstens één Hoofdpersoon (R1287) een 'Ingezetene' (I) zijn.
+Toelichting:
+• Bij de registratie van een huwelijk of geregistreerd partnerschap zijn twee
+hoofdpersonen betrokken. Minstens één moet een ingezetene zijn.
+• Omdat overledenen binnen de BRP ook bijhoudingsaard 'Ingezetene' (I)
+hebben, mag de hoofdpersoon dus ook overleden zijn. Regel R1579 - Van een
+overleden persoon mag uitsluitend een beperkte set van gegevens worden
+bijgehouden beperkt vervolgens welke gegevens voor overledenen wel of niet
+aangepast mogen worden.
+
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Minimaal één hoofdpersoon moet een ingezetene zijn.
+
+R2547
+'Volledig bekende datum'
+Definitie:
+
+Een volledig bekende datum heeft het formaat 'jjjj-mm-dd', waarbij:
+• 'mm' niet de waarde 00 heeft
+EN
+• 'dd' niet de waarde 00 heeft.
+Toelichting:
+Als het jaar de waarde 0000 heeft en maand en dag zijn bekend (hebben niet de
+waarde 00) dan betekent dit het jaar 0. Het jaar 0 voldoet niet aan de Gregoriaanse
+kalender. De controle op Gregoriaanse kalender gebeurt in een andere regel.
+
+Versie:
+
+5
+
+Soort:
+
+Definitieregel
+
+R2577
+Administratieve handeling moet minimaal 1 actie bevatten
+Definitie:
+
+De Administratieve handeling moet minimaal 1 Actie bevatten.
+Toelichting: Deze regel is bedoeld voor handelingen waarbij dit niet in de XSD kan
+worden afgedwongen.
+
+Versie:
+
+1
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De administratieve handeling dient minimaal 1 actie te bevatten.
+
+R2626
+Waarschuwing bij bijhouding indien gegevens van een hoofdpersoon in onderzoek staan
+Definitie:
+
+Geef een waarschuwing als een Hoofdpersoon (R1287) aan een Onderzoek met de
+Onderzoek.Status <> 'Afgesloten' is gekoppeld.
+
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Waarschuwing aangetroffen; mogelijk herstelactie ondernemen
+
+Meldingstekst:
+
+Bij één of meer hoofdpersonen van het bijhoudingsverzoek staan gegevens in
+onderzoek.
+
+R2659
+Adres moet een Nederlandse adres of buitenlands adres zijn
+Definitie:
+
+Persoon \ Adres moet of een 'Nederlands adres' (R2302) of een 'Buitenlands adres'
+(R2303) zijn.
+Ontwerpkeuze
+Gezien het soort controle had deze regel eigenlijk een Gegevensvalidatieregel
+moeten zijn. Dit leidt er echter toe dat deze regel bij iedere actie opduikt waar
+Persoon \ Adres in voorkomt. Er is echter slechts 1 Actie waarmee zowel een
+Nederlands als een buitenlands adres opgegeven kan worden. Het is niet mogelijk
+om bij alle andere Acties deze regel te markeren als "xsd / Afl.". Dit moet namelijk
+op het niveau van Handeling. De Handeling "Correctie adres" bevat een actie
+waarbij deze regel gecontroleerd moet worden, maar ook een actie, Correctieverval
+adres, waarbij de regel niet van toepassing is.
+
+Versie:
+
+1
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Adres moet een Nederlandse adres of buitenlands adres zijn
+
+R2660
+Een buitenlands adres regel mag niet worden overgeslagen
+Definitie:
+
+Een Buitenlands adres regel mag niet leeg zijn als een volgende Buitenlands adres
+regel gevuld is.
+Toelichting:
+Als bijvoorbeeld Persoon \ Adres.Buitenlands adres regel 3 gevuld is mogen Persoon
+\ Adres.Buitenlands adres regel 1 en Persoon \ Adres.Buitenlands adres regel 2 niet
+leeg zijn.
+
+Versie:
+
+1
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Een buitenlands adres regel mag niet worden overgeslagen.
+
+R2668
+Bron moet een Document of een rechtsgrond bevatten
+Definitie:
+
+In een correctiebericht moet bij Bron (objecttype Actie \ Bron) of Actie \
+Bron.Rechtsgrond of Document opgenomen zijn.
+
+Versie:
+
+1
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Bron moet een document of een rechtsgrond bevatten.
+
+R2675
+Tijdlijncontrole groepen met niet-aaneengesloten materiële historie
+Definitie:
+
+Voor groepen met niet-aaneengesloten materiële historie geldt - na verwerking van
+de Administratieve handeling - dat er op elk moment van de materiële tijdlijn
+maximaal één niet-vervallen voorkomen mag zijn. Als startpunt van de materiële
+tijdlijn wordt de oudste bekende (dus niet geheel of gedeeltelijk onbekende) Datum
+aanvang geldigheid van een voorkomen van de groep genomen.
+Toelichting:
+• In de BMR staat per groep aangegeven of de Materiele historie aaneengesloten
+moet zijn. Hier zijn de volgende waarde mogelijk:
+1.
+2.
+3.
+
+Ja
+Nee, gaten kunnen alléén in het begin door correcties voorkomen
+Nee, gaten kunnen overal in tijdlijn voorkomen
+
+Indien de waarde 3 is dan moet aan de regel voldaan worden.
+Indien de waarde 1 of 2 is hoeft hier niet aan voldaan te worden. Hier is dan R2530
+- Tijdlijncontrole groepen met aaneengesloten materiële historie van toepassing.
+Versie:
+
+3
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Groepen met niet-aaneengesloten materiële historie mogen geen overlap bevatten.
+
+R2691
+Na verwerking van de AH moet een gecorrigeerde materiele groep een actueel nietbeëindigd voorkomen hebben
+Definitie:
+
+Na verwerking van de Administratieve handeling moet een gecorrigeerde materiele
+groep een voorkomen hebben waarvoor geldt dat Actie verval en Datum einde
+geldigheid leeg is.
+Toelichting:
+In de BMR staat per groep aangegeven of de Materiele historie aaneengesloten
+moet zijn. Hier zijn de volgende waarde mogelijk:
+1.
+2.
+3.
+
+Ja
+Nee, gaten kunnen alléén in het begin door correcties voorkomen
+Nee, gaten kunnen overal in tijdlijn voorkomen
+
+Indien de waarde 1 of 2 is dan moet aan de regel voldaan worden.
+Indien de waarde 3 is hoeft hier niet aan voldaan te worden.
+Versie:
+
+4
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De gecorrigeerde groep heeft na verwerking van de administratieve handeling geen
+actueel voorkomen.
+
+R2714
+
+De datum aanvang adreshouding moet op of na de datum aanvang adreshouding van het
+voorgaande adres liggen
+Definitie:
+
+Na verwerking van de administratieve handeling moet gelden dat in elk voorkomen
+van Persoon \ Adres.Standaard de Persoon \ Adres.Datum aanvang adreshouding
+OP of NA Persoon \ Adres.Datum aanvang adreshouding van het voorgaande
+voorkomen op de materiële tijdlijn ligt.
+
+Versie:
+
+1
+
+Soort:
+
+Controleregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum aanvang adreshouding mag niet voor de datum aanvang adreshouding
+van het voorgaande adres liggen.
+
+R2722
+De datum aanvang adreshouding moet op of voor de datum aanvang geldigheid van het
+adres liggen.
+Definitie:
+
+De Persoon \ Adres.Datum aanvang adreshouding moet OP of VOOR de Persoon \
+Adres.Standaard.Datum aanvang geldigheid liggen.
+
+Versie:
+
+1
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+De datum aanvang adreshouding ligt niet op of voor de datum aanvang geldigheid
+van het adres.
+
+R2744
+Buitenlands adres regel 4, 5 en 6 moeten leeg zijn
+Definitie:
+
+Persoon \ Adres.Buitenlands adres regel 4, Persoon \ Adres.Buitenlands adres regel
+5 en Persoon \ Adres.Buitenlands adres regel 6 moeten leeg zijn.
+Toelichting:
+Tijdens de duale periode mogen Persoon \ Adres.Buitenlands adres regel 4, Persoon
+\ Adres.Buitenlands adres regel 5 en Persoon \ Adres.Buitenlands adres regel 6 niet
+gebruikt worden omdat de GBA deze niet kent. Bij migratie van BRP naar GBA zou
+er dan informatie verloren gaan.
+
+Versie:
+
+1
+
+Soort:
+
+Gegevensvalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Buitenlandse adres regels 4, 5 en 6 moeten leeg zijn.
+
+R2749
+Een buitenlands adres moet een woonadres zijn
+Definitie:
+
+In een 'Buitenlands adres' (R2303) moet Persoon \ Adres.Soort de waarde
+'Woonadres' (W) hebben.
+
+Versie:
+
+1
+
+Soort:
+
+Invoervalidatieregel
+
+Meldingsniveau:
+
+Foutieve situatie aangetroffen; verwerking blokkeert
+
+Meldingstekst:
+
+Het buitenlandse adres is geen woonadres.
+
+
